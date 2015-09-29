@@ -1,37 +1,78 @@
-[![GitHub release](https://img.shields.io/github/release/fbrctr/fabricator.svg)]()
-[![Build Status](https://travis-ci.org/fbrctr/fabricator.svg)](https://travis-ci.org/fbrctr/fabricator) [![devDependency Status](https://david-dm.org/fbrctr/fabricator/dev-status.svg)](https://david-dm.org/fbrctr/fabricator#info=devDependencies) [![Join the chat at https://gitter.im/fbrctr/fabricator](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fbrctr/fabricator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+#Dahlia Pattern Libary
 
-<p align="center">
-  <img src="http://fbrctr.github.io/assets/toolkit/images/logo.svg" width="500">
-</p>
+##Front end pattern library for SF Dahlia
 
-# Fabricator
+Includes:
 
-> _fabricate_ - to make by assembling parts or sections.
+* Fabricator
+* Gulp
+* Foundation
 
-Fabricator is a tool for building website UI toolkits - _think ["Tiny Bootstraps, for Every Client"](http://daverupert.com/2013/04/responsive-deliverables/#tiny-bootstraps-for-every-client)_
+## Getting Started
 
-## Quick Start
+1. Install Node
+1. Install gulp-sass
 
-```shell
-$ curl -L https://github.com/fbrctr/fabricator/archive/master.tar.gz | tar zx --strip 1
+```
+npm install gulp-sass
+```
+
+1. Clone this repo
+1. Start your server
+
+```
 $ npm start
 ```
 
-## Documentation
+Pattern library is organized from the abstract to the discrete, small to large
 
-#### [Read the docs →](http://fbrctr.github.io/docs)
+### /base
+Otherwise known as globals are the underlying variables the fuel the entire pattern library.
 
-## Demo
+### /atoms, /molecules, /organisms
+Documentation of our UI components via the browser. Allow clients and designers to sign off on each outside the context of a specific context. Allow the front end dev to sanity check that styles are flowing as predicted. Must include the hologram comment format in your sass file for these to render at the appropriate level.
 
-#### [Default Fabricator Instance →](http://fbrctr.github.io/demo)
+### /pages
+If you are building a page to test content rules or component variations within a template, you should name that file a page. Pages do not introduce any new components or templates but are used for edge cases and content previews.
 
-## Credits
+## Source:
 
-Created by [Luke Askew](http://twitter.com/lukeaskew).
+### /materials
+Atomic design front-end partials.
 
-Logo by [Abby Putinski](https://abbyputinski.com/)
+### /views
+Page level layout templates.
 
-## License
+### /assets/toolkit/styles
+Follows a SMACSS based approach to organizing Sass files.
+http://www.sitepoint.com/architecture-sass-project/
 
-[The MIT License (MIT)](http://opensource.org/licenses/mit-license.php)
+### ../base
+Resets, global style settings and simplest atomic elements.
+
+### ../components
+Discrete parts of the UI. Flat directory instead of an atomic structure for simplicity.
+
+### ../structures
+More substantial persistent UI elements, such as header, footer, modal and navigation
+
+### ../layouts
+Non component, pure layout based rule sets. Define key page templates
+
+### ../pages
+Rules specific to specific page rules or a unique url
+
+### ../helpers
+    Utility classes that override component settings, such as padding and color
+
+### ../patterns
+    Styles specific to the pattern library itself
+
+### ../vendors
+    CSS files from specific external plugin
+
+### /_settings.scss
+    Reference for all foundation default settings. Not editable
+
+### /toolkit.css
+Main manifest for how we are building the cascade. 
