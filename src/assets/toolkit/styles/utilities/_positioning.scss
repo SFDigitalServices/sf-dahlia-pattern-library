@@ -1,0 +1,79 @@
+//
+// Position
+//
+
+// Easily set an element's position and "trbl" values.
+// Arguments: $type, $top, $right, $bottom, $left
+
+// The long way: @include position(relative, 5px, 5px, 10px, 15px)
+// Set absolute: @include absolute(10px, 25px, null, 50px)
+// Set relative: @include relative(10px, 35px)
+// Set fixed: @include fixed(null, null, 20px, 20px)
+
+// Note: Pass null as the value if you don't want a "trbl" property to be set.
+
+$position-default: null !default;
+
+@mixin position($type,
+                $top: $position-default,
+                $right: $position-default,
+                $bottom: $position-default,
+                $left: $position-default) {
+  position: $type;
+  $allowed_types: absolute relative fixed;
+  @if not index($allowed_types, $type) {
+    @warn "Unknown position: #{$type}.";
+  }
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+@mixin absolute($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
+@mixin relative($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+  @include position(relative, $top, $right, $bottom, $left);
+}
+@mixin fixed($top: $position-default, $right: $position-default, $bottom: $position-default, $left: $position-default) {
+  @include position(fixed, $top, $right, $bottom, $left);
+}
+
+// .element {
+//   @include position(absolute,null,null,10px,15px);
+// }
+// .absolute-element {
+//   @include absolute(null,25px,25px);
+// }
+// .relative-element {
+//   @include relative(15px);
+// }
+// .fixed-element {
+//   @include fixed(10px,50px);
+// }
+
+// Easily set an element's "trbl" values
+// -------------------------------------
+@mixin trbl($top: $position-default,
+                $right: $position-default,
+                $bottom: $position-default,
+                $left: $position-default) {
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+@mixin top-left {
+  @include trbl(0,null,null,0);
+}
+@mixin top-right {
+  @include trbl(0,0);
+}
+@mixin bottom-left {
+  @include trbl(null,null,0,0);
+}
+@mixin bottom-right {
+  @include trbl(null,0,0,null);
+}
+
+.relative {
+  position: relative;
+}

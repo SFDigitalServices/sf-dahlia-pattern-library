@@ -1,0 +1,223 @@
+//
+// BaseType
+//
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+
+$base-font-size:      16px;
+$base-line-height:    24px;
+
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
+
+$font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+$base-font-family: $font-family;
+$sans-font-family: $font-family;
+$body-font-family: $font-family;
+$sans-font-family-semibold: $font-family;
+$sans-font-family-bold: $font-family;
+$alt-font-family: $sans-font-family-bold;
+$serif-font-family: "Droid Serif", Georgia, Times, serif;
+$fancy-serif-font-family: $serif-font-family;
+// $fancy-serif-font-family: "Hoefler Titling A", "Hoefler Titling B", Georgia, Times, serif;
+
+$font-weight-normal: 400;
+$type-weight: (
+  light: 300,
+  regular: 400,
+  semi: 600,
+  bold: 700,
+  black: 800
+);
+
+// Color
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+//
+
+$white:             #fff !default;
+$ghost:             #fafafa !default;
+$snow:              #f9f9f9 !default;
+$vapor:             #f6f6f6 !default;
+$white-smoke:       #f5f5f5 !default;
+$silver:            #efefef !default;
+$smoke:             #eee !default;
+$gainsboro:         #ddd !default;
+$iron:              #ccc !default;
+$base:              #aaa !default;
+$aluminum:          #999 !default;
+$jumbo:             #888 !default;
+$monsoon:           #777 !default;
+$steel:             #666 !default;
+$charcoal:          #555 !default;
+$tuatara:           #444 !default;
+$oil:               #333 !default;
+$jet:               #222 !default;
+$black:             #000 !default;
+
+// Brand Colors
+$primary-color:     #f7692e;
+$secondary-color:   #5fb8c5;
+$dim:               #008fff;
+$wash-color:        #f6f6f7;
+$jet:               #1a383c;
+$charcoal:          #4f5a62;
+$steel:             #b5b4be;
+$smoke:             #dedee0;
+$tint:              #74d3fe;
+$alert-color:       #df0083;
+$success-color:     #22968c;
+$warn:              #ffe242;
+$oil:               #373737;
+$mist:              #ededee;
+$silver:            #b3b3b3;
+
+$warm:              #f98129;
+$dark:              #5e46ee;
+$ebony:             #25343e;
+$vibrant:           #c00b8f;
+$merlot:            #9a175c;
+$spooky:            #a24ac6;
+$deep:              #951dbf;
+$carrot:            #e94c28;
+$panic:             #f60;
+
+$pin-hover:         #1f3437;
+$pin1:           $pin-hover;
+$splash:            #df0083;
+
+$facebook:          #4862a3;
+$twitter:           #55acee;
+$linkedin:          #0074a1;
+
+$splash-header:     #ff5974;
+$splash-button:     #f63d6d;
+
+$splash1:    $splash-header;
+$splash2:    $splash-button;
+
+$events:              $dark;
+$cool:       $success-color;
+$splash:       $alert-color;
+$ghost:         $wash-color;
+$primary:    $primary-color;
+$secondary:$secondary-color;
+$success:    $success-color;
+$warning-color:       $warn;
+$attention:           $warn; 
+$wash:          $wash-color;
+$alert:        $alert-color;
+
+// This is a Sass map. It is neat.
+// It's similar to a JSON array, with key value pairs.
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  wash: $wash,
+  alert: $alert,
+  success: $success,
+  ghost: $ghost,
+  snow: $snow,
+  vapor: $vapor,
+  white: $white,
+  silver: $silver,
+  smoke: $smoke,
+  gainsboro: $gainsboro,
+  iron: $iron,
+  base: $base,
+  aluminum: $aluminum,
+  jumbo: $jumbo,
+  monsoon: $monsoon,
+  steel: $steel,
+  charcoal: $charcoal,
+  tuatara: $tuatara,
+  carrot: $carrot,
+  oil: $oil,
+  jet: $jet,
+  warm: $warm,
+  dark: $events,
+  ebony: $ebony,
+  splash: $splash,
+  vibrant: $vibrant,
+  deep: $deep,
+  tint: $tint,
+  warn: $warn,
+  attention: $attention,
+  merlot: $merlot,
+  dim: $dim,
+  mist: $mist,
+  splash1: $splash1,
+  splash2: $splash2,
+  spooky: $spooky,
+  panic: $panic
+);
+
+// Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$row-width: rem-calc(1000);
+$total-columns: 12;
+$column-gutter: rem-calc(30);
+
+// Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$small-top: 30em;
+$medium-bottom: 30.063em;
+$medium-top: 64em;
+$large-bottom: 64.063em;
+$large-top: 90em;
+$xlarge-top: 120em;
+
+$small-range: (0, $small-top);
+$medium-range: ($medium-bottom, $medium-top);
+$large-range: ($large-bottom, $large-top);
+$xlarge-range: (90.063em, $xlarge-top);
+$xxlarge-range: (120.063em, 99999999em);
+
+// Disable responsive
+
+// $screen: "only screen";
+// $start: 0;
+
+// $small-range: (0, 90em);
+// $medium-range: (0, 90em);
+// $large-range: (0, 90em);
+
+// $small-top: $start;
+// $medium-top: $start;
+// $large-top: $start;
+// $xlarge-top: $start;
+
+// Disable responsive
+
+$breakpoints: (
+  small:    $small-top,
+  medium:   $medium-bottom,
+  large:    $large-bottom,
+  x-large:  $xlarge-top
+);
+
+// We use this to control whether or not CSS classes come through in the gem files.
+$include-html-classes: true;
+$include-html-global-classes: $include-html-classes;
+
+// Forms
+$fieldset-border-width: 0;
+$form-label-small-transform: uppercase;
+$fieldset-padding: 0;
+
+/* Buttons */
+
+// Button colors.
+$base-button-color:     #fff;
+$base-button-bg:        $primary;
+$btn-primary-border:    darken($base-button-bg, 5%);
+
+// Border radius.
+.radius {border-radius: .3em;}

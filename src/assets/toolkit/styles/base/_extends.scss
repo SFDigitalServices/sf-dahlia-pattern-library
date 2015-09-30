@@ -1,0 +1,21 @@
+%quotemarks {
+  p:after,
+  p:before { 
+    background-repeat: no-repeat; 
+    background-position: 0 0; 
+    display: inline-block; 
+    content: ''; 
+    width: 1.5rem; 
+    height: 2rem;
+  }
+
+  p:before { 
+    vertical-align: top; 
+    margin-right: 1rem; 
+  }
+
+  p:after { 
+    vertical-align: bottom; 
+    margin-left: 1rem; 
+  }
+}

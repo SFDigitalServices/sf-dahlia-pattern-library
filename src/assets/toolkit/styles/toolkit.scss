@@ -2,7 +2,56 @@
  * Toolkit styles
  */
 
+@import "vendors/normalize";
+@import "settings";
+//@import "vendors/foundation/foundation";
 
-body {
-	font-family: sans-serif;
-}
+// Or selectively include components
+@import
+//   "foundation/components/accordion",
+   "vendors/foundation/foundation/components/alert-boxes",
+   "vendors/foundation/foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+   "vendors/foundation/foundation/components/button-groups",
+   "vendors/foundation/foundation/components/buttons",
+   "vendors/foundation/foundation/components/clearing",
+   "vendors/foundation/foundation/components/dropdown",
+   "vendors/foundation/foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+   "vendors/foundation/foundation/components/forms",
+   "vendors/foundation/foundation/components/grid",
+   "vendors/foundation/foundation/components/icon-bar",
+   "vendors/foundation/foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+   "vendors/foundation/foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+   "vendors/foundation/foundation/components/pagination",
+   "vendors/foundation/foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+   "vendors/foundation/foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+   "vendors/foundation/foundation/components/tables",
+   "vendors/foundation/foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+   "vendors/foundation/foundation/components/top-bar",
+//   "foundation/components/type",
+   "vendors/foundation/foundation/components/offcanvas",
+   "vendors/foundation/foundation/components/visibility";
+
+@import "vendors/compass";
+@import "vendors/scut";
+@import "vendors/buttons";
+
+@import "base/all";
+@import "utilities/all";
+@import "components/all";
+@import "structures/all";
+@import "templates/all";
+@import "pages/all";

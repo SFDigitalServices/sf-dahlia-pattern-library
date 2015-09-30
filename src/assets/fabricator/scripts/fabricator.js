@@ -58,7 +58,8 @@ fabricator.dom = {
 	root: document.querySelector('html'),
 	primaryMenu: document.querySelector('.f-menu'),
 	menuItems: document.querySelectorAll('.f-menu li a'),
-	menuToggle: document.querySelector('.f-menu-toggle')
+	menuToggle: document.querySelector('.f-menu-toggle'),
+	menuAccordions: document.querySelectorAll('.f-menu_accordion_toggle')
 };
 
 
@@ -89,39 +90,78 @@ fabricator.buildColorChips = function () {
 
 };
 
-
 /**
  * Add `f-active` class to active menu item
  */
 fabricator.setActiveItem = function () {
 
 	/**
-	 * Match the window location with the menu item, set menu item as active
+	 * @return {Array} Sorted array of menu item 'ids'
+	 */
+	var parsedItems = function () {
+
+		var items = [],
+			id, href;
+
+		for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
+
+			// remove active class from items
+			fabricator.dom.menuItems[i].classList.remove('f-active');
+
+			// get item href
+			href = fabricator.dom.menuItems[i].getAttribute('href');
+
+			// get id
+			if (href.indexOf('#') > -1) {
+				id = href.split('#').pop();
+			} else {
+				id = href.split('/').pop().replace(/\.[^/.]+$/, '');
+			}
+
+			items.push(id);
+
+		}
+
+		return items.reverse();
+
+	};
+
+
+	/**
+	 * Match the 'id' in the window location with the menu item, set menu item as active
 	 */
 	var setActive = function () {
 
-		// get current file and hash without first slash
-		var current = (window.location.pathname + window.location.hash).replace(/(^\/)([^#]+)?(#[\w\-\.]+)?$/ig, function (match, slash, file, hash) {
-		    	hash = hash || '';
-		    	file = file || '';
-		    	return file + hash.split('.')[0];
-			}) || 'index.html',
-			href;
+		var href = window.location.href,
+			items = parsedItems(),
+			id, index;
 
-		// find the current section in the items array
-		for (var i = fabricator.dom.menuItems.length - 1; i >= 0; i--) {
+		// get window 'id'
+		if (href.indexOf('#') > -1) {
+			id = window.location.hash.replace('#', '');
+		} else {
+			id = window.location.pathname.split('/').pop().replace(/\.[^/.]+$/, '');
+		}
 
-			var item = fabricator.dom.menuItems[i];
+		// In case the first menu item isn't the index page.
+		if (id === '') {
+			id = 'index';
+		}
 
-			// get item href without first slash
-			href = item.getAttribute('href').replace(/^\//g, '');
+		// find the window id in the items array
+		index = (items.indexOf(id) > -1) ? items.indexOf(id) : 0;
 
-			if (href === current) {
-				item.classList.add('f-active');
-			} else {
-				item.classList.remove('f-active');
+		// set the matched item as active
+		fabricator.dom.menuItems[index].classList.add('f-active');
+
+		//modify other accordions
+		for(var i = 0; i < fabricator.dom.menuAccordions.length; i++) {
+			var thisID = fabricator.dom.menuAccordions[i].getAttribute('href').split('#').pop();
+
+			// if it is the same item - i.e. the window loaded on a hash
+			if(id.indexOf(thisID) > -1 && fabricator.dom.menuAccordions[i]) {
+				fabricator.dom.menuAccordions[i].parentNode.classList.add('is-open');
 			}
-
 		}
 
 	};
@@ -327,6 +367,37 @@ fabricator.setInitialMenuState = function () {
 
 };
 
+/** 
+ * Open/Close menu accordions on click
+ */
+fabricator.accordions = function() {
+	
+	for(var i = 0; i < fabricator.dom.menuAccordions.length; i++) {
+
+		fabricator.dom.menuAccordions[i].addEventListener('click', function (e) {
+			setActiveAccordion(e);
+		});
+		fabricator.dom.menuAccordions[i].parentNode.querySelectorAll('.control')[0].addEventListener('click', function(e) {
+			setActiveAccordion(e);
+		});
+	}
+
+	var setActiveAccordion = function(which) {
+		var classList = which.currentTarget.parentNode.classList;
+
+		if(classList.toString().indexOf('is-open') > 0) {
+			which.currentTarget.parentNode.classList.remove('is-open');
+		} else {
+			for(var a = 0; a < fabricator.dom.menuAccordions.length; a++) {
+				fabricator.dom.menuAccordions[a].parentNode.classList.remove('is-open');
+			}
+			which.currentTarget.parentNode.classList.add('is-open');
+		}
+	};
+
+	return this;
+};
+
 
 /**
  * Initialization
@@ -335,6 +406,7 @@ fabricator.setInitialMenuState = function () {
 
 	// invoke
 	fabricator
+		.accordions()
 		.setInitialMenuState()
 		.menuToggle()
 		.allItemsToggles()

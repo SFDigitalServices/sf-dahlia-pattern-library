@@ -1,0 +1,129 @@
+//
+// Type Utilities
+//
+
+$include-html-type-classes: $include-html-classes;
+
+// Text alignment class names
+$align-class-names:
+  small-only,
+  small,
+  medium-only,
+  medium,
+  large-only,
+  large,
+  xlarge-only,
+  xlarge,
+  xxlarge-only,
+  xxlarge;
+
+// Text alignment breakpoints
+$align-class-breakpoints:
+  $small-only,
+  $small-up,
+  $medium-only,
+  $medium-up,
+  $large-only,
+  $large-up,
+  $xlarge-only,
+  $xlarge-up,
+  $xxlarge-only,
+  $xxlarge-up;
+  
+// Generates text align and justify classes
+@mixin align-classes{
+  .text-left    { text-align: left !important; }
+  .text-right   { text-align: right !important; }
+  .text-center  { text-align: center !important; }
+  .text-justify { text-align: justify !important; }
+
+  @for $i from 1 through length($align-class-names) {
+    @media #{(nth($align-class-breakpoints, $i))} {
+      .#{(nth($align-class-names, $i))}-text-left { text-align: left !important; }
+      .#{(nth($align-class-names, $i))}-text-right   { text-align: right !important; }
+      .#{(nth($align-class-names, $i))}-text-center  { text-align: center !important; }
+      .#{(nth($align-class-names, $i))}-text-justify { text-align: justify !important; }
+    }
+  }
+}
+
+@include exports("type") {
+  @if $include-html-type-classes {
+    // Responsive Text alignment
+    @include align-classes;
+  }
+}
+
+.serif {
+  @include type-weight('regular');
+  font-family:$fancy-serif-font-family;
+  font-style: italic;
+}
+
+.sans {
+  font-family:$sans-font-family;
+}
+
+.large {
+//    @include type-scale(large);
+}
+
+.medium {
+//    @include type-scale(medium);
+}
+
+.base {
+//   @include type-scale(base);
+}
+
+.small {
+//  @include type-scale(tiny);
+}
+
+.black {
+   @include type-weight(black);
+}
+
+.bold {
+   @include type-weight(bold);
+}
+
+.semi {
+   @include type-weight(semi);
+}
+
+.normal {
+  @include type-weight(regular);
+}
+
+.light {
+  @include type-weight(light);
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.titled {
+  text-transform: capitalize;
+}
+
+.two-column {
+  @media #{$medium-up} {
+    -moz-column-count: 2;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 50px;
+
+    ul, dl {
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      -moz-page-break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
