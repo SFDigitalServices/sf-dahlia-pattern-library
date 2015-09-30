@@ -60,21 +60,15 @@ $jet:               #222 !default;
 $black:             #000 !default;
 
 // Brand Colors
-$primary-color:     #f7692e;
-$secondary-color:   #5fb8c5;
+$primary-color:     #0d84e9;
+$secondary-color:   #ff9900;
+
+$attention:         #00bed5;
+$splash:            #df0083;
+$panic:             #f60f60;
+
 $dim:               #008fff;
 $wash-color:        #f6f6f7;
-$jet:               #1a383c;
-$charcoal:          #4f5a62;
-$steel:             #b5b4be;
-$smoke:             #dedee0;
-$tint:              #74d3fe;
-$alert-color:       #df0083;
-$success-color:     #22968c;
-$warn:              #ffe242;
-$oil:               #373737;
-$mist:              #ededee;
-$silver:            #b3b3b3;
 
 $warm:              #f98129;
 $dark:              #5e46ee;
@@ -84,23 +78,24 @@ $merlot:            #9a175c;
 $spooky:            #a24ac6;
 $deep:              #951dbf;
 $carrot:            #e94c28;
-$panic:             #f60;
 
-$pin-hover:         #1f3437;
-$pin1:           $pin-hover;
-$splash:            #df0083;
+$alert-color:       #df0083;
+$success-color:     #22968c;
+
+$jet:               #1a383c;
+$charcoal:          #4f5a62;
+$steel:             #b5b4be;
+$smoke:             #dedee0;
+$tint:              #74d3fe;
+$warn:              #ffe242;
+$oil:               #373737;
+$mist:              #ededee;
+$silver:            #b3b3b3;
 
 $facebook:          #4862a3;
 $twitter:           #55acee;
 $linkedin:          #0074a1;
 
-$splash-header:     #ff5974;
-$splash-button:     #f63d6d;
-
-$splash1:    $splash-header;
-$splash2:    $splash-button;
-
-$events:              $dark;
 $cool:       $success-color;
 $splash:       $alert-color;
 $ghost:         $wash-color;
@@ -108,7 +103,6 @@ $primary:    $primary-color;
 $secondary:$secondary-color;
 $success:    $success-color;
 $warning-color:       $warn;
-$attention:           $warn; 
 $wash:          $wash-color;
 $alert:        $alert-color;
 
