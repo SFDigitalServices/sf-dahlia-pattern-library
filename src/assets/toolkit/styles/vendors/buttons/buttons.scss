@@ -2,7 +2,7 @@
 
 // Button colors.
 $base-button-color:     #fff !default;
-$base-button-bg:        #0074d9 !default;
+$base-button-bg:        $primary !default;
 $btn-primary-border:    darken($base-button-bg, 5%) !default;
 
 /* Default Button */
@@ -21,6 +21,7 @@ $btn-primary-border:    darken($base-button-bg, 5%) !default;
 /* 3d Theme */
 
 @include btn_3d;
+
 
 /* Blockbreak */
 

@@ -7,8 +7,8 @@
   // letter-spacing: .15em;
   display: inline-block;
   font-weight: bold;
-  line-height: 1;
-  padding: rem-calc(14);
+  line-height: normal;
+  padding: rem-calc(16);
   text-decoration: none;
   white-space: nowrap;
   text-transform: normal;
@@ -82,6 +82,7 @@
     color: $border-color;
     border: 2px solid $border-color;
     margin-bottom: .5em;
+    padding: rem-calc(12);
     background-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
