@@ -5,23 +5,22 @@ $base-button-color:     #fff !default;
 $base-button-bg:        #0074d9 !default;
 $btn-primary-border:    darken($base-button-bg, 5%) !default;
 
-
 /* Default Button */
 
-@include button;
+@include btn;
 
 /* Flat Theme */
 
-@include button-flat;
+@include btn-flat;
 
 /* Ghost themes */
 
-@include button_ghost;
-@include button_ghost_light;
+@include btn_ghost;
+@include btn_ghost_light;
 
 /* 3d Theme */
 
-@include button_3d;
+@include btn_3d;
 
 /* Blockbreak */
 

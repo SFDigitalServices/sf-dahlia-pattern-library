@@ -2,15 +2,16 @@
 // Base button placeholder
 
 %button {
+  font-family: $font-family;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: .15em;
+  // letter-spacing: .15em;
   display: inline-block;
   font-weight: bold;
   line-height: 1;
-  padding: .75em 1em;
+  padding: rem-calc(14);
   text-decoration: none;
   white-space: nowrap;
-  text-transform: uppercase;
+  text-transform: normal;
   text-align: center;
 }
 
@@ -18,7 +19,7 @@
 // 
 // Base Theme
 
-@mixin button($color: $base-button-color, $bg: $base-button-bg, $class: "") {
+@mixin btn($color: $base-button-color, $bg: $base-button-bg, $class: "") {
   .btn#{$class} {
     @extend %button;
     color: $color;
@@ -45,7 +46,7 @@
 
 // Flat theme
 
-@mixin button_flat($color: #fff, $bg: #0074d9, $class: "") {
+@mixin btn_flat($color: #fff, $bg: #0074d9, $class: "") {
     .btn-flat#{$class} {
         @extend %button; 
         position: relative;
@@ -75,7 +76,7 @@
 
 // Ghost theme
 
-@mixin button_ghost($border-color: #555, $color: #fff, $class: "") {
+@mixin btn_ghost($border-color: #555, $color: #fff, $class: "") {
   .btn-ghost#{$class} { 
     @extend %button;
     color: $border-color;
@@ -109,7 +110,7 @@
 
 // Ghost light theme
 
-@mixin button_ghost_light {
+@mixin btn_ghost_light {
     .btn-ghost-light {
       @extend %button;
       border: 2px solid rgba(255, 255, 255, 0.7);
@@ -139,7 +140,7 @@
 
 // 3D Theme
 
-@mixin button_3d($color: $base-button-color, $bg: $base-button-bg, $class: "") {
+@mixin btn_3d($color: $base-button-color, $bg: $base-button-bg, $class: "") {
     .btn-3d#{$class} {
       @extend %button;
       background-color: $bg;

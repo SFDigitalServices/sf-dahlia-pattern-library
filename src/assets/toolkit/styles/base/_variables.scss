@@ -16,7 +16,7 @@ $h5-font-size: rem-calc(18);
 $h6-font-size: 1rem;
 
 $font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-$base-font-family: $font-family;
+$base-font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
 $sans-font-family: $font-family;
 $body-font-family: $font-family;
 $sans-font-family-semibold: $font-family;
@@ -134,7 +134,6 @@ $colors: (
   oil: $oil,
   jet: $jet,
   warm: $warm,
-  dark: $events,
   ebony: $ebony,
   splash: $splash,
   vibrant: $vibrant,
@@ -145,8 +144,6 @@ $colors: (
   merlot: $merlot,
   dim: $dim,
   mist: $mist,
-  splash1: $splash1,
-  splash2: $splash2,
   spooky: $spooky,
   panic: $panic
 );
