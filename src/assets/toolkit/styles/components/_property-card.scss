@@ -1,0 +1,43 @@
+.property-card {
+  font-size: .9rem;
+  line-height: 1.5;
+
+  #{h1, h2, h3, h4, h5, h6} {
+   margin-bottom: 0;
+  }  
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &_figure {
+    position: relative;
+  }
+    
+  &_details {
+    background-color: rgba(0,0,0, .5);
+    color: #fff;
+    padding: 1rem;
+  }
+
+  &_toggle {
+    @include absolute(2.5rem,1rem,null,null);
+  }
+
+  &_content {
+    position: relative;
+    padding: 1rem;
+
+    button {
+      margin-top: 1rem; 
+    }
+  }
+
+  &_title {
+    margin-bottom: 0;
+  }
+
+  &_like {
+   @include absolute(null,1rem,3rem,null); 
+  }
+}

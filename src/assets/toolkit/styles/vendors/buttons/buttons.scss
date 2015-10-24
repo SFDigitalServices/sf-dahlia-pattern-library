@@ -26,7 +26,7 @@ $btn-primary-border:    darken($base-button-bg, 5%) !default;
 /* Blockbreak */
 
 .btn, .btn-flat, .btn-ghost, .btn-ghost-light, .btn-3d {
-  @include blockbreak;
+  // @include blockbreak;
 }
 
 // Sizes

@@ -1,118 +1,15 @@
-@font-face {
-  font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?-1pel5a');
-  src:url('../fonts/icomoon.eot?#iefix-1pel5a') format('embedded-opentype'),
-    url('../fonts/icomoon.woff?-1pel5a') format('woff'),
-    url('../fonts/icomoon.ttf?-1pel5a') format('truetype'),
-    url('../fonts/icomoon.svg?-1pel5a#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+%ui-icon {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-hamburger:before {
-  content: "\e619";
-}
-.icon-closer:before {
-  content: "\e61a";
-}
-.icon-linkedin:before {
-  content: "\e60c";
-}
-.icon-ibm:before {
-  content: "\e618";
-}
-.icon-clock:before {
-  content: "\e616";
-}
-.icon-calendar:before {
-  content: "\e617";
-}
-.icon-radio-on:before {
-  content: "\e612";
-}
-.icon-box:before {
-  content: "\e613";
-}
-.icon-radio-off:before {
-  content: "\e614";
-}
-.icon-check:before {
-  content: "\e615";
-}
-.icon-ibm-logo:before {
-  content: "\e610";
-}
-.icon-cal:before {
-  content: "\e600";
-}
-.icon-mail:before {
-  content: "\e601";
-}
-.icon-industry:before {
-  content: "\e602";
-}
-.icon-volunteer:before {
-  content: "\e603";
-}
-.icon-mentorship:before {
-  content: "\e604";
-}
-.icon-international-business:before {
-  content: "\e605";
-}
-.icon-funding-tips:before {
-  content: "\e606";
-}
-.icon-doing-business:before {
-  content: "\e607";
-}
-.icon-community:before {
-  content: "\e608";
-}
-.icon-business-planning:before {
-  content: "\e609";
-}
-.icon-plus:before {
-  content: "\e60a";
-}
-.icon-search:before {
-  content: "\e60b";
-}
-.icon-facebook:before {
-  content: "\e60d";
-}
-.icon-twitter:before {
-  content: "\e60e";
-}
-.icon-triangle-down:before {
-  content: "\f05b";
-}
-.icon-chevron-right:before {
-  content: "\f078";
-}
-.icon-chevron-left:before {
-  content: "\f0a4";
-}
-.icon-dash:before {
-  content: "\f0ca";
-}
-.icon-triangle-right:before {
-  content: "\e611";
-}
-.icon-cross:before {
-  content: "\e60f";
+.ui-icon {
+  svg {
+    @extend %ui-icon;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -5px;
+  }
 }

@@ -6,6 +6,15 @@ button,
   font-family: $font-family;
   padding-left: 1rem;
   padding-right: 1rem;
+
+  &.secondary {
+    background-color: $base;
+
+    &:hover,
+    &:focus {
+      background-color: darken($base, 5%);
+    }
+  }
 }
 
 // Custom btn variables
