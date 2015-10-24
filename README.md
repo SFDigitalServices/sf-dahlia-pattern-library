@@ -1,7 +1,5 @@
 #Dahlia Pattern Libary
 
-##Front end pattern library for SF Dahlia
-
 Includes:
 
 * Fabricator
