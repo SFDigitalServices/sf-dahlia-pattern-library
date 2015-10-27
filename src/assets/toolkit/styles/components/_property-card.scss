@@ -40,4 +40,40 @@
   &_like {
    @include absolute(null,1rem,3rem,null); 
   }
+
+  &.responsive {
+    // @media #{$medium-up} {
+    //   .property-card_figure {
+    //     @include grid-row();
+    //   }
+
+    //   .property-card_thumb {
+    //     @include grid-column(6);
+    //   }
+
+    //   .property-card_details {
+    //     @include grid-column(6);
+
+    //     &.overlay {
+    //       @include relative(null,null,null,null); 
+    //     }  
+    //   }
+    // }
+
+    @media #{$medium-up} {
+      @include grid-row();
+
+      .overlay {
+        @include relative(null,null,null,null); 
+      }
+
+      .property-card_figure {
+        @include grid-column(5);
+      }
+      
+      .property-card_content {
+        @include grid-column(7);
+      }
+    }  
+  }
 }
