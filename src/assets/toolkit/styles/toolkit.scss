@@ -13,7 +13,7 @@
    "vendors/foundation/foundation/components/block-grid",
    "vendors/foundation/foundation/components/breadcrumbs",
    "vendors/foundation/foundation/components/button-groups",
-//   "vendors/foundation/foundation/components/buttons",
+   "vendors/foundation/foundation/components/buttons",
    "vendors/foundation/foundation/components/clearing",
    "vendors/foundation/foundation/components/dropdown",
    "vendors/foundation/foundation/components/dropdown-buttons",
@@ -42,13 +42,13 @@
 //   "foundation/components/tooltips",
    "vendors/foundation/foundation/components/top-bar",
 //   "foundation/components/type",
-   // removing reference to components/type
-   "vendors/foundation/foundation/components/offcanvas",
+   // "vendors/foundation/foundation/components/offcanvas",
    "vendors/foundation/foundation/components/visibility";
 
 @import "vendors/compass";
 @import "vendors/scut";
 @import "vendors/buttons";
+@import "vendors-extensions/all";
 
 @import "utilities/all";
 
