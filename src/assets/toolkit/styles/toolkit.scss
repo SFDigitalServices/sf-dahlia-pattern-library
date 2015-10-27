@@ -2,8 +2,8 @@
 // Toolkit styles
 //
 
-@import "vendors/normalize";
 @import "settings";
+@import "vendors/normalize";
 //@import "vendors/foundation/foundation";
 
 // Or selectively include components
@@ -50,9 +50,11 @@
 @import "vendors/scut";
 @import "vendors/buttons";
 
-@import "base/all";
 @import "utilities/all";
-@import "components/all";
+
+@import "base/all";
 @import "structures/all";
+@import "components/all";
+
 @import "templates/all";
 @import "pages/all";
