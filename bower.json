@@ -1,0 +1,23 @@
+{
+  "name": "sf-dahlia-pattern-library",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Exygy/sf-dahlia-pattern-library",
+  "authors": [
+    "Exygy"
+  ],
+  "description": "Pattern Library for SF DAHLIA",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "foundation": "~5.5.3"
+  }
+}
