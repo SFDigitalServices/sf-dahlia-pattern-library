@@ -11,6 +11,7 @@
   }
 
   &_figure {
+    background-color: $mist;
     position: relative;
   }
     
@@ -25,6 +26,7 @@
   }
 
   &_content {
+    @include clearfix;
     position: relative;
     padding: 1rem;
 
@@ -38,7 +40,13 @@
   }
 
   &_like {
-   @include absolute(null,1rem,3rem,null); 
+   @include absolute(null,0,0,null);
+   padding: 1rem;
+  }
+
+  &_action {
+    float: right;
+    margin-top: -1rem;
   }
 
   &.responsive {

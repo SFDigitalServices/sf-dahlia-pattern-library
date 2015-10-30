@@ -1,0 +1,16 @@
+.stats-list {
+  @include clearfix;
+  display: block;
+  padding: .5rem 1rem;
+
+  li {
+    display: block;
+    float: left;
+    width: 33.3333%;
+    // margin-right: 1rem;
+  }
+
+  &_value {
+    font-weight: bold;
+  }
+}
