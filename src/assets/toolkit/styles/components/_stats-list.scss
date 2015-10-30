@@ -14,3 +14,16 @@
     font-weight: bold;
   }
 }
+
+.stats-sub {
+  @include clearfix;
+  display: block;
+  font-size: .75rem;
+  padding: .5rem 1rem;
+
+  li {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+}

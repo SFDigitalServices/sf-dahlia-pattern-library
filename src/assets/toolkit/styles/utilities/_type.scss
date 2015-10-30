@@ -204,57 +204,41 @@ $text-sizing: (
   }
 }
 
-.serif {
+.t-serif {
   @include type-weight('regular');
   font-family:$fancy-serif-font-family;
   font-style: italic;
 }
 
-.sans {
+.t-sans {
   font-family:$sans-font-family;
 }
 
-.large {
-//    @include type-scale(large);
-}
-
-.medium {
-//    @include type-scale(medium);
-}
-
-.base {
-//   @include type-scale(base);
-}
-
-.small {
-//  @include type-scale(tiny);
-}
-
-.black {
+.t-black {
    @include type-weight(black);
 }
 
-.bold {
+.t-bold {
    @include type-weight(bold);
 }
 
-.semi {
+.t-semi {
    @include type-weight(semi);
 }
 
-.normal {
+.t-normal {
   @include type-weight(regular);
 }
 
-.light {
+.t-light {
   @include type-weight(light);
 }
 
-.caps {
+.t-caps {
   text-transform: uppercase;
 }
 
-.titled {
+.t-titled {
   text-transform: capitalize;
 }
 

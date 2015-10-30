@@ -11,49 +11,59 @@
 }
 
 h1,
-.alpha {
+.alpha,
+.t-alpha {
   @include responsive-text-size('alpha');
 }
 
 h2,
-.beta {
+.beta,
+.t-beta {
   @include responsive-text-size('beta');
 }
 
 h3,
-.gamma {
+.gamma,
+.t-gamma {
   @include responsive-text-size('gamma');
 }
 
 h4,
-.delta {
+.delta,
+.t-delta {
   @include responsive-text-size('delta');
 }
 
 h5,
-.epsilon {
+.epsilon,
+.t-epsilon {
   @include responsive-text-size('epsilon');
 }
 
 h6,
-.base {
+.base,
+.t-base {
   @include responsive-text-size('base');
 }
 
 small,
-.small {
+.small,
+.t-small {
   @include responsive-text-size('small');
 }
 
-.tiny {
+.tiny,
+.t-tiny {
   @include responsive-text-size('tiny');
 }
 
-.micro {
+.micro,
+.t-micro {
   @include responsive-text-size('micro');
 }
 
-.quark {
+.quark, 
+.t-quark {
   @include responsive-text-size('quark');
 }
 
