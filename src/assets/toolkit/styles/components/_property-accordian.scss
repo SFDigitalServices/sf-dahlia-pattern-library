@@ -1,0 +1,29 @@
+.property-accordian {
+
+  .accordian-header {
+    @include type-weight(bold);
+  }
+
+  .accordian-subheader {
+    @include responsive-text-size('small');
+    @include type-weight(regular);
+    display: block;
+  }
+
+  .accordion-nested {
+    @include responsive-text-size('small');
+
+    .accordion-navigation a {
+      @include type-weight(bold);
+      @include responsive-text-size('small');
+    }
+  }
+
+  .content-panel {
+    margin-bottom: 2rem;
+
+    &:first-of-type {
+      margin-top: .5rem;
+    }
+  }
+}  

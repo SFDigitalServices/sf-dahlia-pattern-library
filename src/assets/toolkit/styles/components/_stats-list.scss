@@ -6,24 +6,31 @@
   li {
     display: block;
     float: left;
-    width: 33.3333%;
-    // margin-right: 1rem;
   }
 
   &_value {
     font-weight: bold;
   }
+
+  &.double {
+    li {
+      width: 50%;
+    }
+  }
+
+  &.triple {
+    li {
+      width: 33.3333%;
+    }
+  }
 }
 
 .stats-sub {
-  @include clearfix;
-  display: block;
-  font-size: .75rem;
-  padding: .5rem 1rem;
-
   li {
-    display: block;
-    float: left;
-    width: 50%;
+    font-size: .75rem;
   }
+}
+
+.stats-card {
+  margin-bottom: .5rem;
 }
