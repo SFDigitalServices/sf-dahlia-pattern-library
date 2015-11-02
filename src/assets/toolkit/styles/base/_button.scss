@@ -17,6 +17,16 @@ button,
   }
 }
 
+.button-stack {
+  margin-bottom: 1rem;
+  
+  button,
+  .button {
+    margin: 0 auto .25rem;
+    display: block;
+  }
+}
+
 // Custom btn variables
 // .btn
 

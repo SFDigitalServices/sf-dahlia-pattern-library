@@ -88,7 +88,27 @@ dl dt, dl dd {
 
 hr {
   border: 0;
-  height: .5rem;
+  height: 1px;
   background: $charcoal;
-  margin: 2rem 0
+  margin: 2rem 0;
+
+  &-1 {
+    height: 1px;
+  }
+
+  &-2 {
+    height: 2px;
+  }
+
+  &-3 {
+    height: 3px;
+  }
+
+  &-4 {
+    height: 4px;
+  }
+
+  &-5 {
+    height: 5px;
+  }
 }
