@@ -2,6 +2,8 @@
 
   .accordian-header {
     @include type-weight(bold);
+    border-bottom: 1px solid $silver;
+    position: relative;
   }
 
   .accordian-subheader {
@@ -16,7 +18,15 @@
     .accordion-navigation a {
       @include type-weight(bold);
       @include responsive-text-size('small');
+      background-color: #fff;
+      border-bottom: 1px solid $silver;
+      padding-left: 0;
+      position: relative;
     }
+  }
+
+  .ui-control {
+    @include absolute(1rem,1rem,null,null);
   }
 
   .content-panel {
