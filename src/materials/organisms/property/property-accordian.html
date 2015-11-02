@@ -8,49 +8,7 @@
     <div id="panel1a" class="content active">
       <div class="content-panel">
         <h4 class="tiny t-sans">Requirements</h4>
-        <div class="unit-requirements stats-card bg-mist">
-          <ul class="stats-list double">
-            <li>
-              Studio
-            </li>
-            <li>  
-              1-2 people
-            </li>
-          </ul>
-
-          <ul class="stats-list double">
-            <li>
-              <div class="stats-list_value">$2,347/mo</div>
-              min income
-            </li>
-            <li>
-              <div class="stats-list_value">$3,270 - $4,204/mo</div>
-              max income
-            </li>
-          </ul>
-        </div>
-
-        <div class="unit-requirements stats-card bg-mist">
-          <ul class="stats-list double">
-            <li>
-              1 Bedroom
-            </li>
-            <li>  
-              2-4 people
-            </li>
-          </ul>
-
-          <ul class="stats-list double">
-            <li>
-              <div class="stats-list_value">$2,347/mo</div>
-              min income
-            </li>
-            <li>
-              <div class="stats-list_value">$3,270 - $4,204/mo</div>
-              max income
-            </li>
-          </ul>
-        </div>
+        {{> stats.stats-card}}
       </div>
 
       <div class="content-panel">
@@ -158,7 +116,7 @@
       </div>
 
       <div class="content-panel text-center">
-      <h4 class="tiny t-sans">Office Hours</h4>
+      <h4 class="tiny t-sans no-margin">Office Hours</h4>
       <h5 class="t-sans">8:30 am - 5:00pm</h5>
       {{> buttons.button }}
       </div>
@@ -169,7 +127,131 @@
       <span class="accordian-subheader">Amenities, unit details and additional fees</span>
     </a>
     <div id="panel3a" class="content">
-      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <div class="content-panel">
+      <p>A great place to call home. 11 units available. Located in SOMAs featuring great amenities at a find locations.</p>
+      </div>
+
+      <div class="content-panel">
+        <div class="row collapse">
+          <div class="small-6 columns">
+            <span class="t-small c-steel">Neighborhood</span>
+            <p>SOMA</p>
+          </div>
+          <div class="small-6 columns">
+            <span class="t-small c-steel">Built</span>
+            <p>2015</p>
+          </div>
+        </div>
+
+        <div class="row collapse margin-bottom">
+          <div class="small-12 columns">
+            <span class="t-small c-steel">Property Amenities</span>
+          </div>
+          <div class="row collapse">
+            <div class="small-6 columns">
+              <ul>
+                <li>24-hour Desk</li>
+                <li>Elevator</li>
+                <li>Lobby</li>
+                <li>Laundry Facilities</li>
+                <li>Community TV Room</li>
+                <li>All units w/ Private Bathrooms and Kitchens</li>
+              </ul>
+            </div>
+            <div class="small-6 columns">
+              <ul>
+                <li>Cats allowed</li>
+                <li>Dogs allowed</li>
+                <li>Water and Trash Included</li>
+                <li>No Parking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row collapse">
+          <div class="small-12 columns">
+            <span class="t-small c-steel">Accessibility</span>
+          </div>
+          <div class="row collapse">
+            <div class="small-6 columns">
+              <ul>
+                <li>Wheelchair Accees</li>
+                <li>Grab Bars</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <h5 class="t-sans t-small c-steel">Unit Features</h5>
+        <div class="stats-card bg-mist">
+          <ul class="stats-list double">
+            <li>
+              Studio
+            </li>
+            <li>  
+              1 unit
+            </li>
+          </ul>
+
+          <ul class="stats-list double">
+            <li class="t-small">
+              Accessable Unit
+            </li>
+            <li class="t-small">  
+              469 sqft
+            </li>
+          </ul>
+        </div>
+
+        <div class="stats-card bg-mist">
+          <ul class="stats-list double">
+            <li>
+              1 Bedroom
+            </li>
+            <li>  
+              9 units
+            </li>
+          </ul>
+
+          <ul class="stats-list double">
+            <li class="t-small">
+              Accessable Units
+            </li>
+            <li class="t-small">  
+              639 - 900 sqft
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <div class="content-panel--expanded bg-mist">
+          <h5 class="t-sans t-small c-steel">Additional Fees</h5>
+
+          <div class="row collapse margin-bottom">
+            <div class="small-6 columns">
+              <span class="t-small">Application Fee</span>
+              <p class="t-delta no-margin">$40</p>
+              <span class="t-small c-steel">due post-lottery</span>
+            </div>
+            <div class="small-6 columns">
+              <span class="t-small">Deposit</span>
+              <p class="t-delta no-margin">$500 - 941</p>
+              <span class="t-small c-steel">based on credit score</span>
+            </div>
+          </div>
+
+          <div class="row collapse">
+            <div class="small-12 columns">
+              <p>Renter pays phone, internet and cable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </li>
   <li class="accordion-navigation">

@@ -25,6 +25,12 @@
     &:first-of-type {
       margin-top: .5rem;
     }
+
+    &--expanded {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding: 1rem;
+    }
   }
 
   .content-list {
