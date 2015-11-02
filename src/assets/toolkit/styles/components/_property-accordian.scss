@@ -29,6 +29,14 @@
     @include absolute(1rem,1rem,null,null);
   }
 
+  // .accordion-navigation {
+  //   &.active {
+  //     .ui-control {
+  //       transform: rotate(180deg);
+  //     }
+  //   }
+  // }
+
   .content-panel {
     margin-bottom: 2rem;
 
