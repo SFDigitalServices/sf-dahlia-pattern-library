@@ -1,0 +1,9 @@
+.map-panel {
+  position: relative;
+}
+
+.map-link {
+  @include absolute(null,0,0,0);
+  @include responsive-text-size('small');
+  text-align: center;
+}
