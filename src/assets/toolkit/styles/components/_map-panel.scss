@@ -3,7 +3,9 @@
 }
 
 .map-link {
-  @include absolute(null,0,0,0);
+  // @include absolute(null,0,0,0);
   @include responsive-text-size('small');
+  display: block;
+  padding-top: 1rem;
   text-align: center;
 }

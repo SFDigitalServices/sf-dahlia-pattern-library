@@ -1,12 +1,12 @@
-.property-accordian {
+.property-accordion {
 
-  .accordian-header {
+  .accordion-header {
     @include type-weight(bold);
     border-bottom: 1px solid $silver;
     position: relative;
   }
 
-  .accordian-subheader {
+  .accordion-subheader {
     @include responsive-text-size('small');
     @include type-weight(regular);
     display: block;

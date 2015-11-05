@@ -1,9 +1,9 @@
 <!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup --> 
 
-<ul class="property-accordian accordion" data-accordion>
+<ul class="property-accordion accordion" data-accordion>
   <li class="accordion-navigation">
-    <a href="#panel1a" class="accordian-header">Eligibility
-      <span class="accordian-subheader">Income, occupancy, preferences, and subsidies</span>
+    <a href="#panel1a" class="accordion-header">Eligibility
+      <span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
       {{> icons.icon-arrow}}
     </a>
     <div id="panel1a" class="content active">
@@ -16,7 +16,7 @@
         <h4 class="tiny t-sans">Lottery Preferences</h4>
         <ul class="accordion-nested accordion" data-accordion>
           <li class="accordion-navigation">
-            <a href="#panel1a-a" class="accordian-header">
+            <a href="#panel1a-a" class="accordion-header">
               Certificate of Preference 
               {{> icons.icon-arrow}}
             </a>
@@ -25,7 +25,7 @@
             </div>
           </li>
           <li class="accordion-navigation">
-            <a href="#panel1a-b" class="accordian-header">
+            <a href="#panel1a-b" class="accordion-header">
               Ellis Act Preference
               {{> icons.icon-arrow}}
             </a>
@@ -34,7 +34,7 @@
             </div>
           </li>
           <li class="accordion-navigation">
-            <a href="#panel1a-c" class="accordian-header">
+            <a href="#panel1a-c" class="accordion-header">
               Live/Work Preference
               {{> icons.icon-arrow}}
             </a>
@@ -62,8 +62,8 @@
     </div>
   </li>
   <li class="accordion-navigation">
-    <a href="#panel2a" class="accordian-header">Process
-      <span class="accordian-subheader">Important dates and contact information</span>
+    <a href="#panel2a" class="accordion-header">Process
+      <span class="accordion-subheader">Important dates and contact information</span>
       {{> icons.icon-arrow}}
     </a>
     <div id="panel2a" class="content">
@@ -138,8 +138,8 @@
     </div>
   </li>
   <li class="accordion-navigation">
-    <a href="#panel3a" class="accordian-header">Features
-      <span class="accordian-subheader">Amenities, unit details and additional fees</span>
+    <a href="#panel3a" class="accordion-header">Features
+      <span class="accordion-subheader">Amenities, unit details and additional fees</span>
       {{> icons.icon-arrow}}
     </a>
     <div id="panel3a" class="content">
@@ -271,8 +271,8 @@
     </div>
   </li>
   <li class="accordion-navigation">
-    <a href="#panel4a" class="accordian-header">Neighborhood
-      <span class="accordian-subheader">Location and transportation</span>
+    <a href="#panel4a" class="accordion-header">Neighborhood
+      <span class="accordion-subheader">Location and transportation</span>
       {{> icons.icon-arrow}}
     </a>
     <div id="panel4a" class="content">
@@ -288,12 +288,12 @@
     </div>
   </li>
   <li class="accordion-navigation">
-    <a href="#panel5a" class="accordian-header">Legal
-      <span class="accordian-subheader">Required documents and selection criteria</span>
+    <a href="#panel5a" class="accordion-header">Legal
+      <span class="accordion-subheader">Required documents and selection criteria</span>
       {{> icons.icon-arrow}}
     </a>
     <div id="panel5a" class="content">
-      Panel 5. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      {{> property-accordion.accordion-nested}}
     </div>
   </li>
 </ul>
