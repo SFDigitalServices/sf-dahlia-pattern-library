@@ -1,0 +1,29 @@
+.stats-table {
+  width: 100%;
+
+  th {
+    @include responsive-text-size('tiny');
+    font-weight: normal;
+    color: $charcoal;
+  }
+}
+
+.stats-table--stack {
+  width: 100%;
+  
+  tbody td {
+    clear: left;
+    float: left;
+    width: 100%;
+  }
+
+  .tablesaw-cell-label {
+    width: 30%;
+    display: inline-block;
+  }
+
+  .tablesaw-cell-content {
+    max-width: 67%;
+    display: inline-block;
+  }
+}
