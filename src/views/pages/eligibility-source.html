@@ -1,0 +1,38 @@
+<form class="padding-top padding-bottom">
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Where is this income from?
+        <select>
+          <option value="husker">Husker</option>
+          <option value="starbuck">Starbuck</option>
+          <option value="hotdog">Hot Dog</option>
+          <option value="apollo">Apollo</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>How much is the income this source?
+        <input type="text" placeholder="large-12.columns" />
+      </label>
+      {{> forms.radio-group--by-time}}
+    </div>
+  </div>
+  
+  <div class="row margin-bottom">
+    <div class="large-12 columns">
+      <button class="button tertiary expand">Add another income source</button>
+    </div>
+  </div> 
+
+  <div class="row padding-top">
+    <div class="large-12 columns">
+      <button class="button expand">Next</button>
+    </div>
+    <div class="large-12 columns">
+      <button class="button blank expand">Skip and finish later</button>
+    </div>
+  </div>  
+</form>

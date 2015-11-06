@@ -199,7 +199,7 @@ $include-html-global-classes: $include-html-classes;
 
 // Forms
 $fieldset-border-width: 0;
-$form-label-small-transform: uppercase;
+$form-label-small-transform: capitalize;
 $fieldset-padding: 0;
 
 /* Buttons */

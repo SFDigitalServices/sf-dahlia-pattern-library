@@ -8,10 +8,20 @@ form {
   label {
     @include responsive-text-size('tiny');
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
     input, textarea {
       margin-top: .325rem !important;
+    }
+  }
+}
+
+.radio-group {
+  p {
+    margin-bottom: 0;
+
+    label {
+      text-transform: none;
     }
   }
 }

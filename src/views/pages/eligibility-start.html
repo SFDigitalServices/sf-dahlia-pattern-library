@@ -4,10 +4,12 @@
       <label>
         <span class="eligibility-form_header">Household Size</span>
         <select>
-          <option value="husker">Husker</option>
-          <option value="starbuck">Starbuck</option>
-          <option value="hotdog">Hot Dog</option>
-          <option value="apollo">Apollo</option>
+          <option value="one person">1 person</option>
+          <option value="two people">2 people</option>
+          <option value="three people">3 people</option>
+          <option value="four people">4 people</option>
+          <option value="five people">5 people</option>
+          <option value="six people">6 people</option>
         </select>
       </label>
     </div>
@@ -19,12 +21,7 @@
         <span class="eligibility-form_header">Household Income</span>
         <input type="text" placeholder="large-12.columns" />
       </label>
-      <div class="d-block">
-        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">per month</label>
-      </div>
-      <div class="d-block">
-        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">per year</label>
-      </div>
+      {{> forms.radio-group--by-time}}
     </div>  
     <div class="small-6 columns">
       <span class="t-tiny padding-top d-block">Includes wages and public benefits. Use the income calculator if you have questions.</span>
@@ -33,12 +30,15 @@
 
   <div class="row padding-top">
     <div class="large-12 columns">
-      <label>Subsidies and Vouchers</label>
+      <label class="eligibility-form_header">Subsidies and Vouchers</label>
       <div class="d-block">
-        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Section 8</label>
       </div>
       <div class="d-block">
-        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Veterans Affairs Supportive Housing (VASH)</label>
+      </div>
+      <div class="d-block">
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Other</label>
       </div>
     </div>
   </div>
@@ -58,4 +58,4 @@
 
     <button class="button expand secondary">Get Notified by Email</button>
   </div>
-</div>  
+</div>

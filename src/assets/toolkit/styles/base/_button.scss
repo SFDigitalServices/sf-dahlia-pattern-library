@@ -15,6 +15,26 @@ button,
       background-color: darken($base, 5%);
     }
   }
+
+  &.tertiary {
+    background-color: $smoke;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      background-color: darken($smoke, 5%);
+    }
+  }
+
+  &.blank {
+    background-color: #fff;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#fff, 5%);
+    }
+  }
 }
 
 .button-stack {
