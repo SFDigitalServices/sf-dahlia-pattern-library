@@ -1,0 +1,10 @@
+.header {
+  &-block {
+    background-color: $smoke;
+    padding: 1rem;
+
+    &_name {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+{{> headers.header-block}}
+
 <form class="padding-top padding-bottom">
   <div class="row">
     <div class="large-12 columns">
@@ -19,16 +21,18 @@
     <div class="small-6 columns bg-mist padding-top padding-bottom">
       <label>
         <span class="eligibility-form_header">Household Income</span>
-        <input type="text" placeholder="large-12.columns" />
+        <input type="text" placeholder="$ Total Income" />
       </label>
       {{> forms.radio-group--by-time}}
     </div>  
     <div class="small-6 columns">
-      <span class="t-tiny padding-top d-block">Includes wages and public benefits. Use the income calculator if you have questions.</span>
+      <span class="t-tiny c-steel d-block padding-top margin-bottom">Includes wages and public benefits. Use the income calculator if you have questions.</span>
+
+      <button class="button small tertiary no-margin">Income Calculator</button>
     </div>
   </div>
 
-  <div class="row padding-top">
+  <div class="row padding-top padding-bottom margin-bottom">
     <div class="large-12 columns">
       <label class="eligibility-form_header">Subsidies and Vouchers</label>
       <div class="d-block">
