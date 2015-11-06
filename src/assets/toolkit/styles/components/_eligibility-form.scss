@@ -19,6 +19,8 @@
   }
 
   &_link {
+    @include responsive-text-size('tiny');
+    line-height: 1.5rem;
     float: right;
     text-transform: uppercase;
   }

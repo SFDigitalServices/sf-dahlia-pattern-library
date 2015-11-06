@@ -1,17 +1,15 @@
 <form class="padding-top padding-bottom">
   <div class="row">
     <div class="large-12 columns">
-      <div class="income-source_item">
+      <ul class="income-source">
+      {{> income.income-source_item}}
+
+      <li class="income-source_item">
         <span class="income-source_name">Wages: $1000/mo</span>
 
         <a href="#" class="income-source_link">Edit</a>
-      </div>
-
-      <div class="income-source_item">
-        <span class="income-source_name">Wages: $1000/mo</span>
-
-        <a href="#" class="income-source_link">Edit</a>
-      </div>
+      </li>
+      </ul>
     </div>
   </div>
 
@@ -21,10 +19,11 @@
     <div class="large-12 columns">
       <label>Where is this income from?
         <select>
-          <option value="husker">Husker</option>
-          <option value="starbuck">Starbuck</option>
-          <option value="hotdog">Hot Dog</option>
-          <option value="apollo">Apollo</option>
+          <option value="wages">Wages</option>
+          <option value="social security">Social Security</option>
+          <option value="disability">Disability</option>
+          <option value="unemplyment">Unemployment</option>
+          <option value="calworks">CalWorks</option>
         </select>
       </label>
     </div>
@@ -33,7 +32,7 @@
   <div class="row">
     <div class="large-12 columns">
       <label>How much is the income this source?
-        <input type="text" placeholder="large-12.columns" />
+        <input type="text" placeholder="$ Amount" />
       </label>
       {{> forms.radio-group--by-time}}
     </div>
@@ -41,16 +40,11 @@
   
   <div class="row margin-bottom">
     <div class="large-12 columns">
-      <button class="button tertiary expand">Add another income source</button>
+      <button class="button tertiary expand">
+        Add another income source
+      </button>
     </div>
   </div> 
 
-  <div class="row padding-top">
-    <div class="large-12 columns">
-      <button class="button expand">Next</button>
-    </div>
-    <div class="large-12 columns">
-      <button class="button blank expand">Skip and finish later</button>
-    </div>
-  </div>  
+  {{> forms.button-stack--paginate}}
 </form>
