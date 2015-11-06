@@ -5,3 +5,21 @@
     padding-bottom: .5rem;
   }
 }
+
+.income-source {
+
+  &_item {
+    background-color: $mist;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &_link {
+    float: right;
+    text-transform: uppercase;
+  }
+}
