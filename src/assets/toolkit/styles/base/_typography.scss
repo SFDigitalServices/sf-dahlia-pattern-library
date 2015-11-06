@@ -92,23 +92,23 @@ hr {
   background: $charcoal;
   margin: 2rem 0;
 
-  &-1 {
+  &.hr-1 {
     height: 1px;
   }
 
-  &-2 {
+  &.hr-2 {
     height: 2px;
   }
 
-  &-3 {
+  &.hr-3 {
     height: 3px;
   }
 
-  &-4 {
+  &.hr-4 {
     height: 4px;
   }
 
-  &-5 {
+  &.hr-5 {
     height: 5px;
   }
 }
