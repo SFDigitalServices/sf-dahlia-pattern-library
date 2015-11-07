@@ -3,9 +3,30 @@
    margin-bottom: 0;
   }
 
+  &_figure {
+    text-align: center;
+  }
+
+  &_container {
+    position: relative;
+    display: inline-block;
+  }
+    
   &_thumb {
     display: block;
     margin: 0 auto;
+  }
+
+  &_like {
+    @include absolute(null,0,0,null);
+    background-color: rgba(0,0,0,.5);
+    padding: 1rem;
+
+    svg {
+      use {
+        fill: #fff;
+      }
+    }
   }
 
   &_content {
