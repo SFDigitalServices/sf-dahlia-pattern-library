@@ -1,15 +1,30 @@
 .stats-list {
   @include clearfix;
   display: block;
-  padding: .5rem 1rem;
+  // padding: 0 .5rem;
+  text-align: left;
 
   li {
     display: block;
     float: left;
+    padding: .5rem .5rem;
+
+    &:first-of-type {
+      padding-left: 1rem;
+    }
+
+    &:last-of-type {
+      padding-left: 1rem;
+    }
   }
 
   &_value {
     font-weight: bold;
+  }
+
+  &_label {
+    @include responsive-text-size('tiny');
+    color: $charcoal;
   }
 
   &.double {
@@ -23,8 +38,14 @@
       width: 33.3333%;
     }
   }
-}
 
-.stats-card {
-  margin-bottom: .5rem;
+  &.bottom {
+    .stats-list_label {
+      display: none;
+    }
+
+    &:last-of-type {
+      display: inline-block;
+    }
+  }
 }

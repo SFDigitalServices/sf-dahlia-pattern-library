@@ -157,18 +157,40 @@ $column-gutter: rem-calc(30);
 // Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$small-top: 30em;
-$medium-bottom: 30.063em;
-$medium-top: 64em;
-$large-bottom: 64.063em;
-$large-top: 90em;
-$xlarge-top: 120em;
+// $small-top: 30em;
+// $medium-bottom: 30.063em;
+// $medium-top: 64em;
+// $large-bottom: 64.063em;
+// $large-top: 90em;
+// $xlarge-top: 120em;
 
-$small-range: (0, $small-top);
-$medium-range: ($medium-bottom, $medium-top);
-$large-range: ($large-bottom, $large-top);
-$xlarge-range: (90.063em, $xlarge-top);
-$xxlarge-range: (120.063em, 99999999em);
+// $small-range: (0, $small-top);
+// $medium-range: ($medium-bottom, $medium-top);
+// $large-range: ($large-bottom, $large-top);
+// $xlarge-range: (90.063em, $xlarge-top);
+// $xxlarge-range: (120.063em, 99999999em);
+
+// Here we define the breakpoints which will become the upper border for each media size.
+// The function em-calc() calculates the em-value from a px-value.
+$small-breakpoint:  em-calc(768)  !default;
+$medium-breakpoint: em-calc(960) !default;
+$large-breakpoint:  em-calc(1024) !default;
+$xlarge-breakpoint: em-calc(1920) !default;
+
+// Here we define the lower and upper bounds for each media size
+$small-range:   (0, $small-breakpoint) !default; /* 0, 640px */
+$medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint) !default; /* 641px, 1024px */
+$large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint)  !default; /* 1025px, 1440px */
+$xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint) !default; /* 1441px, 1920px */
+$xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999)) !default; /* 1921px, ... */
+
+$small-top: $small-breakpoint;
+$medium-bottom: $small-breakpoint + em-calc(1);
+$medium-top: $medium-breakpoint;
+$large-bottom: $medium-breakpoint + em-calc(1);
+$large-top: $large-breakpoint;
+$xlarge-bottom: $large-breakpoint + em-calc(1);
+$xlarge-top: $xlarge-breakpoint;
 
 // Disable responsive
 

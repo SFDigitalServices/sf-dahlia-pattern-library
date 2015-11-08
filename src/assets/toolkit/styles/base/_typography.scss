@@ -67,6 +67,10 @@ small,
   @include responsive-text-size('quark');
 }
 
+body {
+  font-family: $font-family;
+}
+
 p {
   @include type-weight('light');
   margin-top: 0;

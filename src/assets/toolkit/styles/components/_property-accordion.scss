@@ -1,6 +1,7 @@
 .property-accordion {
 
-  .accordion-header {
+  .accordion-header,
+  .content-header {
     @include type-weight(bold);
     border-bottom: 1px solid $silver;
     position: relative;

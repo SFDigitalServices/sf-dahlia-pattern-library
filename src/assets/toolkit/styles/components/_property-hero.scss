@@ -10,11 +10,14 @@
   &_container {
     position: relative;
     display: inline-block;
+    width: 100%;
   }
     
   &_thumb {
     display: block;
     margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
   }
 
   &_like {
@@ -38,10 +41,15 @@
   }
 
   &_stats {
-    background-color: $mist;
+    
   }
 
   &_action {
     padding: 1rem;
+  }
+
+  .stats-card {
+    background-color: $mist;
+    margin-bottom: .5rem;
   }
 }

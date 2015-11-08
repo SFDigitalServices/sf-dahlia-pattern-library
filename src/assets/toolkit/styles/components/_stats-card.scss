@@ -1,0 +1,18 @@
+.stats-card {
+  margin-bottom: .5rem;
+  
+  &.bottom {
+
+    .stats-list {
+      .stats-list_label {
+        display: none;
+      }
+
+      &:last-of-type {
+        .stats-list_label {
+          display: block;
+        }
+      }
+    }
+  }
+}

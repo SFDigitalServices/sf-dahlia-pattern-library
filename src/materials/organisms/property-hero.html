@@ -20,21 +20,37 @@
   </header>
 
   <div class="property-hero_stats">
-    <div class="property-card_stats">
-      {{> stats.stats-list}}
-    </div>  
-    <ul class="stats-list double">
-      <li class="t-small">
-        <span>Occupancy</span>
-        <span>1-2</span>
-        <span>people</span>
-      </li>
-      <li class="t-small">
-        <span>Availability</span>
-        <span>2</span>
-        <span>units</span>
-      </li>
-    </ul>
+    <div class="stats-card">
+      {{> stats.stats-list}} 
+      <ul class="stats-list double bg-smoke">
+        <li class="t-small">
+          <span>Occupancy</span>
+          <span>1-2</span>
+          <span>people</span>
+        </li>
+        <li class="t-small">
+          <span>Availability</span>
+          <span>2</span>
+          <span>units</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stats-card">
+      {{> stats.stats-list--1br}} 
+      <ul class="stats-list double bg-smoke">
+        <li class="t-small">
+          <span>Occupancy</span>
+          <span>1-4</span>
+          <span>people</span>
+        </li>
+        <li class="t-small">
+          <span>Availability</span>
+          <span>9</span>
+          <span>units</span>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="property-hero_action text-center">
