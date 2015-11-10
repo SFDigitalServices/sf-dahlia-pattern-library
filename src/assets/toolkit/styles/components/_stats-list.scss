@@ -27,6 +27,12 @@
     color: $charcoal;
   }
 
+  &.full {
+    li {
+      width: 100%;
+    }
+  }
+
   &.double {
     li {
       width: 50%;
