@@ -102,45 +102,37 @@ $text-sizing: (
   ),
   epsilon: (
     small: (
-      font-size: 1rem, // 16px
-      line-height: 1.375
+      font-size: 1.1255rem, // 18px
+      line-height: 1.25
     )
   ),
   delta: (
     small: (
       font-size: 1.1255rem, // 18px
-      line-height: 1.11
+      line-height: 1.25
     ),
     medium: (
-      font-size: 1.1255rem, // 18px
+      font-size: 1.25rem, // 20px
       line-height: 1.25
     )
   ),
   gamma: (
     small: (
       font-size: 1.375rem, // 22px
-      line-height: 1.13625
+      line-height: 1.25
     ),
     medium: (
       font-size: 1.5rem, // 24px
-      line-height: 1.25
-    ),
-    large: (
-      font-size: 1.75rem, // 28px
       line-height: 1.25
     )
   ),
   beta: (
     small: (
-      font-size: 1.625rem, // 32px
-      line-height: 1.15
-    ),
-    medium: (
-      font-size: 2rem, // 32px
+      font-size: 1.5rem, // 24px
       line-height: 1.25
     ),
-    large: (
-      font-size: 2.25rem, // 36px
+    medium: (
+      font-size: 2rem, // 28px
       line-height: 1.25
     )
   ),
@@ -151,11 +143,7 @@ $text-sizing: (
     ),
     medium: (
       font-size: 2.5rem, // 40px
-      line-height: 1.125
-    ),
-    large: (
-      font-size: 3rem, // 48px
-      line-height: 1.0625
+      line-height: 1.25
     )
   )
 );
