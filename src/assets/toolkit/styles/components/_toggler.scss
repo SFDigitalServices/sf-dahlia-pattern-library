@@ -1,3 +1,9 @@
 .toggler {
   cursor: pointer;
 }
+
+.toggler,
+.has-toggle,
+.has-toggle--details {
+  position: relative;
+}
