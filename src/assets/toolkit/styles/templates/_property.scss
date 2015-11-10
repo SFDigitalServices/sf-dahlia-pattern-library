@@ -23,31 +23,7 @@
     @media #{$medium-up} {
       display: none;
     }
-  }
-
-  .accordion-header.lead {
-    @media #{$medium-up} {
-      display: none !important;
-    }
-  }
-
-  .content-header {
-    background: #ededee;
-    color: #1a383c;
-    display: none;
-    font-size: 1rem;
-    padding: 1rem;
-
-    @media #{$medium-up} {
-      display: block;
-    }  
-  }  
-    
-  .content-section {
-    @media #{$medium-up} {
-      display: block !important;
-    }
-  }
+  } 
 
   .accordion-container {
     @media #{$small-only} {
