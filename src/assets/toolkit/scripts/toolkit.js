@@ -34,6 +34,10 @@ $(document).ready(function () {
   $(document).foundation();
 });
 
+$("body").on("click", ".toggler", function() {
+  $(".toggled").toggle(); /*shows or hides #box*/
+});
+
 // Smooth State
 // $(function(){
 //   'use strict';
