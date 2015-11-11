@@ -1,32 +1,36 @@
 {{> text.header-block}}
 
-<form class="padding-top padding-bottom">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="beta">Alright, here's your total annual income</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="income-sources">
-        {{> forms.income-source_item}}
-        {{> forms.income-source_item}}
+<section class="row">
+  <div class="medium-6 medium-centered columns">
+  <form class="padding-top padding-bottom">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1 class="beta">Alright, here's your total annual income</h1>
       </div>
     </div>
-  </div>
 
-  <hr class="hr-5">
-
-  <div class="row">
-    <div class="large-12 columns">
-      <p>
-        Total Household Income
-        <span class="t-bold right">$25,200/yr</span>
-      </p>
-      <p class="c-steel">This puts you at 38% of the area median income (AMI) for San Francisco</p>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="income-sources">
+          {{> forms.income-source_item}}
+          {{> forms.income-source_item}}
+        </div>
+      </div>
     </div>
-  </div>  
 
-  {{> forms.button-stack--paginate}}
-</form>    
+    <hr class="hr-5">
+
+    <div class="row">
+      <div class="large-12 columns">
+        <p>
+          Total Household Income
+          <span class="t-bold right">$25,200/yr</span>
+        </p>
+        <p class="c-steel">This puts you at 38% of the area median income (AMI) for San Francisco</p>
+      </div>
+    </div>  
+
+    {{> forms.button-stack--paginate}}
+  </form>
+ </div>
+</section>  

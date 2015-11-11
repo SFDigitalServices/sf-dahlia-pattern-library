@@ -47,6 +47,12 @@ button,
   }
 }
 
+.expand-small {
+  @media #{$small-only} {
+    width: 100%;
+  }  
+}
+
 // Custom btn variables
 // .btn
 
