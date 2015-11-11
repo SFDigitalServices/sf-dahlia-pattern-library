@@ -6,6 +6,7 @@
       <label>
         <span class="eligibility-form_header">Household Size</span>
         <select>
+          <option value="one person">How many people you applying to live with?</option>
           <option value="one person">1 person</option>
           <option value="two people">2 people</option>
           <option value="three people">3 people</option>
@@ -17,22 +18,22 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="small-6 columns bg-mist padding-top padding-bottom">
+  <div class="row margin-bottom">
+    <div class="small-12 columns bg-mist padding-top padding-bottom">
       <label>
         <span class="eligibility-form_header">Household Income</span>
-        <input type="text" placeholder="$ Total Income" />
+        <input type="text" placeholder="Total all of your income sources" />
       </label>
       {{> forms.radio-group--by-time}}
     </div>  
-    <div class="small-6 columns">
-      <span class="t-tiny c-steel d-block padding-top margin-bottom">Includes wages and public benefits. Use the income calculator if you have questions.</span>
+    <div class="small-12 columns bg-tint padding-top">
+      <p class="t-tiny margin-bottom">Note: This includes any income sources for each person you plan to live with. To help, we created a
 
-      <button class="button small tertiary no-margin">Income Calculator</button>
+      <a href="#">Household Income Calculator</a></p>
     </div>
   </div>
 
-  <div class="row padding-top padding-bottom margin-bottom">
+  <!-- <div class="row padding-top padding-bottom margin-bottom">
     <div class="large-12 columns">
       <label class="eligibility-form_header">Subsidies and Vouchers</label>
       <div class="d-block">
@@ -45,7 +46,7 @@
         <input id="checkbox1" type="checkbox"><label for="checkbox1">Other</label>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="row">
     <div class="large-12 columns">
