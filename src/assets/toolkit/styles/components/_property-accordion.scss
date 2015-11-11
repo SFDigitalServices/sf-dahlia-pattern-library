@@ -7,6 +7,24 @@
     position: relative;
   }
 
+  .content-header {
+    background: #ededee;
+    color: #1a383c;
+    display: none;
+    font-size: 1rem;
+    padding: 1rem;
+
+    @media #{$medium-up} {
+      display: block;
+    }  
+  }
+
+  .accordion-header.lead {
+    @media #{$medium-up} {
+      display: none !important;
+    }
+  }
+
   .accordion-subheader {
     @include responsive-text-size('small');
     @include type-weight(regular);
@@ -38,6 +56,12 @@
   //   }
   // }
 
+  .content-section {
+    @media #{$medium-up} {
+      display: block !important;
+    }
+  }
+  
   .content-panel {
     margin-bottom: 2rem;
 
@@ -59,8 +83,9 @@
   }
 
   .content-list {
-    li {
+    li, 
+    dd {
       margin-bottom: 1rem;
     }
   }
-}  
+}
