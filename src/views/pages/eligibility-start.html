@@ -2,22 +2,11 @@
 {{> navigation.sub-bar--edit }}
 
 <section class="row">
-  <div class="medium-6 medium-centered columns">
+  <div class="medium-8 columns">
     <form class="padding-top">
       <div class="row">
         <div class="medium-12 columns">
-          <label>
-            <span class="eligibility-form_header">Household Size</span>
-            <select>
-              <option value="one person">How many people are you applying to live with?</option>
-              <option value="one person">1 person</option>
-              <option value="two people">2 people</option>
-              <option value="three people">3 people</option>
-              <option value="four people">4 people</option>
-              <option value="five people">5 people</option>
-              <option value="six people">6 people</option>
-            </select>
-          </label>
+          {{> forms.select--occupancy }}
         </div>
       </div>
 
@@ -37,26 +26,11 @@
         </div>
       </div>
 
-      <!-- <div class="row padding-top padding-bottom margin-bottom">
-        <div class="large-12 columns">
-          <label class="eligibility-form_header">Subsidies and Vouchers</label>
-          <div class="d-block">
-            <input id="checkbox1" type="checkbox"><label for="checkbox1">Section 8</label>
-          </div>
-          <div class="d-block">
-            <input id="checkbox2" type="checkbox"><label for="checkbox2">Veterans Affairs Supportive Housing (VASH)</label>
-          </div>
-          <div class="d-block">
-            <input id="checkbox1" type="checkbox"><label for="checkbox1">Other</label>
-          </div>
-        </div>
-      </div> -->
-
       <div class="row text-center">
-        <div class="large-12 columns">
+        <div class="small-12 medium-6 medium-push-6 columns">
           <button class="button expand-small">View Matching Properties</button>
         </div>
-        <div class="large-12 columns"> 
+        <div class="small-12 medium-6 medium-pull-6 columns">
           <button class="button blank expand-small">Reset Filters</button>
         </div>
       </div>
@@ -68,9 +42,6 @@
 
 <section class="row">
   <div class="medium-5 medium-centered columns text-center">
-    <h3>Get Notified By Email</h3>
-    <p>We'll send you an email when the next property that matches you becomes available</p>
-
-    <button class="button secondary a-center">Get Notified by Email</button>
+    {{> blocks.notification-block}}
   </div>
 </section>
