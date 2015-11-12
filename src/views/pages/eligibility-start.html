@@ -5,23 +5,26 @@
   <div class="medium-8 columns">
     <form class="padding-top">
       <div class="row">
-        <div class="medium-12 columns">
+        <div class="medium-12 columns margin-bottom">
+          <h3 class="t-sans gamma">
+            First we'll ask you about the number of people in your household.
+          </h3>
+
           {{> forms.select--occupancy }}
         </div>
       </div>
 
       <div class="row margin-bottom">
         <div class="small-12 columns bg-mist padding-top padding-bottom">
-          <label class="p-relative">
-            <span class="eligibility-form_header">Household Income</span>
-            <input type="text" placeholder="Total all of your income sources" />
-            <a href="" class="input-editor button tiny secondary">Edit</a>
-          </label>
+          <h3 class="t-sans gamma">
+            Next we'll help you calculate your income from wages, benefits and other sources.
+          </h3>
 
+          {{> forms.input-income }}
           {{> forms.radio-group--by-time}}
         </div>  
         <div class="small-12 columns bg-tint padding-top">
-          <p class="t-tiny margin-bottom">Note: This includes any income sources for each person you plan to live with. To help, we created a
+          <p class="t-tiny margin-bottom">Note: Your total should include all income sources for each person you plan to live with over the age of 18. To help, we created a
 
           <a href="#">Household Income Calculator</a></p>
         </div>
