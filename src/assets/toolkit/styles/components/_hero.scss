@@ -1,0 +1,15 @@
+.hero {
+  &-header {
+    padding: 2rem 1rem;
+
+    @media #{$medium-up} {
+      padding: 5rem 1rem;
+    }
+  }
+
+  &-title {
+    @media #{$small-only} {
+      font-size: $h2-font-size;
+    }  
+  }
+}
