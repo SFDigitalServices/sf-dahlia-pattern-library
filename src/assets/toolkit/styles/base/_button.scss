@@ -26,6 +26,16 @@ button,
     }
   }
 
+  &.tint {
+    background-color: $tint;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      background-color: darken($tint, 5%);
+    }
+  }
+
   &.blank {
     background-color: #fff;
     color: $primary;
