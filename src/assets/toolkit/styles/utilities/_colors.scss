@@ -37,6 +37,18 @@
   }
 }
 
+.i {
+  @each $color-name, $color-value in $colors {
+    &-#{"" + $color-name} {
+      svg {
+        use { 
+          fill: $color-value !important;
+        }
+      }
+    }  
+  }  
+}
+
 .btn-ghost {
   @each $color-name, $color-value in $colors {
     &-#{"" + $color-name} {

@@ -1,11 +1,17 @@
 {{> navigation.top-bar }}
 
-<div class="page padding--2x">
+<section class="bg-mist">
+  <div class="row">
+    {{> welcome-header }}
+  </div>
+</section>  
 
-  {{> welcome-header }}
+<section class="row">
+  <div class="medium-8 medium-centered columns">
+    {{> welcome-block }}
+    {{> forms.language-actions }}
+  </div>
+</section>
 
-  {{> welcome-block }}
 
-  {{> forms.language-actions }}
 
-</div>
