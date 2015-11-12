@@ -1,0 +1,23 @@
+.sub-bar {
+  padding-right: 1rem;
+
+  &_header {
+    float: left; 
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+
+  .button {
+    position: relative;
+    top: .625rem;
+
+    &--start {
+      float: right;
+      
+
+      @media #{$medium-up} {
+        float: left; 
+      }  
+    }
+  }
+}  

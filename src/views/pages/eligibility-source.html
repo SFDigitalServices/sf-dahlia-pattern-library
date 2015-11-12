@@ -1,8 +1,9 @@
-{{> text.header-block}}
+{{> navigation.top-bar }}
+{{> navigation.sub-bar--edit }}
 
-<form class="padding-top padding-bottom">
-  <div class="row">
-    <div class="large-12 columns">
+<section class="row">
+  <div class="medium-6 medium-centered columns">
+    <form class="padding-top padding-bottom no-margin">
       <div class="income-source">
       {{> forms.income-source_item}}
 
@@ -12,41 +13,46 @@
           <a href="#" class="income-source_link">Edit</a>
         </div>
       </div>
-    </div>
+    </form>
   </div>
+</section>
 
-  <hr class="hr-5">
+<hr class="hr-5 margin-top">
 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Where is this income from?
-        <select>
-          <option value="wages">Wages</option>
-          <option value="social security">Social Security</option>
-          <option value="disability">Disability</option>
-          <option value="unemplyment">Unemployment</option>
-          <option value="calworks">CalWorks</option>
-        </select>
-      </label>
-    </div>
+<section class="row">
+  <div class="medium-6 medium-centered columns">
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Where is this income from?
+            <select>
+              <option value="wages">Wages</option>
+              <option value="social security">Social Security</option>
+              <option value="disability">Disability</option>
+              <option value="unemplyment">Unemployment</option>
+              <option value="calworks">CalWorks</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns margin-bottom">
+          <label>How much is the income this source?
+            <input type="text" placeholder="$" />
+          </label>
+          {{> forms.radio-group--by-time}}
+        </div>
+      </div>
+      
+      <div class="row margin-bottom">
+        <div class="large-12 columns">
+          <button class="button tertiary expand">
+            Add another income source
+          </button>
+        </div>
+      </div> 
+
+      {{> forms.button-stack--paginate}}
+    </form>
   </div>
-
-  <div class="row">
-    <div class="large-12 columns">
-      <label>How much is the income this source?
-        <input type="text" placeholder="$ Amount" />
-      </label>
-      {{> forms.radio-group--by-time}}
-    </div>
-  </div>
-  
-  <div class="row margin-bottom">
-    <div class="large-12 columns">
-      <button class="button tertiary expand">
-        Add another income source
-      </button>
-    </div>
-  </div> 
-
-  {{> forms.button-stack--paginate}}
-</form>
+</section>    

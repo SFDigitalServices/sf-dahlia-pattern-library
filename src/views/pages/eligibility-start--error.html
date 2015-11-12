@@ -3,6 +3,8 @@
 
 <section class="row">
   <div class="medium-6 medium-centered columns">
+    {{> forms.alert-box }}
+
     <form class="padding-top">
       <div class="row">
         <div class="medium-12 columns">
@@ -23,10 +25,11 @@
 
       <div class="row margin-bottom">
         <div class="small-12 columns bg-mist padding-top padding-bottom">
-          <label>
+          <label class="error">
             <span class="eligibility-form_header">Household Income</span>
-            <input type="text" placeholder="Total all of your income sources" />
+            <input type="text" placeholder="Total all of your income sources" class="error" />
           </label>
+          <small class="error">Please enter an income amount</small>
 
           {{> forms.radio-group--by-time}}
         </div>  
