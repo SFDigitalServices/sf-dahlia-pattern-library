@@ -8,11 +8,13 @@ button,
   padding-right: 1rem;
 
   &.secondary {
-    background-color: $base;
+    background-color: $tint;
+    color: $primary;
 
     &:hover,
     &:focus {
-      background-color: darken($base, 5%);
+      background-color: darken($tint, 5%);
+      color: $primary;
     }
   }
 
@@ -54,6 +56,7 @@ button,
   .button {
     margin: 0 auto .25rem;
     display: block;
+    min-width: 15rem;
   }
 }
 

@@ -19,11 +19,11 @@
     }
   }
 
-  .property-hero_action {
-    @media #{$medium-up} {
-      display: none;
-    }
-  } 
+  // .property-hero_action {
+  //   @media #{$medium-up} {
+  //     display: none;
+  //   }
+  // } 
 
   .accordion-container {
     @media #{$small-only} {

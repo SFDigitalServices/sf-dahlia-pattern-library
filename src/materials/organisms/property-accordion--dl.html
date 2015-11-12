@@ -27,7 +27,7 @@
           <h4 class="t-epsilon t-sans no-margin">Lottery Preferences</h4>
           <p class="t-small c-steel">Preference holders will be given highest ranking in the lottery process.</p>
         </header>
-        <dl class="accordion-nested accordion" data-accordion>
+        <dl class="accordion-nested accordion trigger-left" data-accordion>
           <dd class="accordion-navigation">
             <a href="#panel1a-a" class="accordion-header">
               Certificate of Preference 
@@ -63,7 +63,7 @@
           <h4 class="t-epsilon t-sans no-margin">Rental Assistance</h4>
           <p class="t-small c-steel">Vouchers and other valid rental assistance programs can be used to rent a BMR unit.</p>
         </header>
-        <dl class="accordion-nested accordion" data-accordion>
+        <dl class="accordion-nested accordion trigger-left" data-accordion>
           <dd class="accordion-navigation">
             <a href="#panel1b-a">
               Subsidies and Vouchers
@@ -84,9 +84,11 @@
     </a>
     <div id="panel2a" class="content content-section">
       <div class="show-for-medium-up text-center margin-bottom">
-        <p class="t-small margin-bottom--2x">Listing Updated: Aug 15th 2015</p>
-
-        {{> buttons.button-small}}
+        <h3 class="delta">How to Apply</h3>
+        <div class="button-stack">
+          {{> buttons.button-small button-content="Apply Now Online" }}
+          {{> buttons.button-small--secondary button-content="Other Application Options" }}
+        </div>
         <hr class="hr-5">
       </div>
 
@@ -145,8 +147,8 @@
       <p>Property Manager</p>
 
       <div class="button-stack">
-        {{> buttons.button }}
-        {{> buttons.button }}
+        {{> buttons.button-small button-content="Call (415) 928-5910" }}
+        {{> buttons.button-small--secondary button-content="Email" }}
       </div>
 
       <h5 class="t-sans no-margin">Caritas Management Corporation</h5>
@@ -157,7 +159,7 @@
       <div class="content-panel text-center">
       <h4 class="tiny t-sans no-margin">Office Hours</h4>
       <h5 class="t-sans">8:30 am - 5:00pm</h5>
-      {{> buttons.button }}
+      {{> buttons.button-small--secondary button-content="Visit Website" }}
       </div>
     </div>
   </dd>
@@ -168,7 +170,7 @@
     </a>
 
     <header class="content-header show-for-medium-up">
-      Features
+      <span class="t-delta t-serif">Features</span>
       <span class="accordion-subheader">Amenities, unit details and additional fees</span>
     </header>
 
@@ -270,7 +272,7 @@
     </a>
 
     <header class="content-header show-for-medium-up">
-      Neighborhood
+      <span class="t-delta t-serif">Neighborhood</span>
       <span class="accordion-subheader">Location and transportation</span>
     </header>
 
@@ -293,7 +295,7 @@
     </a>
 
     <header class="content-header show-for-medium-up">
-      Legal
+      <span class="t-delta t-serif">Legal</span>
       <span class="accordion-subheader">Required documents and selection criteria</span>
     </header>
 

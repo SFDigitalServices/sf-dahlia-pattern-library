@@ -53,8 +53,17 @@
   </div>
 
   <div class="property-hero_action text-center">
+    <div class="hide-for-medium-up">
     <p class="t-small">Deadline: Dec 12th 2015</p>
-    {{> buttons.button-small}}
-    <p class="t-small">Listing Updated: Aug 15th 2015</p>
+      {{> buttons.button-small button-content="Apply Now Online" }}
+    </div>
+    <div class="action-group row">
+      <div class="medium-6 columns">
+        <p class="date t-small">Listing Updated: Aug 15th 2015</p>
+      </div>
+      <div class="medium-6 columns">
+        {{> buttons.button-small--secondary button-content="Share this Listing" }}
+      </div>
+    </div>
   </div>
 </div>
