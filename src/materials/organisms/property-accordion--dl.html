@@ -12,159 +12,17 @@
       <span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
     </header>
 
-    <div id="panel1a" class="content content-section active">
-      <div class="content-panel lined">
-        <header class="margin-bottom">
-          <h4 class="t-epsilon t-sans no-margin">Household Income and Occupancy</h4>
-          <p class="t-small c-steel">Each unit type available has its own requirements based on household size.</p>
-        </header>
-        {{> stats.stats-card}}
-        {{> stats.stats-card--1br}}
-      </div>
-
-      <div class="content-panel lined">
-        <header class="margin-bottom">
-          <h4 class="t-epsilon t-sans no-margin">Lottery Preferences</h4>
-          <p class="t-small c-steel">Preference holders will be given highest ranking in the lottery process.</p>
-        </header>
-        <dl class="accordion-nested accordion trigger-left" data-accordion>
-          <dd class="accordion-navigation">
-            <a href="#panel1a-a" class="accordion-header">
-              Certificate of Preference 
-              {{> icons.icon-arrow}}
-            </a>
-            <div id="panel1a-a" class="content">
-              <p>Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action.</p>
-            </div>
-          </dd>
-          <dd class="accordion-navigation">
-            <a href="#panel1a-b" class="accordion-header">
-              Ellis Act Preference
-              {{> icons.icon-arrow}}
-            </a>
-            <div id="panel1a-b" class="content">
-              <p>Ellis Act Housing Preference holders are primarily households displaced by Ellis Act evictions as defined by The Ellis Act Displacement Emergency Assistance Ordinance passed into law on December 18, 2013.</p>
-            </div>
-          </dd>
-          <dd class="accordion-navigation">
-            <a href="#panel1a-c" class="accordion-header">
-              Live/Work Preference
-              {{> icons.icon-arrow}}
-            </a>
-            <div id="panel1a-c" class="content">
-              <p>Households that live or work in San Francisco will be given third highest preference in the lottery ranking process.</p>
-            </div>
-          </dd>
-        </dl>
-      </div>
-
-      <div class="content-panel lined">
-        <header class="margin-bottom">
-          <h4 class="t-epsilon t-sans no-margin">Rental Assistance</h4>
-          <p class="t-small c-steel">Vouchers and other valid rental assistance programs can be used to rent a BMR unit.</p>
-        </header>
-        <dl class="accordion-nested accordion trigger-left" data-accordion>
-          <dd class="accordion-navigation">
-            <a href="#panel1b-a">
-              Subsidies and Vouchers
-              {{> icons.icon-arrow}}
-            </a>
-            <div id="panel1b-a" class="content">
-              <p>Section 8 housing vouchers and other valid rental assistance programs can be used to rent a BMR unit.  In the case of a valid rent subsidy, the required minimum income will be based on the portion of the rent that the tenant pays after the use of the subsidy.</p>
-            </div>
-          </dd>
-        </dl>
-      </div>    
+      {{> property-accordion.content-section--eligibility}}
     </div>
   </dd>
+
   <dd class="accordion-navigation accordion-process">
     <a href="#panel2a" class="accordion-header lead">Process
       <span class="accordion-subheader">Important dates and contact information</span>
       {{> icons.icon-arrow}}
     </a>
-    <div id="panel2a" class="content content-section">
-      <div class="show-for-medium-up text-center margin-bottom">
-        <h3 class="delta">How to Apply</h3>
-        <div class="application-actions button-stack">
-          {{> buttons.button-small button-content="Apply Now Online" }}
-          {{> buttons.button-small--oil-toggle button-content="Other Application Options" }}
-        </div>
 
-        <div class="application-options text-left">
-          <div class="option-group">
-            <h4 class="t-sans t-base t-bold no-margin">Pickup and turn in application</h4>
-            <p class="no-margin">Caritas Management Corporation</p>
-            <p class="c-steel">1358 Valencia St; San Francisco, CA 94102</p>
-            <a href="#" class="t-small d-block ui-link margin-bottom">
-              {{> icons.icon-map}}
-              Get Directions
-            </a>
-
-            <p class="no-margin">Office Hours</p>
-            <p>8:30 am - 5:00pm</p>
-            {{> buttons.button-small--secondary button-content="Download Paper Application" }}
-          </div>
-
-          <div class="option-group">
-            <h4 class="t-sans t-base t-bold">Have application sent by US mail</h4>
-            {{> buttons.button-small--secondary button-content="Request by Email" }}
-          </div>
-
-          <div class="option-group">
-            <h4 class="t-sans t-base t-bold no-margin">Call Property</h4>
-            <p>(415) 333 - 9956</p>
-            <p class="c-steel t-small">Hear a recorded message from the property manager</p>
-          </div>  
-        </div>
-      </div>
-
-      <div class="content-panel content-lead padding-bottom border-bottom">
-        <h4 class="t-small t-sans t-bold">Application Deadline</h4>
-        <h3 class="t-delta t-sans c-steel">Nov 21st, 2015</h3>
-      </div>
-
-      <div class="content-panel padding-bottom border-bottom">
-        <h4 class="t-small t-sans t-bold">Information Sessions</h4>
-        <ul>
-          <li>
-            <h3 class="t-delta t-sans c-steel no-margin">Oct 27th</h3>
-            <p class="c-steel">1:00pm – 2:30pm</p>
-
-            <p class="no-margin">San Francisco LGBT Community Center</p>
-            <p class="c-steel">1800 Market Street, San Francisco</p>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="content-panel padding-bottom border-bottom">
-        <h4 class="t-small t-sans t-bold">Open Houses</h4>
-        <ul class="content-list">
-          <li>
-            <h3 class="t-delta t-sans c-steel no-margin">Oct 10th</h3>
-            <p class="c-steel">1:00pm – 2:30pm</p>
-          </li>
-
-          <li>
-             <h3 class="t-delta t-sans c-steel no-margin">Oct 18th</h3>
-             <p class="c-steel">1:00pm – 2:30pm</p>
-          </li> 
-        </ul>   
-      </div>
-
-      <div class="content-panel">
-        <h4 class="t-small t-sans t-bold">Public Lottery</h4>
-        <ul>
-          <li>
-            <h3 class="t-delta t-sans c-steel no-margin">Nov 28th</h3>
-            <p class="c-steel">1:00pm – 2:30pm</p>
-
-            <p class="no-margin c-oil">San Francisco LGBT Community Center</p>
-            <p class="c-steel">1800 Market Street, San Francisco</p>
-          </li>
-        </ul>
-      </div>
-
-    </div>
+    {{> property-accordion.content-section--process}}
   </dd>
   <dd class="accordion-navigation">
     <a href="#panel3a" class="accordion-header lead">Features
@@ -177,92 +35,7 @@
       <span class="accordion-subheader">Amenities, unit details and additional fees</span>
     </header>
 
-    <div id="panel3a" class="content content-section">
-      <div class="content-panel">
-        <div class="row collapse">
-          <div class="small-6 columns">
-            <span class="t-small c-steel">Neighborhood</span>
-            <p>SOMA</p>
-          </div>
-          <div class="small-6 columns">
-            <span class="t-small c-steel">Built</span>
-            <p>2015</p>
-          </div>
-        </div>
-
-        <div class="row collapse margin-bottom">
-          <div class="small-12 columns">
-            <span class="t-small c-steel">Property Amenities</span>
-          </div>
-          <div class="row collapse">
-            <div class="small-6 columns">
-              <ul>
-                <li>24-hour Desk</li>
-                <li>Elevator</li>
-                <li>Lobby</li>
-                <li>Laundry Facilities</li>
-                <li>Community TV Room</li>
-                <li>All units w/ Private Bathrooms and Kitchens</li>
-              </ul>
-            </div>
-            <div class="small-6 columns">
-              <ul>
-                <li>Cats allowed</li>
-                <li>Dogs allowed</li>
-                <li>Water and Trash Included</li>
-                <li>No Parking</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row collapse">
-          <div class="small-12 columns">
-            <span class="t-small c-steel">Accessibility</span>
-          </div>
-          <div class="row collapse">
-            <div class="small-6 columns">
-              <ul>
-                <li>Wheelchair Accees</li>
-                <li>Grab Bars</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-panel">
-        <h5 class="t-sans t-small c-steel">Unit Features</h5>
-        {{> stats.stats-card--stack}}
-        {{> stats.stats-card--stack-1br}}
-      </div>
-
-      <div class="content-panel">
-        <div class="content-panel--expanded bg-mist">
-          <h5 class="t-sans t-small c-steel">Additional Fees</h5>
-
-          <div class="row collapse margin-bottom">
-            <div class="small-6 columns">
-              <span class="t-small">Application Fee</span>
-              <p class="t-delta no-margin">$40</p>
-              <span class="t-small c-steel">due post-lottery</span>
-            </div>
-            <div class="small-6 columns">
-              <span class="t-small">Deposit</span>
-              <p class="t-delta no-margin">$500 - 941</p>
-              <span class="t-small c-steel">based on credit score</span>
-            </div>
-          </div>
-
-          <div class="row collapse">
-            <div class="small-12 columns">
-              <p>Renter pays phone, internet and cable</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    {{> property-accordion.content-section--features}}
   </dd>
   <dd class="accordion-navigation">
     <a href="#panel4a" class="accordion-header lead">Neighborhood

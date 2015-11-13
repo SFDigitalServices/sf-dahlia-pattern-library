@@ -22,6 +22,7 @@
     font-weight: 600;
 
     .value-label {
+      @include responsive-text-size('small');
       font-weight: 400;
     }
   }
