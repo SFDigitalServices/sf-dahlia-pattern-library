@@ -1,0 +1,16 @@
+.nav-mobile {
+  margin: 1rem rem-calc(30);
+  
+  li {
+    margin-bottom: rem-calc(8);
+  }
+
+  a {
+    color: $steel;
+  }
+
+  &_menu-icon {
+    margin: 1rem 0 0 rem-calc(30);
+    display: block;
+  }
+}

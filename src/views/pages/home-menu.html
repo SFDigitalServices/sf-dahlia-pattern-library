@@ -1,0 +1,22 @@
+{{> navigation.top-bar }}
+
+<section class="bg-mist">
+  <div class="row">
+    {{> welcome-header }}
+  </div>
+</section>  
+
+<section class="row">
+  <div class="medium-8 medium-centered columns">
+    {{> welcome-block }}
+
+    <div class="text-center">
+      <h4 class="t-epsilon t-sans c-steel">Select Language</h4>
+      {{> forms.language-actions }}
+    </div>
+  </div>
+</section>
+
+<div pageslide="" ps-open="checked" class="ng-isolate-scope ng-pageslide" style="z-index: 1000; position: fixed; width: 300px; height: 100%; overflow: hidden; transition-duration: 0.5s; transition-property: width, height; top: 0px; bottom: 0px; right: 0px;">
+  {{> pageslide-demo }}
+</div>
