@@ -19,7 +19,11 @@
   }
 
   &_value {
-    font-weight: bold;
+    font-weight: 600;
+
+    .value-label {
+      font-weight: 400;
+    }
   }
 
   &_label {

@@ -1,5 +1,5 @@
 .status {
   &-label {
-    @include absolute(0,null,null,0);
+    @include absolute(.5rem,null,null,.5rem);
   }
 }

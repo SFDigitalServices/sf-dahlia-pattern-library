@@ -62,6 +62,22 @@
     @media #{$large-up} {
       margin-top: 3rem;
       padding-left: 2rem;
-    }  
+    }
+  }
+
+  .unit-features {
+    @include clearfix;
+
+    .unit-stats {
+      @media #{$medium-up} {
+        float: left;
+        width: 50%;
+
+        li {
+          padding-top: 1.25rem;
+          padding-bottom: 1.25rem;
+        }
+      }
+    }
   }
 }

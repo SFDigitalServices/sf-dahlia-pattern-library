@@ -1,19 +1,25 @@
-<div class="stats-card bg-mist">
-  <ul class="stats-list double">
+<div class="unit-features stats-card bg-mist toggler has-toggle">
+  <ul class="unit-stats stats-list double">
     <li>
-      1 Bedroom
+      <span class="stats-list_value">1 Bedroom</span>
     </li>
     <li>  
-      9 units
+      <span class="stats-list_value">9 <span class="value-label">units</span></span>
     </li>
   </ul>
 
-  <ul class="stats-list double">
+  <ul class="unit-stats stats-list double">
     <li class="t-small">
-      Accessable Units
+      <span>Accessable Units</span>
     </li>
     <li class="t-small">  
-      639 - 900 sqft
+      <span class="stats-list_value">639 - 900 <span class="value-label">sqft</span></span>
     </li>
   </ul>
+
+  {{> icons.icon-arrow}}
+
+  <div class="toggled">
+    {{> stats.stats-table--stack-1br}}
+  </div>
 </div>
