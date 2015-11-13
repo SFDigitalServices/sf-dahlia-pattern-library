@@ -38,6 +38,16 @@ button,
     }
   }
 
+  &.oil {
+    background-color: $oil;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($oil, 5%);
+    }
+  }
+
   &.blank {
     background-color: #fff;
     color: $primary;

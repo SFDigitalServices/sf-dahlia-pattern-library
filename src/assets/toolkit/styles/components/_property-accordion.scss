@@ -77,16 +77,13 @@
   }
   
   .content-panel {
-    margin-bottom: 2rem;
-
-    &:first-of-type {
-      margin-top: .5rem;
-    }
+    padding-top: 1rem;
+    margin-bottom: 1rem;
 
     &.lined {
       @media #{$medium-up} {
         border-bottom: 1px solid $steel;
-        margin-bottom: 3rem; 
+        margin-bottom: 2rem; 
       }
     }
 
@@ -112,7 +109,6 @@
 
   .application-options {
     background-color: $mist;
-    margin: 0 -1rem;
 
     .option-group {
       border-bottom: 1px solid $steel;

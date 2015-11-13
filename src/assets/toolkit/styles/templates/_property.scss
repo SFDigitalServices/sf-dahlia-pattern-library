@@ -42,8 +42,20 @@
       padding-left: 0;
       width: 33.3333%;
 
-      .content {
-        background-color: #fff;
+      .content-section {
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem;
+      }
+
+      .content-panel {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .content-lead {
+        border-top: 5px solid $oil;
+        padding-top: 2rem;
+        background-color: $white;
       }
     }
 

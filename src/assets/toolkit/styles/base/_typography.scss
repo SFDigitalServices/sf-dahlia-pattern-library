@@ -93,7 +93,7 @@ hr {
   border: 0;
   height: 1px;
   background: $charcoal;
-  margin: 2rem 0;
+  margin: 0;
 
   &.hr-1 {
     height: 1px;
@@ -113,5 +113,9 @@ hr {
 
   &.hr-5 {
     height: 5px;
+  }
+
+  &.tall {
+    margin: 0 2rem;
   }
 }

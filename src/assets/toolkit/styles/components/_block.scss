@@ -1,5 +1,10 @@
 .block {
   padding: 2rem;
+
+  &-expand {
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+  }
 }
 
 .property-block {
