@@ -85,9 +85,32 @@
     <div id="panel2a" class="content content-section">
       <div class="show-for-medium-up text-center margin-bottom">
         <h3 class="delta">How to Apply</h3>
-        <div class="button-stack">
+        <div class="application-actions button-stack">
           {{> buttons.button-small button-content="Apply Now Online" }}
           {{> buttons.button-small--secondary button-content="Other Application Options" }}
+        </div>
+
+        <div class="application-options text-left">
+          <div class="option-group">
+            <h4 class="t-sans t-base t-bold no-margin">Pickup and turn in application</h4>
+            <p class="no-margin">Caritas Management Corporation</p>
+            <p class="no-margin">1358 Valencia St; San Francisco, CA 94102</p>
+            <a href="#" class="d-block margin-bottom">Get Directions</a>
+
+            <p class="no-margin">Office Hours</p>
+            <p>8:30 am - 5:00pm</p>
+            {{> buttons.button-small--secondary button-content="Download Paper Application" }}
+          </div>
+
+          <div class="option-group">
+            <h4 class="t-sans t-base t-bold">Have application sent by US mail</h4>
+            {{> buttons.button-small--secondary button-content="Request by Email" }}
+          </div>
+
+          <div class="option-group">
+            <h4 class="t-sans t-base t-bold no-margin">Call Property Manager</h4>
+            <p>(415) 333 - 9956</p>
+          </div>  
         </div>
         <hr class="hr-5">
       </div>

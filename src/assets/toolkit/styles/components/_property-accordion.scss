@@ -1,5 +1,5 @@
 .property-accordion {
-
+  dd > a,
   .accordion-header,
   .content-header {
     @include type-weight(bold);
@@ -109,4 +109,16 @@
       margin-bottom: 1rem;
     }
   }
+
+  .application-options {
+    background-color: $mist;
+    margin: 0 -1rem;
+
+    .option-group {
+      border-bottom: 1px solid $steel;
+      padding: 1rem 1rem 0;
+    }
+  }
 }
+
+
