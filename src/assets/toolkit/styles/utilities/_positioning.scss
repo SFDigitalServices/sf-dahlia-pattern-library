@@ -74,6 +74,10 @@ $position-default: null !default;
   @include trbl(null,0,0,null);
 }
 
+.a-top-right {
+  @include absolute(0,0,null,null);
+}
+
 .p-relative {
   position: relative;
 }
