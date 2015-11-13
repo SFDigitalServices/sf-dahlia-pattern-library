@@ -1,0 +1,14 @@
+.label {
+  &.success {
+
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    color: #fff;
+  }
+
+  &.negative {
+    background-color: $oil;
+  }
+}
