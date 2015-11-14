@@ -1,0 +1,15 @@
+.content-panel-grid {
+
+  .content-panel {
+    padding-top: 0;
+    
+    @media #{$medium-up} {
+      @include grid-column(6);
+    }
+  }
+
+  .panel-header {
+    @include panel();
+    border: none;
+  }
+}

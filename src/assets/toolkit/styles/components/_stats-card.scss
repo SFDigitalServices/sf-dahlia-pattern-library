@@ -1,6 +1,10 @@
 .stats-card {
   margin-bottom: .5rem;
   
+  table {
+    margin-bottom: 0;
+  }
+
   &.bottom {
     .stats-list {
       .stats-list_label {

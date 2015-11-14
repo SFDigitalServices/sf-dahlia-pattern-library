@@ -60,3 +60,19 @@
     }
   }
 }
+
+.stats-toggle {
+  background-color: $tint;
+
+  .highlight {
+    color: $primary;
+  }
+
+  .ui-icon {
+    svg {
+      use {
+        fill: $primary;
+      }
+    }
+  }
+}

@@ -1,5 +1,9 @@
 .toggler {
   cursor: pointer;
+
+  .ui-control {
+    @include absolute(1rem,1rem,null,null);
+  }
 }
 
 .toggler,

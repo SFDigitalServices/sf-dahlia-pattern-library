@@ -31,7 +31,13 @@ window.foundation = foundation;
 // Finally, you can drop test JavaScript here...
 $(document).ready(function () {
   //console.log('Script kiddies of the world unite.')
-  $(document).foundation();
+  $(document).foundation(
+    {
+  equalizer : {
+    // Specify if Equalizer should make elements equal height once they become stacked.
+    equalize_on_stack: true
+  }
+  });
 });
 
 $("body").on("click", ".toggler", function() {
