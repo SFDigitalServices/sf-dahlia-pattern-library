@@ -1,35 +1,4 @@
 .accordion {
-  .content-panel {
-    padding-top: 1rem;
-    margin-bottom: 1rem;
-
-    &.lined {
-      @media #{$medium-up} {
-        border-bottom: 1px solid $steel;
-        margin-bottom: 2rem; 
-      }
-    }
-
-    &--expanded {
-      margin-left: -0.9375rem;
-      margin-right: -0.9375rem;
-      padding: 1rem;
-    }
-
-    &--full {
-      margin-left: -0.9375rem;
-      margin-right: -0.9375rem;
-      margin-top: -1rem;
-    }
-  }
-
-  .content-list {
-    li, 
-    dd {
-      margin-bottom: 1rem;
-    }
-  }
-
   &-nested {
     @include responsive-text-size('small');
 
@@ -53,5 +22,9 @@
         @include absolute(1.125rem,null,null,0);
       }
     }
+  }
+
+  .ui-control {
+    @include absolute(1rem,1rem,null,null);
   }
 }

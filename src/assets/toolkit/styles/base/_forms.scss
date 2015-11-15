@@ -31,3 +31,13 @@ form {
   margin: 0;
   height: rem-calc(30);
 }
+
+.p-relative {
+  position: relative;
+
+  .has-tip {
+    &.tip-top-right {
+      @include absolute(0,0,null,null);
+    }
+  }
+}

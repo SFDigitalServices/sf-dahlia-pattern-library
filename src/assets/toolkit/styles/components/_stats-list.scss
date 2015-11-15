@@ -50,15 +50,71 @@
     }
   }
 
-  &.bottom {
-    .stats-list_label {
-      display: none;
-    }
-
-    &:last-of-type {
-      display: inline-block;
+  &.quad {
+    li {
+      width: 25%;
     }
   }
+
+  @media #{$small-only} {
+    &.double.toggler {
+      li:first-of-type {
+        width: 33.3333%;
+      }
+
+      li:last-of-type {
+        width: 66.666%;
+      }  
+    }
+  }  
+
+  @media #{$medium-up} {
+    &.medium-full {
+      li {
+        width: 100%;
+      }
+    }
+
+    &.medium-double {
+      li {
+        width: 50%;
+      }
+    }
+
+    &.medium-triple {
+      li {
+        width: 33.3333%;
+      }
+    }
+
+    &.medium-quad {
+      li {
+        width: 25%;
+      }
+    }
+  }
+
+  @media #{$medium-up} {
+    .medium-center {
+      text-align: center;
+    }
+  }
+
+  &.labels-inline {
+    .stats-list_value {
+      display: inline;
+    }
+  }
+    
+  // &.bottom {
+  //   .stats-list_label {
+  //     display: none;
+  //   }
+
+  //   &:last-of-type {
+  //     display: inline-block;
+  //   }
+  // }
 }
 
 .stats-toggle {

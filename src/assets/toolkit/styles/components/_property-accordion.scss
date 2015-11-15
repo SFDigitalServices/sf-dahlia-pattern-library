@@ -46,10 +46,6 @@
     }
   }
 
-  .ui-control {
-    @include absolute(1rem,1rem,null,null);
-  }
-
   // .accordion-navigation {
   //   &.active {
   //     .ui-control {

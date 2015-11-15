@@ -9,7 +9,7 @@
   </figure>
   
   <header class="property-hero_content text-center">
-    <h1 class="property-hero_title gamma">
+    <h1 class="property-hero_title gamma no-margin">
       <a href="#">Trinity Place Apartments</a>
     </h1>
     <p>1188 Mission St, San Francisco CA, 94134</p>
@@ -21,32 +21,42 @@
   </header>
 
   <div class="property-hero_stats">
-    <div class="stats-card stats-end">
-      {{> stats.stats-list}} 
-      <ul class="stats-list full">
-<!--         <li class="t-small">
-          <span>Occupancy</span>
-          <span>1-2</span>
-          <span>people</span>
-        </li> -->
-        <li class="end">
-          <div class="stats-list_value">2 units</div>
-          <span class="stats-list_label">available</span>
+    <div class="stats-card">
+      {{> stats.stats-list--quad}} 
+      <ul class="stats-list double medium-full labels-inline bg-smoke">
+        <li class="hide-for-medium-up">
+          <span class="stats-list_label">Occupancy</span>
+          <div class="stats-list_value">
+            1-2 
+            <span class="value-label">people</span>
+          </div>
+        </li>
+        <li>
+          <span class="stats-list_label">Availability</span>
+          <div class="stats-list_value">
+            2 
+            <span class="value-label">units</span>
+          </div>
         </li>
       </ul>
     </div>
 
-    <div class="stats-card stats-end">
-      {{> stats.stats-list--1br}} 
-      <ul class="stats-list full">
-<!--         <li class="t-small">
-          <span>Occupancy</span>
-          <span>1-4</span>
-          <span>people</span>
-        </li> -->
-        <li class="end">
-          <div class="stats-list_value">9 units</div>
-          <span class="stats-list_label">available</span>
+    <div class="stats-card">
+      {{> stats.stats-list--quad-1br}} 
+      <ul class="stats-list double medium-full labels-inline bg-smoke">
+        <li class="hide-for-medium-up">
+          <span class="stats-list_label">Occupancy</span>
+          <div class="stats-list_value">
+            1-4 
+            <span class="value-label">people</span>
+          </div>
+        </li>
+        <li>
+          <span class="stats-list_label">Availability</span>
+          <div class="stats-list_value">
+            9 
+            <span class="value-label">units</span>
+          </div>
         </li>
       </ul>
     </div>
@@ -55,8 +65,13 @@
   <div class="property-hero_action text-center">
     <div class="hide-for-medium-up">
     <p class="t-small">Deadline: Dec 12th 2015</p>
-      {{> buttons.button-small button-content="Apply Now Online" }}
+      <div class="text-center">
+        {{> property-accordion.content-panel--apply }}
+      </div>
     </div>
+
+    <hr class="hr-5 tall show-for-small-only">
+
     <div class="action-group row">
       <div class="medium-6 columns">
         <p class="date t-small">Listing Updated: Aug 15th 2015</p>

@@ -18,38 +18,4 @@
       }
     }
   }
-
-  &.stats-end {
-    @media #{$small-only} {
-      .full {
-        text-align: center;
-        background-color: $smoke;
-
-        .end {
-          display: inline-block;
-          width: auto;
-          float: none;
-
-          .stats-list_value {
-            display: inline-block;
-          }
-        }
-      }
-    }
-
-    @media #{$medium-up} {
-      overflow: hidden;
-      text-align: center;
-
-      .stats-list.triple {
-        width: 75%;
-        float: left;
-      }
-
-      .stats-list.full {
-        width: 25%;
-        float: left;
-      }
-    }  
-  }
 }
