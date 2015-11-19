@@ -1,12 +1,23 @@
 <div id="panel1a" class="content content-section">
   <div class="content-panel lined">
     <header class="margin-bottom">
-      <h4 class="t-epsilon t-sans no-margin">Household Income and Occupancy</h4>
-      <p class="t-small c-steel">Each unit type available has its own requirements based on household size.</p>
+      <h4 class="t-epsilon t-sans no-margin">Household Income Maximum</h4>
+      <!-- Each unit type available has its own requirements based on household size. -->
+      <p class="t-small c-steel">This is based on your household size which includes anyone living in the unit including any age.</p>
     </header>
-    {{> stats.stats-card}}
-    {{> stats.stats-card--1br}}
+    <div class="stats-card bg-tint">
+      {{> stats.stats-list--max}}
+    </div>
   </div>
+
+  <div class="content-panel lined">
+    <header class="margin-bottom">
+      <h4 class="t-epsilon t-sans no-margin">Occupancy</h4>
+      <p class="t-small c-steel">Occupancy for this building differs from household size and does not include children under 6.</p>
+    </header>
+    
+    {{> stats.stats-card--occupancy}}
+  </div>  
 
   <div class="content-panel lined">
     <header class="margin-bottom">
