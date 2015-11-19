@@ -40,6 +40,7 @@
 
   .panel-header {
     @include panel();
+    background-color: $mist;
     border: none;
   }
 }

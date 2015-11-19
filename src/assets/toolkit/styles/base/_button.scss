@@ -9,7 +9,7 @@ button,
 
   &.secondary {
     background-color: $tint;
-    color: $primary;
+    color: $deep;
 
     &:hover,
     &:focus {
@@ -30,7 +30,7 @@ button,
 
   &.tint {
     background-color: $tint;
-    color: $primary;
+    color: $deep;
 
     &:hover,
     &:focus {
