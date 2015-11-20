@@ -1,4 +1,6 @@
 .property-accordion {
+
+  // re-written for accordion directive
   dd > a,
   .accordion-header,
   .content-header {
@@ -21,6 +23,8 @@
     }  
   }
 
+  // re-written for accordion directive
+  > .accordion > dd > a,
   .accordion-header.lead {
     @media #{$medium-up} {
       display: none !important;
@@ -36,13 +40,17 @@
   .accordion-nested {
     @include responsive-text-size('small');
 
-    .accordion-navigation a {
+    .accordion-navigation > a {
       @include type-weight(bold);
       @include responsive-text-size('small');
       background-color: #fff;
       border-bottom: 1px solid $silver;
       padding-left: 0;
       position: relative;
+
+      // @media #{$medium-up} {
+      //   display: block !important;
+      // }  
     }
   }
 
@@ -54,7 +62,8 @@
   //   }
   // }
 
-  dd > .content,
+  // re-written for accordion directive
+  > .accordion > dd > .content,
   .content-section {
     @media #{$medium-up} {
       display: block !important;
