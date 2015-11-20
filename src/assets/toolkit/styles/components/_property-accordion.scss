@@ -67,6 +67,7 @@
   .content-section {
     @media #{$medium-up} {
       display: block !important;
+      padding: 0;
     }
   }
 

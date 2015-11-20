@@ -3,8 +3,33 @@
 
   th {
     @include responsive-text-size('tiny');
-    font-weight: normal;
     color: $charcoal;
+    font-weight: normal;
+  }
+
+  tr {
+    border-bottom: 1px solid $smoke;
+
+    td {
+      font-size: 1rem;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+  }
+
+  &_value {
+    font-weight: 600;
+
+    .value-label {
+      @include responsive-text-size('small');
+      font-weight: 400;
+    }
+  }
+
+  &_label {
+    @include responsive-text-size('tiny');
+    color: $charcoal;
+    vertical-align: top;
   }
 }
 
@@ -25,5 +50,10 @@
   .tablesaw-cell-content {
     max-width: 67%;
     display: inline-block;
+  }
+
+  .stat-row {
+    border: 1px solid $smoke;
+    margin-bottom: 1rem;
   }
 }
