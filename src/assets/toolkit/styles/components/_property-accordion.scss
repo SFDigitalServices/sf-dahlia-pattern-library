@@ -54,6 +54,7 @@
   //   }
   // }
 
+  dd > .content,
   .content-section {
     @media #{$medium-up} {
       display: block !important;

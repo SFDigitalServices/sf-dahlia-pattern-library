@@ -33,10 +33,10 @@ $(document).ready(function () {
   //console.log('Script kiddies of the world unite.')
   $(document).foundation(
     {
-  equalizer : {
-    // Specify if Equalizer should make elements equal height once they become stacked.
-    equalize_on_stack: true
-  }
+      equalizer : {
+        // Specify if Equalizer should make elements equal height once they become stacked.
+        equalize_on_stack: true
+      }
   });
 });
 
