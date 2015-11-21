@@ -9,8 +9,13 @@
     }
   }
 
+  // re-written for accordion directive
   &.wide {
-    padding: .9375rem;
+    @media #{$medium-up} {
+      padding-top: .9375rem;
+      margin: 0 .9375rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &--expanded {
