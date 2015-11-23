@@ -8,6 +8,7 @@
   &.active {
     .ui-control {
       transform: rotate(180deg);
+      top: .75rem;
     }
   }
 }
