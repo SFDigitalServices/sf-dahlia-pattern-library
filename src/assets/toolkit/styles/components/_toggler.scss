@@ -4,6 +4,12 @@
   .ui-control {
     @include absolute(1rem,1rem,null,null);
   }
+
+  &.active {
+    .ui-control {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .toggler,
