@@ -6,7 +6,7 @@
   li {
     display: block;
     float: left;
-    padding: .5rem .5rem;
+    padding: .5rem 1rem;
     padding-top: .75rem;
 
     &:first-of-type {
@@ -14,7 +14,7 @@
     }
 
     &:last-of-type {
-      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -31,6 +31,10 @@
     @include responsive-text-size('tiny');
     color: $charcoal;
     vertical-align: top;
+
+    &.bottom {
+      vertical-align: bottom;
+    }
   }
 
   &.full {
@@ -42,12 +46,20 @@
   &.double {
     li {
       width: 50%;
+
+      &:nth-child(2n+1) {
+        padding-left: 1rem;
+      }
     }
   }
 
   &.triple {
     li {
       width: 33.3333%;
+
+      &:nth-child(3n+1) {
+        padding-left: 1rem;
+      }
     }
   }
 
@@ -85,6 +97,10 @@
     &.medium-triple {
       li {
         width: 33.3333%;
+
+        &:nth-child(3n+1) {
+          padding-left: 1rem;
+        }
       }
     }
 
@@ -120,17 +136,7 @@
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
-  }  
-    
-  // &.bottom {
-  //   .stats-list_label {
-  //     display: none;
-  //   }
-
-  //   &:last-of-type {
-  //     display: inline-block;
-  //   }
-  // }
+  }
 }
 
 .stats-toggle {
@@ -146,5 +152,9 @@
         fill: $primary;
       }
     }
+  }
+
+  .has-toggle {
+    padding-right: 2rem;
   }
 }

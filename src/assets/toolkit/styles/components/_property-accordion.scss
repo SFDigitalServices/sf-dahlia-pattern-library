@@ -23,6 +23,10 @@
     }  
   }
 
+  > .accordion {
+    margin-top: 0;
+  }
+
   // re-written for accordion directive
   > .accordion > dd > a,
   .accordion-header.lead {
@@ -48,9 +52,9 @@
       padding-left: 0;
       position: relative;
 
-      // @media #{$medium-up} {
-      //   display: block !important;
-      // }  
+      @media #{$medium-up} {
+        color: $primary
+      }
     }
   }
 

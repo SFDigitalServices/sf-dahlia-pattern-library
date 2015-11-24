@@ -19,12 +19,6 @@
     }
   }
 
-  // .property-hero_action {
-  //   @media #{$medium-up} {
-  //     display: none;
-  //   }
-  // } 
-
   .accordion-container {
     @media #{$small-only} {
       padding: 0;
@@ -70,9 +64,6 @@
 
     .unit-stats {
       @media #{$medium-up} {
-        float: left;
-        width: 50%;
-
         li {
           padding-top: 1.25rem;
           padding-bottom: 1.25rem;
