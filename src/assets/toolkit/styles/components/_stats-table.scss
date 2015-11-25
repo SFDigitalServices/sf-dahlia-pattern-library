@@ -35,7 +35,7 @@
 
 .stats-table--stack {
   width: 100%;
-  
+
   tbody td {
     clear: left;
     float: left;
@@ -54,6 +54,11 @@
 
   .stat-row {
     border: 1px solid $smoke;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    margin-top: .5rem; 
+
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 }
