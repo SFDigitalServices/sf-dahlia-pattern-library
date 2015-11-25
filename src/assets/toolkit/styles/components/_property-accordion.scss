@@ -48,12 +48,18 @@
       @include type-weight(bold);
       @include responsive-text-size('small');
       background-color: #fff;
-      border-bottom: 1px solid $silver;
+      border-bottom: 1px solid $smoke;
       padding-left: 0;
       position: relative;
 
       @media #{$medium-up} {
         color: $primary
+      }
+    }
+
+    .accordion-navigation:last-of-type {
+      a {
+        border-bottom: none;
       }
     }
   }

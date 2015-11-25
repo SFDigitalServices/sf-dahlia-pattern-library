@@ -55,12 +55,12 @@
     </dl>
   </div>
 
-<!--   <div class="content-panel lined">
+  <div class="content-panel lined">
     <header class="panel-header" data-equalizer-watch>
       <h4 class="t-epsilon t-sans no-margin">Rental Assistance</h4>
-      <p class="t-small c-steel">Section 8 housing vouchers and other valid rental assistance programs can be used.</p>
+      <p class="t-small c-steel">Section 8 housing vouchers and other valid rental assistance programs can be used for this property.</p>
     </header>
-  </div> -->
+  </div>
 
   <div class="content-panel">
     <header class="margin-bottom">
@@ -68,34 +68,34 @@
       <p class="t-small c-steel">Applicants must also qualify under the rules of the building.</p>
     </header>
 
-    <div class="content-panel-grid row" data-equalizer>
-      <div class="content-panel">
-        <header class="panel-header" data-equalizer-watch>
-          <h4 class="t-base t-bold t-sans margin-bottom--half">Rental Assistance</h4>
-          <p class="t-small c-steel">Section 8 housing vouchers and other valid rental assistance programs can be used to rent a BMR unit.</p>
-        </header>
-      </div>
-      
-      <div class="content-panel">
-        <header class="panel-header" data-equalizer-watch>
-          <h4 class="t-base t-bold t-sans margin-bottom--half">Credit Rating</h4>
-          <p class="t-small c-steel">A credit report will be obtained on each applicant after their eligibility for the Inclusionary BMR program has been determined.</p>
-        </header>
-      </div>
-
-      <div class="content-panel">
-        <header class="panel-header" data-equalizer-watch>
-          <h4 class="t-base t-bold t-sans margin-bottom--half">Eviction History</h4>
-          <p class="t-small c-steel">Applicants with an eviction by a previous landlord, for cause, within the last 7 years will be rejected.</p>
-        </header>
-      </div>
-
-      <div class="content-panel">
-        <header class="panel-header" data-equalizer-watch>
-          <h4 class="t-base t-bold t-sans margin-bottom--half">Criminal History</h4>
-          <p class="t-small c-steel">Criminal reports are not ordered or reviewed until credit history has been ordered and scored with an approval rating.</p>
-        </header>
-      </div>
-    </div>
+    <dl class="accordion-nested accordion trigger-left" data-accordion>
+      <dd class="accordion-navigation">
+        <a href="#panel1a-a" class="accordion-header">
+          Credit Rating 
+          {{> icons.icon-arrow}}
+        </a>
+        <div id="panel1a-a" class="content">
+          <p>A credit report will be obtained on each applicant after their eligibility for the Inclusionary BMR program has been determined.</p>
+        </div>
+      </dd>
+      <dd class="accordion-navigation">
+        <a href="#panel1a-a" class="accordion-header">
+          Eviction History 
+          {{> icons.icon-arrow}}
+        </a>
+        <div id="panel1a-a" class="content">
+          <p>Applicants with an eviction by a previous landlord, for cause, within the last 7 years will be rejected.</p>
+        </div>
+      </dd>
+      <dd class="accordion-navigation">
+        <a href="#panel1a-a" class="accordion-header">
+          Criminal History
+          {{> icons.icon-arrow}}
+        </a>
+        <div id="panel1a-a" class="content">
+          <p>Criminal reports are not ordered or reviewed until credit history has been ordered and scored with an approval rating.</p>
+        </div>
+      </dd>
+    </dl>  
   </div>  
 </div>     

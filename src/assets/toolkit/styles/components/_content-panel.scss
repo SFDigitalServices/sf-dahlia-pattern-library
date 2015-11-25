@@ -3,6 +3,8 @@
   margin-bottom: 1rem;
 
   &.lined {
+    border-bottom: 1px solid $smoke;
+
     @media #{$medium-up} {
       border-bottom: 1px solid $steel;
       margin-bottom: 2rem; 
