@@ -45,68 +45,67 @@ $type-weight: (
 //
 
 $white:             #fff !default;
-$ghost:             #fafafa !default;
 $snow:              #f9f9f9 !default;
 $vapor:             #f6f6f6 !default;
 $white-smoke:       #f5f5f5 !default;
-$silver:            #efefef !default;
-$smoke:             #eee !default;
+$silver:            #b3b3b3;
+$smoke:             #dedee0;
 $gainsboro:         #ddd !default;
 $iron:              #ccc !default;
 $base:              #aaa !default;
 $aluminum:          #999 !default;
 $jumbo:             #888 !default;
+$steel:             #767676;
 $monsoon:           #777 !default;
 $charcoal:          #555 !default;
 $tuatara:           #444 !default;
 $jet:               #222 !default;
 $black:             #000 !default;
-
-// Brand Colors
-$primary-color:     #0077db;
-$secondary-color:   #ff9900;
-
-$attention:         #00bed5;
-$splash:            #df0083;
-$panic:             #f60f60;
-
-$dim:               #008fff;
 $wash-color:        #efefef;
-
-$warm:              #f98129;
-$dark:              #5e46ee;
 $ebony:             #25343e;
-$vibrant:           #c00b8f;
-$merlot:            #9a175c;
-$spooky:            #a24ac6;
-$deep:              #0067be;
-$carrot:            #e94c28;
-
-$alert-color:       #df0083;
-$success-color:     #1F8923;
-
-$charcoal:          #4f5a62;
-$steel:             #767676;
-$smoke:             #dedee0;
-$tint:              #d3e7fb;
-$warn:              #ffe242;
 $oil:               #333;
 $mist:              #f7f7f7;
-$silver:            #b3b3b3;
+$ghost:         $wash-color;
+$wash:          $wash-color;
+
+// Brand Colors
+$primary-color:     #0d84e9;
+$secondary-color:   #f90;
+$attention:         #00bed5;
+$splash:            #ff6627;
+$royal:             #b85ed5;
+$panic:             #f60f60;
+$bright:            #008fff;
+$lush:              #99cd00;
+$primary:    $primary-color;
+$secondary:$secondary-color;
+
+$primary-tint:      lighten($primary-color, 40%);
+$secondary-tint:    lighten($secondary-color, 40%);
+$attention-tint:    lighten($attention, 40%);
+$splash-tint:       lighten($splash, 30%);
+$royal-tint:        lighten($royal, 30%);
+$lush-tint:         lighten($lush, 50%);
+
+$bright:            #008fff;
+$deep:              #0067be;
+$dark:              #205493;
+$tint:              $primary-tint;
+
+$success-color:     #2e8540;
+$success:    $success-color;
+$warn:              #fdb81e;
+$warning-color:       $warn;
+$alert-color:       #e31c3d;
+$alert:        $alert-color;
+
+$success-tint:      lighten($success, 45%);
+$warn-tint:         lighten($warn, 30%);
+$alert-tint:        lighten($alert, 40%);
 
 $facebook:          #4862a3;
 $twitter:           #55acee;
 $linkedin:          #0074a1;
-
-$cool:       $success-color;
-$splash:       $alert-color;
-$ghost:         $wash-color;
-$primary:    $primary-color;
-$secondary:$secondary-color;
-$success:    $success-color;
-$warning-color:       $warn;
-$wash:          $wash-color;
-$alert:        $alert-color;
 
 // This is a Sass map. It is neat.
 // It's similar to a JSON array, with key value pairs.
@@ -132,22 +131,28 @@ $colors: (
   steel: $steel,
   charcoal: $charcoal,
   tuatara: $tuatara,
-  carrot: $carrot,
   oil: $oil,
   jet: $jet,
-  warm: $warm,
   ebony: $ebony,
-  splash: $splash,
-  vibrant: $vibrant,
   deep: $deep,
   tint: $tint,
   warn: $warn,
   attention: $attention,
-  merlot: $merlot,
-  dim: $dim,
   mist: $mist,
-  spooky: $spooky,
-  panic: $panic
+  royal: $royal,
+  splash: $splash,
+  bright: $bright,
+  dark: $dark,
+  lush: $lush,
+  primary-tint: $primary-tint,
+  secondary-tint: $secondary-tint,
+  attention-tint: $attention-tint,
+  splash-tint: $splash-tint,
+  royal-tint: $royal-tint,
+  lush-tint: $lush-tint,
+  alert-tint: $alert-tint,
+  warn-tint: $warn-tint,
+  success-tint: $success-tint
 );
 
 // Grid

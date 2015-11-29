@@ -1,21 +1,34 @@
 {{> navigation.top-bar }}
-{{> navigation.sub-bar--edit }}
 
-<section class="row">
+<header class="lead-header shift-offset--bottom bg-attention">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1 class="lead-title t-beta c-white">Estimate Eligibility</h1>
+      <div class="medium-8 columns no-padding show-for-medium-up">
+        <p class="c-white t-gamma t-light">Enter details about household size and income and we'll highlight properties you might be eligible for</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="row shift--top">
   <div class="medium-8 columns">
-    <form class="padding-top">
+    <form class="form-card">
       <div class="row">
         <div class="medium-12 columns margin-bottom">
-          <h3 class="t-sans gamma">
-            First we'll ask you about the number of people in your household.
-          </h3>
+          <div class="border-bottom padding-bottom">
+            <h3 class="t-sans gamma margin-bottom--half">
+              How many people are you applying to live with?
+            </h3>
+            <p class="show-for-medium-up c-steel margin-bottom--2x">Household is defined as anyone living with you in the residence, including spouse, roomates, parents and children.</p>
 
-          {{> forms.form-group--occupancy }}
+            {{> forms.form-group--occupancy }}
+          </div>
         </div>
       </div>
 
       <div class="row margin-bottom">
-        <div class="medium-12 columns bg-mist padding-top padding-bottom">
+        <div class="medium-12 columns padding-top padding-bottom">
           <h3 class="t-sans gamma">
             Next add up your income from wages, benefits and other sources.
           </h3>
