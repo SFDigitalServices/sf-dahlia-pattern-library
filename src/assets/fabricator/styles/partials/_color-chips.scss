@@ -27,3 +27,17 @@
 		font-weight: 400;
 	}
 }
+
+.color-chips { 
+}
+
+.color-chip {
+	padding-top: 4rem;
+	margin-bottom: 1rem;
+
+	.color-chip__name {
+		content: attr(data-color);
+		background-color: #fff;
+		padding: .5rem;
+	}	
+}

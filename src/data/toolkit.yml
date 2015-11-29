@@ -1,8 +1,51 @@
 colors:
-  primary:
+  blacks:
     Dark: "#4f5a62"
     Light: "#dedee0"
-  secondary:
+  specturm:
     Primary: "#0d84e9"
     Secondary: "#ff9900"
     Blue: "#00bed5"
+
+bgcolors:
+  contrast:
+    - snow
+    - mist
+    - vapor
+    - wash
+    - ghost
+    - smoke
+    - gainsboro
+    - iron
+    - silver
+    - base
+    - aluminum
+    - jumbo
+    - steel
+    - charcoal
+    - tuatara
+    - oil
+    - ebony
+    - jet
+  specturm:  
+    - primary
+    - secondary
+    - attention
+    - primary-tint
+    - secondary-tint
+    - attention-tint
+    - royal
+    - splash
+    - lush
+    - royal-tint
+    - splash-tint
+    - lush-tint
+    - alert
+    - success
+    - warn
+    - alert-tint
+    - success-tint
+    - warn-tint
+    - bright
+    - deep
+    - dark
