@@ -34,14 +34,16 @@ fabricator: true
 <h2>Color</h2>
 
 {{#each toolkit.bgcolors}}
-  <div class="color-chips row">
-  {{#each this}}
-    <div class="large-4 columns">
-    <div class="color-chip bg-{{this}}">
-      <div class="color-chip__name">{{this}}</div>
+  <div class="row">
+    <div class="color-chips row">
+    {{#each this}}
+      <div class="large-4 columns">
+      <div class="color-chip bg-{{this}}">
+        <div class="color-chip__name">{{this}}</div>
+      </div>
+      </div>
+    {{/each}}
     </div>
-    </div>
-  {{/each}}
   </div>
 {{/each}}
 

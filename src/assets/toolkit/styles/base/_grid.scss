@@ -1,0 +1,8 @@
+.row {
+  &.expand {
+    margin-left: -($column-gutter / 2);
+    margin-right: -($column-gutter / 2);
+    max-width: none;
+    width: auto;
+  }
+}
