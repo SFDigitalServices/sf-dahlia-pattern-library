@@ -69,6 +69,10 @@
     }
   }
 
+  li.stat-full {
+    width: 100% !important;
+  }
+
   @media #{$small-only} {
     &.double.toggler {
       li:first-of-type {
