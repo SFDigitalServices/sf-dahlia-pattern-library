@@ -69,6 +69,7 @@ small,
 
 body {
   font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
 }
 
 p {
