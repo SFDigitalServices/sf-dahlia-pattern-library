@@ -97,7 +97,7 @@ $text-sizing: (
   base: (
     small: (
       font-size: 1rem, // 16px
-      line-height: 1.375
+      line-height: 1.3125
     )
   ),
   epsilon: (
@@ -200,6 +200,10 @@ $text-sizing: (
 .t-sans {
   font-family:$sans-font-family;
 }
+
+.t-alt-sans {
+  font-family: $alt-font-family;
+}  
 
 .t-black {
    @include type-weight(black);
