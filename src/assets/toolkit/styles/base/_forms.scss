@@ -16,6 +16,14 @@ form {
   }
 }
 
+label {
+  &.error {
+    input.error {
+      border: 2px solid $alert;
+    }
+  }
+}
+
 .radio-group {
   p {
     margin-bottom: 0;
@@ -24,12 +32,6 @@ form {
       text-transform: none;
     }
   }
-}
-
-.input-editor {
-  @include absolute(null,3px,3px,null);
-  margin: 0;
-  height: rem-calc(30);
 }
 
 .p-relative {

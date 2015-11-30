@@ -93,7 +93,8 @@
 
     .property-card_figure {
       @include grid-column(5);
-      padding: 0;
+      padding-right: 0;
+      background-color: transparent;
     }
     
     .property-card_content {

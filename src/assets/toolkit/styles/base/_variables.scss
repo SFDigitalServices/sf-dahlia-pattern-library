@@ -251,3 +251,18 @@ $table-border-size: none;
 
 // Top Bar Variables
 $topbar-bg-color: #444;
+
+// Alert Boxes
+$alert-border-width: 0;
+$alert-font-color: #333;
+$alert-font-size: .9rem;
+
+// We use these to style the error states for inputs and labels
+$input-error-message-padding: rem-calc(6 0 6) !default;
+$input-error-message-top: -1px !default;
+$input-error-message-font-size: rem-calc(12) !default;
+$input-error-message-font-weight: $font-weight-normal !default;
+$input-error-message-font-style: normal;
+$input-error-message-font-color: $alert;
+$input-error-message-bg-color: transparent;
+$input-error-message-font-color-alt: $oil !default;

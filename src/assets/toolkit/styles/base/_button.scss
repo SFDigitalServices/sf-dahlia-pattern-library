@@ -48,6 +48,16 @@ button,
     }
   }
 
+  &.attention {
+    background-color: $attention;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($attention, 5%);
+    }
+  }
+
   &.blank {
     background-color: #fff;
     color: $primary;

@@ -107,3 +107,9 @@ input[type="radio"]:disabled + label::before {
   box-shadow: 0 0 0 1px $color-gray-light;
   cursor: not-allowed;
 }
+
+.input-editor {
+  @include absolute(null,3px,3px,null);
+  margin: 0;
+  height: rem-calc(30);
+}
