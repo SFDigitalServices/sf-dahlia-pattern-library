@@ -7,7 +7,7 @@
       <h1 class="lead-title t-beta c-white">Estimate Eligibility</h1>
 
       <div class="medium-8 columns no-padding show-for-medium-up">
-        <p class="c-white t-gamma t-light">Enter details about household size and income and we'll highlight properties you might be eligible for</p>
+        <p class="c-white t-gamma t-light">Enter details about household size and income and we'll highlight properties you might be eligible for.</p>
       </div>
     </div>
   </div>
@@ -41,12 +41,22 @@
           </label>
           <small class="error">Please enter an income amount</small>
 
-          {{> forms.radio-group--by-time}}
+          <div class="radio-group">
+            <p class="d-inline-block no-margin">
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">per month</label>
+            </p>
+            <p class="d-inline-block no-margin">
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">per year</label>
+            </p>
+          </div>
         </div>  
-        <div class="medium-12 columns bg-tint padding-top">
-          <p class="t-tiny margin-bottom">Note: This includes any income sources for each person you plan to live with. To help, we created a
+        <div class="medium-12 columns">
+          <div class="note bg-tint padding margin-bottom--2x">
+            <p class="t-tiny no-margin">Note: This includes any income sources for each person you plan to live with. To help, we created a
 
-          <a href="#">Household Income Calculator</a></p>
+              <a href="#">Household Income Calculator</a>
+            </p>
+          </div>
         </div>
       </div>
           
