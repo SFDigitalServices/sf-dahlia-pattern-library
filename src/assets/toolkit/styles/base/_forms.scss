@@ -6,12 +6,12 @@ form {
   font-family: $font-family;
 
   label {
-    @include responsive-text-size('tiny');
+    @include responsive-text-size('small');
     font-weight: 500;
     text-transform: capitalize;
 
     input, textarea, select {
-      margin-top: .325rem !important;
+      margin-top: .5rem !important;
     }
   }
 }
