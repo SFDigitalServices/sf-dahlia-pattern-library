@@ -10,7 +10,7 @@ form {
     font-weight: 500;
     text-transform: capitalize;
 
-    input, textarea {
+    input, textarea, select {
       margin-top: .325rem !important;
     }
   }
@@ -26,12 +26,14 @@ label {
 
 .radio-group {
   p {
-    margin-bottom: 0;
-
     label {
       text-transform: none;
     }
   }
+}
+
+.has-options {
+  margin-bottom: .5rem !important;
 }
 
 .p-relative {
