@@ -34,12 +34,21 @@
           </h3>
 
           {{> forms.input-income }}
-          {{> forms.radio-group--by-time}}
-        </div>  
-        <div class="medium-12 columns bg-tint padding-top">
-          <p class="t-tiny margin-bottom">Note: Your total should include all income sources for each person you plan to live with over the age of 18. To help, we created a
+          <div class="radio-group">
+            <p class="d-inline-block no-margin">
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">per month</label>
+            </p>
+            <p class="d-inline-block no-margin">
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">per year</label>
+            </p>
+          </div>
+        </div>
+        <div class="medium-12 columns">
+          <div class="note bg-tint padding margin-bottom--2x">
+            <p class="t-tiny no-margin">Note: Your total should include all income sources for each person you plan to live with over the age of 18. To help, we created a
 
-          <a href="#">Household Income Calculator</a></p>
+            <a href="#">Household Income Calculator</a></p>
+          </div>
         </div>
       </div>
 
