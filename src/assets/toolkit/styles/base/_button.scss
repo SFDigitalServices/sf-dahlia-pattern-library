@@ -111,9 +111,12 @@ button,
   }  
 }
 
-// Custom btn variables
-// .btn
+.button-on-small {
+  display: block;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 
-.btn {
-
+  @media #{$small-only} {
+    @include button;
+  }
 }
