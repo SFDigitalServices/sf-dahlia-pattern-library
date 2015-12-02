@@ -1,0 +1,10 @@
+.resources-list {
+  .block-item {
+    .button-on-small {
+      @media #{$small-only} {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }  
+    }
+  }
+}
