@@ -45,3 +45,15 @@
     }
   }
 }
+
+.has-icon-left {
+  position: relative;
+  
+  .ui-icon {
+    @include absolute(0,null,null,0);
+  }
+
+  .offset-icon {
+    margin-left: 1rem;
+  }
+}

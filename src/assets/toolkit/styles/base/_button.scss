@@ -118,5 +118,10 @@ button,
 
   @media #{$small-only} {
     @include button;
+    svg {
+      use { 
+        fill: #fff !important;
+      }
+    }
   }
 }
