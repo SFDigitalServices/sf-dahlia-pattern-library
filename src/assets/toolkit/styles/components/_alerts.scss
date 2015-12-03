@@ -3,6 +3,10 @@
     background-color: $alert-tint;
   }
 
+  &.success {
+    background-color: $success-tint;
+  }
+
   .close {
     line-height: .9rem;
   }
