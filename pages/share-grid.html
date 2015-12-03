@@ -148,116 +148,108 @@
 	    </ul>
 	  </section>
 	  </div>
-	</nav><!-- <section class="sub-bar bg-mist">
-  <div class="row">
-    <h2 class="sub-bar_header t-epsilon">Estimate Eligibility</h2>
-
-    <a href="#" class="right button tiny">Clear Filters</a>
-  </div>
-</section> -->
-
-<header class="lead-header shift-offset--bottom bg-attention">
+	</nav><section class="sub-bar bg-mist show-for-small-only">
   <div class="row">
     <div class="large-12 columns">
-      <h1 class="lead-title t-beta c-white">Estimate Eligibility</h1>
-
-      <div class="medium-8 columns no-padding show-for-medium-up">
-        <p class="c-white t-gamma t-light">Enter details about household size and income and we'll highlight properties you might be eligible for.</p>
+      <a href="#" class="button button tiny">Back</a>
+    </div>
+  </div>
+</section>
+<header class="lead-header bg-attention-tint">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1 class="lead-title t-beta">Share this Listing</h1>
+      <div class="medium-8 columns no-padding">
+        <p class="t-gamma t-light">Send a link to a housing conselor, family member or friend.</p>
       </div>
     </div>
   </div>
 </header>
 
-<section class="row shift--top">
-  <div class="medium-8 columns">
-    <form class="form-card">
-      <div class="row">
-        <div class="medium-12 columns margin-bottom">
-            <div data-alert class="alert-box alert">
-              <span class="alert-icon">
-                <span class="ui-icon ui-medium">
-                  <svg>
-                    <use xlink:href="#i-warning" />
-                  </svg>
-                </span>  </span>
-              <p class="alert-body">
-                You'll need to resolve any errors before moving on.
-              </p>
-              <a href="#" class="close">&times;</a>
-            </div>          <div class="border-bottom padding-bottom">
-            <h3 class="t-sans gamma margin-bottom--half">
-              How many people are you applying to live with?
-            </h3>  
+<section class="section-full">
+  <div class="row">
+    <div class="medium-8 columns">
+    <dl class="accordion" data-accordion>  
+      <dd class="accordion-navigation">
+        <a class="accordion-header" href="#panel1a">Send in Email</a>
+        
+        <div id="panel1a" class="content active">  
+          <form class="no-margin">
+            <div class="row">
+              <div class="large-12 columns">
+                <label>
+                  <input type="text" placeholder="Email Address" />
+                </label>
+              </div>
+            </div>
 
-            <label>
-              <span class="eligibility-form_header">Household Size</span>
-              <select>
-                <option value="one person">Enter number of people</option>
-                <option value="one person">1 person</option>
-                <option value="two people">2 people</option>
-                <option value="three people">3 people</option>
-                <option value="four people">4 people</option>
-                <option value="five people">5 people</option>
-                <option value="six people">6 people</option>
-              </select>
-            </label>          </div>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>From
+                  <input type="text" placeholder="Your Full Name" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <button class="button small">Send Email</button>              </div>
+            </div>
+          </form>
         </div>
-      </div>
+      </dd>
 
-      <div class="row margin-bottom">
-        <div class="medium-12 columns padding-top padding-bottom">
-          <h3 class="t-sans gamma">
-            Next add up your income from wages, benefits and other sources.
-          </h3>
+      <dd class="accordion-navigation">
+        <a class="accordion-header" href="#panel3a">Send as Text Message</a>
 
-          <label class="error">
-            <span class="eligibility-form_header">Household Income</span>
-            <input type="text" placeholder="Total all of your income sources" class="error" />
-          </label>
-          <small class="error">Please enter an income amount</small>
+        <div id="panel3a" class="content">  
+          <form class="no-margin">
+            <div class="row">
+              <div class="large-12 columns">
+                <label>
+                  <input type="text" placeholder="Mobile number" />
+                </label>
+              </div>
+            </div>
 
-          <div class="radio-group">
-            <p class="d-inline-block no-margin">
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">per month</label>
-            </p>
-            <p class="d-inline-block no-margin">
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">per year</label>
-            </p>
+            <div class="row">
+              <div class="large-12 columns">
+                <label>From
+                  <input type="text" placeholder="Your Full Name" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <button class="button small">Send Text</button>              </div>
+            </div>
+          </form>
+        </div>
+      </dd>
+
+      <dd class="accordion-navigation">
+        <a class="accordion-header" href="#panel2a">Get Shareable Link</a>
+        
+        <div id="panel2a" class="content">
+          <form class="no-margin">
+            <div class="row">
+              <div class="large-12 columns">
+                <label>
+                  <input type="text" readonly="readonly" placeholder="Link" />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-12 columns">  
+                <button class="button small secondary">Get Sharable Link</button>              </div>  
+            </div>
           </div>
-        </div>  
-        <div class="medium-12 columns">
-          <div class="note bg-tint padding margin-bottom--2x">
-            <p class="t-tiny no-margin">Note: This includes any income sources for each person you plan to live with. To help, we created a
-
-              <a href="#">Household Income Calculator</a>
-            </p>
-          </div>
-        </div>
-      </div>
-          
-      <div class="row text-center">
-        <div class="small-12 medium-6 medium-push-6 columns">
-          <button class="button expand">View Matching Properties</button>
-        </div>
-        <div class="small-12 medium-6 medium-pull-6 columns">
-          <button class="button blank expand-small">Reset Filters</button>
-        </div>
-      </div>
-    </form>
-  </div> 
-</section>
-<!-- <hr class="hr-5">
-
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <div class="notification-block block medium-text-center">
-      <h3 class="t-alpha">Get Notified By Email</h3>
-      <p class="t-gamma c-steel">We'll send you an email when the next property that matches you becomes available</p>
-    
-      <button class="button secondary">Get Notified by Email</button>
-    </div>  </div>
-</section> -->
-
+        </dd>
+      </dl>
+    </div>
+  </div>
+</section>  
 
 
 
