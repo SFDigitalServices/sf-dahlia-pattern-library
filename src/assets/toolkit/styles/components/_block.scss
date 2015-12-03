@@ -7,6 +7,19 @@
   }
 }
 
-.property-block {
+.block-list {
 
+}
+
+.block-item {
+  border-bottom: 1px solid $silver;
+  padding-top: 1.25rem;
+  padding-bottom: .5rem;
+
+  .button-on-small {
+    @media #{$small-only} {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }  
+  }
 }

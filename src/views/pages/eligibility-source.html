@@ -1,28 +1,36 @@
 {{> navigation.top-bar }}
-{{> navigation.sub-bar--edit }}
+<!-- {{> navigation.sub-bar--edit }} -->
 
-<section class="row">
+<header class="lead-header shift-offset--bottom bg-primary-tint">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1 class="lead-title t-beta">Household Income Calculator</h1>
+      <p class="no-margin"><a href="#" class="button small">Clear</a>
+    </div>
+  </div>
+</header>
+
+<section class="row shift--top">
   <div class="medium-8 columns">
-    <form class="padding-top padding-bottom no-margin">
-      <div class="income-source">
-      {{> forms.income-source_item}}
+    <form class="form-card">
+      <div class="row">
+        <div class="medium-12 columns margin-bottom--2x">
+          <div class="income-source padding-bottom--2x">
+          {{> forms.income-source_item}}
 
-        <div class="income-source_item">
-          <span class="income-source_name">Wages: $1000/mo</span>
+            <div class="income-source_item">
+              <span class="income-source_name">Wages: $1000/mo</span>
 
-          <a href="#" class="income-source_link">Edit</a>
+              <a href="#" class="income-source_link">Edit</a>
+            </div>
+          </div>
+
+          <hr class="hr-5">
         </div>
       </div>
-    </form>
-  </div>
-</section>
 
-<hr class="hr-5 margin-top">
-
-<section class="row margin-top--2x">
-  <div class="medium-8 columns">
       <div class="row">
-        <div class="large-12 columns">
+        <div class="medium-12 columns padding-top padding-bottom">
           <label>Where is this income from?
             <select>
               <option value="wages">Wages</option>
@@ -38,7 +46,7 @@
       <div class="row">
         <div class="large-12 columns margin-bottom">
           <label>How much is the income this source?
-            <input type="text" placeholder="$" />
+            <input type="text" placeholder="Enter Amount" class="has-options" />
           </label>
           {{> forms.radio-group--by-time}}
         </div>
@@ -54,6 +62,6 @@
       </div> 
 
       {{> forms.button-stack--paginate}}
-    </form>
-  </div>
+    </div>
+  </form>
 </section>    

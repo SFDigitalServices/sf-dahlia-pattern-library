@@ -1,21 +1,101 @@
 {{> navigation.top-bar }}
 {{> navigation.sub-bar--back }}
-<section class="section-full">
+
+<header class="lead-header bg-attention-tint">
   <div class="row">
-    <div class="medium-8 columns padding-top--2x">
-      <h1 class="gamma">Share this listing with a housing counselor, family member or friend.</h1>
-      <form class="no-margin">
-        {{> forms.input-email }}
-      </form>
+    <div class="large-12 columns">
+      <h1 class="lead-title t-beta">Share this Listing</h1>
+      <div class="medium-8 columns no-padding">
+        <p class="t-gamma t-light">Send a link to a housing conselor, family member or friend.</p>
+      </div>
     </div>
   </div>
+</header>
 
+<section class="section-full">
   <div class="row">
-    <div class="medium-8 columns small-only-text-center">
-    <hr class="hr-5 tall">
-    <h1 class="gamma show-for-medium-up">Copy the link to the property to send in a text or email.</h1>
+    <div class="medium-8 columns">
+    <dl class="accordion" data-accordion>  
+      <dd class="accordion-navigation">
+        <a class="accordion-header" href="#panel1a">Send in Email</a>
+        
+        <div id="panel1a" class="content active">  
+          <form class="no-margin">
+            <div class="row">
+              <div class="large-12 columns">
+                <label>
+                  <input type="text" placeholder="Email Address" />
+                </label>
+              </div>
+            </div>
 
-      {{> buttons.button-small--secondary button-content="Get Sharable Link" }}
+            <div class="row">
+              <div class="large-12 columns">
+                <label>From
+                  <input type="text" placeholder="Your Full Name" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                {{> buttons.button-small button-content="Send Email" }}
+              </div>
+            </div>
+          </form>
+        </div>
+      </dd>
+
+      <dd class="accordion-navigation">
+        <a class="accordion-header" href="#panel3a">Send as Text Message</a>
+
+        <div id="panel3a" class="content">  
+          <form class="no-margin">
+            <div class="row">
+              <div class="large-12 columns">
+                <label>
+                  <input type="text" placeholder="Mobile number" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                <label>From
+                  <input type="text" placeholder="Your Full Name" />
+                </label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="large-12 columns">
+                {{> buttons.button-small button-content="Send Text" }}
+              </div>
+            </div>
+          </form>
+        </div>
+      </dd>
+
+      <dd class="accordion-navigation">
+        <a class="accordion-header" href="#panel2a">Get Shareable Link</a>
+        
+        <div id="panel2a" class="content">
+          <form class="no-margin">
+            <div class="row">
+              <div class="large-12 columns">
+                <label>
+                  <input type="text" readonly="readonly" placeholder="Link" />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-12 columns">  
+                {{> buttons.button-small--secondary button-content="Get Sharable Link" }}
+              </div>  
+            </div>
+          </div>
+        </dd>
+      </dl>
     </div>
   </div>
 </section>  

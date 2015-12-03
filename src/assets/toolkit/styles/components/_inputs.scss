@@ -1,0 +1,115 @@
+$color-focus:           #3e94cf;
+$color-visited:         #4c2c92;
+$color-primary:        $primary;
+$color-white:              #fff;
+$color-gray:             $smoke;
+$color-gray-light:       $ghost;
+$color-gray-lighter:      $wash;
+$border-radius:   rem-calc(3px);
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $color-white;
+  background-image: url('../images/arrow-down.svg');
+  background-position: right .75rem center;
+  background-repeat: no-repeat;
+  background-size: .75rem;
+}
+
+label {
+  display: block;
+}
+
+/**
+ * Custom checkboxes
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  @include sr-only();
+
+  .lt-ie9 & {
+    border: 0;
+    float: left;
+    margin: .4em .4em 0 0;
+    position: static;
+    width: auto;
+  }
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: 0 0 0 1px #757575;
+  content: '\a0';
+  display: inline-block;
+  height: 1.2rem;
+  line-height: .8;
+  margin-right: .6em;
+  text-indent: .15em;
+  vertical-align: .2em;
+  width: 1.2rem;
+}
+
+input[type="radio"] + label::before {  
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #757575;
+  height:.9rem;  
+  width: .9rem;  
+}
+
+input[type="radio"] + label::before {
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+  background-color: $color-primary;
+  box-shadow: 0 0 0 1px $color-primary;
+}
+
+input[type="radio"]:checked + label::before {
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary; 
+}
+
+input[type="radio"]:focus + label::before {
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary, 0 0 3px 4px $color-focus, 0 0 7px 4px $color-focus;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-image: url('../images/check.png');
+  background-image: url('../images/check.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 0 1px $color-white, 0 0 0 3px $color-primary;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: $color-gray;
+}
+
+input[type="checkbox"]:disabled + label::before,
+input[type="radio"]:disabled + label::before {
+  background: $color-gray-lighter;
+  box-shadow: 0 0 0 1px $color-gray-light;
+  cursor: not-allowed;
+}
+
+.input-editor {
+  @include absolute(null,3px,3px,null);
+  margin: 0;
+  height: rem-calc(30);
+}

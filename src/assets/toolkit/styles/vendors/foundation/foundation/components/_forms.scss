@@ -138,7 +138,7 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%) !default;
   &:focus {
     background: $input-focus-bg-color;
     border-color: $input-focus-border-color;
-    outline: none;
+    // outline: none;
   }
   // Disabled Styles
   &:disabled {

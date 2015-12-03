@@ -16,3 +16,22 @@
     padding: 2rem 0 1rem;
   }
 }
+
+.shift {
+  @media #{$medium-up} {
+    &-offset--bottom {
+      padding-bottom: 4rem;
+    }
+
+    &--top {
+      margin-top: -4rem;
+    }
+  }
+}
+
+.section-header {
+  border-bottom: 1px solid $silver;
+  border-top: 5px solid $charcoal;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}

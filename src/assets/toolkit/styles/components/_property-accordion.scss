@@ -43,12 +43,21 @@
 
   .accordion-nested {
     @include responsive-text-size('small');
+    margin-top: 0;
+
+    .accordion-navigation {
+      border-bottom: 1px solid $smoke;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
 
     .accordion-navigation > a {
       @include type-weight(bold);
       @include responsive-text-size('small');
       background-color: #fff;
-      border-bottom: 1px solid $smoke;
+      border-bottom: none;
       padding-left: 0;
       position: relative;
 

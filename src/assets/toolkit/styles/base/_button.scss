@@ -48,6 +48,16 @@ button,
     }
   }
 
+  &.attention {
+    background-color: $attention;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($attention, 5%);
+    }
+  }
+
   &.blank {
     background-color: #fff;
     color: $primary;
@@ -56,6 +66,27 @@ button,
     &:focus {
       background-color: darken(#fff, 5%);
     }
+  }
+
+  &.ghost {
+    background-color: transparent;
+    color: $primary;
+    box-shadow: inset 0px 0px 0 2px $primary;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(#fff, 5%);
+    }
+
+    &.attention {
+      color: $attention;
+      box-shadow: inset 0px 0px 0 2px $attention;
+
+      &:hover,
+      &:focus {
+        background-color: lighten(#fff, 5%);
+      }
+    }  
   }
 
   &.toggle {
@@ -80,9 +111,17 @@ button,
   }  
 }
 
-// Custom btn variables
-// .btn
+.button-on-small {
+  display: block;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 
-.btn {
-
+  @media #{$small-only} {
+    @include button;
+    svg {
+      use { 
+        fill: #fff !important;
+      }
+    }
+  }
 }

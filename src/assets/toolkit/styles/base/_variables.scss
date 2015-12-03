@@ -3,6 +3,7 @@
 //
 
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 $base-font-size:      16px;
 $base-line-height:    24px;
@@ -26,7 +27,7 @@ $sans-font-family: $font-family;
 $body-font-family: $font-family;
 $sans-font-family-semibold: $font-family;
 $sans-font-family-bold: $font-family;
-$alt-font-family: $sans-font-family-bold;
+$alt-font-family: "Montserrat", Helvetica, Arial, Verdana, sans-serif;
 $serif-font-family: "Droid Serif", Georgia, Times, serif;
 $fancy-serif-font-family: $serif-font-family;
 // $fancy-serif-font-family: "Hoefler Titling A", "Hoefler Titling B", Georgia, Times, serif;
@@ -45,68 +46,67 @@ $type-weight: (
 //
 
 $white:             #fff !default;
-$ghost:             #fafafa !default;
 $snow:              #f9f9f9 !default;
 $vapor:             #f6f6f6 !default;
 $white-smoke:       #f5f5f5 !default;
-$silver:            #efefef !default;
-$smoke:             #eee !default;
+$silver:            #b3b3b3;
+$smoke:             #dedee0;
 $gainsboro:         #ddd !default;
 $iron:              #ccc !default;
 $base:              #aaa !default;
 $aluminum:          #999 !default;
 $jumbo:             #888 !default;
+$steel:             #767676;
 $monsoon:           #777 !default;
 $charcoal:          #555 !default;
 $tuatara:           #444 !default;
 $jet:               #222 !default;
 $black:             #000 !default;
-
-// Brand Colors
-$primary-color:     #0077db;
-$secondary-color:   #ff9900;
-
-$attention:         #00bed5;
-$splash:            #df0083;
-$panic:             #f60f60;
-
-$dim:               #008fff;
 $wash-color:        #efefef;
-
-$warm:              #f98129;
-$dark:              #5e46ee;
 $ebony:             #25343e;
-$vibrant:           #c00b8f;
-$merlot:            #9a175c;
-$spooky:            #a24ac6;
-$deep:              #0067be;
-$carrot:            #e94c28;
-
-$alert-color:       #df0083;
-$success-color:     #1F8923;
-
-$charcoal:          #4f5a62;
-$steel:             #767676;
-$smoke:             #dedee0;
-$tint:              #d3e7fb;
-$warn:              #ffe242;
 $oil:               #333;
 $mist:              #f7f7f7;
-$silver:            #b3b3b3;
+$ghost:         $wash-color;
+$wash:          $wash-color;
+
+// Brand Colors
+$primary-color:     #0d84e9;
+$secondary-color:   #f90;
+$attention:         #00bed5;
+$splash:            #ff6627;
+$royal:             #b85ed5;
+$panic:             #f60f60;
+$bright:            #008fff;
+$lush:              #99cd00;
+$primary:    $primary-color;
+$secondary:$secondary-color;
+
+$primary-tint:      lighten($primary-color, 40%);
+$secondary-tint:    lighten($secondary-color, 40%);
+$attention-tint:    lighten($attention, 50%);
+$splash-tint:       lighten($splash, 30%);
+$royal-tint:        lighten($royal, 30%);
+$lush-tint:         lighten($lush, 50%);
+
+$bright:            #008fff;
+$deep:              #0067be;
+$dark:              #205493;
+$tint:              $primary-tint;
+
+$success-color:     #2e8540;
+$success:    $success-color;
+$warn:              #fdb81e;
+$warning-color:       $warn;
+$alert-color:       #e31c3d;
+$alert:        $alert-color;
+
+$success-tint:      lighten($success, 45%);
+$warn-tint:         lighten($warn, 30%);
+$alert-tint:        lighten($alert, 40%);
 
 $facebook:          #4862a3;
 $twitter:           #55acee;
 $linkedin:          #0074a1;
-
-$cool:       $success-color;
-$splash:       $alert-color;
-$ghost:         $wash-color;
-$primary:    $primary-color;
-$secondary:$secondary-color;
-$success:    $success-color;
-$warning-color:       $warn;
-$wash:          $wash-color;
-$alert:        $alert-color;
 
 // This is a Sass map. It is neat.
 // It's similar to a JSON array, with key value pairs.
@@ -132,22 +132,28 @@ $colors: (
   steel: $steel,
   charcoal: $charcoal,
   tuatara: $tuatara,
-  carrot: $carrot,
   oil: $oil,
   jet: $jet,
-  warm: $warm,
   ebony: $ebony,
-  splash: $splash,
-  vibrant: $vibrant,
   deep: $deep,
   tint: $tint,
   warn: $warn,
   attention: $attention,
-  merlot: $merlot,
-  dim: $dim,
   mist: $mist,
-  spooky: $spooky,
-  panic: $panic
+  royal: $royal,
+  splash: $splash,
+  bright: $bright,
+  dark: $dark,
+  lush: $lush,
+  primary-tint: $primary-tint,
+  secondary-tint: $secondary-tint,
+  attention-tint: $attention-tint,
+  splash-tint: $splash-tint,
+  royal-tint: $royal-tint,
+  lush-tint: $lush-tint,
+  alert-tint: $alert-tint,
+  warn-tint: $warn-tint,
+  success-tint: $success-tint
 );
 
 // Grid
@@ -241,42 +247,25 @@ $btn-primary-border:    darken($base-button-bg, 5%);
 $accordion-navigation-bg-color: $mist;
 
 // Tables
-// These control the background color for the table and even rows
-// $table-bg: $white;
-// $table-even-row-bg: $white;
-
-// These control the table cell border style
-// $table-border-style: solid;
 $table-border-size: none;
-// $table-border-color: $gainsboro;
 
-// These control the table head styles
-// $table-head-bg: $white-smoke;
-// $table-head-font-size: rem-calc(14);
-// $table-head-font-color: $jet;
-// $table-head-font-weight: $font-weight-bold;
-// $table-head-padding: rem-calc(8 10 10);
+// Top Bar Variables
+$topbar-bg-color: #444;
 
-// These control the table foot styles
-// $table-foot-bg: $table-head-bg;
-// $table-foot-font-size: $table-head-font-size;
-// $table-foot-font-color: $table-head-font-color;
-// $table-foot-font-weight: $table-head-font-weight;
-// $table-foot-padding: $table-head-padding;
+// Alert Boxes
+$alert-border-width: 0;
+$alert-font-color: #333;
+$alert-font-size: .9rem;
 
-// These control the caption
-// table-caption-bg: transparent;
-// $table-caption-font-color: $table-head-font-color;
-// $table-caption-font-size: rem-calc(16);
-// $table-caption-font-weight: bold;
+// We use these to style the error states for inputs and labels
+$input-error-message-padding: rem-calc(6 0 6) !default;
+$input-error-message-top: -1px !default;
+$input-error-message-font-size: rem-calc(12) !default;
+$input-error-message-font-weight: $font-weight-normal !default;
+$input-error-message-font-style: normal;
+$input-error-message-font-color: $alert;
+$input-error-message-bg-color: transparent;
+$input-error-message-font-color-alt: $oil !default;
 
-// These control the row padding and font styles
-// $table-row-padding: rem-calc(9 10);
-// $table-row-font-size: rem-calc(14);
-// $table-row-font-color: $jet;
-// $table-line-height: rem-calc(18);
-
-// These are for controlling the layout, display and margin of tables
-// $table-layout: auto;
-// $table-display: table-cell;
-// $table-margin-bottom: rem-calc(20);
+$form-spacing: rem-calc(20);
+$form-label-font-size: rem-calc(16);
