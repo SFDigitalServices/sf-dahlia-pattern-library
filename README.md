@@ -33,6 +33,8 @@ Do the following commands:
 
 1. `echo '<?php include_once("index.html"); ?>' > dist/index.php`
 
+1. `git add .`
+
 1. `git commit -am "Deploying latest pattern to heroku"`
 
 1. `git subtree push -P dist heroku master`
