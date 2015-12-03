@@ -22,6 +22,22 @@ npm install gulp-sass
 $ npm start
 ```
 
+## Deploying to Heroku
+Note: Make sure you have write access to the Heroku app before doing the following commands.
+
+Add heroku git: `git remote add heroku git@heroku.com:sf-dahlia-pattern-library.git`
+
+Do the following commands:
+
+1. `touch dist/index.php`
+
+1. `echo '<?php include_once("index.html"); ?>' > dist/index.php`
+
+1. `git commit -am "Deploying latest pattern to heroku"`
+
+1. `git subtree push -P dist heroku master`
+
+
 Pattern library is organized from the abstract to the discrete, small to large
 
 ### /base
