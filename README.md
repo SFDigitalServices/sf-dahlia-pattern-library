@@ -23,6 +23,17 @@ $ npm start
 ```
 
 ## Deploying to Heroku
+
+Note: Because we're deploying a subtree to heroku, pushing to an existing app gives the following error:
+
+`Updates were rejected because the tip of your current branch is behind`
+
+To Fix:
+
+1. `heroku apps:destroy --app sf-dahlia-pattern-library`
+
+1. `heroku create sf-dahlia-pattern-library`
+
 Note: Make sure you have write access to the Heroku app before doing the following commands.
 
 Add heroku git: `git remote add heroku git@heroku.com:sf-dahlia-pattern-library.git`
