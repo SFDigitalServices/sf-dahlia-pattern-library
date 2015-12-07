@@ -8,18 +8,33 @@
 .income-source {
   &_item {
     background-color: $mist;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     margin-bottom: 1rem;
 
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    &.expand {
+      @extend %expand;
+    }
   }
 
+  &_name {
+    display: inline-block;
+  }
+    
   &_link {
     @include responsive-text-size('tiny');
     line-height: 1.5rem;
     float: right;
     text-transform: uppercase;
+  }
+
+  &_nested {
+    margin-left: -($column-gutter);
+    margin-right: -($column-gutter);
+    padding-left: $column-gutter/2;
+    padding-right: $column-gutter/2;
   }
 }

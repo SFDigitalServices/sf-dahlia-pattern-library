@@ -1,0 +1,13 @@
+.result-set {
+  li {
+    @include clearfix;
+    padding: .5rem;
+    border-bottom: 1px solid $smoke;
+    position: relative;
+
+    .right {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+}
