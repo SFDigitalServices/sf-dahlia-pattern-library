@@ -18,4 +18,16 @@
       }  
     }
   }
-}  
+}
+
+.results-bar {
+  button, .button {
+    margin-bottom: 0;
+    margin-top: .5rem;
+
+    @media #{$medium-up} {
+      margin-left: 1rem;
+      margin-top: 0;
+    }  
+  }
+}
