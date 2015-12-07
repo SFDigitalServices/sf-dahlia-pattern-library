@@ -19,3 +19,8 @@
     margin-left: 1rem; 
   }
 }
+
+%expand {
+  margin-left: -($column-gutter/2);
+  margin-right: -($column-gutter/2);
+}
