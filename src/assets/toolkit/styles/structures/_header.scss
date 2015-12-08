@@ -1,0 +1,29 @@
+@mixin image-replace($imageURL) {
+  background: url($imageURL) no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.name-logo {
+  @include image-replace("../images/logo-portal.png");
+  background-size: 100%;
+  background-position: center center;
+  width: rem-calc(250);
+  
+  @media #{$medium-up} {
+    width: 80%;
+  }
+
+  a {
+    @media #{$small-only} {
+      width: 100% !important;
+    }
+  }
+}
+
+.title-area {
+  @media #{$medium-up} {
+    width: 30%;
+  }
+}  

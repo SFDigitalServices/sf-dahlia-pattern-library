@@ -1,13 +1,13 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
-<section class="bg-mist">
+<section class="splash-header bg-image">
   <div class="row">
     {{> welcome-header }}
   </div>
 </section>  
 
 <section class="row">
-  <div class="medium-8 medium-centered columns">
+  <div class="medium-6 columns">
     {{> welcome-block }}
 
 <!--     <div class="text-center">
@@ -15,8 +15,11 @@
       {{> forms.language-actions }}
     </div> -->
   </div>
-</section>
 
-{{> blocks.property-block--input }}
+  <div class="medium-6 columns">
+    {{> blocks.welcome-block--input }}
+  </div>
+
+</section>
 
 {{> components.footer}}

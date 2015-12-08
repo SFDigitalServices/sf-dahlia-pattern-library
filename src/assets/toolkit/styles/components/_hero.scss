@@ -1,9 +1,11 @@
 .hero {
   &-header {
     padding: 2rem 1rem;
+    position: relative;
+    z-index: 2;
 
     @media #{$medium-up} {
-      padding: 5rem 1rem;
+      padding: 8rem 1rem 2rem 1rem;
     }
   }
 
@@ -11,5 +13,21 @@
     @media #{$small-only} {
       font-size: $h2-font-size;
     }  
+  }
+}
+
+.splash-header {
+  position: relative;
+
+  &.bg-image {
+    background-image: url('../images/sf-skyline-wide.jpg');
+    background-size: cover;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    @include absolute(0,0,0,0);
+    background-image: -webkit-linear-gradient(top,transparent 10%,rgba(0,0,0,.8));
   }
 }
