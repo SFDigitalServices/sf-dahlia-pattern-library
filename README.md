@@ -24,34 +24,18 @@ $ npm start
 
 ## Deploying to Heroku
 
-Note: Because we're deploying a subtree to heroku, pushing to an existing app gives the following error:
+The Heroku application is served out of the `dist` directory which is the static HTML output of the pattern library. This directory is ignored from git and recreated every time you run `npm start`. 
 
-`Updates were rejected because the tip of your current branch is behind`
+To deploy the application (run this from the project directory):
 
-To Fix:
+* `./deploy.sh [appname]`
+* `appname` is an optional argument, which will create and deploy to a new heroku app:
+  * `sf-dahlia-pattern-library-[appname]` (if it doesn't already exist).
+  * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pattern-library-testing.herokuapp.com`
+* This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pattern-library-new-menu.herokuapp.com`
 
-1. `heroku apps:destroy --app sf-dahlia-pattern-library`
-
-1. `heroku create sf-dahlia-pattern-library`
-
-Note: Make sure you have write access to the Heroku app before doing the following commands.
-
-Add heroku git: `git remote add heroku git@heroku.com:sf-dahlia-pattern-library.git`
-
-Do the following commands:
-
-1. `touch dist/index.php`
-
-1. `echo '<?php include_once("index.html"); ?>' > dist/index.php`
-
-1. `git add .`
-
-1. `git commit -am "Deploying latest pattern to heroku"`
-
-1. `git subtree push -P dist heroku master`
-
-
-Pattern library is organized from the abstract to the discrete, small to large
+## Structure
+Pattern library is organized from the abstract to the discrete, small to large.
 
 ### /base
 Otherwise known as globals are the underlying variables the fuel the entire pattern library.

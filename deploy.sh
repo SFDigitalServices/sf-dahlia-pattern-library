@@ -7,7 +7,15 @@ if [ ! -d "$DIST" ]; then
 fi
 cd $DIST
 git init
-git remote add dev git@heroku.com:sf-dahlia-pattern-library-dev.git
+
+appname="$1"
+if [ ! appname ]; then
+	app="sf-dahlia-pattern-library-$appname"
+	heroku create $app
+else
+	app="sf-dahlia-pattern-library"
+fi
+git remote add heroku git@heroku.com:$app.git
 git add .
-git commit -am 'Deploying latest pattern to heroku'
-git push --force dev master
+git commit -am 'Deploying latest pattern library to heroku'
+git push --force heroku master
