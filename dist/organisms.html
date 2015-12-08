@@ -328,6 +328,9 @@
 												<a href="molecules.html#components.accordion-nested">Accordion Nested</a>
 											</li>
 											<li>
+												<a href="molecules.html#components.footer">Footer</a>
+											</li>
+											<li>
 												<a href="molecules.html#components.tabs-vertical">Tabs Vertical</a>
 											</li>
 											<li>
@@ -374,6 +377,9 @@
 												<a href="molecules.html#forms.radio-group--by-time">Radio Group  By Time</a>
 											</li>
 											<li>
+												<a href="molecules.html#forms.results-bar">Results Bar</a>
+											</li>
+											<li>
 												<a href="molecules.html#forms.select--occupancy">Select  Occupancy</a>
 											</li>
 									</ul>
@@ -391,6 +397,9 @@
 											</li>
 											<li>
 												<a href="molecules.html#headers.section-header">Section Header</a>
+											</li>
+											<li>
+												<a href="molecules.html#headers.version-header">Version Header</a>
 											</li>
 									</ul>
 							</li>
@@ -895,9 +904,9 @@
 		<div id="panel1a" class="content content-section">
 			<div class="content-panel lined">
 				<header class="margin-bottom">
-					<h4 class="t-epsilon t-sans no-margin">Household Income Maximum</h4>
+					<h4 class="t-epsilon t-sans no-margin">Household Maximum Income</h4>
 					<!-- Each unit type available has its own requirements based on household size. -->
-					<p class="t-small c-steel">This is based on your household size which includes anyone living in the unit including any children.</p>
+					<p class="t-small c-steel">For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.</p>
 				</header>
 				<div class="stats-card bg-tint">
 					<ul class="stats-list stats-toggle double toggler has-toggle">
@@ -910,7 +919,7 @@
             </li> -->
 						<li>
 							<div class="stats-list_value highlight">
-								<span class="value-label">starts at</span> $3,245
+								<span class="value-label">Starts at</span> $3,245
 								<span class="value-label">/mo</span>
 							</div>
 							<span class="stats-list_label">based on houshold size</span>
@@ -1193,9 +1202,10 @@
 			<div class="show-for-medium-up text-center margin-bottom">
 				<h2 class="delta">How to Apply</h2>
 				<div class="application-actions button-stack">
-					<button class="button small">Apply Now Online</button>
+					<!--  <button class="button small">Apply Now Online</button>
+         -->
 					<button class="button small oil toggle toggler">
-						Other Application Options
+						Your Application Options
 						<span class="ui-control ui-icon ui-small i-white">
               <svg>
                 <use xlink:href="#i-arrow-down"></use>
@@ -1751,18 +1761,6 @@
 		<div id="panel5a" class="content content-section">
 			<dl class="accordion-nested accordion trigger-left" data-accordion>
 				<dd class="accordion-navigation">
-					<a href="#panel1a-a" class="accordion-header">
-            Property Selection Criteria
-            <span class="ui-control ui-icon ui-small">
-              <svg>
-                <use xlink:href="#i-arrow-down"></use>
-              </svg>
-            </span>    </a>
-					<div id="panel1a-a" class="content">
-						<p>Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action.</p>
-					</div>
-				</dd>
-				<dd class="accordion-navigation">
 					<a href="#panel1a-b" class="accordion-header">
             Required Documents
             <span class="ui-control ui-icon ui-small">
@@ -1836,9 +1834,9 @@
 		&lt;div id=&quot;panel1a&quot; class=&quot;content content-section&quot;&gt;
 			&lt;div class=&quot;content-panel lined&quot;&gt;
 				&lt;header class=&quot;margin-bottom&quot;&gt;
-					&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Household Income Maximum&lt;/h4&gt;
+					&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Household Maximum Income&lt;/h4&gt;
 					&lt;!-- Each unit type available has its own requirements based on household size. --&gt;
-					&lt;p class=&quot;t-small c-steel&quot;&gt;This is based on your household size which includes anyone living in the unit including any children.&lt;/p&gt;
+					&lt;p class=&quot;t-small c-steel&quot;&gt;For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.&lt;/p&gt;
 				&lt;/header&gt;
 				&lt;div class=&quot;stats-card bg-tint&quot;&gt;
 					&lt;ul class=&quot;stats-list stats-toggle double toggler has-toggle&quot;&gt;
@@ -1851,7 +1849,7 @@
             &lt;/li&gt; --&gt;
 						&lt;li&gt;
 							&lt;div class=&quot;stats-list_value highlight&quot;&gt;
-								&lt;span class=&quot;value-label&quot;&gt;starts at&lt;/span&gt; $3,245
+								&lt;span class=&quot;value-label&quot;&gt;Starts at&lt;/span&gt; $3,245
 								&lt;span class=&quot;value-label&quot;&gt;/mo&lt;/span&gt;
 							&lt;/div&gt;
 							&lt;span class=&quot;stats-list_label&quot;&gt;based on houshold size&lt;/span&gt;
@@ -2134,9 +2132,10 @@
 			&lt;div class=&quot;show-for-medium-up text-center margin-bottom&quot;&gt;
 				&lt;h2 class=&quot;delta&quot;&gt;How to Apply&lt;/h2&gt;
 				&lt;div class=&quot;application-actions button-stack&quot;&gt;
-					&lt;button class=&quot;button small&quot;&gt;Apply Now Online&lt;/button&gt;
+					&lt;!--  &lt;button class=&quot;button small&quot;&gt;Apply Now Online&lt;/button&gt;
+         --&gt;
 					&lt;button class=&quot;button small oil toggle toggler&quot;&gt;
-						Other Application Options
+						Your Application Options
 						&lt;span class=&quot;ui-control ui-icon ui-small i-white&quot;&gt;
               &lt;svg&gt;
                 &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
@@ -2692,18 +2691,6 @@
 		&lt;div id=&quot;panel5a&quot; class=&quot;content content-section&quot;&gt;
 			&lt;dl class=&quot;accordion-nested accordion trigger-left&quot; data-accordion&gt;
 				&lt;dd class=&quot;accordion-navigation&quot;&gt;
-					&lt;a href=&quot;#panel1a-a&quot; class=&quot;accordion-header&quot;&gt;
-            Property Selection Criteria
-            &lt;span class=&quot;ui-control ui-icon ui-small&quot;&gt;
-              &lt;svg&gt;
-                &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
-              &lt;/svg&gt;
-            &lt;/span&gt;    &lt;/a&gt;
-					&lt;div id=&quot;panel1a-a&quot; class=&quot;content&quot;&gt;
-						&lt;p&gt;Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970&#x27;s, but may also include other persons displaced by Agency action.&lt;/p&gt;
-					&lt;/div&gt;
-				&lt;/dd&gt;
-				&lt;dd class=&quot;accordion-navigation&quot;&gt;
 					&lt;a href=&quot;#panel1a-b&quot; class=&quot;accordion-header&quot;&gt;
             Required Documents
             &lt;span class=&quot;ui-control ui-icon ui-small&quot;&gt;
@@ -2780,7 +2767,7 @@
 <dl class="property-accordion accordion" data-accordion>
 	<dd class="accordion-navigation">
 		<a href="#panel1a" class="accordion-header lead">Eligibility
-      <span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
+      <span class="accordion-subheader">Income, occupancy, preferences and rental assistance</span>
       <span class="ui-control ui-icon ui-small">
         <svg>
           <use xlink:href="#i-arrow-down"></use>
@@ -2789,15 +2776,15 @@
 
 		<header class="content-header show-for-medium-up">
 			<span class="t-delta t-serif">Eligibility</span>
-			<span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
+			<span class="accordion-subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
 		</header>
 
 		<div id="panel1a" class="content content-section">
 			<div class="content-panel lined">
 				<header class="margin-bottom">
-					<h4 class="t-epsilon t-sans no-margin">Household Income Maximum</h4>
+					<h4 class="t-epsilon t-sans no-margin">Household Maximum Income</h4>
 					<!-- Each unit type available has its own requirements based on household size. -->
-					<p class="t-small c-steel">This is based on your household size which includes anyone living in the unit including any children.</p>
+					<p class="t-small c-steel">For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.</p>
 				</header>
 				<div class="stats-card bg-tint">
 					<ul class="stats-list stats-toggle double toggler has-toggle">
@@ -2810,7 +2797,7 @@
             </li> -->
 						<li>
 							<div class="stats-list_value highlight">
-								<span class="value-label">starts at</span> $3,245
+								<span class="value-label">Starts at</span> $3,245
 								<span class="value-label">/mo</span>
 							</div>
 							<span class="stats-list_label">based on houshold size</span>
@@ -3094,9 +3081,10 @@
 			<div class="show-for-medium-up text-center margin-bottom">
 				<h2 class="delta">How to Apply</h2>
 				<div class="application-actions button-stack">
-					<button class="button small">Apply Now Online</button>
+					<!--  <button class="button small">Apply Now Online</button>
+         -->
 					<button class="button small oil toggle toggler">
-						Other Application Options
+						Your Application Options
 						<span class="ui-control ui-icon ui-small i-white">
               <svg>
                 <use xlink:href="#i-arrow-down"></use>
@@ -3637,7 +3625,7 @@
 	</dd>
 	<dd class="accordion-navigation">
 		<a href="#panel5a" class="accordion-header lead">Legal
-      <span class="accordion-subheader">Required documents and selection criteria</span>
+      <span class="accordion-subheader">Required documents and policies</span>
       <span class="ui-control ui-icon ui-small">
         <svg>
           <use xlink:href="#i-arrow-down"></use>
@@ -3646,23 +3634,11 @@
 
 		<header class="content-header show-for-medium-up">
 			<span class="t-delta t-serif">Legal</span>
-			<span class="accordion-subheader">Required documents and selection criteria</span>
+			<span class="accordion-subheader">Required documents and policies</span>
 		</header>
 
 		<div id="panel5a" class="content content-section">
 			<dl class="accordion-nested accordion trigger-left" data-accordion>
-				<dd class="accordion-navigation">
-					<a href="#panel1a-a" class="accordion-header">
-            Property Selection Criteria
-            <span class="ui-control ui-icon ui-small">
-              <svg>
-                <use xlink:href="#i-arrow-down"></use>
-              </svg>
-            </span>    </a>
-					<div id="panel1a-a" class="content">
-						<p>Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action.</p>
-					</div>
-				</dd>
 				<dd class="accordion-navigation">
 					<a href="#panel1a-b" class="accordion-header">
             Required Documents
@@ -3722,7 +3698,7 @@
 &lt;dl class=&quot;property-accordion accordion&quot; data-accordion&gt;
 	&lt;dd class=&quot;accordion-navigation&quot;&gt;
 		&lt;a href=&quot;#panel1a&quot; class=&quot;accordion-header lead&quot;&gt;Eligibility
-      &lt;span class=&quot;accordion-subheader&quot;&gt;Income, occupancy, preferences, and subsidies&lt;/span&gt;
+      &lt;span class=&quot;accordion-subheader&quot;&gt;Income, occupancy, preferences and rental assistance&lt;/span&gt;
       &lt;span class=&quot;ui-control ui-icon ui-small&quot;&gt;
         &lt;svg&gt;
           &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
@@ -3731,15 +3707,15 @@
 
 		&lt;header class=&quot;content-header show-for-medium-up&quot;&gt;
 			&lt;span class=&quot;t-delta t-serif&quot;&gt;Eligibility&lt;/span&gt;
-			&lt;span class=&quot;accordion-subheader&quot;&gt;Income, occupancy, preferences, and subsidies&lt;/span&gt;
+			&lt;span class=&quot;accordion-subheader&quot;&gt;Income, occupancy, preferences, rental assistance and additional building rules&lt;/span&gt;
 		&lt;/header&gt;
 
 		&lt;div id=&quot;panel1a&quot; class=&quot;content content-section&quot;&gt;
 			&lt;div class=&quot;content-panel lined&quot;&gt;
 				&lt;header class=&quot;margin-bottom&quot;&gt;
-					&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Household Income Maximum&lt;/h4&gt;
+					&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Household Maximum Income&lt;/h4&gt;
 					&lt;!-- Each unit type available has its own requirements based on household size. --&gt;
-					&lt;p class=&quot;t-small c-steel&quot;&gt;This is based on your household size which includes anyone living in the unit including any children.&lt;/p&gt;
+					&lt;p class=&quot;t-small c-steel&quot;&gt;For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.&lt;/p&gt;
 				&lt;/header&gt;
 				&lt;div class=&quot;stats-card bg-tint&quot;&gt;
 					&lt;ul class=&quot;stats-list stats-toggle double toggler has-toggle&quot;&gt;
@@ -3752,7 +3728,7 @@
             &lt;/li&gt; --&gt;
 						&lt;li&gt;
 							&lt;div class=&quot;stats-list_value highlight&quot;&gt;
-								&lt;span class=&quot;value-label&quot;&gt;starts at&lt;/span&gt; $3,245
+								&lt;span class=&quot;value-label&quot;&gt;Starts at&lt;/span&gt; $3,245
 								&lt;span class=&quot;value-label&quot;&gt;/mo&lt;/span&gt;
 							&lt;/div&gt;
 							&lt;span class=&quot;stats-list_label&quot;&gt;based on houshold size&lt;/span&gt;
@@ -4036,9 +4012,10 @@
 			&lt;div class=&quot;show-for-medium-up text-center margin-bottom&quot;&gt;
 				&lt;h2 class=&quot;delta&quot;&gt;How to Apply&lt;/h2&gt;
 				&lt;div class=&quot;application-actions button-stack&quot;&gt;
-					&lt;button class=&quot;button small&quot;&gt;Apply Now Online&lt;/button&gt;
+					&lt;!--  &lt;button class=&quot;button small&quot;&gt;Apply Now Online&lt;/button&gt;
+         --&gt;
 					&lt;button class=&quot;button small oil toggle toggler&quot;&gt;
-						Other Application Options
+						Your Application Options
 						&lt;span class=&quot;ui-control ui-icon ui-small i-white&quot;&gt;
               &lt;svg&gt;
                 &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
@@ -4579,7 +4556,7 @@
 	&lt;/dd&gt;
 	&lt;dd class=&quot;accordion-navigation&quot;&gt;
 		&lt;a href=&quot;#panel5a&quot; class=&quot;accordion-header lead&quot;&gt;Legal
-      &lt;span class=&quot;accordion-subheader&quot;&gt;Required documents and selection criteria&lt;/span&gt;
+      &lt;span class=&quot;accordion-subheader&quot;&gt;Required documents and policies&lt;/span&gt;
       &lt;span class=&quot;ui-control ui-icon ui-small&quot;&gt;
         &lt;svg&gt;
           &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
@@ -4588,23 +4565,11 @@
 
 		&lt;header class=&quot;content-header show-for-medium-up&quot;&gt;
 			&lt;span class=&quot;t-delta t-serif&quot;&gt;Legal&lt;/span&gt;
-			&lt;span class=&quot;accordion-subheader&quot;&gt;Required documents and selection criteria&lt;/span&gt;
+			&lt;span class=&quot;accordion-subheader&quot;&gt;Required documents and policies&lt;/span&gt;
 		&lt;/header&gt;
 
 		&lt;div id=&quot;panel5a&quot; class=&quot;content content-section&quot;&gt;
 			&lt;dl class=&quot;accordion-nested accordion trigger-left&quot; data-accordion&gt;
-				&lt;dd class=&quot;accordion-navigation&quot;&gt;
-					&lt;a href=&quot;#panel1a-a&quot; class=&quot;accordion-header&quot;&gt;
-            Property Selection Criteria
-            &lt;span class=&quot;ui-control ui-icon ui-small&quot;&gt;
-              &lt;svg&gt;
-                &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
-              &lt;/svg&gt;
-            &lt;/span&gt;    &lt;/a&gt;
-					&lt;div id=&quot;panel1a-a&quot; class=&quot;content&quot;&gt;
-						&lt;p&gt;Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970&#x27;s, but may also include other persons displaced by Agency action.&lt;/p&gt;
-					&lt;/div&gt;
-				&lt;/dd&gt;
 				&lt;dd class=&quot;accordion-navigation&quot;&gt;
 					&lt;a href=&quot;#panel1a-b&quot; class=&quot;accordion-header&quot;&gt;
             Required Documents
@@ -4786,9 +4751,9 @@
 		<div id="panel1a" class="content content-section">
 			<div class="content-panel lined">
 				<header class="margin-bottom">
-					<h4 class="t-epsilon t-sans no-margin">Household Income Maximum</h4>
+					<h4 class="t-epsilon t-sans no-margin">Household Maximum Income</h4>
 					<!-- Each unit type available has its own requirements based on household size. -->
-					<p class="t-small c-steel">This is based on your household size which includes anyone living in the unit including any children.</p>
+					<p class="t-small c-steel">For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.</p>
 				</header>
 				<div class="stats-card bg-tint">
 					<ul class="stats-list stats-toggle double toggler has-toggle">
@@ -4801,7 +4766,7 @@
             </li> -->
 						<li>
 							<div class="stats-list_value highlight">
-								<span class="value-label">starts at</span> $3,245
+								<span class="value-label">Starts at</span> $3,245
 								<span class="value-label">/mo</span>
 							</div>
 							<span class="stats-list_label">based on houshold size</span>
@@ -5535,18 +5500,6 @@
 		<div id="panel5a" class="content content-section">
 			<dl class="accordion-nested accordion trigger-left" data-accordion>
 				<dd class="accordion-navigation">
-					<a href="#panel1a-a" class="accordion-header">
-            Property Selection Criteria
-            <span class="ui-control ui-icon ui-small">
-              <svg>
-                <use xlink:href="#i-arrow-down"></use>
-              </svg>
-            </span>    </a>
-					<div id="panel1a-a" class="content">
-						<p>Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action.</p>
-					</div>
-				</dd>
-				<dd class="accordion-navigation">
 					<a href="#panel1a-b" class="accordion-header">
             Required Documents
             <span class="ui-control ui-icon ui-small">
@@ -5709,9 +5662,9 @@
 		&lt;div id=&quot;panel1a&quot; class=&quot;content content-section&quot;&gt;
 			&lt;div class=&quot;content-panel lined&quot;&gt;
 				&lt;header class=&quot;margin-bottom&quot;&gt;
-					&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Household Income Maximum&lt;/h4&gt;
+					&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Household Maximum Income&lt;/h4&gt;
 					&lt;!-- Each unit type available has its own requirements based on household size. --&gt;
-					&lt;p class=&quot;t-small c-steel&quot;&gt;This is based on your household size which includes anyone living in the unit including any children.&lt;/p&gt;
+					&lt;p class=&quot;t-small c-steel&quot;&gt;For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.&lt;/p&gt;
 				&lt;/header&gt;
 				&lt;div class=&quot;stats-card bg-tint&quot;&gt;
 					&lt;ul class=&quot;stats-list stats-toggle double toggler has-toggle&quot;&gt;
@@ -5724,7 +5677,7 @@
             &lt;/li&gt; --&gt;
 						&lt;li&gt;
 							&lt;div class=&quot;stats-list_value highlight&quot;&gt;
-								&lt;span class=&quot;value-label&quot;&gt;starts at&lt;/span&gt; $3,245
+								&lt;span class=&quot;value-label&quot;&gt;Starts at&lt;/span&gt; $3,245
 								&lt;span class=&quot;value-label&quot;&gt;/mo&lt;/span&gt;
 							&lt;/div&gt;
 							&lt;span class=&quot;stats-list_label&quot;&gt;based on houshold size&lt;/span&gt;
@@ -6458,18 +6411,6 @@
 		&lt;div id=&quot;panel5a&quot; class=&quot;content content-section&quot;&gt;
 			&lt;dl class=&quot;accordion-nested accordion trigger-left&quot; data-accordion&gt;
 				&lt;dd class=&quot;accordion-navigation&quot;&gt;
-					&lt;a href=&quot;#panel1a-a&quot; class=&quot;accordion-header&quot;&gt;
-            Property Selection Criteria
-            &lt;span class=&quot;ui-control ui-icon ui-small&quot;&gt;
-              &lt;svg&gt;
-                &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
-              &lt;/svg&gt;
-            &lt;/span&gt;    &lt;/a&gt;
-					&lt;div id=&quot;panel1a-a&quot; class=&quot;content&quot;&gt;
-						&lt;p&gt;Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970&#x27;s, but may also include other persons displaced by Agency action.&lt;/p&gt;
-					&lt;/div&gt;
-				&lt;/dd&gt;
-				&lt;dd class=&quot;accordion-navigation&quot;&gt;
 					&lt;a href=&quot;#panel1a-b&quot; class=&quot;accordion-header&quot;&gt;
             Required Documents
             &lt;span class=&quot;ui-control ui-icon ui-small&quot;&gt;
@@ -6561,11 +6502,14 @@
 						<span class="stats-list_label">unit type</span>
 					</li>
 					<li>
-						<div class="stats-list_value">$2,347/mo</div>
-						<span class="stats-list_label">min income</span>
+						<div class="stats-list_value">$2,347
+							<span class="value-label">/month</span></div>
+						<span class="stats-list_label">minimum income</span>
 					</li>
 					<li>
-						<div class="stats-list_value">$939</div>
+						<div class="stats-list_value">$939
+							<span class="value-label">/month</span>
+						</div>
 						<span class="stats-list_label">rent</span>
 					</li>
 				</ul>
@@ -6577,12 +6521,14 @@
 					<li>
 						<div class="stats-list_value">
 							$2,650
-							<span class="value-label">/mo</span>
+							<span class="value-label">/month</span>
 						</div>
-						<span class="stats-list_label">min income</span>
+						<span class="stats-list_label">minimum income</span>
 					</li>
 					<li>
-						<div class="stats-list_value">$1066</div>
+						<div class="stats-list_value">$1066
+							<span class="value-label">/month</span>
+						</div>
 						<span class="stats-list_label">rent</span>
 					</li>
 				</ul>
@@ -6593,15 +6539,17 @@
 
 	<header class="property-card_content">
 		<hgroup class="property-card_info">
-			<h1 class="property-card_title gamma">
-        <a href="#">Trinity Place Apartments</a>
-      </h1>
-			<p>1188 Mission St, San Francisco CA, 94134</p>
-			<p class="c-steel">Caritas Management Group</p>
-			<p>Application Due Feb 2nd</p>
+			<div class="property-card_meta">
+				<h1 class="property-card_title gamma">
+          <a href="#">Trinity Place Apartments</a>
+        </h1>
+				<p>1188 Mission St, San Francisco CA, 94134</p>
+				<p class="c-steel">Caritas Management Group</p>
+				<p>Application Due Feb 2nd</p>
+			</div>
 
 			<div class="property-card_action">
-				<a class="button tiny secondary" href="/pages/property-grid.html">See Details</a>
+				<a class="button tiny secondary no-margin" href="/pages/property-grid.html">See Details</a>
 			</div>
 		</hgroup>
 		<div class="property-card_stats show-for-medium-up">
@@ -6612,11 +6560,14 @@
 						<span class="stats-list_label">unit type</span>
 					</li>
 					<li>
-						<div class="stats-list_value">$2,347/mo</div>
-						<span class="stats-list_label">min income</span>
+						<div class="stats-list_value">$2,347
+							<span class="value-label">/month</span></div>
+						<span class="stats-list_label">minimum income</span>
 					</li>
 					<li>
-						<div class="stats-list_value">$939</div>
+						<div class="stats-list_value">$939
+							<span class="value-label">/month</span>
+						</div>
 						<span class="stats-list_label">rent</span>
 					</li>
 				</ul>
@@ -6628,18 +6579,19 @@
 					<li>
 						<div class="stats-list_value">
 							$2,650
-							<span class="value-label">/mo</span>
+							<span class="value-label">/month</span>
 						</div>
-						<span class="stats-list_label">min income</span>
+						<span class="stats-list_label">minimum income</span>
 					</li>
 					<li>
-						<div class="stats-list_value">$1066</div>
+						<div class="stats-list_value">$1066
+							<span class="value-label">/month</span>
+						</div>
 						<span class="stats-list_label">rent</span>
 					</li>
 				</ul>
 			</div>
 		</div>
-
 	</header>
 </div>
 </div>
@@ -6664,11 +6616,14 @@
 						&lt;span class=&quot;stats-list_label&quot;&gt;unit type&lt;/span&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
-						&lt;div class=&quot;stats-list_value&quot;&gt;$2,347/mo&lt;/div&gt;
-						&lt;span class=&quot;stats-list_label&quot;&gt;min income&lt;/span&gt;
+						&lt;div class=&quot;stats-list_value&quot;&gt;$2,347
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;&lt;/div&gt;
+						&lt;span class=&quot;stats-list_label&quot;&gt;minimum income&lt;/span&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
-						&lt;div class=&quot;stats-list_value&quot;&gt;$939&lt;/div&gt;
+						&lt;div class=&quot;stats-list_value&quot;&gt;$939
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;
+						&lt;/div&gt;
 						&lt;span class=&quot;stats-list_label&quot;&gt;rent&lt;/span&gt;
 					&lt;/li&gt;
 				&lt;/ul&gt;
@@ -6680,12 +6635,14 @@
 					&lt;li&gt;
 						&lt;div class=&quot;stats-list_value&quot;&gt;
 							$2,650
-							&lt;span class=&quot;value-label&quot;&gt;/mo&lt;/span&gt;
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;
 						&lt;/div&gt;
-						&lt;span class=&quot;stats-list_label&quot;&gt;min income&lt;/span&gt;
+						&lt;span class=&quot;stats-list_label&quot;&gt;minimum income&lt;/span&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
-						&lt;div class=&quot;stats-list_value&quot;&gt;$1066&lt;/div&gt;
+						&lt;div class=&quot;stats-list_value&quot;&gt;$1066
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;
+						&lt;/div&gt;
 						&lt;span class=&quot;stats-list_label&quot;&gt;rent&lt;/span&gt;
 					&lt;/li&gt;
 				&lt;/ul&gt;
@@ -6696,15 +6653,17 @@
 
 	&lt;header class=&quot;property-card_content&quot;&gt;
 		&lt;hgroup class=&quot;property-card_info&quot;&gt;
-			&lt;h1 class=&quot;property-card_title gamma&quot;&gt;
-        &lt;a href=&quot;#&quot;&gt;Trinity Place Apartments&lt;/a&gt;
-      &lt;/h1&gt;
-			&lt;p&gt;1188 Mission St, San Francisco CA, 94134&lt;/p&gt;
-			&lt;p class=&quot;c-steel&quot;&gt;Caritas Management Group&lt;/p&gt;
-			&lt;p&gt;Application Due Feb 2nd&lt;/p&gt;
+			&lt;div class=&quot;property-card_meta&quot;&gt;
+				&lt;h1 class=&quot;property-card_title gamma&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Trinity Place Apartments&lt;/a&gt;
+        &lt;/h1&gt;
+				&lt;p&gt;1188 Mission St, San Francisco CA, 94134&lt;/p&gt;
+				&lt;p class=&quot;c-steel&quot;&gt;Caritas Management Group&lt;/p&gt;
+				&lt;p&gt;Application Due Feb 2nd&lt;/p&gt;
+			&lt;/div&gt;
 
 			&lt;div class=&quot;property-card_action&quot;&gt;
-				&lt;a class=&quot;button tiny secondary&quot; href=&quot;/pages/property-grid.html&quot;&gt;See Details&lt;/a&gt;
+				&lt;a class=&quot;button tiny secondary no-margin&quot; href=&quot;/pages/property-grid.html&quot;&gt;See Details&lt;/a&gt;
 			&lt;/div&gt;
 		&lt;/hgroup&gt;
 		&lt;div class=&quot;property-card_stats show-for-medium-up&quot;&gt;
@@ -6715,11 +6674,14 @@
 						&lt;span class=&quot;stats-list_label&quot;&gt;unit type&lt;/span&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
-						&lt;div class=&quot;stats-list_value&quot;&gt;$2,347/mo&lt;/div&gt;
-						&lt;span class=&quot;stats-list_label&quot;&gt;min income&lt;/span&gt;
+						&lt;div class=&quot;stats-list_value&quot;&gt;$2,347
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;&lt;/div&gt;
+						&lt;span class=&quot;stats-list_label&quot;&gt;minimum income&lt;/span&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
-						&lt;div class=&quot;stats-list_value&quot;&gt;$939&lt;/div&gt;
+						&lt;div class=&quot;stats-list_value&quot;&gt;$939
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;
+						&lt;/div&gt;
 						&lt;span class=&quot;stats-list_label&quot;&gt;rent&lt;/span&gt;
 					&lt;/li&gt;
 				&lt;/ul&gt;
@@ -6731,18 +6693,19 @@
 					&lt;li&gt;
 						&lt;div class=&quot;stats-list_value&quot;&gt;
 							$2,650
-							&lt;span class=&quot;value-label&quot;&gt;/mo&lt;/span&gt;
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;
 						&lt;/div&gt;
-						&lt;span class=&quot;stats-list_label&quot;&gt;min income&lt;/span&gt;
+						&lt;span class=&quot;stats-list_label&quot;&gt;minimum income&lt;/span&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
-						&lt;div class=&quot;stats-list_value&quot;&gt;$1066&lt;/div&gt;
+						&lt;div class=&quot;stats-list_value&quot;&gt;$1066
+							&lt;span class=&quot;value-label&quot;&gt;/month&lt;/span&gt;
+						&lt;/div&gt;
 						&lt;span class=&quot;stats-list_label&quot;&gt;rent&lt;/span&gt;
 					&lt;/li&gt;
 				&lt;/ul&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
-
 	&lt;/header&gt;
 &lt;/div&gt;</code></pre>
 </div>
@@ -6873,9 +6836,10 @@
 			<div class="text-center">
 				<h2 class="delta">How to Apply</h2>
 				<div class="application-actions button-stack">
-					<button class="button small">Apply Now Online</button>
+					<!--  <button class="button small">Apply Now Online</button>
+         -->
 					<button class="button small oil toggle toggler">
-						Other Application Options
+						Your Application Options
 						<span class="ui-control ui-icon ui-small i-white">
               <svg>
                 <use xlink:href="#i-arrow-down"></use>
@@ -7048,9 +7012,10 @@
 			&lt;div class=&quot;text-center&quot;&gt;
 				&lt;h2 class=&quot;delta&quot;&gt;How to Apply&lt;/h2&gt;
 				&lt;div class=&quot;application-actions button-stack&quot;&gt;
-					&lt;button class=&quot;button small&quot;&gt;Apply Now Online&lt;/button&gt;
+					&lt;!--  &lt;button class=&quot;button small&quot;&gt;Apply Now Online&lt;/button&gt;
+         --&gt;
 					&lt;button class=&quot;button small oil toggle toggler&quot;&gt;
-						Other Application Options
+						Your Application Options
 						&lt;span class=&quot;ui-control ui-icon ui-small i-white&quot;&gt;
               &lt;svg&gt;
                 &lt;use xlink:href=&quot;#i-arrow-down&quot;&gt;&lt;/use&gt;
@@ -7397,15 +7362,15 @@
 		</div>
 	</div>
 <div class="f-item-preview">
-	<div class="block text-center">
-	<p class="delta">Skip eligibility and browse all currently available rental properties</p>
-	<a class="button secondary" href="/pages/browse-grid.html">See All Properties</a>
+	<div class="block--tall text-center">
+	<p class="delta c-steel">Tell us your household size and income and we'll highlight properties that might be a fit.</p>
+	<a class="button secondary" href="/pages/browse-grid.html">Estimate Eligibility</a>
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;block text-center&quot;&gt;
-	&lt;p class=&quot;delta&quot;&gt;Skip eligibility and browse all currently available rental properties&lt;/p&gt;
-	&lt;a class=&quot;button secondary&quot; href=&quot;/pages/browse-grid.html&quot;&gt;See All Properties&lt;/a&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;block--tall text-center&quot;&gt;
+	&lt;p class=&quot;delta c-steel&quot;&gt;Tell us your household size and income and we&#x27;ll highlight properties that might be a fit.&lt;/p&gt;
+	&lt;a class=&quot;button secondary&quot; href=&quot;/pages/browse-grid.html&quot;&gt;Estimate Eligibility&lt;/a&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -7427,25 +7392,25 @@
 		</div>
 	</div>
 <div class="f-item-preview">
-	<header class="hero-header bg-mist text-center">
-	<h1 class="hero-title">Welcome to the SF DAHLIA Housing Portal</h1>
+	<header class="hero-header bg-image text-center">
+	<h1 class="hero-title">Discover affordable housing opportunities</h1>
 
 	<div class="row">
 		<div class="medium-8 medium-centered columns">
-			<p class="gamma c-steel">Enter details about household size and income and we'll highlight properties you might be eligible for </p>
-			<a class="button" href="/pages/eligibility-start.html">Estimate Eligibility</a>
+			<p class="gamma c-steel">Browse all currently available Below Market Rate Rental properties</p>
+			<a class="button" href="/pages/eligibility-start.html">See  Properties</a>
 		</div>
 	</div>
 </header>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;header class=&quot;hero-header bg-mist text-center&quot;&gt;
-	&lt;h1 class=&quot;hero-title&quot;&gt;Welcome to the SF DAHLIA Housing Portal&lt;/h1&gt;
+	<pre><code class="language-markup">&lt;header class=&quot;hero-header bg-image text-center&quot;&gt;
+	&lt;h1 class=&quot;hero-title&quot;&gt;Discover affordable housing opportunities&lt;/h1&gt;
 
 	&lt;div class=&quot;row&quot;&gt;
 		&lt;div class=&quot;medium-8 medium-centered columns&quot;&gt;
-			&lt;p class=&quot;gamma c-steel&quot;&gt;Enter details about household size and income and we&#x27;ll highlight properties you might be eligible for &lt;/p&gt;
-			&lt;a class=&quot;button&quot; href=&quot;/pages/eligibility-start.html&quot;&gt;Estimate Eligibility&lt;/a&gt;
+			&lt;p class=&quot;gamma c-steel&quot;&gt;Browse all currently available Below Market Rate Rental properties&lt;/p&gt;
+			&lt;a class=&quot;button&quot; href=&quot;/pages/eligibility-start.html&quot;&gt;See  Properties&lt;/a&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/header&gt;</code></pre>

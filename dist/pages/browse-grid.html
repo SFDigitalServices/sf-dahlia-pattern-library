@@ -115,7 +115,7 @@
 	  <div class="row">
 	  <ul class="title-area">
 	    <li class="name">
-	      <h1 class="t-alt-sans"><a href="/pages/home.html">SF DAHLIA Housing Portal</a></h1>
+	      <h1 class="t-alt-sans"><a href="/pages/home.html">SF Affordable Housing Portal</a></h1>
 	    </li>
 	    <!-- <li class="toggle-topbar active">
 	      <a href="#">
@@ -170,6 +170,42 @@
   </div>
 </header>
 
+<section class="results-bar bg-mist padding-top">
+  <div class="row">
+    <div class="medium-12 columns">
+      <p>Showing Matches for <strong>3 people</strong> and <strong>$2400/month</strong>
+      <a href="" class="button attention tiny"> Edit Eligibility</a>
+      </p>
+    </div>
+  </div>
+</section>
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">No Matches</h2>
+      <p>Based on information you entered, you don't match any current properties.</p>
+      <p class="t-small c-steel">For more help we suggest contacting a housing counselor to explore your options.</p>
+      <a href="#" class="button oil no-margin small">Find a Housing Counselor</a>
+    </header>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">Matched
+        <span class="ui-control ui-icon ui-medium">
+          <svg>
+            <use xlink:href="#i-check"></use>
+          </svg>
+        </span>
+      </h2>
+      <p class="no-margin">Based on information you entered, you may be eligible for units at this property.</p>
+    </header>
+  </div>
+</div>
+
 <ul class="property-grid padding-top--2x">
   <li class="margin-bottom--2x">
     <div class="property-card">
@@ -192,11 +228,14 @@
                 <span class="stats-list_label">unit type</span>
               </li>
               <li>
-                <div class="stats-list_value">$2,347/mo</div>
-                <span class="stats-list_label">min income</span>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
               </li>
               <li>
-                <div class="stats-list_value">$939</div>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
                 <span class="stats-list_label">rent</span>
               </li>
             </ul>        <ul class="stats-list triple">
@@ -207,12 +246,14 @@
               <li>
                 <div class="stats-list_value">
                   $2,650
-                  <span class="value-label">/mo</span>
+                  <span class="value-label">/month</span>
                 </div>
-                <span class="stats-list_label">min income</span>
+                <span class="stats-list_label">minimum income</span>
               </li>
               <li>
-                <div class="stats-list_value">$1066</div>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
                 <span class="stats-list_label">rent</span>
               </li>
             </ul>      </div>
@@ -222,15 +263,17 @@
     
       <header class="property-card_content">
         <hgroup class="property-card_info">
-          <h1 class="property-card_title gamma">
-            <a href="#">Trinity Place Apartments</a>
-          </h1>
-          <p>1188 Mission St, San Francisco CA, 94134</p>
-          <p class="c-steel">Caritas Management Group</p>
-          <p>Application Due Feb 2nd</p>
+          <div class="property-card_meta">
+            <h1 class="property-card_title gamma">
+              <a href="#">Trinity Place Apartments</a>
+            </h1>
+            <p>1188 Mission St, San Francisco CA, 94134</p>
+            <p class="c-steel">Caritas Management Group</p>
+            <p>Application Due Feb 2nd</p>
+          </div>
     
           <div class="property-card_action">
-            <a class="button tiny secondary" href="/pages/property-grid.html">See Details</a>
+            <a class="button tiny secondary no-margin" href="/pages/property-grid.html">See Details</a>
           </div>
         </hgroup>
         <div class="property-card_stats show-for-medium-up">
@@ -241,11 +284,14 @@
                 <span class="stats-list_label">unit type</span>
               </li>
               <li>
-                <div class="stats-list_value">$2,347/mo</div>
-                <span class="stats-list_label">min income</span>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
               </li>
               <li>
-                <div class="stats-list_value">$939</div>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
                 <span class="stats-list_label">rent</span>
               </li>
             </ul>        <ul class="stats-list triple">
@@ -256,218 +302,373 @@
               <li>
                 <div class="stats-list_value">
                   $2,650
-                  <span class="value-label">/mo</span>
+                  <span class="value-label">/month</span>
                 </div>
-                <span class="stats-list_label">min income</span>
+                <span class="stats-list_label">minimum income</span>
               </li>
               <li>
-                <div class="stats-list_value">$1066</div>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
                 <span class="stats-list_label">rent</span>
               </li>
             </ul>      </div>
         </div>
-        
-      </header>
-    </div>  </li>
-  <li class="margin-bottom--2x">
-    <div class="property-card">
-      <figure class="property-card_figure">
-        <div class="property-card_container">
-          <img class="property-card_thumb" src="/assets/toolkit/images/property3.jpg">
-          <a href="#" class="property-card_like">
-            <span class="ui-icon">
-              <svg>
-                <use xlink:href="#i-like" />
-                <use xlink:href="#i-like-fill" style="display:none" />
-              </svg>
-            </span>      </a>
-        </div>
-        <figcaption class="property-card_stats hide-for-medium-up">
-          <div class="stats-card bottom">
-            <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">Studio</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$2,347/mo</div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$939</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>        <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">1 Bedroom</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">
-                  $2,650
-                  <span class="value-label">/mo</span>
-                </div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$1066</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>      </div>
-        </figcaption>
-        <span class="status-label label success">Matched</span>
-      </figure>
-    
-      <header class="property-card_content">
-        <hgroup class="property-card_info">
-          <h1 class="property-card_title gamma">
-            <a href="#">Trinity Place Apartments</a>
-          </h1>
-          <p>1188 Mission St, San Francisco CA, 94134</p>
-          <p class="c-steel">Caritas Management Group</p>
-          <p>Application Due Feb 2nd</p>
-    
-          <div class="property-card_action">
-            <a class="button tiny secondary" href="/pages/property-grid.html">See Details</a>
-          </div>
-        </hgroup>
-        <div class="property-card_stats show-for-medium-up">
-          <div class="stats-card bottom bg-mist">
-            <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">Studio</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$2,347/mo</div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$939</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>        <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">1 Bedroom</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">
-                  $2,650
-                  <span class="value-label">/mo</span>
-                </div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$1066</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>      </div>
-        </div>
-        
-      </header>
-    </div>  </li>
-  <li class="margin-bottom--2x">
-    <div class="property-card">
-      <figure class="property-card_figure">
-        <div class="property-card_container">
-          <img class="property-card_thumb" src="/assets/toolkit/images/property3.jpg">
-          <a href="#" class="property-card_like">
-            <span class="ui-icon">
-              <svg>
-                <use xlink:href="#i-like" />
-                <use xlink:href="#i-like-fill" style="display:none" />
-              </svg>
-            </span>      </a>
-        </div>
-        <figcaption class="property-card_stats hide-for-medium-up">
-          <div class="stats-card bottom">
-            <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">Studio</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$2,347/mo</div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$939</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>        <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">1 Bedroom</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">
-                  $2,650
-                  <span class="value-label">/mo</span>
-                </div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$1066</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>      </div>
-        </figcaption>
-        <span class="status-label label success">Matched</span>
-      </figure>
-    
-      <header class="property-card_content">
-        <hgroup class="property-card_info">
-          <h1 class="property-card_title gamma">
-            <a href="#">Trinity Place Apartments</a>
-          </h1>
-          <p>1188 Mission St, San Francisco CA, 94134</p>
-          <p class="c-steel">Caritas Management Group</p>
-          <p>Application Due Feb 2nd</p>
-    
-          <div class="property-card_action">
-            <a class="button tiny secondary" href="/pages/property-grid.html">See Details</a>
-          </div>
-        </hgroup>
-        <div class="property-card_stats show-for-medium-up">
-          <div class="stats-card bottom bg-mist">
-            <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">Studio</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$2,347/mo</div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$939</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>        <ul class="stats-list triple">
-              <li>
-                <div class="stats-list_value">1 Bedroom</div>
-                <span class="stats-list_label">unit type</span>
-              </li>
-              <li>
-                <div class="stats-list_value">
-                  $2,650
-                  <span class="value-label">/mo</span>
-                </div>
-                <span class="stats-list_label">min income</span>
-              </li>
-              <li>
-                <div class="stats-list_value">$1066</div>
-                <span class="stats-list_label">rent</span>
-              </li>
-            </ul>      </div>
-        </div>
-        
       </header>
     </div>  </li>
 </ul>
 
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">Not Matched</h2>
+      <p>The remaining properties don't appear to match based on your input.</p>
+      <p class="t-small c-steel">For more help we suggest contacting a housing counselor to explore your options.</p>
+      <a href="#" class="button oil no-margin small">Find a Housing Counselor</a>
+    </header>
+  </div>
+</div>
 
+<ul class="property-grid padding-top--2x">
+  <li class="margin-bottom--2x">
+    <div class="property-card">
+      <figure class="property-card_figure">
+        <div class="property-card_container">
+          <img class="property-card_thumb" src="/assets/toolkit/images/property3.jpg">
+          <a href="#" class="property-card_like">
+            <span class="ui-icon">
+              <svg>
+                <use xlink:href="#i-like" />
+                <use xlink:href="#i-like-fill" style="display:none" />
+              </svg>
+            </span>      </a>
+        </div>
+        <figcaption class="property-card_stats hide-for-medium-up">
+          <div class="stats-card bottom">
+            <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">Studio</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>        <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">1 Bedroom</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">
+                  $2,650
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>      </div>
+        </figcaption>
+        <span class="status-label label success">Matched</span>
+      </figure>
+    
+      <header class="property-card_content">
+        <hgroup class="property-card_info">
+          <div class="property-card_meta">
+            <h1 class="property-card_title gamma">
+              <a href="#">Trinity Place Apartments</a>
+            </h1>
+            <p>1188 Mission St, San Francisco CA, 94134</p>
+            <p class="c-steel">Caritas Management Group</p>
+            <p>Application Due Feb 2nd</p>
+          </div>
+    
+          <div class="property-card_action">
+            <a class="button tiny secondary no-margin" href="/pages/property-grid.html">See Details</a>
+          </div>
+        </hgroup>
+        <div class="property-card_stats show-for-medium-up">
+          <div class="stats-card bottom bg-mist">
+            <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">Studio</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>        <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">1 Bedroom</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">
+                  $2,650
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>      </div>
+        </div>
+      </header>
+    </div>  </li>
+  <li class="margin-bottom--2x">
+    <div class="property-card">
+      <figure class="property-card_figure">
+        <div class="property-card_container">
+          <img class="property-card_thumb" src="/assets/toolkit/images/property3.jpg">
+          <a href="#" class="property-card_like">
+            <span class="ui-icon">
+              <svg>
+                <use xlink:href="#i-like" />
+                <use xlink:href="#i-like-fill" style="display:none" />
+              </svg>
+            </span>      </a>
+        </div>
+        <figcaption class="property-card_stats hide-for-medium-up">
+          <div class="stats-card bottom">
+            <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">Studio</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>        <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">1 Bedroom</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">
+                  $2,650
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>      </div>
+        </figcaption>
+        <span class="status-label label success">Matched</span>
+      </figure>
+    
+      <header class="property-card_content">
+        <hgroup class="property-card_info">
+          <div class="property-card_meta">
+            <h1 class="property-card_title gamma">
+              <a href="#">Trinity Place Apartments</a>
+            </h1>
+            <p>1188 Mission St, San Francisco CA, 94134</p>
+            <p class="c-steel">Caritas Management Group</p>
+            <p>Application Due Feb 2nd</p>
+          </div>
+    
+          <div class="property-card_action">
+            <a class="button tiny secondary no-margin" href="/pages/property-grid.html">See Details</a>
+          </div>
+        </hgroup>
+        <div class="property-card_stats show-for-medium-up">
+          <div class="stats-card bottom bg-mist">
+            <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">Studio</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>        <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">1 Bedroom</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">
+                  $2,650
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>      </div>
+        </div>
+      </header>
+    </div>  </li>
+  <li class="margin-bottom--2x">
+    <div class="property-card">
+      <figure class="property-card_figure">
+        <div class="property-card_container">
+          <img class="property-card_thumb" src="/assets/toolkit/images/property3.jpg">
+          <a href="#" class="property-card_like">
+            <span class="ui-icon">
+              <svg>
+                <use xlink:href="#i-like" />
+                <use xlink:href="#i-like-fill" style="display:none" />
+              </svg>
+            </span>      </a>
+        </div>
+        <figcaption class="property-card_stats hide-for-medium-up">
+          <div class="stats-card bottom">
+            <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">Studio</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>        <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">1 Bedroom</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">
+                  $2,650
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>      </div>
+        </figcaption>
+        <span class="status-label label success">Matched</span>
+      </figure>
+    
+      <header class="property-card_content">
+        <hgroup class="property-card_info">
+          <div class="property-card_meta">
+            <h1 class="property-card_title gamma">
+              <a href="#">Trinity Place Apartments</a>
+            </h1>
+            <p>1188 Mission St, San Francisco CA, 94134</p>
+            <p class="c-steel">Caritas Management Group</p>
+            <p>Application Due Feb 2nd</p>
+          </div>
+    
+          <div class="property-card_action">
+            <a class="button tiny secondary no-margin" href="/pages/property-grid.html">See Details</a>
+          </div>
+        </hgroup>
+        <div class="property-card_stats show-for-medium-up">
+          <div class="stats-card bottom bg-mist">
+            <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">Studio</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$2,347 
+                  <span class="value-label">/month</span></div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$939
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>        <ul class="stats-list triple">
+              <li>
+                <div class="stats-list_value">1 Bedroom</div>
+                <span class="stats-list_label">unit type</span>
+              </li>
+              <li>
+                <div class="stats-list_value">
+                  $2,650
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">minimum income</span>
+              </li>
+              <li>
+                <div class="stats-list_value">$1066
+                  <span class="value-label">/month</span>
+                </div>
+                <span class="stats-list_label">rent</span>
+              </li>
+            </ul>      </div>
+        </div>
+      </header>
+    </div>  </li>
+</ul>
+
+<footer class="bg-charcoal padding-top--2x padding-bottom--2x">
+  <div class="row">
+    <div class="medium-12 columns">
+      <img src="/assets/toolkit/images/logo-city.png" class="margin-bottom--2x">
+      <p class="c-smoke">© City & County of San Francisco
+        <a href="#" class="a-smoke right">Privacy Policy</a>
+      </p>
+    </div>  
+  </div>
+</footer>
 
 
 	<!-- toolkit scripts -->
