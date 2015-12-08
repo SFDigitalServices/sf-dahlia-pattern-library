@@ -101,5 +101,9 @@
       @include grid-column(7);
       padding-left: 2rem;
     }
+
+    .property-card_meta {
+      padding-right: rem-calc(100);
+    }
   }
 }

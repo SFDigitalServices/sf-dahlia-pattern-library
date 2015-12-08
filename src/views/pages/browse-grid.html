@@ -15,6 +15,52 @@
   </div>
 </header>
 
+{{> forms.results-bar}}
+
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">No Matches</h2>
+      <p>Based on information you entered, you don't match any current properties.</p>
+      <p class="t-small c-steel">For more help we suggest contacting a housing counselor to explore your options.</p>
+      <a href="#" class="button oil no-margin small">Find a Housing Counselor</a>
+    </header>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">Matched
+        <span class="ui-control ui-icon ui-medium">
+          <svg>
+            <use xlink:href="#i-check"></use>
+          </svg>
+        </span>
+      </h2>
+      <p class="no-margin">Based on information you entered, you may be eligible for units at this property.</p>
+    </header>
+  </div>
+</div>
+
+<ul class="property-grid padding-top--2x">
+  <li class="margin-bottom--2x">
+    {{> property-card}}
+  </li>
+</ul>
+
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">Not Matched</h2>
+      <p>The remaining properties don't appear to match based on your input.</p>
+      <p class="t-small c-steel">For more help we suggest contacting a housing counselor to explore your options.</p>
+      <a href="#" class="button oil no-margin small">Find a Housing Counselor</a>
+    </header>
+  </div>
+</div>
+
 <ul class="property-grid padding-top--2x">
   <li class="margin-bottom--2x">
     {{> property-card}}
@@ -26,3 +72,5 @@
     {{> property-card}}
   </li>
 </ul>
+
+{{> components.footer}}
