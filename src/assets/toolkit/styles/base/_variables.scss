@@ -59,18 +59,18 @@ $jumbo:             #888 !default;
 $steel:             #767676;
 $monsoon:           #777 !default;
 $charcoal:          #555 !default;
-$tuatara:           #444 !default;
+$tuatara:           #30383a;
 $jet:               #222 !default;
 $black:             #000 !default;
 $wash-color:        #efefef;
-$ebony:             #25343e;
+$ebony:             #242c2e;
 $oil:               #333;
 $mist:              #f7f7f7;
 $ghost:         $wash-color;
 $wash:          $wash-color;
 
 // Brand Colors
-$primary-color:     #0d84e9;
+$primary-color:     #0082ed;
 $secondary-color:   #f90;
 $attention:         #00bed5;
 $splash:            #ff6627;
@@ -83,7 +83,7 @@ $secondary:$secondary-color;
 
 $primary-tint:      lighten($primary-color, 40%);
 $secondary-tint:    lighten($secondary-color, 40%);
-$attention-tint:    lighten($attention, 50%);
+$attention-tint:    #c8f1ff; // lighten($attention, 50%);
 $splash-tint:       lighten($splash, 30%);
 $royal-tint:        lighten($royal, 30%);
 $lush-tint:         lighten($lush, 50%);
@@ -250,8 +250,15 @@ $accordion-navigation-bg-color: $mist;
 $table-border-size: none;
 
 // Top Bar Variables
-$topbar-bg-color: #444;
+$topbar-bg-color: #fff;
 $topbar-height: rem-calc(90);
+$topbar-link-color: $tuatara;
+$topbar-link-color-hover: $ebony;
+$topbar-link-color-active: $ebony;
+$topbar-link-color-active-hover: $ebony;
+$topbar-link-bg: #fff;
+$topbar-link-bg-hover: $mist;
+$topbar-link-bg-color-hover: $mist;
 
 // Alert Boxes
 $alert-border-width: 0;
