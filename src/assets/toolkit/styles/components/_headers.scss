@@ -36,3 +36,15 @@
   padding-bottom: 1.25rem;
 }
 
+.status-header {
+  position: relative;
+  padding: 1rem;
+
+  &_icon {
+    @include absolute(1rem,null,null,1rem);
+  }
+
+  &_content {
+    padding-left: 2rem;
+  }  
+}

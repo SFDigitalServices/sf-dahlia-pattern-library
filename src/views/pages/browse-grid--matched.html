@@ -8,9 +8,6 @@
       <h1 class="lead-title t-beta">Below Market Rate Rentals</h1>
       <div class="medium-8 columns no-padding">
         <p class="t-gamma t-light show-for-medium-up">Units in new developments priced at a “below market rate” are affordable to lower or middle income households.</p>
-        <p class="no-margin">
-          <a href="/pages/eligibility-start.html" class="button small radius">Estimate Eligibility</a>
-        </p>  
       </div>
     </div>
   </div>
@@ -18,34 +15,28 @@
 
 {{> forms.results-bar}}
 
-<div class="row">
-  <div class="large-12 columns">
-    <header class="section-header margin-top--2x">
-      <h2 class="gamma no-margin">No Matches</h2>
-      <p>Based on information you entered, you don't match any current properties.</p>
-      <p class="t-small c-steel">For more help we suggest contacting a housing counselor to explore your options.</p>
-      <a href="#" class="button dark small">Find a Housing Counselor</a>
+<section class="">
+  <div class="row margin-top--2x">
+    <div class="large-12 columns">
+      <header class="status-header bg-success-tint">
+        <div class="status-header_icon">
+          <span class="ui-icon ui-medium">
+            <svg>
+              <use xlink:href="#i-check"></use>
+            </svg>
+          </span>
+        </div>
 
-      <p class="t-small c-steel">Currently this site only includes Below Market Rate rentals. <a href="">Click here</a> for other rental and ownership affordable housing opportunities.</p>
-    </header>
+        <hgroup class="status-header_content">
+          <h2 class="gamma no-margin">
+            Matched
+          </h2>
+          <p class="no-margin">Based on information you entered, you may be eligible for units at the following property.</p>
+        </hgroup>
+      </header>
+    </div>
   </div>
-</div>
-
-
-<div class="row">
-  <div class="large-12 columns">
-    <header class="section-header margin-top--2x">
-      <h2 class="gamma no-margin">Matched
-        <span class="ui-control ui-icon ui-medium">
-          <svg>
-            <use xlink:href="#i-check"></use>
-          </svg>
-        </span>
-      </h2>
-      <p class="no-margin">Based on information you entered, you may be eligible for units at this property.</p>
-    </header>
-  </div>
-</div>
+</section>
 
 <ul class="property-grid padding-top--2x">
   <li class="margin-bottom--2x">
@@ -60,19 +51,21 @@
       <p>The remaining properties don't appear to match based on your input.</p>
       <p class="t-small c-steel">For more help we suggest contacting a housing counselor to explore your options.</p>
       <a href="#" class="button dark small">Find a Housing Counselor</a>
+
+      <p class="t-small c-steel no-margin">Currently this site only includes Below Market Rate rentals. <a href="">Click here</a> for other rental and ownership affordable housing opportunities.</p>
     </header>
   </div>
 </div>
 
 <ul class="property-grid padding-top--2x">
   <li class="margin-bottom--2x">
-    {{> property-card}}
+    {{> property-card--not-matched}}
   </li>
   <li class="margin-bottom--2x">
-    {{> property-card}}
+    {{> property-card--not-matched}}
   </li>
   <li class="margin-bottom--2x">
-    {{> property-card}}
+    {{> property-card--not-matched}}
   </li>
 </ul>
 
