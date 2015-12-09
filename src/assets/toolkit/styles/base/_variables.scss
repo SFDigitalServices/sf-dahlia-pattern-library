@@ -251,7 +251,7 @@ $table-border-size: none;
 
 // Top Bar Variables
 $topbar-bg-color: #fff;
-$topbar-height: rem-calc(90);
+$topbar-height: rem-calc(75);
 $topbar-link-color: $tuatara;
 $topbar-link-color-hover: $ebony;
 $topbar-link-color-active: $ebony;
@@ -259,6 +259,8 @@ $topbar-link-color-active-hover: $ebony;
 $topbar-link-bg: #fff;
 $topbar-link-bg-hover: $mist;
 $topbar-link-bg-color-hover: $mist;
+$topbar-menu-link-color: $ebony;
+$topbar-menu-icon-color: $ebony;
 
 // Alert Boxes
 $alert-border-width: 0;
