@@ -31,3 +31,12 @@
     }  
   }
 }
+
+.block-icon {
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  img {
+    border-bottom: 2px solid $primary;
+  }
+}

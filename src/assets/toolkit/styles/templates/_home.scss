@@ -1,0 +1,5 @@
+.welcome-block {
+  @media #{$medium-up} {
+    padding-top: 4rem;
+  }  
+}

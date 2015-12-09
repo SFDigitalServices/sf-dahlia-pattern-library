@@ -68,6 +68,7 @@ $oil:               #333;
 $mist:              #f7f7f7;
 $ghost:         $wash-color;
 $wash:          $wash-color;
+$dust:              #f5f8f9;
 
 // Brand Colors
 $primary-color:     #0082ed;
@@ -153,7 +154,8 @@ $colors: (
   lush-tint: $lush-tint,
   alert-tint: $alert-tint,
   warn-tint: $warn-tint,
-  success-tint: $success-tint
+  success-tint: $success-tint,
+  dust: $dust
 );
 
 // Grid
