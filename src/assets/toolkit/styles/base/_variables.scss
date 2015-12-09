@@ -71,7 +71,8 @@ $wash:          $wash-color;
 $dust:              #f5f8f9;
 
 // Brand Colors
-$primary-color:     #0082ed;
+$primary-color:     #0077da;
+// 0082ed
 $secondary-color:   #f90;
 $attention:         #00bed5;
 $splash:            #ff6627;
@@ -241,6 +242,7 @@ $fieldset-padding: 0;
 $base-button-color:     #fff;
 $base-button-bg:        $primary;
 $btn-primary-border:    darken($base-button-bg, 5%);
+$global-radius:         4px;
 
 // Border radius.
 .radius {border-radius: .3em;}

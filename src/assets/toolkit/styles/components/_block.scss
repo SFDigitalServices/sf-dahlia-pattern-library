@@ -13,6 +13,14 @@
       padding: 6rem 2rem;
     }
   }
+
+  &--icon {
+    padding: 2rem;
+      
+    @media #{$medium-up} {
+      padding: 4rem 2rem 6rem 2rem;
+    }
+  }
 }
 
 .block-list {

@@ -3,18 +3,19 @@
 
 button,
 .button {
+  border-radius: rem-calc(4);
   font-family: $font-family;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 
   &.secondary {
     background-color: $tint;
-    color: $deep;
+    color: $dark;
 
     &:hover,
     &:focus {
       background-color: darken($tint, 5%);
-      color: $primary;
+      color: $dark;
     }
   }
 
@@ -45,6 +46,46 @@ button,
     &:hover,
     &:focus {
       background-color: darken($oil, 5%);
+    }
+  }
+
+  &.dark {
+    background-color: $dark;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($dark, 5%);
+    }
+  }
+
+  &.ebony {
+    background-color: $ebony;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($ebony, 5%);
+    }
+  }
+
+  &.tuatara {
+    background-color: $tuatara;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($tuatara, 5%);
+    }
+  }
+
+  &.steel {
+    background-color: $steel;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($steel, 5%);
     }
   }
 
