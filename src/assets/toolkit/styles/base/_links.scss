@@ -1,3 +1,7 @@
 a {
   color: $primary;
+
+  &.lined {
+    text-decoration: underline;
+  }
 }
