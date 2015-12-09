@@ -1,12 +1,19 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
-{{> navigation.sub-bar--edit }}
 
-<section class="row">
+<header class="lead-header shift-offset--bottom bg-attention-tint">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1 class="lead-title t-beta">Household Income Calculator</h1>
+    </div>
+  </div>
+</header>
+
+<section class="row shift--top">
   <div class="medium-8 columns">
-    <div class="padding-top padding-bottom">
+    <form class="form-card">
       <header class="padding-bottom">
-        <h1 class="t-gamma">Add sources for each household member over 18 one at a time.</h1>
+        <h1 class="t-gamma t-sans margin-bottom--2x">Next add up your total household income from wages, benefits and other sources from household members 18 years or older.</h1>
         <p class="t-delta">Examples include:</p>
       </header>
 
@@ -29,8 +36,10 @@
         <h3 class="t-delta t-sans c-steel margin-bottom--half">Wages</h3>
         <p>examples: Alimony, Retirement/Pension</p>
       </div>
-    </div>
 
       {{> forms.button-stack--paginate}}
+    </form>  
   </div>
 </section>
+
+{{> components.footer}}
