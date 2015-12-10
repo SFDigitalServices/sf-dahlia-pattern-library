@@ -21,12 +21,12 @@
       <h2 class="gamma no-margin">No Matches</h2>
       <p>Based on information you entered, you don't match any current properties.</p>
 
-      <p class="t-small c-steel">Currently this site only includes Below Market Rate rentals. <a href="">Click here</a> for other rental and ownership affordable housing opportunities.</p>
+      <p class="t-small c-steel no-margin">Currently this site only includes Below Market Rate rentals. <a href="">Click here</a> for other rental and ownership affordable housing opportunities.</p>
     </header>
   </div>
 </div>
 
-<section class="row margin-bottom--2x">
+<section class="row margin-top--2x">
   <div class="medium-6 columns">
     {{> blocks.property-block }}
   </div>
@@ -34,5 +34,23 @@
     {{> blocks.welcome-block--input }}
   </div>
 </section>
+
+<section class="row">
+  <div class="medium-12 columns">
+    <hr class="tall bg-smoke">
+  </div>
+</section>
+
+<ul class="property-grid">
+  <li class="margin-bottom--2x">
+    {{> property-card--not-matched}}
+  </li>
+  <li class="margin-bottom--2x">
+    {{> property-card--not-matched}}
+  </li>
+  <li class="margin-bottom--2x">
+    {{> property-card--not-matched}}
+  </li>
+</ul>
 
 {{> components.footer}}
