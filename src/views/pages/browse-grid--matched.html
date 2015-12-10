@@ -40,7 +40,7 @@
 
 <ul class="property-grid padding-top--2x">
   <li class="margin-bottom--2x">
-    {{> property-card}}
+    {{> property-card--matched}}
   </li>
 </ul>
 
@@ -53,15 +53,17 @@
       <a href="#" class="button dark small">Find a Housing Counselor</a> -->
 
       <p class="t-small c-steel no-margin">Currently this site only includes Below Market Rate rentals. <a href="">Click here</a> for other rental and ownership affordable housing opportunities.</p>
-
-      <section class="row margin-top--2x">
-        <div class="medium-12 columns bg-mist">
-          {{> blocks.property-block }}
-        </div>
-      </section>
     </header>
   </div>
 </div>
+
+<section class="row margin-top--2x">
+  <div class="medium-12 columns">
+    <div class="bg-mist">
+      {{> blocks.property-block }}
+    </div>
+  </div>
+</section>
 
 <ul class="property-grid padding-top--2x">
   <li class="margin-bottom--2x">
