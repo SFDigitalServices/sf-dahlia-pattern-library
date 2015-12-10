@@ -157,7 +157,7 @@
 </nav>
 <div class="section-head">
 </div>
-<section class="section-hero row">
+<section class="section-hero post-deadline row">
   <div class="accordion-container medium-8 columns">
     <div class="property-hero">
       <figure class="property-hero_figure">
@@ -186,6 +186,10 @@
             </svg>
           </span>      View on Map
         </a>
+        <!-- Deadline past -->
+        <p class="post-dealine_alert show-for-small-only margin-top--half margin-bottom">
+          <span class="label alert">Applications Closed</span>
+        </p>
       </header>
     
       <div class="property-hero_stats">
@@ -260,62 +264,6 @@
       </div>
     
       <div class="property-hero_action text-center">
-        <div class="hide-for-medium-up">
-        <p class="t-small">Deadline: Dec 12th 2015</p>
-          <div class="text-center">
-            <h2 class="delta">How to Apply</h2>
-            <div class="application-actions button-stack">
-             <!--  <button class="button small">Apply Now Online</button>
-             -->
-              <button class="button small oil toggle toggler">
-                Your Application Options
-                <span class="ui-control ui-icon ui-small i-white">
-                  <svg>
-                    <use xlink:href="#i-arrow-down"></use>
-                  </svg>
-                </span>
-              </button>
-            </div>
-            
-            <div class="application-options toggled">
-              <div class="option-group">
-                <h3 class="t-sans t-base t-bold no-margin">Pickup and turn in application</h4>
-                <p class="no-margin">Caritas Management Corporation</p>
-                <p class="c-steel">1358 Valencia St,<br> San Francisco, CA 94102</p>
-                <a href="#" class="t-small d-block ui-link margin-bottom">
-                  <span class="ui-icon">
-                    <svg>
-                      <use xlink:href="#i-map" />
-                    </svg>
-                  </span>      Get Directions
-                </a>
-            
-                <p class="no-margin">Office Hours</p>
-                <p class="c-steel">8:30 am - 5:00pm</p>
-                <button class="button small secondary"><span class="ui-icon ui-link">
-                  <svg>
-                    <use xlink:href="#i-download"></use>
-                  </svg>
-                </span>  Download Application</button>  </div>
-            
-            <!--   <div class="option-group">
-                <h3 class="t-sans t-base t-bold">Have application sent by US mail</h4>
-                <button class="button small secondary"><span class="ui-icon ui-link">
-                  <svg>
-                    <use xlink:href="#i-mail"></use>
-                  </svg>
-                </span>  Request by Email</button>  </div> -->
-            
-              <div class="option-group">
-                <h3 class="t-sans t-base t-bold no-margin">Call Property</h3>
-                <p class="margin-bottom--half">(415) 333 - 9956</p>
-                <p class="c-steel t-small">Due to high call volume you may hear recorded message</p>
-              </div>
-            </div>         </div>
-        </div>
-    
-        <hr class="hr-5 tall show-for-small-only">
-    
         <div class="action-group row">
           <div class="medium-6 columns">
             <p class="date t-small">Listing Updated: Aug 15th 2015</p>
@@ -332,9 +280,65 @@
     </div>    <!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup --> 
     
     <dl class="property-accordion accordion" data-accordion>
+      <dd class="accordion-navigation accordion-process">
+        <a href="#panel2a" class="accordion-header lead">Results
+          <span class="accordion-subheader">Lottery selection, important dates and contact</span>
+          <span class="ui-control ui-icon ui-small">
+            <svg>
+              <use xlink:href="#i-arrow-down"></use>
+            </svg>
+          </span>    </a>
+        <div id="panel2a" class="content content-section">
+          <div class="show-for-medium-up margin-bottom">
+            <p class="post-dealine_alert margin-top--half margin-bottom">
+              <span class="label alert">Applications Closed</span>
+            </p>
+          </div>
+    
+          <section class="content-wrap">
+            <div class="content-panel content-lead padding-bottom no-margin border-bottom">
+              <h4 class="t-small t-sans t-bold">Lottery Results</h4>
+              <h3 class="t-delta t-sans c-steel">Nov 21st</h3>
+              <p class="c-steel t-small">Notices will be sent to each applicant regarding their position within two weeks following the lottery.</p>
+            </div>
+    
+            <div class="content-panel padding-bottom no-margin border-bottom">
+              <h4 class="t-small t-sans t-bold">What to Expect</h4>
+              <p class="c-steel t-small">You will be contacted by developer in lottery rank order.</p>
+              <p class="c-steel t-small">Be prepared to have your application reviewed and eligibility confirmed.</p>
+            </div>
+    
+            <div class="content-panel padding-bottom">
+              <h4 class="t-small t-sans t-bold">Contact Property Manager</h4>
+              <a href="#" class="margin-bottom--half">
+                <span class="ui-icon ui-medium i-primary">
+                  <svg>
+                    <use xlink:href="#i-phone"></use>
+                  </svg>
+                </span>
+    
+                Call (415) 928-5910
+              </a>
+    
+              <p class="t-small c-steel">Due to high call valume you may hear a message</p>
+              <a href="#" class="">
+                <span class="ui-icon ui-medium i-primary">
+                  <svg>
+                    <use xlink:href="#i-mail"></use>
+                  </svg>
+                </span>
+                
+                Email
+              </a>
+            </div>
+          </section>  
+        </div>
+    
+      </dd>
+    
       <dd class="accordion-navigation">
         <a href="#panel1a" class="accordion-header lead">Eligibility
-          <span class="accordion-subheader">Income, occupancy, preferences and rental assistance</span>
+          <span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
           <span class="ui-control ui-icon ui-small">
             <svg>
               <use xlink:href="#i-arrow-down"></use>
@@ -343,7 +347,7 @@
     
         <header class="content-header show-for-medium-up">
           <span class="t-delta t-serif">Eligibility</span>
-          <span class="accordion-subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
+          <span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
         </header>
     
         <div id="panel1a" class="content content-section">
@@ -632,115 +636,6 @@
           </div>  
         </div>       </dd>
     
-      <dd class="accordion-navigation accordion-process">
-        <a href="#panel2a" class="accordion-header lead">Process
-          <span class="accordion-subheader">Important dates and contact information</span>
-          <span class="ui-control ui-icon ui-small">
-            <svg>
-              <use xlink:href="#i-arrow-down"></use>
-            </svg>
-          </span>    </a>
-    
-        <div id="panel2a" class="content content-section">
-          <div class="show-for-medium-up text-center margin-bottom">
-            <h2 class="delta">How to Apply</h2>
-            <div class="application-actions button-stack">
-             <!--  <button class="button small">Apply Now Online</button>
-             -->
-              <button class="button small oil toggle toggler">
-                Your Application Options
-                <span class="ui-control ui-icon ui-small i-white">
-                  <svg>
-                    <use xlink:href="#i-arrow-down"></use>
-                  </svg>
-                </span>
-              </button>
-            </div>
-            
-            <div class="application-options toggled">
-              <div class="option-group">
-                <h3 class="t-sans t-base t-bold no-margin">Pickup and turn in application</h4>
-                <p class="no-margin">Caritas Management Corporation</p>
-                <p class="c-steel">1358 Valencia St,<br> San Francisco, CA 94102</p>
-                <a href="#" class="t-small d-block ui-link margin-bottom">
-                  <span class="ui-icon">
-                    <svg>
-                      <use xlink:href="#i-map" />
-                    </svg>
-                  </span>      Get Directions
-                </a>
-            
-                <p class="no-margin">Office Hours</p>
-                <p class="c-steel">8:30 am - 5:00pm</p>
-                <button class="button small secondary"><span class="ui-icon ui-link">
-                  <svg>
-                    <use xlink:href="#i-download"></use>
-                  </svg>
-                </span>  Download Application</button>  </div>
-            
-            <!--   <div class="option-group">
-                <h3 class="t-sans t-base t-bold">Have application sent by US mail</h4>
-                <button class="button small secondary"><span class="ui-icon ui-link">
-                  <svg>
-                    <use xlink:href="#i-mail"></use>
-                  </svg>
-                </span>  Request by Email</button>  </div> -->
-            
-              <div class="option-group">
-                <h3 class="t-sans t-base t-bold no-margin">Call Property</h3>
-                <p class="margin-bottom--half">(415) 333 - 9956</p>
-                <p class="c-steel t-small">Due to high call volume you may hear recorded message</p>
-              </div>
-            </div>     </div>
-        
-          <section class="content-wrap">
-            <div class="content-panel content-lead padding-bottom border-bottom">
-              <h4 class="t-small t-sans t-bold">Application Deadline</h4>
-              <h3 class="t-delta t-sans c-steel">Nov 21st, 2015</h3>
-            </div>
-        
-            <div class="content-panel padding-bottom border-bottom">
-              <h4 class="t-small t-sans t-bold">Information Sessions</h4>
-              <ul>
-                <li>
-                  <h3 class="t-delta t-sans c-steel no-margin">Oct 27th</h3>
-                  <p class="c-steel">1:00pm – 2:30pm</p>
-        
-                  <p class="no-margin">San Francisco LGBT Community Center</p>
-                  <p class="c-steel">1800 Market Street, San Francisco</p>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="content-panel padding-bottom border-bottom">
-              <h4 class="t-small t-sans t-bold">Open Houses</h4>
-              <ul class="content-list">
-                <li>
-                  <h3 class="t-delta t-sans c-steel no-margin">Oct 10th</h3>
-                  <p class="c-steel">1:00pm – 2:30pm</p>
-                </li>
-        
-                <li>
-                   <h3 class="t-delta t-sans c-steel no-margin">Oct 18th</h3>
-                   <p class="c-steel">1:00pm – 2:30pm</p>
-                </li> 
-              </ul>   
-            </div>
-        
-            <div class="content-panel padding-bottom">
-              <h4 class="t-small t-sans t-bold">Public Lottery</h4>
-              <ul>
-                <li>
-                  <h3 class="t-delta t-sans c-steel no-margin">Nov 28th</h3>
-                  <p class="c-steel">1:00pm – 2:30pm</p>
-        
-                  <p class="no-margin c-oil">San Francisco LGBT Community Center</p>
-                  <p class="c-steel">1800 Market Street, San Francisco</p>
-                </li>
-              </ul>
-            </div>
-           </section> 
-        </div>  </dd>
       <dd class="accordion-navigation">
         <a href="#panel3a" class="accordion-header lead">Features
           <span class="accordion-subheader">Amenities, unit details and additional fees</span>
@@ -1184,7 +1079,7 @@
       </dd>
       <dd class="accordion-navigation">
         <a href="#panel5a" class="accordion-header lead">Legal
-          <span class="accordion-subheader">Required documents and policies</span>
+          <span class="accordion-subheader">Required documents and selection criteria</span>
           <span class="ui-control ui-icon ui-small">
             <svg>
               <use xlink:href="#i-arrow-down"></use>
@@ -1193,7 +1088,7 @@
     
         <header class="content-header show-for-medium-up">
           <span class="t-delta t-serif">Legal</span>
-          <span class="accordion-subheader">Required documents and policies</span>
+          <span class="accordion-subheader">Required documents and selection criteria</span>
         </header>
     
         <div id="panel5a" class="content content-section">
@@ -1264,14 +1159,14 @@
     </div>  </div>
 </section>
 
-<section class="page-section bg-mist">
-  <div class="row">
-    <div class="medium-7 medium-centered columns">
-      <div class="property-block block--icon text-center">
+<section class="row margin-bottom--2x">
+  <div class="medium-12 columns">
+    <div class="bg-dust">
+      <div class="welcome-block block--tall text-center">
         <figure class="block-icon">
-          <img src="/assets/toolkit/images/icon-phone.png">
+          <img src="/assets/toolkit/images/icon-mail.png">
         </figure>
-        <h2 class="delta t-serif c-oil">For more help, we suggest talking with a housing counselor to explore your options.</h1>
+        <h2 class="delta t-serif c-oil">Get email updates with the latest property listings as they become available</h1>
       
         <!-- <div class="row collapse">
         <div class="small-8 large-10 columns">
@@ -1281,7 +1176,7 @@
           <a href="#" class="button postfix">Sign Up</a>
         </div>
       </div> -->
-        <a href="#" class="button radius">Find a Housing Counselor</a>
+        <a href="#" class="button radius">Sign Up Today</a>
       </div>    </div>
   </div>
 </section>
