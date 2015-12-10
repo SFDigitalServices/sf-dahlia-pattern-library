@@ -2,4 +2,10 @@
   .city-logo {
     max-width: rem-calc(120);
   }
+
+  .inline-list {
+    @media #{$medium-up} {
+      float: right;
+    }
+  }
 }

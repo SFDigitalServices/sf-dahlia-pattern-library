@@ -20,8 +20,8 @@
   
   @media #{$medium-up} {
     margin-top: -(rem-calc(36)) !important;
-    padding-bottom: rem-calc(20);
-    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(10);
+    padding-top: rem-calc(10);
     position: relative;
     z-index: 3;
   }
@@ -29,13 +29,16 @@
   a {
     @include image-replace("../images/logo-portal.png");
     background-position: center left;
-    background-size: auto 90%;
-    padding: 0 !important;
+    background-size: auto 100%;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
     width: 100% !important;
 
     @media #{$medium-up} {
       background-position: center center;
-      background-size: 100% auto;
+      background-size: 110% auto;
+      padding-bottom: rem-calc(10) !important;
+      padding-top: rem-calc(10) !important;
     }
   }
 }
