@@ -2351,11 +2351,17 @@
 
     <p class="no-margin">Office Hours</p>
     <p class="c-steel">8:30 am - 5:00pm</p>
-    <button class="button small secondary"><span class="ui-icon ui-link">
-      <svg>
-        <use xlink:href="#i-download"></use>
-      </svg>
-    </span>  Download Application</button>  </div>
+    
+    <a class="button small has-icon" href="/pages/share-grid.html">
+      <span class="ui-icon ui-link i-white">
+        <svg>
+          <use xlink:href="#i-download"></use>
+        </svg>
+      </span>
+      Download Application
+    </a>
+
+  </div>
 
 <!--   <div class="option-group">
     <h3 class="t-sans t-base t-bold">Have application sent by US mail</h4>
@@ -2402,11 +2408,17 @@
 
     &lt;p class=&quot;no-margin&quot;&gt;Office Hours&lt;/p&gt;
     &lt;p class=&quot;c-steel&quot;&gt;8:30 am - 5:00pm&lt;/p&gt;
-    &lt;button class=&quot;button small secondary&quot;&gt;&lt;span class=&quot;ui-icon ui-link&quot;&gt;
-      &lt;svg&gt;
-        &lt;use xlink:href=&quot;#i-download&quot;&gt;&lt;/use&gt;
-      &lt;/svg&gt;
-    &lt;/span&gt;  Download Application&lt;/button&gt;  &lt;/div&gt;
+    
+    &lt;a class=&quot;button small has-icon&quot; href=&quot;/pages/share-grid.html&quot;&gt;
+      &lt;span class=&quot;ui-icon ui-link i-white&quot;&gt;
+        &lt;svg&gt;
+          &lt;use xlink:href=&quot;#i-download&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+      &lt;/span&gt;
+      Download Application
+    &lt;/a&gt;
+
+  &lt;/div&gt;
 
 &lt;!--   &lt;div class=&quot;option-group&quot;&gt;
     &lt;h3 class=&quot;t-sans t-base t-bold&quot;&gt;Have application sent by US mail&lt;/h4&gt;
@@ -2617,9 +2629,9 @@
 	<div id="panel1a" class="content content-section">
 	<div class="content-panel lined">
 		<header class="margin-bottom">
-			<h4 class="t-epsilon t-sans no-margin">Household Maximum Income</h4>
+			<h4 class="t-base t-sans margin-bottom--half">Household Maximum Income</h4>
 			<!-- Each unit type available has its own requirements based on household size. -->
-			<p class="t-small c-steel">For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.</p>
+			<p class="t-tiny c-steel">For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.</p>
 		</header>
 		<div class="stats-card bg-tint">
 			<ul class="stats-list stats-toggle double toggler has-toggle">
@@ -2752,11 +2764,11 @@
 
 	<div class="content-panel lined">
 		<header class="margin-bottom">
-			<h4 class="t-epsilon t-sans no-margin">Occupancy</h4>
-			<p class="t-small c-steel">Occupancy for this building differs from household size and does not include children under 6.</p>
+			<h4 class="t-base t-sans margin-bottom--half">Occupancy</h4>
+			<p class="t-tiny c-steel">Occupancy for this building differs from household size and does not include children under 6.</p>
 		</header>
 
-		<div class="stats-card bg-mist">
+		<div class="stats-card bg-white">
 			<ul class="stats-list tall double">
 				<li>
 					<div class="stats-list_value">
@@ -2772,7 +2784,7 @@
 			</ul>
 		</div>
 
-		<div class="stats-card bg-mist">
+		<div class="stats-card bg-white">
 			<ul class="stats-list tall double">
 				<li>
 					<div class="stats-list_value">
@@ -2791,8 +2803,8 @@
 
 	<div class="content-panel lined">
 		<header class="margin-bottom">
-			<h4 class="t-epsilon t-sans no-margin">Lottery Preferences</h4>
-			<p class="t-small c-steel">Preference holders will be given highest ranking in the lottery process.</p>
+			<h4 class="t-epsilon t-sans margin-bottom--half">Lottery Preferences</h4>
+			<p class="t-tiny c-steel">Preference holders will be given highest ranking in the lottery process.</p>
 		</header>
 		<dl class="accordion-nested accordion trigger-left" data-accordion>
 			<dd class="accordion-navigation">
@@ -2840,7 +2852,7 @@
 			<p class="t-small c-steel">Section 8 housing vouchers and other valid rental assistance programs can be used for this property.</p>
 		</header>
 
-		<p>In the case of a valid rental subsidy, the required minimum income will be based on the portion of the rent that the tenat pays after use of the subsidy.</p>
+		<p class="t-small c-steel">In the case of a valid rental subsidy, the required minimum income will be based on the portion of the rent that the tenat pays after use of the subsidy.</p>
 	</div>
 
 	<div class="content-panel">
@@ -2894,9 +2906,9 @@
 	<pre><code class="language-markup">&lt;div id=&quot;panel1a&quot; class=&quot;content content-section&quot;&gt;
 	&lt;div class=&quot;content-panel lined&quot;&gt;
 		&lt;header class=&quot;margin-bottom&quot;&gt;
-			&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Household Maximum Income&lt;/h4&gt;
+			&lt;h4 class=&quot;t-base t-sans margin-bottom--half&quot;&gt;Household Maximum Income&lt;/h4&gt;
 			&lt;!-- Each unit type available has its own requirements based on household size. --&gt;
-			&lt;p class=&quot;t-small c-steel&quot;&gt;For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.&lt;/p&gt;
+			&lt;p class=&quot;t-tiny c-steel&quot;&gt;For income calculations, household size includes everyone (all ages) living in the unit, but income from household members under 18 is NOT counted.&lt;/p&gt;
 		&lt;/header&gt;
 		&lt;div class=&quot;stats-card bg-tint&quot;&gt;
 			&lt;ul class=&quot;stats-list stats-toggle double toggler has-toggle&quot;&gt;
@@ -3029,11 +3041,11 @@
 
 	&lt;div class=&quot;content-panel lined&quot;&gt;
 		&lt;header class=&quot;margin-bottom&quot;&gt;
-			&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Occupancy&lt;/h4&gt;
-			&lt;p class=&quot;t-small c-steel&quot;&gt;Occupancy for this building differs from household size and does not include children under 6.&lt;/p&gt;
+			&lt;h4 class=&quot;t-base t-sans margin-bottom--half&quot;&gt;Occupancy&lt;/h4&gt;
+			&lt;p class=&quot;t-tiny c-steel&quot;&gt;Occupancy for this building differs from household size and does not include children under 6.&lt;/p&gt;
 		&lt;/header&gt;
 
-		&lt;div class=&quot;stats-card bg-mist&quot;&gt;
+		&lt;div class=&quot;stats-card bg-white&quot;&gt;
 			&lt;ul class=&quot;stats-list tall double&quot;&gt;
 				&lt;li&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;
@@ -3049,7 +3061,7 @@
 			&lt;/ul&gt;
 		&lt;/div&gt;
 
-		&lt;div class=&quot;stats-card bg-mist&quot;&gt;
+		&lt;div class=&quot;stats-card bg-white&quot;&gt;
 			&lt;ul class=&quot;stats-list tall double&quot;&gt;
 				&lt;li&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;
@@ -3068,8 +3080,8 @@
 
 	&lt;div class=&quot;content-panel lined&quot;&gt;
 		&lt;header class=&quot;margin-bottom&quot;&gt;
-			&lt;h4 class=&quot;t-epsilon t-sans no-margin&quot;&gt;Lottery Preferences&lt;/h4&gt;
-			&lt;p class=&quot;t-small c-steel&quot;&gt;Preference holders will be given highest ranking in the lottery process.&lt;/p&gt;
+			&lt;h4 class=&quot;t-epsilon t-sans margin-bottom--half&quot;&gt;Lottery Preferences&lt;/h4&gt;
+			&lt;p class=&quot;t-tiny c-steel&quot;&gt;Preference holders will be given highest ranking in the lottery process.&lt;/p&gt;
 		&lt;/header&gt;
 		&lt;dl class=&quot;accordion-nested accordion trigger-left&quot; data-accordion&gt;
 			&lt;dd class=&quot;accordion-navigation&quot;&gt;
@@ -3117,7 +3129,7 @@
 			&lt;p class=&quot;t-small c-steel&quot;&gt;Section 8 housing vouchers and other valid rental assistance programs can be used for this property.&lt;/p&gt;
 		&lt;/header&gt;
 
-		&lt;p&gt;In the case of a valid rental subsidy, the required minimum income will be based on the portion of the rent that the tenat pays after use of the subsidy.&lt;/p&gt;
+		&lt;p class=&quot;t-small c-steel&quot;&gt;In the case of a valid rental subsidy, the required minimum income will be based on the portion of the rent that the tenat pays after use of the subsidy.&lt;/p&gt;
 	&lt;/div&gt;
 
 	&lt;div class=&quot;content-panel&quot;&gt;
@@ -3260,7 +3272,7 @@
 
 			<div class="toggled">
 				<div class="stats-table--stack">
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3311,7 +3323,7 @@
 
 			<div class="toggled">
 				<div class="stats-table--stack">
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3338,7 +3350,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3365,7 +3377,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3392,7 +3404,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3419,7 +3431,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3446,7 +3458,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3473,7 +3485,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3500,7 +3512,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3527,7 +3539,7 @@
 						</li>
 					</ul>
 
-					<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+					<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 						<li>
 							<span class="stats-list_label bottom">Unit Number</span>
 							<div class="stats-list_value">127</div>
@@ -3664,7 +3676,7 @@
 
 			&lt;div class=&quot;toggled&quot;&gt;
 				&lt;div class=&quot;stats-table--stack&quot;&gt;
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3715,7 +3727,7 @@
 
 			&lt;div class=&quot;toggled&quot;&gt;
 				&lt;div class=&quot;stats-table--stack&quot;&gt;
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3742,7 +3754,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3769,7 +3781,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3796,7 +3808,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3823,7 +3835,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3850,7 +3862,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3877,7 +3889,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3904,7 +3916,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -3931,7 +3943,7 @@
 						&lt;/li&gt;
 					&lt;/ul&gt;
 
-					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+					&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 						&lt;li&gt;
 							&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 							&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4035,11 +4047,17 @@
     
         <p class="no-margin">Office Hours</p>
         <p class="c-steel">8:30 am - 5:00pm</p>
-        <button class="button small secondary"><span class="ui-icon ui-link">
-          <svg>
-            <use xlink:href="#i-download"></use>
-          </svg>
-        </span>  Download Application</button>  </div>
+        
+        <a class="button small has-icon" href="/pages/share-grid.html">
+          <span class="ui-icon ui-link i-white">
+            <svg>
+              <use xlink:href="#i-download"></use>
+            </svg>
+          </span>
+          Download Application
+        </a>
+    
+      </div>
     
     <!--   <div class="option-group">
         <h3 class="t-sans t-base t-bold">Have application sent by US mail</h4>
@@ -4138,11 +4156,17 @@
     
         &lt;p class=&quot;no-margin&quot;&gt;Office Hours&lt;/p&gt;
         &lt;p class=&quot;c-steel&quot;&gt;8:30 am - 5:00pm&lt;/p&gt;
-        &lt;button class=&quot;button small secondary&quot;&gt;&lt;span class=&quot;ui-icon ui-link&quot;&gt;
-          &lt;svg&gt;
-            &lt;use xlink:href=&quot;#i-download&quot;&gt;&lt;/use&gt;
-          &lt;/svg&gt;
-        &lt;/span&gt;  Download Application&lt;/button&gt;  &lt;/div&gt;
+        
+        &lt;a class=&quot;button small has-icon&quot; href=&quot;/pages/share-grid.html&quot;&gt;
+          &lt;span class=&quot;ui-icon ui-link i-white&quot;&gt;
+            &lt;svg&gt;
+              &lt;use xlink:href=&quot;#i-download&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+          &lt;/span&gt;
+          Download Application
+        &lt;/a&gt;
+    
+      &lt;/div&gt;
     
     &lt;!--   &lt;div class=&quot;option-group&quot;&gt;
         &lt;h3 class=&quot;t-sans t-base t-bold&quot;&gt;Have application sent by US mail&lt;/h4&gt;
@@ -4368,7 +4392,7 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	<div class="stats-card bg-mist">
+	<div class="stats-card bg-white">
 	<ul class="stats-list tall double">
 		<li>
 			<div class="stats-list_value">
@@ -4384,7 +4408,7 @@
 	</ul>
 </div>
 
-<div class="stats-card bg-mist">
+<div class="stats-card bg-white">
 	<ul class="stats-list tall double">
 		<li>
 			<div class="stats-list_value">
@@ -4401,7 +4425,7 @@
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;stats-card bg-mist&quot;&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;stats-card bg-white&quot;&gt;
 	&lt;ul class=&quot;stats-list tall double&quot;&gt;
 		&lt;li&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;
@@ -4417,7 +4441,7 @@
 	&lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;stats-card bg-mist&quot;&gt;
+&lt;div class=&quot;stats-card bg-white&quot;&gt;
 	&lt;ul class=&quot;stats-list tall double&quot;&gt;
 		&lt;li&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;
@@ -4470,7 +4494,7 @@
 
 	<div class="toggled">
 		<div class="stats-table--stack">
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4497,7 +4521,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4524,7 +4548,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4551,7 +4575,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4578,7 +4602,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4605,7 +4629,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4632,7 +4656,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4659,7 +4683,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4686,7 +4710,7 @@
 				</li>
 			</ul>
 
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -4739,7 +4763,7 @@
 
 	&lt;div class=&quot;toggled&quot;&gt;
 		&lt;div class=&quot;stats-table--stack&quot;&gt;
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4766,7 +4790,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4793,7 +4817,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4820,7 +4844,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4847,7 +4871,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4874,7 +4898,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4901,7 +4925,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4928,7 +4952,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -4955,7 +4979,7 @@
 				&lt;/li&gt;
 			&lt;/ul&gt;
 
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -5022,7 +5046,7 @@
 
 	<div class="toggled">
 		<div class="stats-table--stack">
-			<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+			<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 				<li>
 					<span class="stats-list_label bottom">Unit Number</span>
 					<div class="stats-list_value">127</div>
@@ -5075,7 +5099,7 @@
 
 	&lt;div class=&quot;toggled&quot;&gt;
 		&lt;div class=&quot;stats-table--stack&quot;&gt;
-			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+			&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 				&lt;li&gt;
 					&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 					&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -5907,7 +5931,7 @@
 			</div>
 <div class="f-item-preview">
 	<div class="stats-table--stack">
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -5934,7 +5958,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -5961,7 +5985,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -5988,7 +6012,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -6015,7 +6039,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -6042,7 +6066,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -6069,7 +6093,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -6096,7 +6120,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -6123,7 +6147,7 @@
 		</li>
 	</ul>
 
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -6153,7 +6177,7 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;stats-table--stack&quot;&gt;
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6180,7 +6204,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6207,7 +6231,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6234,7 +6258,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6261,7 +6285,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6288,7 +6312,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6315,7 +6339,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6342,7 +6366,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6369,7 +6393,7 @@
 		&lt;/li&gt;
 	&lt;/ul&gt;
 
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;
@@ -6413,7 +6437,7 @@
 			</div>
 <div class="f-item-preview">
 	<div class="stats-table--stack">
-	<ul class="stat-row stats-list double medium-triple bg-mist has-toggle">
+	<ul class="stat-row stats-list double medium-triple bg-white has-toggle">
 		<li>
 			<span class="stats-list_label bottom">Unit Number</span>
 			<div class="stats-list_value">127</div>
@@ -6443,7 +6467,7 @@
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;div class=&quot;stats-table--stack&quot;&gt;
-	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-mist has-toggle&quot;&gt;
+	&lt;ul class=&quot;stat-row stats-list double medium-triple bg-white has-toggle&quot;&gt;
 		&lt;li&gt;
 			&lt;span class=&quot;stats-list_label bottom&quot;&gt;Unit Number&lt;/span&gt;
 			&lt;div class=&quot;stats-list_value&quot;&gt;127&lt;/div&gt;

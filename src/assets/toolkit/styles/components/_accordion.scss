@@ -15,11 +15,11 @@
   &.trigger-left {
     @media #{$medium-up} {
       .accordion-navigation a {
-        padding-left: 1.5rem;
+        padding-left: 2.5rem;
       }
 
       .ui-control {
-        @include absolute(1.125rem,null,null,0);
+        @include absolute(1.125rem,null,null,.75rem);
       }
     }
   }

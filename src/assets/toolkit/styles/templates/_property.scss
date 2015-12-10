@@ -39,6 +39,10 @@
       .content-section {
         margin-left: -0.9375rem;
         margin-right: -0.9375rem;
+
+        @media #{$medium-up} {
+          background-color: transparent;
+        }
       }
 
       .content-panel {
