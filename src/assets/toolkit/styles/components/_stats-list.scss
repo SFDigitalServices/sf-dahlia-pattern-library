@@ -147,13 +147,13 @@
   background-color: $tint;
 
   .highlight {
-    color: $deep;
+    color: $dark;
   }
 
   .ui-icon {
     svg {
       use {
-        fill: $primary;
+        fill: $dark;
       }
     }
   }
