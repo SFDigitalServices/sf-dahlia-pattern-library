@@ -27,8 +27,22 @@
   .content-section {
     @media #{$medium-up} {
       background-color: $dust;
+    }
+
+    p {
+      @media #{$medium-up} {
+        color: $charcoal !important
+      }
+    }
+  }
+
+  .content-label {
+    color: $steel;
+
+    @media #{$medium-up} {
+      color: $charcoal !important
     }  
-  }  
+  } 
 
   > .accordion {
     margin-top: 0;
@@ -102,7 +116,8 @@
   }
 
   .application-options {
-    background-color: $snow;
+    background-color: $white;
+    padding-top: 2rem;
 
     .option-group {
       border-bottom: 1px solid $steel;
