@@ -31,6 +31,14 @@
     margin-right: -0.9375rem;
     margin-top: -1rem;
   }
+
+  .stats-card {
+    background: $mist;
+
+    @media #{$medium-up} {
+      background: $white;
+    }  
+  } 
 }
 
 .content-list {

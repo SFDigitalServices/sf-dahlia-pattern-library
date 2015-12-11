@@ -59,6 +59,16 @@ button,
     }
   }
 
+  &.deep {
+    background-color: $deep;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($deep, 5%);
+    }
+  }
+
   &.ebony {
     background-color: $ebony;
     color: $white;

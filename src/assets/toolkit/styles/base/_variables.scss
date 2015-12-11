@@ -83,7 +83,7 @@ $lush:              #99cd00;
 $primary:    $primary-color;
 $secondary:$secondary-color;
 
-$primary-tint:      lighten($primary-color, 40%);
+$primary-tint:      lighten($primary-color, 50%);
 $secondary-tint:    lighten($secondary-color, 40%);
 $attention-tint:    #c8f1ff; // lighten($attention, 50%);
 $splash-tint:       lighten($splash, 30%);
@@ -248,7 +248,8 @@ $global-radius:         4px;
 .radius {border-radius: .3em;}
 
 // Accordion
-$accordion-navigation-bg-color: $mist;
+$accordion-navigation-bg-color: $dust;
+$accordion-navigation-font-color: $dark;
 
 // Tables
 $table-border-size: none;

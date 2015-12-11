@@ -5,7 +5,7 @@
     .accordion-navigation a {
       @include type-weight(bold);
       @include responsive-text-size('small');
-      background-color: #fff;
+      background-color: $dust;
       border-bottom: 1px solid $silver;
       padding-left: 0;
       position: relative;

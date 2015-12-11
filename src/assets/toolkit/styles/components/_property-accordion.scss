@@ -40,6 +40,10 @@
     @media #{$medium-up} {
       display: none !important;
     }
+
+    .ui-icon svg use {
+      fill: $dark;
+    }  
   }
 
   .accordion-subheader {
@@ -98,7 +102,7 @@
   }
 
   .application-options {
-    background-color: $mist;
+    background-color: $snow;
 
     .option-group {
       border-bottom: 1px solid $steel;
