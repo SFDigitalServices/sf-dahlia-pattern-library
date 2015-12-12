@@ -1,5 +1,10 @@
 .property-accordion {
 
+  > .accordion {
+    margin-top: 0;
+  }
+
+  // Accordion Headers
   // re-written for accordion directive
   dd > a,
   .accordion-header,
@@ -7,62 +12,6 @@
     @include type-weight(bold);
     border-bottom: 1px solid $silver;
     position: relative;
-  }
-
-  .content-header {
-    color: #1a383c;
-    display: none;
-    font-size: 1rem;
-    padding: 1rem;
-
-    @media #{$medium-up} {
-      display: block;
-      border-top: 5px solid $charcoal;
-      border-bottom: 0;
-      padding-top: 2.25rem;
-      padding-bottom: 1.25rem;
-
-      &_name {
-        @include responsive-text-size('gamma');
-        display: block;
-        margin-bottom: .5rem;
-      }
-
-      &_subheader {
-        @extend .accordion-subheader;
-        color: $steel;
-      }
-    }  
-  }
-
-  .content-section {
-    @media #{$medium-up} {
-      background-color: $dust;
-    }
-
-    p.t-small {
-      @media #{$medium-up} {
-        color: $charcoal !important
-      }
-    }
-  }
-
-  .lottery-content {
-    @media #{$medium-up} {
-      margin: 1rem;
-    }  
-  }
-
-  .content-label {
-    color: $steel;
-
-    @media #{$medium-up} {
-      color: $charcoal !important
-    }  
-  } 
-
-  > .accordion {
-    margin-top: 0;
   }
 
   // re-written for accordion directive
@@ -83,6 +32,29 @@
     display: block;
   }
 
+  // Accordion Sections
+    // re-written for accordion directive
+  > .accordion > dd > .content,
+  .content-section {
+    @media #{$medium-up} {
+      display: block !important;
+      padding: 0;
+    }
+  }
+
+  .content-section {
+    @media #{$medium-up} {
+      background-color: $dust;
+    }
+
+    p.t-small {
+      @media #{$medium-up} {
+        color: $charcoal !important
+      }
+    }
+  }
+
+  // Accordion Nested
   .accordion-nested {
     @include responsive-text-size('small');
     margin-top: 0;
@@ -126,13 +98,4 @@
   //     }
   //   }
   // }
-
-  // re-written for accordion directive
-  > .accordion > dd > .content,
-  .content-section {
-    @media #{$medium-up} {
-      display: block !important;
-      padding: 0;
-    }
-  }
 }

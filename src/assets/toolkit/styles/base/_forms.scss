@@ -26,6 +26,10 @@ label {
       border: 2px solid $alert;
     }
   }
+
+  small {
+    text-transform: none !important;
+  }
 }
 
 .radio-group {
@@ -33,6 +37,16 @@ label {
     label {
       text-transform: none;
     }
+  }
+}
+
+.has-radio {
+  input {
+    margin-bottom: 0 !important;
+  }
+
+  .radio-group {
+    margin-top: 1rem;
   }
 }
 

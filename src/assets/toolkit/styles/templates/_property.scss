@@ -1,3 +1,4 @@
+// Background color
 .section-head {
   @media #{$medium-up} {
     @include absolute(0,0,null,0);
@@ -8,28 +9,32 @@
   }
 }
 
+// Layout container
 .section-hero {
   @media #{$medium-up} {
     position: relative;
   }
 
+  // Property details
   .property-hero {
     @media #{$medium-up} {
       margin-bottom: 2rem;
     }
   }
 
+  // Property accordion
   .accordion-container {
     @media #{$small-only} {
-      padding: 0;
       margin-top: 0 !important;
-    }  
+      padding: 0;
+    }
 
     @media #{$medium-up} {
       position: static;
     }
   }
 
+  // Positioning for desktop
   .accordion-process {
     @media #{$medium-up} {
       @include absolute(0,0,0,null);
@@ -52,9 +57,9 @@
       }
 
       .content-lead {
+        background-color: $white;
         border-top: 5px solid $oil;
         // padding-top: 2rem;
-        background-color: $white;
       }
 
       .content-wrap {
@@ -65,6 +70,22 @@
     @media #{$large-up} {
       margin-top: 1rem;
       padding-left: 2rem;
+    }
+  }
+
+  // App only spacing for desktop
+  .lottery-content {
+    @media #{$medium-up} {
+      margin: 1rem;
+    }  
+  }
+
+  // Color shift for desktop
+  .content-label {
+    color: $steel;
+
+    @media #{$medium-up} {
+      color: $charcoal !important
     }
   }
 
