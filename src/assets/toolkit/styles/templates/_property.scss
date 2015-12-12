@@ -53,7 +53,7 @@
 
       .content-lead {
         border-top: 5px solid $oil;
-        padding-top: 2rem;
+        // padding-top: 2rem;
         background-color: $white;
       }
 
@@ -76,6 +76,14 @@
         li {
           padding-top: 1.25rem;
           padding-bottom: 1.25rem;
+        }
+
+        li:nth-child(2) {
+          width: 15%;
+        }
+
+        li:nth-child(4) {
+          width: 35%;
         }
       }
     }
