@@ -29,6 +29,10 @@
     content: "";
     display: block;
     @include absolute(0,0,0,0);
-    background-image: -webkit-linear-gradient(top,transparent 10%,rgba(0,0,0,.8));
+    background-color: rgba(0,0,0,.6);
+    @include filter-gradient(#000000, #000000, vertical);
+    @include background(linear-gradient(top, rgba(0,0,0,0) 10%, rgba(0,0,0,.8) 100%));
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,1) 100%);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 10%, rgba(0,0,0,.8) 100%);
   }
 }
