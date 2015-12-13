@@ -16,14 +16,14 @@
     @media #{$medium-up} {
       padding-top: .9375rem;
       margin: 0 .9375rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
   &--expanded {
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   &--full {

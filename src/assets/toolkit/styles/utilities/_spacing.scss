@@ -196,7 +196,7 @@ $units: (
       // Check to see if both have breakpoints
       @if ($units-are-controlled-by-breakpoints == false) {
         %#{$selector-base}-#{$variation}#{$selector-suffix}#{$id} {
-          #{$property}-#{$variation}: $unit;
+          #{$property}-#{$variation}: $unit !important;
         }
       }
 
@@ -209,14 +209,14 @@ $units: (
       @if ($media-query-min) {
         @media screen and (min-width: $media-query-min) {
           %#{$selector-base}-#{$variation}#{$selector-suffix}#{$id} {
-            #{$property}-#{$variation}: $unit--media-query-min;
+            #{$property}-#{$variation}: $unit--media-query-min !important;
           }
         }
       }
       @if ($media-query-max) {
         @media screen and (max-width: $media-query-max) {
           %#{$selector-base}-#{$variation}#{$selector-suffix}#{$id} {
-            #{$property}-#{$variation}: $unit--media-query-max;
+            #{$property}-#{$variation}: $unit--media-query-max !important;
           }
         }
       }
@@ -287,7 +287,7 @@ $units: (
         @if ($baseDoesNotOveride) {
           #{$property}-#{$variation}: $unit;
         } @else if ($isBase) {
-          #{$property}: $unit;
+          #{$property}: $unit !important;
         }
       }
 
