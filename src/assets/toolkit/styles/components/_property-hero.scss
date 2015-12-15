@@ -44,6 +44,13 @@
     
   }
 
+  .stats-list {
+    li:nth-child(2) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
   &_action {
     padding: 1rem;
 

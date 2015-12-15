@@ -87,6 +87,13 @@
   @media #{$small-only} {
     max-width: rem-calc(480);
     margin: 0 auto;
+
+    .stats-list {
+      li:nth-child(2) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 
   @media #{$medium-up} {
