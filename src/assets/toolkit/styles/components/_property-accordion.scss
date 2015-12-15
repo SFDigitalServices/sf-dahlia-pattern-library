@@ -54,6 +54,14 @@
     }
   }
 
+  .content-panel {
+    &:first-of-type {
+      @media #{$small-only} {
+        padding-top: 0 !important;
+      }
+    }
+  }
+
   // Accordion Nested
   .accordion-nested {
     @include responsive-text-size('small');
