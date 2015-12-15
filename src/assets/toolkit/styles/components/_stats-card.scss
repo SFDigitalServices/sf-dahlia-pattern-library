@@ -7,13 +7,23 @@
 
   &.bottom {
     .stats-list {
+      li {
+        height: 2rem;
+        overflow: hidden;
+      }
+        
       .stats-list_label {
-        display: none;
+        visibility: hidden;
       }
 
       &:last-of-type {
+        li {
+          overflow: visible;
+          height: auto;
+        }
+
         .stats-list_label {
-          display: block;
+          visibility: visible;
         }
       }
     }
