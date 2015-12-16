@@ -258,3 +258,18 @@ $text-sizing: (
 .sub-text {
   margin-top: -.25rem;
 }
+
+.sr-only {
+  position:absolute; 
+  left:-10000px; 
+  top:auto; 
+  width:1px; 
+  height:1px; 
+  overflow:hidden;
+
+  &:focus {
+    position:static; 
+    width:auto; 
+    height:auto; 
+  }
+}
