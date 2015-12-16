@@ -12,7 +12,8 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color: $color-white;
-  background-image: url('../images/arrow-down.svg');
+  background-image: url('../images/arrow-down.png');
+  background-image: none,url('../images/arrow-down.svg'), url('../images/arrow-down.png');
   background-position: right .75rem center;
   background-repeat: no-repeat;
   background-size: .75rem;
@@ -31,13 +32,28 @@ input[type="radio"] {
   @include sr-only();
 
   .lt-ie9 & {
-    border: 0;
-    float: left;
-    margin: .4em .4em 0 0;
-    position: static;
-    width: auto;
+    // border: 0;
+    // float: left;
+    // margin: .4em .4em 0 0;
+    // position: static;
+    // width: auto;
   }
 }
+
+.ie9 {
+  input[type="radio"],
+  input[type="checkbox"] {
+    left: 0 !important;
+    position: relative !important;
+  }
+}
+
+// .lt-ie10 {
+//   input[type="checkbox"] {
+//     left: 0 !important;
+//     position: relative !important;
+//   }
+// }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
