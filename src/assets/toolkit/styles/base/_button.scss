@@ -1,12 +1,45 @@
 // Foundation button variables
 // .button
 
+$dark-bg-colors: (
+  oil: $oil,
+  dark: $dark,
+  deep: $deep,
+  ebony: $ebony,
+  tuatara: $tuatara,
+  steel: $steel,
+  attention: $attention
+);
+
+$light-bg-colors: (
+  oil: $oil,
+  dark: $dark,
+  deep: $deep,
+  ebony: $ebony,
+  tuatara: $tuatara,
+  steel: $steel,
+  attention: $attention
+);
+
 button,
 .button {
   border-radius: rem-calc(4);
   font-family: $font-family;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+
+  @each $color-name, $color-value in $dark-bg-colors {
+    &-#{"" + $color-name} {
+      background-color: $color-value;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        background-color: darken($color-value, 5%);
+        color: $white;
+      }
+    }
+  }
 
   &.secondary {
     background-color: $tint;
@@ -36,76 +69,6 @@ button,
     &:hover,
     &:focus {
       background-color: darken($tint, 5%);
-    }
-  }
-
-  &.oil {
-    background-color: $oil;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background-color: darken($oil, 5%);
-    }
-  }
-
-  &.dark {
-    background-color: $dark;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background-color: darken($dark, 5%);
-    }
-  }
-
-  &.deep {
-    background-color: $deep;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background-color: darken($deep, 5%);
-    }
-  }
-
-  &.ebony {
-    background-color: $ebony;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background-color: darken($ebony, 5%);
-    }
-  }
-
-  &.tuatara {
-    background-color: $tuatara;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background-color: darken($tuatara, 5%);
-    }
-  }
-
-  &.steel {
-    background-color: $steel;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background-color: darken($steel, 5%);
-    }
-  }
-
-  &.attention {
-    background-color: $attention;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background-color: darken($attention, 5%);
     }
   }
 
@@ -140,10 +103,6 @@ button,
     }  
   }
 
-  &.toggle {
-    
-  }
-
   &.shadow {
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
   }
@@ -156,6 +115,10 @@ button,
 
       svg {
         margin-top: -3px;
+        
+        use { 
+          fill: #fff;
+        }
       }
     }
   }

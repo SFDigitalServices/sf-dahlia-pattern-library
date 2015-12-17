@@ -102,10 +102,21 @@
 
         li:nth-child(2) {
           width: 15%;
+          padding-left: 0;
+          padding-right: 0;
         }
 
         li:nth-child(4) {
           width: 35%;
+        }
+      }
+    }
+
+    .stats-table--stack {
+      @media #{$medium-up} {
+        .stat-row {
+          background-color: #fff;
+          margin: .5rem;
         }
       }
     }

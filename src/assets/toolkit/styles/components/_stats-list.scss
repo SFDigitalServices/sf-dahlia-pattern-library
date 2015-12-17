@@ -24,6 +24,7 @@
     .value-label {
       @include responsive-text-size('small');
       font-weight: 400;
+      white-space: nowrap;
     }
   }
 

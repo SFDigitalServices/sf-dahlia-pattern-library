@@ -1,10 +1,4 @@
-modifiers:
-  secondary:
-  tertiary:
-  oil:
-  small:
-  tiny:
-icons:
+app:
   - arrow
   - download
   - forward

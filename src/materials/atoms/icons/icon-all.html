@@ -1,0 +1,12 @@
+---
+notes: |
+  These are notes associated with this `icon` component.
+---
+{{#each icons.app}}
+  <span class="ui-control ui-icon">
+    <svg>
+      <use xlink:href="#i-{{this}}"></use>
+    </svg>
+  </span>
+
+{{/each}}
