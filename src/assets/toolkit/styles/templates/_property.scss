@@ -121,4 +121,14 @@
       }
     }
   }
+
+  .unit-occupancy {
+    .stats-list li {
+      background: $mist;
+
+      @media #{$medium-up} {
+        background: $white;
+      }
+    }
+  }
 }

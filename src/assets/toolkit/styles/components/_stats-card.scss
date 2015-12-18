@@ -28,4 +28,28 @@
       }
     }
   }
+
+  
+  &.medium-double {
+    @include clearfix;
+    @media #{$medium-up} {
+      margin-bottom: 1rem;
+    }
+
+    .stats-list {
+      margin-bottom: .5rem;
+      @media #{$medium-up} {
+        float: left;
+        width: 50%;
+
+        &:nth-child(even) {
+          padding-left: .25rem; 
+        }
+
+        &:nth-child(odd) {
+          padding-right: .25rem; 
+        }
+      }
+    }
+  }
 }

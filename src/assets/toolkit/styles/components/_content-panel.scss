@@ -33,13 +33,14 @@
     margin-top: -1rem;
   }
 
+  // remove on merge
   .stats-card {
     background: $mist;
 
     @media #{$medium-up} {
       background: $white;
-    }  
-  } 
+    }
+  }
 }
 
 .content-list {

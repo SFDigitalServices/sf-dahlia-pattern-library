@@ -30,10 +30,16 @@
       <h2 class="t-gamma no-margin">Featured Resources (6)</h2>
     </header>
     <ul class="resources-list block-list">
-      <li class="block-item">
-        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Asian, Inc.</a></h3>
-        <p class="t-tiny c-steel">Language Services: <span class="label radius secondary">Cantonese</span> <span class="label radius secondary">Vietnamese</span></p>
 
+    {{#each resources.locations}}
+      <li class="block-item">
+        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">{{name}}</a></h3>
+        <!-- Should not show language services label if no lanugages -->
+        <p class="t-tiny c-steel">Language Services: 
+          {{#each languages}}
+            <span class="label radius secondary">{{.}}</span> 
+          {{/each}}
+        </p>
         <div class="has-icon-left d-block">
           <span class="ui-icon ui-medium">
             <svg>
@@ -41,21 +47,21 @@
             </svg>
           </span>
           <p class="offset-icon margin-bottom--half">
-            1167 Mission Street, 4th Floor, <br>
-            San Francisco, CA 94103
+            {{address}}, <br>
+            {{citystate}}
           </p>
         </div>    
         <p>
-          <a href="#" class="button-on-small">
+          <a href="{{phone}}" class="button-on-small">
             <span class="ui-icon ui-medium">
               <svg>
                 <use xlink:href="#i-phone" />
               </svg>
             </span>
 
-            Call 415-928-5910
+            Call {{phone}}
           </a>
-          <a href="asianinc.org" class="button-on-small">
+          <a href="{{website}}" class="button-on-small">
             <span class="ui-icon ui-medium">
               <svg>
                 <use xlink:href="#i-link" />
@@ -66,187 +72,7 @@
           </a>
         </p>
       </li>
-
-      <li class="block-item">
-        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Bill Sorro Housing Program of the Veterans Equity Center</a></h3>
-
-        <p class="t-tiny c-steel">Language Services: <span class="label radius secondary">Tagalog</span></p>
-
-        <div class="has-icon-left d-block">
-          <span class="ui-icon ui-medium">
-            <svg>
-              <use xlink:href="#i-map" />
-            </svg>
-          </span>
-          <p class="offset-icon margin-bottom--half">
-            1010 Mission Street, Suite C, <br>
-            San Francisco, CA 94103
-          </p>
-        </div>    
-        <p>
-          <a href="bishop.vetsequitycenter.org" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-phone" />
-              </svg>
-            </span>
-
-            Call 415-255-2347
-          </a>
-          <a href="#" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-link" />
-              </svg>
-            </span>
-
-            Visit Website
-          </a>
-        </p>
-      </li>
-
-      <li class="block-item">
-        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Consumer Credit Counseling Service of San Francisco</a></h3>
-       <div class="has-icon-left d-block">
-          <span class="ui-icon ui-medium">
-            <svg>
-              <use xlink:href="#i-map" />
-            </svg>
-          </span>
-          <p class="offset-icon margin-bottom--half">
-            595 Market Street, 15th Floor, <br>
-            San Francisco, CA 94105
-          </p>
-        </div>    
-        <p>
-          <a href="cccssf.org" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-phone" />
-              </svg>
-            </span>
-
-            Call 800-777-7526
-          </a>
-          <a href="#" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-link" />
-              </svg>
-            </span>
-
-            Visit Website
-          </a>
-        </p>
-      </li>
-
-      <li class="block-item">
-        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">Mission Economic Development Agency</a></h3>
-
-        <p class="t-tiny c-steel">Language Services: <span class="label radius secondary">Spanish</span></p>
-        
-        <div class="has-icon-left d-block">
-          <span class="ui-icon ui-medium">
-            <svg>
-              <use xlink:href="#i-map" />
-            </svg>
-          </span>
-          <p class="offset-icon margin-bottom--half">
-            2301 Mission Street, Suite 301 <br>
-            San Francisco, CA 94103
-          </p>
-        </div>    
-        <p>
-          <a href="#" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-phone" />
-              </svg>
-            </span>
-
-            Call 415-282-3334
-          </a>
-          <a href="medasf.org" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-link" />
-              </svg>
-            </span>
-
-            Visit Website
-          </a>
-        </p>
-      </li>
-
-      <li class="block-item">
-        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">San Francisco Housing Development Corporation</a></h3>
-        <div class="has-icon-left d-block">
-          <span class="ui-icon ui-medium">
-            <svg>
-              <use xlink:href="#i-map" />
-            </svg>
-          </span>
-          <p class="offset-icon margin-bottom--half">
-            4439 Third Street, <br>
-            San Francisco, CA 94124
-          </p>
-        </div>
-        <p>
-          <a href="#" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-phone" />
-              </svg>
-            </span>
-
-            Call 415-822-1022
-          </a>
-          <a href="sfhdc.org" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-link" />
-              </svg>
-            </span>
-
-            Visit Website
-          </a>
-        </p>
-      </li>
-
-      <li class="block-item">
-        <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">San Francisco LGBT Center</a></h3>
-       <div class="has-icon-left d-block">
-          <span class="ui-icon ui-medium">
-            <svg>
-              <use xlink:href="#i-map" />
-            </svg>
-          </span>
-          <p class="offset-icon margin-bottom--half">
-            1800 Market Street, <br>
-            San Francisco, CA 94102
-          </p>
-        </div>    
-        <p>
-          <a href="#" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-phone" />
-              </svg>
-            </span>
-
-            Call 415-865-5661
-          </a>
-          <a href="sfcenter.org" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-link" />
-              </svg>
-            </span>
-
-            Visit Website
-          </a>
-        </p>
-      </li>
+    {{/each}}
 
     </ul>
   </div>
