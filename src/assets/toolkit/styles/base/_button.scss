@@ -146,6 +146,10 @@ button,
   padding-top: .5rem;
   padding-bottom: .5rem;
 
+  svg {
+    margin-right: .5rem;
+  }
+
   @media #{$small-only} {
     @include button;
     svg {
