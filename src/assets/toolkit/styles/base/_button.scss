@@ -11,16 +11,6 @@ $dark-bg-colors: (
   attention: $attention
 );
 
-$light-bg-colors: (
-  oil: $oil,
-  dark: $dark,
-  deep: $deep,
-  ebony: $ebony,
-  tuatara: $tuatara,
-  steel: $steel,
-  attention: $attention
-);
-
 button,
 .button {
   border-radius: rem-calc(4);
