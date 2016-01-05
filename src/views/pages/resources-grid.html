@@ -35,11 +35,13 @@
       <li class="block-item">
         <h3 class="t-delta t-sans margin-bottom--half"><a href="#" class="a-oil">{{name}}</a></h3>
         <!-- Should not show language services label if no lanugages -->
+        {{#if languages}}
         <p class="t-tiny c-steel">Language Services: 
           {{#each languages}}
             <span class="label radius secondary">{{.}}</span> 
           {{/each}}
         </p>
+        {{/if}}
         <div class="has-icon-left d-block">
           <span class="ui-icon ui-medium">
             <svg>
