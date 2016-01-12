@@ -49,15 +49,39 @@ $(document).ready(function () {
 
 });
 
+
+//
+//
+//  Angular Support
+//
+//
+
 // Angular (Loaded from node_modules)
 require('angular/angular.js');
-require('angular-foundation/mm-foundation.min.js');
 
-//= require angular-foundation
-//= require angular-pageslide-directive
+// Angular Foundation Directives (Loaded from bower)
+require('angular-foundation/mm-foundation-tpls.min.js');
+//require('angular-pageslide-directive');
 
-var dahliaPL = angular.module('dahliaPL', ['mm.foundation']);
+angular.module('dahlia', ['mm.foundation'])
+  .controller('AccordionSampleController', function($scope) {
+    $scope.oneAtATime = true;
 
+    $scope.groups = [
+      {
+        title: "Dynamic Group Header - 1",
+        content: "Dynamic Group Body - 1"
+      },
+      {
+        title: "Dynamic Group Header - 2",
+        content: "Dynamic Group Body - 2"
+      }
+    ];
 
+    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
 
-
+    $scope.addItem = function() {
+      var newItemNo = $scope.items.length + 1;
+      $scope.items.push('Item ' + newItemNo);
+    };
+  });
