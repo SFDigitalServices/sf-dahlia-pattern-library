@@ -18,7 +18,8 @@
   ],
   "devDependencies": {
     "jquery": "~2.1.4",
-    "foundation": "foundation-sites#5.5.3"
+    "foundation": "foundation-sites#5.5.3",
+    "angular-foundation": "~0.8.0"
   },
   "scripts": {
     "gulp": "gulp",
@@ -30,5 +31,3 @@
     "test": "npm run build"
   }
 }
-
-

@@ -50,6 +50,14 @@ $(document).ready(function () {
 });
 
 // Angular (Loaded from node_modules)
-var angular = require('angular/angular.js');
+require('angular/angular.js');
+require('angular-foundation/mm-foundation.min.js');
 
-//var dahliaPL = angular.module('dahliaPL', ['mm.foundation']);
+//= require angular-foundation
+//= require angular-pageslide-directive
+
+var dahliaPL = angular.module('dahliaPL', ['mm.foundation']);
+
+
+
+
