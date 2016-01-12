@@ -13,11 +13,12 @@
 
 // we're now requiring it from the node_modules directory
 var $ = require('jquery/dist/jquery.min.js');
-
 window.jQuery = $;
 
-// Loading foundation from bower in order to support modernizr module
+// Loading modernizr via a custom node build that is dropped into the local toolkit/script directory.
 var Modernizr = require('./modernizr.js');
+
+// Loading foundation from bower in order to support modernizr module
 var foundation = require('foundation/js/foundation.min.js');
 
 //require('smoothstate/jquery.smoothState.min.js');

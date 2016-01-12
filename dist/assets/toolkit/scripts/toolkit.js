@@ -59,11 +59,12 @@
 
 	// we're now requiring it from the node_modules directory
 	var $ = __webpack_require__(2);
-
 	window.jQuery = $;
 
-	// Loading foundation from bower in order to support modernizr module
+	// Loading modernizr via a custom node build that is dropped into the local toolkit/script directory.
 	var Modernizr = __webpack_require__(4);
+
+	// Loading foundation from bower in order to support modernizr module
 	var foundation = __webpack_require__(5);
 
 	//require('smoothstate/jquery.smoothState.min.js');
