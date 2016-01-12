@@ -129,3 +129,51 @@ input[type="radio"]:disabled + label::before {
   margin: 0;
   height: rem-calc(30);
 }
+
+// Memorable dates
+
+.form-date-of-birth {
+  label {
+    margin-top: 0;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; 
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.form-group-day, 
+.form-group-month, 
+.form-group-year {
+  float: left;
+  clear: none;
+  margin-right: 1rem;
+  width: 4rem;
+}
+
+.form-group-year {
+  width: 5rem;
+}
+
+.form-telephone {
+
+}
+
+.form-income {
+  position: relative;
+
+  &_input {
+    padding-left: 1.825rem !important;
+  }
+
+  .label-dollar {
+    @include absolute(.625rem,null,null,.825rem);
+  }
+}

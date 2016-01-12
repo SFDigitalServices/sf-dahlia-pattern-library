@@ -369,6 +369,9 @@
 												<a href="molecules.html#forms.income-source_item">Income Source Item</a>
 											</li>
 											<li>
+												<a href="molecules.html#forms.input-dob">Input Dob</a>
+											</li>
+											<li>
 												<a href="molecules.html#forms.input-email">Input Email</a>
 											</li>
 											<li>
@@ -376,6 +379,12 @@
 											</li>
 											<li>
 												<a href="molecules.html#forms.input-income">Input Income</a>
+											</li>
+											<li>
+												<a href="molecules.html#forms.input-signup">Input Signup</a>
+											</li>
+											<li>
+												<a href="molecules.html#forms.input-tel">Input Tel</a>
 											</li>
 											<li>
 												<a href="molecules.html#forms.language-actions">Language Actions</a>
@@ -388,6 +397,12 @@
 											</li>
 											<li>
 												<a href="molecules.html#forms.select--occupancy">Select  Occupancy</a>
+											</li>
+											<li>
+												<a href="molecules.html#forms.tooltip">Tooltip</a>
+											</li>
+											<li>
+												<a href="molecules.html#forms.user-item--editable">User Item  Editable</a>
 											</li>
 									</ul>
 							</li>
@@ -770,12 +785,11 @@
 	</figure>
 	<h2 class="delta t-serif c-oil">Get emailed whenever a new listing is posted.</h1>
 
-  <!-- <div class="row collapse">
-  <div class="small-8 large-10 columns">
-    <input type="text" placeholder="Enter Email">
-  </div>
-  <div class="small-4 large-2 columns">
-    <a href="#" class="button postfix">Sign Up</a>
+  <!-- <div class="form-email row collapse">
+  <div class="form-group-email large-12 columns">
+    <label for="email">Your email address
+      <input type="email" placeholder="you@myemail.com" />
+    </label>
   </div>
 </div> -->
   <a href="#" class="button radius">Sign Up Today</a>
@@ -788,12 +802,11 @@
 	&lt;/figure&gt;
 	&lt;h2 class=&quot;delta t-serif c-oil&quot;&gt;Get emailed whenever a new listing is posted.&lt;/h1&gt;
 
-  &lt;!-- &lt;div class=&quot;row collapse&quot;&gt;
-  &lt;div class=&quot;small-8 large-10 columns&quot;&gt;
-    &lt;input type=&quot;text&quot; placeholder=&quot;Enter Email&quot;&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;small-4 large-2 columns&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;button postfix&quot;&gt;Sign Up&lt;/a&gt;
+  &lt;!-- &lt;div class=&quot;form-email row collapse&quot;&gt;
+  &lt;div class=&quot;form-group-email large-12 columns&quot;&gt;
+    &lt;label for=&quot;email&quot;&gt;Your email address
+      &lt;input type=&quot;email&quot; placeholder=&quot;you@myemail.com&quot; /&gt;
+    &lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt; --&gt;
   &lt;a href=&quot;#&quot; class=&quot;button radius&quot;&gt;Sign Up Today&lt;/a&gt;
@@ -1473,6 +1486,58 @@
 </div>
 
 		</div>
+		<div class="f-item-group" id="forms.input-dob">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Input Dob</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="date-of-birth row collapse">
+	<div class="form-group-month large-2 columns">
+		<label for="date_of_birth_1">Month
+			<input type="number" min="1" max="12" placeholder="MM" />
+		</label>
+	</div>
+	<div class="form-group-day large-2 columns">
+		<label for="date_of_birth_2">Day
+			<input type="number" min="1" max="31" placeholder="DD" />
+		</label>
+	</div>
+	<div class="form-group-year large-2 columns end">
+		<label for="date_of_birth_3">Year
+			<input type="number" min="1900" max="2016" placeholder="YYYY" />
+		</label>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;date-of-birth row collapse&quot;&gt;
+	&lt;div class=&quot;form-group-month large-2 columns&quot;&gt;
+		&lt;label for=&quot;date_of_birth_1&quot;&gt;Month
+			&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;12&quot; placeholder=&quot;MM&quot; /&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group-day large-2 columns&quot;&gt;
+		&lt;label for=&quot;date_of_birth_2&quot;&gt;Day
+			&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;31&quot; placeholder=&quot;DD&quot; /&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group-year large-2 columns end&quot;&gt;
+		&lt;label for=&quot;date_of_birth_3&quot;&gt;Year
+			&lt;input type=&quot;number&quot; min=&quot;1900&quot; max=&quot;2016&quot; placeholder=&quot;YYYY&quot; /&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
 		<div class="f-item-group" id="forms.input-email">
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Input Email</h3>
@@ -1486,22 +1551,20 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	<div class="row collapse">
-	<div class="small-8 large-10 columns">
-		<input type="text" placeholder="Enter Email">
-	</div>
-	<div class="small-4 large-2 columns">
-		<a href="#" class="button postfix">Sign Up</a>
+	<div class="form-email row collapse">
+	<div class="form-group-email large-12 columns">
+		<label for="email">Your email address
+			<input type="email" placeholder="you@myemail.com" />
+		</label>
 	</div>
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;row collapse&quot;&gt;
-	&lt;div class=&quot;small-8 large-10 columns&quot;&gt;
-		&lt;input type=&quot;text&quot; placeholder=&quot;Enter Email&quot;&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;small-4 large-2 columns&quot;&gt;
-		&lt;a href=&quot;#&quot; class=&quot;button postfix&quot;&gt;Sign Up&lt;/a&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;form-email row collapse&quot;&gt;
+	&lt;div class=&quot;form-group-email large-12 columns&quot;&gt;
+		&lt;label for=&quot;email&quot;&gt;Your email address
+			&lt;input type=&quot;email&quot; placeholder=&quot;you@myemail.com&quot; /&gt;
+		&lt;/label&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </div>
@@ -1550,14 +1613,88 @@
 <div class="f-item-preview">
 	<label class="p-relative">
 	<span class="eligibility-form_header">Household Income</span>
-	<input type="text" placeholder="Total all of your income sources" />
+
+	<div class="form-income">
+		<span class="label-dollar">$</span>
+		<input type="text" class="form-income_input" placeholder="Total all of your income sources" />
+	</div>
 </label>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;label class=&quot;p-relative&quot;&gt;
 	&lt;span class=&quot;eligibility-form_header&quot;&gt;Household Income&lt;/span&gt;
-	&lt;input type=&quot;text&quot; placeholder=&quot;Total all of your income sources&quot; /&gt;
+
+	&lt;div class=&quot;form-income&quot;&gt;
+		&lt;span class=&quot;label-dollar&quot;&gt;$&lt;/span&gt;
+		&lt;input type=&quot;text&quot; class=&quot;form-income_input&quot; placeholder=&quot;Total all of your income sources&quot; /&gt;
+	&lt;/div&gt;
 &lt;/label&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="forms.input-signup">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Input Signup</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="row collapse">
+	<div class="small-8 large-10 columns">
+		<input type="text" placeholder="Enter Email">
+	</div>
+	<div class="small-4 large-2 columns">
+		<a href="#" class="button postfix">Sign Up</a>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;row collapse&quot;&gt;
+	&lt;div class=&quot;small-8 large-10 columns&quot;&gt;
+		&lt;input type=&quot;text&quot; placeholder=&quot;Enter Email&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;small-4 large-2 columns&quot;&gt;
+		&lt;a href=&quot;#&quot; class=&quot;button postfix&quot;&gt;Sign Up&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="forms.input-tel">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Input Tel</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="form-telephone row collapse">
+	<div class="form-group-tel large-12 columns">
+		<label for="tel_1">Your phone number
+			<input type="tel" placeholder="555-555-5555" />
+		</label>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;form-telephone row collapse&quot;&gt;
+	&lt;div class=&quot;form-group-tel large-12 columns&quot;&gt;
+		&lt;label for=&quot;tel_1&quot;&gt;Your phone number
+			&lt;input type=&quot;tel&quot; placeholder=&quot;555-555-5555&quot; /&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
@@ -1732,6 +1869,60 @@
 		&lt;option value=&quot;six people&quot;&gt;6 people&lt;/option&gt;
 	&lt;/select&gt;
 &lt;/label&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="forms.tooltip">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Tooltip</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!">extended information</span>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;span data-tooltip aria-haspopup=&quot;true&quot; class=&quot;has-tip&quot; title=&quot;Tooltips are awesome, you should totally use them!&quot;&gt;extended information&lt;/span&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="forms.user-item--editable">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">User Item  Editable</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<div class="user-item">
+	<p class="user-item_name"><strong>Laura Smith</strong>
+		<br>
+		<span class="t-tiny">Primary User</span>
+	</p>
+
+	<a class="small button right" href="button">Edit</a>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;user-item&quot;&gt;
+	&lt;p class=&quot;user-item_name&quot;&gt;&lt;strong&gt;Laura Smith&lt;/strong&gt;
+		&lt;br&gt;
+		&lt;span class=&quot;t-tiny&quot;&gt;Primary User&lt;/span&gt;
+	&lt;/p&gt;
+
+	&lt;a class=&quot;small button right&quot; href=&quot;button&quot;&gt;Edit&lt;/a&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
