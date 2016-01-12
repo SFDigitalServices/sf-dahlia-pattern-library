@@ -124,6 +124,29 @@ input[type="radio"]:disabled + label::before {
   cursor: not-allowed;
 }
 
+.radio-block,
+.checkbox-block {
+  position: relative;
+
+  input[type="radio"] + label::before,
+  input[type="checkbox"] + label::before {
+    position: absolute;
+    top: .25rem;
+    left: .5rem;
+  }
+
+  &_label {
+    margin-left: 2.5rem !important;
+    line-height: 1.2;
+  }
+
+  &_note {
+    @include responsive-text-size('tiny');
+    display: inline-block;
+    margin-top: .25rem;
+  }
+}
+
 .input-editor {
   @include absolute(null,6px,6px,null);
   margin: 0;
@@ -162,9 +185,6 @@ input[type="radio"]:disabled + label::before {
   width: 5rem;
 }
 
-.form-telephone {
-
-}
 
 .form-income {
   position: relative;
