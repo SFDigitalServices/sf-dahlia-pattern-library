@@ -373,6 +373,9 @@
 												<a href="molecules.html#forms.income-source_item">Income Source Item</a>
 											</li>
 											<li>
+												<a href="molecules.html#forms.income-source_toggle">Income Source Toggle</a>
+											</li>
+											<li>
 												<a href="molecules.html#forms.input-address">Input Address</a>
 											</li>
 											<li>
@@ -1550,6 +1553,166 @@
 	&lt;span class=&quot;income-source_name&quot;&gt;Wages: $1000/mo&lt;/span&gt;
 	&lt;a href=&quot;#&quot; class=&quot;income-source_link&quot;&gt;Edit&lt;/a&gt;
 &lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="forms.income-source_toggle">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Income Source Toggle</h3>
+				<div class="f-item-controls">
+					
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div>
+<div class="f-item-preview">
+	<section class="row">
+	<div class="large-12 columns">
+
+		<div class="income-source">
+			<div class="income-source_item margin-bottom">
+
+				<span class="income-source_name margin-bottom">Social Security: $22.00/month</span>
+				<a class="income-source_link">Edit</a>
+
+				<div class="income-source_nested bg-mist">
+
+					<div class="row">
+						<div class="large-12 columns padding-top">
+							<label class="form-label">Where is this income from?
+
+								<select name="source" ng-model="income.source" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required">
+									<option value="Wages">
+										Wages
+									</option>
+									<option value="Social Security">
+										Social Security
+									</option>
+									<option value="Disability">
+										Disability
+									</option>
+									<option value="Unemployment">
+										Unemployment
+									</option>
+									<option value="Calworks">
+										CalWorks
+									</option>
+									<option value="Other">
+										Other
+									</option>
+								</select>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="large-12 columns margin-bottom has-radio">
+							<label class="form-label">How much is the income of this source?
+								<input name="value" ng-model="income.value" placeholder="$" required="" type="text" class="">
+							</label>
+							<div class="radio-group">
+								<p class="d-inline-block">
+									<input id="income_frequency_month_4" name="frequency_4" required="" type="radio" value="month" class="">
+									<label for="income_frequency_month_4"> per month</label>
+								</p>
+								<p class="d-inline-block">
+									<input id="income_frequency_year_4" name="frequency_4" required="" type="radio" value="year" class="">
+									<label for="income_frequency_year_4"> per year</label>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="button-stack--paginate text-center row">
+						<div class="small-6 medium-push-6 columns ng-scope">
+							<button class="button expand" type="button">Save</button>
+						</div>
+						<div class="small-6 medium-6 medium-pull-6 columns">
+							<button class="button blank expand" type="button">Delete</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;section class=&quot;row&quot;&gt;
+	&lt;div class=&quot;large-12 columns&quot;&gt;
+
+		&lt;div class=&quot;income-source&quot;&gt;
+			&lt;div class=&quot;income-source_item margin-bottom&quot;&gt;
+
+				&lt;span class=&quot;income-source_name margin-bottom&quot;&gt;Social Security: $22.00/month&lt;/span&gt;
+				&lt;a class=&quot;income-source_link&quot;&gt;Edit&lt;/a&gt;
+
+				&lt;div class=&quot;income-source_nested bg-mist&quot;&gt;
+
+					&lt;div class=&quot;row&quot;&gt;
+						&lt;div class=&quot;large-12 columns padding-top&quot;&gt;
+							&lt;label class=&quot;form-label&quot;&gt;Where is this income from?
+
+								&lt;select name=&quot;source&quot; ng-model=&quot;income.source&quot; required=&quot;&quot; class=&quot;ng-pristine ng-untouched ng-valid ng-valid-required&quot;&gt;
+									&lt;option value=&quot;Wages&quot;&gt;
+										Wages
+									&lt;/option&gt;
+									&lt;option value=&quot;Social Security&quot;&gt;
+										Social Security
+									&lt;/option&gt;
+									&lt;option value=&quot;Disability&quot;&gt;
+										Disability
+									&lt;/option&gt;
+									&lt;option value=&quot;Unemployment&quot;&gt;
+										Unemployment
+									&lt;/option&gt;
+									&lt;option value=&quot;Calworks&quot;&gt;
+										CalWorks
+									&lt;/option&gt;
+									&lt;option value=&quot;Other&quot;&gt;
+										Other
+									&lt;/option&gt;
+								&lt;/select&gt;
+							&lt;/label&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+					&lt;div class=&quot;row&quot;&gt;
+						&lt;div class=&quot;large-12 columns margin-bottom has-radio&quot;&gt;
+							&lt;label class=&quot;form-label&quot;&gt;How much is the income of this source?
+								&lt;input name=&quot;value&quot; ng-model=&quot;income.value&quot; placeholder=&quot;$&quot; required=&quot;&quot; type=&quot;text&quot; class=&quot;&quot;&gt;
+							&lt;/label&gt;
+							&lt;div class=&quot;radio-group&quot;&gt;
+								&lt;p class=&quot;d-inline-block&quot;&gt;
+									&lt;input id=&quot;income_frequency_month_4&quot; name=&quot;frequency_4&quot; required=&quot;&quot; type=&quot;radio&quot; value=&quot;month&quot; class=&quot;&quot;&gt;
+									&lt;label for=&quot;income_frequency_month_4&quot;&gt; per month&lt;/label&gt;
+								&lt;/p&gt;
+								&lt;p class=&quot;d-inline-block&quot;&gt;
+									&lt;input id=&quot;income_frequency_year_4&quot; name=&quot;frequency_4&quot; required=&quot;&quot; type=&quot;radio&quot; value=&quot;year&quot; class=&quot;&quot;&gt;
+									&lt;label for=&quot;income_frequency_year_4&quot;&gt; per year&lt;/label&gt;
+								&lt;/p&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+					&lt;div class=&quot;button-stack--paginate text-center row&quot;&gt;
+						&lt;div class=&quot;small-6 medium-push-6 columns ng-scope&quot;&gt;
+							&lt;button class=&quot;button expand&quot; type=&quot;button&quot;&gt;Save&lt;/button&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;small-6 medium-6 medium-pull-6 columns&quot;&gt;
+							&lt;button class=&quot;button blank expand&quot; type=&quot;button&quot;&gt;Delete&lt;/button&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
 </div>
 
 		</div>
