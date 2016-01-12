@@ -30,6 +30,7 @@
     "npm": ">=2.0.0"
   },
   "devDependencies": {
+    "angular": "^1.4.8",
     "babel-core": "^5.2.17",
     "babel-loader": "5.0.0",
     "browser-sync": "^2.7.1",
