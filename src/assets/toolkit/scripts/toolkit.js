@@ -16,8 +16,8 @@ var $ = require('jquery/dist/jquery.min.js');
 
 window.jQuery = $;
 
-// Loading foundation from node_modules
-var foundation = require('foundation-sites/js/foundation.min.js');
+// Loading foundation from bower in order to support modernizr module
+var foundation = require('foundation/js/foundation/foundation.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
