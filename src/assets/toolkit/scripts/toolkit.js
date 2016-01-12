@@ -19,9 +19,6 @@ window.jQuery = $;
 // Loading foundation from node_modules
 var foundation = require('foundation-sites/js/foundation.min.js');
 
-// Loading foundation from bower
-//var foundation = require('foundation/js/foundation.min.js');
-
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
 
@@ -53,4 +50,4 @@ $(document).ready(function () {
 // Angular (Loaded from node_modules)
 var angular = require('angular/angular.js');
 
-dahliaPL = angular.module('dahliaPL', ['mm.foundation']);
+//var dahliaPL = angular.module('dahliaPL', ['mm.foundation']);

@@ -102,4 +102,19 @@ Rules specific to specific page rules or a unique url
     Reference for all foundation default settings. Not editable
 
 ### /toolkit.css
-Main manifest for how we are building the cascade. 
+Main manifest for how we are building the cascade.
+
+## Adding 3rd Party Dependecies
+
+Fabricator uses Webpack Module Bundler.
+
+In general, Webpack prefers modules from npm over bower.
+In many cases modules from npm are better than the same module from bower. Bower mostly contain only concatenated/bundled files which are:
+
+* More difficult to handle for webpack
+* More difficult to optimize for webpack
+* Sometimes only useable without a module system
+* So prefer to use the CommonJs-style module and let webpack build it.
+
+
+

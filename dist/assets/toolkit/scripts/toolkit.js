@@ -65,9 +65,6 @@
 	// Loading foundation from node_modules
 	var foundation = __webpack_require__(4);
 
-	// Loading foundation from bower
-	//var foundation = require('foundation/js/foundation.min.js');
-
 	//require('smoothstate/jquery.smoothState.min.js');
 	// var smoothState = require('./jquery.smoothState.min.js');
 
@@ -97,7 +94,7 @@
 	// Angular (Loaded from node_modules)
 	var angular = __webpack_require__(5);
 
-	dahliaPL = angular.module('dahliaPL', ['mm.foundation']);
+	//var dahliaPL = angular.module('dahliaPL', ['mm.foundation']);
 
 /***/ },
 /* 1 */,
