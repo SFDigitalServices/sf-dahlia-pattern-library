@@ -84,4 +84,7 @@ angular.module('dahlia', ['mm.foundation'])
       var newItemNo = $scope.items.length + 1;
       $scope.items.push('Item ' + newItemNo);
     };
+  // })
+  // .controller('MySampleController', function($scope) {
+  //   // my new controller
   });
