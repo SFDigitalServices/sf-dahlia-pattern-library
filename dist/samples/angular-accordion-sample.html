@@ -114,127 +114,37 @@
 
 
 
-	<div class="version-bar bg-primary padding-top--half padding-bottom--half">
-	  <div class="row">
-	    <div class="medium-12 columns">
-	      <p class="text-right t-small c-white no-margin">This site is in <strong class="t-caps">alpha</strong>: We're just getting started. We'd love to get <a href="#" class="a-white lined">your feedback</a>.</p>
-	    </div>
-	  </div>
-	</div><nav class="top-bar" role="navigation">
-  <div class="row">
-  <ul class="title-area">
-    <li class="name">
-      <h1 class="name-logo t-alt-sans"><a href="/pages/home.html">SF Affordable Housing Portal</a></h1>
-    </li>
-    <!-- <li class="toggle-topbar active">
-      <a href="#">
-        <span class="ui-icon i-white">
-          <svg>
-            <use xlink:href="#i-like-fill" />
-          </svg>
-        </span>
-      </a>
-    </li> -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="nav-menu right">
-      <li>
-        <a href="/pages/browse-grid--base.html">
-          Browse Properties
-        </a>
-      </li>
-      <li>
-        <a href="/pages/favorites-grid.html">
-          My Favorites
-        </a>
-      </li>  
-      <li>
-        <a href="/pages/resources-grid.html">
-          Resources
-        </a>
-      </li>
-    </ul>
-  </section>
-  </div>
-</nav>
-<header class="lead-header shift-offset--bottom bg-attention-tint">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="lead-title t-beta">Household Income Calculator</h1>
-    </div>
-  </div>
-</header>
+	<div ng-controller="AccordionSampleController">
+  <h1>Accordion Sample</h1>
 
-<section class="row shift--top">
-  <div class="medium-8 columns">
-    <form class="form-card">
-      <header class="padding-bottom">
-        <h1 class="t-gamma t-sans margin-bottom--2x">Add sources for each household member over 18 one at a time.</h1>
-        <p class="t-delta">Examples include:</p>
-      </header>
+  <label class="checkbox">
+    <input type="checkbox" ng-model="oneAtATime">
+    Open only one at a time
+  </label>
 
-      <div class="text-group padding-bottom">
-        <h3 class="t-delta t-sans c-steel margin-bottom--half">Wages</h3>
-        <p>Tips, Commissions, Bonuses</p>
-      </div>
+  <accordion close-others="oneAtATime">
+    <accordion-group heading="Static Header, initially expanded" is-open="true">
+      This content is straight in the template.
+    </accordion-group>
+    <accordion-group heading="" ng-repeat="group in groups">
+      
+    </accordion-group>
+    <accordion-group heading="Dynamic Body Content">
+      <p>The body of the accordion group grows to fit the contents</p>
+        <button class="button small" ng-click="addItem()">Add Item</button>
+        <div ng-repeat="item in items"></div>
+    </accordion-group>
+    <accordion-group is-open="isopen">
+        <accordion-heading>
+            I can have markup, too! <i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i>
+        </accordion-heading>
+        This is just some content to illustrate fancy headings.
+    </accordion-group>
+  </accordion>
 
-      <div class="text-group padding-bottom">
-        <h3 class="t-delta t-sans c-steel margin-bottom--half">Public Benefits</h3>
-        <ul class="two-column padding-bottom">
-          <li>Social Security</li>
-          <li>Disability</li>
-          <li>Unemployment</li>
-          <li>CalWorks</li>
-        </ul>
-      </div>
+</div>
 
-      <div class="text-group padding-bottom">
-        <h3 class="t-delta t-sans c-steel margin-bottom--half">Other</h3>
-        <p>Alimony, Retirement/Pension</p>
-      </div>
 
-      <div class="button-stack--paginate text-center row padding-top">
-        <div class="small-12 medium-6 medium-push-6 columns">
-          <button class="button expand">Next</button>
-        </div>
-        <div class="small-12 medium-6 medium-pull-6 columns">
-          <button class="button blank expand">Cancel</button>
-        </div>
-      </div>    </form>  
-  </div>
-</section>
-
-<footer class="footer-section bg-tuatara padding-top--2x">
-  <div class="row text-center padding-bottom--2x">
-    <div class="medium-12 columns">
-      <img src="/assets/toolkit/images/logo-city.png" class="city-logo margin-bottom--2x" alt="City & County of San Francisco Logo">
-    </div>
-    <div class="medium-6 medium-centered columns">
-      <p class="c-iron">The San Francisco Housing Portal is a project of the <a href="#" class="a-white">Mayor's Office of Housing and Community Development</a>.</p>
-    </div>
-  </div>
-  <section class="sock bg-ebony padding-top--2x padding-bottom">
-    <div class="row">
-      <div class="medium-6 columns small-only-text-center">
-        <span class="c-aluminum">© City & County of San Francisco</span>
-      </div>
-      <div class="medium-6 columns small-only-text-center">
-        <ul class="inline-list">
-          <li>
-            <a href="#" class="a-aluminum">Give Feedback</a>
-          </li>
-          <li>
-            <a href="/pages/disclaimer.html" class="a-aluminum">Disclaimer</a>
-          </li>
-          <li>
-            <a href="/pages/privacy-policy.html" class="a-aluminum">Privacy Policy</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</footer>
 
 
 	<!-- toolkit scripts -->

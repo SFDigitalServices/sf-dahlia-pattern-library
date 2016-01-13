@@ -18,6 +18,16 @@
   ],
   "devDependencies": {
     "jquery": "~2.1.4",
-    "foundation": "~5.5.3"
+    "foundation": "foundation-sites#5.5.3",
+    "angular-foundation": "~0.8.0"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "bower": "bower",
+    "prestart": "npm install",
+    "build": "npm install && gulp",
+    "start": "gulp --dev",
+    "postinstall": "bower install",
+    "test": "npm run build"
   }
 }
