@@ -90,16 +90,16 @@ Non component, pure layout based rule sets. Define key page templates
 Rules specific to specific page rules or a unique url
 
 ### ../helpers
-    Utility classes that override component settings, such as padding and color
+Utility classes that override component settings, such as padding and color
 
 ### ../patterns
-    Styles specific to the pattern library itself
+Styles specific to the pattern library itself
 
 ### ../vendors
-    CSS files from specific external plugin
+CSS files from specific external plugin
 
 ### /_settings.scss
-    Reference for all foundation default settings. Not editable
+Reference for all foundation default settings. Not editable
 
 ### /toolkit.css
 Main manifest for how we are building the cascade.
