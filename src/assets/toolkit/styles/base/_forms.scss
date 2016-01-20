@@ -2,16 +2,6 @@
 // Forms
 //
 
-.form-label {
-  @include responsive-text-size('small');
-  font-weight: 500;
-  text-transform: none !important;
-
-  input, textarea, select {
-    margin-top: .5rem !important;
-  }
-}
-
 form {
   font-family: $font-family;
 
@@ -29,6 +19,16 @@ label {
 
   small {
     text-transform: none !important;
+  }
+}
+
+.form-label {
+  @include responsive-text-size('small');
+  font-weight: 500;
+  text-transform: none !important;
+
+  input, textarea, select {
+    margin-top: .5rem !important;
   }
 }
 
