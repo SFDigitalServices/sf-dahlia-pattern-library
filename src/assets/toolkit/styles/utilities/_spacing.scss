@@ -208,14 +208,14 @@ $units: (
 
       @if ($media-query-min) {
         @media screen and (min-width: $media-query-min) {
-          %#{$selector-base}-#{$variation}#{$selector-suffix} {
+          %#{$selector-base}-#{$variation}#{$selector-suffix}#{$id} {
             #{$property}-#{$variation}: $unit--media-query-min !important;
           }
         }
       }
       @if ($media-query-max) {
         @media screen and (max-width: $media-query-max) {
-          %#{$selector-base}-#{$variation}#{$selector-suffix} {
+          %#{$selector-base}-#{$variation}#{$selector-suffix}#{$id} {
             #{$property}-#{$variation}: $unit--media-query-max !important;
           }
         }
