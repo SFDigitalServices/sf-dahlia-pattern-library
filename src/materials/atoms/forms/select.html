@@ -1,7 +1,18 @@
-<select name="" id="">
+<!-- <select name="" id="">
 	<option value="">Option 1</option>
 	<option value="">Option 2</option>
 	<option value="">Option 3</option>
 	<option value="">Option 4</option>
 	<option value="">Option 5</option>
+</select> -->
+
+<select name="{{default name 'options'}}" id="{{default name 'options'}}" class="selectpicker" data-width="{{default width 'auto'}}">
+  <option value="">{{default placeholder 'Select'}}</option>
+  {{#each options}}
+    <option value="{{attr}}">{{name}}</option>
+  {{else}}
+    {{#iterate 6}}
+      <option value="{{@index}}">Option {{@index}}</option>
+    {{/iterate}}
+  {{/each}}
 </select>

@@ -1,0 +1,71 @@
+
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<header class="lead-header bg-attention-tint">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h1 class="lead-title t-sans">歡迎光臨舊金山住房門戶網站！</h1>
+    </div>
+  </div>
+</header>
+
+<section class="row">
+  <div class="medium-8 columns">
+    <article class="page-content">
+      <div class="content-section">
+        <h2 class="t-sans">本網站目前提供下列功能:</h2>
+        <ul class="t-delta t-light">
+          <li>平價租屋列表.</li>
+          <li>資格評估工具及家庭收入計算器.</li>
+          <li>用於標記及與他人分享喜愛列表項目的工具.</li>
+        </ul>
+      </div>
+      
+      <hr class="tall">
+
+      <div class="content-section">
+        <p class="t-delta t-light">
+          不久後會再增加更多功能及列表!
+        </p>
+        <p class="t-delta t-light">
+          除本頁面及翻譯完成的申請表以外，住房入口網站一律採用英文，但我們計劃將陸續增加中文、西班牙文以及菲律賓文等語言服務。
+        </p>
+      </div>
+
+      <hr class="tall">
+
+      <div class="content-section">
+        <p class="t-delta t-light">
+          如需協助，建議您與 Asian, Inc. 聯絡並預約安排會說中文的住房諮詢人員。
+        </p>
+
+        <div class="block-item no-border"><h3 class="t-delta t-sans margin-bottom--half"><a class="a-oil ng-binding">Asian, Inc.</a></h3><p class="t-tiny c-steel">Language Services:<!-- ngRepeat: language in resource.languages --><span ng-repeat="language in resource.languages" class="ng-scope"><span class="label radius secondary ng-binding">Cantonese</span></span><!-- end ngRepeat: language in resource.languages --><span ng-repeat="language in resource.languages" class="ng-scope"><span class="label radius secondary ng-binding">Vietnamese</span></span><!-- end ngRepeat: language in resource.languages --></p><div class="has-icon-left d-block"><span class="ui-icon ui-medium"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-map"></use></svg></span><p class="offset-icon margin-bottom--half ng-binding">167 Mission Street, 4th Floor,<br>San Francisco, CA 94103</p></div><p><a class="button-on-small ng-binding" href="tel:+1415-928-5910"><span class="ui-icon ui-medium"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-phone"></use></svg></span>Call 415-928-5910</a><a class="button-on-small ng-binding" href="http://asianinc.org" target="_blank"><span class="ui-icon ui-medium"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-link"></use></svg></span>Visit Asian, Inc.</a></p></div>
+
+        <p class="t-delta t-light">
+          Asian Inc. 是 HUD 評鑑合格機構，負責提供中文的房屋租售諮詢服務，其諮詢人員均受過專業訓練，能夠提供與 市長住房與社區發展辦公室 (Mayor’s Office of Housing and Community Development) 住房計畫相關的資訊。
+        </p>
+      </div>
+
+      <hr class="tall">
+
+      <div class="content-section">
+        <p class="t-delta t-light">
+          如需瞭解其他住房資源，請參閱：
+          <a href="http://www.sfmohcd.org/modules/showdocument.aspx?documentid=8952">http://www.sfmohcd.org/modules/showdocument.aspx?documentid=8953</a>
+        </p>
+      </div>
+
+    </article>
+  </div> 
+</section>
+
+<section class="row margin-bottom--2x">
+  <div class="medium-12 columns">
+    <div class="bg-dust">
+      {{> blocks.block-tall--email }}
+    </div>
+  </div>
+</section>
+
+{{> components.footer}} 
