@@ -19,7 +19,7 @@ button,
   padding-right: 1.5rem;
 
   @each $color-name, $color-value in $dark-bg-colors {
-    &-#{"" + $color-name} {
+    &.#{"" + $color-name} {
       background-color: $color-value;
       color: $white;
 

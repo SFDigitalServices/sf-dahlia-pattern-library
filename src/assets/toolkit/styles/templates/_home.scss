@@ -4,6 +4,11 @@
   }  
 }
 
+.splash-message {
+  border-bottom: 3px solid $deep;
+  position: relative;
+}
+
 .row-flex {
   @extend .row;
   display: table;
