@@ -1,0 +1,13 @@
+.block-list {
+  margin-bottom: 2rem;
+  
+  li {
+    border-bottom: 1px solid $smoke;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  &_title {
+    margin-bottom: .5rem;
+  }
+}
