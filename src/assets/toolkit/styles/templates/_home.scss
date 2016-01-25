@@ -6,7 +6,10 @@
 
 .splash-message {
   border-bottom: 3px solid $deep;
-  position: relative;
+  
+  .button {
+    margin-top: 3rem;
+  }
 }
 
 .row-flex {

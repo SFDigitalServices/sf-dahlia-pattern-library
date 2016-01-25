@@ -68,7 +68,8 @@ button,
 
     &:hover,
     &:focus {
-      background-color: darken(#fff, 5%);
+      color: #fff;
+      background-color: darken($primary, 5%);
     }
   }
 
@@ -148,4 +149,8 @@ button,
       }
     }
   }
+}
+
+.button-group {
+
 }

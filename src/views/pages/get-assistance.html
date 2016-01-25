@@ -1,0 +1,33 @@
+{{> headers.translate-header }}
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+{{> headers.lead-header title="Get Assistance" description="Whether you’re looking for assistance from a housing counselor, language support or additional housing listings, you've come to the right place."}}
+
+<section class="row">
+  <div class="medium-8 columns">
+    {{> blocks.block-icon }}
+    <hr class="hr hr-5">
+    
+    <div class="block--icon text-center bg-dust">
+      <figure class="block-icon">
+        <img src="/assets/toolkit/images/{{ default icon "icon-trans.png" }}">
+      </figure>
+      <h2 class="delta t-serif c-oil">Download translations in multiple languages, and quickly contact counselors providing language support.</h1>
+
+      {{> forms.language-actions }}
+    </div>
+
+    <hr class="hr hr-5">
+    {{> blocks.block-icon description="See more rental and ownership affordable housing opportunities." action="View Additional Opportunities" icon="icon-home.png"}}
+  </div>
+
+  <div class="medium-4 columns">
+    <div class="box-shadow padding--2x margin-top--2x">
+      <h3 class="t-delta t-sans">Mayor's Office of Housing and Community Development</h3>
+      <p class="t-small t-steel">For listing and application questions, please contact the Leasing Agent displayed on the listing.</p>
+      <p class="t-small t-steel">For general program inquiries, you may call MOHCD at (415) 701-5560.</p>
+    </div>
+  </div>
+</section>
+
+{{> components.footer}}
