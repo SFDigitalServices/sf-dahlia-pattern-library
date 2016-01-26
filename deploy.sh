@@ -8,7 +8,7 @@ fi
 cd $DIST
 git init
 appname="$1"
-if [ appname ]; then
+if [ $appname ]; then
 	app="sf-dahlia-pl-$appname"
 	heroku create $app
 else
