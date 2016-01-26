@@ -123,6 +123,12 @@
   }
 
   .unit-occupancy {
+    background: transparent; 
+
+    @media #{$medium-up} {
+      background: $mist;
+    }
+
     .stats-list li {
       background: $mist;
 
