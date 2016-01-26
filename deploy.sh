@@ -9,7 +9,7 @@ cd $DIST
 git init
 appname="$1"
 if [ appname ]; then
-	app="sf-dahlia-pattern-library-$appname"
+	app="sf-dahlia-pl-$appname"
 	heroku create $app
 else
 	app="sf-dahlia-pattern-library"
