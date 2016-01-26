@@ -23,6 +23,7 @@
   ],
   "author": "Luke Askew",
   "licenses": "MIT",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/fbrctr/fabricator.git"
