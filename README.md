@@ -24,15 +24,15 @@ $ npm start
 
 ## Deploying to Heroku
 
-The Heroku application is served out of the `dist` directory which is the static HTML output of the pattern library. This directory is ignored from git and recreated every time you run `npm start`. 
+The Heroku application is served out of the `dist` directory which is the static HTML output of the pattern library. This directory is ignored from git and recreated every time you run `npm start`.
 
 To deploy the application (run this from the project directory):
 
 * `./deploy.sh [appname]`
 * `appname` is an optional argument, which will create and deploy to a new heroku app:
-  * `sf-dahlia-pattern-library-[appname]` (if it doesn't already exist).
-  * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pattern-library-testing.herokuapp.com`
-* This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pattern-library-new-menu.herokuapp.com`
+  * `sf-dahlia-pl-[appname]` (if it doesn't already exist).
+  * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pl-testing.herokuapp.com`
+* This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pl-new-menu.herokuapp.com`
 
 ## Structure
 Pattern library is organized from the abstract to the discrete, small to large.
@@ -86,4 +86,4 @@ Rules specific to specific page rules or a unique url
     Reference for all foundation default settings. Not editable
 
 ### /toolkit.css
-Main manifest for how we are building the cascade. 
+Main manifest for how we are building the cascade.
