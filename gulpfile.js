@@ -104,6 +104,12 @@ gulp.task('favicon', function () {
 		.pipe(gulp.dest(config.dest));
 });
 
+// copy index.php
+gulp.task('copy-index-php', function() {
+    gulp.src('./index.php')
+    // Perform minification tasks, etc here
+    .pipe(gulp.dest('./dist'));
+});
 
 // assemble
 gulp.task('assemble', function (done) {
@@ -170,7 +176,8 @@ gulp.task('default', ['clean'], function () {
 		'styles',
 		'scripts',
 		'images',
-		'assemble'
+		'assemble',
+		'copy-index-php'
 	];
 
 	// run build
