@@ -1,0 +1,71 @@
+<section class="row">
+  <div class="large-12 columns">
+    
+    <div class="income-source">
+      <div class="income-source_item margin-bottom">
+        
+        <span class="income-source_name margin-bottom">Social Security: $22.00/month</span>
+        <a class="income-source_link">Edit</a>
+
+        <div class="income-source_nested bg-mist">
+          
+          <div class="row">
+            <div class="large-12 columns padding-top">
+              <label class="form-label">Where is this income from?
+              
+              <select name="source" ng-model="income.source" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required">
+                  <option value="Wages">
+                    Wages
+                  </option>
+                  <option value="Social Security">
+                    Social Security
+                  </option>
+                  <option value="Disability">
+                    Disability
+                  </option>
+                  <option value="Unemployment">
+                    Unemployment
+                  </option>
+                  <option value="Calworks">
+                    CalWorks
+                  </option>
+                  <option value="Other">
+                    Other
+                  </option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="large-12 columns margin-bottom has-radio">
+              <label class="form-label">How much is the income of this source?
+                <input name="value" ng-model="income.value" placeholder="$" required="" type="text" class="">
+              </label>
+              <div class="radio-group">
+                <p class="d-inline-block">
+                  <input id="income_frequency_month_4" name="frequency_4" required="" type="radio" value="month" class="">
+                  <label for="income_frequency_month_4"> per month</label>
+                </p>
+                <p class="d-inline-block">
+                  <input id="income_frequency_year_4" name="frequency_4" required="" type="radio" value="year" class="">
+                  <label for="income_frequency_year_4"> per year</label>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-stack--paginate text-center row">
+            <div class="small-6 medium-push-6 columns ng-scope">
+              <button class="button expand" type="button">Save</button>
+            </div>
+            <div class="small-6 medium-6 medium-pull-6 columns">
+              <button class="button blank expand" type="button">Delete</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>      

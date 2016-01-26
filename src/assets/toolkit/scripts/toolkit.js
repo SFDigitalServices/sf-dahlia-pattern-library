@@ -13,10 +13,13 @@
 
 // we're now requiring it from the node_modules directory
 var $ = require('jquery/dist/jquery.min.js');
-
 window.jQuery = $;
 
-var foundation = require('foundation-sites/js/foundation.min.js');
+// Loading modernizr via a custom node build that is dropped into the local toolkit/script directory.
+var Modernizr = require('./modernizr.js');
+
+// Loading foundation from bower in order to support modernizr module
+var foundation = require('foundation/js/foundation.min.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
@@ -45,3 +48,43 @@ $(document).ready(function () {
   });
 
 });
+
+
+//
+//
+//  Angular Support
+//
+//
+
+// Angular (Loaded from node_modules)
+require('angular/angular.js');
+
+// Angular Foundation Directives (Loaded from bower)
+require('angular-foundation/mm-foundation-tpls.min.js');
+//require('angular-pageslide-directive');
+
+angular.module('dahlia', ['mm.foundation'])
+  .controller('AccordionSampleController', function($scope) {
+    $scope.oneAtATime = true;
+
+    $scope.groups = [
+      {
+        title: "Dynamic Group Header - 1",
+        content: "Dynamic Group Body - 1"
+      },
+      {
+        title: "Dynamic Group Header - 2",
+        content: "Dynamic Group Body - 2"
+      }
+    ];
+
+    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+    $scope.addItem = function() {
+      var newItemNo = $scope.items.length + 1;
+      $scope.items.push('Item ' + newItemNo);
+    };
+  // })
+  // .controller('MySampleController', function($scope) {
+  //   // my new controller
+  });

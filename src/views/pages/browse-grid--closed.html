@@ -1,0 +1,63 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<header class="lead-header bg-attention-tint">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1 class="lead-title t-beta">Below Market Rate Rentals</h1>
+      <div class="medium-8 columns no-padding">
+        <p class="t-gamma t-light show-for-medium-up">Units in new developments priced at a “below market rate” are affordable to lower or middle income households.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="row">
+  <div class="large-12 columns">
+    <div class="block bg-mist margin-top--2x text-center">
+      <figure class="block-icon">
+        <img src="/assets/toolkit/images/icon-home.png">
+      </figure>
+
+      <p class="t-delta t-serif c-oil no-margin">No properties currently have open applications.</p>
+    </div>
+  </div>
+</section>
+
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">Applications Closed</h2>
+    </header>
+  </div>
+</div>
+
+<ul class="property-grid padding-top--2x">
+  <li class="margin-bottom--2x">
+    {{> property-card--closed}}
+  </li>
+</ul>
+
+<div class="row">
+  <div class="large-12 columns">
+    <header class="section-header margin-top--2x">
+      <h2 class="gamma no-margin">Lottery Results</h2>
+    </header>
+  </div>
+</div>
+
+<ul class="property-grid padding-top--2x">
+  <li class="margin-bottom--2x">
+    {{> property-card--results}}
+  </li>
+</ul>
+
+<section class="row margin-bottom--2x">
+  <div class="medium-12 columns">
+    <div class="bg-dust">
+      {{> blocks.block-tall--email }}
+    </div>
+  </div>
+</section>
+
+{{> components.footer}}

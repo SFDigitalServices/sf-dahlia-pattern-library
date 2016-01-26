@@ -1,5 +1,10 @@
 .property-accordion {
 
+  > .accordion {
+    margin-top: 0;
+  }
+
+  // Accordion Headers
   // re-written for accordion directive
   dd > a,
   .accordion-header,
@@ -9,30 +14,16 @@
     position: relative;
   }
 
-  .content-header {
-    color: #1a383c;
-    display: none;
-    font-size: 1rem;
-    padding: 1rem;
-
-    @media #{$medium-up} {
-      display: block;
-      border-top: 5px solid $charcoal;
-      padding-top: 1.25rem;
-      padding-bottom: 1.25rem;
-    }  
-  }
-
-  > .accordion {
-    margin-top: 0;
-  }
-
   // re-written for accordion directive
   > .accordion > dd > a,
   .accordion-header.lead {
     @media #{$medium-up} {
       display: none !important;
     }
+
+    .ui-icon svg use {
+      fill: $dark;
+    }  
   }
 
   .accordion-subheader {
@@ -41,9 +32,44 @@
     display: block;
   }
 
+  // Accordion Sections
+    // re-written for accordion directive
+  > .accordion > dd > .content,
+  .content-section {
+    @media #{$medium-up} {
+      display: block !important;
+      padding: 0;
+    }
+  }
+
+  .content-section {
+    @media #{$medium-up} {
+      background-color: $dust;
+    }
+
+    p.t-small {
+      @media #{$medium-up} {
+        color: $charcoal !important
+      }
+    }
+  }
+
+  .content-panel {
+    &:first-of-type {
+      @media #{$small-only} {
+        padding-top: 0 !important;
+      }
+    }
+  }
+
+  // Accordion Nested
   .accordion-nested {
     @include responsive-text-size('small');
     margin-top: 0;
+
+    .accordion {
+      margin-top: 0;
+    }
 
     .accordion-navigation {
       border-bottom: 1px solid $smoke;
@@ -80,22 +106,4 @@
   //     }
   //   }
   // }
-
-  // re-written for accordion directive
-  > .accordion > dd > .content,
-  .content-section {
-    @media #{$medium-up} {
-      display: block !important;
-      padding: 0;
-    }
-  }
-
-  .application-options {
-    background-color: $mist;
-
-    .option-group {
-      border-bottom: 1px solid $steel;
-      padding: 1rem 1rem 0;
-    }
-  }
 }

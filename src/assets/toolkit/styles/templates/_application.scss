@@ -1,0 +1,35 @@
+.application-form {
+  #{h1, h2, h3, h4, h5, h6} {
+    font-family: $sans-font-family;
+  }
+
+  &_nav {
+    background-color: $dust;
+  }
+}
+
+.entry-panel {
+  border-bottom: 1px solid $smoke;
+  border-top: 1px solid $smoke;
+  @extend %padding-top--2x;
+  @extend %padding-bottom--2x;
+  position: relative;
+
+  #{h1, h2, h3, h4, h5, h6} {
+    font-family: $sans-font-family;
+  }
+
+  &_edit {
+    @include absolute(2rem,0,null,null);
+  }
+
+  &_header,
+  &_label {
+    @include type-weight(light);
+  }
+
+  &_content {
+    @include type-weight(bold);
+    @include responsive-text-size('delta');
+  }
+}

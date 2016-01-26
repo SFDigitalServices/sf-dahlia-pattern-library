@@ -1,0 +1,36 @@
+.welcome-block {
+  @media #{$medium-up} {
+    padding-top: 4rem;
+  }  
+}
+
+.row-flex {
+  @extend .row;
+  display: table;
+
+  @media #{$medium-up} {
+    max-width: none;
+
+    .medium-6 {
+      display: table-cell;
+      float: none !important;
+      vertical-align: top;
+
+      &:nth-child(1) {
+        .block--tall {
+          float: right;
+        }  
+      }
+
+      &:nth-child(2) {
+        .block--tall {
+          float: left;
+        }  
+      }
+    }
+
+    .block--tall {
+      max-width: 31.25rem;
+    }
+  }  
+}

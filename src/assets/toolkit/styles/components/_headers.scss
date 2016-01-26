@@ -34,4 +34,31 @@
   border-top: 5px solid $charcoal;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+
+  @media #{$small-only} {
+    margin-left: -($column-gutter/2);
+    margin-right: -($column-gutter/2);
+    padding-left: $column-gutter/2;
+    padding-right: $column-gutter/2;
+  }
+}
+
+.status-header {
+  position: relative;
+  padding: 1rem;
+
+  &_icon {
+    @include absolute(1rem,null,null,1rem);
+  }
+
+  &_content {
+    padding-left: 2rem;
+  }
+
+  @media #{$small-only} {
+    margin-left: -($column-gutter/2);
+    margin-right: -($column-gutter/2);
+    padding-left: $column-gutter/2;
+    padding-right: $column-gutter/2;
+  } 
 }

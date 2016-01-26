@@ -20,6 +20,7 @@
     position: relative;
     display: inline-block;
     margin: 0 auto;
+    width: 100%;
   }
     
   &_details {
@@ -49,6 +50,10 @@
     @include clearfix;
     position: relative;
   }
+
+  &_meta {
+    margin-bottom: 1rem;
+  }  
 
   &_title {
     margin-bottom: 0;
@@ -82,6 +87,13 @@
   @media #{$small-only} {
     max-width: rem-calc(480);
     margin: 0 auto;
+
+    .stats-list {
+      li:nth-child(2) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 
   @media #{$medium-up} {

@@ -1,34 +1,40 @@
+// Background color
 .section-head {
   @media #{$medium-up} {
     @include absolute(0,0,null,0);
-    background-color: $mist;
+    background-color: $dust;
     width: 100%;
     height: 300px;
     z-index: -1;
   }
 }
 
+// Layout container
 .section-hero {
   @media #{$medium-up} {
     position: relative;
   }
 
+  // Property details
   .property-hero {
     @media #{$medium-up} {
       margin-bottom: 2rem;
     }
   }
 
+  // Property accordion
   .accordion-container {
     @media #{$small-only} {
+      margin-top: 0 !important;
       padding: 0;
-    }  
+    }
 
     @media #{$medium-up} {
       position: static;
     }
   }
 
+  // Positioning for desktop
   .accordion-process {
     @media #{$medium-up} {
       @include absolute(0,0,0,null);
@@ -39,6 +45,10 @@
       .content-section {
         margin-left: -0.9375rem;
         margin-right: -0.9375rem;
+
+        @media #{$medium-up} {
+          background-color: transparent;
+        }
       }
 
       .content-panel {
@@ -47,15 +57,36 @@
       }
 
       .content-lead {
-        border-top: 5px solid $oil;
-        padding-top: 2rem;
         background-color: $white;
+        border-top: 5px solid $oil;
+        // padding-top: 2rem;
+      }
+
+      .content-wrap {
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
       }
     }
 
     @media #{$large-up} {
-      margin-top: 3rem;
+      margin-top: 1rem;
       padding-left: 2rem;
+    }
+  }
+
+  // App only spacing for desktop
+  .lottery-content,
+  .apply-content {
+    @media #{$medium-up} {
+      margin: 1rem;
+    }  
+  }
+
+  // Color shift for desktop
+  .content-label {
+    color: $steel;
+
+    @media #{$medium-up} {
+      color: $charcoal !important
     }
   }
 
@@ -68,6 +99,35 @@
           padding-top: 1.25rem;
           padding-bottom: 1.25rem;
         }
+
+        li:nth-child(2) {
+          width: 15%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        li:nth-child(4) {
+          width: 35%;
+        }
+      }
+    }
+
+    .stats-table--stack {
+      @media #{$medium-up} {
+        .stat-row {
+          background-color: #fff;
+          margin: .5rem;
+        }
+      }
+    }
+  }
+
+  .unit-occupancy {
+    .stats-list li {
+      background: $mist;
+
+      @media #{$medium-up} {
+        background: $white;
       }
     }
   }

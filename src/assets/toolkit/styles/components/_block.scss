@@ -10,7 +10,15 @@
     padding: 2rem;
       
     @media #{$medium-up} {
-      padding: 4rem;
+      padding: 6rem 2rem;
+    }
+  }
+
+  &--icon {
+    padding: 2rem;
+      
+    @media #{$medium-up} {
+      padding: 4rem 2rem 6rem 2rem;
     }
   }
 }
@@ -29,5 +37,14 @@
       padding-left: 1rem;
       padding-right: 1rem;
     }  
+  }
+}
+
+.block-icon {
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  img {
+    border-bottom: 2px solid $primary;
   }
 }

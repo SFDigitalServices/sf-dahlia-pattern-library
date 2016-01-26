@@ -24,6 +24,7 @@
     .value-label {
       @include responsive-text-size('small');
       font-weight: 400;
+      white-space: nowrap;
     }
   }
 
@@ -144,16 +145,16 @@
 }
 
 .stats-toggle {
-  background-color: $tint;
+  background-color: $tint !important;
 
   .highlight {
-    color: $deep;
+    color: $dark;
   }
 
   .ui-icon {
     svg {
       use {
-        fill: $primary;
+        fill: $dark;
       }
     }
   }

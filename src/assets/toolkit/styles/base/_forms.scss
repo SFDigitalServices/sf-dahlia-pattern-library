@@ -6,13 +6,7 @@ form {
   font-family: $font-family;
 
   label {
-    @include responsive-text-size('small');
-    font-weight: 500;
-    text-transform: capitalize;
-
-    input, textarea, select {
-      margin-top: .5rem !important;
-    }
+    @extend .form-label;
   }
 }
 
@@ -22,6 +16,20 @@ label {
       border: 2px solid $alert;
     }
   }
+
+  small {
+    text-transform: none !important;
+  }
+}
+
+.form-label {
+  @include responsive-text-size('small');
+  font-weight: 500;
+  text-transform: none !important;
+
+  input, textarea, select {
+    margin-top: .5rem !important;
+  }
 }
 
 .radio-group {
@@ -29,6 +37,16 @@ label {
     label {
       text-transform: none;
     }
+  }
+}
+
+.has-radio {
+  input {
+    margin-bottom: 0 !important;
+  }
+
+  .radio-group {
+    margin-top: 1rem;
   }
 }
 

@@ -1,22 +1,20 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
-<section class="bg-mist">
+
+<section class="splash-header bg-image">
   <div class="row">
     {{> welcome-header }}
   </div>
 </section>  
 
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    {{> welcome-block }}
+<section class="row-flex collapse">
+  <div class="medium-6 columns">
+    {{> blocks.block-tall }}
+  </div>
 
-<!--     <div class="text-center">
-      <h4 class="t-epsilon t-sans c-steel">Select Language</h4>
-      {{> forms.language-actions }}
-    </div> -->
+  <div class="medium-6 columns bg-dust">
+    {{> blocks.block-tall--email }}
   </div>
 </section>
-
-{{> blocks.property-block--input }}
 
 {{> components.footer}}

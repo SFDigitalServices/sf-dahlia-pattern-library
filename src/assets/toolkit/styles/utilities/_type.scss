@@ -57,7 +57,7 @@ $align-class-breakpoints:
 $type-weight: (
   light: 300,
   regular: 400,
-  semi: 600,
+  semi: 500,
   bold: 700,
   black: 800
 );
@@ -233,6 +233,10 @@ $text-sizing: (
   text-transform: capitalize;
 }
 
+.t-shadow {
+  text-shadow: 1px 2px 5px rgba(0,0,0,.5);
+}
+
 .two-column {
   -moz-column-count: 2;
   -moz-column-gap: 50px;
@@ -249,4 +253,23 @@ $text-sizing: (
 
 .no-wrap {
   white-space: nowrap;
+}
+
+.sub-text {
+  margin-top: -.25rem;
+}
+
+.sr-only {
+  position:absolute; 
+  left:-10000px; 
+  top:auto; 
+  width:1px; 
+  height:1px; 
+  overflow:hidden;
+
+  &:focus {
+    position:static; 
+    width:auto; 
+    height:auto; 
+  }
 }

@@ -12,7 +12,8 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color: $color-white;
-  background-image: url('../images/arrow-down.svg');
+  // background-image: url('../images/arrow-down.png');
+  background-image: none, url('../images/arrow-down.svg'), url('../images/arrow-down.png');
   background-position: right .75rem center;
   background-repeat: no-repeat;
   background-size: .75rem;
@@ -31,13 +32,28 @@ input[type="radio"] {
   @include sr-only();
 
   .lt-ie9 & {
-    border: 0;
-    float: left;
-    margin: .4em .4em 0 0;
-    position: static;
-    width: auto;
+    // border: 0;
+    // float: left;
+    // margin: .4em .4em 0 0;
+    // position: static;
+    // width: auto;
   }
 }
+
+.ie9 {
+  input[type="radio"],
+  input[type="checkbox"] {
+    left: 0 !important;
+    position: relative !important;
+  }
+}
+
+// .lt-ie10 {
+//   input[type="checkbox"] {
+//     left: 0 !important;
+//     position: relative !important;
+//   }
+// }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
@@ -108,8 +124,78 @@ input[type="radio"]:disabled + label::before {
   cursor: not-allowed;
 }
 
+.radio-block,
+.checkbox-block {
+  position: relative;
+
+  input[type="radio"] + label::before,
+  input[type="checkbox"] + label::before {
+    position: absolute;
+    top: .25rem;
+    left: .5rem;
+  }
+
+  &_label {
+    margin-left: 2.5rem !important;
+    line-height: 1.2;
+  }
+
+  &_note {
+    @include responsive-text-size('tiny');
+    display: inline-block;
+    margin-top: .25rem;
+  }
+}
+
 .input-editor {
   @include absolute(null,6px,6px,null);
   margin: 0;
   height: rem-calc(30);
+}
+
+// Memorable dates
+
+.form-date-of-birth {
+  label {
+    margin-top: 0;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; 
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.form-group-day, 
+.form-group-month, 
+.form-group-year {
+  float: left;
+  clear: none;
+  margin-right: 1rem;
+  width: 4rem;
+}
+
+.form-group-year {
+  width: 5rem;
+}
+
+
+.form-income {
+  position: relative;
+
+  &_input {
+    padding-left: 1.825rem !important;
+  }
+
+  .label-dollar {
+    @include absolute(.625rem,null,null,.825rem);
+    font-size: 1rem;
+    line-height: 1.625;
+  }
 }

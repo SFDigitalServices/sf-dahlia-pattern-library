@@ -1,14 +1,22 @@
+{{> headers.version-header }}
 {{> navigation.top-bar }}
-{{> navigation.sub-bar--edit }}
 
-<section class="row">
+<header class="lead-header shift-offset--bottom bg-attention-tint">
+  <div class="row">
+    <div class="large-12 columns">
+      <h1 class="lead-title t-beta">Household Income Calculator</h1>
+    </div>
+  </div>
+</header>
+
+<section class="row shift--top">
   <div class="medium-8 columns">
-    <form class="padding-top padding-bottom no-margin">
-      <div class="row">
+    <form class="form-card">
+      <header class="row margin-bottom">
         <div class="large-12 columns">
-          <h1 class="gamma">Alright, here's your total annual income</h1>
+          <h1 class="gamma t-sans">Alright, here's your total annual income</h1>
         </div>
-      </div>
+      </header>
 
       <div class="row">
         <div class="large-12 columns">
@@ -18,24 +26,21 @@
           </div>
         </div>
       </div>
+
+      <hr class="hr-5 tall">
+
+      <section class="row margin-top--2x">
+        <div class="medium-12 columns">
+          <p>
+            Total Household Income
+            <span class="t-bold right">$25,200/yr</span>
+          </p>
+
+          {{> forms.button-stack--paginate}}
+       </div>
+      </section>
     </form>
-   </div>
- </section>
+  </div>
+</section>
 
-<hr class="hr-5">
-
-<section class="row margin-top--2x">
-  <div class="medium-8 columns">
-    <div class="row">
-      <div class="large-12 columns">
-        <p>
-          Total Household Income
-          <span class="t-bold right">$25,200/yr</span>
-        </p>
-      </div>
-    </div>  
-
-    {{> forms.button-stack--paginate}}
-  </form>
- </div>
-</section>  
+{{> components.footer}}  

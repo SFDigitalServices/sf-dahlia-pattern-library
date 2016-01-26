@@ -6,8 +6,8 @@
     border-bottom: 1px solid $smoke;
 
     @media #{$medium-up} {
-      border-bottom: 1px solid $steel;
-      margin-bottom: 2rem; 
+      border-bottom: 1px solid $gainsboro;
+      margin-bottom: 1rem; 
     }
   }
 
@@ -16,20 +16,30 @@
     @media #{$medium-up} {
       padding-top: .9375rem;
       margin: 0 .9375rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 
   &--expanded {
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
-    padding: 1rem;
+    padding: 0 1rem;
+    padding-top: 1rem;
   }
 
   &--full {
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
     margin-top: -1rem;
+  }
+
+  // remove on merge
+  .stats-card {
+    background: $mist;
+
+    @media #{$medium-up} {
+      background: $white;
+    }
   }
 }
 
@@ -63,5 +73,26 @@
     padding-top: .9375rem;
     margin: 0 .9375rem;
     margin-bottom: 2rem;
+  }
+}
+
+.application-options {
+  background-color: $dust;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+
+  @media #{$medium-up} {
+    background-color: $white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }  
+
+  .option-group {
+    padding: 1rem 1rem 0;
+
+    @media #{$medium-up} {
+      border-bottom: 1px solid $steel;
+    }  
   }
 }

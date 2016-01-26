@@ -1,0 +1,145 @@
+<!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup --> 
+
+<dl class="property-accordion accordion" data-accordion>
+  <dd class="accordion-navigation accordion-process">
+    <a href="#panel2a" class="accordion-header lead">Results
+      <span class="accordion-subheader">Lottery selection, important dates and contact</span>
+      {{> icons.icon-arrow}}
+    </a>
+    <div id="panel2a" class="content content-section">
+      <div class="show-for-medium-up margin-bottom">
+        <p class="post-dealine_alert margin-top--half margin-bottom">
+          <span class="label alert">Applications Closed</span>
+        </p>
+      </div>
+
+      <section class="content-wrap">
+        <div class="content-panel content-lead padding-bottom no-margin border-bottom">
+          <h4 class="t-small t-sans t-bold">Lottery Results</h4>
+          
+          <ul class="result-set margin-bottom">
+            <li>
+              Rank
+              <span class="right">Ticket</span>
+            </li>
+            <li>
+              1 
+              <span class="right">843219</span>
+            </li>
+            <li>
+              1 
+              <span class="right">843219</span>
+            </li>
+            <li>
+              1 
+              <span class="right">843219</span>
+            </li>
+            <li>
+              1 
+              <span class="right">843219</span>
+            </li>
+          </ul>
+
+          <p class="c-steel t-small">Out of 50 applications, 20 numbers were pulled.</p>
+        </div>
+
+        <div class="content-panel padding-bottom no-margin border-bottom">
+          <h4 class="t-small t-sans t-bold">What to Expect</h4>
+          <p class="c-steel t-small">You will be contacted by developer in lottery rank order.</p>
+          <p class="c-steel t-small">Be prepared to have your application reviewed and eligibility confirmed.</p>
+        </div>
+
+        <div class="content-panel padding-bottom">
+          <h4 class="t-small t-sans t-bold">Contact Property Manager</h4>
+          <a href="#" class="margin-bottom--half">
+            <span class="ui-icon ui-medium i-primary">
+              <svg>
+                <use xlink:href="#i-phone"></use>
+              </svg>
+            </span>
+
+            Call (415) 928-5910
+          </a>
+
+          <p class="t-small c-steel">Due to high call valume you may hear a message</p>
+          <a href="#" class="">
+            <span class="ui-icon ui-medium i-primary">
+              <svg>
+                <use xlink:href="#i-mail"></use>
+              </svg>
+            </span>
+            
+            Email
+          </a>
+        </div>
+      </section>  
+    </div>
+
+  </dd>
+
+  <dd class="accordion-navigation">
+    <a href="#panel1a" class="accordion-header lead">Eligibility
+      <span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
+      {{> icons.icon-arrow}}
+    </a>
+
+    <header class="content-header show-for-medium-up">
+      <span class="t-delta t-serif">Eligibility</span>
+      <span class="accordion-subheader">Income, occupancy, preferences, and subsidies</span>
+    </header>
+
+    {{> property-accordion.content-section--eligibility}}
+  </dd>
+
+  <dd class="accordion-navigation">
+    <a href="#panel3a" class="accordion-header lead">Features
+      <span class="accordion-subheader">Amenities, unit details and additional fees</span>
+      {{> icons.icon-arrow}}
+    </a>
+
+    <header class="content-header show-for-medium-up">
+      <span class="t-delta t-serif">Features</span>
+      <span class="accordion-subheader">Amenities, unit details and additional fees</span>
+    </header>
+
+    {{> property-accordion.content-section--features}}
+  </dd>
+  <dd class="accordion-navigation">
+    <a href="#panel4a" class="accordion-header lead">Neighborhood
+      <span class="accordion-subheader">Location and transportation</span>
+      {{> icons.icon-arrow}}
+    </a>
+
+    <header class="content-header show-for-medium-up">
+      <span class="t-delta t-serif">Neighborhood</span>
+      <span class="accordion-subheader">Location and transportation</span>
+    </header>
+
+    <div id="panel4a" class="content content-section">
+      <div class="property-map map-panel content-panel--full">
+        <figure class="property-map_figure p-relative">
+          <img class="property-map_thumb" src="/assets/toolkit/images/map.png" alt="image of map">
+          <a href="#" class="map-link ui-link">
+            {{> icons.icon-map}}
+            Get Directions
+          </a>
+        </figure>
+      </div>
+    </div>
+  </dd>
+  <dd class="accordion-navigation">
+    <a href="#panel5a" class="accordion-header lead">Legal
+      <span class="accordion-subheader">Required documents and selection criteria</span>
+      {{> icons.icon-arrow}}
+    </a>
+
+    <header class="content-header show-for-medium-up">
+      <span class="t-delta t-serif">Legal</span>
+      <span class="accordion-subheader">Required documents and selection criteria</span>
+    </header>
+
+    <div id="panel5a" class="content content-section">
+      {{> components.accordion-nested}}
+    </div>
+  </dd>
+</dl>

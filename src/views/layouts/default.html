@@ -1,11 +1,13 @@
 <!doctype html>
-<html>
+<!--[if IE 9 ]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if !(IE 9)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{title}}</title>
+	<!-- <title>{{title}}</title> -->
+	<title>Pattern Library</title>
 
 	{{#if fabricator}}<link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
 
@@ -14,7 +16,8 @@
 	<!-- /toolkit styles -->
 
 </head>
-<body>
+
+<body ng-app="dahlia" id="ng-app">
 	{{> icons}}
 
 	{{#if fabricator}}
@@ -23,7 +26,6 @@
 		<div class="f-container">
 			{{> f-control-bar}}
 	{{/if}}
-
 
 	{% body %}
 

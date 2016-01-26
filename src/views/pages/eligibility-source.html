@@ -1,17 +1,17 @@
+{{> headers.version-header }}
 {{> navigation.top-bar }}
-<!-- {{> navigation.sub-bar--edit }} -->
 
 <header class="lead-header shift-offset--bottom bg-attention-tint">
   <div class="row">
     <div class="large-12 columns">
       <h1 class="lead-title t-beta">Household Income Calculator</h1>
-<!--       <p class="no-margin"><a href="#" class="button small">Clear</a> -->
     </div>
   </div>
 </header>
 
 <section class="row shift--top">
   <div class="medium-8 columns">
+    
     <form class="form-card">
       <div class="row">
         <div class="medium-12 columns margin-bottom--2x">
@@ -33,6 +33,7 @@
         <div class="medium-12 columns padding-top padding-bottom">
           <label>Where is this income from?
             <select>
+              <option value="select">Select One</option>
               <option value="wages">Wages</option>
               <option value="social security">Social Security</option>
               <option value="disability">Disability</option>
@@ -64,4 +65,6 @@
       {{> forms.button-stack--paginate}}
     </div>
   </form>
-</section>    
+</section>
+
+{{> components.footer}}  

@@ -1,0 +1,24 @@
+.footer-section {
+  .city-logo {
+    max-width: rem-calc(120);
+  }
+
+  .inline-list {
+    @media #{$small-only} {
+      margin-top: 1rem;
+
+      width: -webkit-fit-content;
+       width: -moz-fit-content;
+            width: fit-content;
+
+       > li {
+        margin-left: .6rem;
+        margin-right: .6rem;
+       }     
+    }
+
+    @media #{$medium-up} {
+      float: right;
+    }
+  }
+}

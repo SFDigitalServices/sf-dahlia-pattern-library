@@ -1,0 +1,10 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/touchevents",
+    "test/css/transitions"
+  ]
+}

@@ -6,9 +6,11 @@
   "main": "README.md",
   "scripts": {
     "gulp": "gulp",
+    "bower": "bower",
     "prestart": "npm install",
     "build": "npm install && gulp",
     "start": "gulp --dev",
+    "postinstall": "bower install",
     "test": "npm run build"
   },
   "keywords": [
@@ -31,8 +33,10 @@
     "npm": ">=2.0.0"
   },
   "devDependencies": {
+    "angular": "^1.4.8",
     "babel-core": "^5.2.17",
     "babel-loader": "5.0.0",
+    "bower": "^1.7.2",
     "browser-sync": "^2.7.1",
     "del": "^1.1.1",
     "fabricator-assemble": "^1.1.7",

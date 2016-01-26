@@ -1,0 +1,16 @@
+.page-content {
+  margin: 2rem 0 4rem;
+
+  ul {
+    margin-left: 1.5rem;
+
+    li {
+      list-style: disc;
+      margin-bottom: 1rem;
+    }
+  }
+
+  hr {
+    background: $smoke;
+  }
+}
