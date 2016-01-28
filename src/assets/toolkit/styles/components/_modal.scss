@@ -12,8 +12,11 @@
   }
 
   &_scroll {
-    max-height: rem-calc(400);
-    overflow-y: auto;
     position: relative;
+
+    @media #{$medium-up} {
+      max-height: rem-calc(500);
+      overflow-y: auto;
+    }
   }
 }

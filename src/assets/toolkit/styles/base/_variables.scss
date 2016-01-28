@@ -236,6 +236,10 @@ $include-html-global-classes: $include-html-classes;
 $fieldset-border-width: 0;
 $form-label-small-transform: capitalize;
 $fieldset-padding: 0;
+$form-spacing: rem-calc(20);
+$form-label-font-size: rem-calc(16);
+$input-placeholder-font-color: $steel;
+$input-font-size: rem-calc(16);
 
 /* Buttons */
 
@@ -285,7 +289,6 @@ $input-error-message-font-color: $alert;
 $input-error-message-bg-color: transparent;
 $input-error-message-font-color-alt: $oil !default;
 
-$form-spacing: rem-calc(20);
-$form-label-font-size: rem-calc(16);
-$input-placeholder-font-color: $steel;
-$input-font-size: rem-calc(16);
+// Modal
+$reveal-max-width: rem-calc(720);
+$reveal-modal-padding: rem-calc(20);
