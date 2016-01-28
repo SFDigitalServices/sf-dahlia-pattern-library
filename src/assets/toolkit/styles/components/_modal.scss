@@ -1,4 +1,10 @@
+.reveal-modal {
+  background-color: #eee;
+}
+
 .overflow-panel {
+  border: 1px solid $smoke;
+  
   &_header {
     @include responsive-text-size('tiny');
     @include type-weight(bold);
@@ -12,11 +18,17 @@
   }
 
   &_scroll {
+    background-color: #fff;
     position: relative;
 
     @media #{$medium-up} {
       max-height: rem-calc(500);
       overflow-y: auto;
     }
+  }
+
+  .result-set {
+    padding-left: .5rem;
+    padding-right: .5rem;
   }
 }
