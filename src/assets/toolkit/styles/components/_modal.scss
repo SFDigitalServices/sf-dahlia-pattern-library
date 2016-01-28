@@ -1,0 +1,19 @@
+.overflow-panel {
+  &_header {
+    @include responsive-text-size('tiny');
+    @include type-weight(bold);
+    background-color: $smoke;
+    overflow: hidden;
+    text-transform: uppercase;
+
+    .header {
+      padding: .75rem;
+    }
+  }
+
+  &_scroll {
+    max-height: rem-calc(400);
+    overflow-y: auto;
+    position: relative;
+  }
+}
