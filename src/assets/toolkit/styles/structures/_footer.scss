@@ -12,9 +12,14 @@
             width: fit-content;
 
        > li {
-        margin-left: .6rem;
-        margin-right: .6rem;
-       }     
+        // margin-left: .6rem;
+        // margin-right: .6rem;
+
+        display: block;
+        float: none;
+        padding: 1rem;
+        margin-left: 0;
+       }   
     }
 
     @media #{$medium-up} {

@@ -5,8 +5,10 @@
 }
 
 .splash-message {
-  padding-top: 2rem;
-  
+  @media #{$medium-up} {
+    padding-top: 2rem;
+  }
+
   &_panel {
     background-color: $dust;
     padding: 2rem;
@@ -14,10 +16,11 @@
 
   p {
     line-height: 1.5em;
-  }
+    margin-bottom: 1rem;
 
-  .button {
-
+    @media #{$medium-up} {
+      margin-bottom: 0;
+    }  
   }
 }
 
@@ -26,13 +29,21 @@
     .block--tall {
       padding-top: 3rem;
       padding-bottom: 3rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+      
+      @media #{$medium-up} {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
     }
 
     &:nth-child(1) {
       .welcome-block {
-        border-right: 2px solid $dust;
+        border-bottom: 2px solid $dust;
+
+        @media #{$medium-up} {
+          border-bottom: 0;
+          border-right: 2px solid $dust;
+        }
       }
     }  
   }
