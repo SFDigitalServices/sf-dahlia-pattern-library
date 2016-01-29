@@ -27,8 +27,12 @@
     }
   }
 
-  .result-set {
-    padding-left: .5rem;
-    padding-right: .5rem;
+  .result-set li {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
+}
+
+.close-reveal-modal {
+  text-transform: uppercase;
 }
