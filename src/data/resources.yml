@@ -39,3 +39,22 @@ locations:
   citystate: "San Francisco, CA 94102"
   phone: "415-865-5661"
   website: "sfcenter.org"
+
+chinese:
+- name: "Asian, Inc."
+  languages: 
+    - Cantonese
+    - Vietnamese
+  address: "167 Mission Street, 4th Floor"
+  citystate: "San Francisco, CA 94103"
+  phone: "415-928-5910"
+  website: "asianinc.org"
+
+espanol:
+- name: "Mission Economic Development Agency"
+  languages: 
+    - Spanish
+  address: "2301 Mission Street, Suite 301"
+  citystate: "San Francisco, CA 94103"
+  phone: "415-282-3334"
+  website: "medasf.org"

@@ -43,11 +43,7 @@
         </p>
         {{/if}}
         <div class="has-icon-left d-block">
-          <span class="ui-icon ui-medium">
-            <svg>
-              <use xlink:href="#i-map" />
-            </svg>
-          </span>
+          {{> icons.icon icon="map" }}
           <p class="offset-icon margin-bottom--half">
             {{address}}, <br>
             {{citystate}}
@@ -55,20 +51,12 @@
         </div>    
         <p>
           <a href="{{phone}}" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-phone" />
-              </svg>
-            </span>
+            {{> icons.icon icon="phone" }}
 
             Call {{phone}}
           </a>
           <a href="{{website}}" class="button-on-small">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-link" />
-              </svg>
-            </span>
+            {{> icons.icon icon="link" }}
 
             Visit Website
           </a>
