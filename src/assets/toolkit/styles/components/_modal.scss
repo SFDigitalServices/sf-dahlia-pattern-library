@@ -30,6 +30,11 @@
   .result-set li {
     padding-left: 1rem;
     padding-right: 1rem;
+    position: static;
+
+    .right {
+      padding-left: 1rem;
+    }
   }
 }
 
