@@ -1,0 +1,13 @@
+units:
+- type: "Studio"
+  minimum: "2,353"
+  rent: "941"
+  available: "20"
+- type: "1 Bedroom"
+  minimum: "2,685"
+  rent: "1,074"
+  available: "34"
+- type: "2 Bedroom"
+  minimum: "2,998"
+  rent: "1,199"
+  available: "39"
