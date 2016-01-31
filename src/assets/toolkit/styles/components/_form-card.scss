@@ -10,5 +10,19 @@
     padding: 2rem;
     box-shadow: 0px 3px 3px 2px rgba(0,0,0,.1);
     margin-bottom: 3rem;
-  }  
+  }
+
+  &.has-nav {
+    padding-top: 0;
+
+    @media #{$medium-up} {
+      padding-top: 1rem
+    }
+
+    .sub-nav {
+      margin-top: 0;
+      margin-left: -1rem;
+      margin-right: -1rem;  
+    }
+  }
 }

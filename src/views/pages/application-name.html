@@ -1,0 +1,31 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.application-header}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+
+      <div class="form-count">1 of 5</div>
+
+      <h2 class="application-title t-gamma">We’ll get started by getting some information about you. First, what’s your name?</h2>
+
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        {{> forms.text-input--base placeholder="First Name"}}
+        {{> forms.text-input--base placeholder="Last Name"}}
+      </div>
+
+      <div class="form-group">
+        <span class="form-label">Your Date of Birth</span>
+        {{> forms.input-dob}}
+      </div>
+
+      {{> forms.button-stack--paginate left="Save and finish later"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}

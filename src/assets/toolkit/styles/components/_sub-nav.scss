@@ -4,4 +4,8 @@
   a {
     color: $steel;
   }
+
+  dt, dd, li {
+    margin-left: rem-calc(10);
+  }
 }
