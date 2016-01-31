@@ -26,7 +26,6 @@ label {
   @include responsive-text-size('small');
   font-weight: 500;
   text-transform: none !important;
-  margin-bottom: .5rem;
 
   input, textarea, select {
     margin-top: .5rem !important;
@@ -38,6 +37,13 @@ label {
   color: $steel;
   font-weight: 800;
   margin-bottom: 1rem; 
+}
+
+.form-note {
+  @include responsive-text-size('small');
+  color: $steel;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 .radio-group {
