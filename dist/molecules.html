@@ -387,7 +387,7 @@
 												<a href="molecules.html#forms.checkbox-group--block">Checkbox Group  Block</a>
 											</li>
 											<li>
-												<a href="molecules.html#forms.checkbox-group-">Checkbox Group </a>
+												<a href="molecules.html#forms.checkbox-group">Checkbox Group</a>
 											</li>
 											<li>
 												<a href="molecules.html#forms.form-group--occupancy">Form Group  Occupancy</a>
@@ -396,10 +396,10 @@
 												<a href="molecules.html#forms.form">Form</a>
 											</li>
 											<li>
-												<a href="molecules.html#forms.income-source_item">Income Source Item</a>
+												<a href="molecules.html#forms.income-source--item">Income Source  Item</a>
 											</li>
 											<li>
-												<a href="molecules.html#forms.income-source_toggle">Income Source Toggle</a>
+												<a href="molecules.html#forms.income-source--toggle">Income Source  Toggle</a>
 											</li>
 											<li>
 												<a href="molecules.html#forms.input-address">Input Address</a>
@@ -687,6 +687,12 @@
 						</li>
 						<li>
 							<a href="pages/application-housing.html">Application Housing</a>
+						</li>
+						<li>
+							<a href="pages/application-income--add.html">Application Income  Add</a>
+						</li>
+						<li>
+							<a href="pages/application-income--edit.html">Application Income  Edit</a>
 						</li>
 						<li>
 							<a href="pages/application-income.html">Application Income</a>
@@ -1905,9 +1911,9 @@
 </div>
 
 		</div>
-		<div class="f-item-group" id="forms.checkbox-group-">
+		<div class="f-item-group" id="forms.checkbox-group">
 			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Checkbox Group </h3>
+				<h3 class="f-item-heading">Checkbox Group</h3>
 				<div class="f-item-controls">
 					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
@@ -2035,9 +2041,9 @@
 </div>
 
 		</div>
-		<div class="f-item-group" id="forms.income-source_item">
+		<div class="f-item-group" id="forms.income-source--item">
 			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Income Source Item</h3>
+				<h3 class="f-item-heading">Income Source  Item</h3>
 				<div class="f-item-controls">
 					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
@@ -2061,9 +2067,9 @@
 </div>
 
 		</div>
-		<div class="f-item-group" id="forms.income-source_toggle">
+		<div class="f-item-group" id="forms.income-source--toggle">
 			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Income Source Toggle</h3>
+				<h3 class="f-item-heading">Income Source  Toggle</h3>
 				<div class="f-item-controls">
 					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
@@ -2085,61 +2091,49 @@
 
 				<div class="income-source_nested bg-mist">
 
-					<div class="row">
-						<div class="large-12 columns padding-top">
-							<label class="form-label">Where is this income from?
+					<div class="form-group padding-top--2x">
+						<label class="form-label margin-bottom--half">Where does this income come from?</label>
+						<select name="options" id="options" class="selectpicker" data-width="auto">
+							<option value="">Select one</option>
+							<option value="0">Option 0</option>
+							<option value="1">Option 1</option>
+							<option value="2">Option 2</option>
+							<option value="3">Option 3</option>
+							<option value="4">Option 4</option>
+							<option value="5">Option 5</option>
+						</select>
+					</div>
 
-								<select name="source" ng-model="income.source" required="" class="ng-pristine ng-untouched ng-valid ng-valid-required">
-									<option value="Wages">
-										Wages
-									</option>
-									<option value="Social Security">
-										Social Security
-									</option>
-									<option value="Disability">
-										Disability
-									</option>
-									<option value="Unemployment">
-										Unemployment
-									</option>
-									<option value="Calworks">
-										CalWorks
-									</option>
-									<option value="Other">
-										Other
-									</option>
-								</select>
-							</label>
+					<div class="form-group margin-bottom--2x">
+						<label class="form-label margin-bottom--half">How much is the income?</label>
+						<div class="form-income">
+							<span class="label-dollar">$</span>
+							<input type="text" class="form-income_input" placeholder="Total all of your income sources" />
+						</div>
+						<div class="radio-group">
+							<p class="radio-block">
+								<input type="radio" name="income" value="income-month" id="income-month">
+								<label class="radio-block_label" for="income-month">
+									per month
+								</label>
+							</p>
+							<p class="radio-block">
+								<input type="radio" name="income" value="income-year" id="income-year">
+								<label class="radio-block_label" for="income-year">
+									per year
+								</label>
+							</p>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="large-12 columns margin-bottom has-radio">
-							<label class="form-label">How much is the income of this source?
-								<input name="value" ng-model="income.value" placeholder="$" required="" type="text" class="">
-							</label>
-							<div class="radio-group">
-								<p class="d-inline-block">
-									<input id="income_frequency_month_4" name="frequency_4" required="" type="radio" value="month" class="">
-									<label for="income_frequency_month_4"> per month</label>
-								</p>
-								<p class="d-inline-block">
-									<input id="income_frequency_year_4" name="frequency_4" required="" type="radio" value="year" class="">
-									<label for="income_frequency_year_4"> per year</label>
-								</p>
-							</div>
+					<div class="button-stack--paginate text-center row padding-top">
+						<div class="small-12 medium-6 medium-push-6 columns">
+							<button class="button expand">Save</button>
+						</div>
+						<div class="small-12 medium-6 medium-pull-6 columns">
+							<button class="button ghost-white expand">Delete</button>
 						</div>
 					</div>
-
-					<div class="button-stack--paginate text-center row">
-						<div class="small-6 medium-push-6 columns ng-scope">
-							<button class="button expand" type="button">Save</button>
-						</div>
-						<div class="small-6 medium-6 medium-pull-6 columns">
-							<button class="button blank expand" type="button">Delete</button>
-						</div>
-					</div>
-
 				</div>
 			</div>
 		</div>
@@ -2158,61 +2152,49 @@
 
 				&lt;div class=&quot;income-source_nested bg-mist&quot;&gt;
 
-					&lt;div class=&quot;row&quot;&gt;
-						&lt;div class=&quot;large-12 columns padding-top&quot;&gt;
-							&lt;label class=&quot;form-label&quot;&gt;Where is this income from?
+					&lt;div class=&quot;form-group padding-top--2x&quot;&gt;
+						&lt;label class=&quot;form-label margin-bottom--half&quot;&gt;Where does this income come from?&lt;/label&gt;
+						&lt;select name=&quot;options&quot; id=&quot;options&quot; class=&quot;selectpicker&quot; data-width=&quot;auto&quot;&gt;
+							&lt;option value=&quot;&quot;&gt;Select one&lt;/option&gt;
+							&lt;option value=&quot;0&quot;&gt;Option 0&lt;/option&gt;
+							&lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+							&lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+							&lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+							&lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+							&lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+						&lt;/select&gt;
+					&lt;/div&gt;
 
-								&lt;select name=&quot;source&quot; ng-model=&quot;income.source&quot; required=&quot;&quot; class=&quot;ng-pristine ng-untouched ng-valid ng-valid-required&quot;&gt;
-									&lt;option value=&quot;Wages&quot;&gt;
-										Wages
-									&lt;/option&gt;
-									&lt;option value=&quot;Social Security&quot;&gt;
-										Social Security
-									&lt;/option&gt;
-									&lt;option value=&quot;Disability&quot;&gt;
-										Disability
-									&lt;/option&gt;
-									&lt;option value=&quot;Unemployment&quot;&gt;
-										Unemployment
-									&lt;/option&gt;
-									&lt;option value=&quot;Calworks&quot;&gt;
-										CalWorks
-									&lt;/option&gt;
-									&lt;option value=&quot;Other&quot;&gt;
-										Other
-									&lt;/option&gt;
-								&lt;/select&gt;
-							&lt;/label&gt;
+					&lt;div class=&quot;form-group margin-bottom--2x&quot;&gt;
+						&lt;label class=&quot;form-label margin-bottom--half&quot;&gt;How much is the income?&lt;/label&gt;
+						&lt;div class=&quot;form-income&quot;&gt;
+							&lt;span class=&quot;label-dollar&quot;&gt;$&lt;/span&gt;
+							&lt;input type=&quot;text&quot; class=&quot;form-income_input&quot; placeholder=&quot;Total all of your income sources&quot; /&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;radio-group&quot;&gt;
+							&lt;p class=&quot;radio-block&quot;&gt;
+								&lt;input type=&quot;radio&quot; name=&quot;income&quot; value=&quot;income-month&quot; id=&quot;income-month&quot;&gt;
+								&lt;label class=&quot;radio-block_label&quot; for=&quot;income-month&quot;&gt;
+									per month
+								&lt;/label&gt;
+							&lt;/p&gt;
+							&lt;p class=&quot;radio-block&quot;&gt;
+								&lt;input type=&quot;radio&quot; name=&quot;income&quot; value=&quot;income-year&quot; id=&quot;income-year&quot;&gt;
+								&lt;label class=&quot;radio-block_label&quot; for=&quot;income-year&quot;&gt;
+									per year
+								&lt;/label&gt;
+							&lt;/p&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 
-					&lt;div class=&quot;row&quot;&gt;
-						&lt;div class=&quot;large-12 columns margin-bottom has-radio&quot;&gt;
-							&lt;label class=&quot;form-label&quot;&gt;How much is the income of this source?
-								&lt;input name=&quot;value&quot; ng-model=&quot;income.value&quot; placeholder=&quot;$&quot; required=&quot;&quot; type=&quot;text&quot; class=&quot;&quot;&gt;
-							&lt;/label&gt;
-							&lt;div class=&quot;radio-group&quot;&gt;
-								&lt;p class=&quot;d-inline-block&quot;&gt;
-									&lt;input id=&quot;income_frequency_month_4&quot; name=&quot;frequency_4&quot; required=&quot;&quot; type=&quot;radio&quot; value=&quot;month&quot; class=&quot;&quot;&gt;
-									&lt;label for=&quot;income_frequency_month_4&quot;&gt; per month&lt;/label&gt;
-								&lt;/p&gt;
-								&lt;p class=&quot;d-inline-block&quot;&gt;
-									&lt;input id=&quot;income_frequency_year_4&quot; name=&quot;frequency_4&quot; required=&quot;&quot; type=&quot;radio&quot; value=&quot;year&quot; class=&quot;&quot;&gt;
-									&lt;label for=&quot;income_frequency_year_4&quot;&gt; per year&lt;/label&gt;
-								&lt;/p&gt;
-							&lt;/div&gt;
+					&lt;div class=&quot;button-stack--paginate text-center row padding-top&quot;&gt;
+						&lt;div class=&quot;small-12 medium-6 medium-push-6 columns&quot;&gt;
+							&lt;button class=&quot;button expand&quot;&gt;Save&lt;/button&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;small-12 medium-6 medium-pull-6 columns&quot;&gt;
+							&lt;button class=&quot;button ghost-white expand&quot;&gt;Delete&lt;/button&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
-
-					&lt;div class=&quot;button-stack--paginate text-center row&quot;&gt;
-						&lt;div class=&quot;small-6 medium-push-6 columns ng-scope&quot;&gt;
-							&lt;button class=&quot;button expand&quot; type=&quot;button&quot;&gt;Save&lt;/button&gt;
-						&lt;/div&gt;
-						&lt;div class=&quot;small-6 medium-6 medium-pull-6 columns&quot;&gt;
-							&lt;button class=&quot;button blank expand&quot; type=&quot;button&quot;&gt;Delete&lt;/button&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
