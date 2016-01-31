@@ -131,7 +131,7 @@ input[type="radio"]:disabled + label::before {
   input[type="radio"] + label::before,
   input[type="checkbox"] + label::before {
     position: absolute;
-    top: .25rem;
+    top: .125rem;
     left: .5rem;
   }
 

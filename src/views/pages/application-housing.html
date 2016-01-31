@@ -10,17 +10,11 @@
 
       <div class="form-count">1 of 5</div>
 
-      <h2 class="application-title t-gamma padding-bottom">We’ll get started by getting some information about you. First, what’s your name?</h2>
-
-      <div class="form-group">
-        <label class="form-label margin-bottom--half">Your Name</label>
-        {{> forms.text-input--base placeholder="First Name"}}
-        {{> forms.text-input--base placeholder="Last Name"}}
-      </div>
+      <h2 class="application-title t-gamma">We’d like to ask about your current housing situation.</h2>
 
       <div class="form-group margin-bottom--2x">
-        <label class="form-label">Your Date of Birth</label>
-        {{> forms.input-dob}}
+        <p class="t-bold">Thinking about the past 30 days, what best describes your living situation?</p>
+        {{> forms.radio-group--block name="homeless" items=inputs.homeless}}
       </div>
 
       {{> forms.button-stack--paginate left="Save and finish later"}}

@@ -1,0 +1,36 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.application-header}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+
+      <div class="form-count">1 of 5</div>
+
+      <h2 class="application-title t-gamma">Let’s move on the final topic: income. We’ll ask about your income first and then move on to your household.</h2>
+
+      <div class="form-group padding-bottom--2x">
+        <p class="t-small c-steel">If you have more than one source of income, you’ll be able to add that on the next screen.</p>
+        <p class="t-small c-steel">You only need to provide estimated totals right now. Precise totals will be calculated, if you are selected in the lottery.</p>
+      </div>
+
+      <div class="form-group">
+         <label class="form-label margin-bottom--half">Where does this income come from?</label>
+        {{> forms.select}}
+      </div>
+
+      <div class="form-group margin-bottom--2x">
+        <label class="form-label margin-bottom--half">How much is the income?</label>
+        {{> forms.input-income}}
+        {{> forms.radio-group name="income" items=inputs.income}}
+      </div>
+
+      {{> forms.button-stack--paginate left="Save and finish later"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}

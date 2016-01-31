@@ -1,22 +1,25 @@
 <div class="radio-group">
+  {{#each items}}
   <p class="radio-block">
-    <input type="radio" name="pokemon" value="Red" id="pokemonRed">
-    <label class="radio-block_label" for="pokemonRed">
-      I’m renting a room, apartment, or house <br>
-      <span class="radio-block_note">This includes living in a supportive housing unit or SRO that you pay for.</span>
+    <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
+    <label class="radio-block_label" for="{{../name}}-{{value}}">
+      <strong>{{name}}</strong>
+      {{#if note}}
+      <span class="radio-block_note">{{note}}</span>
+      {{/if}}
     </label>
   </p>
-  <p class="radio-block">
-    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-    <label class="radio-block_label" for="pokemonBlue">
-      I live in an apartment or house that I own or a member of my household owns
-    </label>
-  </p>
-  <p class="radio-block">
-    <input type="radio" name="pokemon" value="Orange" id="pokemonOrange">
-    <label class="radio-block_label" for="pokemonOrange">
-      I have somewhere to stay but it isn’t permanent <br>
-      <span class="radio-block_note">This includes couchsurfing, or living in a motel/hotel that you pay for. It also includes people who have recieved an eviction notice, are living in a medical facility, a substance use treatment facility, or a jail.</span>
-    </label>
-  </p>
+  {{else}}
+    {{#each input.contacts}}
+      <p class="radio-block">
+        <input type="radio" name="pokemon" value="pokemon-{{value}}" id="pokemon-{{value}}">
+        <label class="radio-block_label" for="pokemon-{{value}}">
+          <strong>{{name}}</strong>
+          {{#if note}}
+          <span class="radio-block_note">{{note}}</span>
+          {{/if}}
+        </label>
+      </p>
+    {{/each}}
+  {{/each}}
 </div>

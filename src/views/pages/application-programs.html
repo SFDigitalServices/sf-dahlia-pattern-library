@@ -10,17 +10,10 @@
 
       <div class="form-count">1 of 5</div>
 
-      <h2 class="application-title t-gamma padding-bottom">We’ll get started by getting some information about you. First, what’s your name?</h2>
-
-      <div class="form-group">
-        <label class="form-label margin-bottom--half">Your Name</label>
-        {{> forms.text-input--base placeholder="First Name"}}
-        {{> forms.text-input--base placeholder="Last Name"}}
-      </div>
+      <h2 class="application-title t-gamma padding-bottom">There are some special programs we’d like to ask you about. Do you have any of the following?</h2>
 
       <div class="form-group margin-bottom--2x">
-        <label class="form-label">Your Date of Birth</label>
-        {{> forms.input-dob}}
+        {{> forms.checkbox-group--block name="preferences" items=inputs.preferences}}
       </div>
 
       {{> forms.button-stack--paginate left="Save and finish later"}}

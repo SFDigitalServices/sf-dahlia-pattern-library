@@ -1,4 +1,19 @@
 <div class="radio-group">
+  {{#each items}}
   <p class="radio-block">
+    <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
+    <label class="radio-block_label" for="{{../name}}-{{value}}">
+      {{name}}
+    </label>
   </p>
-</div>  
+  {{else}}
+    {{#each inputs.contacts}}
+      <p class="radio-block">
+        <input type="radio" name="pokemon" value="pokemon-{{value}}" id="pokemon-{{value}}">
+        <label class="radio-block_label" for="pokemon-{{value}}">
+          {{name}}
+        </label>
+      </p>
+    {{/each}}
+  {{/each}}
+</div>

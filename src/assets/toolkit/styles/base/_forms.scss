@@ -46,7 +46,8 @@ label {
   margin-bottom: 0;
 }
 
-.radio-group {
+.radio-group,
+.radio-group-inline {
   p {
     label {
       text-transform: none;
@@ -59,7 +60,8 @@ label {
     margin-bottom: 0 !important;
   }
 
-  .radio-group {
+  .radio-group,
+  .radio-group-inline {
     margin-top: 1rem;
   }
 }

@@ -1,0 +1,24 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.application-header}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+
+      <div class="form-count">1 of 5</div>
+
+      <h2 class="application-title t-gamma padding-bottom">Next, we’ll get some info about any people who would live with you in the unit.</h2>
+
+      <div class="form-group padding-bottom--2x">
+        {{> forms.button-stack left="I will live alone" right="Other people will live with me" classes="tall"}}
+      </div>
+
+      {{> buttons.button text="Save and finish later" classes="ghost-white expand"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}
