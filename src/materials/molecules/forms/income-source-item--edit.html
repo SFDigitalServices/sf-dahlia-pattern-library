@@ -1,0 +1,22 @@
+<div class="income-source">
+  <div class="income-source_item bg-tint margin-bottom">
+    <span class="income-source_name margin-bottom">Social Security: $200/month</span>
+    <a class="income-source_link">{{ default link "Edit" }}</a>
+
+    <div class="income-source_nested bg-tint">
+      
+      <div class="form-group padding-top--2x">
+        <label class="form-label margin-bottom--half">Where does this income come from?</label>
+        {{> forms.select}}
+      </div>
+
+      <div class="form-group margin-bottom--2x">
+        <label class="form-label margin-bottom--half">How much is the income?</label>
+        {{> forms.input-income}}
+        {{> forms.radio-group name="income" items=inputs.income}}
+      </div>
+
+      {{> forms.button-stack--paginate left="Delete" right="Save"}}
+    </div>
+  </div>
+</div>
