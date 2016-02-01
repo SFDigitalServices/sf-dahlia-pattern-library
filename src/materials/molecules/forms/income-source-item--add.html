@@ -2,7 +2,6 @@
   <div class="income-source_item add-item margin-bottom">
     {{> icons.base icon="plus" fill="deep"}}
     <span class="income-source_name margin-bottom">Add additional income source</span>
-    <a class="income-source_link">{{ default link "Edit" }}</a>  
 
     <div class="income-source_nested bg-tint">
       
@@ -17,7 +16,7 @@
         {{> forms.radio-group name="income" items=inputs.income}}
       </div>
 
-      {{> forms.button-stack--paginate left="Delete" right="Save"}}
+      {{> forms.button-stack--paginate left="Cancel" right="Save"}}
     </div>
   </div>
 </div>
