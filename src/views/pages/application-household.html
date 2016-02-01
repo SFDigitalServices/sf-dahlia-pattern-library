@@ -1,0 +1,25 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.application-header}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+
+      <div class="form-count">1 of 5</div>
+
+      <h2 class="application-title t-gamma padding-bottom">Tell us about your household.</h2>
+
+      <div class="form-group min-height--4x margin-bottom--2x">
+        {{> forms.user-item--editable}}
+        {{> buttons.link-icon text="Add household member" icon="plus" fill="deep" scale="medium" classes="expand tint"}}
+      </div>
+
+      {{> forms.button-stack--paginate left="Save and finish later" right="Done adding people"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}

@@ -1,0 +1,24 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.application-header}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+
+      <div class="form-count">1 of 5</div>
+
+      <h2 class="application-title t-gamma padding-bottom">Take a moment to review your information before submitting your application.</h2>
+
+      <div class="form-group margin-bottom--2x">
+        {{> forms.panel--editable}}
+      </div>
+
+      {{> forms.button-stack--paginate left="Save for later" right="Submit"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}

@@ -194,15 +194,15 @@ $text-sizing: (
 
 .t-serif {
   @include type-weight('regular');
-  font-family:$fancy-serif-font-family;
+  font-family:$fancy-serif-font-family !important;
 }
 
 .t-sans {
-  font-family:$sans-font-family;
+  font-family:$sans-font-family !important;
 }
 
 .t-alt-sans {
-  font-family: $alt-font-family;
+  font-family: $alt-font-family !important;
 }  
 
 .t-black {
