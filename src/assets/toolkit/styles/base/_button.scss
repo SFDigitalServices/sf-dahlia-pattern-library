@@ -174,5 +174,8 @@ button,
 }
 
 .button-group {
-
+  button,
+  .button {
+    line-height: rem-calc(18);
+  }  
 }
