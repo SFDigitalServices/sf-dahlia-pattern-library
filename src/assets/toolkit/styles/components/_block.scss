@@ -6,19 +6,21 @@
     margin-right: -0.9375rem;
   }
 
-  &--tall {
-    padding: 2rem;
-      
-    @media #{$medium-up} {
-      padding: 6rem 2rem;
-    }
-  }
-
   &--icon {
+    text-align: center;
     padding: 2rem;
       
     @media #{$medium-up} {
       padding: 4rem 2rem 6rem 2rem;
+    }
+  }
+
+  &--tall {
+    text-align: center;
+    padding: 2rem;
+      
+    @media #{$medium-up} {
+      padding: 6rem 2rem;
     }
   }
 }

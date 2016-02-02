@@ -10,10 +10,10 @@
     </label>
   </p>
   {{else}}
-    {{#each input.contacts}}
+    {{#each inputs.homeless}}
       <p class="radio-block">
-        <input type="radio" name="pokemon" value="pokemon-{{value}}" id="pokemon-{{value}}">
-        <label class="radio-block_label" for="pokemon-{{value}}">
+        <input type="radio" name="homeless" value="homeless-{{value}}" id="homeless-{{value}}">
+        <label class="radio-block_label" for="homeless-{{value}}">
           <strong>{{name}}</strong>
           {{#if note}}
           <span class="radio-block_note">{{note}}</span>

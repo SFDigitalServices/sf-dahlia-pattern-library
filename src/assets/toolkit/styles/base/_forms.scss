@@ -25,7 +25,7 @@ label {
 .form-label {
   @include responsive-text-size('small');
   font-weight: 500;
-  text-transform: none !important;
+  text-transform: none;
 
   input, textarea, select {
     margin-top: .5rem !important;
@@ -39,43 +39,15 @@ label {
   margin-bottom: 1rem; 
 }
 
+.form-group {
+  label {
+    @extend .form-label;
+  }
+}
+
 .form-note {
   @include responsive-text-size('small');
   color: $steel;
   font-weight: 500;
   margin-bottom: 0;
-}
-
-.radio-group,
-.radio-group-inline {
-  p {
-    label {
-      text-transform: none;
-    }
-  }
-}
-
-.has-radio {
-  input {
-    margin-bottom: 0 !important;
-  }
-
-  .radio-group,
-  .radio-group-inline {
-    margin-top: 1rem;
-  }
-}
-
-.has-options {
-  margin-bottom: .5rem !important;
-}
-
-.p-relative {
-  position: relative;
-
-  .has-tip {
-    &.tip-top-right {
-      @include absolute(0,0,null,null);
-    }
-  }
 }
