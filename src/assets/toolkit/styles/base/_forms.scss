@@ -10,9 +10,22 @@ form {
   }
 }
 
-label {
+label,
+.form-group {
+  #{text-inputs(all, 'input')},
+  select,
+  textarea {
+    margin: .5rem 0 $form-spacing 0;
+
+    &.error {
+      margin-bottom: 0;
+    }  
+  }
+
   &.error {
-    input.error {
+    input.error,
+    select.error,
+    textarea.error {
       border: 2px solid $alert;
     }
   }
@@ -22,32 +35,28 @@ label {
   }
 }
 
-.form-label {
-  @include responsive-text-size('small');
-  font-weight: 500;
-  text-transform: none;
-
-  input, textarea, select {
-    margin-top: .5rem !important;
-  }
-}
-
-.form-count {
-  @include responsive-text-size('small');
-  color: $steel;
-  font-weight: 800;
-  margin-bottom: 1rem; 
-}
-
 .form-group {
   label {
     @extend .form-label;
   }
 }
 
+.form-label {
+  @include responsive-text-size('small');
+  @include type-weight(semi);
+  text-transform: none;
+}
+
 .form-note {
   @include responsive-text-size('small');
+  @include type-weight(semi);
   color: $steel;
-  font-weight: 500;
   margin-bottom: 0;
+}
+
+.form-count {
+  @include responsive-text-size('small');
+  @include type-weight(bold);
+  color: $steel;
+  margin-bottom: 1rem; 
 }

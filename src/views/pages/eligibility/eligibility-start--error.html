@@ -1,16 +1,7 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<header class="lead-header shift-offset--bottom bg-attention-tint">
-  <div class="row">
-    <div class="medium-8 columns">
-      <h1 class="lead-title t-beta">Estimate Your Eligibility</h1>
-      <div class="show-for-medium-up">
-        <p class="t-gamma t-light">Enter details about your household size and income and we'll highlight properties for which you may be eligible.</p>
-      </div>
-    </div>
-  </div>
-</header>
+{{> headers.lead-header title="Estimate Your Eligibility" description="Enter details about your household size and income and we'll highlight properties for which you may be eligible." classes="shift-offset--bottom"}}
 
 <section class="row shift--top">
   <div class="medium-8 columns">
@@ -19,11 +10,20 @@
         <div class="medium-12 columns margin-bottom">
             {{> forms.alert-box }}
           <div class="border-bottom padding-bottom">
-            <h3 class="t-sans gamma margin-bottom--half">
+            <h3 class="t-sans gamma">
               How many people are you applying to live with?
             </h3>  
 
-            {{> forms.select--occupancy }}
+            <div class="form-group error">
+              <label class="form-label t-caps">Household Size</label>
+              {{> forms.select name="people" placeholder="Enter number of people" options=inputs.people classes="error"}}
+               <small class="error">Please enter a household size</small>
+            </div>
+
+            <div class="form-group padding-bottom--half">
+              {{> forms.checkbox text="Yes, this includes children under 6"}}
+            </div>
+
           </div>
         </div>
       </div>
@@ -34,20 +34,14 @@
             Next add up your income from wages, benefits and other sources.
           </h3>
 
-          <label class="error">
-            <span class="form-label t-caps">Household Income</span>
-            <input type="text" placeholder="Total all of your income sources" class="error" />
-          </label>
-          <small class="error">Please enter an income amount</small>
-
-          <div class="radio-group">
-            <p class="d-inline-block no-margin">
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">per month</label>
-            </p>
-            <p class="d-inline-block no-margin">
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">per year</label>
-            </p>
+          <div class="form-group error">
+            <label class="form-label t-caps">Household Income</label>
+            {{> forms.input-income classes="error"}}
+            <small class="error">Please enter an income amount</small>
           </div>
+
+          {{> forms.radio-group--inline }}
+
         </div>  
         <div class="medium-12 columns">
           <div class="note bg-tint padding margin-bottom--2x">
@@ -59,14 +53,7 @@
         </div>
       </div>
           
-      <div class="row text-center">
-        <div class="small-12 medium-6 medium-push-6 columns">
-          <button class="button expand">View Matching Properties</button>
-        </div>
-        <div class="small-12 medium-6 medium-pull-6 columns">
-          <button class="button blank expand-small">Reset Filters</button>
-        </div>
-      </div>
+      {{> forms.button-stack--paginate left="Reset Filters" right="View Matching Properties"}}
     </form>
   </div> 
 </section>

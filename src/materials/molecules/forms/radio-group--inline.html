@@ -1,10 +1,15 @@
-<div class="radio-group inline">
-  <p class="d-inline-block">
-    <input type="radio" name="pokemon" value="Red" id="pokemonRed">
-    <label for="pokemonRed">per month</label>
+<div class="radio-group-inline">
+  {{#each items}}
+  <p class="radio-inline">
+    <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
+    <label class="radio-inline_label" for="{{../name}}-{{value}}">
   </p>
-  <p class="d-inline-block">
-    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-    <label for="pokemonBlue">per year</label>
-  </p>
+  {{else}}
+    {{#each inputs.income}}
+     <p class="radio-inline">
+      <input type="radio" name="income" value="income-{{value}}" id="income-{{value}}">
+      <label class="radio-inline_label" for="income-{{value}}">{{name}}</label>
+    </p>
+    {{/each}}
+  {{/each}}
 </div>

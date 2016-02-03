@@ -30,14 +30,6 @@ label {
 input[type="checkbox"],
 input[type="radio"] {
   @include sr-only();
-
-  .lt-ie9 & {
-    // border: 0;
-    // float: left;
-    // margin: .4em .4em 0 0;
-    // position: static;
-    // width: auto;
-  }
 }
 
 .ie9 {
@@ -47,13 +39,6 @@ input[type="radio"] {
     position: relative !important;
   }
 }
-
-// .lt-ie10 {
-//   input[type="checkbox"] {
-//     left: 0 !important;
-//     position: relative !important;
-//   }
-// }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
@@ -160,6 +145,14 @@ input[type="radio"]:disabled + label::before {
   }
 }
 
+.radio-group-inline {
+  .radio-inline {
+    @media #{$medium-up} {
+      display: inline-block;
+    }
+  }
+}
+
 .has-radio {
   input {
     margin-bottom: 0 !important;
@@ -230,14 +223,4 @@ input[type="radio"]:disabled + label::before {
 
 .has-options {
   margin-bottom: .5rem !important;
-}
-
-.p-relative {
-  position: relative;
-
-  .has-tip {
-    &.tip-top-right {
-      @include absolute(0,0,null,null);
-    }
-  }
 }

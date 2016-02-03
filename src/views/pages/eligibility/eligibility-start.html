@@ -1,16 +1,7 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<header class="lead-header shift-offset--bottom bg-attention-tint">
-  <div class="row">
-    <div class="medium-8 columns">
-      <h1 class="lead-title t-beta">Estimate Your Eligibility</h1>
-      <div class="show-for-medium-up">
-        <p class="t-gamma t-light">Enter details about your household size and income and we'll highlight properties for which you may be eligible.</p>
-      </div>
-    </div>
-  </div>
-</header>
+{{> headers.lead-header title="Estimate Your Eligibility" description="Enter details about your household size and income and we'll highlight properties for which you may be eligible." classes="shift-offset--bottom"}}
 
 <section class="row shift--top">
   <div class="medium-8 columns">
@@ -18,12 +9,33 @@
       <div class="row">
         <div class="medium-12 columns margin-bottom">
           <div class="border-bottom padding-bottom">
-            <h3 class="t-sans gamma margin-bottom--half">
+            <header class="margin-bottom">
+              <h3 class="t-sans gamma margin-bottom--half">
               How many people are you applying to live with?
-            </h3>
-            <p class="show-for-medium-up c-steel margin-bottom--2x">Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.</p>
 
-            {{> forms.form-group--occupancy }}
+              <span data-tooltip class="small-info has-tip tip-top-right" title="Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.">
+                {{> icons.base icon="info" fill="primary"}}
+              </span>
+
+              </h3>
+              <p class="show-for-medium-up c-steel">Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.</p>
+              
+            </header>
+
+            <div class="form-group has-tip-top-right">
+              <label class="form-label t-caps">Household Size
+              </label>
+
+              {{> forms.select name="people" placeholder="Enter number of people" options=inputs.people }}
+            </div>
+
+            <div class="form-group padding-bottom--half">
+              {{> forms.checkbox text="Yes, this includes children under 6"}}
+            </div>
+
+            <div class="form-group">
+              {{> forms.select name="children" placeholder="How many children?" options=inputs.children }}
+            </div>
           </div>
         </div>
       </div>
@@ -34,19 +46,21 @@
             Next add up your gross (pre-tax) household income from wages, benefits and other sources from household members.
           </h3>
 
-          <label>
-            <span class="form-label t-caps">Household Income</span>
+          <div class="form-group">
+            <label class="form-label t-caps">Household Income</label>
             {{> forms.input-income }}
-          </label>
+          </div>
           
-          <div class="radio-group">
+          {{> forms.radio-group--inline }}
+
+          <!-- <div class="radio-group inline">
             <p class="d-inline-block no-margin">
               <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">per month</label>
             </p>
             <p class="d-inline-block no-margin">
               <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">per year</label>
             </p>
-          </div>
+          </div> -->
         </div>
         <div class="medium-12 columns">
           <div class="note bg-tint padding margin-bottom--2x">
@@ -57,14 +71,7 @@
         </div>
       </div>
 
-      <div class="row text-center">
-        <div class="small-12 medium-6 medium-push-6 columns">
-          <button class="button expand">View Matching Properties</button>
-        </div>
-        <div class="small-12 medium-6 medium-pull-6 columns">
-          <button class="button blank expand">Reset Filters</button>
-        </div>
-      </div>
+      {{> forms.button-stack--paginate left="Reset Filters" right="View Matching Properties"}}
     </form>
    </div> 
 </section>
