@@ -807,6 +807,12 @@
 <a class="button oil" href="javascript:void(0)" role="button">a.oil</a>
 <br>
 
+<h2 class="gamma t-sans">.ghost-white</h2>
+
+<button class="ghost-white" type="button">button.ghost-white</button>
+<a class="button ghost-white" href="javascript:void(0)" role="button">a.ghost-white</a>
+<br>
+
 <h2 class="gamma t-sans">.small</h2>
 
 <button class="small" type="button">button.small</button>
@@ -817,6 +823,12 @@
 
 <button class="tiny" type="button">button.tiny</button>
 <a class="button tiny" href="javascript:void(0)" role="button">a.tiny</a>
+<br>
+
+<h2 class="gamma t-sans">.disabled</h2>
+
+<button class="disabled" type="button">button.disabled</button>
+<a class="button disabled" href="javascript:void(0)" role="button">a.disabled</a>
 <br>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
@@ -838,6 +850,12 @@
 &lt;a class=&quot;button oil&quot; href=&quot;javascript:void(0)&quot; role=&quot;button&quot;&gt;a.oil&lt;/a&gt;
 &lt;br&gt;
 
+&lt;h2 class=&quot;gamma t-sans&quot;&gt;.ghost-white&lt;/h2&gt;
+
+&lt;button class=&quot;ghost-white&quot; type=&quot;button&quot;&gt;button.ghost-white&lt;/button&gt;
+&lt;a class=&quot;button ghost-white&quot; href=&quot;javascript:void(0)&quot; role=&quot;button&quot;&gt;a.ghost-white&lt;/a&gt;
+&lt;br&gt;
+
 &lt;h2 class=&quot;gamma t-sans&quot;&gt;.small&lt;/h2&gt;
 
 &lt;button class=&quot;small&quot; type=&quot;button&quot;&gt;button.small&lt;/button&gt;
@@ -848,6 +866,12 @@
 
 &lt;button class=&quot;tiny&quot; type=&quot;button&quot;&gt;button.tiny&lt;/button&gt;
 &lt;a class=&quot;button tiny&quot; href=&quot;javascript:void(0)&quot; role=&quot;button&quot;&gt;a.tiny&lt;/a&gt;
+&lt;br&gt;
+
+&lt;h2 class=&quot;gamma t-sans&quot;&gt;.disabled&lt;/h2&gt;
+
+&lt;button class=&quot;disabled&quot; type=&quot;button&quot;&gt;button.disabled&lt;/button&gt;
+&lt;a class=&quot;button disabled&quot; href=&quot;javascript:void(0)&quot; role=&quot;button&quot;&gt;a.disabled&lt;/a&gt;
 &lt;br&gt;</code></pre>
 </div>
 
@@ -856,21 +880,14 @@
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Button  Icons</h3>
 				<div class="f-item-controls">
-					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-						<svg>
-							<use xlink:href="#f-icon-notes" />
-						</svg>
-					</span>
+					
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
 							<use xlink:href="#f-icon-code" />
 						</svg>
 					</span>
 				</div>
-			</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with this <code>button icon</code> component.</p>
-
-</div>
+			</div>
 <div class="f-item-preview">
 	<button class="has-icon">
 	<span class="ui-control ui-icon ui-small">
@@ -1400,14 +1417,21 @@
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Input Dob</h3>
 				<div class="f-item-controls">
-					
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
 							<use xlink:href="#f-icon-code" />
 						</svg>
 					</span>
 				</div>
-			</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Custom checkboxes cannot be nested within labels.</p>
+
+</div>
 <div class="f-item-preview">
 	<div class="date-of-birth row collapse">
 	<div class="form-group-month large-2 columns">
@@ -1461,21 +1485,15 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	<div class="form-email">
 	<div class="form-group-email">
-		<label for="email"><span class="sr-only">Email Address</span>
-			<input type="email" placeholder="you@myemail.com" />
-		</label>
-	</div>
+	<label for="email" class="">Email Address</label>
+	<input type="email" placeholder="you@myemail.com" />
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;form-email&quot;&gt;
-	&lt;div class=&quot;form-group-email&quot;&gt;
-		&lt;label for=&quot;email&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;Email Address&lt;/span&gt;
-			&lt;input type=&quot;email&quot; placeholder=&quot;you@myemail.com&quot; /&gt;
-		&lt;/label&gt;
-	&lt;/div&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;form-group-email&quot;&gt;
+	&lt;label for=&quot;email&quot; class=&quot;&quot;&gt;Email Address&lt;/label&gt;
+	&lt;input type=&quot;email&quot; placeholder=&quot;you@myemail.com&quot; /&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -1493,21 +1511,15 @@
 				</div>
 			</div>
 <div class="f-item-preview">
-	<div class="form-telephone">
 	<div class="form-group-tel">
-		<label for="tel_1">Your phone number
-			<input type="tel" placeholder="555-555-5555" />
-		</label>
-	</div>
+	<label for="tel_1" class="">Your phone number</label>
+	<input type="tel" placeholder="555-555-5555" />
 </div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;form-telephone&quot;&gt;
-	&lt;div class=&quot;form-group-tel&quot;&gt;
-		&lt;label for=&quot;tel_1&quot;&gt;Your phone number
-			&lt;input type=&quot;tel&quot; placeholder=&quot;555-555-5555&quot; /&gt;
-		&lt;/label&gt;
-	&lt;/div&gt;
+	<pre><code class="language-markup">&lt;div class=&quot;form-group-tel&quot;&gt;
+	&lt;label for=&quot;tel_1&quot; class=&quot;&quot;&gt;Your phone number&lt;/label&gt;
+	&lt;input type=&quot;tel&quot; placeholder=&quot;555-555-5555&quot; /&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
@@ -1605,14 +1617,21 @@
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Text Input  Base</h3>
 				<div class="f-item-controls">
-					
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
 							<use xlink:href="#f-icon-code" />
 						</svg>
 					</span>
 				</div>
-			</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>When labels are hidden, be sure to include them because they are visible to screen readers. Specify a placeholder that indicates how the input is used.</p>
+
+</div>
 <div class="f-item-preview">
 	<label for="text-input" class="sr-only">Label</label>
 <input type="text" id="textInput" placeholder="Type here" />
@@ -1627,21 +1646,28 @@
 			<div class="f-item-heading-group" data-f-toggle="labels">
 				<h3 class="f-item-heading">Text Input</h3>
 				<div class="f-item-controls">
-					
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
 					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 						<svg>
 							<use xlink:href="#f-icon-code" />
 						</svg>
 					</span>
 				</div>
-			</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>When labels and inputs are separated, make sure the two are connected so screen readers will know (and to keep the labels clickable!).</p>
+
+</div>
 <div class="f-item-preview">
 	<label for="textInput">Text input</label>
-<input type="text" id="textInput" placeholder="Type here" />
+<input type="text" id="textInput" name="textInput" placeholder="Type here" />
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
 	<pre><code class="language-markup">&lt;label for=&quot;textInput&quot;&gt;Text input&lt;/label&gt;
-&lt;input type=&quot;text&quot; id=&quot;textInput&quot; placeholder=&quot;Type here&quot; /&gt;</code></pre>
+&lt;input type=&quot;text&quot; id=&quot;textInput&quot; name=&quot;textInput&quot; placeholder=&quot;Type here&quot; /&gt;</code></pre>
 </div>
 
 		</div>

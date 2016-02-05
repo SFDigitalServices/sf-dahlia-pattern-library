@@ -1,6 +1,7 @@
 'use strict';
 
 // modules
+var _ = require('lodash');
 var assemble = require('fabricator-assemble');
 var browserSync = require('browser-sync');
 var csso = require('gulp-csso');
@@ -156,11 +157,10 @@ gulp.task('assemble', function (done) {
 					return options.inverse(this);
 				}
 
+			},
+			attr: function(value) {
+				return _.kebabCase(value);
 			}
-			// ,
-			// attr: function(value) {
-			// 	return _.kebabCase(value);
-			// }
 		}
 	});
 	done();

@@ -2,8 +2,10 @@ modifiers:
   secondary:
   tertiary:
   oil:
+  ghost-white:
   small:
   tiny:
+  disabled:
 icons:
   - arrow-down
   - download
