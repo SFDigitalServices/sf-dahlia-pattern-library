@@ -10,6 +10,11 @@ form {
   }
 }
 
+label {
+  display: block;
+}
+
+// Error messages
 label,
 .form-group {
   #{text-inputs(all, 'input')},
@@ -35,18 +40,21 @@ label,
   }
 }
 
+// Input and label wrapper
 .form-group {
   label {
     @extend .form-label;
   }
 }
 
+// Input label
 .form-label {
   @include responsive-text-size('small');
   @include type-weight(semi);
   text-transform: none;
 }
 
+// Additional input text
 .form-note {
   @include responsive-text-size('small');
   @include type-weight(semi);
