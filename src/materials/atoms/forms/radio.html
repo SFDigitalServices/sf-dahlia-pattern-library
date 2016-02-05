@@ -1,8 +1,18 @@
-<input type="radio" name="groupName" id="radio1" /> 
-<label for="radio1">Radio 1</label>
+---
+notes: |
+  Custom radios cannot be nested within labels.
+---
+<div class="radio">
+  <input type="radio" name="groupName" id="radio1" /> 
+  <label for="radio1">Radio 1</label>
+</div>
 
-<input type="radio" name="groupName" id="radio2" /> 
-<label for="radio2">Radio 2</label>
+<div class="radio">
+  <input type="radio" name="groupName" id="radio2" /> 
+  <label for="radio2">Radio 2</label>
+</div>
 
-<input type="radio" name="groupName" id="radio3" /> 
-<label for="radio3">Radio 3</label>
+<div class="radio">
+  <input type="radio" name="groupName" id="radio3" /> 
+  <label for="radio3">Radio 3</label>
+</div>

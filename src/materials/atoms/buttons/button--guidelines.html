@@ -1,19 +1,19 @@
 ---
 notes: |
-  These are notes associated with this `button` component.
+  Buttons are used for actions, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another. Both can be styled to look button-like.
 ---
 {{#each buttons.modifiers}}
 <h2 class="gamma t-sans">.{{@key}}</h2>
 
-  <button class="{{@key}}">button.{{@key}}</button>
-  <a class="button {{@key}}" href="javascript:void(0)">a.{{@key}}</a>
+  <button class="{{@key}}" type="button">button.{{@key}}</button>
+  <a class="button {{@key}}" href="javascript:void(0)" role="button">a.{{@key}}</a>
 <br>
 
   {{#each this}}
   <h4 class="delta t-sans">.{{@../key}}.{{this}}</h4>
 
-      <button class="{{@../key}} {{this}}">button.{{@../key}}.{{this}}</button>
-      <a class="button {{@../key}} {{this}}" href="javascript:void(0)">a.{{@../key}}.{{this}}</a>
+      <button class="{{@../key}} {{this}} type="button"">button.{{@../key}}.{{this}}</button>
+      <a class="button {{@../key}} {{this}}" href="javascript:void(0)" role="button">a.{{@../key}}.{{this}}</a>
     <br>
   {{/each}}
 {{/each}}
