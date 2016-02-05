@@ -52,6 +52,7 @@ label,
 .form-label {
   @include responsive-text-size('small');
   @include type-weight(semi);
+  margin-bottom: .5rem;
   text-transform: none;
 }
 
