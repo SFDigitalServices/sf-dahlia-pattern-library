@@ -25,7 +25,10 @@ select {
 
 input[type="checkbox"],
 input[type="radio"] {
-  @include sr-only();
+  // @include sr-only();
+  opacity: 0;
+  position: absolute;
+  margin-left: -20px;
 }
 
 .ie9 {
