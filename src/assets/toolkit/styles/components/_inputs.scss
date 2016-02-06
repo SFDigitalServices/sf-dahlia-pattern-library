@@ -146,9 +146,7 @@ input[type="radio"]:disabled + label::before {
 
 .radio-group-inline {
   .radio-inline {
-    @media #{$medium-up} {
-      display: inline-block;
-    }
+    display: inline-block;
   }
 }
 
