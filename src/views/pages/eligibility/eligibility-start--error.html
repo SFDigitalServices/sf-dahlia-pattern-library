@@ -37,10 +37,11 @@
           <div class="form-group error">
             <label class="form-label t-caps">Household Income</label>
             {{> forms.input-income classes="error"}}
-            <small class="error">Please enter an income amount</small>
+            <!-- <small class="error">Please enter an income amount</small> -->
           </div>
 
-          {{> forms.radio-group--inline }}
+          {{> forms.radio-group--inline classes="error"}}
+          <small class="error">Please enter an income amount</small>
 
         </div>  
         <div class="medium-12 columns">
