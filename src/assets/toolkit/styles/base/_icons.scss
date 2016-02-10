@@ -47,14 +47,7 @@
 }
 
 .ui-link {
-  svg {
-    width: 1rem;
-    height: 1rem;
-
-    use {
-      fill: $primary;
-    }
-  }
+  margin-right: .25rem;
 }
 
 .has-icon-left {
