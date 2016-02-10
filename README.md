@@ -36,8 +36,8 @@ To deploy the application (run this from the project directory):
 
 ## Branches
 
-* alpha is for updates to the public version of the app
-* master is for engineers working on feature updates
+* `alpha` is for updates to the public version of the app
+* `master` is for engineers working on feature updates
 
 ## Structure
 Pattern library is organized from the abstract to the discrete, small to large.
