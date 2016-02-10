@@ -19,7 +19,9 @@ window.jQuery = $;
 var Modernizr = require('./modernizr.js');
 
 // Loading foundation from bower in order to support modernizr module
-var foundation = require('foundation/js/foundation.js');
+var foundation = require('foundation/js/foundation/foundation.js');
+var foundationAbide = require('foundation/js/foundation/foundation.abide.js');
+var foundationTooltip = require('foundation/js/foundation/foundation.tooltip.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
