@@ -7,9 +7,9 @@
     @media #{$small-only} {
       margin-top: 1rem;
 
-      width: -webkit-fit-content;
-       width: -moz-fit-content;
-            width: fit-content;
+      // width: -webkit-fit-content;
+      //  width: -moz-fit-content;
+      //       width: fit-content;
 
        > li {
         // margin-left: .6rem;
