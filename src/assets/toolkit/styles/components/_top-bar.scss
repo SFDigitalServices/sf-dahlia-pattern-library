@@ -4,4 +4,11 @@
   .row {
     max-width: 62.5rem;
   }
+
+  .toggle-topbar {
+    &.menu-icon {
+      margin-top: 0;
+      top: 0;
+    }
+  }
 }
