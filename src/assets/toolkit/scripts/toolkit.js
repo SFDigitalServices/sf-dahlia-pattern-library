@@ -20,6 +20,7 @@ var Modernizr = require('./modernizr.js');
 
 // Loading foundation from bower in order to support modernizr module
 var foundation = require('../../vendor/foundation/js/foundation/foundation.js');
+var foundationAccordion = require('../../vendor/foundation/js/foundation/foundation.accordion.js');
 var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
 var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
 
