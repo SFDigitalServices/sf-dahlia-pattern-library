@@ -250,21 +250,10 @@ $tooltip-text-color: #fff;
   }
 }
 
-// Tooltip helpers
-.p-relative {
-  position: relative;
-
-  .has-tip {
-    &.tip-top-right {
-      @include absolute(0,0,null,null);
-    }
-  }
-}
-
 .small-info {
   display: inline;
 
   @media #{$medium-up} {
     display: none;
-  }  
+  }
 }

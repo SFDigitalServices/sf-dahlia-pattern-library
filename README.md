@@ -34,6 +34,11 @@ To deploy the application (run this from the project directory):
   * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pl-testing.herokuapp.com`
 * This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pl-new-menu.herokuapp.com`
 
+## Branches
+
+* `alpha` is for updates to the public version of the app
+* `master` is for engineers working on feature updates
+
 ## Structure
 Pattern library is organized from the abstract to the discrete, small to large.
 
