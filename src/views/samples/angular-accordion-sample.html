@@ -6,10 +6,10 @@ title: Angular
 <div ng-controller="AccordionSampleController">
   <h1>Accordion Sample</h1>
 
-  <label class="checkbox">
-    <input type="checkbox" ng-model="oneAtATime">
-    Open only one at a time
-  </label>
+  <div class="checkbox">
+    <input type="checkbox" name="oneAtATime" ng-model="oneAtATime">
+    <label for="oneAtATime" class="checkbox">Open only one at a time</label>
+  </div>
 
   <accordion close-others="oneAtATime">
     <accordion-group heading="Static Header, initially expanded" is-open="true">
