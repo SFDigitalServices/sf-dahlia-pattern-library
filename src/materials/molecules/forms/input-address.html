@@ -1,27 +1,22 @@
 <div class="form-address row">
   <div class="form-group-street large-12 columns">
-    <label for="email">Address
-      <input type="email" placeholder="Street Address" />
-    </label>
+    <label for="address">Address</label>
+    <input type="text" name="address" placeholder="Street Address" />
   </div>
   <div class="form-group-apt large-12 columns">
-    <label for="email">Address 2
-      <input type="email" placeholder="Apt or Unit #" />
-    </label>
+    <label for="address2">Address 2</label>
+    <input type="text" name="address2" placeholder="Apt or Unit #" />
   </div>
   <div class="small-7 large-5 columns">
-    <label>City
-        <input type="text" placeholder="City Name" />
-      </label>
+    <label for="city">City</label>
+    <input type="text" name="city" placeholder="City Name" />  
   </div>
   <div class="small-5 large-3 columns">
-    <label>State
-      {{> forms.select name="state" placeholder="Select" options=inputs.states}}
-    </label>
+    <label for="state">State</label>
+    {{> forms.select name="state" placeholder="Select" options=inputs.states}}
   </div>
   <div class="small-12 large-4 columns">
-    <label>Zip
-      <input type="text" placeholder="Zip Code" />
-    </label>
+    <label for="zip">Zip</label>
+    <input type="text" name="zip" placeholder="Zip Code" />
   </div>
 </div>

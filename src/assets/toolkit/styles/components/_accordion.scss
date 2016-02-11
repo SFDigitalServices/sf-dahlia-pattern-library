@@ -1,3 +1,7 @@
+//
+// Accordion
+//
+
 .accordion {
   &-nested {
     @include responsive-text-size('small');

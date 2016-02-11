@@ -138,3 +138,31 @@ income:
     value: month
   - name: per year
     value: year
+
+people:
+  - name: "1"
+    attr: one
+  - name: "2"
+    attr: two
+  - name: "3"
+    attr: three
+  - name: "4"
+    attr: four
+  - name: "5"
+    attr: five
+  - name: "6"
+    attr: six
+
+children:
+  - name: "1"
+    attr: one
+  - name: "2"
+    attr: two
+  - name: "3"
+    attr: three
+  - name: "4"
+    attr: four
+  - name: "5"
+    attr: five
+  - name: "6"
+    attr: six

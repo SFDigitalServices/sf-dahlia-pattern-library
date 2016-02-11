@@ -1,8 +1,9 @@
 'use strict';
 
 // modules
+var _ = require('lodash');
 var assemble = require('fabricator-assemble');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var csso = require('gulp-csso');
 var del = require('del');
 var gulp = require('gulp');
@@ -156,21 +157,21 @@ gulp.task('assemble', function (done) {
 					return options.inverse(this);
 				}
 
+			},
+			attr: function(value) {
+				return _.kebabCase(value);
 			}
-			// ,
-			// attr: function(value) {
-			// 	return _.kebabCase(value);
-			// }
 		}
 	});
 	done();
+	reload();
 });
 
 
 // server
 gulp.task('serve', function () {
 
-	browserSync({
+	browserSync.init({
 		server: {
 			baseDir: config.dest
 		},
@@ -197,7 +198,7 @@ gulp.task('serve', function () {
 		}
 	}
 
-	gulp.task('assemble:watch', ['assemble'], reload);
+	gulp.task('assemble:watch', ['assemble']);
 	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
 	gulp.task('styles:fabricator:watch', ['styles:fabricator']);

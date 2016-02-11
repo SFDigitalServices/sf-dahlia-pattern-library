@@ -19,25 +19,16 @@ select {
   background-size: .75rem;
 }
 
-label {
-  display: block;
-}
-
-/**
- * Custom checkboxes
- */
+//
+// Custom checkboxes
+//
 
 input[type="checkbox"],
 input[type="radio"] {
-  @include sr-only();
-
-  .lt-ie9 & {
-    // border: 0;
-    // float: left;
-    // margin: .4em .4em 0 0;
-    // position: static;
-    // width: auto;
-  }
+  // @include sr-only();
+  opacity: 0;
+  position: absolute;
+  margin-left: -20px;
 }
 
 .ie9 {
@@ -47,13 +38,6 @@ input[type="radio"] {
     position: relative !important;
   }
 }
-
-// .lt-ie10 {
-//   input[type="checkbox"] {
-//     left: 0 !important;
-//     position: relative !important;
-//   }
-// }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
@@ -135,6 +119,10 @@ input[type="radio"]:disabled + label::before {
     left: .5rem;
   }
 
+  strong {
+    display: block;
+  }
+
   &_label {
     margin-left: 2.5rem !important;
     line-height: 1.2;
@@ -147,14 +135,33 @@ input[type="radio"]:disabled + label::before {
   }
 }
 
-.input-editor {
-  @include absolute(null,6px,6px,null);
-  margin: 0;
-  height: rem-calc(30);
+.radio-group,
+.radio-group-inline {
+  p {
+    label {
+      text-transform: none;
+    }
+  }
+}
+
+.radio-group-inline {
+  .radio-inline {
+    display: inline-block;
+  }
+}
+
+.has-radio {
+  input {
+    margin-bottom: 0 !important;
+  }
+
+  .radio-group,
+  .radio-group-inline {
+    margin-top: 1rem;
+  }
 }
 
 // Memorable dates
-
 .form-date-of-birth {
   label {
     margin-top: 0;
@@ -198,4 +205,19 @@ input[type="radio"]:disabled + label::before {
     font-size: 1rem;
     line-height: 1.625;
   }
+}
+
+// Editable Input
+.form-editable {
+  position: relative;
+}
+
+.input-editor {
+  @include absolute(null,6px,6px,null);
+  margin: 0;
+  height: rem-calc(30);
+}
+
+.has-options {
+  margin-bottom: .5rem !important;
 }
