@@ -238,17 +238,7 @@ $text-sizing: (
 }
 
 .two-column {
-  -moz-column-count: 2;
-  -moz-column-gap: 50px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 50px;
-
-  ul, dl {
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-    -moz-page-break-inside: avoid;
-    page-break-inside: avoid;
-  }
+  @include text-columns($column-count: 2, $column-gap: 50px);
 }
 
 .no-wrap {

@@ -22,7 +22,7 @@
   word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
-@mixin text-columns($column-count, $column-gap) {
+@mixin text-columns($column-count: 2, $column-gap: 50px) {
   -moz-column-count: $column-count;
   -moz-column-gap: $column-gap;
   -webkit-column-count: $column-count;
