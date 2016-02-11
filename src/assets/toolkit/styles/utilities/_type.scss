@@ -273,3 +273,7 @@ $text-sizing: (
     height:auto; 
   }
 }
+
+.link-wrap {
+  @include link-wrap;
+}

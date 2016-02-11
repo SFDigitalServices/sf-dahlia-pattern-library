@@ -13,3 +13,25 @@
   position: absolute;
   left: -999em;
 }
+
+@mixin link-wrap {
+  white-space: pre-wrap; /* css-3 */    
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */    
+  white-space: -o-pre-wrap; /* Opera 7 */    
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+@mixin text-columns($column-count, $column-gap) {
+  -moz-column-count: $column-count;
+  -moz-column-gap: $column-gap;
+  -webkit-column-count: $column-count;
+  -webkit-column-gap: $column-gap;
+
+  ul, dl {
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -moz-page-break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
