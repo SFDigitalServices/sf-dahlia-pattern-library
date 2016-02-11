@@ -114,7 +114,9 @@ button,
   &.button-link {
     background: transparent;
     color: $primary;
+    display: inline;
     padding: 0;
+    margin-bottom: 0;
   }
 
   &.has-icon {
