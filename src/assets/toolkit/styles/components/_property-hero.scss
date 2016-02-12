@@ -1,6 +1,6 @@
 .property-hero {
   #{h1, h2, h3, h4, h5, h6} {
-   
+
   }
 
   &_figure {
@@ -12,7 +12,7 @@
     display: inline-block;
     width: 100%;
   }
-    
+
   &_thumb {
     display: block;
     margin: 0 auto;
@@ -24,6 +24,7 @@
     @include absolute(null,0,0,null);
     background-color: rgba(0,0,0,.5);
     padding: 1rem;
+    z-index: 10;
 
     svg {
       use {
@@ -41,7 +42,7 @@
   }
 
   &_stats {
-    
+
   }
 
   .stats-list {
@@ -56,7 +57,7 @@
 
     @media #{$medium-up} {
       padding-bottom: 0;
-    }  
+    }
   }
 
   .action-group {
@@ -67,8 +68,8 @@
 
       .button {
         margin-bottom: 0;
-      }  
-    }  
+      }
+    }
   }
 
   .stats-card {
