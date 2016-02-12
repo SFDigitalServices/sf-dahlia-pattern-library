@@ -19,6 +19,7 @@ button,
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
+  // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
     &.#{"" + $color-name} {
       background-color: $color-value;
@@ -32,6 +33,7 @@ button,
     }
   }
 
+  // Light background buttons
   &.secondary {
     background-color: $tint;
     color: $dark;
@@ -74,6 +76,7 @@ button,
     }
   }
 
+  // Hollow button styles
   &.ghost {
     background-color: transparent;
     color: $primary;
@@ -107,10 +110,12 @@ button,
     }
   }  
 
+  // Apply box shadow
   &.shadow {
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
   }
 
+  // Remove button styles
   &.button-link {
     background: transparent;
     color: $primary;
@@ -119,6 +124,7 @@ button,
     margin-bottom: 0;
   }
 
+  // Icon button styles
   &.has-icon {
     padding-left: .925rem;
 
@@ -146,6 +152,13 @@ button,
   }
 }
 
+.expand-small {
+  @media #{$small-only} {
+    width: 100%;
+  }  
+}
+
+// Buttons stacked rather than inline
 .button-stack {
   margin-bottom: 1rem;
   
@@ -155,12 +168,6 @@ button,
     display: block;
     min-width: 15rem;
   }
-}
-
-.expand-small {
-  @media #{$small-only} {
-    width: 100%;
-  }  
 }
 
 .button-on-small {
@@ -174,6 +181,8 @@ button,
 
   @media #{$small-only} {
     @include button;
+    display: block;
+    
     svg {
       use { 
         fill: #fff !important;
@@ -182,6 +191,7 @@ button,
   }
 }
 
+// Customize foundation button group
 .button-group {
   button,
   .button {

@@ -1,6 +1,6 @@
 //
 // Content Panel
-//
+// Content module on property accordion
 
 $panel-padding: 0.9375rem;
 
@@ -49,13 +49,15 @@ $panel-padding: 0.9375rem;
   }
 }
 
+// list items within a content panel
 .content-list {
   li, 
   dd {
     margin-bottom: 1rem;
   }
 }
-  
+
+// grids nested within a content panel
 .content-panel-grid {
   .content-panel {
     padding-top: 0;
@@ -82,6 +84,7 @@ $panel-padding: 0.9375rem;
   }
 }
 
+// responsive styles for featured content panel
 .application-options {
   background-color: $dust;
   padding-top: 2rem;

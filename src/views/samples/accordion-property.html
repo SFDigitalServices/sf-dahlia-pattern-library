@@ -11,13 +11,13 @@ title: Angular
       </accordion-heading>
       This content is straight in the template.
     </accordion-group>
-    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-      {{group.content}}
+    <accordion-group heading="" ng-repeat="group in groups">
+      
     </accordion-group>
     <accordion-group heading="Dynamic Body Content">
       <p>The body of the accordion group grows to fit the contents</p>
         <button class="button small" ng-click="addItem()">Add Item</button>
-        <div ng-repeat="item in items">{{item}}</div>
+        <div ng-repeat="item in items"></div>
     </accordion-group>
     <accordion-group is-open="isopen">
       <accordion-heading>

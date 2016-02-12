@@ -3,6 +3,7 @@
 //
 
 .header {
+  // simple header with padding and background
   &-block {
     background-color: $smoke;
     padding: 1rem;
@@ -13,6 +14,7 @@
   }
 }
 
+// Larger page headers for top of page
 .lead-header {
   padding: 1rem 0 0;
 
@@ -21,6 +23,7 @@
   }
 }
 
+// Offset modifier for form cards
 .shift {
   @media #{$medium-up} {
     &-offset--bottom {
@@ -33,6 +36,7 @@
   }
 }
 
+// Lined header for page content
 .section-header {
   border-bottom: 1px solid $silver;
   border-top: 5px solid $charcoal;
@@ -47,6 +51,7 @@
   }
 }
 
+// Header showing status for page content
 .status-header {
   position: relative;
   padding: 1rem;

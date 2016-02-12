@@ -1,51 +1,33 @@
 //
 // Block
-//
+// Larger component with padding on all sides
 
 .block {
-  padding: 2rem;
+  @include block();
 
-  &-expand {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
+  // Expand beyond outer margin
+  &-expand,
+  .expand {
+    margin-left: -($column-gutter / 2);
+    margin-right: -($column-gutter / 2);
   }
 
+  // Block modifier with icon
   &--icon {
-    text-align: center;
-    padding: 2rem;
-      
-    @media #{$medium-up} {
-      padding: 4rem 2rem 6rem 2rem;
-    }
+    @include block();
   }
 
-  &--tall {
-    text-align: center;
-    padding: 2rem;
-      
+  // Block modifier with more responsive padding
+  &--tall {   
+    @include block();
+
     @media #{$medium-up} {
       padding: 6rem 2rem;
     }
   }
 }
 
-.block-list {
-
-}
-
-.block-item {
-  border-bottom: 1px solid $silver;
-  padding-top: 1.25rem;
-  padding-bottom: .5rem;
-
-  .button-on-small {
-    @media #{$small-only} {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }  
-  }
-}
-
+// Block icon element
 .block-icon {
   padding: 1rem;
   margin-bottom: 1rem;

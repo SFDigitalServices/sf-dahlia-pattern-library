@@ -1,8 +1,12 @@
+//
+// Footer
+
 .footer-section {
   .city-logo {
     max-width: rem-calc(120);
   }
 
+  // Footer navigation
   .inline-list {
     @media #{$small-only} {
       margin-top: 1rem;

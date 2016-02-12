@@ -1,3 +1,7 @@
+//
+// Property
+// Responsive layout styles 
+
 // Background color
 .section-head {
   @media #{$medium-up} {
@@ -138,9 +142,3 @@
     }
   }
 }
-
-// .results-container {
-//   .columns {
-//     padding: 0;
-//   }
-// }

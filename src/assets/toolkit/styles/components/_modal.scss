@@ -1,7 +1,11 @@
+//
+// Modals
+
 .reveal-modal {
   background-color: #eee;
 }
 
+// Scrolling panel
 .overflow-panel {
   border: 1px solid $smoke;
   
@@ -38,6 +42,7 @@
   }
 }
 
+// Close button
 .close-reveal-modal {
   text-transform: uppercase;
 }

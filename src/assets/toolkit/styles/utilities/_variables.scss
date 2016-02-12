@@ -270,3 +270,19 @@ $reveal-close-color: $primary;
 // Sub Nav
 $sub-nav-font-color: $steel;
 $sub-nav-padding: rem-calc(3 10);
+
+// We use these to control the background and border styles
+$panel-bg: #fff;
+$panel-border-size: 0;
+
+// We use these to set default inner padding and bottom margin
+$panel-margin-bottom: 1rem;
+$panel-padding: 1rem;
+
+// We use these to set default font colors
+$panel-font-color: $oil;
+$panel-font-color-alt: $white !default;
+
+$panel-header-adjust: false;
+$callout-panel-link-color: $primary-color !default;
+$callout-panel-bg: scale-color($primary-color, $lightness: 94%) !default;

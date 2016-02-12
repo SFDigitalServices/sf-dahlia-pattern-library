@@ -1,35 +1,35 @@
-<div class="block-item {{ default class "." }}">
+<div class="block-item {{default classes ''}}">
   <h3 class="t-delta t-sans margin-bottom--half">
-    <a class="a-oil">{{ default name "Agency" }}</a>
+    <a class="a-oil">{{default name 'Agency'}}</a>
   </h3>
   
   {{#if languages}}
     <p class="t-tiny c-steel">Language Services:
       {{#each languages}}
-        <span class="label radius secondary i-block">{{ default languages "Language" }}</span>
+        <span class="label radius secondary i-block">{{default languages 'Language'}}</span>
       {{/each}}
     </p>
   {{/if}}
 
   <div class="has-icon-left d-block">
-    {{> icons.base icon="map" }}
+    {{> icons.base icon="map"}}
 
     <p class="offset-icon margin-bottom--half">
-      {{ default address "111 Address St." }}, <br>
-      {{ default citystate "San Francisco, 00000" }}
+      {{default address '111 Address St.'}}, <br>
+      {{default citystate 'San Francisco, 00000'}}
     </p>
   </div>
 
   <p>
-    <a class="button-on-small" href="tel:+1{{ default phone "###-###-###" }}">
-      {{> icons.base icon="phone" }}
+    <a class="button-on-small" href="tel:+1{{default phone '###-###-###'}}">
+      {{> icons.base icon="phone"}}
 
-      Call {{ default phone "###-###-###" }}
+      Call {{default phone '###-###-###'}}
     </a>
-    <a class="button-on-small" href="http://{{ default website "www.com" }}" target="_blank">
-      {{> icons.base icon="link" }}
+    <a class="button-on-small" href="http://{{default website 'www.com'}}" target="_blank">
+      {{> icons.base icon="link"}}
 
-      Visit {{ default name "Agency" }}
+      Visit {{default name 'Agency'}}
     </a>
   </p>
 </div>
