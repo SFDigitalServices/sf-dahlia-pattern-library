@@ -1,0 +1,73 @@
+<div class="property-hero" ng-app="dahlia" ng-controller="CarouselSampleController">
+  <figure class="property-hero_figure">
+    <div class="property-hero_container">
+      <div class="orbit" data-orbit
+          data-options="navigation_arrows: true; bullets: false; slide_number: false; timer: false;">
+        <img class="property-hero_thumb" ng-repeat="image in ::images track by $index" reflow-after-load ng-src="{% image %}" alt="Trinity Place Apartments, 1188 Mission St">
+      </div>
+      <a href="#" class="property-hero_like">
+        {{> icons.icon-like}}
+      </a>
+    </div>
+  </figure>
+
+  <header class="property-hero_content margin-bottom">
+    <h1 class="property-hero_title beta">
+      Trinity Place Apartments
+    </h1>
+    <p>1188 Mission St, San Francisco CA, 94134</p>
+    <p class="c-steel">Caritas Management Group</p>
+    <a href="#" class="ui-link t-micro">
+      {{> icons.base icon="map" fill="primary"}}
+      View on Map
+    </a>
+  </header>
+
+  <div class="property-hero_stats">
+    <div class="stats-card">
+      {{> stats.stats-list--quad}}
+      <ul class="stats-list double medium-full labels-inline bg-ghost hide-for-medium-up">
+        <li>
+          <span class="stats-list_label">Availability</span>
+          <div class="stats-list_value">
+            2
+            <span class="value-label">units</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="stats-card">
+      {{> stats.stats-list--quad-1br}}
+      <ul class="stats-list double medium-full labels-inline bg-ghost hide-for-medium-up">
+        <li>
+          <span class="stats-list_label">Availability</span>
+          <div class="stats-list_value">
+            9
+            <span class="value-label">units</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="property-hero_action text-center">
+    <div class="hide-for-medium-up">
+    <p class="t-small">Application Due December 12, 2015</p>
+      <div class="text-center">
+        {{> property-accordion.content-panel--apply }}
+      </div>
+    </div>
+
+    <!-- <hr class="hr-5 tall show-for-small-only"> -->
+
+    <div class="action-group row">
+      <div class="medium-6 columns">
+        <p class="date t-small">Listing Updated August 15, 2015</p>
+      </div>
+      <div class="medium-6 columns">
+        {{> buttons.link-icon icon="forward" fill="white" size="medium" text="Share this Listing" }}
+      </div>
+    </div>
+  </div>
+</div>
