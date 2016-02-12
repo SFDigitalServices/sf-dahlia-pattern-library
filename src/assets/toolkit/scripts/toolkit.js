@@ -22,6 +22,7 @@ var Modernizr = require('./modernizr.js');
 var foundation = require('../../vendor/foundation/js/foundation/foundation.js');
 var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
 var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
+var foundationAccordion = require('../../vendor/foundation/js/foundation/foundation.accordion.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
