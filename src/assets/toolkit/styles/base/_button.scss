@@ -19,6 +19,7 @@ button,
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
+  // creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
     &.#{"" + $color-name} {
       background-color: $color-value;
@@ -74,6 +75,7 @@ button,
     }
   }
 
+  // hollow button styles
   &.ghost {
     background-color: transparent;
     color: $primary;
@@ -111,6 +113,7 @@ button,
     box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
   }
 
+  // icon button styles
   &.has-icon {
     padding-left: .925rem;
 
@@ -138,6 +141,13 @@ button,
   }
 }
 
+.expand-small {
+  @media #{$small-only} {
+    width: 100%;
+  }  
+}
+
+// buttons stacked rather than inline
 .button-stack {
   margin-bottom: 1rem;
   
@@ -147,12 +157,6 @@ button,
     display: block;
     min-width: 15rem;
   }
-}
-
-.expand-small {
-  @media #{$small-only} {
-    width: 100%;
-  }  
 }
 
 .button-on-small {
