@@ -1,4 +1,10 @@
-<table>
+---
+notes: |
+   Newer assistive software will also immediately interpret any table with the attribute `role=grid` as being for data. 
+
+   Always use `th` to define the headers for columns and rows. If a header cell is not a `th`, but a `td`, use the `scope` attribute to explain what kind of heading the cell is: `scope=row` means the cell is a header for the row it's inside. `scope=column` means the cell is a header for the column it's inside.
+---
+<table role="grid">
 	<thead>
 		<tr>
 			<th scope="col">Table Heading 1</th>

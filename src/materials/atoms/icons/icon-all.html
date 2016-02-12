@@ -1,11 +1,33 @@
 ---
 notes: |
-  These are notes associated with this `icon` component.
+  Uses SVGs symbols which are stored in `layouts/includes`. Has variables for icon, fill color and size.
 ---
-{{#each icons.app}}
+<div class="margin-bottom">
+{{#each icons.app.icon}}
   <span class="ui-control ui-icon">
     <svg>
       <use xlink:href="#i-{{this}}"></use>
     </svg>
   </span>
 {{/each}}
+</div>
+
+<div class="margin-bottom">
+{{#each icons.app.fill}}
+  <span class="ui-control ui-icon i-{{this}}">
+    <svg>
+      <use xlink:href="#i-info"></use>
+    </svg>
+  </span>
+{{/each}}
+</div>
+
+<div class="margin-bottom">
+{{#each icons.app.size}}
+  <span class="ui-control ui-icon ui-{{this}}">
+    <svg>
+      <use xlink:href="#i-mail"></use>
+    </svg>
+  </span>
+{{/each}}
+</div>

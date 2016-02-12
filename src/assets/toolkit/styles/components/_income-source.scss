@@ -1,0 +1,71 @@
+//
+// Income source
+// Styles editable income item used in calculator and applications
+
+.income-source {
+  &_item {
+    background-color: $mist;
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 1rem;
+
+    label {
+      font-size: 0.875rem;
+      line-height: 1.375;
+      font-weight: 500;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &.expand {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      @media #{$medium-up} {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    &.add-item {
+      background: $tint;
+      cursor: pointer;
+
+      .income-source_name {
+        color: $deep;
+      }
+    }
+  }
+
+  &_name {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+    
+  &_link {
+    @include responsive-text-size('tiny');
+    color: $deep;
+    line-height: 1.5rem;
+    float: right;
+    text-transform: uppercase;
+  }
+
+  &_nested {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media #{$medium-up} {
+      margin-left: -3rem;
+      margin-right: -3rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}

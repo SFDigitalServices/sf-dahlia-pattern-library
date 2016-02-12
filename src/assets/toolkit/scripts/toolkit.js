@@ -19,10 +19,10 @@ window.jQuery = $;
 var Modernizr = require('./modernizr.js');
 
 // Loading foundation from bower in order to support modernizr module
-var foundation = require('foundation/js/foundation/foundation.js');
-var foundationAbide = require('foundation/js/foundation/foundation.abide.js');
-var foundationTooltip = require('foundation/js/foundation/foundation.tooltip.js');
-var foundationOrbit = require('foundation/js/foundation/foundation.orbit.js');
+var foundation = require('../../vendor/foundation/js/foundation/foundation.js');
+var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
+var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
+var foundationOrbit = require('../../vendor/foundation/js/foundation/foundation.orbit.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
@@ -63,7 +63,7 @@ $(document).ready(function () {
 require('angular/angular.js');
 
 // Angular Foundation Directives (Loaded from bower)
-require('angular-foundation/mm-foundation-tpls.min.js');
+require('../../vendor/angular-foundation/mm-foundation-tpls.min.js');
 //require('angular-pageslide-directive');
 
 angular.module('dahlia', ['mm.foundation'])

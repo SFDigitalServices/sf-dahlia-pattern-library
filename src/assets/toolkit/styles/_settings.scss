@@ -55,8 +55,8 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import 'vendors/foundation/foundation/functions';
-@import "base/variables";
+@import '../../vendor/foundation/scss/foundation/functions';
+@import 'utilities/variables';
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.

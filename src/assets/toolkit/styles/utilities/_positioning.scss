@@ -83,19 +83,19 @@ $position-default: null !default;
 }
 
 .p-relative {
-  position: relative;
+  position: relative !important;
 }
 
 .d-block {
-  display: block;
+  display: block !important;
 }
 
 .d-inline {
-  display: inline;
+  display: inline !important;
 }
 
 .d-inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .a-center {

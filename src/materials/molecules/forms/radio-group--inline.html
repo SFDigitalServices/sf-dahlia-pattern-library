@@ -1,0 +1,15 @@
+<div class="radio-group-inline {{default classes ''}}">
+  {{#each items}}
+  <p class="radio-inline">
+    <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
+    <label class="radio-inline_label" for="{{../name}}-{{value}}">
+  </p>
+  {{else}}
+    {{#each inputs.income}}
+     <p class="radio-inline">
+      <input type="radio" name="income" value="income-{{value}}" id="income-{{value}}">
+      <label class="radio-inline_label" for="income-{{value}}">{{name}}</label>
+    </p>
+    {{/each}}
+  {{/each}}
+</div>

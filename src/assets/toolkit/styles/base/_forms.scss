@@ -11,9 +11,68 @@ form {
 }
 
 label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+// Input and label wrapper
+.form-group {
+  label {
+    @extend .form-label;
+  }
+}
+
+// Input label
+.form-label {
+  @include responsive-text-size('small');
+  @include type-weight(semi);
+  margin-bottom: .5rem;
+  text-transform: none;
+}
+
+// Additional input text
+.form-note {
+  @include responsive-text-size('small');
+  @include type-weight(semi);
+  color: $steel;
+  margin-bottom: 0;
+}
+
+.form-count {
+  @include responsive-text-size('small');
+  @include type-weight(bold);
+  color: $steel;
+  margin-bottom: 1rem; 
+}
+
+// Error messages
+label,
+.form-group,
+.radio-group,
+.radio-group-inline {
+  #{text-inputs(all, 'input')},
+  select,
+  textarea {
+    margin: 0 0 $form-spacing 0;
+
+    &.error {
+      margin-bottom: 0;
+    }  
+  }
+
   &.error {
-    input.error {
+    input.error,
+    select.error,
+    textarea.error {
       border: 2px solid $alert;
+    }
+
+    input[type="checkbox"] + label::before {
+      box-shadow: 0 0 0 2px $alert;
+    }
+
+    input[type="radio"] + label::before {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px $alert;
     }
   }
 
@@ -22,52 +81,15 @@ label {
   }
 }
 
-.form-label {
-  @include responsive-text-size('small');
-  font-weight: 500;
-  text-transform: none !important;
-
-  input, textarea, select {
-    margin-top: .5rem !important;
-  }
-}
-
-.form-count {
-  @include responsive-text-size('small');
-  color: $steel;
-  font-weight: 800;
-  margin-bottom: 1rem; 
-}
-
-.form-note {
-  @include responsive-text-size('small');
-  color: $steel;
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
-.radio-group,
+// Error spacing for radio inline
 .radio-group-inline {
-  p {
-    label {
-      text-transform: none;
+  &.error {
+    margin-top: $form-spacing;
+
+    .radio-inline {
+      margin-bottom: 0;
     }
   }
-}
-
-.has-radio {
-  input {
-    margin-bottom: 0 !important;
-  }
-
-  .radio-group,
-  .radio-group-inline {
-    margin-top: 1rem;
-  }
-}
-
-.has-options {
-  margin-bottom: .5rem !important;
 }
 
 // Tooltip positioning
