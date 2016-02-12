@@ -1,7 +1,13 @@
 //
 // Box
-//
+// Convert namespace of foundation panel to box
+// Smaller component with padding on all sides
 
 .box {
   @include panel();
+  @extend %box-shadow;
+
+  @media #{$medium-up} {
+    padding: 2rem;
+  }  
 }

@@ -1,3 +1,7 @@
+//
+// Stats
+// Multiple stats container
+
 .stats-card {
   margin-bottom: .5rem;
   
@@ -29,7 +33,6 @@
     }
   }
 
-  
   &.medium-double {
     @include clearfix;
     @media #{$medium-up} {

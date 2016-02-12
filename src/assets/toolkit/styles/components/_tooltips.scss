@@ -1,4 +1,6 @@
+//
 // Tooltip helpers
+
 .p-relative {
   position: relative;
 
@@ -10,7 +12,7 @@
 }
 
 .small-info {
-  display: inline;
+  display: inline-block;
 
   @media #{$medium-up} {
     display: none;

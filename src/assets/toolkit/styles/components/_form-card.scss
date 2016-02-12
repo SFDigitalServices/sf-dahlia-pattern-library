@@ -1,6 +1,7 @@
 //
-// Form card
 //
+// Form card
+// Container for form elments
 
 .form-card {
   background: #fff;
@@ -16,6 +17,7 @@
     margin-bottom: 3rem;
   }
 
+  // form card with sub-nav
   &.has-nav {
     padding-top: 0;
 

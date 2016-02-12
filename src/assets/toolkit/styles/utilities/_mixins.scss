@@ -35,3 +35,25 @@
     page-break-inside: avoid;
   }
 }
+
+@mixin slat($slat-padding: 1rem) {
+  border-bottom: 1px solid $smoke;
+  position: relative;
+  padding-bottom: $slat-padding;
+  padding-top: $slat-padding;
+
+  @media #{$medium-up} {
+    padding-bottom: ($slat-padding*2);
+    padding-top: ($slat-padding*2);
+  }  
+}
+
+@mixin block($block-padding: 2rem) {
+  padding: $block-padding;
+  text-align: center;
+
+  @media #{$medium-up} {
+    padding-top: ($block-padding*2);
+    padding-bottom: ($block-padding*3);
+  }  
+}

@@ -30,7 +30,7 @@ label {
   text-transform: none;
 }
 
-// Additional input text
+// Additional input helper text
 .form-note {
   @include responsive-text-size('small');
   @include type-weight(semi);
@@ -38,6 +38,7 @@ label {
   margin-bottom: 0;
 }
 
+// Application page count
 .form-count {
   @include responsive-text-size('small');
   @include type-weight(bold);
@@ -88,18 +89,6 @@ label,
 
     .radio-inline {
       margin-bottom: 0;
-    }
-  }
-}
-
-// Tooltip positioning
-.p-relative {
-  position: relative;
-
-  .has-tip,
-  .tooltipped {
-    &.tip-top-right {
-      @include absolute(0,0,null,null);
     }
   }
 }
