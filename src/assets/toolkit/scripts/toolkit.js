@@ -23,6 +23,8 @@ var foundation = require('../../vendor/foundation/js/foundation/foundation.js');
 var foundationAccordion = require('../../vendor/foundation/js/foundation/foundation.accordion.js');
 var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
 var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
+var foundationOrbit = require('../../vendor/foundation/js/foundation/foundation.orbit.js');
+var foundationAccordion = require('../../vendor/foundation/js/foundation/foundation.accordion.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
@@ -33,7 +35,7 @@ window.foundation = foundation;
 
 // Use for custom Pattern Libary Modules
 // var fooModule = require('./foo-module');
-// var bar = fooModule.foo(); 
+// var bar = fooModule.foo();
 
 // Finally, you can drop test JavaScript here...
 $(document).ready(function () {
@@ -67,6 +69,10 @@ require('../../vendor/angular-foundation/mm-foundation-tpls.min.js');
 //require('angular-pageslide-directive');
 
 angular.module('dahlia', ['mm.foundation'])
+  .config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('{%');
+    $interpolateProvider.endSymbol('%}');
+  })
   .controller('AccordionSampleController', function($scope) {
     $scope.oneAtATime = true;
 
@@ -87,7 +93,21 @@ angular.module('dahlia', ['mm.foundation'])
       var newItemNo = $scope.items.length + 1;
       $scope.items.push('Item ' + newItemNo);
     };
-  // })
-  // .controller('MySampleController', function($scope) {
-  //   // my new controller
-  });
+  })
+  .controller('CarouselSampleController', ['$scope', function($scope) {
+    $scope.images = [
+      '/assets/toolkit/images/property4-16x9.jpg',
+      '/assets/toolkit/images/property4-16x9.jpg',
+      '/assets/toolkit/images/property4-16x9.jpg',
+    ]
+
+  }])
+  .directive('reflowAfterLoad', function() {
+    return {
+      link: function(scope, element, attrs) {
+        element.bind('load', function() {
+          $(document).foundation('orbit', 'reflow');
+        })
+      }
+    }
+  })
