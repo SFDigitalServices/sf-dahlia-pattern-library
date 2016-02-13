@@ -165,7 +165,7 @@ input[type="radio"]:disabled + label::before {
 }
 
 .button-radio-group {
-  .columns {
+  li {
     &:first-of-type {
       input.button {
         border-right: 0;
@@ -201,6 +201,9 @@ input[type="radio"]:disabled + label::before {
     border: 2px solid $primary;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: 5rem;
 
     &:hover,
     &:focus {
@@ -235,6 +238,15 @@ input[type="radio"]:disabled + label::before {
       }
     }
   }
+}
+
+input[data-toggle] {
+  display: none;
+}
+
+input[data-toggle]:checked + label,
+input[data-toggle]:checked + label:active {
+  background-color: $steel;
 }
 
 // Memorable dates
