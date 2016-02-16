@@ -3,13 +3,24 @@
 
 // Search results details
 .results-bar {
+  .results-wrap {
+    @media #{$medium-up} {
+      display: table;
+    }
+  }
+
   .button-set {
+    float: left;
     margin-left: 0;
-    margin-top: 1rem;
+    padding-top: 1rem;
 
     @media #{$medium-up} {
-      margin-left: 1.5rem;
-      margin-top: .5rem;
+      float: none;
+      padding-left: 1.5rem;
+      padding-top: 0;
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
     }
   }
 
