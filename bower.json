@@ -19,7 +19,8 @@
   "devDependencies": {
     "jquery": "~2.1.4",
     "foundation": "foundation-sites#5.5.3",
-    "angular-foundation": "~0.8.0"
+    "angular-foundation": "~0.8.0",
+    "lifely-angular-carousel": "~1.1.0"
   },
   "scripts": {
     "gulp": "gulp",
