@@ -51,7 +51,7 @@
         margin-right: -0.9375rem;
 
         @media #{$medium-up} {
-          background-color: transparent;
+          background-color: transparent !important;
         }
       }
 
