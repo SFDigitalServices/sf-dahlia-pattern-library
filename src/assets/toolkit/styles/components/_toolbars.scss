@@ -3,14 +3,19 @@
 
 // Search results details
 .results-bar {
-  button, .button {
-    margin-bottom: 0;
-    margin-top: .5rem;
+  .button-set {
+    margin-left: 0;
+    margin-top: 1rem;
 
     @media #{$medium-up} {
-      margin-left: 1rem;
-      margin-top: 0;
-    }  
+      margin-left: 1.5rem;
+      margin-top: .5rem;
+    }
+  }
+
+  button, .button {
+    margin-right: .25rem;
+    margin-bottom: 0;
   }
 }
 
