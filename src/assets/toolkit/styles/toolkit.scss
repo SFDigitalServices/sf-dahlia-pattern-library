@@ -30,8 +30,11 @@
    "../../vendor/foundation/scss/foundation/components/tabs",
    "../../vendor/foundation/scss/foundation/components/tooltips",
    "../../vendor/foundation/scss/foundation/components/top-bar",
-   "../../vendor/foundation/scss/foundation/components/visibility",
-   "../../vendor/foundation/scss/foundation/components/orbit";
+   "../../vendor/foundation/scss/foundation/components/visibility";
+  //  "../../vendor/foundation/scss/foundation/components/orbit";
+
+
+@import "../../vendor/lifely-angular-carousel/angular-carousel";
 
 @import "vendors/compass";
 @import "vendors/scut";

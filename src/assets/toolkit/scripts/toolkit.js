@@ -23,7 +23,7 @@ var foundation = require('../../vendor/foundation/js/foundation/foundation.js');
 var foundationAccordion = require('../../vendor/foundation/js/foundation/foundation.accordion.js');
 var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
 var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
-var foundationOrbit = require('../../vendor/foundation/js/foundation/foundation.orbit.js');
+// var foundationOrbit = require('../../vendor/foundation/js/foundation/foundation.orbit.js');
 var foundationAccordion = require('../../vendor/foundation/js/foundation/foundation.accordion.js');
 
 //require('smoothstate/jquery.smoothState.min.js');
@@ -66,9 +66,11 @@ require('angular/angular.js');
 
 // Angular Foundation Directives (Loaded from bower)
 require('../../vendor/angular-foundation/mm-foundation-tpls.min.js');
+require('../../vendor/hammerjs/hammer.min.js'); // for touch interaction w/ angular-carousel
+require('../../vendor/lifely-angular-carousel/angular-carousel.js');
 //require('angular-pageslide-directive');
 
-angular.module('dahlia', ['mm.foundation'])
+angular.module('dahlia', ['mm.foundation', 'angular-carousel'])
   .config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('{%');
     $interpolateProvider.endSymbol('%}');
@@ -94,20 +96,25 @@ angular.module('dahlia', ['mm.foundation'])
       $scope.items.push('Item ' + newItemNo);
     };
   })
-  .controller('CarouselSampleController', ['$scope', function($scope) {
+  .controller('CarouselSampleController', ['$scope', 'Carousel', function($scope, Carousel) {
     $scope.images = [
       '/assets/toolkit/images/property4-16x9.jpg',
       '/assets/toolkit/images/property4-16x9.jpg',
       '/assets/toolkit/images/property4-16x9.jpg',
     ]
 
+    $scope.Carousel = Carousel;
+
   }])
-  .directive('reflowAfterLoad', function() {
+  .directive('reflowAfterLoad', ['$window', function($window) {
     return {
       link: function(scope, element, attrs) {
-        element.bind('load', function() {
-          $(document).foundation('orbit', 'reflow');
-        })
+        element.adjustCarouselHeight = function() {
+          element.parent().parent().parent().css('height', element.height())
+        }
+        element.bind('load', element.adjustCarouselHeight);
+        angular.element($window).bind('resize', element.adjustCarouselHeight);
+
       }
     }
-  })
+  }])
