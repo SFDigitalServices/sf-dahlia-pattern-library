@@ -1,0 +1,25 @@
+$carousel-arrow-size: 3.5rem;
+
+.ng-carousel {
+  .carousel-arrow {
+    width: $carousel-arrow-size;
+
+    button {
+      @include translateY(-50%);
+      border-radius: 0;
+      margin-bottom: 0;
+      padding: 1rem;
+      line-height: 1rem;
+      position: absolute;
+      height: $carousel-arrow-size;
+      left: 0;
+      top: 50%;
+      width: $carousel-arrow-size;
+      
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }  
+}  
