@@ -95,6 +95,29 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel'])
       $scope.items.push('Item ' + newItemNo);
     };
   })
+  .controller('ModalInstanceController', function ($scope, $modalInstance) {
+    console.log('inside instance')
+    $scope.closeModal = function () {
+      $modalInstance.close();
+    };
+  })
+  .controller('ModalController', function ($scope, $modal) {
+    console.log("here")
+    $scope.lotteryResults = [{rank: 1, ticket: 843219},
+                             {rank: 1, ticket: 843219},
+                             {rank: 1, ticket: 843219},
+                             {rank: 1, ticket: 843219},
+                             {rank: 1, ticket: 843219},
+                             {rank: 1, ticket: 843219}]
+
+    $scope.openModal = function (templateUrl) {
+      console.log("at open modal");
+      var modalInstance = $modal.open({
+        templateUrl: templateUrl,
+        controller: 'ModalInstanceCtrl'
+      });
+    };
+  })
   .controller('CarouselSampleController', ['$scope', 'Carousel', function($scope, Carousel) {
     $scope.images = [
       '/assets/toolkit/images/property4-16x9.jpg',
