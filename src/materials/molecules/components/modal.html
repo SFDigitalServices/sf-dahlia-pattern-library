@@ -1,4 +1,4 @@
-<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+<div ng-controller="ModalController" aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 
   <section class="results-container row collapse">
     <div class="medium-6 medium-push-6 columns">
@@ -9,7 +9,7 @@
           <li>Studio 20 units</li>
           <li>1 Bedroom 20 units</li>
           <li>2 Bedrooms 20 units</li>
-        </ul>  
+        </ul>
         <p class="t-small t-bold">A total of 900 tickets were drawn in this lottery.</p>
       </hgroup>
     </div>
@@ -30,11 +30,12 @@
             {{/each}}
           </ul>
         </div>
-      </div>  
-    </div>  
+      </div>
+    </div>
   </section>
 
-  <a class="close-reveal-modal" aria-label="Close">
+  <!-- <a class="close-reveal-modal" aria-label="Close"> -->
+  <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
     Close {{> icons.base icon="close" size="small" fill="primary"}}
   </a>
 

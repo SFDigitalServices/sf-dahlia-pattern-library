@@ -1,4 +1,4 @@
-<!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup --> 
+<!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup -->
 
 <dl class="property-accordion accordion" data-accordion>
   <dd class="accordion-navigation accordion-process">
@@ -13,15 +13,15 @@
         </p>
       </div>
 
-      <section class="content-wrap">
+      <section class="content-wrap" ng-app="dahlia" ng-controller="ModalController">
         <div class="content-panel content-lead padding-bottom no-margin border-bottom">
           <h4 class="t-small t-sans t-bold">Lottery Results</h4>
-          <h3 class="t-delta t-sans c-steel ng-binding">December 17, 2015</h3>
+          <h3 class="t-delta t-sans c-steel ng-binding">December 17, 2015 HAI</h3>
 
           <p class="t-small t-bold">A total of 900 tickets were drawn in this lottery.</p>
 
           <p>
-            <a href="#" class="button expand no-margin" data-reveal-id="myModal">View Lottery Results</a>
+            <a href="#" class="button expand no-margin" ng-click="openModal('results-modal.html')">View Lottery Results</a>
           </p>
         </div>
 
@@ -39,7 +39,7 @@
           <h4 class="t-small t-sans t-bold">Contact Leasing Agent</h4>
           <h3 class="t-delta t-sans no-margin">Sophia Sidhu</h3>
           <p class="c-steel">Affordable Leasing Administrator</p>
-          
+
           <a href="#" class="margin-bottom--half">
             <span class="ui-icon ui-medium i-primary">
               <svg>
@@ -51,14 +51,14 @@
           </a>
 
           <p class="t-small c-steel">Due to high call valume you may hear a message</p>
-          
+
           <a href="#" class="d-block margin-bottom">
             <span class="ui-icon ui-medium i-primary">
               <svg>
                 <use xlink:href="#i-mail"></use>
               </svg>
             </span>
-            
+
             Email
           </a>
 
@@ -72,7 +72,7 @@
     <p class="no-margin">Office Hours</p>
     <p class="c-steel">8:30 am&mdash;5:00pm</p>
         </div>
-      </section>  
+      </section>
     </div>
 
   </dd>
