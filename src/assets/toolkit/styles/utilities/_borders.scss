@@ -5,8 +5,20 @@
   &-bottom {
     border-bottom: 1px solid $steel;
   }
+
+  &-top {
+    border-top: 1px solid $steel;
+  }
+
+  &-left {
+    border-left: 1px solid $steel;
+  }
+
+  &-right {
+    border-right: 1px solid $steel;
+  }
 }
 
 .no-border {
-  border-bottom: none !important;
+  border: none !important;
 }

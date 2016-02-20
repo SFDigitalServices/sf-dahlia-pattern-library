@@ -60,6 +60,12 @@
   }  
 }
 
+// Image replace
+@mixin image-replace($imageURL) {
+  background: url($imageURL) no-repeat;
+  overflow: hidden;
+}
+
 // Using due to errors from compass mixin
 @mixin custom-linear-gradient($top, $bottom){
   background: $top; /* Old browsers */
