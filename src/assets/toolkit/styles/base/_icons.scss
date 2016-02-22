@@ -12,8 +12,6 @@
 .ui-icon {
   svg {
     @extend %ui-icon;
-    width: 1.5rem;
-    height: 1.5rem;
     margin-top: -3px;
   }
 }
@@ -46,10 +44,12 @@
   }
 }
 
+// Icon with link
 .ui-link {
   margin-right: .25rem;
 }
 
+// Icon with multiline item
 .has-icon-left {
   position: relative;
   

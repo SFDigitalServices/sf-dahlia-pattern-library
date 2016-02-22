@@ -1,3 +1,7 @@
+//
+// Property
+// Responsive layout styles 
+
 // Background color
 .section-head {
   @media #{$medium-up} {
@@ -47,7 +51,7 @@
         margin-right: -0.9375rem;
 
         @media #{$medium-up} {
-          background-color: transparent;
+          background-color: transparent !important;
         }
       }
 
@@ -138,9 +142,3 @@
     }
   }
 }
-
-// .results-container {
-//   .columns {
-//     padding: 0;
-//   }
-// }

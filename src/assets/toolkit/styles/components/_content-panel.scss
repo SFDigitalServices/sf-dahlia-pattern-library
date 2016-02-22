@@ -1,6 +1,8 @@
 //
 // Content Panel
-//
+// Content module on property accordion
+
+$panel-padding: 0.9375rem;
 
 .content-panel {
   padding-top: 1rem;
@@ -18,22 +20,22 @@
   // re-written for accordion directive
   &.wide {
     @media #{$medium-up} {
-      padding-top: .9375rem;
-      margin: 0 .9375rem;
+      padding-top: $panel-padding;
+      margin: 0 $panel-padding;
       margin-bottom: 1rem;
     }
   }
 
   &--expanded {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
+    margin-left: -($panel-padding);
+    margin-right: -($panel-padding);
     padding: 0 1rem;
     padding-top: 1rem;
   }
 
   &--full {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
+    margin-left: -($panel-padding);
+    margin-right: -($panel-padding);
     margin-top: -1rem;
   }
 
@@ -47,13 +49,15 @@
   }
 }
 
+// list items within a content panel
 .content-list {
   li, 
   dd {
     margin-bottom: 1rem;
   }
 }
-  
+
+// grids nested within a content panel
 .content-panel-grid {
   .content-panel {
     padding-top: 0;
@@ -74,12 +78,13 @@
   }
 
   @media #{$medium-up} {
-    padding-top: .9375rem;
-    margin: 0 .9375rem;
+    padding-top: ($panel-padding);
+    margin: 0 ($panel-padding);
     margin-bottom: 2rem;
   }
 }
 
+// responsive styles for featured content panel
 .application-options {
   background-color: $dust;
   padding-top: 2rem;

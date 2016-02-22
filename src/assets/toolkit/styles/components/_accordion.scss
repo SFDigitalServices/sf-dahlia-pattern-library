@@ -3,6 +3,8 @@
 //
 
 .accordion {
+  
+  // accordion nested inside a parent accordion
   &-nested {
     @include responsive-text-size('small');
 

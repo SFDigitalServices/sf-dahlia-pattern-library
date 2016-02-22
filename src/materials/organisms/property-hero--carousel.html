@@ -1,10 +1,24 @@
 <div class="property-hero" ng-app="dahlia" ng-controller="CarouselSampleController">
   <figure class="property-hero_figure">
     <div class="property-hero_container">
-      <div class="orbit" data-orbit
-          data-options="navigation_arrows: true; bullets: false; slide_number: false; timer: false;">
-        <img class="property-hero_thumb" ng-repeat="image in ::images track by $index" reflow-after-load ng-src="{% image %}" alt="Trinity Place Apartments, 1188 Mission St">
-      </div>
+      <ng-carousel ng-carousel-name="example-carousel1">
+        <slidecontainer class="carousel-slides">
+          <slide ng-repeat="image in ::images track by $index">
+            <img class="property-hero_thumb" reflow-after-load ng-src="{% image %}" alt="Trinity Place Apartments, 1188 Mission St">
+          </slide>
+        </slidecontainer>
+        <div class="carousel-arrow carousel-arrow-left">
+          <button ng-click="Carousel.get('example-carousel1').previous()">
+            {{> icons.base icon="left" fill="white" size="large"}}
+          </button>
+        </div>
+        <div class="carousel-arrow carousel-arrow-right">
+          <button ng-click="Carousel.get('example-carousel1').next()">
+            {{> icons.base icon="right" fill="white" size="large"}}
+          </button>
+        </div>
+      </ng-carousel>
+
       <a href="#" class="property-hero_like">
         {{> icons.icon-like}}
       </a>
@@ -38,7 +52,7 @@
     </div>
 
     <div class="stats-card">
-      {{> stats.stats-list--quad-1br}}
+      {{> stats.stats-list--quad-one-br}}
       <ul class="stats-list double medium-full labels-inline bg-ghost hide-for-medium-up">
         <li>
           <span class="stats-list_label">Availability</span>

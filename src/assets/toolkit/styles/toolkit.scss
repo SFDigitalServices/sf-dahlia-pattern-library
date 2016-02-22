@@ -30,18 +30,18 @@
    "../../vendor/foundation/scss/foundation/components/tabs",
    "../../vendor/foundation/scss/foundation/components/tooltips",
    "../../vendor/foundation/scss/foundation/components/top-bar",
-   "../../vendor/foundation/scss/foundation/components/visibility",
-   "../../vendor/foundation/scss/foundation/components/orbit";
+   "../../vendor/foundation/scss/foundation/components/visibility";
+
+@import "utilities/all";
+
 @import "vendors/compass";
 @import "vendors/scut";
 @import "vendors/buttons";
+@import "vendors/angular-carousel";
 @import "vendors-extensions/all";
-
-@import "utilities/all";
 
 @import "base/all";
 @import "structures/all";
 @import "components/all";
 
 @import "templates/all";
-@import "pages/all";

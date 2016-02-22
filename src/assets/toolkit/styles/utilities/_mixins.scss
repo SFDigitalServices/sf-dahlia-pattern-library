@@ -35,3 +35,55 @@
     page-break-inside: avoid;
   }
 }
+
+// Layout element with padding top and bottom
+@mixin slat($slat-padding: 1rem) {
+  border-bottom: 1px solid $smoke;
+  position: relative;
+  padding-bottom: $slat-padding;
+  padding-top: $slat-padding;
+
+  @media #{$medium-up} {
+    padding-bottom: ($slat-padding*2);
+    padding-top: ($slat-padding*2);
+  }  
+}
+
+// Layout element with padding on all four sides
+@mixin block($block-padding: 2rem) {
+  padding: $block-padding;
+  text-align: center;
+
+  @media #{$medium-up} {
+    padding-top: ($block-padding*2);
+    padding-bottom: ($block-padding*3);
+  }  
+}
+
+// Image replace
+@mixin image-replace($imageURL) {
+  background: url($imageURL) no-repeat;
+  overflow: hidden;
+}
+
+// Using due to errors from compass mixin
+@mixin custom-linear-gradient($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 50%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  $top 50%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 50%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 50%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 50%,$bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin overlay-image() {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}    

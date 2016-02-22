@@ -1,18 +1,31 @@
+//
+// Toolbars
+
+// Search results details
 .results-bar {
-  button, .button {
-    margin-bottom: 0;
-    margin-top: .5rem;
+  .results-wrap {
+    @media #{$medium-up} {
+      display: table;
+    }
+  }
+
+  .button-set {
+    float: left;
+    margin-left: 0;
+    padding-top: 1rem;
 
     @media #{$medium-up} {
-      margin-left: 1rem;
-      margin-top: 0;
-    }  
+      float: none;
+      padding-left: 1.5rem;
+      padding-top: 0;
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+    }
   }
-}
 
-.property-bar {
-  background: $deep;
-  color: #fff;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  button, .button {
+    margin-right: .25rem;
+    margin-bottom: 0;
+  }
 }

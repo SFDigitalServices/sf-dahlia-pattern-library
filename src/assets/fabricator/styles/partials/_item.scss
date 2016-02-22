@@ -44,7 +44,7 @@
 
 .f-item-heading-group {
 	@include clearfix;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	vertical-align: middle;
 }
 
@@ -86,4 +86,5 @@
 
 .f-item-notes {
 	font-size: 0.875rem;
+	margin-bottom: 2rem;
 }
