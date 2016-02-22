@@ -167,3 +167,160 @@
     padding-right: 2rem;
   }
 }
+
+//
+// Stats
+// Multiple stats container
+
+.stats-card {
+  margin-bottom: .5rem;
+  
+  table {
+    margin-bottom: 0;
+  }
+
+  &.bottom {
+    .stats-list {
+      li {
+        height: 2rem;
+        overflow: hidden;
+      }
+        
+      .stats-list_label {
+        visibility: hidden;
+      }
+
+      &:last-of-type {
+        li {
+          overflow: visible;
+          height: auto;
+        }
+
+        .stats-list_label {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &.medium-double {
+    @include clearfix;
+    @media #{$medium-up} {
+      margin-bottom: 1rem;
+    }
+
+    .stats-list {
+      margin-bottom: .5rem;
+      @media #{$medium-up} {
+        float: left;
+        width: 50%;
+
+        &:nth-child(even) {
+          padding-left: .25rem; 
+        }
+
+        &:nth-child(odd) {
+          padding-right: .25rem; 
+        }
+      }
+    }
+  }
+}
+
+//
+// Stats Table
+// Stats container with table
+
+.stats-table {
+  width: calc(100% + 1px);
+
+  th {
+    @include responsive-text-size('tiny');
+    color: $charcoal;
+    font-weight: normal;
+  }
+
+  tr {
+    border-bottom: 1px solid $smoke;
+
+    td {
+      font-size: 1rem;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+  }
+
+  &_value {
+    font-weight: 600;
+
+    .value-label {
+      @include responsive-text-size('small');
+      font-weight: 400;
+    }
+  }
+
+  &_label {
+    @include responsive-text-size('tiny');
+    color: $charcoal;
+    vertical-align: top;
+  }
+}
+
+// Tablesaw for responsive tables
+.stats-table--stack {
+  width: 100%;
+
+  tbody td {
+    clear: left;
+    float: left;
+    width: 100%;
+  }
+
+  .tablesaw-cell-label {
+    width: 30%;
+    display: inline-block;
+  }
+
+  .tablesaw-cell-content {
+    max-width: 67%;
+    display: inline-block;
+  }
+
+  .stat-row {
+    border: 1px solid $smoke;
+    padding-bottom: 1rem;
+    margin-top: .5rem; 
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+//
+// Stats grid
+// Tables styles
+
+.stats-grid {
+  width: 100%;
+
+  th {
+    @include responsive-text-size('quark');
+    text-transform: uppercase;
+    color: $charcoal;
+  }
+
+  tr {
+    border-bottom: 1px solid $smoke;
+  }
+
+  tr:nth-of-type(even) {
+    background: #fff;
+  }
+
+  td {
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
