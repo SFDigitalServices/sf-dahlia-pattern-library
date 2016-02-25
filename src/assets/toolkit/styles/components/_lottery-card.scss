@@ -1,0 +1,87 @@
+.lottery {
+  &-card {
+    border: 1px solid $steel;
+  }
+
+  &-details {
+    padding: 1rem;
+  }  
+}
+
+.lottery-card {
+  .card {
+    &-address {
+      overflow: hidden;
+    }
+
+    &-title {
+      margin-bottom: 0;
+    }
+
+    &-units {
+      @include responsive-text-size('small');
+      color: $steel;
+    }
+
+    &-notice {
+      background-color: $mist;
+      padding: 1rem;
+      padding-left: 3rem;
+      margin-bottom: 1rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &-more {
+      display: inline-block;
+    }
+  }
+
+  .notice {
+    &-label {
+      @include type-weight(semi);
+      margin-bottom: .5rem;
+    }
+
+    &-feed {
+      background: $tint;
+    }
+  }
+
+  .event {
+    &-list {
+
+    }
+
+    &-title {
+      @include type-weight(semi);
+    }
+
+    &-item {
+      padding: 1rem;
+      padding-left: 4rem;
+    }
+
+    &-address {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    &-note {
+      @include responsive-text-size('small');
+    }
+
+    &-details {
+      li {
+        @include responsive-text-size('small');
+        padding-bottom: 1rem;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

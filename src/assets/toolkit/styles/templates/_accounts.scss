@@ -1,0 +1,8 @@
+.dash-feed {
+  padding: 2rem 0;
+
+  @media #{$small-only} {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }  
+}
