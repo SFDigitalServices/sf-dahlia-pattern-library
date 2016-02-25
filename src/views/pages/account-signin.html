@@ -1,0 +1,27 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.lead-header title="My Account" description=" " background="oil" color="white"}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card">
+      <h2 class="application-title t-gamma">Sign In</h2>
+        
+      <div class="form-group">
+        <h3 class="form-label">Email Address</h3>
+        {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
+      </div>
+
+      <div class="form-group">
+        <h3 class="form-label">Password</h3>
+        {{> forms.text-input--base placeholder="Must be 6 characters" label="password"}}
+        <small class="form-note shift-up"><a href="#">Forgot Password?</a></small>
+      </div>
+
+      {{> forms.button-stack--paginate left="Create an Account" right="Sign In"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}

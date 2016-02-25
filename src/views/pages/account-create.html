@@ -1,0 +1,31 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.lead-header title="My Account" description=" " background="oil" color="white"}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card">
+      <h2 class="application-title t-gamma">Create an Account</h2>
+      <div class="form-group padding-bottom">
+        <p class="t-small c-steel">You'll use this information to log in to your account, so make sure you can remember it.</p>
+      </div>
+        
+      <div class="form-group">
+        <h3 class="form-label">Email Address</h3>
+        {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
+        {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
+      </div>
+
+      <div class="form-group">
+        <h3 class="form-label">Password</h3>
+        {{> forms.text-input--base placeholder="Must be 6 characters" label="password"}}
+        {{> forms.text-input placeholder="Must be 6 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
+      </div>
+
+      {{> forms.button-stack--paginate left="Cancel" right="Create"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}

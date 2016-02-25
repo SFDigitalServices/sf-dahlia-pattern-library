@@ -20,6 +20,12 @@ label {
   label {
     @extend .form-label;
   }
+
+  // &.has-note {
+  //   input {
+  //     margin-bottom: 0 !important;
+  //   }
+  // }
 }
 
 // Input label
@@ -28,6 +34,11 @@ label {
   @include type-weight(semi);
   margin-bottom: .5rem;
   text-transform: none;
+
+  &.label-secondary {
+    @include type-weight(regular);
+    color: $steel !important;
+  }
 }
 
 // Additional input helper text
@@ -36,6 +47,12 @@ label {
   @include type-weight(semi);
   color: $steel;
   margin-bottom: 0;
+
+  &.shift-up {
+    display: block;
+    margin-top: -.75rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 // Application page count
