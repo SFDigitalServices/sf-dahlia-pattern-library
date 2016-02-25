@@ -37,11 +37,13 @@ html {
 body {
   height: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .site-container {
   display: table;
   height: 100%;
+  table-layout: fixed;
   width: 100%;
 }
 
