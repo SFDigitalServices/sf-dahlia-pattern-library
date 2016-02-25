@@ -25,3 +25,27 @@
     }
   }
 }
+
+
+// Sticky footer
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: scroll;
+}
+
+.site-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.footer-section {
+  display: table-row;
+  height: 1px;
+}

@@ -28,11 +28,13 @@
 			{{> f-control-bar}}
 	{{/if}}
 
-	{% body %}
-
+	<div class="site-container">
+		{% body %}
+	</div>
 
 	{{#if fabricator}}
 		</div>
+
 	<script src="{{baseurl}}/assets/fabricator/scripts/f.js"></script>
 	{{/if}}
 
