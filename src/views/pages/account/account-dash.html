@@ -25,19 +25,50 @@
         
         <p class="card-number">Your lottery number is #98AU18</p>
         
-        <div class="card-notice push">
-          <span class="notice-icon"></span>
-          <p class="notice-label">Status: Applications Closed</p>
-          <p>Public lottery will be held on February 14, 2016.</p>
+        <div class="card-notice">
+          <ul class="notice-timeline">
+            <li class="timeline-icon">
+              {{> icons.base icon="map" }}
+              <span class="timeline-label">Applications Open</span>
+            </li>
+            <li class="timeline-icon">
+              {{> icons.base icon="map" }}
+              <span class="timeline-label">Applications Close</span>
+            </li>
+            <li class="timeline-icon">
+              {{> icons.base icon="map" }}
+              <span class="timeline-label">Public Lottery</span>
+            </li>
+            <li class="timeline-icon">
+              {{> icons.base icon="map" }}
+              <span class="timeline-label">Lottery Results</span>
+            </li>
+            <li class="timeline-icon">
+              {{> icons.base icon="map" }}
+              <span class="timeline-label">Units Filled</span>
+            </li>
+          </ul>
+          <div class="notice-status">
+            <span class="notice-icon">
+              {{> icons.base icon="map" }}
+            </span>
+            <p class="notice-label">Status: Applications Closed</p>
+            <p>Public lottery will be held on February 14, 2016.</p>
+          </div>
         </div>
 
-        <a href="#" class="card-more">Lottery Status</a>
+        <div class="card-footer">
+          <a href="#" class="card-more left">Hide Lottery Status</a>
+          <span class="card-date right show-for-medium-up">Updated: January 12th 2016</span>
+        </div>  
       </section>
 
-      <section class="notice-feed">
+      <section class="event-feed">
         <ul class="event-list has-icon">
           <li class="event-item push">
-            <span class="event-icon"></span>
+            <span class="event-icon">
+              {{> icons.base icon="map" }}
+            </span>
 
             <p class="event-title">Public Lottery February 14, 2016 <br> 
             8:00pm</p>
@@ -49,10 +80,28 @@
             <ul class="event-details">
               <li>A total of 6000 applications were received for 90 units.</li>
               <li>Lottery results will be posted January 21, 2016.</li>
-            </ul>  
+            </ul>
+          </li>
+
+          <li class="event-item push">
+            <span class="event-icon">
+              {{> icons.base icon="map" }}
+            </span>
+
+            <p class="event-title">Public Lottery February 14, 2016 <br> 
+            8:00pm</p>
+            <a href="#" class="event-address">San Francisco LGBT Community Center <br> 
+            1800 Market Street, <br>
+            San Francisco</a>
+            <p class="event-note">Attendance is optional and welcome.</p>
+
+            <ul class="event-details">
+              <li>A total of 6000 applications were received for 90 units.</li>
+              <li>Lottery results will be posted January 21, 2016.</li>
+            </ul>
           </li>
         </ul>
-      </section>      
+      </section>
     </div>
   </div>
 </section>    
