@@ -8,13 +8,26 @@
 
     &-title {
       @include type-weight(semi);
+      margin-bottom: .5rem;
     }
 
     &-item {
       padding: 1rem;
-      padding-left: 4rem;
+      padding-left: 3rem;
       position: relative;
       border-top: 2px solid $smoke;
+
+      &:first-of-type {
+        border: none;
+      }
+
+      &.has-past {
+        color: $steel;
+      }
+
+      @media #{$medium-up} {
+        padding-left: 4rem;
+      }  
     }
 
     &-icon {
@@ -22,7 +35,10 @@
       width: 3rem;
       height: 3rem;
       margin-top: .25rem;
-      margin-left: 1rem;
+
+      @media #{$medium-up} {
+        margin-left: 1rem;
+      }
 
       .ui-icon {
         @extend %center-xy;

@@ -1,0 +1,41 @@
+.card {
+  border: 1px solid $smoke;
+  margin-bottom: 1rem;
+  
+  // card container
+  &-details {
+    padding: 1rem;
+  }
+
+  &-address {
+    overflow: hidden;
+  }
+
+  &-title {
+    margin-bottom: 0;
+  }
+
+  &-group {
+    margin-bottom: 1rem;
+  }
+
+  &-more {
+    @include responsive-text-size('small');
+    display: inline-block;
+  }
+
+  &-date {
+    @include responsive-text-size('small');
+  }
+
+  &-footer {
+    @include clearfix;
+  }
+}
+
+.lottery-card {
+  .card-units {
+    @include responsive-text-size('small');
+    color: $steel;
+  }
+}
