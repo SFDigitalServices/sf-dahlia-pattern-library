@@ -89,10 +89,13 @@
       background-color: #fff;
       border-bottom: none;
       padding-left: 0;
+      padding-right: 2.5rem;
       position: relative;
 
       @media #{$medium-up} {
-        color: $primary
+        color: $primary;
+        padding-left: 2.5rem;
+        padding-right: 1rem;
       }
     }
 
