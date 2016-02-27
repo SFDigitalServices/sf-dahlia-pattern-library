@@ -38,7 +38,6 @@
 .notice-timeline {
   @include clearfix;
   display: none;
-  margin-bottom: 1rem;
   margin-top: 1rem;
 
   @media #{$medium-up} {
@@ -49,6 +48,14 @@
     float: left;
     text-align: center;
     width: 20%;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      @include triangle();
+      @include absolute(null,null,0,50%);
+      @include translateX(-50%);
+    }
 
     .ui-icon {
       background-color: $mist;
@@ -70,4 +77,8 @@
     display: block;
     padding-top: .25rem;
   }
+}
+
+.notice-arrow {
+  @include scut-triangle(up);
 }

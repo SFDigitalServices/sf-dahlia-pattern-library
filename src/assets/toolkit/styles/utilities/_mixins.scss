@@ -87,3 +87,16 @@
   right: 0;
   z-index: 2;
 }    
+
+@mixin triangle($border-width: 0.5em 0.375em) {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  -webkit-transform: rotate(360deg);
+  border-width: $border-width;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: $tint;
+  border-top-width: 0;
+}

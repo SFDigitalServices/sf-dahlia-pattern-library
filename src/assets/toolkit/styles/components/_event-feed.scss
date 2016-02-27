@@ -25,9 +25,9 @@
         color: $steel;
       }
 
-      @media #{$medium-up} {
-        padding-left: 4rem;
-      }  
+      // @media #{$medium-up} {
+      //   padding-left: 4rem;
+      // }  
     }
 
     &-icon {
@@ -36,9 +36,9 @@
       height: 3rem;
       margin-top: .25rem;
 
-      @media #{$medium-up} {
-        margin-left: 1rem;
-      }
+      // @media #{$medium-up} {
+      //   margin-left: 1rem;
+      // }
 
       .ui-icon {
         @extend %center-xy;
