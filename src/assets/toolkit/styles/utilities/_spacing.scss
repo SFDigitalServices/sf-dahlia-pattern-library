@@ -358,6 +358,14 @@ $units: (
   padding-right: 0 !important;
 }
 
+.padding-top-none {
+  padding-top: 0 !important;
+}
+
+.padding-bottom-none {
+  padding-bottom: 0 !important;
+}
+
 .no-margin {
   margin: 0 !important;
 }
@@ -368,6 +376,14 @@ $units: (
 
 .margin-top-none {
   margin-top: 0 !important;
+}
+
+.margin-left-none {
+  margin-left: 0 !important;
+}
+
+.margin-right-none {
+  margin-right: 0 !important;
 }
 
 .min-height--4x {

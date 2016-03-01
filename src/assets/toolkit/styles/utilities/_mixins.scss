@@ -46,7 +46,11 @@
   @media #{$medium-up} {
     padding-bottom: ($slat-padding*2);
     padding-top: ($slat-padding*2);
-  }  
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
 }
 
 // Layout element with padding on all four sides

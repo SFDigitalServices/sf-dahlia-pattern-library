@@ -15,24 +15,28 @@
         <div class="card-inner">
           <h2>Edit Profile</h2>
 
-          <div class="slat">
+          <div class="slat padding-top-none">
           <div class="form-group max-width">
             <h3 class="form-label">Update Email Address</h3>
             {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
 
-            {{> buttons.button text="Update Profile"}}
+            {{> buttons.button classes="small no-margin" text="Update profile"}}
+          </div>
+          </div>
+
+          <div class="slat">
+          <div class="form-group">
+            <h3 class="form-label">Change Password</h3>
+            <p class="small">When changing your password make sure you make note of it so you remember it in the future.</p>
+            {{> buttons.button classes="small secondary no-margin" text="Change your password"}}
           </div>
           </div>
 
           <div class="slat">
           <div class="form-group max-width">
-            {{> buttons.button classes="secondary" text="Change Password"}}
-          </div>
-          </div>
-
-          <div class="slat">
-          <div class="form-group max-width">
-            {{> buttons.button classes="alert" text="Delete Account"}}
+            <h3 class="form-label">Delete Account</h3>
+            <p class="small">Deleting your account will mean losing all previously saved favorites and settings.</p>
+            {{> buttons.button classes="small alert no-margin" text="Delete your account"}}
           </div>
           </div>
         </div>
