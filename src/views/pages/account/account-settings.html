@@ -1,0 +1,44 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+{{> headers.accounts-header}}
+
+<section class="row">
+  <div class="medium-3 columns margin-top--2x">
+    <nav class="dash-aside">
+      {{> navigation.side-nav }}
+    </nav>
+  </div>
+
+  <div class="medium-9 columns margin-top--2x margin-bottom--2x">
+    <main class="dash-main">
+      <div class="card">
+        <div class="card-inner">
+          <h2>Edit Profile</h2>
+
+          <div class="slat">
+          <div class="form-group max-width">
+            <h3 class="form-label">Update Email Address</h3>
+            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
+
+            {{> buttons.button text="Update Profile"}}
+          </div>
+          </div>
+
+          <div class="slat">
+          <div class="form-group max-width">
+            {{> buttons.button classes="secondary" text="Change Password"}}
+          </div>
+          </div>
+
+          <div class="slat">
+          <div class="form-group max-width">
+            {{> buttons.button classes="alert" text="Delete Account"}}
+          </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+{{> components.footer}}

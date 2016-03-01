@@ -1,0 +1,21 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+{{> headers.accounts-header}}
+
+<section class="row">
+  <div class="medium-3 columns margin-top--2x">
+    <nav class="dash-aside">
+      {{> navigation.side-nav }}
+    </nav>
+  </div>
+
+  <div class="medium-9 columns margin-top--2x margin-bottom--2x">
+    <main class="dash-feed">
+      {{> property-card--dash}}
+
+      {{> property-card--dash}}
+    </main>
+  </div>
+</section>    
+
+{{> components.footer}}

@@ -1,19 +1,37 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 {{> headers.accounts-header}}
-
+  
 <section class="row">
-  <div class="medium-4 columns margin-top--2x">
-    <nav class="dash-aside">
-      {{> navigation.side-nav }}
-    </nav>
-  </div>
+  <div class="dash-section">
+    <div class="dash-block">
+      <a href="#" class="dash-item">
+        <h3 class="dash-name">My Favorites</h3>
+        <p>See properties you favorited in the past</p>
+      </a>
+    </div>
 
-  <div class="medium-8 columns margin-top--2x margin-bottom--2x">
-    <main class="dash-feed">
-      {{> lottery-card }}
-    </main>
+    <div class="dash-block">
+      <a href="#" class="dash-item">
+        <h3 class="dash-name">Eligibility Matches</h3>
+        <p>Quickly search based on eligibility filters</p>
+      </a>
+    </div>
+
+    <div class="dash-block">
+      <a href="#" class="dash-item">
+        <h3 class="dash-name">My Lotteries</h3>
+        <p>See lottery dates and listings for properties for which you've applied</p>
+      </a>
+    </div>
+
+    <div class="dash-block">
+      <a href="#" class="dash-item">
+        <h3 class="dash-name">Settings</h3>
+        <p>Account settings, email and password</p>
+      </a>
+    </div>
   </div>
-</section>    
+</section>
 
 {{> components.footer}}
