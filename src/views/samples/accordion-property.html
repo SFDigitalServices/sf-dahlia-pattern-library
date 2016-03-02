@@ -4,21 +4,49 @@ title: Angular
 ---
 
 <div ng-controller="AccordionSampleController">
-  <accordion close-others="oneAtATime" class="top">
-    <accordion-group is-open="true">
-      <accordion-heading>
-        
+  <accordion close-others="oneAtATime" class="page-accordion top">
+    <accordion-group class="medium-right-column">    
+      <accordion-heading class="lead">
+        Apply now
+        <span>Income, occupancy, preferences, and subsidies</span>
       </accordion-heading>
-      This content is straight in the template.
+
+      <div class="content-section">
+        Apply now yo!
+      </div>
     </accordion-group>
-    <accordion-group heading="" ng-repeat="group in groups">
-      
+
+    <accordion-group>
+      <header class="content-lead">
+        <h2>Eligibility</h2>
+        <span>Income, occupancy, preferences, and subsidies</span>
+      </header>
+      <accordion-heading class="lead">
+        Eligibility
+        <span>Income, occupancy, preferences, and subsidies</span>
+      </accordion-heading>
+      <div class="content-section">
+        <p>This content is straight in the template.</p>
+      </div>  
     </accordion-group>
+
+    <accordion-group>
+      <header class="content-lead">
+        <h2>Features</h2>
+        <span>Amenities, unit details and additional fees</span>
+      </header>
+      <accordion-heading class="lead">
+        Features
+        <span>Amenities, unit details and additional fees</span>
+      </accordion-heading>
+    </accordion-group>
+
     <accordion-group heading="Dynamic Body Content">
       <p>The body of the accordion group grows to fit the contents</p>
         <button class="button small" ng-click="addItem()">Add Item</button>
         <div ng-repeat="item in items"></div>
     </accordion-group>
+
     <accordion-group is-open="isopen">
       <accordion-heading>
           I can have markup, too! <i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i>
@@ -26,5 +54,4 @@ title: Angular
       This is just some content to illustrate fancy headings.
     </accordion-group>
   </accordion>
-
 </div>
