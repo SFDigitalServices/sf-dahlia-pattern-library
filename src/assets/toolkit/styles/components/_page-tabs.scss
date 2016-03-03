@@ -1,0 +1,34 @@
+.page-tabs {
+  .tabs dd > a {
+    @media #{$medium-up} {
+      display: none !important;
+    }
+  }
+
+  .tabs-content > .content {
+    @media #{$medium-up} {
+      display: block !important;
+    }
+  }
+
+  // responsive right hand column
+  .medium-right-column {
+    @media #{$medium-up} {
+      @include absolute(0,0,0,null);
+      @include translateX(0);
+
+      .content {
+        background-color: #fff;
+        border: 1px solid $smoke;
+        width: $siderail-width !important;
+        margin: 0 !important;
+        height: 100%;
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      @include absolute(0,null,0,50%);
+      @include translateX(200px);
+    }
+  }
+}
