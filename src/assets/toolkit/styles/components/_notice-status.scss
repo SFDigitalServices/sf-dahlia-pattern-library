@@ -124,11 +124,32 @@
   }
 }
 
+.status-success {
+  .time-results {
+    &::after {
+      border-bottom-color: $success-tint;
+      display: block;
+    }
+
+    .ui-icon {
+      background-color: $success-tint;
+    }
+  }
+
+  &.notice-status {
+    background: $success-tint;
+  }
+}
+
 .status-results {
   .time-results {
     &::after {
       border-bottom-color: $splash-tint;
       display: block;
+    }
+
+    .ui-icon {
+      background-color: $splash-tint;
     }
   }
 
@@ -140,7 +161,16 @@
 .status-filled {
   .time-filled {
     &::after {
+      border-bottom-color: $primary-tint;
       display: block;
     }
+
+    .ui-icon {
+      background-color: $primary-tint;
+    }
+  }
+
+  &.notice-status {
+    background: $primary-tint;
   }
 }

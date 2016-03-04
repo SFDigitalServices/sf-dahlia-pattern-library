@@ -14,30 +14,34 @@
       <div class="notice-container">
         <ul class="notice-timeline {{status-class}}">
           <li class="timeline-icon time-open">
-            {{> icons.base icon="info" }}
+            {{> icons.base icon="edit" }}
             <span class="timeline-label">Applications Open</span>
           </li>
           <li class="timeline-icon time-close">
-            {{> icons.base icon="link" }}
+            {{> icons.base icon="lock" }}
             <span class="timeline-label">Applications Close</span>
           </li>
           <li class="timeline-icon time-lottery">
-            {{> icons.base icon="download" }}
+            {{> icons.base icon="ticket" }}
             <span class="timeline-label">Public Lottery</span>
           </li>
           <li class="timeline-icon time-results">
-            {{> icons.base icon="globe" }}
+            {{> icons.base icon="list" }}
             <span class="timeline-label">Lottery Results</span>
           </li>
           <li class="timeline-icon time-filled">
-            {{> icons.base icon="check" }}
+            {{> icons.base icon="asterisk" }}
             <span class="timeline-label">Units Filled</span>
           </li>
         </ul>
 
         <div class="notice-status {{status-class}}">
           <span class="notice-icon">
-            {{> icons.base icon="map" }}
+            <span class="ui-icon ui-static ui-medium i-oil">
+              <svg>
+                <use xlink:href="#i-{{icon}}"></use>
+              </svg>
+            </span>
           </span>
           <p class="notice-label">Status: {{status}}</p>
           <p>{{status-details}}</p>
@@ -47,7 +51,7 @@
 
     <footer class="card-footer">
       <a href="#" class="card-more left">{{> icons.base icon="arrow-down" size="tiny" fill="primary" position="link"}} Hide Lottery Status</a>
-      <span class="card-date right show-for-medium">Updated: {{updated}}</span>
+      <span class="card-date right show-for-medium-up">Updated: {{updated}}</span>
     </footer>  
   </section>
 
@@ -80,12 +84,46 @@
         {{#if detail}}
         <ul class="event-details">
           {{#each detail}}
-          <li>{{.}}</li>
+          <li>{{{.}}}</li>
           {{/each}}
         </ul>
         {{/if}}
+
+        {{#if link}}
+        <ul class="event-links">
+          {{#each link}}
+            <li>
+              <a href="#" class="has-icon">
+                <span class="link-icon">
+                  <span class="ui-icon ui-link ui-medium i-deep">
+                    <svg>
+                      <use xlink:href="#i-{{icon}}"></use>
+                    </svg>
+                  </span>
+                </span>
+                {{{text}}}
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+        {{/if}}
+
       </li>
       {{/each}}
+
+      <li class="event-item">
+        <a href="#">
+          <span class="event-icon">
+            <span class="ui-icon ui-static ui-medium i-primary">
+              <svg>
+                <use xlink:href="#i-eye"></use>
+              </svg>
+            </span>
+          </span>
+
+          <p class="event-title">See Full Listing</p>
+        </a>
+      </li>
     </ul>
   </section>
 
