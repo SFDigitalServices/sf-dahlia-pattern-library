@@ -17,16 +17,23 @@
           <a href="#">Trinity Place Apartments</a>
         </h1>
         <p>1188 Mission St, San Francisco CA, 94134</p>
-        <p class="c-steel margin-bottom--half">Caritas Management Group</p>
-        <p>Application Due Februrary 2, 2016</p>
+        <p class="c-steel margin-bottom--half">Studio: 22 units, 1 Bedroom: 33 units 2 Bedroom: 38 units</p>
+        <div class="notice-status {{status-class}}">
+          <p>Application Due Februrary 2, 2016</p>
+        </div>
 
-      <div class="right margin-top">
-        <a class="button tiny secondary no-margin" href="/property/property-grid.html">See Details</a>
+      <div class="margin-top">
+        <a class=" button tiny ghost-white no-margin" href="/property/property-grid.html">See Details</a>
+
+        <a class="right button tiny tertiary no-margin has-icon" href="/property/property-grid.html">
+        {{> icons.base icon="close" size="tiny" fill="deep"}}
+        Remove from Favorites
+        </a>
       </div>
     </hgroup>
   </header>
 
-  <div class="property-card_stats">
+<!--   <div class="property-card_stats">
     {{> stats.stats-grid}}
-  </div>
+  </div> -->
 </div>
