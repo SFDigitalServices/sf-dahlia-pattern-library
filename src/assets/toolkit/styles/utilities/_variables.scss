@@ -2,9 +2,14 @@
 // BaseType
 //
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+// @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+// @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 $base-font-size:      16px;
 $base-line-height:    24px;
@@ -22,16 +27,16 @@ $h1-font-size-large: rem-calc(40);
 $h2-font-size-large: rem-calc(28);
 $h3-font-size-large: rem-calc(24);
 
-$font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+$font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
 // $font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
 $base-font-family: $font-family;
 $sans-font-family: $font-family;
 $body-font-family: $font-family;
 $sans-font-family-semibold: $font-family;
 $sans-font-family-bold: $font-family;
-$alt-font-family: "Montserrat", Helvetica, Arial, Verdana, sans-serif;
+$alt-font-family: "Lato", Helvetica, Arial, Verdana, sans-serif;
 $serif-font-family: "Droid Serif", Georgia, Times, serif;
-$fancy-serif-font-family: $serif-font-family;
+$fancy-serif-font-family: "Playfair Display", Georgia, Times, serif;
 
 $font-weight-normal: 400;
 $type-weight: (
@@ -215,10 +220,14 @@ $input-font-size: rem-calc(16);
 /* Buttons */
 
 // Button colors.
-$base-button-color:     #fff;
-$base-button-bg:        $primary;
+$base-button-color:     $primary;
+$base-button-bg:        #fff;
 $btn-primary-border:    darken($base-button-bg, 5%);
 $global-radius:         4px;
+$button-font-tny: rem-calc(10);
+$button-font-sml: rem-calc(11);
+$button-font-med: rem-calc(13);
+$button-font-lrg: rem-calc(16);
 
 // Border radius.
 .radius {border-radius: .3em;}

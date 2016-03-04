@@ -14,10 +14,17 @@ $dark-bg-colors: (
 
 button,
 .button {
+  @include type-weight(bold);
+  background-color: transparent;
   border-radius: rem-calc(4);
-  font-family: $font-family;
+  box-shadow: inset 0px 0px 0 2px $primary;
+  color: $primary;
+  font-family: $alt-font-family;
+  text-transform: uppercase;
+  letter-spacing: .2em;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+
 
   // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
