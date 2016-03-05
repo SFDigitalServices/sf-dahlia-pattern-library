@@ -2,6 +2,12 @@
 // Forms
 //
 
+#{text-inputs(all, 'input')}, 
+textarea,
+select {
+  border-radius: $input-border-radius;
+}
+
 form {
   font-family: $font-family;
 

@@ -208,6 +208,8 @@ $breakpoints: (
 $include-html-classes: true;
 $include-html-global-classes: $include-html-classes;
 
+$global-radius:         4px;
+
 // Forms
 $fieldset-border-width: 0;
 $form-label-small-transform: capitalize;
@@ -216,6 +218,7 @@ $form-spacing: rem-calc(20);
 $form-label-font-size: rem-calc(16);
 $input-placeholder-font-color: $steel;
 $input-font-size: rem-calc(16);
+$input-border-radius: $global-radius;
 
 /* Buttons */
 
@@ -223,23 +226,14 @@ $input-font-size: rem-calc(16);
 $base-button-color:     $primary;
 $base-button-bg:        #fff;
 $btn-primary-border:    darken($base-button-bg, 5%);
-$global-radius:         4px;
 $button-font-tny: rem-calc(10);
 $button-font-sml: rem-calc(11);
 $button-font-med: rem-calc(13);
 $button-font-lrg: rem-calc(16);
 
-// Border radius.
-.radius {border-radius: .3em;}
-
 // Accordion
 $accordion-navigation-bg-color: $dust;
 $accordion-navigation-font-color: $dark;
-
-// Tables
-$table-border-size: none;
-$table-even-row-bg: $dust;
-$table-foot-bg: $white;
 
 // Top Bar Variables
 $topbar-bg-color: #fff;
@@ -295,3 +289,50 @@ $panel-font-color-alt: $white !default;
 $panel-header-adjust: false;
 $callout-panel-link-color: $primary-color !default;
 $callout-panel-bg: scale-color($primary-color, $lightness: 94%) !default;
+
+// Tables
+$table-border-size: none;
+$table-even-row-bg: $dust;
+$table-foot-bg: $white;
+
+// Tables
+
+// These control the background color for the table and even rows
+// $table-bg: $white;
+$table-even-row-bg: $dust;
+
+// These control the table cell border style
+// $table-border-style: solid;
+$table-border-size: none;
+// $table-border-color: $gainsboro;
+
+// These control the table head styles
+$table-head-bg: $white-smoke;
+$table-head-font-size: rem-calc(13);
+$table-head-font-color: $oil;
+$table-head-font-weight: 700;
+$table-head-padding: rem-calc(24 20);
+
+// These control the table foot styles
+// $table-foot-bg: $table-head-bg;
+// $table-foot-font-size: $table-head-font-size;
+// $table-foot-font-color: $table-head-font-color;
+// $table-foot-font-weight: $table-head-font-weight;
+// $table-foot-padding: $table-head-padding;
+
+// These control the caption
+// table-caption-bg: transparent;
+// $table-caption-font-color: $table-head-font-color;
+// $table-caption-font-size: rem-calc(16);
+// $table-caption-font-weight: bold;
+
+// These control the row padding and font styles
+$table-row-padding: rem-calc(20 20);
+// $table-row-font-size: rem-calc(14);
+$table-row-font-color: $steel;
+// $table-line-height: rem-calc(18);
+
+// These are for controlling the layout, display and margin of tables
+// $table-layout: auto;
+// $table-display: table-cell;
+// $table-margin-bottom: rem-calc(20);

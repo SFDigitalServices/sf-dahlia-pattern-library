@@ -1,3 +1,16 @@
+
+table {
+  thead {
+    tr {
+      th {
+        border-bottom: 1px solid $primary;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
 //
 // Result set
 // List psuedo table
@@ -28,36 +41,85 @@
   margin: 1em 0;
   min-width: 300px; // adjust to your needs
   
-  tr {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+  @media #{$small-only} { 
+    width: 100%;
   }
 
-  @media #{$small-only} {
-    th {
+  tr {
+    &:nth-of-type(even) {
+      @media #{$small-only} {
+        background: transparent;
+      }  
+    }
+  }
+
+  
+  th {
+    @media #{$small-only} { 
       @include sr-only(); // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
     }
   }
   
   td {
-    display: block; 
-    
-    &:first-child {
-      padding-top: .5em;
-    }
-    &:last-child {
-      padding-bottom: .5em;
+    display: block;
+
+    @media #{$small-only} {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      text-align: right;
+
+      &:first-child {
+        padding-top: 1rem;
+      }
+
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: $dust;
+      }
+
+      &.tr {
+        @include responsive-text-size('base');
+        background: transparent;
+        color: $oil;
+        font-family: $alt-font-family;
+        letter-spacing: .2rem;
+        margin-bottom: 1rem;
+        text-align: left;
+        text-transform: uppercase;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .h-small {
+        border-bottom: 3px solid $primary;
+        padding-bottom: .5rem;
+      }
     }
 
     &:before {
-      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
-      font-weight: bold;
+      content: attr(data-th)""; // who knew you could do this? The internet, that's who.
+      color: $oil;
+      float: left;
+      font-family: $alt-font-family;
+      font-weight: 700;
+      text-align: left;
 
       // optional stuff to make it look nicer
-      width: 6.5em; // magic number :( adjust according to your own content
-      display: inline-block;
+      width: 8.5rem; // magic number :( adjust according to your own content
+      display: block;
       // end options
       
+      @media #{$small-only} {
+        @include responsive-text-size('tiny');
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+      }  
+
       @media #{$medium-up} {
         display: none;
       }
@@ -65,18 +127,16 @@
   }
   
   th, td {
-    text-align: left;
     
     @media #{$medium-up} {
       display: table-cell;
-      padding: .25em .5em;
       
       &:first-child {
-        padding-left: 0;
+        
       }
       
       &:last-child {
-        padding-right: 0;
+        
       }
     }
   }

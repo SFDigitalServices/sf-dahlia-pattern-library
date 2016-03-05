@@ -25,12 +25,17 @@ button,
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
+  &:hover,
+  &:focus {
+    background-color: $primary;
+  }    
 
   // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
     &.#{"" + $color-name} {
       background-color: $color-value;
       color: $white;
+      box-shadow: inset 0px 0px 0 2px $color-value;
 
       &:hover,
       &:focus {
@@ -43,7 +48,8 @@ button,
   // Light background buttons
   &.secondary {
     background-color: $tint;
-    color: $dark;
+    color: $deep;
+    box-shadow: inset 0px 0px 0 2px $deep;
 
     &:hover,
     &:focus {
@@ -53,8 +59,9 @@ button,
   }
 
   &.tertiary {
-    background-color: $smoke;
-    color: $dark;
+    background-color: transparent;
+    color: $steel;
+    box-shadow: inset 0px 0px 0 2px $steel;
 
     &:hover,
     &:focus {
@@ -141,6 +148,15 @@ button,
       svg {
         margin-top: -3px;
         
+        use { 
+          fill: $primary;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      svg {
         use { 
           fill: #fff;
         }
