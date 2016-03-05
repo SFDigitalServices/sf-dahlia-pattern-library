@@ -47,14 +47,14 @@ button,
 
   // Light background buttons
   &.secondary {
-    background-color: $tint;
-    color: $deep;
-    box-shadow: inset 0px 0px 0 2px $deep;
+    background-color: $primary;
+    color: #fff;
+    box-shadow: inset 0px 0px 0 2px $primary;
 
     &:hover,
     &:focus {
-      background-color: darken($tint, 5%);
-      color: $dark;
+      background-color: darken($primary, 5%);
+      color: #fff;
     }
   }
 
@@ -122,7 +122,11 @@ button,
       background-color: $primary;
       color: #fff;
     }
-  }  
+  }
+
+  &.large {
+    padding: 1.625rem 2.25rem 1.625rem 2.25rem;
+  }
 
   // Apply box shadow
   &.shadow {
@@ -132,6 +136,7 @@ button,
   // Remove button styles
   &.button-link {
     background: transparent;
+    box-shadow: none;
     color: $primary;
     display: inline;
     padding: 0;

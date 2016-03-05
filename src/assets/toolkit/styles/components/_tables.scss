@@ -1,5 +1,7 @@
 
 table {
+  width: 100%;
+  
   thead {
     tr {
       th {
@@ -39,11 +41,7 @@ table {
 
 .table-flex {
   margin: 1em 0;
-  min-width: 300px; // adjust to your needs
-  
-  @media #{$small-only} { 
-    width: 100%;
-  }
+  width: 100%;
 
   tr {
     &:nth-of-type(even) {
