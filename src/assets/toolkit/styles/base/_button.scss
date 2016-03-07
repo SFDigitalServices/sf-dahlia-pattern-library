@@ -17,7 +17,8 @@ button,
   @include type-weight(bold);
   background-color: transparent;
   border-radius: rem-calc(4);
-  box-shadow: inset 0px 0px 0 2px $primary;
+  // box-shadow: inset 0px 0px 0 2px $primary;
+  border-color: $primary;
   color: $primary;
   font-family: $alt-font-family;
   text-transform: uppercase;
@@ -35,7 +36,8 @@ button,
     &.#{"" + $color-name} {
       background-color: $color-value;
       color: $white;
-      box-shadow: inset 0px 0px 0 2px $color-value;
+      // box-shadow: inset 0px 0px 0 2px $color-value;
+      border-color: $color-value;
 
       &:hover,
       &:focus {
@@ -46,10 +48,23 @@ button,
   }
 
   // Light background buttons
-  &.secondary {
+  &.primary {
     background-color: $primary;
     color: #fff;
-    box-shadow: inset 0px 0px 0 2px $primary;
+    // box-shadow: inset 0px 0px 0 2px $primary;
+
+    &:hover,
+    &:focus {
+      background-color: darken($primary, 5%);
+      color: #fff;
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border-color: $primary;
+    color: $primary;
+    // box-shadow: inset 0px 0px 0 2px $primary;
 
     &:hover,
     &:focus {
@@ -60,8 +75,9 @@ button,
 
   &.tertiary {
     background-color: transparent;
+    border-color: $steel;
     color: $steel;
-    box-shadow: inset 0px 0px 0 2px $steel;
+    // box-shadow: inset 0px 0px 0 2px $steel;
 
     &:hover,
     &:focus {
@@ -94,7 +110,7 @@ button,
   &.ghost {
     background-color: transparent;
     color: $primary;
-    box-shadow: inset 0px 0px 0 2px $primary;
+    // box-shadow: inset 0px 0px 0 2px $primary;
 
     &:hover,
     &:focus {
@@ -103,7 +119,7 @@ button,
 
     &.attention {
       color: $attention;
-      box-shadow: inset 0px 0px 0 2px $attention;
+      // box-shadow: inset 0px 0px 0 2px $attention;
 
       &:hover,
       &:focus {
@@ -115,7 +131,7 @@ button,
   &.ghost-white {
     background-color: #fff;
     color: $primary;
-    box-shadow: inset 0px 0px 0 2px $primary;
+    // box-shadow: inset 0px 0px 0 2px $primary;
 
     &:hover,
     &:focus {
@@ -137,6 +153,7 @@ button,
   &.button-link {
     background: transparent;
     box-shadow: none;
+    border-width: 0;
     color: $primary;
     display: inline;
     padding: 0;
