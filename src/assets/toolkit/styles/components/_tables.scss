@@ -1,37 +1,40 @@
+$table-padding-small: .5rem;
+$table-value-weight: 600;
 
 table {
   width: 100%;
-  
+
   thead {
     tr {
       th {
+        font-weight: $table-value-weight;
+
         border-bottom: 1px solid $primary;
         text-transform: uppercase;
+
+        @media #{$small-only} {
+          padding-left: $table-padding-small;
+          padding-right: $table-padding-small;
+        }  
+      }
+    }
+  }  
+
+  tbody { 
+    tr {
+      td {
+        font-weight: $table-value-weight;
+
+        @media #{$small-only} {
+          padding-left: $table-padding-small;
+          padding-right: $table-padding-small;
+        }
       }
     }
   }
-}
 
-
-//
-// Result set
-// List psuedo table
-
-.result-set {
-  width: 100%;
-  overflow: hidden;
-  
-  li {
-    overflow: hidden;
-    padding: .5rem;
-    border-bottom: 1px solid $smoke;
-    position: relative;
-    width: 100%;
-
-    .right {
-      display: inline-block;
-      width: 50%;
-    }
+  small {
+    font-weight: 400;  
   }
 }
 
@@ -136,6 +139,27 @@ table {
       &:last-child {
         
       }
+    }
+  }
+}
+
+// Result set
+// List psuedo table
+
+.result-set {
+  width: 100%;
+  overflow: hidden;
+  
+  li {
+    overflow: hidden;
+    padding: .5rem;
+    border-bottom: 1px solid $smoke;
+    position: relative;
+    width: 100%;
+
+    .right {
+      display: inline-block;
+      width: 50%;
     }
   }
 }

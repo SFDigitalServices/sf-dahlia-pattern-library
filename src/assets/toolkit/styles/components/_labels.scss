@@ -2,23 +2,38 @@
 // Labels
 
 .label {
+  @include responsive-text-size('tiny');
+  padding: 1rem;
+
   &.success {
 
   }
 
   &.secondary {
-    background-color: $secondary;
-    color: #fff;
+    background-color: $primary-tint;
+    color: $oil;
+
+    svg use {
+      fill: $primary;
+    }
   }
 
   &.negative {
     background-color: $oil;
   }
+
+  .ui-icon {
+    margin-right: .5rem;
+  }
 }
 
 // Labels overlaying images
-.status {
-  &-label {
-    @include absolute(.5rem,null,null,.5rem);
-  }
+.status-label {
+  @include absolute(.5rem,null,null,.5rem);
+}
+
+.label--flag {
+  background-color: $oil;
+  color: #fff;
+  display: block;
 }

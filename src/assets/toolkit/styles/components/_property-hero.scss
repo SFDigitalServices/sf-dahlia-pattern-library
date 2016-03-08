@@ -8,13 +8,16 @@
   }
 
   &_figure {
+    position: relative;
     text-align: center;
+    z-index: 1;
   }
 
   &_container {
     position: relative;
     display: inline-block;
     width: 100%;
+    z-index: 1;
   }
 
   &_thumb {
@@ -24,6 +27,20 @@
     max-width: 768px;
   }
 
+  &_title {
+    font-family: $alt-font-family;
+    letter-spacing: .2rem;
+    text-transform: uppercase; 
+    margin-bottom: 0;
+
+    @media #{$medium-up} {
+      @include absolute(null,3.5rem,1.5rem,3.5rem);
+      color: #fff;
+      display: inline-block;
+      z-index: 2;
+    }  
+  }
+    
   &_like {
     @include absolute(null,0,0,null);
     background-color: rgba(0,0,0,.5);

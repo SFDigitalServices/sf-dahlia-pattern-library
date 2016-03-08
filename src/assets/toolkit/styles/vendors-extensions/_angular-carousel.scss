@@ -11,10 +11,9 @@ $carousel-arrow-size: 3.5rem;
 .ng-carousel {
   .carousel-arrow {
     width: $carousel-arrow-size;
-    z-index: 3;
+    z-index: 4;
 
     button {
-      @include translateY(-50%);
       box-shadow: none;
       border-width: 0;
       border-radius: 0;
@@ -26,7 +25,16 @@ $carousel-arrow-size: 3.5rem;
       left: 0;
       top: 50%;
       width: $carousel-arrow-size;
-      
+
+      @media #{$small-only} {
+        @include translateY(-50%);
+      }  
+
+      @media #{$medium-up} {
+        top: auto;
+        bottom: .5rem;
+      }  
+
       svg {
         width: 1.5rem;
         height: 1.5rem;

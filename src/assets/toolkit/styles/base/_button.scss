@@ -152,12 +152,34 @@ button,
   // Remove button styles
   &.button-link {
     background: transparent;
-    box-shadow: none;
     border-width: 0;
     color: $primary;
     display: inline;
+    font-family: $font-family;
     padding: 0;
     margin-bottom: 0;
+    text-transform: none;
+  }
+
+  &.round-icon {
+    border-radius: 50%;
+    padding: .6rem;
+
+    svg {
+      margin-top: 0;
+
+      use {
+        fill: $primary
+      }
+    }
+
+    &:hover {
+      svg {
+        use {
+          fill: #fff;
+        }
+      }    
+    }  
   }
 
   // Icon button styles
@@ -187,8 +209,12 @@ button,
   }
 
   &.expand {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    // padding-left: 1.5rem;
+    // padding-right: 1.5rem;
+
+    &.small {
+      font-size: $button-font-sml;
+    }
   }
 
   &.tall {
