@@ -27,7 +27,8 @@
     max-width: 768px;
   }
 
-  &_title {
+  &_title.offset {
+    @include responsive-text-size('beta');
     font-family: $alt-font-family;
     letter-spacing: .2rem;
     text-transform: uppercase; 
