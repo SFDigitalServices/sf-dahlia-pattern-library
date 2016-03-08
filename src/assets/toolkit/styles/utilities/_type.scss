@@ -194,7 +194,7 @@ $text-sizing: (
 
 .t-serif {
   @include type-weight('regular');
-  font-family:$fancy-serif-font-family !important;
+  font-family:$serif-font-family !important;
 }
 
 .t-sans {
