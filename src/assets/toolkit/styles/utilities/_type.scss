@@ -268,17 +268,6 @@ $text-sizing: (
   @include link-wrap;
 }
 
-.h-caps-lined {
-  @include responsive-text-size('small');
-  @include type-weight(bold);
-  border-bottom: 4px solid $primary;
-  display: inline-block;
-  font-family: $alt-font-family;
-  letter-spacing: .2em;
-  padding-bottom: .5rem;
-  text-transform: uppercase;
-}
-
 .t-ch {
   font-family: $plain-font-family !important;
 }

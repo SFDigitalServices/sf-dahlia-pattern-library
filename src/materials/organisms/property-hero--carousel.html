@@ -33,15 +33,17 @@
 <!--     <h1 class="property-hero_title beta">
       Trinity Place Apartments
     </h1> -->
-    <p>1188 Mission St, San Francisco CA, 94134</p>
-    <p class="c-steel">Caritas Management Group</p>
-    <a href="#" class="ui-link t-micro">
-      {{> icons.base icon="map" fill="primary"}}
-      View on Map
-    </a>
+    <hgroup class="clearfix">
+      <p class="property-hero_address">1188 Mission St,<br> San Francisco CA, 94134<br>
+      Caritas Management Group</p>
+      <a href="#" class="ui-link t-tiny">
+        View on Map
+      </a>
+    </hgroup>
 
-    <div class="a-bottom-right">
+    <div class="property-hero_favorite">
       {{> buttons.button-round fill="primary"}}
+      {{> buttons.button-round fill="primary" icon="forward"}}
     </div>
   </header>
 
@@ -57,13 +59,13 @@
 
     <!-- <hr class="hr-5 tall show-for-small-only"> -->
 
-    <div class="action-group text-center padding-top row">
+<!--     <div class="action-group text-center padding-top row">
       <div class="medium-6 columns">
         <p class="date t-small">Listing Updated August 15, 2015</p>
       </div>
       <div class="medium-6 columns">
         {{> buttons.link-icon icon="forward" fill="white" size="medium" text="Share this Listing" }}
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

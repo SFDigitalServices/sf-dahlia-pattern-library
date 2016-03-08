@@ -65,8 +65,10 @@ table {
     display: block;
 
     @media #{$small-only} {
-      padding-top: .5rem;
       padding-bottom: .5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: .5rem;
       text-align: right;
 
       &:first-child {
@@ -84,12 +86,8 @@ table {
       &.tr {
         @include responsive-text-size('base');
         background: transparent;
-        color: $oil;
-        font-family: $alt-font-family;
-        letter-spacing: .2rem;
         margin-bottom: 1rem;
         text-align: left;
-        text-transform: uppercase;
 
         &:before {
           display: none;
@@ -97,8 +95,12 @@ table {
       }
 
       .h-small {
-        border-bottom: 3px solid $primary;
+        border-bottom: $small-header-underline;
+        color: $oil;
+        font-family: $alt-font-family;
+        letter-spacing: $small-header-spacing;
         padding-bottom: .5rem;
+        text-transform: uppercase;
       }
     }
 

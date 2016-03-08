@@ -173,7 +173,8 @@ button,
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       svg {
         use {
           fill: #fff;

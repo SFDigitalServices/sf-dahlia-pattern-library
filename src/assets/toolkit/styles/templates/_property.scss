@@ -42,7 +42,6 @@
   .accordion-process {
     @media #{$medium-up} {
       @include absolute(0,0,0,null);
-      margin-top: 1rem;
       padding-left: 0;
       width: 33.3333%;
 
@@ -73,7 +72,6 @@
     }
 
     @media #{$large-up} {
-      margin-top: 1rem;
       padding-left: 2rem;
     }
   }
