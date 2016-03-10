@@ -1,0 +1,33 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.application-header}}
+
+<section class="row shift--top">
+  <div class="medium-8 columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+
+      <div class="form-count"><a href="#" class="lined margin-right">Back</a> 1 of 5</div>
+
+      <h2 class="application-title t-gamma padding-bottom">We’ll get started by getting some information about you. First, what’s your name?</h2>
+
+      <div class="form-group error">
+        <h3 class="form-label">Your Name</h3>
+        {{> forms.text-input--base placeholder="First Name" label="First Name" classes="error"}}
+        <small class="error">Please enter a household size</small>
+        {{> forms.text-input--base placeholder="Last Name" label="Last Name" classes="error"}}
+        <small class="error">Please enter a household size</small>
+      </div>
+
+      <div class="form-group margin-bottom--2x">
+        <h3 class="form-label">Your Date of Birth</h3>
+        {{> forms.input-dob}}
+      </div>
+
+      {{> forms.button-stack--paginate left="Save and finish later"}}
+    </form>
+  </div>
+</section>    
+
+{{> components.footer}}

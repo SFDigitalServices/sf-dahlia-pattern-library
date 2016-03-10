@@ -96,6 +96,10 @@ label,
     input[type="radio"] + label::before {
       box-shadow: 0 0 0 2px #fff, 0 0 0 4px $alert;
     }
+
+    .form-label {
+      color: $alert;
+    }
   }
 
   small {
