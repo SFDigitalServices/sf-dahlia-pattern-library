@@ -29,7 +29,7 @@ button,
   &:hover,
   &:focus {
     background-color: $primary;
-  }    
+  }
 
   // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {

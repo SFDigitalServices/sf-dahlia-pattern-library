@@ -106,3 +106,9 @@ $position-default: null !default;
   display: block;
   margin: 0 auto;
 }
+
+.small-display-none {
+  @media #{$small-only} {
+    display: none;
+  }  
+}

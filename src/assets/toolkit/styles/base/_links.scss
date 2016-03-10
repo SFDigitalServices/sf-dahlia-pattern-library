@@ -2,10 +2,18 @@
 // Links
 //
 
-a {
+a, .btn-link {
   color: $primary;
 
   &.lined {
     text-decoration: underline;
   }
 }
+
+.btn-link {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}  

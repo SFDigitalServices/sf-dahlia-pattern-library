@@ -29,8 +29,7 @@ $panel-padding: 0.9375rem;
   &--expanded {
     margin-left: -($panel-padding);
     margin-right: -($panel-padding);
-    padding: 0 1rem;
-    padding-top: 1rem;
+    padding: 1rem;
   }
 
   &--full {

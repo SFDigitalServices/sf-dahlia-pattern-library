@@ -2,8 +2,6 @@
 // Labels
 
 .label {
-  @include responsive-text-size('tiny');
-  padding: 1rem;
 
   &.success {
 
@@ -33,6 +31,8 @@
 }
 
 .label--flag {
+  @include responsive-text-size('tiny');
+  padding: 1rem;
   background-color: $oil;
   color: #fff;
   display: block;
