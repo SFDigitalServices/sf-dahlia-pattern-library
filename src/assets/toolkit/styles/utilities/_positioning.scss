@@ -82,6 +82,10 @@ $position-default: null !default;
   @include absolute(0,null,null,0);
 }
 
+.a-bottom-right {
+  @include absolute(null,0,0,null);
+}
+
 .p-relative {
   position: relative !important;
 }
@@ -101,4 +105,10 @@ $position-default: null !default;
 .a-center {
   display: block;
   margin: 0 auto;
+}
+
+.small-display-none {
+  @media #{$small-only} {
+    display: none;
+  }  
 }

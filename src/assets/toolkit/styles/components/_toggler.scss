@@ -6,7 +6,7 @@
   cursor: pointer;
 
   .ui-control {
-    @include absolute(1rem,1rem,null,null);
+    top: .5rem !important;
   }
 
   &.active {
@@ -21,4 +21,25 @@
 .has-toggle,
 .has-toggle--details {
   position: relative;
+}
+
+.toggle-box {
+  padding: .75rem 1rem;
+}
+
+.toggle-box {
+  border-bottom: 1px solid $primary;
+}
+
+.toggle-box_label {
+  @include responsive-text-size('tiny');
+  @include type-weight(normal);
+  color: $steel;
+
+  strong {
+    @include responsive-text-size('tiny');
+    @include type-weight(bold);
+    color: $oil;
+    text-transform: uppercase;
+  }
 }

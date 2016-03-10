@@ -18,7 +18,7 @@
   }
 
   // Block modifier with more responsive padding
-  &--tall {   
+  &--tall {
     @include block();
 
     @media #{$medium-up} {

@@ -1,10 +1,14 @@
 modifiers:
+  normal:
+  primary:
   secondary:
   tertiary:
-  oil:
+  deep:
   ghost-white:
+  large:
   small:
   tiny:
+  expand:
   disabled:
 icons:
   - arrow-down

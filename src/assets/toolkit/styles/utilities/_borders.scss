@@ -1,6 +1,10 @@
 //
 // Borders
 
+
+// Border radius.
+.radius {border-radius: .3em;}
+
 .border {
   &-bottom {
     border-bottom: 1px solid $steel;

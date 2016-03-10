@@ -2,9 +2,14 @@
 // BaseType
 //
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+// @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+// @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 $base-font-size:      16px;
 $base-line-height:    24px;
@@ -22,16 +27,17 @@ $h1-font-size-large: rem-calc(40);
 $h2-font-size-large: rem-calc(28);
 $h3-font-size-large: rem-calc(24);
 
-$font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+$font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
 // $font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
 $base-font-family: $font-family;
 $sans-font-family: $font-family;
 $body-font-family: $font-family;
 $sans-font-family-semibold: $font-family;
 $sans-font-family-bold: $font-family;
-$alt-font-family: "Montserrat", Helvetica, Arial, Verdana, sans-serif;
+$alt-font-family: "Lato", Helvetica, Arial, Verdana, sans-serif;
 $serif-font-family: "Droid Serif", Georgia, Times, serif;
-$fancy-serif-font-family: $serif-font-family;
+$fancy-serif-font-family: "Playfair Display", Georgia, Times, serif;
+$plain-font-family: Helvetica, Arial, Verdana, sans-serif;
 
 $font-weight-normal: 400;
 $type-weight: (
@@ -163,7 +169,7 @@ $colors: (
 // Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$row-width: rem-calc(1000);
+$row-width: rem-calc(1024);
 $total-columns: 12;
 $column-gutter: rem-calc(30);
 
@@ -203,6 +209,8 @@ $breakpoints: (
 $include-html-classes: true;
 $include-html-global-classes: $include-html-classes;
 
+$global-radius:         4px;
+
 // Forms
 $fieldset-border-width: 0;
 $form-label-small-transform: capitalize;
@@ -211,26 +219,23 @@ $form-spacing: rem-calc(20);
 $form-label-font-size: rem-calc(16);
 $input-placeholder-font-color: $steel;
 $input-font-size: rem-calc(16);
+$input-border-radius: $global-radius;
 
 /* Buttons */
 
 // Button colors.
-$base-button-color:     #fff;
-$base-button-bg:        $primary;
+$base-button-color:     $primary;
+$base-button-bg:        #fff;
 $btn-primary-border:    darken($base-button-bg, 5%);
-$global-radius:         4px;
-
-// Border radius.
-.radius {border-radius: .3em;}
+$button-font-tny: rem-calc(10);
+$button-font-sml: rem-calc(11);
+$button-font-med: rem-calc(13);
+$button-font-lrg: rem-calc(13);
+$button-border-width: 2px;
 
 // Accordion
 $accordion-navigation-bg-color: $dust;
 $accordion-navigation-font-color: $dark;
-
-// Tables
-$table-border-size: none;
-$table-even-row-bg: $dust;
-$table-foot-bg: $white;
 
 // Top Bar Variables
 $topbar-bg-color: #fff;
@@ -286,3 +291,53 @@ $panel-font-color-alt: $white !default;
 $panel-header-adjust: false;
 $callout-panel-link-color: $primary-color !default;
 $callout-panel-bg: scale-color($primary-color, $lightness: 94%) !default;
+
+// Tables
+$table-border-size: none;
+$table-even-row-bg: $dust;
+$table-foot-bg: $white;
+
+// Tables
+
+// These control the background color for the table and even rows
+// $table-bg: $white;
+$table-even-row-bg: $dust;
+
+// These control the table cell border style
+// $table-border-style: solid;
+$table-border-size: none;
+// $table-border-color: $gainsboro;
+
+// These control the table head styles
+$table-head-bg: $white-smoke;
+$table-head-font-size: rem-calc(13);
+$table-head-font-color: $oil;
+$table-head-font-weight: 700;
+$table-head-padding: rem-calc(24 20);
+
+// These control the table foot styles
+// $table-foot-bg: $table-head-bg;
+// $table-foot-font-size: $table-head-font-size;
+// $table-foot-font-color: $table-head-font-color;
+// $table-foot-font-weight: $table-head-font-weight;
+// $table-foot-padding: $table-head-padding;
+
+// These control the caption
+// table-caption-bg: transparent;
+// $table-caption-font-color: $table-head-font-color;
+// $table-caption-font-size: rem-calc(16);
+// $table-caption-font-weight: bold;
+
+// These control the row padding and font styles
+$table-row-padding: rem-calc(20 20);
+// $table-row-font-size: rem-calc(14);
+$table-row-font-color: $steel;
+// $table-line-height: rem-calc(18);
+
+// These are for controlling the layout, display and margin of tables
+// $table-layout: auto;
+// $table-display: table-cell;
+// $table-margin-bottom: rem-calc(20);
+
+$table-padding-small: .5rem;
+$table-value-weight: 600;

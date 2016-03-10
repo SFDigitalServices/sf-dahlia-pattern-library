@@ -1,0 +1,23 @@
+.content-card {
+  background-color: #fff;
+  border: 2px solid $white-smoke;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+
+  &_title {
+    @include responsive-text-size('tiny');
+    font-family: $font-family;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  p {
+    @include responsive-text-size('tiny');
+    line-height: 1.25rem;
+    color: $steel;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

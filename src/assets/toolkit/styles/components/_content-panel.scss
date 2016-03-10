@@ -29,8 +29,7 @@ $panel-padding: 0.9375rem;
   &--expanded {
     margin-left: -($panel-padding);
     margin-right: -($panel-padding);
-    padding: 0 1rem;
-    padding-top: 1rem;
+    padding: 1rem;
   }
 
   &--full {
@@ -87,7 +86,6 @@ $panel-padding: 0.9375rem;
 // responsive styles for featured content panel
 .application-options {
   background-color: $dust;
-  padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 2.5rem;
 

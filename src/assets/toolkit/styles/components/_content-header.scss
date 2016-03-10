@@ -27,3 +27,27 @@
     }
   }
 }
+
+.listing-header {
+  border-left: 3px solid $primary;
+  color: #1a383c;
+  display: none;
+  font-size: 1rem;
+  padding: 1rem;
+  // margin-left: 3.5rem;
+
+
+  @media #{$medium-up} {
+    &_name {
+      @include responsive-text-size('gamma');
+      display: block;
+      font-family: $serif-font-family;
+      margin-bottom: .5rem;
+    }
+
+    &_subheader {
+      @extend .accordion-subheader;
+      color: $steel;
+    }
+  }  
+}

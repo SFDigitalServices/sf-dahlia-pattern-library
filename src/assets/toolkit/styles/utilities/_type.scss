@@ -57,7 +57,7 @@ $align-class-breakpoints:
 $type-weight: (
   light: 300,
   regular: 400,
-  semi: 500,
+  semi: 600,
   bold: 700,
   black: 800
 );
@@ -194,7 +194,7 @@ $text-sizing: (
 
 .t-serif {
   @include type-weight('regular');
-  font-family:$fancy-serif-font-family !important;
+  font-family:$serif-font-family !important;
 }
 
 .t-sans {
@@ -266,4 +266,8 @@ $text-sizing: (
 
 .link-wrap {
   @include link-wrap;
+}
+
+.t-ch {
+  font-family: $plain-font-family !important;
 }

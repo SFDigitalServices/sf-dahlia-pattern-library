@@ -25,9 +25,11 @@
         color: $steel;
       }
 
-      // @media #{$medium-up} {
-      //   padding-left: 4rem;
-      // }  
+      &:nth-child(n+1) {
+        .event-title {
+          margin-bottom: 0;
+        }
+      }
     }
 
     &-icon {
@@ -54,7 +56,9 @@
       @include responsive-text-size('small');
     }
 
-    &-details {
+    &-details, &-links {
+      padding-top: .5rem;
+
       li {
         @include responsive-text-size('small');
         padding-bottom: 1rem;
@@ -63,6 +67,10 @@
           padding-bottom: 0;
         }
       }
+    }
+
+    &-links {
+      padding-top: 1rem;
     }
   }
 }  

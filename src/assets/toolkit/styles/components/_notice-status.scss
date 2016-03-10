@@ -42,7 +42,7 @@
 
   @media #{$medium-up} {
     display: block;
-  }  
+  }
 
   .timeline-icon {
     float: left;
@@ -55,6 +55,7 @@
       @include triangle();
       @include absolute(null,null,0,50%);
       @include translateX(-50%);
+      display: none;
     }
 
     .ui-icon {
@@ -79,6 +80,97 @@
   }
 }
 
-.notice-arrow {
-  @include scut-triangle(up);
+
+// Lottery statuses
+.status-open {
+  .time-open {
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.status-closed {
+  .time-close {
+    &::after {
+
+      display: block;
+    }
+
+    .ui-icon {
+      background-color: $primary-tint;
+    }
+  }
+
+  &.notice-status {
+
+  }
+}
+
+.status-lottery {
+  .time-lottery {
+    &::after {
+      border-bottom-color: $warn-tint;
+      display: block;
+    }
+
+    .ui-icon {
+      background-color: $warn-tint;
+    }
+  }
+
+  &.notice-status {
+    background: $warn-tint;
+  }
+}
+
+.status-success {
+  .time-results {
+    &::after {
+      border-bottom-color: $success-tint;
+      display: block;
+    }
+
+    .ui-icon {
+      background-color: $success-tint;
+    }
+  }
+
+  &.notice-status {
+    background: $success-tint;
+  }
+}
+
+.status-results {
+  .time-results {
+    &::after {
+      border-bottom-color: $splash-tint;
+      display: block;
+    }
+
+    .ui-icon {
+      background-color: $splash-tint;
+    }
+  }
+
+  &.notice-status {
+    background: $splash-tint;
+  }
+}
+
+.status-filled {
+  .time-filled {
+    &::after {
+      border-bottom-color: $primary-tint;
+      display: block;
+    }
+
+    .ui-icon {
+      background-color: $primary-tint;
+    }
+  }
+
+  &.notice-status {
+    background: $primary-tint;
+  }
 }
