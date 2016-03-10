@@ -124,7 +124,7 @@ hr {
 $small-header-spacing: .2em;
 $small-header-underline: 3px solid $primary;
 
-.h-caps-lined {
+@mixin h-caps-lined() {
   @include responsive-text-size('small');
   @include type-weight(bold);
   border-bottom: $small-header-underline;
@@ -132,7 +132,11 @@ $small-header-underline: 3px solid $primary;
   font-family: $alt-font-family;
   letter-spacing: $small-header-spacing;
   padding-bottom: 1rem;
-  margin-top: -.25rem;
   text-transform: uppercase;
-  vertical-align: top;
 }
+
+.h-caps-lined {
+  @include h-caps-lined();
+  margin-top: -.25rem;
+  vertical-align: top;
+}  
