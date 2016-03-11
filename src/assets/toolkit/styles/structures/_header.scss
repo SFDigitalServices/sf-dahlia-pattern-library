@@ -12,7 +12,8 @@
 
 .top-bar {
   background-color: #fff;
-
+  border-bottom: 1px solid $smoke;
+  
   .row {
     max-width: $row-width;
   }
@@ -32,7 +33,6 @@
 
   @media #{$medium-up} {
     width: 25%;
-    padding-left: 0.9375rem;
   }  
 }
 

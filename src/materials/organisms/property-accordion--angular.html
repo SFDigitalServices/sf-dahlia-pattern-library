@@ -1,79 +1,94 @@
-<!-- If you are using version 5.5 or greater you can use <ul>'s and <li>'s for Accordion markup --> 
+---
+layout: angular
+title: Angular
+---
 
-<dl class="property-accordion accordion" data-accordion>
-  <dd class="accordion-navigation">
-    <a href="#panel1a" class="accordion-header lead">Eligibility
-      <span class="accordion-subheader">Income, occupancy, preferences and rental assistance</span>
-      {{> icons.base icon="arrow-down" size="small" position="control"}}
-    </a>
+<div ng-controller="AccordionSampleController">
+  <accordion close-others="oneAtATime" class="page-accordion top">
+    <accordion-group class="medium-right-column"> 
+      <accordion-heading class="lead">
+        Process
+        <span class="accordion-subheader">Important dates and contact information</span>
+        {{> icons.base icon="arrow-down" size="small" position="control"}}
+      </accordion-heading>
 
-    <header class="listing-header show-for-medium-up">
-      <span class="listing-header_name">Eligibility</span>
-      <span class="listing-header_subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
-    </header>
+      {{> property-accordion.content-section--process}}
+    </accordion-group>
 
-    {{> property-accordion.content-section--eligibility}}
-  </dd>
+    <accordion-group class=""> 
+      <accordion-heading class="lead">
+        Eligibility
+        <span class="accordion-subheader">Income, occupancy, preferences and rental assistance</span>
+        {{> icons.base icon="arrow-down" size="small" position="control"}}
+      </accordion-heading>
+      
+      <header class="listing-header show-for-medium-up">
+        <span class="listing-header_name">Eligibility</span>
+        <span class="listing-header_subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
+      </header>
 
-  <dd class="accordion-navigation accordion-process">
-    <a href="#panel2a" class="accordion-header lead">Process
-      <span class="accordion-subheader">Important dates and contact information</span>
-      {{> icons.base icon="arrow-down" size="small" position="control"}}
-    </a>
+        {{> property-accordion.content-section--eligibility-ordered}}
+    </accordion-group>
 
-    {{> property-accordion.content-section--process}}
-  </dd>
-  <dd class="accordion-navigation">
-    <a href="#panel3a" class="accordion-header lead">Features
-      <span class="accordion-subheader">Amenities, unit details and additional fees</span>
-      {{> icons.base icon="arrow-down" size="small" position="control"}}
-    </a>
+    <accordion-group class=""> 
+      <accordion-heading class="lead">
+        Features
+        <span class="accordion-subheader">Amenities, unit details and additional fees</span>
+        {{> icons.base icon="arrow-down" size="small" position="control"}}
+      </accordion-heading>
 
-    <header class="listing-header show-for-medium-up">
-      <span class="listing-header_name">Features</span>
-      <span class="listing-header_subheader">Amenities, unit details and additional fees</span>
-    </header>
+      <header class="listing-header show-for-medium-up">
+        <span class="listing-header_name">Features</span>
+        <span class="listing-header_subheader">Amenities, unit details and additional fees</span>
+      </header>
 
-    {{> property-accordion.content-section--features}}
-  </dd>
-  <dd class="accordion-navigation">
-    <a href="#panel4a" class="accordion-header lead">Neighborhood
-      <span class="accordion-subheader">Location and transportation</span>
-      {{> icons.base icon="arrow-down" size="small" position="control"}}
-    </a>
+      {{> property-accordion.content-section--features}}
+    </accordion-group>
 
-    <header class="listing-header show-for-medium-up">
-      <span class="listing-header_name">Neighborhood</span>
-      <span class="listing-header_subheader">Location and transportation</span>
-    </header>
+    <accordion-group class=""> 
+      <accordion-heading class="lead">
+        Neighborhood
+        <span class="accordion-subheader">Location and transportation</span>
+        {{> icons.base icon="arrow-down" size="small" position="control"}}
+      </accordion-heading>
 
-    <div id="panel4a" class="content content-section">
-      <div class="property-map map-panel content-panel--full">
-        <figure class="property-map_figure p-relative">
-          <img class="property-map_thumb" src="/assets/toolkit/images/map.png" alt="image of map">
-          <a href="#" class="map-link ui-link a-deep">
-            <span class="ui-icon -deep">
-              <svg>
-                <use xlink:href="#i-map"></use>
-              </svg>
-            </span>
-            Get Directions
-          </a>
-        </figure>
+      <header class="listing-header show-for-medium-up">
+        <span class="listing-header_name">Neighborhood</span>
+        <span class="listing-header_subheader">Location and transportation</span>
+      </header>
+
+      <div class="content-section">
+        <div class="content-tile">
+          <div class="property-map map-panel">
+            <figure class="property-map_figure p-relative">
+              <img class="property-map_thumb" src="/assets/toolkit/images/map.png" alt="image of map">
+              <a href="#" class="map-link ui-link ui-small i-deep">
+                <span class="ui-icon i-deep">
+                  <svg>
+                    <use xlink:href="#i-map"></use>
+                  </svg>
+                </span>
+                Get Directions
+              </a>
+            </figure>
+          </div>
+        </div>
       </div>
-    </div>
-  </dd>
-  <dd class="accordion-navigation">
-    <a href="#panel5a" class="accordion-header lead">Additional Information
-      {{> icons.base icon="arrow-down" size="small" position="control"}}
-    </a>
+    </accordion-group>
 
-    <header class="listing-header show-for-medium-up">
-      <span class="listing-header_name">Additional Information</span>
-    </header>
+    <accordion-group class=""> 
+      <accordion-heading class="lead">
+      Additional Information
+        {{> icons.base icon="arrow-down" size="small" position="control"}}
+      </accordion-heading>
 
-    <div id="panel5a" class="content content-section">
-      {{> components.content-cards}}
-    </div>
-  </dd>
-</dl>
+      <header class="listing-header show-for-medium-up">
+        <span class="listing-header_name">Additional Information</span>
+      </header>
+
+      <div class="content content-section">
+        {{> components.content-cards}}
+      </div>
+    </accordion-group>
+  </accordion>  
+</div>

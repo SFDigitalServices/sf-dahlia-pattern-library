@@ -1,5 +1,32 @@
-$siderail-width: rem-calc(300px);
+$siderail-width: rem-calc(340px);
+$siderail-width-full: rem-calc(280px);
+$siderail-padding: 3rem;
+$siderail-padding-full: 2rem;
 
+.hero-offset {
+  @include grid-row();
+
+  @media #{$medium-up} {
+    padding-top: $siderail-padding;
+    padding-right: $siderail-width-full+$siderail-padding-full;
+  }
+
+  @media screen and (min-width: $row-width) {
+    padding-right: $siderail-width+$siderail-padding;
+  }
+}
+
+.accordion-offset {
+  @include grid-row();
+
+  @media #{$medium-up} {
+    padding-right: $siderail-width-full+$siderail-padding-full;
+  }
+
+  @media screen and (min-width: $row-width) {
+    padding-right: $siderail-width+$siderail-padding;
+  }
+}
 
 .page-accordion {
 // Responsive layout
@@ -8,7 +35,11 @@ $siderail-width: rem-calc(300px);
     @include grid-row();
 
     @media #{$medium-up} {
-      padding-right: $siderail-width !important;
+      padding-right: $siderail-width-full !important;
+    }
+
+    @media screen and (min-width: $row-width) {
+     padding-right: $siderail-width !important;
     }
   }
 
@@ -39,26 +70,39 @@ $siderail-width: rem-calc(300px);
     @media #{$medium-up} {
       @include absolute(0,0,0,null);
       @include translateX(0);
+      z-index: 3;
 
       .content {
         background-color: #fff;
         border: 1px solid $smoke;
-        width: $siderail-width !important;
+        width: $siderail-width-full !important;
         margin: 0 !important;
         height: 100%;
       }
+
+      .content-wrap {
+        width: $siderail-width-full !important;
+      }
     }
 
-    @media screen and (min-width: 1000px) {
-      @include absolute(0,null,0,50%);
-      @include translateX(200px);
+    @media screen and (min-width: $row-width) {
+      @include translateX(510px);
+      right: 50%;
+
+      .content {
+        width: $siderail-width !important;
+      }
+
+      .content-wrap {
+        width: $siderail-width !important;
+      }
     }
   }
 
 // Style
   > .accordion > dd {
     &:nth-child(even) {
-      background-color: $mist;
+      background-color: $dust;
     }
   }
 
@@ -68,7 +112,11 @@ $siderail-width: rem-calc(300px);
 
   .content-section {
     @media #{$medium-up} {
-      padding: 4rem 0;
+      padding: 2rem $siderail-padding-full 3rem 0;
+    }
+
+    @media screen and (min-width: $row-width) {
+      padding-right: $siderail-padding;
     }  
   }  
 }

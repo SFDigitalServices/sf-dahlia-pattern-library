@@ -22,7 +22,7 @@
     @include block();
 
     @media #{$medium-up} {
-      padding: 6rem 2rem;
+      padding: 2rem 2rem;
     }
   }
 }

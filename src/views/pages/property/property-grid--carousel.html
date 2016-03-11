@@ -1,23 +1,26 @@
+---
+layout: angular
+title: Angular
+---
+
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<div class="section-head">
-</div>
+<div class="p-relative">
+  <section class="section-hero">
+    <div class="hero-offset">
+      {{> property-hero--carousel}}
+    </div>
+  </section>
 
-<section class="section-hero row">
-  <div class="accordion-container medium-8 columns margin-top--2x">
-    {{> property-hero--carousel}}
-    {{> property-accordion--angular}}
-    {{> property-accordion.content-panel--program}}
-  </div>
-</section>
+      {{> property-accordion--angular}}
+      {{> property-accordion.content-panel--program}}
 
-<section class="row margin-bottom--2x">
-  <div class="medium-12 columns">
-    <div class="bg-dust">
+  <section class="bg-dust">
+    <div class="accordion-offset">
       {{> blocks.block-icon size="tall" icon="icon-mail.png" description="Get emailed whenever a new listing is posted." action="Sign Up Today"}}
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 {{> components.footer}}

@@ -1,6 +1,8 @@
 .content-card {
+  @include responsive-text-size('tiny');
   background-color: #fff;
   border: 2px solid $white-smoke;
+  line-height: 1.25rem;
   padding: 1.25rem;
   margin-bottom: 1rem;
 
@@ -9,13 +11,17 @@
     font-family: $font-family;
     font-weight: 600;
     text-transform: uppercase;
+
+    &.t-serif {
+      @include responsive-text-size('delta');
+      font-family: $serif-font-family;
+      font-weight: normal;
+      margin-bottom: .75rem;
+      text-transform: none;
+    }
   }
 
   p {
-    @include responsive-text-size('tiny');
-    line-height: 1.25rem;
-    color: $steel;
-
     &:last-of-type {
       margin-bottom: 0;
     }

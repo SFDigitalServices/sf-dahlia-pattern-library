@@ -122,7 +122,7 @@ $text-sizing: (
       line-height: 1.25
     ),
     medium: (
-      font-size: 1.5rem, // 24px
+      font-size: 1.625rem, // 28px
       line-height: 1.25
     )
   ),
@@ -270,4 +270,8 @@ $text-sizing: (
 
 .t-ch {
   font-family: $plain-font-family !important;
+}
+
+.h-border-left {
+  border-left: 3px solid $smoke;
 }
