@@ -44,6 +44,10 @@
   }
 }
 
+.ui-control {
+  @include absolute(1rem,1rem,null,null);
+}
+
 // Icon with link
 .ui-link {
   margin-right: .25rem;

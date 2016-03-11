@@ -1,76 +1,79 @@
+// Event Feed
+// Vertical collection of content items with icons and dates
+
 .event-feed {
   background: $mist;
+}
 
-  .event {
-    &-list {
+.event {
+  &-list {
 
+  }
+
+  &-title {
+    @include type-weight(semi);
+    margin-bottom: .5rem;
+  }
+
+  &-item {
+    padding: 1rem;
+    padding-left: 3rem;
+    position: relative;
+    border-top: 2px solid $smoke;
+
+    &:first-of-type {
+      border: none;
     }
 
-    &-title {
-      @include type-weight(semi);
-      margin-bottom: .5rem;
+    &.has-past {
+      color: $steel;
     }
 
-    &-item {
-      padding: 1rem;
-      padding-left: 3rem;
-      position: relative;
-      border-top: 2px solid $smoke;
-
-      &:first-of-type {
-        border: none;
+    &:nth-child(n+1) {
+      .event-title {
+        margin-bottom: 0;
       }
-
-      &.has-past {
-        color: $steel;
-      }
-
-      &:nth-child(n+1) {
-        .event-title {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    &-icon {
-      @include absolute(0,null,null,0);
-      width: 3rem;
-      height: 3rem;
-      margin-top: .25rem;
-
-      // @media #{$medium-up} {
-      //   margin-left: 1rem;
-      // }
-
-      .ui-icon {
-        @extend %center-xy;
-      }
-    }
-
-    &-address {
-      display: inline-block;
-      margin-bottom: 1rem;
-    }
-
-    &-note {
-      @include responsive-text-size('small');
-    }
-
-    &-details, &-links {
-      padding-top: .5rem;
-
-      li {
-        @include responsive-text-size('small');
-        padding-bottom: 1rem;
-
-        &:last-of-type {
-          padding-bottom: 0;
-        }
-      }
-    }
-
-    &-links {
-      padding-top: 1rem;
     }
   }
-}  
+
+  &-icon {
+    @include absolute(0,null,null,0);
+    width: 3rem;
+    height: 3rem;
+    margin-top: .25rem;
+
+    // @media #{$medium-up} {
+    //   margin-left: 1rem;
+    // }
+
+    .ui-icon {
+      @extend %center-xy;
+    }
+  }
+
+  &-address {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &-note {
+    @include responsive-text-size('small');
+  }
+
+  &-details, &-links {
+    padding-top: .5rem;
+
+    li {
+      @include responsive-text-size('small');
+      padding-bottom: 1rem;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &-links {
+    padding-top: 1rem;
+  }
+}

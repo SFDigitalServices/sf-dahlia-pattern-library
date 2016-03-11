@@ -296,13 +296,10 @@ $table-foot-bg: $white;
 // Tables
 
 // These control the background color for the table and even rows
-// $table-bg: $white;
 $table-even-row-bg: $dust;
 
 // These control the table cell border style
-// $table-border-style: solid;
 $table-border-size: none;
-// $table-border-color: $gainsboro;
 
 // These control the table head styles
 $table-head-bg: $white-smoke;
@@ -314,22 +311,15 @@ $table-head-padding: rem-calc(24 20);
 
 // These control the row padding and font styles
 $table-row-padding: rem-calc(20 20);
-// $table-row-font-size: rem-calc(14);
 $table-row-font-color: $steel;
-// $table-line-height: rem-calc(18);
-
 $table-padding-small: .5rem;
 $table-value-weight: 600;
 
-// $include-html-accordion-classes: $include-html-classes;
+// Accordions
 
 // $accordion-navigation-padding: rem-calc(16);
 $accordion-navigation-bg-color: #fff;
-// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
-// $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: $jet;
-// $accordion-navigation-font-size: rem-calc(16);
-// $accordion-navigation-font-family: $body-font-family;
 
-// $accordion-content-padding: ($column-gutter/2);
-// $accordion-content-active-bg-color: $white;
+// Breadcrumbs
+
+$crumb-bg: scale-color($smoke, $lightness: 55%);

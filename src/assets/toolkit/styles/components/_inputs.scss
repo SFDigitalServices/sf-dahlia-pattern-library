@@ -216,9 +216,8 @@ input[type="radio"]:disabled + label::before {
 }
 
 .input-editor {
-  @include absolute(null,6px,6px,null);
+  @include absolute(null,4px,4px,null);
   margin: 0;
-  height: rem-calc(30);
 }
 
 .has-options {

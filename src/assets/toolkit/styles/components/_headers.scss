@@ -15,7 +15,8 @@
 }
 
 // Larger page headers for top of page
-.lead-header {
+.lead-header,
+.lead-header--sub {
   padding: 1rem 0 0;
 
   @media #{$medium-up} {

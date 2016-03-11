@@ -1,57 +1,13 @@
+// Content tile
+// Property listing content module
+
 .content-tile {
   @media #{$medium-up} {
     margin-left: 3rem;
   }
 }
 
-.custom-counter {
-  margin-left: 0;
-  padding-right: 0;
-  padding-left: 0;
-  list-style-type: none;
-
-  .custom-counter_item {
-    margin-bottom: 3rem;
-  }
-
-  @media #{$medium-up} {
-    .custom-counter_item {
-      counter-increment: step-counter;
-      margin-bottom: 3rem;
-      margin-left: 3rem;
-      position: relative;
-
-      &::before {
-        @include absolute(0,null,null,-1rem);
-        content: counter(step-counter);
-        margin-right: 5px;
-        color: $oil;
-        font-size: rem-calc(70);
-        line-height: .85;
-        font-family: $serif-font-family;
-      }
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-
-    &_header {
-      border-left: 2px solid $smoke;
-      margin-bottom: 2rem;
-      margin-left: -1rem;
-      padding-left: 1rem;
-    }
-
-    &_title {
-      font-family: $serif-font-family;
-      margin-bottom: .5rem;
-    }
-  }
-}
-
 .feature-tile {
-
   .feature-row {
     margin-bottom: 1rem;
       

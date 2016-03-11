@@ -36,6 +36,7 @@
 
 .f-item-preview {
 	@include clearfix;
+	position: relative;
 }
 
 .f-item-border-bottom {
