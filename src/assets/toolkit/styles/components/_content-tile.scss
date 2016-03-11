@@ -5,14 +5,20 @@
 }
 
 .custom-counter {
-  @media #{$medium-up} {
-    margin-left: 0;
-    padding-right: 0;
-    list-style-type: none;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+  list-style-type: none;
 
+  li {
+    margin-bottom: 3rem;
+  }
+
+  @media #{$medium-up} {
     li {
       counter-increment: step-counter;
       margin-bottom: 3rem;
+      margin-left: 3rem;
       position: relative;
 
       &::before {
@@ -43,8 +49,6 @@
     }
   }
 }
-
-
 
 .feature-tile {
 

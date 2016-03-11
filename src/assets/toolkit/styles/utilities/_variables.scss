@@ -7,10 +7,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 
-// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
-// @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-// @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
 $base-font-size:      16px;
 $base-line-height:    24px;
 
@@ -315,18 +311,6 @@ $table-head-font-color: $oil;
 $table-head-font-weight: 700;
 $table-head-padding: rem-calc(24 20);
 
-// These control the table foot styles
-// $table-foot-bg: $table-head-bg;
-// $table-foot-font-size: $table-head-font-size;
-// $table-foot-font-color: $table-head-font-color;
-// $table-foot-font-weight: $table-head-font-weight;
-// $table-foot-padding: $table-head-padding;
-
-// These control the caption
-// table-caption-bg: transparent;
-// $table-caption-font-color: $table-head-font-color;
-// $table-caption-font-size: rem-calc(16);
-// $table-caption-font-weight: bold;
 
 // These control the row padding and font styles
 $table-row-padding: rem-calc(20 20);
@@ -334,10 +318,18 @@ $table-row-padding: rem-calc(20 20);
 $table-row-font-color: $steel;
 // $table-line-height: rem-calc(18);
 
-// These are for controlling the layout, display and margin of tables
-// $table-layout: auto;
-// $table-display: table-cell;
-// $table-margin-bottom: rem-calc(20);
-
 $table-padding-small: .5rem;
 $table-value-weight: 600;
+
+// $include-html-accordion-classes: $include-html-classes;
+
+// $accordion-navigation-padding: rem-calc(16);
+$accordion-navigation-bg-color: #fff;
+// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
+// $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
+// $accordion-navigation-font-color: $jet;
+// $accordion-navigation-font-size: rem-calc(16);
+// $accordion-navigation-font-family: $body-font-family;
+
+// $accordion-content-padding: ($column-gutter/2);
+// $accordion-content-active-bg-color: $white;

@@ -51,3 +51,21 @@
     }
   }  
 }
+
+.page-accordion {
+  .accordion dd > a {
+    border-bottom: 1px solid $smoke;
+
+    &.active {
+      background-color: $mist;
+    }
+  }
+
+  .accordion-name {
+    @include responsive-text-size('base');
+    font-family: $alt-font-family;
+    letter-spacing: $small-header-spacing;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+  }
+}

@@ -3,33 +3,12 @@ $siderail-width-full: rem-calc(280px);
 $siderail-padding: 3rem;
 $siderail-padding-full: 2rem;
 
-.hero-offset {
-  @include grid-row();
-
-  @media #{$medium-up} {
-    padding-top: $siderail-padding;
-    padding-right: $siderail-width-full+$siderail-padding-full;
-  }
-
-  @media screen and (min-width: $row-width) {
-    padding-right: $siderail-width+$siderail-padding;
-  }
-}
-
-.accordion-offset {
-  @include grid-row();
-
-  @media #{$medium-up} {
-    padding-right: $siderail-width-full+$siderail-padding-full;
-  }
-
-  @media screen and (min-width: $row-width) {
-    padding-right: $siderail-width+$siderail-padding;
-  }
-}
-
 .page-accordion {
 // Responsive layout
+  .accordion {
+    margin-top: 0
+  }
+
   .accordion dd > a,
   .accordion dd > .content {
     @include grid-row();
@@ -119,4 +98,22 @@ $siderail-padding-full: 2rem;
       padding-right: $siderail-padding;
     }  
   }  
+}
+
+.accordion-offset {
+  @include grid-row();
+
+  @media #{$medium-up} {
+    padding-right: $siderail-width-full+$siderail-padding-full;
+  }
+
+  @media screen and (min-width: $row-width) {
+    padding-right: $siderail-width+$siderail-padding;
+  }
+
+  &--hero {
+    @media #{$medium-up} {
+      padding-top: $siderail-padding;
+    }
+  }
 }
