@@ -10,12 +10,12 @@
   padding-left: 0;
   list-style-type: none;
 
-  li {
+  .custom-counter_item {
     margin-bottom: 3rem;
   }
 
   @media #{$medium-up} {
-    li {
+    .custom-counter_item {
       counter-increment: step-counter;
       margin-bottom: 3rem;
       margin-left: 3rem;
@@ -53,9 +53,7 @@
 .feature-tile {
 
   .feature-row {
-    @media #{$small-only} {
-      margin-bottom: 1rem;
-    }
+    margin-bottom: 1rem;
       
     p {
       margin-bottom: 0;
@@ -71,7 +69,7 @@
       border-left: 2px solid $smoke;
       padding-left: 1rem;
       margin-left: -1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0;
     }
   }
 }
