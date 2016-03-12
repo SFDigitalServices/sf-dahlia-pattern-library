@@ -104,6 +104,10 @@ label,
   }
 
   &.has-checkbox.error {
+    small.error {
+      margin-bottom: .25rem;
+    }
+
     .checkbox label {
       color: $oil !important;
     }
@@ -115,6 +119,7 @@ label,
 
   small.highlight {
     color: $success;
+    display: inline-block;
     margin-left: 2.25rem;
   }
 }
