@@ -112,6 +112,14 @@ contacts:
   - name: I don’t have an alternate contact
     value: not
 
+contacts-alt:
+  - name: Family member
+    value: family
+  - name: Friend
+    value: friend
+  - name: Social worker or housing counselor
+    value: social
+
 homeless:
   - name: "I’m renting a room, apartment, or house."
     note: "This includes living in a supportive housing unit or SRO that you pay for."

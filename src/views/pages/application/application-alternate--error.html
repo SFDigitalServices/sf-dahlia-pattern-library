@@ -8,6 +8,22 @@
     <form class="application-form form-card has-nav">
       {{> navigation.sub-nav--application}}
 
+      <div data-alert class="alert-box alert">
+        <span class="alert-icon">
+          {{> icons.base icon="warning"}}
+        </span>
+        <p class="alert-body">
+          Since you are not able to provide some of the required contact information, we’ll need you to provide alternate contact information.
+        </p>
+        <a href="#" class="close">&times;</a>
+      </div>
+
+      <hgroup class="entry-panel_group">
+        <span class="entry-panel_label">Required</span>
+        <h4 class="entry-panel_content c-alert">Your Phone or Alternate Phone</h4>
+        <h4 class="entry-panel_content c-alert">Your Address or Alternate Address</h4>
+      </hgroup>
+
       <div class="form-count">1 of 5</div>
 
       <h2 class="application-title t-gamma padding-bottom">Who would you’d like us to contact if we can’t get ahold of you?</h2>
@@ -15,7 +31,7 @@
       <div class="form-group margin-bottom--2x">
         <label class="form-label">Alternate contact</label>
         <p class="form-note margin-bottom">Please select one.</p>
-        {{> forms.radio-group name="contacts" items=inputs.contacts}}
+        {{> forms.radio-group name="contacts" items=inputs.contacts-alt}}
       </div>
 
       {{> forms.button-stack--paginate left="Save and finish later"}}

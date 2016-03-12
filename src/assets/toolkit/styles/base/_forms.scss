@@ -69,6 +69,7 @@ label {
 
 // Error messages
 label,
+.form-item,
 .form-group,
 .radio-group,
 .radio-group-inline {
@@ -89,11 +90,11 @@ label,
       border: 2px solid $alert;
     }
 
-    input[type="checkbox"] + label::before {
+    input[type="checkbox"].error + label::before {
       box-shadow: 0 0 0 2px $alert;
     }
 
-    input[type="radio"] + label::before {
+    input[type="radio"].error + label::before {
       box-shadow: 0 0 0 2px #fff, 0 0 0 4px $alert;
     }
 
@@ -102,8 +103,19 @@ label,
     }
   }
 
+  &.has-checkbox.error {
+    .checkbox label {
+      color: $oil !important;
+    }
+  }  
+
   small {
     text-transform: none !important;
+  }
+
+  small.highlight {
+    color: $success;
+    margin-left: 2.25rem;
   }
 }
 
