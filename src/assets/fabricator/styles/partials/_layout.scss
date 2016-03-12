@@ -28,6 +28,7 @@ body {
 .f-container {
 	@include clearfix;
 	@include border-box;
+	background: $dust;
 	position: relative;
 	padding: 0 1em;
 	z-index: 0;

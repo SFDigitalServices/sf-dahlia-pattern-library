@@ -37,6 +37,9 @@
 .f-item-preview {
 	@include clearfix;
 	position: relative;
+	background: #fff;
+	border: 2px solid darken($snow, 2%);
+	padding: 1rem;
 }
 
 .f-item-border-bottom {
@@ -50,6 +53,7 @@
 }
 
 .f-item-heading {
+	font-family: $font-family;
 	margin-top: 0;
 	margin-bottom: 0;
 	display: inline-block;
@@ -86,6 +90,6 @@
 }
 
 .f-item-notes {
-	font-size: 0.875rem;
+	font-size: 0.95rem;
 	margin-bottom: 2rem;
 }

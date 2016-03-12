@@ -40,6 +40,7 @@ pre[class*='language-'] {
 	padding: 1.2em;
 	border-radius: 3px;
 	font-size: 85%;
+	border-top: 1px solid $primary-color;
 }
 
 p code,
@@ -60,7 +61,8 @@ table code {
 code,
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-	background: map-get($code-colors, light-gray);
+	// background: map-get($code-colors, light-gray);
+	background: #fff;
 }
 
 // inline code
