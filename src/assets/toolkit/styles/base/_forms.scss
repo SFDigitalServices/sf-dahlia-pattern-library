@@ -103,14 +103,20 @@ label,
     }
   }
 
-  &.has-checkbox.error {
-    small.error {
-      margin-bottom: .25rem;
+  &.has-checkbox {
+    .checkbox label {
+      color: $primary !important;
     }
 
-    .checkbox label {
-      color: $oil !important;
-    }
+    &.error {
+      small.error {
+        margin-bottom: .25rem;
+      }
+
+      .checkbox label {
+        color: $primary !important;
+      }
+    }  
   }  
 
   small {
