@@ -103,8 +103,9 @@ label,
     }
   }
 
-  &.has-checkbox {
-    .checkbox label {
+  &.has-option {
+    .checkbox label,
+    .radio label {
       color: $primary !important;
     }
 
@@ -113,7 +114,8 @@ label,
         margin-bottom: .25rem;
       }
 
-      .checkbox label {
+      .checkbox label,
+      .radio label {
         color: $primary !important;
       }
     }  

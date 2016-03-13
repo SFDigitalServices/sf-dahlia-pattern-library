@@ -14,7 +14,7 @@
 
       <h2 class="application-title t-gamma padding-bottom">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
 
-      <div class="form-group has-checkbox">
+      <div class="form-group has-option">
         {{> forms.input-tel}}
 
         <div class="form-item padding-bottom">
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <div class="form-group has-checkbox error">
+      <div class="form-group has-option error">
         <label class="form-label no-margin">Your email address</label>
         <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
         {{> forms.input-email visibility="sr-only" classes="error"}}
@@ -37,14 +37,14 @@
         </div>
       </div>
       
-      <div class="form-group has-checkbox">
+      <div class="form-group has-option">
         <label class="form-label no-margin">Your address</label>
         <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
         <div class="form-address row">
           <div class="form-group-street form-item large-12 columns error">
               <label for="address">Address</label>
               <input type="text" name="address" placeholder="Street Address" class="error" />
-              <small class="error">Please enter an address</small>
+              <small class="error">Please enter a street address</small>
           </div>
 
           <div class="form-group-apt form-item large-12 columns">
@@ -52,9 +52,10 @@
             <input type="text" name="address2" placeholder="Apt or Unit #" class=""/>
           </div>
 
-          <div class="form-group-city form-item small-7 large-5 columns">
+          <div class="form-group-city form-item small-7 large-5 columns error">
             <label for="city">City</label>
-            <input type="text" name="city" placeholder="City Name" class=""/>  
+            <input type="text" name="city" placeholder="City Name" class="error"/>
+            <small class="error">Please enter a street address</small>
           </div>
 
           <div class="form-group-state form-item small-5 large-3 columns">
@@ -69,11 +70,17 @@
         </div>  
 
         <div class="form-item padding-bottom">
-          {{> forms.checkbox text="I don't have an address"}}
+          <div class="radio">
+            <input type="radio" name="groupName" id="radio1" /> 
+            <label for="radio1">I don't have an address</label>
+          </div>
         </div>
 
         <div class="form-item padding-bottom">
-          {{> forms.checkbox text="I have a seperate mailing address"}}
+          <div class="radio">
+            <input type="radio" name="groupName" id="radio2" /> 
+            <label for="radio2">I have a seperate mailing address</label>
+          </div>
         </div>
       </div>
 
