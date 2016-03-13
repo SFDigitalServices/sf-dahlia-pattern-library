@@ -130,6 +130,10 @@ label,
     display: inline-block;
     margin-left: 2.25rem;
   }
+
+  small.required {
+    color: $alert;
+  }
 }
 
 // Error spacing for radio inline

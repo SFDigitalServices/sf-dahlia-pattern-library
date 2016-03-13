@@ -19,7 +19,7 @@
       </div>
 
       <hgroup class="entry-panel_group">
-        <span class="entry-panel_label">Required</span>
+        <span class="entry-panel_label">Required Information</span>
         <h4 class="entry-panel_content c-alert">Your Phone or Alternate Phone</h4>
         <h4 class="entry-panel_content c-alert">Your Address or Alternate Address</h4>
       </hgroup>
@@ -28,10 +28,30 @@
 
       <h2 class="application-title t-gamma padding-bottom">Who would you’d like us to contact if we can’t get ahold of you?</h2>
 
-      <div class="form-group margin-bottom--2x">
+      <div class="form-group error margin-bottom--2x">
         <label class="form-label">Alternate contact</label>
         <p class="form-note margin-bottom">Please select one.</p>
-        {{> forms.radio-group name="contacts" items=inputs.contacts-alt}}
+          <div class="radio-group error">
+          <p class="radio-block">
+            <input type="radio" name="contacts" value="contacts-family" id="contacts-family" class="error">
+            <label class="radio-block_label" for="contacts-family">
+              Family member
+            </label>
+          </p>
+          <p class="radio-block">
+            <input type="radio" name="contacts" value="contacts-friend" id="contacts-friend" class="error">
+            <label class="radio-block_label" for="contacts-friend">
+              Friend
+            </label>
+          </p>
+          <p class="radio-block">
+            <input type="radio" name="contacts" value="contacts-social" id="contacts-social" class="error">
+            <label class="radio-block_label" for="contacts-social">
+              Social worker or housing counselor
+            </label>
+          </p>
+        </div>
+        <small class="error">Please select a alternate contact type</small>
       </div>
 
       {{> forms.button-stack--paginate left="Save and finish later"}}
