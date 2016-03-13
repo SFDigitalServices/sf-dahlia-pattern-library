@@ -13,3 +13,19 @@
     margin-left: rem-calc(10);
   }
 }
+
+.application-form_nav {
+  dd {
+    @media #{$small-only} {
+      // margin-left: 0;
+      // width: 20%;
+      // text-align: center;
+      margin-left: rem-calc(8);
+
+      a {
+        padding-left: rem-calc(2);
+        padding-right: rem-calc(2);
+      }
+    }
+  }
+}
