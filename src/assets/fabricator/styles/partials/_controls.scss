@@ -22,7 +22,8 @@
 			vertical-align: middle;
 
 			use {
-				fill: if($theme == $theme-dark, map-get($colors, normal), map-get($colors, light) );
+				// fill: if($theme == $theme-dark, map-get($colors, normal), map-get($colors, light) );
+				fill: $charcoal;
 			}
 		}
 	}
@@ -43,7 +44,8 @@
 		height: 14px;
 
 		use {
-			fill: map-get($colors, light);
+			// fill: map-get($colors, light);
+			fill: $charcoal;
 		}
 	}
 }
