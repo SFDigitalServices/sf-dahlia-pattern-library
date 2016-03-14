@@ -35,9 +35,18 @@
 	padding-top: 4rem;
 	margin-bottom: 1rem;
 
-	.color-chip__name {
+	.color-chip__name,
+	.color-chip__hex {
 		content: attr(data-color);
 		background-color: #fff;
 		padding: .5rem;
+	}
+
+	.color-chip__name {
+		padding-bottom: 0;
+	}
+
+	.color-chip__hex {
+		padding-top: 0;
 	}	
 }

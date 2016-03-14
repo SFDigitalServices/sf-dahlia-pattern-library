@@ -6,17 +6,23 @@ fabricator: true
 <div class="f-item-group">
   <h1>Base</h1>
 
-  <p>This Pattern Library is a highly-modular design system for rapid web page development. It contains different components that can be assembled into more complex page layouts.</p>
+  <div class="f-item-notes">
+    <p>This Pattern Library is a highly-modular design system for rapid web page development. It contains different components that can be assembled into more complex page layouts.</p>
 
-  <p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
+    <p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
+  </div>
 
-  <h2>Usage</h2>
+  <div class="f-item-heading-group">
+    <h2 class="f-item-heading">Usage</h2>
+  </div>
 
-  <p>Start by adding the following files to your page:</p>
+  <div class="f-item-notes">
+    <p>Start by adding the following files to your page:</p>
+    </div>
+    <pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
 
-  <pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
-
-  <pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
+  </div>  
 </div>
 
 <!-- <h2>Color</h2>
@@ -33,29 +39,37 @@ fabricator: true
 {{/each}} -->
 
 <div class="f-item-group">
-<h2>Color</h2>
-
-<p>These brand colors are used globally across all parts of the site for things like links, buttons and background colors.</p>
-
-<p>You can find all the color styles in <code>_variables.scss</code></p>
-
-{{#each toolkit.bgcolors}}
-  <div class="row">
-    <div class="color-chips row">
-    {{#each this}}
-      <div class="large-4 columns">
-      <div class="color-chip bg-{{this}}">
-        <div class="color-chip__name">{{this}}</div>
-      </div>
-      </div>
-    {{/each}}
-    </div>
+  <div class="f-item-heading-group">
+    <h3 class="f-item-heading">Color</h3>
   </div>
-{{/each}}
+  <div class="f-item-notes">
+    <p>These brand colors are used globally across all parts of the site for things like links, buttons and background colors.</p>
+
+    <p>You can find all the color styles in <code>_variables.scss</code></p>
+  </div>
+
+  {{#each toolkit.bgcolors}}
+    <div class="row">
+      <div class="color-chips row">
+      {{#each this}}
+        <div class="large-4 columns">
+        <div class="color-chip bg-{{name}}">
+          <div class="color-chip__name">{{name}}</div>
+          <div class="color-chip__hex">{{hex}}</div>
+        </div>
+        </div>
+      {{/each}}
+      </div>
+    </div>
+  {{/each}}
 </div>
 
 <div class="f-item-group">
-  <h2>Typography</h2>
+  <div class="f-item-heading-group">
+    <h3 class="f-item-heading">Typography</h3>
+  </div>
+  <div class="f-item-notes">
+  </div>
   <div class="f-item-preview">
     <h1>Heading Level 1</h1>
     <h2>Heading Level 2</h2>
@@ -65,67 +79,93 @@ fabricator: true
     <h6>Heading Level 6</h6>
   </div>
 
+  <div class="f-item-preview">
+    <h1 class="t-alt-sans t-caps t-black">Heading Level 1</h1>
+    <h2 class="t-alt-sans t-caps t-black">Heading Level 2</h2>
+    <h3 class="t-alt-sans t-caps t-black">Heading Level 3</h3>
+    <h4 class="t-alt-sans t-caps t-black">Heading Level 4</h4>
+    <h5 class="t-alt-sans t-caps t-black">Heading Level 5</h5>
+    <h6 class="t-alt-sans t-caps t-black">Heading Level 6</h6>
+  </div>
+
 </div>
 
 <div class="f-item-group">
-  <h2>Accessibility</h2>
-
-  <p>The options below offer color palette combinations that fall within the range of Section 508 compliant foreground/background color contrast ratios. </p>
+  <div class="f-item-heading-group">
+    <h3 class="f-item-heading">Accessibility</h3>
+  </div>
+  <div class="f-item-notes">
+    <p>The options below offer color palette combinations that fall within the range of Section 508 compliant foreground/background color contrast ratios. </p>
+  </div>
 
   <div class="f-item-preview">
     <div class="color-test padding margin-bottom bg-white">
+      <p class="c-steel no-margin">vapor on white</p>
       <p class="c-steel no-margin">#767676 on #fff</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-dust">
+      <p class="c-steel no-margin">charcoal on dust</p>
       <p class="c-charcoal no-margin">#555 on #f5f8f9</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-dust">
+      <p class="c-deep no-margin">deep on dust</p>
       <p class="c-deep no-margin">#0067be on #f5f8f9</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-oil">
+      <p class="c-base no-margin">base on oil</p>
       <p class="c-base no-margin">#aaa on #f5f8f9</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-steel">
+      <p class="c-white no-margin">white on steel</p>
       <p class="c-white no-margin">#fff on #767676</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-dark">
+      <p class="c-dust no-margin">dust on dark</p>
       <p class="c-dust no-margin">#f5f8f9 on #205493</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-deep">
+      <p class="c-dust no-margin">dust on deep</p>
       <p class="c-dust no-margin">#f5f8f9 on #0067be</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-primary">
+      <p class="c-white no-margin">white on primary</p>
       <p class="c-white no-margin">#fff on #0077da</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-alert">
+      <p class="c-white no-margin">white on alert</p>
       <p class="c-white no-margin">#fff on #e31c3d</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-success">
+      <p class="c-white no-margin">white on success</p>
       <p class="c-white no-margin">#fff on #2e8540</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-warn">
+      <p class="c-jet no-margin">jet on warn</p>
       <p class="no-margin">#222 on #fdb81e</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-alert-tint">
+      <p class="c-jet no-margin">jet on alert-tint</p>
       <p class="no-margin">#222 on #f9d2d8</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-success-tint">
+      <p class="c-jet no-margin">jet on success-tint</p>
       <p class="no-margin">#222 on #b4e5be</p>
     </div>
 
     <div class="color-test padding margin-bottom bg-warn-tint">
+      <p class="c-jet no-margin">jet on warn-tint</p>
       <p class="no-margin">#222 on #fee8b6</p>
     </div>
   </div>
