@@ -1,18 +1,22 @@
 <div class="property-card">
+  <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
+    <a href="#">Trinity Place Apartments</a>
+  </h1>
+
   <figure class="property-card_figure">
     <a class="property-card_overlay" href="/listings/id">
       <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
         Address:formattedAddress" role="link" >
+
+      <span class="status-label label label--flag success">Matched</span>
+      <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
     </a>
-    
-    <span class="status-label label label--flag success">Matched</span>
-    <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
 
     <figcaption class="property-card_info">
-      <h1 class="property-card_title gamma">
+      <h1 class="property-card_title show-for-medium-up">
         <a href="#">Trinity Place Apartments</a>
       </h1>
-      <p>1188 Mission St, San Francisco CA, 94134</p>
+      <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
     </figcaption>
   </figure>
 
@@ -22,9 +26,9 @@
     </div>
 
     <div class="property-card_action">
-      {{> buttons.button-round fill="primary"}}
+      {{> buttons.button-round fill="primary" label="inline" text="Favorite"}}
 
-      <a class="button right no-margin" href="/pages/property-grid.html">See Details</a>
+      <a class="button ghost-white right no-margin" href="/pages/property-grid.html">See Details</a>
     </div>
   </div>
 

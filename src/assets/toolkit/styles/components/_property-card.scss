@@ -3,19 +3,16 @@
 // Browse property element with semantic grid
 
 .property-card {
+  @include clearfix;
   font-size: .9rem;
   line-height: 1.5;
+  margin-bottom: 1.5rem;
 
-  #{h1, h2, h3, h4, h5, h6} {
-   margin-bottom: 0;
-  }  
-
-  p {
+  &:last-of-type {
     margin-bottom: 0;
   }
 
   &_figure {
-    background-color: $mist;
     text-align: center;
     position: relative;
   }
@@ -49,7 +46,8 @@
     font-family: $alt-font-family;
     letter-spacing: .2rem;
     text-transform: uppercase;
-    
+    margin-bottom: .5rem;
+
     @media #{$medium-up} {
       @include responsive-text-size('beta');
 
@@ -59,19 +57,56 @@
     }
   }
 
+  &_address {
+    @include responsive-text-size('tiny');
+    color: $oil;
+    font-family: $alt-font-family;
+    letter-spacing: $small-header-spacing;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    @media #{$small-only} {
+      margin-top: .5rem;
+      margin-bottom: 1rem;
+    }  
+
+    @media #{$medium-up} {
+      color: #fff;
+    }
+  }
+
   &_action {    
     button {
       margin-bottom: 0;
     } 
   }
 
+  // Labels overlaying images
+  .status-label {
+    @include absolute(.5rem,null,null,0);
+
+    @media #{$medium-up} {
+      @include absolute(.5rem,0,null,auto);
+    }  
+  }
+
+  .application-label {
+    @include absolute(null,1rem,0,1rem);
+    z-index: 2;
+
+    @media #{$medium-up} {
+      @include absolute(.5rem,auto,auto,0);
+    }
+  }
+
   @media #{$small-only} {
     max-width: rem-calc(480);
-    margin: 0 auto;
+    margin: 0 auto 4rem;;
   }
 
   @media #{$medium-up} {
     @include grid-row();
+    margin-bottom: 1.5rem;
 
     .property-card_figure {
       @include grid-column(7);

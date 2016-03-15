@@ -46,6 +46,7 @@
   &_values {
     @include responsive-text-size('gamma');
     color: $steel;
+    font-family: $alt-font-family;
     letter-spacing: $large-header-spacing;
     text-transform: uppercase;
 
@@ -82,8 +83,10 @@
   position: relative;
   padding: 1rem;
   margin-bottom: 2rem;
+  
   &_icon {
-    @include absolute(1rem,null,null,1rem);
+    @include absolute(50%,null,null,1rem);
+    @include translateY(-50%);
     display: none;
 
     @media #{$medium-up} {
@@ -112,13 +115,38 @@
       border-bottom: 3px solid $success;
       display: inline-block;
       padding-bottom: .5rem;
-    }  
+    }
+
+    &.gamma {
+      @include responsive-text-size('gamma');
+    }
   }
 
   p {
     @include responsive-text-size('base');
     color: $steel;
   }  
+
+  // Status colors 
+  &.status--other {
+    .status-header_group {
+      border-color: $alert;
+    }
+
+    .status-header_title {
+      border-color: $alert;
+    }
+  }
+
+  &.status--closed {
+    .status-header_group {
+      border-color: $steel;
+    }
+
+    .status-header_title {
+      border-color: $steel;
+    }
+  }
 
   @media #{$small-only} {
     margin-left: -($column-gutter/2);

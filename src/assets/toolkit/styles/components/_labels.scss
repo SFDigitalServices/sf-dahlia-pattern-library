@@ -29,15 +29,6 @@
   }
 }
 
-// Labels overlaying images
-.status-label {
-  @include absolute(.5rem,0,null,null);
-}
-
-.application-label {
-  @include absolute(.5rem,null,null,0);
-}
-
 .label--flag {
   @include responsive-text-size('tiny');
   padding: 1rem;

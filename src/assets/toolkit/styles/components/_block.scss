@@ -25,6 +25,15 @@
       padding: 2rem 2rem;
     }
   }
+
+  &--short {
+    @include block();
+    padding: 1.5rem;
+
+    @media #{$medium-up} {
+      padding: 2rem;
+    }
+  }
 }
 
 // Block icon element

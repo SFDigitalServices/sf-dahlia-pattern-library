@@ -1,43 +1,35 @@
 <div class="property-card">
+  <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
+    <a href="#">Trinity Place Apartments</a>
+  </h1>
+
   <figure class="property-card_figure">
-    <div class="property-card_container">
-      <a href="/listings/id">
-        <img class="property-card_thumb" src="/assets/toolkit/images/property3.jpg" alt="Listing Name:listing.Building_Name,
-          Address:formattedAddress" role="link" >
-      </a>
-      <a href="#" class="property-card_like">
-        {{> icons.icon-like}}
-      </a>
-    </div>
-    <figcaption class="property-card_stats hide-for-medium-up">
-      <div class="stats-card bottom">
-        {{> stats.stats-list}}
-        {{> stats.stats-list--one-br}}
-      </div>
+    <a class="property-card_overlay" href="/listings/id">
+      <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
+        Address:formattedAddress" role="link" >
+
+      <span class="status-label label label--flag">Not a Match</span>
+      <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
+    </a>
+
+    <figcaption class="property-card_info">
+      <h1 class="property-card_title show-for-medium-up">
+        <a href="#">Trinity Place Apartments</a>
+      </h1>
+      <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
     </figcaption>
-    <span class="status-label label bg-oil">Not Matched</span>
   </figure>
 
-  <header class="property-card_content">
-    <hgroup class="property-card_info">
-      <div class="property-card_meta">
-        <h1 class="property-card_title gamma">
-          <a href="#">Trinity Place Apartments</a>
-        </h1>
-        <p>1188 Mission St, San Francisco CA, 94134</p>
-        <p class="c-steel">Caritas Management Group</p>
-        <p>Application Due Feb 2nd</p>
-      </div>
-
-      <div class="property-card_action">
-        <a class="button tiny secondary no-margin" href="/pages/property-grid.html">See Details</a>
-      </div>
-    </hgroup>
-    <div class="property-card_stats show-for-medium-up">
-      <div class="stats-card bottom bg-mist">
-        {{> stats.stats-list}}
-        {{> stats.stats-list--one-br}}
-      </div>
+  <div class="property-card_content">
+    <div class="property-card_stats">
+      {{> tables.table-rent}}
     </div>
-  </header>
+
+    <div class="property-card_action">
+      {{> buttons.button-round fill="primary" label="inline" text="Favorite"}}
+
+      <a class="button ghost-white right no-margin" href="/pages/property-grid.html">See Details</a>
+    </div>
+  </div>
+
 </div>

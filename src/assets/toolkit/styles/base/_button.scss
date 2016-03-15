@@ -175,12 +175,24 @@ button,
 
     &:hover,
     &:focus {
+      color: $primary;
+
       svg {
         use {
           fill: #fff;
         }
-      }    
-    }  
+      }
+    }
+
+    span.inline {
+      @include translateY(-50%);
+      position: absolute;
+      left: 3.25rem;
+      top: 50%;
+      color: $steel;
+      letter-spacing: normal;
+      text-transform: none;
+    }
   }
 
   // Icon button styles
