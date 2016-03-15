@@ -7,21 +7,31 @@
 
   }
 
-  &.secondary {
-    background-color: $primary-tint;
-    color: $oil;
-
-    svg use {
-      fill: $primary;
-    }
-  }
-
   &.primary {
     background-color: $primary;
   }
 
   &.negative {
     background-color: $oil;
+  }
+
+  &.secondary,
+  &.primary-tint {
+    background-color: $primary-tint;
+    color: $oil;
+
+    svg use {
+      fill: $primary !important;
+    }
+  }
+
+  &.alert-tint {
+    background-color: $alert-tint;
+    color: $oil;
+
+    svg use {
+      fill: $alert !important;
+    }
   }
 
   .ui-icon {

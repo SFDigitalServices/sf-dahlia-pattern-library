@@ -34,7 +34,7 @@
 
   &_info {
     @media #{$medium-up} {
-      @include absolute(null,.5rem,1.5rem,.5rem);
+      @include absolute(null,.5rem,1rem,.5rem);
       display: inline-block;
       color: #fff;
       z-index: 2;
