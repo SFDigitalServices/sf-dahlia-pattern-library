@@ -221,6 +221,15 @@ button,
     }
   }
 
+  &.has-icon--right {
+    padding-right: .925rem;
+
+    .ui-icon {
+      margin-right: 0;
+      margin-left: .625rem;
+    }
+  }
+
   &.expand {
     // padding-left: 1.5rem;
     // padding-right: 1.5rem;
