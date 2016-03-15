@@ -3,9 +3,6 @@
 // Hero element at the top of single property
 
 .property-hero {
-  #{h1, h2, h3, h4, h5, h6} {
-
-  }
 
   &_figure {
     position: relative;
@@ -42,20 +39,6 @@
       display: inline-block;
       z-index: 2;
     }  
-  }
-  
-  // legacy  
-  &_like {
-    @include absolute(null,0,0,null);
-    background-color: rgba(0,0,0,.5);
-    padding: 1rem;
-    z-index: 10;
-
-    svg {
-      use {
-        fill: #fff;
-      }
-    }
   }
 
   &_favorite {
@@ -95,10 +78,6 @@
     }  
   }
 
-  &_stats {
-
-  }
-
   .stats-list {
     li:nth-child(2) {
       padding-right: 0;
@@ -124,10 +103,5 @@
         margin-bottom: 0;
       }
     }
-  }
-
-  .stats-card {
-    background-color: $mist;
-    margin-bottom: .5rem;
   }
 }

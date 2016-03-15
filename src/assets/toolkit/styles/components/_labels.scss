@@ -16,6 +16,10 @@
     }
   }
 
+  &.primary {
+    background-color: $primary;
+  }
+
   &.negative {
     background-color: $oil;
   }
@@ -27,7 +31,11 @@
 
 // Labels overlaying images
 .status-label {
-  @include absolute(.5rem,null,null,.5rem);
+  @include absolute(.5rem,0,null,null);
+}
+
+.application-label {
+  @include absolute(.5rem,null,null,0);
 }
 
 .label--flag {

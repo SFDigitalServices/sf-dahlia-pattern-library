@@ -121,7 +121,8 @@ hr {
   }
 }
 
-$small-header-spacing: .2em;
+$large-header-spacing: .1rem;
+$small-header-spacing: .2rem;
 $small-header-underline: 3px solid $primary;
 
 @mixin h-caps-lined() {

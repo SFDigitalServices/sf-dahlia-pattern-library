@@ -2,25 +2,29 @@
 // Headers
 //
 
-.header {
-  // simple header with padding and background
-  &-block {
-    background-color: $smoke;
-    padding: 1rem;
-
-    &_name {
-      margin-bottom: 0;
-    }
-  }
-}
-
 // Larger page headers for top of page
-.lead-header,
-.lead-header--sub {
-  padding: 1rem 0 0;
+.lead-header {
+  padding: 2rem 0 1rem;
+  text-align: center;
 
   @media #{$medium-up} {
-    padding: 2rem 0 1rem;
+    padding: 3rem 0 1rem;
+    text-align: left;
+  }
+
+  &_title {
+    @include type-weight(semi);
+    font-family: $alt-font-family;
+    letter-spacing: $large-header-spacing;
+    text-transform: uppercase;
+
+    @media #{$small-only} {
+      @include responsive-text-size('beta');
+    }
+      
+    @media #{$medium-up} {
+      @include type-weight(black);
+    }  
   }
 }
 
@@ -37,6 +41,27 @@
   }
 }
 
+// Results values and actions
+.results-header {
+  &_values {
+    @include responsive-text-size('gamma');
+    color: $steel;
+    letter-spacing: $large-header-spacing;
+    text-transform: uppercase;
+
+    strong {
+      color: $oil;
+      font-family: $serif-font-family;
+      letter-spacing: normal;
+    }
+
+    @media #{$small-only} {
+      @include responsive-text-size('delta');
+    }
+  }
+}
+
+// Section dividers
 // Lined header for page content
 .section-header {
   border-bottom: 1px solid $silver;
@@ -56,14 +81,44 @@
 .status-header {
   position: relative;
   padding: 1rem;
-
+  margin-bottom: 2rem;
   &_icon {
     @include absolute(1rem,null,null,1rem);
+    display: none;
+
+    @media #{$medium-up} {
+      display: block;
+    }  
   }
 
-  &_content {
-    padding-left: 2rem;
+  &_group {
+    @media #{$medium-up} {
+      border-left: 3px solid $success;
+      margin-left: 2rem;
+      padding-left: 1rem;
+    }
   }
+
+  &_title {
+    @include responsive-text-size('base');
+    @include type-weight(black);
+    font-family: $alt-font-family;
+    letter-spacing: $small-header-spacing;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+
+    @media #{$small-only} {
+      @include clearfix;
+      border-bottom: 3px solid $success;
+      display: inline-block;
+      padding-bottom: .5rem;
+    }  
+  }
+
+  p {
+    @include responsive-text-size('base');
+    color: $steel;
+  }  
 
   @media #{$small-only} {
     margin-left: -($column-gutter/2);

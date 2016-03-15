@@ -20,106 +20,69 @@
     position: relative;
   }
 
-  &_container {
+  &_overlay {
     position: relative;
     display: inline-block;
-    margin: 0 auto;
-    width: 100%;
-  }
-    
-  &_details {
-    background-color: rgba(0,0,0, .5);
-    color: #fff;
-    padding: 1rem;
-  }
+    overflow: hidden;
 
-  &_toggle {
-    @include absolute(2.5rem,1rem,null,null);
+    &:before {
+      @include overlay-image;
+      @include custom-linear-gradient(transparent, rgba(0,0,0, .8));
+    }
   }
 
   &_content {
     position: relative;
-    padding: 1rem;
-
-    .stats-list {
-      padding-left: 0;
-
-      &:first-of-type {
-        margin-top: 1rem;
-      }
-    }
   }
 
   &_info {
-    @include clearfix;
-    position: relative;
+    @media #{$medium-up} {
+      @include absolute(null,.5rem,1.5rem,.5rem);
+      display: inline-block;
+      color: #fff;
+      z-index: 2;
+    }
   }
-
-  &_meta {
-    margin-bottom: 1rem;
-  }  
 
   &_title {
-    margin-bottom: 0;
-  }
+    @include responsive-text-size('delta');
+    font-family: $alt-font-family;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    
+    @media #{$medium-up} {
+      @include responsive-text-size('beta');
 
-  &_like {
-    @include absolute(null,0,0,null);
-    background-color: rgba(0,0,0,.5);
-    padding: 1rem;
-
-    svg {
-      use {
-        fill: #fff;
+      a {
+        color: #fff;
       }
     }
   }
 
-  &_action {
-    float: right;
-    
+  &_action {    
     button {
       margin-bottom: 0;
-    }
-
-    @media #{$medium-up} {
-      @include absolute(null,0,0,null);
-      float: none;
-    }  
+    } 
   }
 
   @media #{$small-only} {
     max-width: rem-calc(480);
     margin: 0 auto;
-
-    .stats-list {
-      li:nth-child(2) {
-        padding-right: 0;
-        padding-left: 0;
-      }
-    }
   }
 
   @media #{$medium-up} {
     @include grid-row();
 
-    .overlay {
-      @include relative(null,null,null,null); 
-    }
-
     .property-card_figure {
-      @include grid-column(5);
-      padding-right: 0;
+      @include grid-column(7);
+      padding: 0;
       background-color: transparent;
     }
     
     .property-card_content {
-      @include grid-column(7);
-      padding-left: 2rem;
-    }
-
-    .property-card_meta {
-      padding-right: rem-calc(100);
+      @include grid-column(5);
+      padding: 0;
+      padding-left: 1rem;
     }
   }
 }

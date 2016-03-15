@@ -1,0 +1,8 @@
+.results-section {
+  padding: 1rem 0;
+
+  @media #{$medium-up} {
+    padding: 2rem 0;
+  }  
+}
+
