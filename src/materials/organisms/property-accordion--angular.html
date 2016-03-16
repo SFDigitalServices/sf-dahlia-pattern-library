@@ -4,9 +4,10 @@ title: Angular
 ---
 
 <div ng-controller="AccordionSampleController">
-  <accordion close-others="oneAtATime" class="page-accordion top">
+  <accordion close-others="oneAtATime" class="page-accordion">
     <accordion-group class="medium-right-column"> 
-      <accordion-heading class="lead">
+      <accordion-heading>
+        <img class="accordion-icon" src="/assets/toolkit/images/listing-units.svg" alt="neighborhood-building">
         <h3 class="accordion-name">Process</h3>
         <span class="accordion-subheader">Important dates and contact information</span>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
@@ -15,8 +16,9 @@ title: Angular
       {{> content-section--process}}
     </accordion-group>
 
-    <accordion-group class=""> 
-      <accordion-heading class="lead">
+    <accordion-group> 
+      <accordion-heading>
+        <img class="accordion-icon" src="/assets/toolkit/images/listing-eligibility.svg" alt="eligibility-notebook">
         <h3 class="accordion-name">Eligibility</h3>
         <span class="accordion-subheader">Income, occupancy, preferences and rental assistance</span>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
@@ -33,8 +35,9 @@ title: Angular
         {{> content-section--eligibility-ordered}}
     </accordion-group>
 
-    <accordion-group class=""> 
-      <accordion-heading class="lead">
+    <accordion-group> 
+      <accordion-heading>
+        <img class="accordion-icon" src="/assets/toolkit/images/listing-features.svg" alt="features-options">
         <h3 class="accordion-name">Features</h3>
         <span class="accordion-subheader">Amenities, unit details and additional fees</span>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
@@ -51,8 +54,9 @@ title: Angular
       {{> content-section--features}}
     </accordion-group>
 
-    <accordion-group class=""> 
-      <accordion-heading class="lead">
+    <accordion-group> 
+      <accordion-heading>
+        <img class="accordion-icon" src="/assets/toolkit/images/listing-neighborhood.svg" alt="neighborhood-building">
         <h3 class="accordion-name">Neighborhood</h3>
         <span class="accordion-subheader">Location and transportation</span>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
@@ -85,8 +89,9 @@ title: Angular
       </div>
     </accordion-group>
 
-    <accordion-group class=""> 
-      <accordion-heading class="lead">
+    <accordion-group> 
+      <accordion-heading>
+        <img class="accordion-icon" src="/assets/toolkit/images/listing-legal.svg" alt="legal-documents">
         <h3 class="accordion-name">Additional Information</h3>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
       </accordion-heading>

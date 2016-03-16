@@ -1,0 +1,43 @@
+{{> headers.translate-header }}
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+{{> headers.lead-header--sub title="Get Assistance" description="Whether you’re looking for assistance from a housing counselor, language support or additional housing listings, you've come to the right place."}}
+
+  <div class="row--full">
+    <section class="medium-8 columns">
+
+      <div class="clearfix">
+        <div class="main inner-column right">
+        {{> blocks.block-icon }}
+        </div>
+      </div>
+ 
+      <div class="clearfix bg-dust">
+      <div class="main inner-column right">  
+        <div class="block--icon text-center bg-dust">
+          <figure class="block-icon">
+            <img src="/assets/toolkit/images/{{ default icon "icon-trans.png" }}">
+          </figure>
+          <h2 class="delta t-serif c-oil">Download translations in multiple languages, and quickly contact counselors providing language support.</h2>
+
+          {{> forms.language-actions }}
+        </div>
+      </div>
+      </div>
+
+      <div class="clearfix">
+      <div class="main inner-column right">  
+      {{> blocks.block-icon description="See more rental and ownership affordable housing opportunities." action="View Additional Opportunities" icon="icon-home.png"}}
+      </div>
+      </div>
+
+    </section>
+
+    <section class="medium-4 columns">
+      <div class="left inner-column">
+      {{> components.aside-contact }}
+      </div>
+    </section>
+  </div>  
+{{> components.footer}}

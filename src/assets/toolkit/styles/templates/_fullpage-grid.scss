@@ -1,0 +1,19 @@
+$row-width: rem-calc(1024);
+
+.grid--fullpage {
+  @include clearfix;
+}
+
+.row--full {
+  @include clearfix;
+  width: 100%;
+  max-width: none;
+
+  .columns {
+    padding: 0;
+  }
+
+  .main {
+    width: rem-calc(824);
+  }
+}
