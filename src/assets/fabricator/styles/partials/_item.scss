@@ -80,7 +80,8 @@
 		}
 
 		use {
-			fill: map-get($colors, light);
+			// fill: map-get($colors, light);
+			fill: $charcoal;
 		}
 	}
 }
