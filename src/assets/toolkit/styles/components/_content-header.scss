@@ -31,27 +31,36 @@
 // Listing header
 
 .listing-header {
-  border-left: 3px solid $primary;
   color: #1a383c;
   display: none;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 0;
+  position: relative;
   margin-top: 3rem;
-  // margin-left: 3.5rem;
 
-  @media #{$medium-up} {
-    &_name {
-      @include responsive-text-size('gamma');
-      display: block;
-      font-family: $serif-font-family;
-      margin-bottom: .5rem;
-    }
+  &_group {
+    border-left: 3px solid $primary;
+    margin-left: 4rem;
+    padding-left: 1rem;
+  }
 
-    &_subheader {
-      @extend .accordion-subheader;
-      color: $steel;
-    }
-  }  
+  &_name {
+    @include responsive-text-size('gamma');
+    display: block;
+    font-family: $serif-font-family;
+    margin-bottom: .5rem;
+  }
+
+  &_subheader {
+    @extend .accordion-subheader;
+    color: $steel;
+  }
+
+  &_icon {
+    @include absolute(50%,null,null,0);
+    @include translateY(-50%);
+    width: 3.5rem;
+  }
 }
 
 .page-accordion {

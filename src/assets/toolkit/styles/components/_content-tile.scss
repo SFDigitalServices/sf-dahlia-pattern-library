@@ -8,13 +8,17 @@
 }
 
 .feature-tile {
+  @media #{$medium-up} {
+    margin-left: 5rem;
+  }
+
   .feature-row {
     margin-bottom: 1rem;
       
     p {
       margin-bottom: 0;
     }
-  }  
+  }
 
   .feature-title {
     @include responsive-text-size('epsilon');

@@ -23,8 +23,11 @@ title: Angular
       </accordion-heading>
       
       <header class="listing-header show-for-medium-up">
-        <h3 class="listing-header_name">Eligibility</h3>
-        <span class="listing-header_subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
+        <img class="listing-header_icon" src="/assets/toolkit/images/listing-eligibility.svg" alt="eligibility-notebook">
+        <hgroup class="listing-header_group">
+          <h3 class="listing-header_name">Eligibility</h3>
+          <span class="listing-header_subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
+        </hgroup>
       </header>
 
         {{> content-section--eligibility-ordered}}
@@ -38,8 +41,11 @@ title: Angular
       </accordion-heading>
 
       <header class="listing-header show-for-medium-up">
-        <h3 class="listing-header_name">Features</h3>
-        <span class="listing-header_subheader">Amenities, unit details and additional fees</span>
+        <img class="listing-header_icon" src="/assets/toolkit/images/listing-features.svg" alt="features-options">
+        <hgroup class="listing-header_group">
+          <h3 class="listing-header_name">Features</h3>
+          <span class="listing-header_subheader">Amenities, unit details and additional fees</span>
+        </hgroup>
       </header>
 
       {{> content-section--features}}
@@ -53,12 +59,15 @@ title: Angular
       </accordion-heading>
 
       <header class="listing-header show-for-medium-up">
-        <h3 class="listing-header_name">Neighborhood</h3>
-        <span class="listing-header_subheader">Location and transportation</span>
+        <img class="listing-header_icon" src="/assets/toolkit/images/listing-neighborhood.svg" alt="neighborhood-building">
+        <hgroup class="listing-header_group">
+          <h3 class="listing-header_name">Neighborhood</h3>
+          <span class="listing-header_subheader">Location and transportation</span>
+        </hgroup>
       </header>
 
       <div class="content-section">
-        <div class="content-tile">
+        
           <div class="property-map map-panel">
             <figure class="property-map_figure p-relative">
               <img class="property-map_thumb" src="/assets/toolkit/images/map.png" alt="image of map">
@@ -72,7 +81,7 @@ title: Angular
               </a>
             </figure>
           </div>
-        </div>
+   
       </div>
     </accordion-group>
 
