@@ -30,3 +30,19 @@
     }
   }
 }
+
+.content-grid {
+  @media #{$medium-up} {
+    @include clearfix;
+
+    .content-item {
+      float: left;
+      width: 50%;
+      padding-right: 1rem;
+
+      &:nth-child(2n+1) {
+        clear: left;
+      }  
+    }
+  }
+}
