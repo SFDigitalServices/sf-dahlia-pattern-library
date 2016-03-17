@@ -6,10 +6,16 @@
 .lead-header {
   padding: 2rem 0 1rem;
   text-align: center;
+  position: relative;
 
   @media #{$medium-up} {
     padding: 3rem 0 1rem;
     text-align: left;
+    
+    &:before {
+      @include overlay-image;
+      @include custom-linear-gradient(transparent, rgba(0,0,0, .3));  
+    }
   }
 
   &_title {
@@ -25,6 +31,11 @@
     @media #{$medium-up} {
       @include type-weight(black);
     }  
+  }
+
+  &_group {
+    position: relative;
+    z-index: 2;
   }
 }
 

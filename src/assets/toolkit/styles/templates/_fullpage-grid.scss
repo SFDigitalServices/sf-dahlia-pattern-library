@@ -1,19 +1,32 @@
 $row-width: rem-calc(1024);
 
-.grid--fullpage {
-  @include clearfix;
-}
-
 .row--full {
   @include clearfix;
   width: 100%;
   max-width: none;
+  position: relative;
 
   .columns {
     padding: 0;
   }
 
-  .main {
-    width: rem-calc(824);
+
+  @media #{$medium-up} {
+  .full-height {
+      @include absolute(0,0,null,null);
+      float: none;
+      height: 100%;
+    }
+  }
+
+
+  @media screen and (min-width: $row-width) {
+    .main {
+    width: rem-calc(724);
+    }
+
+    .aside {
+      width: rem-calc(300);
+    }
   }
 }

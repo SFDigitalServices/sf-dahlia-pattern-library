@@ -2,41 +2,66 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header--sub title="Get Assistance" description="Whether you’re looking for assistance from a housing counselor, language support or additional housing listings, you've come to the right place."}}
+{{> headers.lead-header--sub title="Get Assistance" description="Whether you’re looking for assistance from a housing counselor, language support or additional housing listings, you've come to the right place." background="dark" color="white"}}
 
   <div class="row--full">
     <section class="medium-8 columns">
-
       <div class="clearfix">
         <div class="main inner-column right">
-        {{> blocks.block-icon }}
+          <div class="block--icon">
+            <figure class="block-icon">
+              <img src="/assets/toolkit/images/{{default icon 'icon-phone.png'}}">
+            </figure>
+            
+            <h2 class="t-gamma margin-bottom--2x">Housing Counselors</h2>
+            
+            <p class="t-base t-sans c-oil margin-bottom--2x">For more help, we suggest talking with a housing counselor to explore your options.</p>
+
+            <a href="#" class="button large ghost-white">Find a Housing Counselor</a>
+          </div>
         </div>
       </div>
  
       <div class="clearfix bg-dust">
-      <div class="main inner-column right">  
-        <div class="block--icon text-center bg-dust">
-          <figure class="block-icon">
-            <img src="/assets/toolkit/images/{{ default icon "icon-trans.png" }}">
-          </figure>
-          <h2 class="delta t-serif c-oil">Download translations in multiple languages, and quickly contact counselors providing language support.</h2>
+        <div class="main inner-column right">  
+          <div class="block--icon text-center bg-dust">
+            <figure class="block-icon">
+              <img src="/assets/toolkit/images/{{ default icon "icon-trans.png" }}">
+            </figure>
 
-          {{> forms.language-actions }}
+            <h2 class="t-gamma margin-bottom--2x">Language Support</h2>
+            <p class="t-base t-sans c-oil margin-bottom--2x">Download translations in multiple languages, and quickly contact counselors providing language support.</p>
+
+            <a href="#" class="button large ghost-white">Español</a>
+            <a href="#" class="button large ghost-white t-ch">中国</a>
+            <a href="#" class="button large ghost-white">Tagalog</a>
+          </div>
         </div>
-      </div>
       </div>
 
       <div class="clearfix">
-      <div class="main inner-column right">  
-      {{> blocks.block-icon description="See more rental and ownership affordable housing opportunities." action="View Additional Opportunities" icon="icon-home.png"}}
-      </div>
+        <div class="main inner-column right">  
+          <div class="block--icon">
+            <figure class="block-icon">
+              <img src="/assets/toolkit/images/{{default icon 'icon-home.png'}}">
+            </figure>
+            
+            <h2 class="t-gamma margin-bottom--2x">Additional Opportunites</h2>
+            
+            <p class="t-base t-sans c-oil margin-bottom--2x">See more rental and ownership affordable housing opportunities.</p>
+
+            <a href="#" class="button large ghost-white">View Additional Housing Opportunities</a>
+          </div>
+        </div>
       </div>
 
     </section>
 
-    <section class="medium-4 columns">
-      <div class="left inner-column">
-      {{> components.aside-contact }}
+    <section class="medium-4 columns box-shadow full-height">
+      <div class="clearfix">
+        <div class="aside left inner-column">
+        {{> components.aside-contact }}
+        </div>
       </div>
     </section>
   </div>  

@@ -5,7 +5,6 @@
 
 .box {
   @include panel();
-  @extend %box-shadow;
 
   @media #{$medium-up} {
     padding: 2rem;

@@ -3,8 +3,7 @@ $carousel-arrow-size: 3.5rem;
 .property-hero_container {
   &:before {
     @include overlay-image;
-    @include custom-linear-gradient(transparent, rgba(0,0,0, .8));
-    // @include background-image(linear-gradient(top, transparent 50%, rgba(0,0,0, .4)));
+    @include custom-linear-gradient(transparent, rgba(0,0,0, .8));  
   }
 }
 
