@@ -2,33 +2,8 @@
 // Content Header
 // Header with subnav for property accordion
 
-.content-header {
-  color: #1a383c;
-  display: none;
-  font-size: 1rem;
-  padding: 1rem;
-
-  @media #{$medium-up} {
-    border-top: 5px solid $charcoal;
-    border-bottom: 0;
-    display: block;
-    padding-bottom: 1.25rem;
-    padding-top: 2.25rem;
-    
-    &_name {
-      @include responsive-text-size('gamma');
-      display: block;
-      margin-bottom: .5rem;
-    }
-
-    &_subheader {
-      @extend .accordion-subheader;
-      color: $steel;
-    }
-  }
-}
-
 // Desktop listing header
+.content-header,
 .listing-header {
   color: #1a383c;
   display: none;
@@ -101,3 +76,29 @@
     width: 3.5rem;
   }
 }
+
+// .content-header {
+//   color: #1a383c;
+//   display: none;
+//   font-size: 1rem;
+//   padding: 1rem;
+
+//   @media #{$medium-up} {
+//     border-top: 5px solid $charcoal;
+//     border-bottom: 0;
+//     display: block;
+//     padding-bottom: 1.25rem;
+//     padding-top: 2.25rem;
+    
+//     &_name {
+//       @include responsive-text-size('gamma');
+//       display: block;
+//       margin-bottom: .5rem;
+//     }
+
+//     &_subheader {
+//       @extend .accordion-subheader;
+//       color: $steel;
+//     }
+//   }
+// }

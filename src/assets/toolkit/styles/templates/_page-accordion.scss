@@ -49,6 +49,7 @@ $siderail-padding-full: 2rem;
     @media #{$medium-up} {
       @include absolute(0,0,0,null);
       @include translateX(0);
+      background-color: #fff;
       z-index: 3;
 
       .content {

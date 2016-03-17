@@ -1,7 +1,8 @@
 // Content tile
 // Property listing content module
 
-.content-tile {
+.content-tile,
+.listing-tile {
   @media #{$medium-up} {
     margin-left: 3rem;
   }
