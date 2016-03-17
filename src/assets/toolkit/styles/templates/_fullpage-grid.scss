@@ -29,3 +29,18 @@ $row-width: rem-calc(1024);
     }
   }
 }
+
+@media #{$medium-up} {
+  .full-height {
+    @include absolute(0,0,null,null);
+    float: none;
+    height: 100%;
+  }
+
+  .section--wide {
+    margin-left: rem-calc(-1000);
+    margin-right: rem-calc(-300);
+    padding-left: rem-calc(1000);
+    padding-right: rem-calc(300);
+  }
+}

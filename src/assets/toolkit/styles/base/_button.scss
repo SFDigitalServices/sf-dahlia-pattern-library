@@ -154,8 +154,10 @@ button,
   }
 
   &.large {
-    padding: 1.625rem 2.25rem 1.625rem 2.25rem;
-    line-height: 1;
+    @media #{$medium-up} {
+      line-height: 1;
+      padding: 1.625rem 2.25rem 1.625rem 2.25rem;
+    }
   }
 
   // Apply box shadow
