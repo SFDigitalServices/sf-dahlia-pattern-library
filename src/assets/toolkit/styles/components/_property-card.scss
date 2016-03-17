@@ -17,10 +17,16 @@
     position: relative;
   }
 
+  &_thumb {
+    width: 100%;
+    max-width: none;
+  }
+
   &_overlay {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    width: 100%;
 
     &:before {
       @include overlay-image;

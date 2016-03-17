@@ -9,13 +9,8 @@
   position: relative;
 
   @media #{$medium-up} {
-    padding: 3rem 0 1rem;
+    padding: 3rem 0 2rem;
     text-align: left;
-    
-    &:before {
-      @include overlay-image;
-      @include custom-linear-gradient(transparent, rgba(0,0,0, .3));  
-    }
   }
 
   &_title {
@@ -36,6 +31,15 @@
   &_group {
     position: relative;
     z-index: 2;
+  }
+
+  &.bg-gradient {
+    @media #{$medium-up} {
+      &:before {
+        @include overlay-image;
+        @include custom-linear-gradient(transparent, rgba(0,0,0, .3));  
+      }
+    }
   }
 }
 

@@ -7,9 +7,8 @@ $row-width: rem-calc(1024);
   position: relative;
 
   .columns {
-    padding: 0;
+    padding: 0
   }
-
 
   @media #{$medium-up} {
   .full-height {
@@ -22,7 +21,7 @@ $row-width: rem-calc(1024);
 
   @media screen and (min-width: $row-width) {
     .main {
-    width: rem-calc(724);
+      width: rem-calc(724);
     }
 
     .aside {

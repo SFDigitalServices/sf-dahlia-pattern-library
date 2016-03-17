@@ -12,12 +12,10 @@ $dark-bg-colors: (
   attention: $attention
 );
 
-button,
-.button {
+@mixin custom-button() {
   @include type-weight(bold);
   background-color: transparent;
   border-radius: rem-calc(4);
-  // box-shadow: inset 0px 0px 0 2px $primary;
   border-color: $primary;
   color: $primary;
   font-family: $alt-font-family;
@@ -30,13 +28,31 @@ button,
   &:focus {
     background-color: $primary;
   }
+}
+
+button,
+.button {
+  @include custom-button();
+  // background-color: transparent;
+  // border-radius: rem-calc(4);
+  // border-color: $primary;
+  // color: $primary;
+  // font-family: $alt-font-family;
+  // text-transform: uppercase;
+  // letter-spacing: .2em;
+  // padding-left: 1.5rem;
+  // padding-right: 1.5rem;
+
+  // &:hover,
+  // &:focus {
+  //   background-color: $primary;
+  // }
 
   // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
     &.#{"" + $color-name} {
       background-color: $color-value;
       color: $white;
-      // box-shadow: inset 0px 0px 0 2px $color-value;
       border-color: $color-value;
 
       &:hover,
@@ -51,7 +67,6 @@ button,
   &.primary {
     background-color: $primary;
     color: #fff;
-    // box-shadow: inset 0px 0px 0 2px $primary;
 
     &:hover,
     &:focus {
@@ -64,7 +79,6 @@ button,
     background-color: transparent;
     border-color: $primary;
     color: $primary;
-    // box-shadow: inset 0px 0px 0 2px $primary;
 
     &:hover,
     &:focus {
@@ -77,7 +91,6 @@ button,
     background-color: transparent;
     border-color: $steel;
     color: $steel;
-    // box-shadow: inset 0px 0px 0 2px $steel;
 
     &:hover,
     &:focus {
@@ -269,19 +282,24 @@ button,
   padding-top: .5rem;
   padding-bottom: .5rem;
 
-  svg {
-    margin-right: .5rem;
-  }
-
   @media #{$small-only} {
     @include button;
+    @include custom-button();
     display: block;
-    
-    svg {
-      use { 
-        fill: #fff !important;
+
+    &:hover,
+    &:focus {
+      svg {
+        use { 
+          fill: #fff;
+        }
       }
     }
+  }
+
+  svg {
+    fill: $primary;
+    margin-right: .5rem;
   }
 }
 
