@@ -350,6 +350,12 @@ $units: (
   padding: 0 !important;
 }
 
+.small-no-padding {
+  @media #{$small-only} {
+    padding: 0 !important;
+  }
+}
+
 .padding-left-none {
   padding-left: 0 !important;
 }
