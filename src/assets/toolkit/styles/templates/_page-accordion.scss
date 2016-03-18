@@ -38,6 +38,13 @@ $siderail-padding-full: 2rem;
   }
 
   > .accordion > dd > .content {
+    @media #{$small-only} {
+      .content-group {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
     @media #{$medium-up} {
       display: block !important;
       padding: 0;

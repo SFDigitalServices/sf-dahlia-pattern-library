@@ -8,6 +8,12 @@ a, .btn-link {
   &.lined {
     text-decoration: underline;
   }
+
+  &.has-icon {
+    .ui-icon {
+      margin-right: .325rem;
+    }
+  }  
 }
 
 .btn-link {

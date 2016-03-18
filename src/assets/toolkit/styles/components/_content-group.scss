@@ -3,7 +3,15 @@
 
 .content-group {
   border-bottom: 1px solid $smoke;
-  padding: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-left: $column-gutter/2;
+  padding-right: $column-gutter/2;
+
+  @media #{$medium-up} {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 
   &_title {
     @include responsive-text-size('small');
