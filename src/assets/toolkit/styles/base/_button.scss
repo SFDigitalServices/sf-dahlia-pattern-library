@@ -200,15 +200,19 @@ button,
       }
     }
 
-    span.inline {
-      @include translateY(-50%);
-      position: absolute;
-      left: 3.25rem;
-      top: 50%;
-      color: $steel;
-      letter-spacing: normal;
-      text-transform: none;
-    }
+    &.has-label {
+      margin-right: rem-calc(65);
+      
+      .inline {
+        @include translateY(-50%);
+        position: absolute;
+        left: 3rem;
+        top: 50%;
+        color: $steel;
+        letter-spacing: normal;
+        text-transform: none;
+      }
+    }  
   }
 
   // Icon button styles

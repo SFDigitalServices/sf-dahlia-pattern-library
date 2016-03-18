@@ -8,10 +8,6 @@
   line-height: 1.5;
   margin-bottom: 1.5rem;
 
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
   &_figure {
     text-align: center;
     position: relative;
@@ -107,7 +103,7 @@
 
   @media #{$small-only} {
     max-width: rem-calc(480);
-    margin: 0 auto 4rem;;
+    margin: 0 auto 4rem;
   }
 
   @media #{$medium-up} {
