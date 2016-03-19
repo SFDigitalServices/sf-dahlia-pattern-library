@@ -5,8 +5,21 @@
 .sub-nav {
   padding-bottom: rem-calc(4);
 
-  a {
-    color: $steel;
+  dt, dd, li {
+    a {
+      color: $charcoal;
+
+      &.disabled {
+        color: $steel;
+        cursor: default;
+        pointer-events: none;
+      }
+
+      &:focus,
+      &:hover {
+        color: $oil;
+      }
+    }
   }
 
   dt, dd, li {
@@ -17,9 +30,6 @@
 .application-form_nav {
   dd {
     @media #{$small-only} {
-      // margin-left: 0;
-      // width: 20%;
-      // text-align: center;
       margin-left: rem-calc(8);
 
       a {
