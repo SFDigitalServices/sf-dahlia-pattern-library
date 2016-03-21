@@ -4,7 +4,7 @@
 
 .income-source {
   &_item {
-    background-color: $mist;
+    // background-color: $mist;
     padding: 1rem 1rem 0 1rem;
     margin-bottom: 1rem;
 
@@ -33,7 +33,7 @@
     }
 
     &.add-item {
-      background: $tint;
+      // background: $tint;
       cursor: pointer;
 
       .income-source_name {
@@ -62,10 +62,10 @@
     padding-right: 1rem;
 
     @media #{$medium-up} {
-      margin-left: -3rem;
-      margin-right: -3rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      margin-left: -$column-gutter;
+      margin-right: -$column-gutter;
+      padding-left: $column-gutter;
+      padding-right: $column-gutter;
     }
   }
 }

@@ -1,22 +1,24 @@
 <div class="income-source">
-  <div class="income-source_item add-item margin-bottom">
-    {{> icons.base icon="plus" fill="deep"}}
-    <span class="income-source_name margin-bottom toggler">Add additional income source</span>
+  <div class="income-source_item add-item">
+    <div class="">
+      {{> icons.base icon="plus" fill="deep"}}
+      <span class="income-source_name margin-bottom toggler t-caps t-alt-sans t-bold">Add additional income source</span>
+    </div>
 
-    <div class="income-source_nested bg-tint toggled">
+    <div class="income-source_nested toggled">
       
-      <div class="form-group padding-top--2x">
+      <div class="form-group padding-top--2x border-top">
         <label class="form-label margin-bottom--half">Where does this income come from?</label>
         {{> forms.select}}
       </div>
 
-      <div class="form-group margin-bottom--2x">
+      <div class="form-group">
         <label class="form-label margin-bottom--half">How much is the income?</label>
         {{> forms.input-income}}
         {{> forms.radio-group--inline name="income" items=inputs.income}}
       </div>
 
-      {{> forms.button-stack--paginate  l-classes="button-link button-lined small-text-center expand-small" left="Cancel" r-classes="right expand-small" right="Save"}}
+      {{> forms.button-stack--paginate  l-classes="button-link button-lined small-text-center expand-small" left="Delete" r-classes="right expand-small" right="Save"}}
     </div>
   </div>
 </div>
