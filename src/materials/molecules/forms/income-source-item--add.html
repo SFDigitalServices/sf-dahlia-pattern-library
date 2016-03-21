@@ -1,8 +1,8 @@
 <div class="income-source">
   <div class="income-source_item add-item">
-    <div class="">
+    <div class="clearfix">
       {{> icons.base icon="plus" fill="deep"}}
-      <span class="income-source_name margin-bottom toggler t-caps t-alt-sans t-bold">Add additional income source</span>
+      <span class="income-source_add padding-bottom toggler t-caps t-alt-sans t-bold">Add additional income source</span>
     </div>
 
     <div class="income-source_nested toggled">
@@ -18,7 +18,9 @@
         {{> forms.radio-group--inline name="income" items=inputs.income}}
       </div>
 
-      {{> forms.button-stack--paginate  l-classes="button-link button-lined small-text-center expand-small" left="Delete" r-classes="right expand-small" right="Save"}}
+      <div class="form-group text-center border-top padding-top"> 
+       {{> buttons.button text="Save Income Source" classes="expand-small no-margin"}}
+      </div> 
     </div>
   </div>
 </div>

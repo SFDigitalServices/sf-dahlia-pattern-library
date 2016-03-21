@@ -4,8 +4,8 @@
 
 .income-source {
   &_item {
-    // background-color: $mist;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
+    position: relative;
     margin-bottom: 1rem;
 
     label {
@@ -33,26 +33,34 @@
     }
 
     &.add-item {
-      // background: $tint;
       cursor: pointer;
-
-      .income-source_name {
-        color: $deep;
-      }
+      color: $deep;
+      padding-bottom: 0;
     }
   }
 
-  &_name {
+  &_add {
     display: inline-block;
-    margin-bottom: 1rem;
   }
+
+  &_name {
+    display: block;
+    width: 100%;
+    padding-right: 4rem;
+  }
+
+  &_value {
+    float: right;
+  }  
+
     
   &_link {
     @include responsive-text-size('tiny');
+    @include absolute(1rem,0,null,null);
     color: $deep;
     line-height: 1.5rem;
-    float: right;
     text-transform: uppercase;
+    text-decoration: underline;
   }
 
   &_nested {

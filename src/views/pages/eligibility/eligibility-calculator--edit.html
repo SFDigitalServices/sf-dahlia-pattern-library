@@ -15,11 +15,22 @@
       </div>
 
       <div class="form-group border-bottom">
+        {{> forms.income-source-item--edit link="Cancel"}}
+      </div>
+
+      <div class="form-group border-bottom">
         {{> forms.income-source-item}}
       </div>
 
       <div class="form-group">
-        {{> forms.income-source-item--add link="Cancel"}}
+        <div class="income-source">
+          <div class="income-source_item add-item">
+            <div class="clearfix">
+              {{> icons.base icon="plus" fill="deep"}}
+              <span class="income-source_add padding-bottom toggler t-caps t-alt-sans t-bold">Add additional income source</span>
+            </div>
+          </div>
+        </div>
       </div>
      </form>
       
