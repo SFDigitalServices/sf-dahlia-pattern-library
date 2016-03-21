@@ -13,10 +13,10 @@
       <div class="form-group margin-bottom--2x">
         <label class="form-label margin-bottom--half">How much is the income?</label>
         {{> forms.input-income}}
-        {{> forms.radio-group name="income" items=inputs.income}}
+        {{> forms.radio-group--inline name="income" items=inputs.income}}
       </div>
 
-      {{> forms.button-stack--paginate left="Cancel" right="Save"}}
+      {{> forms.button-stack--paginate  l-classes="button-link button-lined small-text-center expand-small" left="Cancel" r-classes="right expand-small" right="Save"}}
     </div>
   </div>
 </div>

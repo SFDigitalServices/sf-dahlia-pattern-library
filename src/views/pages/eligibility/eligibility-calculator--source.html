@@ -1,70 +1,26 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<header class="lead-header shift-offset--bottom bg-attention-tint">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="lead-title t-beta">Household Income Calculator</h1>
-    </div>
-  </div>
-</header>
+{{> headers.lead-header title="Household Income Calculator" background="dark" color="white" classes="bg-gradient"}}
 
-<section class="row shift--top">
-  <div class="medium-8 columns">
-    
+<section class="row">
+  <div class="medium-6 medium-centered columns margin-top--2x">
     <form class="form-card">
-      <div class="row">
-        <div class="medium-12 columns margin-bottom--2x">
-          <div class="income-source padding-bottom--2x">
-          {{> forms.income-source-item}}
-
-            <div class="income-source_item">
-              <span class="income-source_name">Wages: $1000/mo</span>
-
-              <a href="#" class="income-source_link">Edit</a>
-            </div>
-          </div>
-
-          <hr class="hr-5">
-        </div>
+      <div class="form-group">
+        {{> forms.income-source-item}}
       </div>
 
-      <div class="row">
-        <div class="medium-12 columns padding-top padding-bottom">
-          <label>Where is this income from?
-            <select>
-              <option value="select">Select One</option>
-              <option value="wages">Wages</option>
-              <option value="social security">Social Security</option>
-              <option value="disability">Disability</option>
-              <option value="unemplyment">Unemployment</option>
-              <option value="calworks">CalWorks</option>
-            </select>
-          </label>
-        </div>
+      <div class="form-group">
+        {{> forms.income-source-item}}
       </div>
 
-      <div class="row">
-        <div class="large-12 columns margin-bottom">
-          <label>How much is the income this source?
-            <input type="text" placeholder="Enter Amount" class="has-options" />
-          </label>
-          {{> forms.radio-group--inline}}
-        </div>
+      <div class="form-group">
+        {{> forms.income-source-item--add link="Cancel"}}
       </div>
+     </form>
       
-      <div class="row margin-bottom">
-        <div class="large-12 columns">
-          <button class="button tint expand">
-            {{> icons.base icon="plus" position="link" fill="deep"}}
-            Add another income source
-          </button>
-        </div>
-      </div> 
-
-      {{> forms.button-stack--paginate}}
-    </div>
-  </form>
+    {{> forms.button-stack--paginate l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
+  </div>
 </section>
 
 {{> components.footer}}  

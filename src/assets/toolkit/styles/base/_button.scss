@@ -33,20 +33,6 @@ $dark-bg-colors: (
 button,
 .button {
   @include custom-button();
-  // background-color: transparent;
-  // border-radius: rem-calc(4);
-  // border-color: $primary;
-  // color: $primary;
-  // font-family: $alt-font-family;
-  // text-transform: uppercase;
-  // letter-spacing: .2em;
-  // padding-left: 1.5rem;
-  // padding-right: 1.5rem;
-
-  // &:hover,
-  // &:focus {
-  //   background-color: $primary;
-  // }
 
   // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
@@ -167,14 +153,25 @@ button,
 
   // Remove button styles
   &.button-link {
+    @include type-weight(regular);
     background: transparent;
     border-width: 0;
     color: $primary;
     display: inline;
     font-family: $font-family;
+    letter-spacing: normal;
     padding: 0;
     margin-bottom: 0;
     text-transform: none;
+    text-align: left;
+  }
+
+  &.button-lined {
+    color: $steel;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: underline;
+    line-height: 3rem;
   }
 
   &.round-icon {

@@ -2,7 +2,7 @@
   {{#each items}}
   <p class="radio-inline">
     <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
-    <label class="radio-inline_label" for="{{../name}}-{{value}}">
+    <label class="radio-inline_label" for="{{../name}}-{{value}}">{{name}}</label>
   </p>
   {{else}}
     {{#each inputs.income}}
