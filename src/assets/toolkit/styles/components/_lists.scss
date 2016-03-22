@@ -65,15 +65,17 @@
 .dl-two-column {
   @include clearfix;
 
-  dt {
-    float: left;
-    padding-right: 1rem;
-    text-align: right;
-    width: 40%;
-  }
+  @media #{$medium-up} {
+    dt {
+      float: left;
+      padding-right: 1rem;
+      text-align: right;
+      width: 40%;
+    }
 
-  dd {
-    float: left;
-    width: 60%;
+    dd {
+      float: left;
+      width: 60%;
+    }
   }
 }
