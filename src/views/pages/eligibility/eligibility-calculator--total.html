@@ -1,45 +1,38 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<header class="lead-header shift-offset--bottom bg-attention-tint">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="lead-title t-beta">Household Income Calculator</h1>
-    </div>
-  </div>
-</header>
+{{> headers.lead-header title="Household Income Calculator" background="dark" color="white" classes="bg-gradient"}}
 
-<section class="row shift--top">
-  <div class="medium-8 columns">
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row margin-bottom--2x">
+  <div class="medium-6 medium-centered columns">
     <form class="form-card">
-      <header class="row margin-bottom">
-        <div class="large-12 columns">
-          <h1 class="gamma t-sans">Alright, here's your total annual income</h1>
-        </div>
+      <header class="padding-top padding-bottom text-center">
+        <h2 class="t-base t-alt-sans t-caps t-black margin-bottom padding-left padding-right">Alright, here's your total annual income.</h2>
       </header>
 
-      <div class="row">
-        <div class="large-12 columns">
-          <div class="income-sources">
-            {{> forms.income-source-item}}
-            {{> forms.income-source-item}}
-          </div>
+      <div class="form-section expand border-top">
+        <div class="form-group border-bottom">
+          {{> forms.income-source-item}}
+        </div>
+
+        <div class="form-group border-bottom">
+          {{> forms.income-source-item}}
         </div>
       </div>
 
-      <hr class="hr-5 tall">
-
-      <section class="row margin-top--2x">
-        <div class="medium-12 columns">
-          <p>
+      <footer class="form-card_footer">
+        <div class="padding padding-top--2x padding-bottom--2x bg-dust border-top--primary">
+          <p class="t-base t-alt-sans t-caps t-black no-margin">
             Total Household Income
             <span class="t-bold right">$25,200/yr</span>
           </p>
-
-          {{> forms.button-stack--paginate}}
        </div>
-      </section>
+      </footer>
     </form>
+
+    {{> forms.button-stack--paginate l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
   </div>
 </section>
 

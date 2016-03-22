@@ -21,6 +21,22 @@
   &-right {
     border-right: 1px solid $steel;
   }
+
+  &-bottom--primary {
+    border-bottom: 1px solid $primary;
+  }
+
+  &-top--primary {
+    border-top: 1px solid $primary;
+  }
+
+  &-left--primary {
+    border-left: 1px solid $primary;
+  }
+
+  &-right--primary {
+    border-right: 1px solid $primary;
+  }
 }
 
 .no-border {

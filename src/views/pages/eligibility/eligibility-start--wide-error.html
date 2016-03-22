@@ -3,11 +3,21 @@
 
 {{> headers.lead-header--sub title="Estimate Your Eligibility" description="Enter details about your household size and income and we'll highlight properties for which you may be eligible." background="dark" color="white" classes="bg-gradient"}}
 
-<section class="row">
-  <div class="medium-10 medium-centered columns margin-top--2x">
-    <form class="form-card margin-top">
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row margin-bottom--2x">
+  <div class="medium-10 medium-centered columns">
+    <form class="form-card margin-bottom--2x">
+      <div class="form-card_header">
+        <p class="post-dealine_alert">
+          <span class="label label--flag alert-tint">
+            {{> icons.base icon="clock" scale="medium"}}
+            You'll need to resolve any errors before moving on.</span>
+        </p>
+      </div>
+
       <div class="row">
-        <div class="medium-6 columns padding-top padding-bottom">
+        <div class="medium-6 columns padding-left--2x padding-top padding-bottom">
           <header class="margin-bottom">
             <h3 class="t-serif gamma">Household Size</h3>
             <p class="c-steel">Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.</p>
@@ -29,7 +39,7 @@
 
         </div>
     
-        <div class="medium-6 columns padding-top padding-bottom">
+        <div class="medium-6 columns padding-right--2x padding-top padding-bottom">
           
           <header class="margin-bottom">
             <h3 class="t-serif gamma">Household Pre-Tax Income</h3>
@@ -45,15 +55,16 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="medium-12 columns">
-          <div class="note bg-tint padding">
-            <p class="t-tiny no-margin">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the
-
-            <button class="button-link t-tiny">Household Income Calculator</button></p>
+      <footer class="form-card_footer">
+        <div class="note bg-tint row padding padding-left--2x padding-right--2x">
+          <div class="medium-7 columns">
+            <p class="t-tiny">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the </p>
+          </div>
+          <div class="medium-5 columns">
+            <button class="ghost-white small no-margin expand-small">Household Income Calculator</button>
           </div>
         </div>
-      </div>
+      </footer>
     </form>
 
     {{> forms.button-stack--paginate left="Reset Filters" l-classes="button-link button-lined small-text-center expand-small" right="View Matching Properties" r-classes="right primary expand-small"}}

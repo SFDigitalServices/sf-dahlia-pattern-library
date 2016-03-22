@@ -2,13 +2,15 @@
 // Form card
 // Container for form elments
 
+$form-card-radius: rem-calc(12);
+
 .form-card {
   background: #fff;
   padding-top: 1rem;
 
   @media #{$medium-up} {
     border: 1px solid $smoke;
-    border-radius: rem-calc(12);
+    border-radius: $form-card-radius;
     padding: $column-gutter/2;
   }
 
@@ -21,6 +23,31 @@
       margin-left: -$column-gutter/2;
       margin-right: -$column-gutter/2;
     }
+  }
+
+  &_header,
+  &_footer {
+    margin-left: -$column-gutter/2;
+    margin-right: -$column-gutter/2;
+  }
+
+  &_header {
+    margin-top: -$column-gutter/2;
+
+    @media #{$medium-up} {
+      border-top-left-radius: $form-card-radius;
+      border-top-right-radius: $form-card-radius;  
+      overflow: hidden;
+    }  
+  }
+    
+  &_footer {
+    @media #{$medium-up} {
+      border-bottom-left-radius: $form-card-radius;
+      border-bottom-right-radius: $form-card-radius;
+      margin-bottom: -$column-gutter/2;
+      overflow: hidden;
+    }  
   }
 
   // form card with sub-nav
