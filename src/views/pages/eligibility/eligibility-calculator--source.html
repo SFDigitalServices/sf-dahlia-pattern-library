@@ -6,20 +6,22 @@
 <section class="row">
   <div class="medium-6 medium-centered columns margin-top--2x">
     <form class="form-card">
-      <header class="padding-top padding-bottom border-bottom text-center">
+      <header class="padding-top padding-bottom text-center">
         <h2 class="t-base t-alt-sans t-caps t-black margin-bottom padding-left padding-right">Add sources for each household member who will live in the unit.</h2>
       </header>
       
-      <div class="form-group border-bottom">
-        {{> forms.income-source-item}}
-      </div>
+      <div class="form-section expand border-top">
+        <div class="form-group border-bottom">
+          {{> forms.income-source-item}}
+        </div>
 
-      <div class="form-group border-bottom">
-        {{> forms.income-source-item}}
-      </div>
+        <div class="form-group border-bottom">
+          {{> forms.income-source-item}}
+        </div>
 
-      <div class="form-group">
-        {{> forms.income-source-item--add link="Cancel"}}
+        <div class="form-group">
+          {{> forms.income-source-item--add link="Cancel"}}
+        </div>
       </div>
      </form>
       

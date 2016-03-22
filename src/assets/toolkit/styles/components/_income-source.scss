@@ -56,7 +56,7 @@
     
   &_link {
     @include responsive-text-size('tiny');
-    @include absolute(1rem,0,null,null);
+    @include absolute(1rem,1rem,null,null);
     color: $deep;
     line-height: 1.5rem;
     text-transform: uppercase;
@@ -64,16 +64,13 @@
   }
 
   &_nested {
-    margin-left: -2rem;
-    margin-right: -2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-left: -$column-gutter/2;
+    margin-right: -$column-gutter/2;
+    padding-left: $column-gutter;
+    padding-right: $column-gutter;
 
     @media #{$medium-up} {
-      margin-left: -$column-gutter;
-      margin-right: -$column-gutter;
-      padding-left: $column-gutter;
-      padding-right: $column-gutter;
+
     }
   }
 }

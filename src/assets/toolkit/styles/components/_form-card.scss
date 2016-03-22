@@ -6,16 +6,21 @@
   background: #fff;
   padding-top: 1rem;
 
-  .border-bottom {
-    border-color: $smoke;
-  }
-
   @media #{$medium-up} {
     border: 1px solid $smoke;
     border-radius: rem-calc(12);
     padding: $column-gutter/2;
-    // box-shadow: 0px 3px 3px 2px rgba(0,0,0,.1);
-    // margin-bottom: 3rem;
+  }
+
+  .border-bottom {
+    border-color: $smoke;
+  }
+
+  .form-section {
+    &.expand {
+      margin-left: -$column-gutter/2;
+      margin-right: -$column-gutter/2;
+    }
   }
 
   // form card with sub-nav
