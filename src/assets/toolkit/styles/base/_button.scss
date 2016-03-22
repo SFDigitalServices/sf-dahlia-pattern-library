@@ -33,20 +33,6 @@ $dark-bg-colors: (
 button,
 .button {
   @include custom-button();
-  // background-color: transparent;
-  // border-radius: rem-calc(4);
-  // border-color: $primary;
-  // color: $primary;
-  // font-family: $alt-font-family;
-  // text-transform: uppercase;
-  // letter-spacing: .2em;
-  // padding-left: 1.5rem;
-  // padding-right: 1.5rem;
-
-  // &:hover,
-  // &:focus {
-  //   background-color: $primary;
-  // }
 
   // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
@@ -199,6 +185,13 @@ button,
         }
       }
     }
+
+    &:focus {
+      color: $dark;
+      background: $deep;
+      border-color: $dark;
+      outline: none;
+    }  
 
     &.has-label {
       margin-right: rem-calc(65);
