@@ -197,6 +197,13 @@ button,
       }
     }
 
+    &:focus {
+      color: $dark;
+      background: $deep;
+      border-color: $dark;
+      outline: none;
+    }  
+
     &.has-label {
       margin-right: rem-calc(65);
       
