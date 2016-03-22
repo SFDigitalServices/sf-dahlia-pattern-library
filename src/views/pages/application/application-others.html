@@ -1,10 +1,12 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.application-header}}
+{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
 
-<section class="row shift--top">
-  <div class="medium-8 columns">
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row">
+  <div class="medium-8 medium-centered columns">
     <form class="application-form form-card has-nav">
       {{> navigation.sub-nav--application}}
 
@@ -16,8 +18,9 @@
         {{> forms.button-stack left="I will live alone" right="Other people will live with me" classes="tall"}}
       </div>
 
-      {{> buttons.button text="Save and finish later" classes="ghost-white expand"}}
     </form>
+
+    {{> buttons.button text="Save and finish later" classes="button-link button-lined small-text-center expand-small"}}
   </div>
 </section>    
 

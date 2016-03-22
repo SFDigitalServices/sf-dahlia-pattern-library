@@ -1,17 +1,19 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.application-header}}
+{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
 
-<section class="row shift--top">
-  <div class="medium-8 columns">
-    <form class="application-form form-card">
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row">
+  <div class="medium-8 medium-centered columns">
+    <form class="application-form form-card clearfix">
 
       <h2 class="application-title t-gamma padding-bottom">Let’s get started on your application for</h2>
 
-      <div class="form-group margin-bottom--2x">
+      <div class="form-group">
         
-        <div class="property-card">
+        <div class="property-card no-margin">
           <img class="property-thumb" src="/assets/toolkit/images/property3.jpg" alt="image of property3">
           <h3 class="property-title t-serif gamma margin-top">
             Trinity Place Apartments
@@ -23,7 +25,7 @@
         
       </div>
 
-      {{> buttons.button text="Get Started" classes="expand-small"}}
+      {{> buttons.button text="Get Started" classes="expand-small primary"}}
     </form>
   </div>
 </section>    

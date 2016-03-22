@@ -1,10 +1,12 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.application-header}}
+{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
 
-<section class="row shift--top">
-  <div class="medium-8 columns">
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row">
+  <div class="medium-8 medium-centered columns">
     <form class="application-form form-card has-nav">
       {{> navigation.sub-nav--application}}
 
@@ -22,9 +24,9 @@
         <h3 class="form-label">Your Date of Birth</h3>
         {{> forms.input-dob}}
       </div>
-
-      {{> forms.button-stack--paginate left="Save and finish later"}}
     </form>
+
+    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
   </div>
 </section>    
 
