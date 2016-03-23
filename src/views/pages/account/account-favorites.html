@@ -1,19 +1,19 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
-{{> headers.lead-header title="My Account" background="oil" color="white"}}
+{{> headers.lead-header title="My Account" background="dark" color="white" classes="bg-gradient"}}
+
+<nav class="border-bottom">
+  <div class="row">
+  {{> navigation.local-nav}}
+  </div>
+</nav>
 
 <section class="row">
-  <div class="medium-3 columns margin-top--2x">
-    <nav class="dash-aside">
-      {{> navigation.side-nav }}
-    </nav>
-  </div>
-
-  <div class="medium-9 columns margin-top--2x margin-bottom--2x">
+  <div class="medium-12 columns margin-top--2x margin-bottom--2x">
     <main class="dash-feed">
-      {{> property-card--dash}}
+      {{> property-card--fave}}
 
-      {{> property-card--dash}}
+      {{> property-card--fave}}
     </main>
   </div>
 </section>    
