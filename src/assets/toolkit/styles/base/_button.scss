@@ -198,6 +198,7 @@ button,
     }
 
     &:focus {
+      box-shadow: 0 0 0 1px #fff, 0 0 3px 3px $attention-tint;
       color: $dark;
       background: $deep;
       border-color: $dark;
