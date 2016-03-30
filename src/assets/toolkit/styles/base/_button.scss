@@ -106,26 +106,24 @@ button,
   }
 
   // Hollow button styles
-  &.ghost {
-    background-color: transparent;
-    color: $primary;
-    // box-shadow: inset 0px 0px 0 2px $primary;
+  // &.ghost {
+  //   background-color: transparent;
+  //   color: $primary;
 
-    &:hover,
-    &:focus {
-      background-color: lighten(#fff, 5%);
-    }
+  //   &:hover,
+  //   &:focus {
+  //     background-color: lighten(#fff, 5%);
+  //   }
 
-    &.attention {
-      color: $attention;
-      // box-shadow: inset 0px 0px 0 2px $attention;
+  //   &.attention {
+  //     color: $attention;
 
-      &:hover,
-      &:focus {
-        background-color: lighten(#fff, 5%);
-      }
-    }  
-  }
+  //     &:hover,
+  //     &:focus {
+  //       background-color: lighten(#fff, 5%);
+  //     }
+  //   }  
+  // }
 
   &.ghost-white {
     background-color: #fff;
@@ -147,9 +145,9 @@ button,
   }
 
   // Apply box shadow
-  &.shadow {
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
-  }
+  // &.shadow {
+  //   box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
+  // }
 
   // Remove button styles
   &.button-link {
@@ -183,6 +181,7 @@ button,
     }  
   }
 
+  // Text button with underline
   &.button-lined {
     color: $steel;
     font-weight: $t-regular !important;
@@ -191,6 +190,7 @@ button,
     line-height: 3rem;
   }
 
+  // Round icon button
   &.round-icon {
     border-radius: 50%;
     padding: .6rem;
@@ -220,8 +220,9 @@ button,
       background: $deep;
       border-color: $dark;
       outline: none;
-    }  
+    }
 
+    // Expose label, hidden by default
     &.has-label {
       margin-right: rem-calc(65);
       
@@ -333,8 +334,67 @@ button,
 
 // Customize foundation button group
 .button-group {
-  button,
-  .button {
-    line-height: rem-calc(18);
-  }  
+  > li {
+    margin: 0;
+
+    > button,
+    > .button {
+      border-color: $primary;
+      border-radius: 0;
+      line-height: rem-calc(18);
+    }
+
+    &:first-child button, 
+    &:first-child .button {
+      border-left: 2px solid;
+      border-right-width: 0;
+
+      &:hover,
+      &:focus {
+       border-left-color: $primary;
+      }
+    }
+  }
 }
+
+.button-group--favorite {
+  > li {
+    > button,
+    > .button {
+      border-color: $smoke;
+      color: $oil;
+
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $primary;
+        border-color: $primary;
+        color: #fff;
+      }
+
+      &.active {
+        svg {
+          use {
+            fill: #fff;
+          }
+        }
+      }    
+    }
+
+    &:first-child button, 
+    &:first-child .button {
+      border-left-color: $smoke;
+
+      &:hover,
+      &:focus {
+       border-left-color: $primary;
+      }
+    }
+  }
+
+  @media #{$small-only} {
+    margin-left: -($column-gutter);
+    margin-right: -($column-gutter);
+    width: auto;
+  }  
+}  

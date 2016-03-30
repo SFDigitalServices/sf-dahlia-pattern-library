@@ -25,10 +25,17 @@
     </div>
 
     <div class="property-card_action">
-      {{> buttons.button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
-      {{> buttons.button-round icon="forward" fill="primary" label="inline" text="Like" classes="has-label"}}
+      <div class="show-for-medium-up left">
+        {{> buttons.button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
+        {{> buttons.button-round icon="forward" fill="primary" label="inline" text="Like" classes="has-label"}}
+      </div>
 
-      <a class="button ghost-white right no-margin" href="/pages/property-grid.html">See Details</a>
+      <ul class="button-group button-group--favorite row collapse hide-for-medium-up">
+        <li class="small-6 columns">{{> buttons.button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary expand"}}</li>
+        <li class="small-6 columns">{{> buttons.button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary expand"}}</li>
+      </ul>
+
+      <a class="button ghost-white expand-small right no-margin" href="/pages/property-grid.html">See Details</a>
     </div>
   </div>
 

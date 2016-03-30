@@ -18,10 +18,6 @@
           </button>
         </div>
       </ng-carousel>
-
-<!--       <a href="#" class="property-hero_like">
-        {{> icons.icon-like}}
-      </a> -->
     </div>
 
     <h1 class="property-hero_title offset">
@@ -30,9 +26,6 @@
   </figure>
 
   <header class="property-hero_content margin-bottom p-relative">
-<!--     <h1 class="property-hero_title beta">
-      Trinity Place Apartments
-    </h1> -->
     <hgroup class="clearfix">
       <p class="property-hero_address">1188 Mission St,<br> San Francisco CA, 94134<br>
       Caritas Management Group</p>
@@ -41,10 +34,15 @@
       </a>
     </hgroup>
 
-    <div class="property-hero_favorite">
+    <div class="property-hero_favorite show-for-medium-up">
       {{> buttons.button-round fill="primary"}}
       {{> buttons.button-round fill="primary" icon="forward"}}
     </div>
+
+    <ul class="property-hero_favorite button-group button-group--favorite row collapse hide-for-medium-up">
+      <li class="small-6 columns">{{> buttons.button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary expand"}}</li>
+      <li class="small-6 columns">{{> buttons.button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary expand"}}</li>
+    </ul>
   </header>
 
   <div class="property-hero_stats">
