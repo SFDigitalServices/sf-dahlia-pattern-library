@@ -29,25 +29,21 @@
 
 // Sticky footer
 
-// html {
-//   height: 100%;
-//   overflow: hidden;
-// }
+html, body {
+  height: 100%;
+}
 
-// body {
-//   height: 100%;
-//   overflow: scroll;
-//   -webkit-overflow-scrolling: touch;
-// }
+body {
+  display: table;
+  width: 100%;
+}
 
-// .site-container {
-//   display: table;
-//   height: 100%;
-//   table-layout: fixed;
-//   width: 100%;
-// }
+.site-container {
+  display: table-row;
+  height: 100%;
+}
 
-// .footer-section {
-//   display: table-row;
-//   height: 1px;
-// }
+.footer-section {
+  display: table-row;
+  height: 1px;
+}

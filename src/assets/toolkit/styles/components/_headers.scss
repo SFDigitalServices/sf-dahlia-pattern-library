@@ -35,10 +35,21 @@
 
   &.bg-gradient {
     @media #{$medium-up} {
+
       &:before {
         @include overlay-image;
-        @include custom-linear-gradient(transparent, rgba(0,0,0, .3));  
+        @include custom-linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .8));  
       }
+    }
+  }
+
+  &.bg-image {
+    background-color: $dark;
+
+    @media #{$medium-up} {
+      background-image: url('../images/sf-homes-wide.jpg');
+      background-size: cover;
+      background-position: bottom left;
     }
   }
 }

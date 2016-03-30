@@ -14,7 +14,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: $color-white;
+  background-color: $snow;
   // background-image: url('../images/arrow-down.png');
   background-image: none, url('../images/arrow-down.svg'), url('../images/arrow-down.png');
   background-position: right .75rem center;
@@ -54,21 +54,21 @@ input[type="checkbox"] + label::before,
 input[type="radio"] + label::before {
   background: white;
   border-radius: $border-radius;
-  box-shadow: 0 0 0 1px #757575;
+  box-shadow: 0 0 0 1px $input-border-color;
   content: '\a0';
   display: inline-block;
-  height: 1.2rem;
+  height: 1.25rem;
   line-height: .8;
   margin-right: .6em;
   text-indent: .15em;
   vertical-align: .2em;
-  width: 1.2rem;
+  width: 1.25rem;
 }
 
 input[type="radio"] + label::before {  
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #757575;
-  height:.9rem;  
-  width: .9rem;  
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px $input-border-color;
+  height:1.2rem;  
+  width: 1.2rem;  
 }
 
 input[type="radio"] + label::before {
@@ -82,11 +82,11 @@ input[type="radio"]:checked + label::before {
 }
 
 input[type="radio"]:checked + label::before {
-  box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary; 
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 3px $input-border-color;
 }
 
 input[type="radio"]:focus + label::before {
-  box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-primary, 0 0 3px 4px $color-focus, 0 0 7px 4px $color-focus;
+  box-shadow: 0 0 0 2px $color-white, 0 0 0 3px $color-primary, 0 0 3px 4px $color-focus, 0 0 7px 4px $color-focus;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -97,7 +97,7 @@ input[type="checkbox"]:checked + label::before {
 }
 
 input[type="checkbox"]:focus + label::before {
-  box-shadow: 0 0 0 1px $color-white, 0 0 0 3px $color-primary;
+  box-shadow: 0 0 0 1px $color-white, 0 0 0 2px $color-primary;
 }
 
 input[type="checkbox"]:disabled + label {

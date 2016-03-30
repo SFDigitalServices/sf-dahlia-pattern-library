@@ -54,6 +54,12 @@ $align-class-breakpoints:
   }
 }
 
+$t-light: 300;
+$t-regular: 400;
+$t-semi: 600;
+$t-bold: 700;
+$t-black: 800;
+
 $type-weight: (
   light: 300,
   regular: 400,
@@ -235,6 +241,10 @@ $text-sizing: (
 
 .t-shadow {
   text-shadow: 1px 2px 5px rgba(0,0,0,.5);
+}
+
+.t-tall {
+  line-height: 1.625;
 }
 
 .two-column {

@@ -153,22 +153,39 @@ button,
 
   // Remove button styles
   &.button-link {
-    @include type-weight(regular);
     background: transparent;
     border-width: 0;
     color: $primary;
     display: inline;
     font-family: $font-family;
+    font-weight: $t-regular;
     letter-spacing: normal;
     padding: 0;
     margin-bottom: 0;
     text-transform: none;
     text-align: left;
+
+    svg {
+      use {
+        fill: $primary;
+      }
+    }
+        
+    &:focus {
+      outline: none;
+      color: $dark;
+
+      svg {
+        use {
+          fill: $dark;
+        }
+      }  
+    }  
   }
 
   &.button-lined {
     color: $steel;
-    font-weight: normal;
+    font-weight: $t-regular !important;
     text-transform: uppercase;
     text-decoration: underline;
     line-height: 3rem;

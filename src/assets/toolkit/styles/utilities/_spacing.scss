@@ -356,6 +356,12 @@ $units: (
   }
 }
 
+.medium-margin-top {
+  @media #{$medium-up} {
+    margin-top: 1rem;
+  }
+}
+
 .padding-left-none {
   padding-left: 0 !important;
 }

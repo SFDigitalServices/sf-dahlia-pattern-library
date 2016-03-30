@@ -18,6 +18,12 @@ $form-card-radius: rem-calc(12);
     border-color: $smoke;
   }
 
+  .note {
+    p {
+      line-height: 1.625;
+    }
+  }
+
   .form-section {
     &.expand {
       margin-left: -$column-gutter/2;
@@ -38,7 +44,11 @@ $form-card-radius: rem-calc(12);
       border-top-left-radius: $form-card-radius;
       border-top-right-radius: $form-card-radius;  
       overflow: hidden;
-    }  
+    }
+
+    .alert-box {
+      margin-bottom: 0;
+    }
   }
     
   &_footer {

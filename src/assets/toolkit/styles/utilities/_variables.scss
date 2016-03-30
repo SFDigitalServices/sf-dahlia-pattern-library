@@ -216,6 +216,9 @@ $form-label-font-size: rem-calc(16);
 $input-placeholder-font-color: $steel;
 $input-font-size: rem-calc(16);
 $input-border-radius: $global-radius;
+$input-box-shadow: none;
+$input-bg-color: $snow;
+$input-border-color: $iron;
 
 /* Buttons */
 
@@ -311,7 +314,7 @@ $table-head-padding: rem-calc(24 20);
 
 // These control the row padding and font styles
 $table-row-padding: rem-calc(20 20);
-$table-row-font-color: $steel;
+$table-row-font-color: $charcoal;
 $table-padding-small: .5rem;
 $table-value-weight: 600;
 
