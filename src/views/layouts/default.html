@@ -18,7 +18,10 @@
 </head>
 
 <!-- <body ng-app="dahlia" id="ng-app"> -->
-<body>
+
+
+<body {{#if fabricator}}class="body-block"{{/if}}>
+
 	{{> icons}}
 
 	{{#if fabricator}}

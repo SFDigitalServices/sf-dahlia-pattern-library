@@ -38,6 +38,10 @@ body {
   width: 100%;
 }
 
+body.body-block {
+  display: block;
+}
+
 .site-container {
   display: table-row;
   height: 100%;
