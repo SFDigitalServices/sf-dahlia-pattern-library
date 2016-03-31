@@ -357,12 +357,14 @@ button,
   }
 }
 
+// Favorite share button group
 .button-group--favorite {
   > li {
     > button,
     > .button {
       border-color: $smoke;
       color: $oil;
+      width: 100%;
 
       &:hover,
       &:focus,
@@ -392,9 +394,9 @@ button,
     }
   }
 
-  @media #{$small-only} {
-    margin-left: -($column-gutter);
-    margin-right: -($column-gutter);
-    width: auto;
-  }  
+  // @media #{$small-only} {
+  //   margin-left: -($column-gutter);
+  //   margin-right: -($column-gutter);
+  //   width: auto;
+  // }  
 }  
