@@ -405,3 +405,15 @@ $units: (
 .i-block {
   margin: 0 .125rem;
 }
+
+.overflow {
+  overflow: hidden;
+}
+
+.clear {
+  &::after { 
+   content: "";
+   display: block; 
+   clear: both;
+  }
+}

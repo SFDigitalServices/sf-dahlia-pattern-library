@@ -15,6 +15,11 @@
       top: .75rem;
     }
   }
+
+  &.open {
+    display: inline-block;
+    margin-top: 1rem;
+  }
 }
 
 .toggler,

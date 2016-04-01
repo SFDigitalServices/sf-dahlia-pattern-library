@@ -1,0 +1,27 @@
+.photo-blocks {
+
+}
+
+.photo-block {
+  background-color: $oil;
+  padding: 2rem;
+  position: relative;
+  padding-bottom: 55%;
+  height: 0;
+
+  figure {
+
+  }
+
+  &_title {
+    @extend %center-xy;
+    @include responsive-text-size('small');
+    @include type-weight(black);
+    color: #fff;
+    font-family: $alt-font-family;
+    letter-spacing: $small-header-spacing;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
