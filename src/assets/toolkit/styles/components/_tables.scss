@@ -125,7 +125,8 @@ table {
       }
 
       .h-small {
-        @include h-caps-lined();
+        @include h-caps();
+        @include responsive-text-size('small');
         color: $oil;
         padding-bottom: .5rem;
       }

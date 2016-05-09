@@ -123,21 +123,24 @@ hr {
 
 $large-header-spacing: .1rem;
 $small-header-spacing: .2rem;
-$small-header-underline: 3px solid $primary;
 
-@mixin h-caps-lined() {
-  @include responsive-text-size('small');
+@mixin h-caps($border-bottom: 0) {
   @include type-weight(bold);
-  border-bottom: $small-header-underline;
+  border-bottom: $border-bottom solid $primary;
   display: inline-block;
   font-family: $alt-font-family;
   letter-spacing: $small-header-spacing;
-  padding-bottom: 1rem;
   text-transform: uppercase;
 }
 
 .h-caps-lined {
-  @include h-caps-lined();
+  @include h-caps($border-bottom: 3px);
+  @include responsive-text-size('small');
   margin-top: -.25rem;
   vertical-align: top;
-}  
+  padding-bottom: 1rem;
+}
+
+.h-caps {
+  @include h-caps();
+}

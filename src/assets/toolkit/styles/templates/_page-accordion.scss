@@ -18,7 +18,7 @@ $siderail-padding-full: 2rem;
     }
 
     @media screen and (min-width: $row-width) {
-     padding-right: $siderail-width !important;
+      padding-right: $siderail-width !important;
     }
   }
 
@@ -105,7 +105,12 @@ $siderail-padding-full: 2rem;
     @media screen and (min-width: $row-width) {
       padding-right: $siderail-padding;
     }  
-  }  
+  }
+
+  .content-header,
+  .listing-header {
+    margin-top: 3rem;
+  }
 }
 
 .accordion-offset {

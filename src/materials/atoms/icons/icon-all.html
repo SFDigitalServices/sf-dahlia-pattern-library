@@ -2,32 +2,53 @@
 notes: |
   Uses SVGs symbols which are stored in `layouts/includes`. Has variables for icon, fill color and size.
 ---
-<div class="margin-bottom">
+<div class="row margin-bottom">
 {{#each icons.app.icon}}
-  <span class="ui-icon">
-    <svg>
-      <use xlink:href="#i-{{this}}"></use>
-    </svg>
-  </span>
+  <div class="large-3 columns end">
+    <div class="f-icon-block">
+      <span class="ui-icon">
+        <svg>
+          <use xlink:href="#i-{{this}}"></use>
+        </svg>
+      </span>
+      <div class="f-icon-label">
+        #i-{{this}}
+      </div>
+    </div>
+  </div>
 {{/each}}
 </div>
 
-<div class="margin-bottom">
+<div class="row margin-bottom">
 {{#each icons.app.fill}}
-  <span class="ui-icon i-{{this}}">
-    <svg>
-      <use xlink:href="#i-info"></use>
-    </svg>
-  </span>
+  <div class="large-3 columns end">
+    <div class="f-icon-block">
+      <span class="ui-icon i-{{this}}">
+        <svg>
+          <use xlink:href="#i-info"></use>
+        </svg>
+      </span>
+      <div class="f-icon-label">
+        i-{{this}}
+      </div>
+    </div>
+  </div>
 {{/each}}
 </div>
 
-<div class="margin-bottom">
+<div class="row margin-bottom">
 {{#each icons.app.size}}
-  <span class="ui-icon ui-{{this}}">
-    <svg>
-      <use xlink:href="#i-mail"></use>
-    </svg>
-  </span>
+   <div class="large-3 columns end">
+    <div class="f-icon-block">
+      <span class="ui-icon ui-{{this}}">
+        <svg>
+          <use xlink:href="#i-mail"></use>
+        </svg>
+      </span>
+      <div class="f-icon-label">
+        ui-{{this}}
+      </div>
+    </div>
+  </div>
 {{/each}}
 </div>
