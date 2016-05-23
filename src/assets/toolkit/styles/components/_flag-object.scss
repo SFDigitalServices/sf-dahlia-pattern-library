@@ -12,11 +12,11 @@
   display: table-cell;
   vertical-align: middle;
 
-  .flag--top & {
+  &.flag--top {
     vertical-align: top;
   }
 
-  .flag--bottom & {
+  &.flag--bottom {
     vertical-align: bottom;
   }
 }

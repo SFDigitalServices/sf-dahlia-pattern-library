@@ -1,0 +1,23 @@
+.attachment {
+  background-color: $vapor;
+  padding: .5rem;
+  position: relative;
+
+  &.is-loading {
+    .spinner {
+      @extend %center-xy;
+    }
+  }
+}
+
+.attachment-img {
+  display:block;
+  height: rem-calc(100);
+  position: relative;
+  width: rem-calc(100);
+}
+
+.attachment-action {
+  @include absolute(null,1rem,.5rem,null);
+  @include responsive-text-size('small');
+}
