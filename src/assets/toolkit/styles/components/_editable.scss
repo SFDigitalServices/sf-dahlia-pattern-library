@@ -4,9 +4,10 @@
 
 .user-item {
   @include clearfix;
-
-  &_name {
-    float: left;
-  }
 }
+
+.user-item_name {
+  float: left;
+}
+
 

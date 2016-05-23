@@ -13,47 +13,14 @@
     padding-right: 1.5rem;
   }
 
-  &_title {
-    @include responsive-text-size('small');
-    color: $base;
-    font-family: $font-family;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-
-  &_day {
-    @include responsive-text-size('small');
-    color: $oil;
-    font-family: $alt-font-family;
-    text-transform: uppercase;
-  }
-
-  &.has-divider {
-    position: relative;
-  }
-
-  &_hours, &_date {
-    @include clearfix;
-  } 
-
-  &_time {
-    @include responsive-text-size('tiny');
-    color: $oil;
-    float: right;
-    font-family: $alt-font-family;
-    font-weight: 700;
-    line-height: 2;
-  }
-
-  &_address {
-    font-size: rem-calc(15);
-  }
-
   p, li {
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+
+  &.has-divider {
+    position: relative;
   }
 
   // modifier class
@@ -62,6 +29,39 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.content-group_title {
+    @include responsive-text-size('small');
+    color: $base;
+    font-family: $font-family;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+.content-group_day {
+  @include responsive-text-size('small');
+  color: $oil;
+  font-family: $alt-font-family;
+  text-transform: uppercase;
+}
+
+.content-group_hours, .content-group_date {
+  @include clearfix;
+} 
+
+.content-group_time {
+  @include responsive-text-size('tiny');
+  color: $oil;
+  float: right;
+  font-family: $alt-font-family;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.content-group_address {
+  font-size: rem-calc(15);
 }
 
 .option-divider {
