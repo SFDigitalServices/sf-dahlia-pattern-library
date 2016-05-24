@@ -9,25 +9,25 @@
   padding: 1.25rem;
   margin-bottom: 1rem;
 
-  &_title {
-    @include responsive-text-size('tiny');
-    font-family: $font-family;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    &.t-serif {
-      @include responsive-text-size('delta');
-      font-family: $serif-font-family;
-      font-weight: normal;
-      margin-bottom: .75rem;
-      text-transform: none;
-    }
-  }
-
   p {
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+}
+
+.content-card_title {
+  @include responsive-text-size('tiny');
+  font-family: $font-family;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &.t-serif {
+    @include responsive-text-size('delta');
+    font-family: $serif-font-family;
+    font-weight: normal;
+    margin-bottom: .75rem;
+    text-transform: none;
   }
 }
 

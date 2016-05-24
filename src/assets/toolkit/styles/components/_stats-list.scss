@@ -6,145 +6,25 @@
   @include clearfix;
   display: block;
   text-align: left;
+}
 
-  li {
-    display: block;
-    float: left;
-    padding: .5rem 1rem;
-    padding-top: .75rem;
+.stats-list_value {
+  font-weight: 600;
 
-    &:first-of-type {
-      padding-left: 1rem;
-    }
-
-    &:last-of-type {
-      padding-right: 1rem;
-    }
+  .value-label {
+    @include responsive-text-size('small');
+    font-weight: 400;
+    white-space: nowrap;
   }
+}
 
-  &_value {
-    font-weight: 600;
+.stats-list_label {
+  @include responsive-text-size('tiny');
+  color: $charcoal;
+  vertical-align: top;
 
-    .value-label {
-      @include responsive-text-size('small');
-      font-weight: 400;
-      white-space: nowrap;
-    }
-  }
-
-  &_label {
-    @include responsive-text-size('tiny');
-    color: $charcoal;
-    vertical-align: top;
-
-    &.bottom {
-      vertical-align: bottom;
-    }
-  }
-
-  &.full {
-    li {
-      width: 100%;
-    }
-  }
-
-  &.double {
-    li {
-      width: 50%;
-
-      &:nth-child(2n+1) {
-        padding-left: 1rem;
-      }
-    }
-  }
-
-  &.triple {
-    li {
-      width: 33.3333%;
-
-      &:nth-child(3n+1) {
-        padding-left: 1rem;
-      }
-    }
-  }
-
-  &.quad {
-    li {
-      width: 25%;
-    }
-  }
-
-  li.stat-full {
-    width: 100% !important;
-  }
-
-  @media #{$small-only} {
-    &.double.toggler {
-      li:first-of-type {
-        width: 33.3333%;
-      }
-
-      li:last-of-type {
-        width: 66.666%;
-      }  
-    }
-  }  
-
-  @media #{$medium-up} {
-    &.medium-full {
-      li {
-        width: 100%;
-      }
-    }
-
-    &.medium-double {
-      li {
-        width: 50%;
-      }
-    }
-
-    &.medium-triple {
-      li {
-        width: 33.3333%;
-
-        &:nth-child(3n+1) {
-          padding-left: 1rem;
-        }
-      }
-    }
-
-    &.medium-quad {
-      li {
-        width: 25%;
-      }
-    }
-  }
-
-  @media #{$medium-up} {
-    .medium-center {
-      text-align: center;
-    }
-  }
-
-  &.labels-inline {
-    li {
-      padding-top: .5rem;
-    }
-
-    .stats-list_value {
-      display: inline;
-    }
-
-    .stats-list_label {
-      vertical-align: middle;
-    }
-  }
-
-  &.tall {
-    li {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
+  &.bottom {
+    vertical-align: bottom;
   }
 }
 
@@ -178,53 +58,6 @@
   table {
     margin-bottom: 0;
   }
-
-  &.bottom {
-    .stats-list {
-      li {
-        height: 2rem;
-        overflow: hidden;
-      }
-        
-      .stats-list_label {
-        visibility: hidden;
-      }
-
-      &:last-of-type {
-        li {
-          overflow: visible;
-          height: auto;
-        }
-
-        .stats-list_label {
-          visibility: visible;
-        }
-      }
-    }
-  }
-
-  &.medium-double {
-    @include clearfix;
-    @media #{$medium-up} {
-      margin-bottom: 1rem;
-    }
-
-    .stats-list {
-      margin-bottom: .5rem;
-      @media #{$medium-up} {
-        float: left;
-        width: 50%;
-
-        &:nth-child(even) {
-          padding-left: .25rem; 
-        }
-
-        &:nth-child(odd) {
-          padding-right: .25rem; 
-        }
-      }
-    }
-  }
 }
 
 //
@@ -249,22 +82,23 @@
       padding-bottom: .75rem;
     }
   }
+}
 
-  &_value {
-    font-weight: 600;
+.stats-table_value {
+  font-weight: 600;
 
-    .value-label {
-      @include responsive-text-size('small');
-      font-weight: 400;
-    }
-  }
-
-  &_label {
-    @include responsive-text-size('tiny');
-    color: $charcoal;
-    vertical-align: top;
+  .value-label {
+    @include responsive-text-size('small');
+    font-weight: 400;
   }
 }
+
+.stats-table_label {
+  @include responsive-text-size('tiny');
+  color: $charcoal;
+  vertical-align: top;
+}
+
 
 // Tablesaw for responsive tables
 .stats-table--stack {

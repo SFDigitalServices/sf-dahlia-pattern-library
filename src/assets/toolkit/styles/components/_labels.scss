@@ -39,7 +39,8 @@
   }
 }
 
-.label--flag {
+.label--flag,
+.flag-label {
   @include responsive-text-size('tiny');
   padding: 1rem;
   background-color: $oil;

@@ -4,37 +4,37 @@
 .card {
   border: 2px solid $white-smoke;
   margin-bottom: 1rem;
-  
-  // card container
-  &-inner,
-  &-details {
-    padding: 1rem;
-  }
+}
 
-  &-address {
-    overflow: hidden;
-  }
+// card container
+.card-inner,
+.card-details {
+  padding: 1rem;
+}
 
-  &-title {
-    margin-bottom: 0;
-  }
+.card-address {
+  overflow: hidden;
+}
 
-  &-group {
-    margin-bottom: 1rem;
-  }
+.card-title {
+  margin-bottom: 0;
+}
 
-  &-more {
-    @include responsive-text-size('small');
-    display: inline-block;
-  }
+.card-group {
+  margin-bottom: 1rem;
+}
 
-  &-date {
-    @include responsive-text-size('small');
-  }
+.card-more {
+  @include responsive-text-size('small');
+  display: inline-block;
+}
 
-  &-footer {
-    @include clearfix;
-  }
+.card-date {
+  @include responsive-text-size('small');
+}
+
+.card-footer {
+  @include clearfix;
 }
 
 .lottery-card {
