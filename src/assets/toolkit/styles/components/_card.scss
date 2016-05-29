@@ -32,12 +32,6 @@
 
 .card-date {
   @include responsive-text-size('small');
-
-  &.top-right {
-    @media #{$medium-up} {
-      @include absolute(1rem,1rem,null,null);
-    }  
-  }
 }
 
 .card-footer {
@@ -49,8 +43,21 @@
   margin-right: 1rem;
 }
 
-.card-units {
+.dash-card-status {
+  @media #{$small-only} {
+    margin-bottom: 0;
+  }  
+}
+
+.dash-card-date {
+  color: $steel;
+  
+  @media #{$medium-up} {
+    @include absolute(1rem,1rem,null,null);
+  }
+}
+
+.dash-card-units {
   @include responsive-text-size('small');
   color: $steel;
 }
-
