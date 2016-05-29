@@ -8,32 +8,30 @@
     padding-left: 1rem;
   }
 
-  .notice {
-    &-label {
-      @include type-weight(semi);
-      margin-bottom: .25rem;
-    }
-
-    &-icon {
-      @include absolute(0,null,null,0);
-      width: 3rem;
-      height: 3rem;
-      margin-top: .25rem;
-
-      .ui-icon {
-        @extend %center-xy;
-      }
-
-      @media #{$medium-up} {
-        display: none;
-      }
-    }  
-  }
-
   p {
     margin-bottom: 0;
   }
+}  
+
+.notice-label {
+  @include type-weight(semi);
+  margin-bottom: .25rem;
 }
+
+.notice-icon {
+  @include absolute(0,null,null,0);
+  width: 3rem;
+  height: 3rem;
+  margin-top: .25rem;
+
+  .ui-icon {
+    @extend %center-xy;
+  }
+
+  @media #{$medium-up} {
+    display: none;
+  }
+}  
 
 .notice-timeline {
   @include clearfix;
@@ -79,7 +77,6 @@
     padding-top: .25rem;
   }
 }
-
 
 // Lottery statuses
 .status-open {

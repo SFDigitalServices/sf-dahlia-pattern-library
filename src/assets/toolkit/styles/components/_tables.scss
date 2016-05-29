@@ -165,21 +165,20 @@ table {
 
 // Result set
 // List psuedo table
-
-.result-set {
-  width: 100%;
-  overflow: hidden;
+// .result-set {
+//   width: 100%;
+//   overflow: hidden;
   
-  li {
-    overflow: hidden;
-    padding: .5rem;
-    border-bottom: 1px solid $smoke;
-    position: relative;
-    width: 100%;
+//   li {
+//     overflow: hidden;
+//     padding: .5rem;
+//     border-bottom: 1px solid $smoke;
+//     position: relative;
+//     width: 100%;
 
-    .right {
-      display: inline-block;
-      width: 50%;
-    }
-  }
-}
+//     .right {
+//       display: inline-block;
+//       width: 50%;
+//     }
+//   }
+// }

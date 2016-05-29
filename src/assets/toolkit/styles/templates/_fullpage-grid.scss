@@ -1,4 +1,5 @@
 $row-width: rem-calc(1024);
+$aside-width: rem-calc(300);
 
 .row--full {
   @include clearfix;
@@ -18,14 +19,13 @@ $row-width: rem-calc(1024);
     }
   }
 
-
   @media screen and (min-width: $row-width) {
     .main {
       width: rem-calc(724);
     }
 
     .aside {
-      width: rem-calc(300);
+      width: $aside-width;
     }
   }
 }
@@ -39,8 +39,8 @@ $row-width: rem-calc(1024);
 
   .section--wide {
     margin-left: rem-calc(-1000);
-    margin-right: rem-calc(-300);
+    margin-right: -$aside-width;
     padding-left: rem-calc(1000);
-    padding-right: rem-calc(300);
+    padding-right: $aside-width;
   }
 }

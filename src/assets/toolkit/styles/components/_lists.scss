@@ -1,16 +1,15 @@
 //
 // Block lists
-
 .block-list {
   margin-bottom: 2rem;
   
   li {
     @include slat();
   }
+}
 
-  &_title {
-    margin-bottom: .5rem;
-  }
+.block-list_title {
+  margin-bottom: .5rem;
 }
 
 // Block list item

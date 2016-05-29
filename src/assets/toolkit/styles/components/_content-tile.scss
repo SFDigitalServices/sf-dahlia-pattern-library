@@ -13,25 +13,25 @@
   @media #{$medium-up} {
     margin-left: 5rem;
   }
+}
 
-  .feature-row {
-    margin-bottom: 1rem;
-      
-    p {
-      margin-bottom: 0;
-    }
+.feature-row {
+  margin-bottom: 1rem;
+    
+  p {
+    margin-bottom: 0;
   }
+}
 
-  .feature-title {
-    @include responsive-text-size('epsilon');
-    font-family: $serif-font-family;
-    margin-bottom: .5rem;
+.feature-title {
+  @include responsive-text-size('epsilon');
+  font-family: $serif-font-family;
+  margin-bottom: .5rem;
 
-    @media #{$medium-up} {
-      border-left: 2px solid $smoke;
-      padding-left: 1rem;
-      margin-left: -1rem;
-      margin-bottom: 0;
-    }
+  @media #{$medium-up} {
+    border-left: 2px solid $smoke;
+    padding-left: 1rem;
+    margin-left: -1rem;
+    margin-bottom: 0;
   }
 }

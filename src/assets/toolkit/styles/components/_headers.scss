@@ -13,26 +13,6 @@
     text-align: left;
   }
 
-  &_title {
-    @include type-weight(semi);
-    font-family: $alt-font-family;
-    letter-spacing: $large-header-spacing;
-    text-transform: uppercase;
-
-    @media #{$small-only} {
-      @include responsive-text-size('beta');
-    }
-      
-    @media #{$medium-up} {
-      @include type-weight(black);
-    }  
-  }
-
-  &_group {
-    position: relative;
-    z-index: 2;
-  }
-
   &.bg-gradient {
     @media #{$medium-up} {
 
@@ -52,6 +32,26 @@
       background-position: bottom left;
     }
   }
+}  
+
+.lead-header_title {
+  @include type-weight(semi);
+  font-family: $alt-font-family;
+  letter-spacing: $large-header-spacing;
+  text-transform: uppercase;
+
+  @media #{$small-only} {
+    @include responsive-text-size('beta');
+  }
+    
+  @media #{$medium-up} {
+    @include type-weight(black);
+  }  
+}
+
+.lead-header_group {
+  position: relative;
+  z-index: 2;
 }
 
 // Offset modifier for form cards
@@ -69,115 +69,24 @@
 
 // Results values and actions
 .results-header {
-  &_values {
-    @include responsive-text-size('gamma');
-    color: $steel;
-    font-family: $alt-font-family;
-    letter-spacing: $large-header-spacing;
-    text-transform: uppercase;
 
-    strong {
-      color: $oil;
-      font-family: $serif-font-family;
-      letter-spacing: normal;
-    }
-
-    @media #{$small-only} {
-      @include responsive-text-size('delta');
-    }
-  }
 }
 
-// Section dividers
-// Lined header for page content
-.section-header {
-  border-bottom: 1px solid $silver;
-  border-top: 5px solid $charcoal;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.results-header_values {
+  @include responsive-text-size('gamma');
+  color: $steel;
+  font-family: $alt-font-family;
+  letter-spacing: $large-header-spacing;
+  text-transform: uppercase;
 
-  @media #{$small-only} {
-    margin-left: -($column-gutter/2);
-    margin-right: -($column-gutter/2);
-    padding-left: $column-gutter/2;
-    padding-right: $column-gutter/2;
-  }
-}
-
-// Header showing status for page content
-.status-header {
-  position: relative;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  
-  &_icon {
-    @include absolute(50%,null,null,1rem);
-    @include translateY(-50%);
-    display: none;
-
-    @media #{$medium-up} {
-      display: block;
-    }
-  }
-
-  &_group {
-    @media #{$medium-up} {
-      border-left: 3px solid $success;
-      margin-left: 3rem;
-      padding-left: 1rem;
-    }
-  }
-
-  &_title {
-    @include responsive-text-size('base');
-    @include type-weight(black);
-    font-family: $alt-font-family;
-    letter-spacing: $small-header-spacing;
-    margin-bottom: .5rem;
-    text-transform: uppercase;
-
-    @media #{$small-only} {
-      @include clearfix;
-      border-bottom: 3px solid $success;
-      display: inline-block;
-      padding-bottom: .5rem;
-    }
-
-    &.gamma {
-      @include responsive-text-size('gamma');
-    }
-  }
-
-  p {
-    @include responsive-text-size('base');
-    color: $steel;
-  }  
-
-  // Status colors 
-  &.status--other {
-    .status-header_group {
-      border-color: $alert;
-    }
-
-    .status-header_title {
-      border-color: $alert;
-    }
-  }
-
-  &.status--closed {
-    .status-header_group {
-      border-color: $steel;
-    }
-
-    .status-header_title {
-      border-color: $steel;
-    }
+  strong {
+    color: $oil;
+    font-family: $serif-font-family;
+    letter-spacing: normal;
   }
 
   @media #{$small-only} {
-    margin-left: -($column-gutter/2);
-    margin-right: -($column-gutter/2);
-    padding-left: $column-gutter/2;
-    padding-right: $column-gutter/2;
-  } 
+    @include responsive-text-size('delta');
+  }
 }
+

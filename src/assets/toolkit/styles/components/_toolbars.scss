@@ -3,12 +3,6 @@
 
 // Search results details
 .results-bar {
-  .results-wrap {
-    @media #{$medium-up} {
-      display: table;
-    }
-  }
-
   .button-set {
     float: left;
     margin-left: 0;
@@ -27,5 +21,11 @@
   button, .button {
     margin-right: .25rem;
     margin-bottom: 0;
+  }
+}
+
+.results-wrap {
+  @media #{$medium-up} {
+    display: table;
   }
 }

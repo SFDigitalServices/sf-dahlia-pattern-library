@@ -3,74 +3,75 @@
 // Styles editable income item used in calculator and applications
 
 .income-source {
-  &_item {
-    padding: 1rem;
-    position: relative;
-    margin-bottom: 1rem;
 
-    label {
-      font-size: 0.875rem;
-      line-height: 1.375;
-      font-weight: 500;
-    }
+}
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+.income-source_item {
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
 
-    &.expand {
-      margin-left: -1rem;
-      margin-right: -1rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-
-      @media #{$medium-up} {
-        margin-left: -2rem;
-        margin-right: -2rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
-    }
-
-    &.add-item {
-      cursor: pointer;
-      color: $deep;
-      padding-bottom: 0;
-    }
+  label {
+    font-size: 0.875rem;
+    line-height: 1.375;
+    font-weight: 500;
   }
 
-  &_add {
-    display: inline-block;
+  &:last-of-type {
+    margin-bottom: 0;
   }
 
-  &_name {
-    display: block;
-    width: 100%;
-    padding-right: 4rem;
-  }
-
-  &_value {
-    float: right;
-  }  
-
-    
-  &_link {
-    @include responsive-text-size('tiny');
-    @include absolute(1rem,1rem,null,null);
-    color: $deep;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    text-decoration: underline;
-  }
-
-  &_nested {
-    margin-left: -$column-gutter/2;
-    margin-right: -$column-gutter/2;
-    padding-left: $column-gutter;
-    padding-right: $column-gutter;
+  &.expand {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @media #{$medium-up} {
-
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
+  }
+
+  &.add-item {
+    cursor: pointer;
+    color: $deep;
+    padding-bottom: 0;
+  }
+}
+
+.income-source_add {
+  display: inline-block;
+}
+
+.income-source_name {
+  display: block;
+  width: 100%;
+  padding-right: 4rem;
+}
+
+.income-source_value {
+  float: right;
+}  
+  
+.income-source_link {
+  @include responsive-text-size('tiny');
+  @include absolute(1rem,1rem,null,null);
+  color: $deep;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.income-source_nested {
+  margin-left: -$column-gutter/2;
+  margin-right: -$column-gutter/2;
+  padding-left: $column-gutter;
+  padding-right: $column-gutter;
+
+  @media #{$medium-up} {
+
   }
 }

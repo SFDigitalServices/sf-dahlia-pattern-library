@@ -11,19 +11,19 @@
     background-color: $success-tint;
   }
 
-  .alert-icon {
-    position: absolute;
-    top: .9rem;
-    left: 1rem;
-  }
-
-  .alert-body {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    margin-bottom: 0;
-  }
-
   .close {
     line-height: .9rem;
   }
+}
+
+.alert-icon {
+  position: absolute;
+  top: .9rem;
+  left: 1rem;
+}
+
+.alert-body {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 0;
 }

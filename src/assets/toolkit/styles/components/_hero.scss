@@ -3,21 +3,23 @@
 // Styles for top homepage element
 
 .hero {
-  &-header {
-    padding: 2rem 1rem;
-    position: relative;
-    z-index: 2;
 
-    @media #{$medium-up} {
-      padding: 8rem 1rem 2rem 1rem;
-    }
-  }
+}
 
-  &-title {
-    @media #{$small-only} {
-      font-size: $h1-font-size;
-    }  
+.hero-header {
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+
+  @media #{$medium-up} {
+    padding: 8rem 1rem 2rem 1rem;
   }
+}
+
+.hero-title {
+  @media #{$small-only} {
+    font-size: $h1-font-size;
+  }  
 }
 
 .splash-header {

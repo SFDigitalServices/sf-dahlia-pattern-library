@@ -2,37 +2,48 @@
 // Block
 // Larger component with padding on all sides
 
+%block-expand {
+  margin-left: -($column-gutter / 2);
+  margin-right: -($column-gutter / 2);
+}
+
 .block {
   @include block();
-
-  // Expand beyond outer margin
-  &-expand,
+  
   .expand {
-    margin-left: -($column-gutter / 2);
-    margin-right: -($column-gutter / 2);
+    @extend %block-expand;
   }
+}    
 
-  // Block modifier with icon
-  &--icon {
-    @include block();
+// Expand beyond outer margin (legacy)
+.block-expand {
+  .expand {
+    @extend %block-expand;
   }
+}
+
+// Block modifier with icon
+.icon-block,
+.block--icon {
+  @include block();
+}
 
   // Block modifier with more responsive padding
-  &--tall {
-    @include block();
+.tall-block,
+.block--tall {
+  @include block();
 
-    @media #{$medium-up} {
-      padding: 2rem 2rem;
-    }
+  @media #{$medium-up} {
+    padding: 2rem 2rem;
   }
+}
 
-  &--short {
-    @include block();
-    padding: 1.5rem;
+.block--short {
+  @include block();
+  padding: 1.5rem;
 
-    @media #{$medium-up} {
-      padding: 2rem;
-    }
+  @media #{$medium-up} {
+    padding: 2rem;
   }
 }
 

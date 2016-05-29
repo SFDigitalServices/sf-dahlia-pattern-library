@@ -8,103 +8,6 @@
   line-height: 1.5;
   margin-bottom: 1.5rem;
 
-  &_figure {
-    text-align: center;
-    position: relative;
-  }
-
-  &_thumb {
-    width: 100%;
-    max-width: none;
-  }
-
-  &_overlay {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    width: 100%;
-
-    &:before {
-      @include overlay-image;
-      @include custom-linear-gradient(transparent, rgba(0,0,0, .8));
-    }
-  }
-
-  &_content {
-    position: relative;
-  }
-
-  &_info {
-    @media #{$medium-up} {
-      @include absolute(null,.5rem,1rem,.5rem);
-      display: inline-block;
-      color: #fff;
-      z-index: 2;
-    }
-  }
-
-  &_title {
-    @include responsive-text-size('delta');
-    font-family: $alt-font-family;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
-    margin-bottom: .5rem;
-
-    @media #{$medium-up} {
-      @include responsive-text-size('beta');
-
-      a {
-        color: #fff;
-      }
-    }
-  }
-
-  &_address {
-    @include responsive-text-size('tiny');
-    color: $oil;
-    font-family: $alt-font-family;
-    letter-spacing: $small-header-spacing;
-    line-height: 1.5;
-    text-transform: uppercase;
-
-    @media #{$small-only} {
-      margin-top: .5rem;
-      margin-bottom: 1rem;
-    }  
-
-    @media #{$medium-up} {
-      color: #fff;
-    }
-  }
-
-  &_action {    
-    button {
-      margin-bottom: 0;
-
-      @media #{$small-only} {
-        margin-bottom: 1rem;
-      }  
-    } 
-  }
-
-  // Labels overlaying images
-  .status-label {
-    @include absolute(.5rem,null,null,0);
-
-    @media #{$medium-up} {
-      @include absolute(.5rem,0,null,auto);
-    }  
-  }
-
-  .application-label {
-    @include absolute(null,1rem,0,1rem);
-    z-index: 2;
-
-    @media #{$medium-up} {
-      @include absolute(.5rem,auto,auto,0);
-    }
-  }
-
   @media #{$small-only} {
     max-width: rem-calc(480);
     margin: 0 auto 4rem;
@@ -128,4 +31,101 @@
       padding-left: 1rem;
     }
   }
+
+  // Labels overlaying images
+  .status-label {
+    @include absolute(.5rem,null,null,0);
+
+    @media #{$medium-up} {
+      @include absolute(.5rem,0,null,auto);
+    }  
+  }
+
+  .application-label {
+    @include absolute(null,1rem,0,1rem);
+    z-index: 2;
+
+    @media #{$medium-up} {
+      @include absolute(.5rem,auto,auto,0);
+    }
+  }
+}
+
+.property-card_figure {
+  text-align: center;
+  position: relative;
+}
+
+.property-card_thumb {
+  width: 100%;
+  max-width: none;
+}
+
+.property-card_overlay {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+
+  &:before {
+    @include overlay-image;
+    @include custom-linear-gradient(transparent, rgba(0,0,0, .8));
+  }
+}
+
+.property-card_content {
+  position: relative;
+}
+
+.property-card_info {
+  @media #{$medium-up} {
+    @include absolute(null,.5rem,1rem,.5rem);
+    display: inline-block;
+    color: #fff;
+    z-index: 2;
+  }
+}
+
+.property-card_title {
+  @include responsive-text-size('delta');
+  font-family: $alt-font-family;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+
+  @media #{$medium-up} {
+    @include responsive-text-size('beta');
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.property-card_address {
+  @include responsive-text-size('tiny');
+  color: $oil;
+  font-family: $alt-font-family;
+  letter-spacing: $small-header-spacing;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  @media #{$small-only} {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }  
+
+  @media #{$medium-up} {
+    color: #fff;
+  }
+}
+
+.property-card_action {    
+  button {
+    margin-bottom: 0;
+
+    @media #{$small-only} {
+      margin-bottom: 1rem;
+    }  
+  } 
 }

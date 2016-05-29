@@ -9,28 +9,6 @@
 .overflow-panel {
   border: 1px solid $smoke;
   
-  &_header {
-    @include responsive-text-size('tiny');
-    @include type-weight(bold);
-    background-color: $smoke;
-    overflow: hidden;
-    text-transform: uppercase;
-
-    .header {
-      padding: .75rem;
-    }
-  }
-
-  &_scroll {
-    background-color: #fff;
-    position: relative;
-
-    @media #{$medium-up} {
-      max-height: rem-calc(500);
-      overflow-y: auto;
-    }
-  }
-
   .result-set li {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -41,6 +19,29 @@
     }
   }
 }
+
+.overflow-panel_header {
+  @include responsive-text-size('tiny');
+  @include type-weight(bold);
+  background-color: $smoke;
+  overflow: hidden;
+  text-transform: uppercase;
+
+  .header {
+    padding: .75rem;
+  }
+}
+
+.overflow-panel_scroll {
+  background-color: #fff;
+  position: relative;
+
+  @media #{$medium-up} {
+    max-height: rem-calc(500);
+    overflow-y: auto;
+  }
+}
+
 
 // Close button
 .close-reveal-modal {

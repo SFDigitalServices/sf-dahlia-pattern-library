@@ -4,6 +4,7 @@
 .card {
   border: 2px solid $white-smoke;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 // card container
@@ -31,15 +32,25 @@
 
 .card-date {
   @include responsive-text-size('small');
+
+  &.top-right {
+    @media #{$medium-up} {
+      @include absolute(1rem,1rem,null,null);
+    }  
+  }
 }
 
 .card-footer {
   @include clearfix;
 }
 
-.lottery-card {
-  .card-units {
-    @include responsive-text-size('small');
-    color: $steel;
-  }
+.card-link {
+  @include responsive-text-size('small');
+  margin-right: 1rem;
 }
+
+.card-units {
+  @include responsive-text-size('small');
+  color: $steel;
+}
+

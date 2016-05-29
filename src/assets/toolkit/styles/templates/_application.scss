@@ -6,17 +6,16 @@
     font-family: $sans-font-family;
   }
 
-  &_nav {
-    background-color: $dust;
-  }
-
   .form-label {
     color: $oil;
   }
 
   .form-group {
-    margin-bottom: 1rem;
     @include clearfix;
+    margin-bottom: 1rem;
   }
 }
 
+.application-form_nav {
+  background-color: $dust;
+}

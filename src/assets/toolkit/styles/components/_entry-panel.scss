@@ -8,23 +8,23 @@
   #{h1, h2, h3, h4, h5, h6} {
     font-family: $sans-font-family;
   }
+}
 
-  &_edit {
-    @include absolute(1rem,0,null,null);
-  }
+.entry-panel_edit {
+  @include absolute(1rem,0,null,null);
+}
 
-  &_header,
-  &_label {
-    @include type-weight(light);
-  }
+.entry-panel_header,
+.entry-panel_label {
+  @include type-weight(light);
+}
 
-  &_content {
-    @include type-weight(bold);
-    @include responsive-text-size('delta');
-    margin-bottom: 0;
+.entry-panel_content {
+  @include type-weight(bold);
+  @include responsive-text-size('delta');
+  margin-bottom: 0;
 
-    &:last-of-type {
-      margin-bottom: 1.5rem;
-    }
+  &:last-of-type {
+    margin-bottom: 1.5rem;
   }
 }

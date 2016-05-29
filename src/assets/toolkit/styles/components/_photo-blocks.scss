@@ -12,16 +12,16 @@
   figure {
 
   }
+}
 
-  &_title {
-    @extend %center-xy;
-    @include responsive-text-size('small');
-    @include type-weight(black);
-    color: #fff;
-    font-family: $alt-font-family;
-    letter-spacing: $small-header-spacing;
-    margin-bottom: 0;
-    text-align: center;
-    text-transform: uppercase;
-  }
+.photo-block_title {
+  @extend %center-xy;
+  @include responsive-text-size('small');
+  @include type-weight(black);
+  color: #fff;
+  font-family: $alt-font-family;
+  letter-spacing: $small-header-spacing;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
 }

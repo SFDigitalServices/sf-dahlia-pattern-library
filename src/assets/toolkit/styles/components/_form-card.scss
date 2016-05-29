@@ -14,6 +14,21 @@ $form-card-radius: rem-calc(12);
     padding: $column-gutter/2;
   }
 
+  // form card with sub-nav
+  &.has-nav {
+    padding-top: 0;
+
+    @media #{$medium-up} {
+      padding-top: 1rem
+    }
+
+    .sub-nav {
+      margin-top: 0;
+      margin-left: -1rem;
+      margin-right: -1rem;  
+    }
+  }
+
   .border-bottom {
     border-color: $smoke;
   }
@@ -30,48 +45,33 @@ $form-card-radius: rem-calc(12);
       margin-right: -$column-gutter/2;
     }
   }
+}
 
-  &_header,
-  &_footer {
-    margin-left: -$column-gutter/2;
-    margin-right: -$column-gutter/2;
+.form-card_header,
+.form-card_footer {
+  margin-left: -$column-gutter/2;
+  margin-right: -$column-gutter/2;
+}
+
+.form-card_header {
+  margin-top: -$column-gutter/2;
+
+  @media #{$medium-up} {
+    border-top-left-radius: $form-card-radius;
+    border-top-right-radius: $form-card-radius;  
+    overflow: hidden;
   }
 
-  &_header {
-    margin-top: -$column-gutter/2;
-
-    @media #{$medium-up} {
-      border-top-left-radius: $form-card-radius;
-      border-top-right-radius: $form-card-radius;  
-      overflow: hidden;
-    }
-
-    .alert-box {
-      margin-bottom: 0;
-    }
+  .alert-box {
+    margin-bottom: 0;
   }
+}
     
-  &_footer {
-    @media #{$medium-up} {
-      border-bottom-left-radius: $form-card-radius;
-      border-bottom-right-radius: $form-card-radius;
-      margin-bottom: -$column-gutter/2;
-      overflow: hidden;
-    }  
-  }
-
-  // form card with sub-nav
-  &.has-nav {
-    padding-top: 0;
-
-    @media #{$medium-up} {
-      padding-top: 1rem
-    }
-
-    .sub-nav {
-      margin-top: 0;
-      margin-left: -1rem;
-      margin-right: -1rem;  
-    }
-  }
+.form-card_footer {
+  @media #{$medium-up} {
+    border-bottom-left-radius: $form-card-radius;
+    border-bottom-right-radius: $form-card-radius;
+    margin-bottom: -$column-gutter/2;
+    overflow: hidden;
+  }  
 }
