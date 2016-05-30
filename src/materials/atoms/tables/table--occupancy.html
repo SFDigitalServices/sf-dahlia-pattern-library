@@ -1,26 +1,17 @@
 <table role="grid">
   <thead>
     <tr>
-      <th scope="col">Unit Type</th>
-      <th scope="col">Occupancy</th>
+      {{#each tables.occupancy.headings}}
+      <th scope="col">{{this}}</th>
+      {{/each}}
     </tr>
   </thead>
   <tbody>
+    {{#each tables.occupancy.units}}
     <tr>
-      <td scope="row">Studio</td>
-      <td>1-2 <small>people</small></td>
+      <td scope="row">{{type}}</td>
+      <td>{{occupancy}} <small>people</small></td>
     </tr>
-    <tr>
-      <td scope="row">1 Bedroom</td>
-      <td>1-3 <small>people</small></td>
-    </tr>
-    <tr>
-      <td scope="row">2 Bedroom</td>
-      <td>2-4 <small>people</small></td>
-    </tr>
-    <tr>
-      <td scope="row">3 Bedroom</td>
-      <td>3-6 <small>people</small></td>
-    </tr>
+    {{/each}}
   </tbody>
 </table>

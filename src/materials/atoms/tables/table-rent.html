@@ -2,20 +2,17 @@
   <thead>
     <tr>
       <th scope="col">Unit Type</th>
-      <th scope="col">Minimum Income</th>
+      <th scope="col">Mimumum Income</th>
       <th scope="col" class="text-right">Rent</th>
     </tr>
   </thead>
   <tbody>
+    {{#each tables.minimum.units}}
     <tr>
-      <td scope="row">Table Cell 1</td>
-      <td>Table Cell 2</td>
-      <td class="text-right">Table Cell 3</td>
+      <td scope="row">{{type}}</td>
+      <td>${{income}}<small>/month</small></td>
+      <td class="text-right">${{rent}}<small>/month</small></td>
     </tr>
-    <tr>
-      <td scope="row">Table Cell 1</td>
-      <td>Table Cell 2</td>
-      <td class="text-right">Table Cell 3</td>
-    </tr>
+    {{/each}}
   </tbody>
 </table>

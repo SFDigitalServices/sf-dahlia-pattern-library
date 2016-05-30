@@ -1,48 +1,30 @@
 <table role="grid">
   <thead>
     <tr>
-      <th scope="col">Unit</th>
-      <th scope="col">Area</th>
-      <th scope="col">Baths</th>
-      <th scope="col">Floor</th>
-      <th scope="col">Accessibility</th>
+      {{#each tables.features.headings}}
+      <th scope="col">{{this}}</th>
+      {{/each}}
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td scope="row">Table Cell 1</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
+  <tbody>  
+    {{#each tables.features.units}}
+    <tr class="stat-row">
+      <td scope="row">
+        {{unit}}
+      </td>  
+      <td>
+        {{area}} <small>sqft</small>
+      </td>
+      <td>
+        {{baths}}
+      </td>
+      <td>
+        {{floor}}
+      </td>
+      <td>
+        {{acccessibilty}}
+      </td>
     </tr>
-    <tr>
-      <td scope="row">Table Cell 1</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-    </tr>
-    <tr>
-      <td scope="row">Table Cell 1</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-    </tr>
-    <tr>
-      <td scope="row">Table Cell 1</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-    </tr>
-    <tr>
-      <td scope="row">Table Cell 1</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-      <td>Table Cell 2</td>
-      <td>Table Cell 3</td>
-    </tr>
+    {{/each}}
   </tbody>
 </table>

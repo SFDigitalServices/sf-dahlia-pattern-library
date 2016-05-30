@@ -1,84 +1,30 @@
-<table>
+<table role="grid">
   <thead>
     <tr>
+      {{#each tables.features.headings}}
       <th scope="col">Unit Number</th>
-      <th scope="col">Area</th>
-      <th scope="col">Baths</th>
-      <th scope="col">Floor</th>
-      <th scope="col">Acccessibilty</th>
+      {{/each}}
     </tr>
   </thead>
   <tbody>  
+    {{#each tables.features.units}}
     <tr class="stat-row">
       <td scope="row">
-        #127
+        {{unit}}
       </td>  
       <td>
-        469 <small>sqft</small>
+        {{area}} <small>sqft</small>
       </td>
       <td>
-        1
+        {{baths}}
       </td>
       <td>
-        1st
+        {{floor}}
       </td>
       <td>
-        Wheelchair access
+        {{acccessibilty}}
       </td>
     </tr>
-
-    <tr class="stat-row">
-      <td scope="row">
-        #127
-      </td>  
-      <td>
-        469 <small>sqft</small>
-      </td>
-      <td>
-        1
-      </td>
-      <td>
-        1st
-      </td>
-      <td>
-        Wheelchair access
-      </td>
-    </tr>
-
-    <tr class="stat-row">
-      <td scope="row">
-        #127
-      </td>  
-      <td>
-        469 <small>sqft</small>
-      </td>
-      <td>
-        1
-      </td>
-      <td>
-        1st
-      </td>
-      <td>
-        Wheelchair access
-      </td>
-    </tr>
-
-    <tr class="stat-row">
-      <td scope="row">
-        #127
-      </td>  
-      <td>
-        469 <small>sqft</small>
-      </td>
-      <td>
-        1
-      </td>
-      <td>
-        1st
-      </td>
-      <td>
-        Wheelchair access
-      </td>
-    </tr>
+    {{/each}}
   </tbody>
 </table>

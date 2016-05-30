@@ -1,0 +1,67 @@
+minimum:
+  headings:
+    - Unit Type
+    - Minimum Income
+    - Rent
+  units:
+    - type: Studio
+      income: 2,347
+      rent: 939
+    - type: 1 Bedroom
+      income: 2,685
+      rent: 1,074
+    - type: 2 Bedroom
+      income: 2,998
+      rent: 1,199
+occupancy:
+  headings:
+    - Unit Type
+    - Occupancy
+  units:
+    - type: Studio
+      occupancy: 1-2
+    - type: 1 Bedroom
+      occupancy: 1-3
+    - type: 2 Bedroom
+      occupancy: 2-4
+    - type: 3 Bedroom
+      occupancy: 3-6
+features:
+  headings:
+    - Unit Number
+    - Area
+    - Baths
+    - Floor
+    - Acccessibilty
+  units:
+    - unit: "#127"
+      area: 469
+      baths: 1
+      floor: 1st
+      acccessibilty: Wheelchair access
+    - unit: "#127"
+      area: 469
+      baths: 1
+      floor: 1st
+      acccessibilty: Wheelchair access
+    - unit: "#127"
+      area: 469
+      baths: 1
+      floor: 1st
+      acccessibilty: Wheelchair access
+    - unit: "#127"
+      area: 469
+      baths: 1
+      floor: 1st
+      acccessibilty: Wheelchair access
+    - unit: "#127"
+      area: 469
+      baths: 1
+      floor: 1st
+      acccessibilty: Wheelchair access
+    - unit: "#127"
+      area: 469
+      baths: 1
+      floor: 1st
+      acccessibilty: Wheelchair access
+    

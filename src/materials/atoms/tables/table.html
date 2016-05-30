@@ -4,41 +4,22 @@ notes: |
 
    Always use `th` to define the headers for columns and rows. If a header cell is not a `th`, but a `td`, use the `scope` attribute to explain what kind of heading the cell is: `scope=row` means the cell is a header for the row it's inside. `scope=column` means the cell is a header for the column it's inside.
 ---
+
 <table role="grid">
 	<thead>
 		<tr>
-			<th scope="col">Table Heading 1</th>
-			<th scope="col">Table Heading 2</th>
-			<th scope="col">Table Heading 3</th>
+			{{#each tables.minimum.headings}}
+				<th scope="col">{{this}}</th>
+			{{/each}}
 		</tr>
 	</thead>
 	<tbody>
+		{{#each tables.minimum.units}}
 		<tr>
-			<td scope="row">Table Cell 1</td>
-			<td>Table Cell 2</td>
-			<td>Table Cell 3</td>
+			<td scope="row">{{type}}</td>
+			<td>${{income}}<small>/month</small></td>
+			<td>${{rent}}<small>/month</small></td>
 		</tr>
-		<tr>
-			<td scope="row">Table Cell 1</td>
-			<td>Table Cell 2</td>
-			<td>Table Cell 3</td>
-		</tr>
-		<tr>
-			<td scope="row">Table Cell 1</td>
-			<td>Table Cell 2</td>
-			<td>Table Cell 3</td>
-		</tr>
-		<tr>
-			<td scope="row">Table Cell 1</td>
-			<td>Table Cell 2</td>
-			<td>Table Cell 3</td>
-		</tr>
+		{{/each}}
 	</tbody>
-	<tfoot>
-		<tr>
-			<td scope="col">Table Footer 1</td>
-			<td scope="col">Table Footer 2</td>
-			<td scope="col">Table Footer 3</td>
-		</tr>
-	</tfoot>
 </table>
