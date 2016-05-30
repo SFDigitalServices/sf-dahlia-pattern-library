@@ -1,20 +1,12 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<header class="lead-header shift-offset--bottom bg-attention-tint">
-  <div class="row">
-    <div class="large-12 columns">
-      <h1 class="lead-title t-beta">Share this Listing</h1>
-      <div class="medium-8 columns no-padding">
-        <p class="t-gamma t-light">Send a link to a housing counselor, family member or friend.</p>
-      </div>
-    </div>
-  </div>
-</header>
+{{> headers.lead-header--sub title="Share this Listing" description="Send a link to a housing counselor, family member or friend." background="image" color="white" classes="bg-gradient"}}
 
 <section class="section-full">
-  <div class="row shift--top">
-    <div class="medium-8 columns">
+  <div class="row margin-top--2x show-for-medium-up"></div>
+  <div class="row margin-bottom">
+    <div class="medium-6 medium-centered columns">
     
       <form class="form-card">
         <div data-alert class="alert-box success">
@@ -29,142 +21,22 @@
           </p>
           <a href="#" class="close">&times;</a>
         </div>
-
-        <span class="ui-icon ui-link">
-          <svg>
-            <use xlink:href="#i-link"></use>
-          </svg>
-        </span>
-        Get Shareable Link
       </a>
       
       <!-- Alpha share widget -->
       <div id="panel2a" class="content">
         <form class="no-margin">
-          <div class="row">
-            <div class="large-12 columns">
-              <label>
-                <input type="text" placeholder="Link" />
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">  
-              {{> buttons.button text="Copy Link" class="secondary small"}}
-            </div>  
-          </div>
+          <header class="padding text-center"><h2 class="t-base t-alt-sans t-caps t-black">Copy URL to Share</h2></header>
+
+          <div class="form-group text-center">
+            <label class="sr-only" for="link">Get Listing</label>
+            <input type="text" placeholder="Link" name="link"/>
+            {{> buttons.button text="Copy Link" class="secondary small"}}
+          </div> 
         </div>
-
-        <!-- <dl class="share-accordion accordion" data-accordion>  
-          <dd class="accordion-navigation">
-            <a class="accordion-header" href="#panel1a">
-              <span class="ui-icon ui-link">
-                <svg>
-                  <use xlink:href="#i-mail"></use>
-                </svg>
-              </span>
-              Send in Email
-
-              <span class="ui-control ui-icon ui-small">
-                <svg>
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-arrow-down"></use>
-                </svg>
-              </span>
-            </a>
-            
-            <div id="panel1a" class="content active">  
-              <form class="no-margin">
-                <div class="row">
-                  <div class="large-12 columns">
-                    <label>
-                      <input type="text" placeholder="Email Address" />
-                    </label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="large-12 columns">
-                    <label>From
-                      <input type="text" placeholder="Your Full Name" />
-                    </label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="large-12 columns">
-                    {{> buttons.button text="Email" class="small" }}
-                  </div>
-                </div>
-              </form>
-            </div>
-          </dd> -->
-
-    <!--       <dd class="accordion-navigation">
-            <a class="accordion-header" href="#panel3a">Send as Text Message</a>
-
-            <div id="panel3a" class="content">  
-              <form class="no-margin">
-                <div class="row">
-                  <div class="large-12 columns">
-                    <label>
-                      <input type="text" placeholder="Mobile number" />
-                    </label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="large-12 columns">
-                    <label>From
-                      <input type="text" placeholder="Your Full Name" />
-                    </label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="large-12 columns">
-                    {{> buttons.button text="Send Text" class="small"}}
-                  </div>
-                </div>
-              </form>
-            </div>
-          </dd> -->
-
-          <!-- <dd class="accordion-navigation">
-            <a class="accordion-header" href="#panel2a">
-              <span class="ui-icon ui-link">
-                <svg>
-                  <use xlink:href="#i-link"></use>
-                </svg>
-              </span>
-              Get Shareable Link
-
-              <span class="ui-control ui-icon ui-small">
-                <svg>
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#i-arrow-down"></use>
-                </svg>
-              </span>
-            </a>
-            
-            <div id="panel2a" class="content">
-              <form class="no-margin">
-                <div class="row">
-                  <div class="large-12 columns">
-                    <label>
-                      <input type="text" readonly="readonly" placeholder="Link" />
-                    </label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="large-12 columns">  
-                    {{> buttons.button text="Copy Link" class="small" icon="mail"}}
-                  </div>  
-                </div>
-              </div>
-            </dd>
-          </dl> -->
-        </form>
-      </div>
+      </form>
     </div>
+  </div>
 </section>
 
 {{> components.footer}}
