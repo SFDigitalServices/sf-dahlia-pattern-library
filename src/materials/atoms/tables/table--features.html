@@ -1,14 +1,16 @@
 <table role="grid">
   <thead>
     <tr>
-      {{#each tables.features.headings}}
-      <th scope="col">{{this}}</th>
-      {{/each}}
+      <th scope="col">Unit Number</th>
+      <th scope="col">Area</th>
+      <th scope="col">Baths</th>
+      <th scope="col">Floor</th>
+      <th scope="col">Acccessibilty</th>
     </tr>
   </thead>
   <tbody>  
-    {{#each tables.features.units}}
-    <tr class="stat-row">
+    {{#each items}}
+    <tr>
       <td scope="row">
         {{unit}}
       </td>  
@@ -25,6 +27,26 @@
         {{acccessibilty}}
       </td>
     </tr>
+      {{else}}
+      {{#each tables.features.units}}
+      <tr>
+        <td scope="row">
+          {{unit}}
+        </td>  
+        <td>
+          {{area}} <small>sqft</small>
+        </td>
+        <td>
+          {{baths}}
+        </td>
+        <td>
+          {{floor}}
+        </td>
+        <td>
+          {{acccessibilty}}
+        </td>
+      </tr>
+      {{/each}}
     {{/each}}
   </tbody>
 </table>

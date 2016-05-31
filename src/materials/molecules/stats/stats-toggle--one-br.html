@@ -1,13 +1,13 @@
 <div class="stats-toggle margin-bottom">
-<div class="toggle-box toggler has-toggle">
-  <div class="toggle-box_label">
-    <strong>1 Bedroom</strong>: 6 Units, 639&ndash;900 square feet, Accessible units
+  <div class="toggle-box toggler has-toggle">
+    <div class="toggle-box_label">
+      <strong>1 Bedroom</strong>: 6 Units, 639&ndash;900 square feet, Accessible units
+    </div>
+    
+    {{> icons.base icon="arrow-down" size="small" position="control"}}
   </div>
-  
-  {{> icons.base icon="arrow-down" size="small" position="control"}}
-</div>
 
-<div class="toggled">
-  {{> stats.stats-table--stack-one-br}}
-</div>
+  <div class="toggled">
+    {{> tables.table--features items=tables.features-1br.units }}
+  </div>
 </div>

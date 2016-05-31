@@ -1,8 +1,4 @@
 minimum:
-  headings:
-    - Unit Type
-    - Minimum Income
-    - Rent
   units:
     - type: Studio
       income: 2,347
@@ -13,10 +9,27 @@ minimum:
     - type: 2 Bedroom
       income: 2,998
       rent: 1,199
+maximum:
+  households:
+    - size: 1
+      month: 3,245
+      year: 38,950
+    - size: 2
+      month: 3,708
+      year: 44,500
+    - size: 3
+      month: 4,204
+      year: 50,450
+    - size: 4
+      month: 4,670
+      year: 56,050
+    - size: 5
+      month: 5,045
+      year: 60,550
+    - size: 6
+      month: 5,416
+      year: 65,000 
 occupancy:
-  headings:
-    - Unit Type
-    - Occupancy
   units:
     - type: Studio
       occupancy: 1-2
@@ -26,13 +39,14 @@ occupancy:
       occupancy: 2-4
     - type: 3 Bedroom
       occupancy: 3-6
-features:
-  headings:
-    - Unit Number
-    - Area
-    - Baths
-    - Floor
-    - Acccessibilty
+features-studio:
+  units:
+    - unit: "#127"
+      area: 469
+      baths: 1
+      floor: 1st
+      acccessibilty: Wheelchair access
+features-1br:
   units:
     - unit: "#127"
       area: 469
@@ -63,5 +77,4 @@ features:
       area: 469
       baths: 1
       floor: 1st
-      acccessibilty: Wheelchair access
-    
+      acccessibilty: Wheelchair access    

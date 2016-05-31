@@ -105,31 +105,10 @@ button,
     }
   }
 
-  // Hollow button styles
-  // &.ghost {
-  //   background-color: transparent;
-  //   color: $primary;
-
-  //   &:hover,
-  //   &:focus {
-  //     background-color: lighten(#fff, 5%);
-  //   }
-
-  //   &.attention {
-  //     color: $attention;
-
-  //     &:hover,
-  //     &:focus {
-  //       background-color: lighten(#fff, 5%);
-  //     }
-  //   }  
-  // }
-
   &.ghost-white {
     background-color: #fff;
     color: $primary;
-    // box-shadow: inset 0px 0px 0 2px $primary;
-
+    
     &:hover,
     &:focus {
       background-color: $primary;
@@ -143,11 +122,6 @@ button,
       padding: 1.625rem 2.25rem 1.625rem 2.25rem;
     }
   }
-
-  // Apply box shadow
-  // &.shadow {
-  //   box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.2);
-  // }
 
   // Remove button styles
   &.button-link {
@@ -274,9 +248,6 @@ button,
   }
 
   &.expand {
-    // padding-left: 1.5rem;
-    // padding-right: 1.5rem;
-
     &.small {
       font-size: $button-font-sml;
     }
@@ -393,10 +364,4 @@ button,
       }
     }
   }
-
-  // @media #{$small-only} {
-  //   margin-left: -($column-gutter);
-  //   margin-right: -($column-gutter);
-  //   width: auto;
-  // }  
 }  

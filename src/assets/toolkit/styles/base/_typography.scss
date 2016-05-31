@@ -2,7 +2,6 @@
 // Typography
 //
 
-// _typography.scss
 #{h1, h2, h3, h4, h5, h6} {
   font-family: $serif-font-family;
   font-weight: 400;
@@ -120,9 +119,6 @@ hr {
     margin: 2rem 0;
   }
 }
-
-$large-header-spacing: .1rem;
-$small-header-spacing: .2rem;
 
 @mixin h-caps($border-bottom: 0) {
   @include type-weight(bold);

@@ -1,0 +1,25 @@
+<table role="grid">
+  <thead>
+    <tr>
+      <th scope="col">Household Size</th>
+      <th scope="col">Maximum Income/Month</th>
+      <th scope="col">Maximum Income/Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tables.maximum.households}}
+    <tr>
+      <td scope="row">
+        {{size}} <small>person</small>
+      </td>
+      <td>
+        ${{month}}<small>/month</small>
+        </span>
+      </td>
+      <td>
+        ${{year}}<small>/year</small>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -112,3 +112,7 @@ $position-default: null !default;
     display: none;
   }  
 }
+
+.overlay {
+  @include absolute(null,0,0,0);
+}
