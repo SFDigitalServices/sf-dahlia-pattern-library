@@ -39,42 +39,53 @@ occupancy:
       occupancy: 2-4
     - type: 3 Bedroom
       occupancy: 3-6
-features-studio:
-  units:
-    - unit: "#127"
-      area: 469
-      baths: 1
-      floor: 1st
-      acccessibilty: Wheelchair access
-features-1br:
-  units:
-    - unit: "#127"
-      area: 469
-      baths: 1
-      floor: 1st
-      acccessibilty: Wheelchair access
-    - unit: "#127"
-      area: 469
-      baths: 1
-      floor: 1st
-      acccessibilty: Wheelchair access
-    - unit: "#127"
-      area: 469
-      baths: 1
-      floor: 1st
-      acccessibilty: Wheelchair access
-    - unit: "#127"
-      area: 469
-      baths: 1
-      floor: 1st
-      acccessibilty: Wheelchair access
-    - unit: "#127"
-      area: 469
-      baths: 1
-      floor: 1st
-      acccessibilty: Wheelchair access
-    - unit: "#127"
-      area: 469
-      baths: 1
-      floor: 1st
-      acccessibilty: Wheelchair access    
+features:
+  studio:
+    units:
+      - unit: "#127"
+        area: 469
+        baths: 1
+        floor: 1st
+        acccessibilty: Wheelchair access
+  1br:
+    units:
+      - unit: "#127"
+        area: 469
+        baths: 1
+        floor: 1st
+        acccessibilty: Wheelchair access
+      - unit: "#127"
+        area: 469
+        baths: 1
+        floor: 1st
+        acccessibilty: Wheelchair access
+      - unit: "#127"
+        area: 469
+        baths: 1
+        floor: 1st
+        acccessibilty: Wheelchair access
+      - unit: "#127"
+        area: 469
+        baths: 1
+        floor: 1st
+        acccessibilty: Wheelchair access
+      - unit: "#127"
+        area: 469
+        baths: 1
+        floor: 1st
+        acccessibilty: Wheelchair access
+      - unit: "#127"
+        area: 469
+        baths: 1
+        floor: 1st
+        acccessibilty: Wheelchair access
+feature-summary:
+  types:
+    - type: Studio
+      units: 1 Unit
+      area: 639&ndash;900
+      acccessibilty: Accessible units
+    - type: 1 Bedroom
+      units: 6 Units
+      area: 639&ndash;900
+      acccessibilty: Accessible units
