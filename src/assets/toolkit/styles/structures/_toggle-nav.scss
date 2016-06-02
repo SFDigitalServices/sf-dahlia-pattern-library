@@ -10,13 +10,22 @@
 }
 
 .toggle-nav {
+  @media #{$small-only} {
+    display: none;
 
+    &.active {
+      display: block;
+    }
+  }
 }
 
 a.toggle-nav-link {
-  border-bottom: 1px solid $smoke;
   display: block;
   padding: 1rem;
+
+  &.active {
+    border-bottom: 1px solid $smoke;
+  }
 
   @media #{$medium-up} {
     display: none;
