@@ -51,6 +51,15 @@ $(document).ready(function () {
     $(".toggled").toggle(); /*shows or hides #box*/
   });
 
+  $('body').addClass('js');
+    var $menu = $('.toggle-nav'),
+    $menulink = $('.menu-link');
+
+    $menulink.click(function() {
+    $menulink.toggleClass('active');
+    $menu.toggleClass('active');
+    return false;
+  });
 });
 
 

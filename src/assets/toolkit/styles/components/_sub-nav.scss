@@ -48,14 +48,3 @@
     }
   }
 }
-
-.local-nav {
-  padding-top: 1.5rem;
-  
-  dt, dd, li {
-    @media #{$small-only} {
-      float: none;
-      padding: .25rem 0;
-    }  
-  }
-}
