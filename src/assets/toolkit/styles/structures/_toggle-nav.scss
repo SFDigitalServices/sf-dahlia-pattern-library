@@ -26,6 +26,10 @@ a.toggle-nav-link {
 
   &.active {
     border-bottom: 1px solid $smoke;
+
+    svg {
+      transform: rotate(180deg);
+    }
   }
 
   @media #{$medium-up} {
