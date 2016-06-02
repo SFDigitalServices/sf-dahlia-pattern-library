@@ -3,49 +3,40 @@
 
 {{> headers.lead-header--sub title="Estimate Your Eligibility" description="Enter details about your household size and income and we'll highlight properties for which you may be eligible." background="dark" color="white" classes="bg-gradient"}}
 
-<section class="row">
-  <div class="medium-8 columns margin-top--2x">
-    <form class="form-card margin-top">
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row margin-bottom--2x">
+  <div class="medium-10 medium-centered columns">
+    <form class="form-card margin-bottom--2x">
       <div class="row">
-        <div class="medium-12 columns margin-bottom">
-          <div class="border-bottom padding-bottom">
-            <header class="margin-bottom">
-              <h3 class="t-serif gamma margin-bottom--half">
-              Household Size
-<!-- 
-              <span data-tooltip aria-haspopup="true" class="small-info has-tip" title="Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.">
-                {{> icons.base icon="info" fill="primary"}}
-              </span> -->
+        <div class="medium-6 columns padding-left--2x padding-top padding-bottom">
+          <header class="margin-bottom">
+            <h3 class="t-serif gamma">Household Size</h3>
+            <p class="c-steel">Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.</p>
+          </header>
 
-              </h3>
-              <p class="c-steel">Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.</p>
-              
-            </header>
+          <div class="form-group">
+            <label class="form-label sr-only">Household Size</label>
 
-            <div class="form-group">
-              <label class="form-label sr-only">Household Size</label>
-
-              {{> forms.select name="people" placeholder="Enter number of people" options=inputs.people }}
-            </div>
-
-            <div class="form-group padding-bottom--half">
-              {{> forms.checkbox text="Yes, this includes children under 6"}}
-            </div>
-
-            <div class="form-group">
-              {{> forms.select name="children" placeholder="How many children?" options=inputs.children }}
-            </div>
+            {{> forms.select name="people" placeholder="Enter number of people" options=inputs.people }}
           </div>
+
+          <div class="form-group padding-bottom--half">
+            {{> forms.checkbox text="Yes, this includes children under 6"}}
+          </div>
+
+          <div class="form-group">
+            {{> forms.select name="children" placeholder="How many children?" options=inputs.children }}
+          </div>
+
         </div>
-      </div>
-
-      <div class="row margin-bottom">
-        <div class="medium-12 columns padding-top padding-bottom">
-          <h3 class="t-serif gamma">
-            Household Pre-Tax Income
-          </h3>
-
-          <p class="c-steel">Next add up your gross (pre-tax) household income from wages, benefits and other sources from household members.</p>
+    
+        <div class="medium-6 columns padding-right--2x padding-top padding-bottom">
+          
+          <header class="margin-bottom">
+            <h3 class="t-serif gamma">Household Pre-Tax Income</h3>
+            <p class="c-steel">Next add up your gross (pre-tax) household income from wages, benefits and other sources from household members.</p>
+          </header>
 
           <div class="form-group">
             <label class="form-label sr-only">Household Income</label>
@@ -53,28 +44,23 @@
           </div>
           
           {{> forms.radio-group--inline }}
-
-          <!-- <div class="radio-group inline">
-            <p class="d-inline-block no-margin">
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">per month</label>
-            </p>
-            <p class="d-inline-block no-margin">
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">per year</label>
-            </p>
-          </div> -->
-        </div>
-        <div class="medium-12 columns">
-          <div class="note bg-tint padding margin-bottom--2x">
-            <p class="t-tiny no-margin">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the
-
-            <button class="button-link t-tiny">Household Income Calculator</button></p>
-          </div>
         </div>
       </div>
 
-      {{> forms.button-stack--paginate left="Reset Filters" l-classes="button-link button-lined small-text-center expand-small" right="View Matching Properties" r-classes="primary"}}
+      <footer class="form-card_footer">
+        <div class="note bg-snow row padding padding-left--2x padding-right--2x">
+          <div class="medium-7 columns">
+            <p class="t-tiny">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the </p>
+          </div>
+          <div class="medium-5 columns">
+            <button class="ghost-white small no-margin expand-small">Household Income Calculator</button>
+          </div>
+        </div>
+      </footer>
     </form>
-   </div> 
+
+    {{> forms.button-stack--paginate left="Reset Filters" l-classes="button-link button-lined small-text-center expand-small" right="View Matching Properties" r-classes="right primary expand-small"}}
+  </div> 
 </section>
 
 {{> components.footer}} 

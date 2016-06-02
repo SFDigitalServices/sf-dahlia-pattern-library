@@ -7,12 +7,15 @@
 
 <section class="row">
   <div class="medium-6 medium-centered columns">
-    <form class="application-form form-card">
-      <h2 class="application-title t-gamma">Create an Account</h2>
-      <div class="form-group padding-bottom">
-        <p class="t-small c-steel">You'll use this information to log in to your account, so make sure you can remember it.</p>
-      </div>
-        
+    <a href="#" class="back-link">{{> icons.base icon="left" size="small" fill="primary"}} Continue with Application</a>
+    <form class="account-form form-card">
+      <header class="account-header padding-top text-center">
+        <h2 class="account-title t-gamma">Create an Account</h2>
+        <div class="form-group padding-bottom">
+          <p class="t-small c-steel">You'll use this information to log in to your account, so make sure you can remember it.</p>
+        </div>
+      </header>
+
       <div class="form-group">
         <h3 class="form-label">Email Address</h3>
         {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
@@ -25,9 +28,17 @@
         {{> forms.text-input placeholder="Must be 6 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
       </div>
 
-    </form>
+      <div class="form-group border-bottom">
+      {{> forms.button-stack--paginate left="Cancel" l-classes="button-link button-lined small-text-center expand-small" right="Create" r-classes="primary right expand-small"}}
+      </div>
 
-    {{> forms.button-stack--paginate left="Cancel" l-classes="button-link button-lined small-text-center expand-small" right="Create" r-classes="primary right expand-small"}}
+      <header class="account-header padding-top--2x text-center">
+        <h2 class="account-title t-gamma">Already have an account?</h2>
+        <div class="form-group padding-bottom">
+          <p class="t-small c-steel">{{> buttons.button text="Sign In" classes="no-margin" }}</p>
+        </div>
+      </header>
+    </form>
   </div>
 </section>    
 

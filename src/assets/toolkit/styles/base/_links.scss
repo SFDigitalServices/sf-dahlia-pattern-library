@@ -31,4 +31,10 @@ a, .btn-link {
     cursor: pointer;
     text-decoration: underline;
   }
-}  
+}
+
+.back-link {
+  @include responsive-text-size('small');
+  display: inline-block;
+  padding-bottom: 1rem;
+}

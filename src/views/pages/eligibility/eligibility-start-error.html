@@ -8,6 +8,14 @@
 <section class="row margin-bottom--2x">
   <div class="medium-10 medium-centered columns">
     <form class="form-card margin-bottom--2x">
+      <div class="form-card_header">
+        <p class="post-dealine_alert">
+          <span class="label label--flag alert-tint">
+            {{> icons.base icon="clock" scale="medium"}}
+            You'll need to resolve any errors before moving on.</span>
+        </p>
+      </div>
+
       <div class="row">
         <div class="medium-6 columns padding-left--2x padding-top padding-bottom">
           <header class="margin-bottom">
@@ -48,10 +56,13 @@
       </div>
 
       <footer class="form-card_footer">
-        <div class="note bg-tint padding">
-          <p class="t-tiny no-margin">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the
-
-          <button class="button-link t-tiny">Household Income Calculator</button></p>
+        <div class="note bg-smoke row padding padding-left--2x padding-right--2x">
+          <div class="medium-7 columns">
+            <p class="t-tiny">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the </p>
+          </div>
+          <div class="medium-5 columns">
+            <button class="ghost-white small no-margin expand-small">Household Income Calculator</button>
+          </div>
         </div>
       </footer>
     </form>
