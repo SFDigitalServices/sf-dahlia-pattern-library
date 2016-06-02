@@ -53,7 +53,7 @@ $(document).ready(function () {
 
   $('body').addClass('js');
     var $menu = $('.toggle-nav'),
-    $menulink = $('.menu-link');
+    $menulink = $('.toggle-nav-link');
 
     $menulink.click(function() {
     $menulink.toggleClass('active');
