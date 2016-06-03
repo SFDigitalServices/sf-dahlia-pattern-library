@@ -48,6 +48,11 @@
   padding: 2rem;
   text-align: center;
 
+  &.expand {
+    margin-left: -$column-gutter/2;
+    margin-right: -$column-gutter/2;
+  }
+
   p:last-of-type {
     margin-bottom: 0;
   }

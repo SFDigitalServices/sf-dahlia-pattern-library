@@ -2,33 +2,33 @@
 {{> navigation.top-bar }}
 
 <div class="dash-container tall">
-  <section class="row">
+  <section class="row collapse">
     <div class="medium-6 medium-centered columns">
-      <form class="account-form form-card padding-left--2x padding-right--2x">
-        <header class="account-header padding-top text-center">
-          <h2 class="application-title t-gamma">Sign In</h2>
+      <form class="dash-feed">
+        <header class="dash-header">
+          <h1 class="dash-title t-beta no-margin">Sign In</h1>
         </header>
 
-        <div class="form-group">
-          <h3 class="form-label">Email Address</h3>
-          {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
-        </div>
-
-        <div class="form-group">
-          <h3 class="form-label">Password</h3>
-          {{> forms.text-input--base placeholder="Must be 6 characters" label="password"}}
-          <small class="form-note shift-up"><a href="#">Forgot Password?</a></small>
-        </div>
-
-        <div class="form-group border-bottom clearfix">
-          {{> buttons.button text="Sign In" classes="primary right" }}
-        </div>
-
-        <header class="account-header padding-top--2x text-center">
-          <h2 class="account-title t-gamma">Don't have an account?</h2>
-          <div class="form-group padding-bottom">
-            <p class="t-small c-steel">{{> buttons.button text="Create Account" classes="no-margin" }}</p>
+        <div class="dash-feed-inner border-bottom">
+          <div class="form-group">
+            <h3 class="form-label">Email Address</h3>
+            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
           </div>
+
+          <div class="form-group">
+            <h3 class="form-label">Password</h3>
+            {{> forms.text-input--base placeholder="Must be 6 characters" label="password"}}
+            <small class="form-note shift-up"><a href="#">Forgot Password?</a></small>
+          </div>
+          
+          <div class="form-group">
+            <p class="t-small c-steel text-center padding-top">{{> buttons.button text="Sign In" classes="no-margin primary" }}</p>
+          </div>
+        </div>
+
+        <header class="dash-header">
+          <h2 class="dash-title t-gamma">Don't have an account?</h2>
+          <p class="t-small c-steel">{{> buttons.button text="Create Account" classes="no-margin" }}</p>
         </header>
       </form>
     </div>
