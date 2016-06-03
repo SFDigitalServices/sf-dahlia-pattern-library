@@ -2,8 +2,6 @@
 // Flexible content container
 
 .card {
-  border: 2px solid $white-smoke;
-  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -41,6 +39,14 @@
 .card-link {
   @include responsive-text-size('small');
   margin-right: 1rem;
+}
+
+.dash-card {
+  border-bottom: 1px solid $smoke;
+
+  &:last-of-type {
+    border-bottom-width: 0;
+  }
 }
 
 .dash-card-status {

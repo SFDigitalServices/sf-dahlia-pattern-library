@@ -37,4 +37,8 @@ a, .btn-link {
   @include responsive-text-size('small');
   display: inline-block;
   padding-bottom: 1rem;
+
+  @media #{$small-only} {
+    padding-top: 1rem;
+  }  
 }

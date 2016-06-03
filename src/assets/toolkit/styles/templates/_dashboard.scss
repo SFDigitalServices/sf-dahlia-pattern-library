@@ -1,0 +1,101 @@
+// Dashboard templates
+
+.dash-container {
+  @media #{$medium-up} {
+    background-color: $vapor;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  &.tall {
+    @media #{$medium-up} {
+      padding-bottom: 4rem;
+      padding-top: 4rem;
+    }
+  } 
+}
+
+.dash-feed,
+.dash-main {
+  // max form field width
+  .max-width {
+    @media #{$medium-up} {
+      max-width: 80%;
+    }
+  }
+}
+
+.dash-feed {
+  background-color: #fff;
+  margin-bottom: 0;
+
+  @media #{$medium-up} {
+    @include rounded-block();
+  }
+}
+
+.dash-feed-inner {
+  padding: 1.5rem 2rem;
+
+  &.expand {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.dash-header {
+  border-bottom: 1px solid $smoke;
+  padding: 2rem;
+  text-align: center;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.dash-section {
+  @include clearfix;
+}
+
+.dash-block {
+  @media #{$medium-up} {
+    @include grid-column(6);
+  }
+}
+
+.dash-item {
+  background-color: #fff;
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid $smoke;
+
+  @media #{$medium-up} {
+    @include rounded-block();
+    margin-bottom: 2rem;
+  }
+
+  p {
+    @include responsive-text-size('small');
+  }
+}
+
+.dash-name {
+  @include responsive-text-size('delta');
+  margin-bottom: 0;
+}
+
+.dash-slat {
+  border-bottom: 1px solid $smoke;
+  padding-bottom: 2rem;
+}  
+
+.property-card.card {
+  table {
+    margin-bottom: 0;
+  }
+
+  .property-card_figure {
+    padding-left: 0;
+  }
+}
+

@@ -70,6 +70,11 @@
   }
 }
 
+@mixin rounded-block() {
+  border: 1px solid $smoke;
+  border-radius: $form-card-radius;
+}
+
 // Image replace
 @mixin image-replace($imageURL) {
   background: url($imageURL) no-repeat;

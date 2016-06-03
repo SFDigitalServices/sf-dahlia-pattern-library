@@ -130,7 +130,7 @@ button,
     color: $primary;
     display: inline;
     font-family: $font-family;
-    font-weight: $t-regular;
+    font-weight: $t-regular !important;
     letter-spacing: normal;
     padding: 0;
     margin-bottom: 0;

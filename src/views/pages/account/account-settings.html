@@ -1,6 +1,5 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
-{{> headers.lead-header title="My Account" background="dark" color="white" classes="bg-gradient"}}
 
 <nav class="border-bottom">
   <div class="row">
@@ -8,42 +7,46 @@
   </div>
 </nav>
 
-<section class="row">
+<div class="dash-container">
+  <section class="row">
+    <div class="medium-6 medium-centered columns">
+      <main class="dash-feed">
 
-  <div class="medium-8 medium-centered columns margin-top--2x margin-bottom--2x">
-    <main class="dash-main">
-      <div class="form-card">
-        <div class="card-inner">
-          <h2>Edit Profile</h2>
+          <header class="dash-header text-center">
+            <h2 class="dash-title t-gamma no-margin">Account Settings</h2>
+          </header>
 
-          <div class="slat padding-top-none">
-          <div class="form-group max-width">
-            <h3 class="form-label">Update Email Address</h3>
-            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
-
-            {{> buttons.button classes="small no-margin" text="Update profile"}}
-          </div>
-          </div>
-
-          <div class="slat">
-          <div class="form-group">
-            <h3 class="form-label">Change Password</h3>
-            <p class="small">When changing your password make sure you make note of it so you remember it in the future.</p>
-            {{> buttons.button classes="small secondary no-margin" text="Change your password"}}
-          </div>
+          <div class="dash-feed-inner border-bottom">
+            <div class="form-group">
+              <h3 class="form-label">Update Email Address</h3>
+              {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
+              <p class="text-center padding-top">
+                {{> buttons.button classes="small no-margin" text="Update profile"}}
+              </p>
+            </div>
           </div>
 
-          <div class="slat">
-          <div class="form-group max-width">
-            <h3 class="form-label">Delete Account</h3>
-            <p class="small">Deleting your account will mean losing all previously saved favorites and settings.</p>
-            {{> buttons.button classes="small alert no-margin" text="Delete your account"}}
+          <div class="dash-feed-inner border-bottom">
+            <div class="form-group">
+              <h3 class="form-label">Change Password</h3>
+              <p class="small">When changing your password make sure you make note of it so you remember it in the future.</p>
+              <p class="text-center padding-top">
+                {{> buttons.button classes="small secondary no-margin" text="Change your password"}}
+              </p>
+            </div>
           </div>
+
+          <div class="dash-feed-inner border-bottom">
+            <div class="form-group">
+              <h3 class="form-label">Delete Account</h3>
+              <p class="small">Deleting your account will mean losing all previously saved favorites and settings.</p>
+              <p class="text-center padding-top">
+                {{> buttons.button classes="small alert no-margin" text="Delete your account"}}
+              </p>
           </div>
         </div>
-      </div>
-    </main>
-  </div>
-</section>
-
+      </main>
+    </div>
+  </section>
+</div>
 {{> components.footer}}

@@ -7,13 +7,19 @@
   </div>
 </nav>
 
+<div class="dash-container">
+  <section class="row collapse">
+    <div class="medium-8 medium-centered columns">
+      <main class="dash-feed">
+        <header class="dash-header text-center">
+          <h2 class="dash-title t-gamma no-margin">My Applications</h2>
+        </header>
 
-<section class="row">
-  <div class="medium-8 medium-centered columns margin-top--2x margin-bottom--2x">
-    <main class="dash-feed">
-      {{> components.card }}
-    </main>
-  </div>
-</section>    
+        {{> components.card }}
+        {{> components.card }}
+      </main>
+    </div>
+  </section>
+</div>
 
 {{> components.footer}}

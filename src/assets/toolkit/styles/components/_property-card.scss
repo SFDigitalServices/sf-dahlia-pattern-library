@@ -32,6 +32,20 @@
     }
   }
 
+  &.nested {
+    @media #{$medium-up} {
+      .property-card_figure {
+        @include grid-column(6);
+        padding: 0;
+      }
+
+      .property-card_content {
+        @include grid-column(6);
+        padding-right: 0;
+      }
+    }
+  }
+
   // Labels overlaying images
   .status-label {
     @include absolute(.5rem,null,null,0);

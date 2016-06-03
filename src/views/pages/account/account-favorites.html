@@ -1,6 +1,5 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
-{{> headers.lead-header title="My Account" background="dark" color="white" classes="bg-gradient"}}
 
 <nav class="border-bottom">
   <div class="row">
@@ -8,14 +7,24 @@
   </div>
 </nav>
 
-<section class="row">
-  <div class="medium-12 columns margin-top--2x margin-bottom--2x">
-    <main class="dash-feed">
-      {{> property-card--fave}}
+<div class="dash-container">
+  <section class="row collapse">
+    <div class="medium-12 columns">
+      <main class="dash-feed">
+        <header class="dash-header text-center">
+          <h2 class="dash-title t-gamma no-margin">My Favorites</h2>
+        </header>
 
-      {{> property-card--fave}}
-    </main>
-  </div>
-</section>    
+        <div class="dash-feed-inner expand border-bottom">
+          {{> property-card--fave classes="nested"}}
+        </div>
+
+        <div class="dash-feed-inner expand border-bottom">
+          {{> property-card--fave classes="nested"}}
+        </div>
+      </main>
+    </div>
+  </section>    
+</div>
 
 {{> components.footer}}

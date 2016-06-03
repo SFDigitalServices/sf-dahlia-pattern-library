@@ -1,39 +1,42 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<div class="bg-vapor">
-  <section class="row padding-top--2x padding-bottom--2x">
+<div class="dash-container tall">
+  <section class="row collapse">
     <div class="medium-6 medium-centered columns">
+      <div class="back-link-container small-only-text-center">
       <a href="#" class="back-link">{{> icons.base icon="left" size="small" fill="primary"}} Continue with Application</a>
-      <form class="account-form form-card padding-left--2x padding-right--2x">
-        <header class="account-header padding-top text-center">
-          <h2 class="account-title t-gamma">Create an Account</h2>
-          <div class="form-group padding-bottom">
-            <p class="t-small c-steel">You'll use this information to log in to your account, so make sure you can remember it.</p>
-          </div>
+      </div>
+      <form class="dash-feed">
+        <header class="dash-header">
+          <h2 class="dash-title t-gamma">Create an Account</h2>
+          <p class="t-small c-steel">You'll use this information to log in to your account, so make sure you can remember it.</p>
         </header>
 
-        <div class="form-group">
-          <h3 class="form-label">Email Address</h3>
-          {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
-          {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
-        </div>
-
-        <div class="form-group">
-          <h3 class="form-label">Password</h3>
-          {{> forms.text-input--base placeholder="Must be 6 characters" label="password"}}
-          {{> forms.text-input placeholder="Must be 6 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
-        </div>
-
-        <div class="form-group border-bottom">
-        {{> forms.button-stack--paginate left="Cancel" l-classes="button-link button-lined small-text-center expand-small" right="Create" r-classes="primary right expand-small"}}
-        </div>
-
-        <header class="account-header padding-top--2x text-center">
-          <h2 class="account-title t-gamma">Already have an account?</h2>
-          <div class="form-group padding-bottom">
-            <p class="t-small c-steel">{{> buttons.button text="Sign In" classes="no-margin" }}</p>
+        <div class="dash-feed-inner border-bottom">
+          <div class="form-group">
+            <h3 class="form-label">Email Address</h3>
+            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
+            {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
           </div>
+        </div>
+        <div class="dash-feed-inner border-bottom">
+          <div class="form-group">
+            <h3 class="form-label">Password</h3>
+            <p class="form-note margin-bottom">Must be at least 8 characters and include 1 numeric character.</p>
+
+            {{> forms.text-input--base placeholder="Must be 8 characters" label="password"}}
+            {{> forms.text-input placeholder="Must be 8 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
+          </div>
+
+          <div class="form-group">
+            <p class="t-small c-steel text-center padding-top">{{> buttons.button text="Create Account" classes="primary no-margin" }}</p>
+          </div>
+        </div>
+
+        <header class="dash-header">
+          <h2 class="dash-title t-gamma">Already have an account?</h2>
+          <p class="t-small c-steel">{{> buttons.button text="Sign In" classes="no-margin" }}</p>
         </header>
       </form>
     </div>
