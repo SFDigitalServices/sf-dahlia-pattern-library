@@ -7,20 +7,20 @@
       <div class="back-link-container small-only-text-center">
       <a href="#" class="back-link">{{> icons.base icon="left" size="small" fill="primary"}} Continue with Application</a>
       </div>
-      <form class="dash-feed">
+      <form class="dash-card">
         <header class="dash-header">
-          <h1 class="dash-title t-beta">Create an Account</h1>
+          <h1 class="dash-title">Create an Account</h1>
           <p class="t-small c-steel">You'll use this information to log in to your account, so make sure you can remember it.</p>
         </header>
 
-        <div class="dash-feed-inner border-bottom">
+        <div class="dash-card-inner border-bottom">
           <div class="form-group">
             <h3 class="form-label">Email Address</h3>
             {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
             {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
           </div>
         </div>
-        <div class="dash-feed-inner border-bottom">
+        <div class="dash-card-inner border-bottom">
           <div class="form-group">
             <h3 class="form-label">Password</h3>
             <p class="form-note margin-bottom">Must be at least 8 characters and include 1 numeric character.</p>
@@ -34,10 +34,10 @@
           </div>
         </div>
 
-        <header class="dash-header">
+        <footer class="dash-header">
           <h2 class="dash-title t-gamma">Already have an account?</h2>
           <p class="t-small c-steel">{{> buttons.button text="Sign In" classes="no-margin" }}</p>
-        </header>
+        </footer>
       </form>
     </div>
   </section>    

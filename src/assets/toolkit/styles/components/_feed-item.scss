@@ -1,0 +1,38 @@
+.feed-item {
+  border-bottom: 1px solid $smoke;
+}
+
+.feed-item-inner {
+  padding: 1rem;
+}
+
+.feed-item-title {
+  @include responsive-text-size('delta');
+  font-family: $sans-font-family;
+  margin-bottom: 0;
+} 
+
+.feed-item-status {
+  @media #{$small-only} {
+    margin-bottom: 0;
+  }  
+}
+
+.feed-item-link {
+  @include responsive-text-size('small');
+  margin-right: 1rem;
+}
+
+
+.feed-item-date {
+  color: $steel;
+  
+  @media #{$medium-up} {
+    @include absolute(1rem,1rem,null,null);
+  }
+}
+
+.feed-item-units {
+  @include responsive-text-size('small');
+  color: $steel;
+}

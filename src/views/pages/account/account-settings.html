@@ -10,13 +10,12 @@
 <div class="dash-container">
   <section class="row">
     <div class="medium-6 medium-centered columns">
-      <main class="dash-feed">
-
+      <main class="dash-card">
           <header class="dash-header text-center">
-            <h1 class="dash-title t-beta no-margin">Account Settings</h1>
+            <h1 class="dash-title no-margin">Account Settings</h1>
           </header>
 
-          <div class="dash-feed-inner border-bottom">
+          <div class="dash-card-inner border-bottom">
             <div class="form-group">
               <h2 class="form-label">Update Email Address</h2>
               {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
@@ -26,7 +25,7 @@
             </div>
           </div>
 
-          <div class="dash-feed-inner border-bottom">
+          <div class="dash-card-inner border-bottom">
             <div class="form-group">
               <h2 class="form-label">Change Password</h2>
               <p class="small">When changing your password make sure you make note of it so you remember it in the future.</p>
@@ -36,7 +35,7 @@
             </div>
           </div>
 
-          <div class="dash-feed-inner border-bottom">
+          <div class="dash-card-inner border-bottom">
             <div class="form-group">
               <h2 class="form-label">Delete Account</h2>
               <p class="small">Deleting your account will mean losing all previously saved favorites and settings.</p>
@@ -49,4 +48,5 @@
     </div>
   </section>
 </div>
+
 {{> components.footer}}

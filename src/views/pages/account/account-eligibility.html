@@ -8,11 +8,11 @@
 </nav>
 
 <div class="dash-container">
-  <section class="row">
+  <section class="row collapse">
     <div class="medium-10 medium-centered columns">
-      <form class="form-card margin-bottom--2x">
-        <header class="dash-header text-center margin-bottom expand">
-          <h1 class="dash-title t-beta no-margin">My Eligibility</h1>
+      <form class="dash-card margin-bottom">
+        <header class="dash-header text-center margin-bottom">
+          <h1 class="dash-title no-margin">My Eligibility</h1>
         </header>
 
         <div class="row">
@@ -53,17 +53,14 @@
             {{> forms.radio-group--inline }}
           </div>
         </div>
-
-        <footer class="form-card_footer">
-          <div class="note bg-tint padding">
-            <p class="t-tiny no-margin">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the
-
-            <button class="button-link t-tiny">Household Income Calculator</button></p>
-          </div>
-        </footer>
       </form>
 
       {{> forms.button-stack--paginate left="Reset Filters" l-classes="button-link button-lined small-text-center expand-small" right="View Matching Properties" r-classes="right primary expand-small"}}
+
+      <div class="note bg-white padding">
+        <p class="t-tiny no-margin">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the
+        <button class="button-link t-tiny">Household Income Calculator</button></p>
+      </div>
     </div>    
   </section>
 </div>

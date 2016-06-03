@@ -15,49 +15,6 @@
   } 
 }
 
-.dash-feed,
-.dash-main {
-  // max form field width
-  .max-width {
-    @media #{$medium-up} {
-      max-width: 80%;
-    }
-  }
-}
-
-.dash-feed {
-  background-color: #fff;
-  margin-bottom: 0;
-
-  @media #{$medium-up} {
-    @include rounded-block();
-  }
-}
-
-.dash-feed-inner {
-  padding: 1.5rem 2rem;
-
-  &.expand {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.dash-header {
-  border-bottom: 1px solid $smoke;
-  padding: 2rem;
-  text-align: center;
-
-  &.expand {
-    margin-left: -$column-gutter/2;
-    margin-right: -$column-gutter/2;
-  }
-
-  p:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
 .dash-section {
   @include clearfix;
 }

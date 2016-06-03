@@ -29,6 +29,10 @@ $form-card-radius: rem-calc(12);
     }
   }
 
+  &.no-padding-top {
+    padding-top: 0;
+  }
+
   .border-bottom {
     border-color: $smoke;
   }

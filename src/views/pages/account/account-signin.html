@@ -4,12 +4,12 @@
 <div class="dash-container tall">
   <section class="row collapse">
     <div class="medium-6 medium-centered columns">
-      <form class="dash-feed">
+      <form class="dash-card">
         <header class="dash-header">
-          <h1 class="dash-title t-beta no-margin">Sign In</h1>
+          <h1 class="dash-title no-margin">Sign In</h1>
         </header>
 
-        <div class="dash-feed-inner border-bottom">
+        <div class="dash-card-inner border-bottom">
           <div class="form-group">
             <h3 class="form-label">Email Address</h3>
             {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
@@ -26,10 +26,10 @@
           </div>
         </div>
 
-        <header class="dash-header">
-          <h2 class="dash-title t-gamma">Don't have an account?</h2>
+        <footer class="dash-header">
+          <h2 class="dash-title">Don't have an account?</h2>
           <p class="t-small c-steel">{{> buttons.button text="Create Account" classes="no-margin" }}</p>
-        </header>
+        </footer>
       </form>
     </div>
   </section>    

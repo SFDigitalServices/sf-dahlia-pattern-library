@@ -96,7 +96,8 @@
 				font-weight: bold;
 				content: '+';
 				display: block;
-				color: map-get($colors, menu-text) !important;
+				// color: map-get($colors, menu-text) !important;
+				color: #fff;
 			}
 		}
 		&.is-open {
