@@ -18,6 +18,11 @@
     width: 100% !important;
     height: 100% !important;
   }
+
+  img {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .map-link {

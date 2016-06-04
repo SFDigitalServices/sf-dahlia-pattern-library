@@ -13,9 +13,14 @@
   a {
     color: $wash;
   }
+}
 
-  &_menu-icon {
-    display: block;
-    margin: 1rem 0 0 rem-calc(30);
-  }
+.nav-mobile_menu-icon {
+  display: block;
+  margin: 1rem 0 0 rem-calc(30);
+}
+
+.nav-mobile_nested-list {
+  margin-left: 1rem;
+  margin-top: 1.5rem;
 }

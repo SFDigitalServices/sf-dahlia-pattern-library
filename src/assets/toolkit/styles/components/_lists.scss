@@ -1,29 +1,4 @@
-//
-// Block lists
-.block-list {
-  margin-bottom: 2rem;
-  
-  li {
-    @include slat();
-  }
-}
 
-.block-list_title {
-  margin-bottom: .5rem;
-}
-
-// Block list item
-.block-item {
-  @include slat();
-
-  .button-on-small {
-    @media #{$small-only} {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      margin-bottom: .25rem;
-    }  
-  }
-}
 
 .inline-group {
   @include clearfix;

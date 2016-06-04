@@ -198,7 +198,7 @@ gulp.task('serve', function () {
 		}
 	}
 
-	gulp.task('assemble:watch', ['assemble']);
+	gulp.task('assemble:watch', ['assemble'], reload);
 	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
 	gulp.task('styles:fabricator:watch', ['styles:fabricator']);

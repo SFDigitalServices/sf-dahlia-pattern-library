@@ -40,6 +40,10 @@
     text-transform: uppercase;
   }
 
+.content-group_days {
+  @include clearfix;
+}
+
 .content-group_day {
   @include responsive-text-size('small');
   color: $oil;
@@ -53,6 +57,7 @@
 
 .content-group_time {
   @include responsive-text-size('tiny');
+  clear: right;
   color: $oil;
   float: right;
   font-family: $alt-font-family;

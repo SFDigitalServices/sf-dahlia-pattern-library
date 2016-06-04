@@ -27,13 +27,12 @@
   }
 }
 
-
 .title-area {
   width: 100%;
 
   @media #{$medium-up} {
-    width: 25%;
-  }  
+    width: 30%;
+  }
 }
 
 // Logo
@@ -65,11 +64,5 @@
       padding-bottom: rem-calc(10) !important;
       padding-top: rem-calc(10) !important;
     }
-  }
-}
-
-.title-area {
-  @media #{$medium-up} {
-    width: 30%;
   }
 }

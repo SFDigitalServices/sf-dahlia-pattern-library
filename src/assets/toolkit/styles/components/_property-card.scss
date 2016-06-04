@@ -32,7 +32,18 @@
     }
   }
 
+  // Exceptions for nesting in dashboard
   &.nested {
+    @media #{$medium-only} {
+      button.round-icon.has-label {
+        margin-right: 0 !important;
+
+        .inline {
+          display: none !important;
+        }  
+      }
+    }
+
     @media #{$medium-up} {
       .property-card_figure {
         @include grid-column(6);
