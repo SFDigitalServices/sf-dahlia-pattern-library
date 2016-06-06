@@ -7,15 +7,20 @@
 
   dt, dd, li {
     a {
-      color: $charcoal;
+      background-color: $charcoal;
+      border-radius: 3px;
+      color: #fff;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
 
       &:focus,
       &:hover {
-        color: $oil;
+        color: #fff;
       }
 
       &.disabled {
-        color: $steel;
+        background-color: transparent;
+        color: $charcoal;
         cursor: default;
         pointer-events: none;
       }
@@ -39,9 +44,9 @@
 .application-form_nav {
   dd {
     @media #{$small-only} {
-      margin-left: rem-calc(8);
+      margin-left: rem-calc(5);
 
-      a {
+      a.disabled {
         padding-left: rem-calc(2);
         padding-right: rem-calc(2);
       }
