@@ -1,5 +1,9 @@
 .feed-item {
   border-bottom: 1px solid $smoke;
+
+  &:last-of-type {
+    border-bottom-width: 0;
+  }
 }
 
 .feed-item-inner {

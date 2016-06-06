@@ -1,5 +1,9 @@
 // Dashboard templates
 
+.dash-body {
+  background-color: $vapor;
+}
+
 .dash-container {
   @media #{$medium-up} {
     background-color: $vapor;
