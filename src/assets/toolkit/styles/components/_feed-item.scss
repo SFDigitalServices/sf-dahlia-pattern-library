@@ -1,5 +1,6 @@
 .feed-item {
   border-bottom: 1px solid $smoke;
+  position: relative;
 
   &:last-of-type {
     border-bottom-width: 0;
@@ -13,13 +14,12 @@
 .feed-item-title {
   @include responsive-text-size('delta');
   font-family: $sans-font-family;
-  margin-bottom: 0;
 } 
 
-.feed-item-status {
-  @media #{$small-only} {
-    margin-bottom: 0;
-  }  
+.feed-item-title,
+.feed-item-status,
+.feed-item-number {
+  margin-bottom: 0; 
 }
 
 .feed-item-link {
@@ -27,8 +27,8 @@
   margin-right: 1rem;
 }
 
-
 .feed-item-date {
+  @include responsive-text-size('tiny');
   color: $steel;
   
   @media #{$medium-up} {
@@ -40,3 +40,7 @@
   @include responsive-text-size('small');
   color: $steel;
 }
+
+.feed-item-footer {
+  padding-top: 1rem;
+}  
