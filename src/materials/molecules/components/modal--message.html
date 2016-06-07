@@ -1,0 +1,22 @@
+<div ng-controller="ModalController" aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="message-modal">
+
+  <header class="modal-header aside-header">
+    <hgroup class="aside-header_group">
+      <h1 class="modal-title t-gamma margin-bottom--half">Thanks for Signing Up</h1>
+      <p class="c-steel">We'll save your application for 123 Main St.</p>
+    </hgroup>
+  </header>
+
+  <section class="modal-inner bg-dust padding--3halves">
+     <h2 class="t-delta">What to do next</h2>
+     <p class="c-charcoal">You can contine editing your application for 132 Main St.</p>
+     <p class="text-center no-margin">{{> buttons.button text="Continue" classes="primary tiny"}}</p>
+     <p class="c-charcoal">You'll also recieve an email confirming you account. You can use the link in the email to finish your application later.</p>
+  </section>
+
+  <!-- <a class="close-reveal-modal" aria-label="Close"> -->
+  <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
+    Close {{> icons.base icon="close" size="small" fill="primary"}}
+  </a>
+
+</div>

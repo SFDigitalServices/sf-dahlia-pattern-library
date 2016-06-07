@@ -1,0 +1,13 @@
+.aside-header {
+  position: relative;
+}
+
+.aside-header_icon {
+  @include absolute(50%,null,null,1rem);
+  @include translateY(-50%);
+}
+
+.aside-header_group {
+  border-left: 3px solid $primary;
+  padding-left: 1rem;
+}
