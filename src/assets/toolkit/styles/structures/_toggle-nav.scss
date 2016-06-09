@@ -1,11 +1,27 @@
+.local-nav-container {
+  background: $primary;
+}
+
 .local-nav {
-  padding-top: 1.5rem;
-  
-  dt, dd, li {
-    @media #{$small-only} {
-      float: none;
-      padding: .25rem 0;
-    }  
+  @include clearfix;
+  background: $primary;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.local-nav-item {
+  @media #{$medium-up} {
+    display: inline;
+  }
+
+  a {
+    @include responsive-text-size('small');
+    color: $white;
+    font-family: $alt-font-family;
+    font-weight: $font-weight-bold;
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
   }
 }
 
@@ -20,9 +36,13 @@
 }
 
 a.toggle-nav-link {
+  color: $white;
   display: block;
+  font-family: $alt-font-family;
+  letter-spacing: 1.5px;
   padding: 1rem;
   position: relative;
+  text-transform: uppercase;
 
   &.active {
     border-bottom: 1px solid $smoke;

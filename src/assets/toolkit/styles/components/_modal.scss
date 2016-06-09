@@ -3,6 +3,13 @@
 
 .reveal-modal {
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+  // box-shadow: none;
+  // border-width: 0;
+
+  // &:focus {
+  //   outline: 0;
+  // }
 }
 
 // Scrolling panel
