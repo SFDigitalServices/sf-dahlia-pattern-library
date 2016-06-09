@@ -6,7 +6,10 @@
   @include clearfix;
   background: $primary;
   letter-spacing: 1.5px;
-  text-align: center;
+
+  @media #{$medium-up} {
+    text-align: center;
+  }  
 }
 
 .local-nav-item {

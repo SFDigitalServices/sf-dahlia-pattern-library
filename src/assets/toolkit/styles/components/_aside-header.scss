@@ -1,5 +1,11 @@
 .aside-header {
   position: relative;
+
+  &.alert {
+    .aside-header_group {
+      border-left-color: $alert;
+    }  
+  }
 }
 
 .aside-header_icon {
