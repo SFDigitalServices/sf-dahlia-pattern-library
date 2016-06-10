@@ -22,7 +22,7 @@
     .property-card_figure {
       @include grid-column(7);
       padding: 0;
-      background-color: transparent;
+      background-color: $charcoal;
     }
     
     .property-card_content {
@@ -79,6 +79,7 @@
 .property-card_figure {
   text-align: center;
   position: relative;
+  line-height: 1;
 }
 
 .property-card_thumb {
