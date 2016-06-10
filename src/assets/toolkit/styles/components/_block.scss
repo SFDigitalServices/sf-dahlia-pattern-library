@@ -60,12 +60,6 @@
 //
 // Home Page
 
-.welcome-block {
-  @media #{$medium-up} {
-    padding-top: 4rem;
-  }  
-}
-
 // Message with action
 .splash-message {
   @media #{$medium-up} {
@@ -85,6 +79,12 @@
       margin-bottom: 0;
     }  
   }
+}
+
+.welcome-block {
+  @media #{$medium-up} {
+    padding-top: 4rem;
+  }  
 }
 
 // Block Icon calls to action
