@@ -4,4 +4,8 @@
 
 .ng-pageslide {
   background-color: $oil;
+
+  @media #{$medium-up} {
+    display: none;
+  }  
 }

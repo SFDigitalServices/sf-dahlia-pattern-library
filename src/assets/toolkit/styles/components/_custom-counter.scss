@@ -45,4 +45,9 @@
     font-family: $serif-font-family;
     margin-bottom: .5rem;
   }
+
+  .custom-counter_text {
+    @include responsive-text-size('small');
+    color: $charcoal;
+  }
 }

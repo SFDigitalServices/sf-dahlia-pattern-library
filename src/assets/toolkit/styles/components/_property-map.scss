@@ -27,6 +27,7 @@
 
 .map-link {
   @include responsive-text-size('small');
+  color: $deep;
   display: block;
   line-height: 1;
   overflow: visible;

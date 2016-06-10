@@ -10,6 +10,11 @@
   position: relative;
   text-align: center;
   z-index: 1;
+  line-height: 1;
+
+  @media #{$medium-up} {
+    background-color: $charcoal;
+  }  
 }
 
 .property-hero_container {
@@ -17,6 +22,7 @@
   display: inline-block;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 
 .property-hero_thumb {
@@ -36,7 +42,7 @@
 
   @media #{$medium-up} {
     @include responsive-text-size('beta');
-    @include absolute(null,3.5rem,1.5rem,3.5rem);
+    @include absolute(null,3.5rem,1.25rem,3.5rem);
     color: #fff;
     display: inline-block;
     z-index: 2;
