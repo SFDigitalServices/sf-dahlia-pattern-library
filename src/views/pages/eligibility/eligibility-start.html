@@ -16,7 +16,7 @@
           </header>
 
           <div class="form-group">
-            <label class="form-label sr-only">Household Size</label>
+            <label class="form-label sr-only" for="people">Household Size</label>
 
             {{> forms.select name="people" placeholder="Enter number of people" options=inputs.people }}
           </div>
@@ -26,6 +26,7 @@
           </div>
 
           <div class="form-group">
+            <label class="form-label sr-only" for="children">Children</label>
             {{> forms.select name="children" placeholder="How many children?" options=inputs.children }}
           </div>
 
@@ -39,7 +40,6 @@
           </header>
 
           <div class="form-group">
-            <label class="form-label sr-only">Household Income</label>
             {{> forms.input-income }}
           </div>
           
@@ -47,20 +47,15 @@
         </div>
       </div>
 
-      <footer class="form-card_footer">
-        <div class="note bg-snow row padding padding-left--2x padding-right--2x">
-          <div class="medium-7 columns">
-            <p class="t-tiny">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the </p>
-          </div>
-          <div class="medium-5 columns">
-            <button class="ghost-white small no-margin expand-small">Household Income Calculator</button>
-          </div>
-        </div>
-      </footer>
     </form>
 
     {{> forms.button-stack--paginate left="Reset Filters" l-classes="button-link button-lined small-text-center expand-small" right="View Matching Properties" r-classes="right primary expand-small"}}
-  </div> 
+
+    <div class="note bg-vapor padding margin-top">
+      <p class="t-small no-margin">Note: Your total should include all income sources for each person you plan to live with over the age of 18. If you need help calculating your total,  please use the
+      <button class="button-link t-tiny">Household Income Calculator</button></p>
+    </div>
+  </div>
 </section>
 
 {{> components.footer}} 
