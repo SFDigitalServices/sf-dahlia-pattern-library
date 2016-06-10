@@ -8,18 +8,18 @@
     <div class="income-source_nested margin-top padding-bottom bg-mist toggled">
       
       <div class="form-group padding-top--2x border-top">
-        <label class="form-label margin-bottom--half">Where does this income come from?</label>
+        <label for="options" class="form-label margin-bottom--half">Where does this income come from?</label>
         {{> forms.select}}
       </div>
 
       <div class="form-group">
-        <label class="form-label margin-bottom--half">How much is the income?</label>
+        <label for="options" class="form-label margin-bottom--half">How much is the income?</label>
         {{> forms.input-income}}
         {{> forms.radio-group--inline name="income" items=inputs.income}}
       </div>
 
       <div class="form-group text-center border-top padding-top"> 
-       {{> buttons.button text="Save Income Source" classes="expand-small no-margin"}}
+       {{> buttons.button text="Save Income Source" classes="ghost-white expand-small no-margin"}}
       </div> 
     </div>
   </div>
