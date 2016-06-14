@@ -274,14 +274,20 @@ $text-sizing: (
   }
 }
 
+// Wrap links on small screens
 .link-wrap {
   @include link-wrap;
 }
 
+// Allow chinese characters to show by reverting to standard font
 .t-ch {
   font-family: $plain-font-family !important;
 }
 
-.h-border-left {
-  border-left: 3px solid $smoke;
+
+// Line break on small screens
+.br-small {
+  @media #{$small-only} {
+    display: block;
+  }  
 }

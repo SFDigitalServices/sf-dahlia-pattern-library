@@ -1,0 +1,17 @@
+<table role="grid" class="table-small table-results">
+  <thead>
+    <tr>
+      <th scope="col">Rank</th>
+      <th scope="col">Ticket</th>
+    </tr>  
+  </thead>
+
+  <tbody>
+    {{#each results.bluxome}}
+    <tr>
+      <td scope="row">{{rank}}</td>
+      <td>{{ticket}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

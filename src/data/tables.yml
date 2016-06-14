@@ -89,3 +89,38 @@ feature-summary:
       units: 6 Units
       area: 639&ndash;900
       acccessibilty: Accessible units
+fees:
+  types:
+    - type: Application Fee
+      amount: $40
+      note: per applicant age 18 and over, due post lottery
+    - type: Deposit
+      amount: $500 - 941 
+      note: or one month's rent, may be higher for lower credit scores
+    - type: Rental Late Fee
+      amount: $50
+      note: after the 6th business day, rent due first of the month
+    - type: Returned Check Fee
+      amount: $35
+      note: due in event of insufficient funds
+    - type: Pet Rent
+      amount: $65
+      note: monthly per pet
+    - type: Pet Deposit
+      amount: $500
+      note: per pet, refundable
+    - type: Storage Unit Fee
+      amount: $75
+      note: per month, optional
+    - type: Bike Room Fee
+      amount: $15
+      note: per month, optional
+    - type: Replacement Fobs
+      amount: $50
+      note: for each replacement
+    - type: Replacement Remotes
+      amount: $50
+      note: for each replacement
+    - type: Utilities
+      note: The building pays water, sewer and trash only. Tenants are responsible for all other utilities
+    

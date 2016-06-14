@@ -1,0 +1,16 @@
+<table role="grid" class="table-small">
+  <thead>
+    <tr>
+      <th scope="col">Fee</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tables.fees.types}}
+    <tr>
+      <td scope="row">{{type}}</td>
+      <td>{{amount}} <small class="br-small">{{note}}</small></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

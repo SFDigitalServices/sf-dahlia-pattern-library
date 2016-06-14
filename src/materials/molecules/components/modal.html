@@ -17,23 +17,7 @@
     <div class="medium-6 medium-pull-6 columns">
       <div class="overflow-panel">
         <div class="overflow-panel_scroll">
-          <table class="table-small table-results">
-            <thead class="">
-              <tr>
-                <th scope="col">Rank</th>
-                <th scope="col">Ticket</th>
-              </tr>  
-            </thead>
-
-            <tbody>
-              {{#each results.bluxome}}
-              <tr>
-                <td scope="row">{{rank}}</td>
-                <td>{{ticket}}</td>
-              </tr>
-              {{/each}}
-            </tbody>
-          </table>
+          {{> tables.table--results }}
         </div>
       </div>
     </div>
