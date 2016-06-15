@@ -38,6 +38,7 @@
 }
 
 // smaller screen listing accordion headers
+accordion.has-icon,
 .page-accordion {
   .accordion dd > a {
     min-height: 5rem;
@@ -45,20 +46,21 @@
   }
 }
 
+accordion.has-toggle,
 .results-accordion,
 .page-accordion {
-  .accordion dd > a {  
+  .accordion dd > a {
     border-bottom: 1px solid $smoke;
     position: relative;
 
     &.active {
       background-color: $mist;
     }
-    
+
     .ui-control {
       @include absolute(1rem,1rem,null,null);
     }
-  }  
+  }
 }
 
 .accordion-name {

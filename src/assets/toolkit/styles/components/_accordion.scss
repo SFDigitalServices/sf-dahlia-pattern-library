@@ -2,8 +2,9 @@
 // Accordion
 //
 
+// prototyping classes
 .accordion {
-
+  
   &.trigger-left {
     @media #{$medium-up} {
       .accordion-navigation a {
@@ -19,6 +20,14 @@
   .ui-control {
     @include absolute(1rem,1rem,null,null);
   }
+}
+
+.accordion-container {
+  &.expanded-content {
+    .content {
+      padding: 0;
+    }
+  }  
 }
 
 // accordion nested inside a parent accordion

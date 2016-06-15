@@ -10,6 +10,7 @@ modifiers:
   tiny:
   expand:
   disabled:
+  button-link:
 icons:
   - arrow-down
   - download
