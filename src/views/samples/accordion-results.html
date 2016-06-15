@@ -1,0 +1,46 @@
+---
+layout: angular
+title: Angular
+---
+
+<div ng-controller="AccordionSampleController">
+  <h1>Accordion Results</h1>
+
+  <accordion close-others="oneAtATime" class="results-accordion">
+    <accordion-group>
+      <accordion-heading>
+        <h3 class="accordion-name">Certificate of Preference</h3>
+        <span class="accordion-subheader">10 qualifying applicants</span>
+      </accordion-heading>
+
+      {{> tables.table--results }}
+    </accordion-group>
+    
+    <accordion-group>
+      <accordion-heading>
+        <h3 class="accordion-name">Displaced Tenants Housing Preference</h3>
+        <span class="accordion-subheader">15 qualifying applicants</span>
+      </accordion-heading>
+      
+      {{> tables.table--results }}
+    </accordion-group>
+    
+    <accordion-group>
+      <accordion-heading>
+        <h3 class="accordion-name">Neighborhood Resident Housing Preference</h3>
+        <span class="accordion-subheader">1200 qualifying applicants</span>
+      </accordion-heading>
+
+      {{> tables.table--results }}
+    </accordion-group>
+
+    <accordion-group>
+      <accordion-heading>
+        <h3 class="accordion-name">Live/Work Preference</h3>
+        <span class="accordion-subheader">2800 qualifying applicants</span>
+      </accordion-heading>
+
+      {{> tables.table--results }}
+    </accordion-group>
+  </accordion>
+</div>

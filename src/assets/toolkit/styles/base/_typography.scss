@@ -40,28 +40,23 @@ h5,
 }
 
 h6,
-.base,
 .t-base {
   @include responsive-text-size('base');
 }
 
 small,
-.small,
 .t-small {
   @include responsive-text-size('small');
 }
 
-.tiny,
 .t-tiny {
   @include responsive-text-size('tiny');
 }
 
-.micro,
 .t-micro {
   @include responsive-text-size('micro');
 }
 
-.quark, 
 .t-quark {
   @include responsive-text-size('quark');
 }
