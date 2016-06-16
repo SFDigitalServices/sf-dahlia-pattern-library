@@ -4,13 +4,21 @@ title: Angular
 ---
 
 <div ng-controller="AccordionSampleController">
-  <h1>Accordion Results</h1>
+  <h1>Accordion Search Results</h1>
 
-  <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
+  <header class="padding-left">
+    <h2 class="h-caps-lined no-margin">Your Preferences</h2>
+  </header>
+
+  <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
     <accordion-group>
       <accordion-heading>
         <h3 class="accordion-name">Certificate of Preference</h3>
-        <span class="accordion-subheader">10 qualifying applicants</span>
+        
+        <div class="accordion-stat">
+          <span class="accordion-stat_label">COP Rank</span>
+          <span class="accordion-stat_value">17</span>
+        </div>
       </accordion-heading>
       
       {{> tables.table--results }}
@@ -19,7 +27,11 @@ title: Angular
     <accordion-group>
       <accordion-heading>
         <h3 class="accordion-name">Displaced Tenants Housing Preference</h3>
-        <span class="accordion-subheader">15 qualifying applicants</span>
+        
+        <div class="accordion-stat">
+          <span class="accordion-stat_label">DTHP Rank</span>
+          <span class="accordion-stat_value">385</span>
+        </div>
       </accordion-heading>
       
       {{> tables.table--results }}
@@ -28,7 +40,11 @@ title: Angular
     <accordion-group>
       <accordion-heading>
         <h3 class="accordion-name">Neighborhood Resident Housing Preference</h3>
-        <span class="accordion-subheader">1200 qualifying applicants</span>
+        
+        <div class="accordion-stat">
+          <span class="accordion-stat_label">NRHP Rank</span>
+          <span class="accordion-stat_value">385</span>
+        </div>
       </accordion-heading>
 
       {{> tables.table--results }}
@@ -37,7 +53,11 @@ title: Angular
     <accordion-group>
       <accordion-heading>
         <h3 class="accordion-name">Live/Work Preference</h3>
-        <span class="accordion-subheader">2800 qualifying applicants</span>
+        
+        <div class="accordion-stat">
+          <span class="accordion-stat_label">LWP Rank</span>
+          <span class="accordion-stat_value">385</span>
+        </div>
       </accordion-heading>
 
       {{> tables.table--results }}

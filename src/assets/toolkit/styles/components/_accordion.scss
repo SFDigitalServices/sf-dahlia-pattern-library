@@ -5,6 +5,12 @@
 // prototyping classes
 .accordion {
   
+  &.has-trigger {
+    .ui-control {
+      @include absolute(1rem,1rem,null,null);
+    }
+  }
+
   &.trigger-left {
     @media #{$medium-up} {
       .accordion-navigation a {
@@ -15,10 +21,6 @@
         @include absolute(1.125rem,null,null,.75rem);
       }
     }
-  }
-
-  .ui-control {
-    @include absolute(1rem,1rem,null,null);
   }
 }
 
