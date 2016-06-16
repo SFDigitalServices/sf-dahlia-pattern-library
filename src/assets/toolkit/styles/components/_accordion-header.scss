@@ -54,16 +54,16 @@ accordion.has-toggle,
 }
 
 .accordion-stat {
-  @include absolute(50%,2rem,null,null);
+  @include absolute(50%,2.5rem,null,null);
   @include translateY(-50%);
   text-align: center;
 }
 
 .accordion-stat_label {
-  @include responsive-text-size('small');
+  @include responsive-text-size('tiny');
 }
 
 .accordion-stat_value {
-  @include responsive-text-size('beta');
+  @include responsive-text-size('gamma');
   display: block;
 }
