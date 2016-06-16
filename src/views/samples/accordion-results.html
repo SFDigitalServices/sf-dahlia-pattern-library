@@ -4,43 +4,80 @@ title: Angular
 ---
 
 <div ng-controller="AccordionSampleController">
-  <h1>Accordion Results</h1>
+  <header class="padding">
+    <h1>Accordion Results</h1>
+  </header>
 
-  <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
-    <accordion-group>
-      <accordion-heading>
-        <h3 class="accordion-name">Certificate of Preference</h3>
-        <span class="accordion-subheader">10 qualifying applicants</span>
-      </accordion-heading>
+  <section class="padding-bottom--2x">
+    <header class="padding-top padding-left">
+      <h2 class="h-caps-lined no-margin">Housing Preferences</h2>
+    </header>
+    <div class="padding">
+      <p class="no-margin">Ranking in these lists is considered before the General List.</p>
+    </div>
+
+    <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
+      <accordion-group>
+        <accordion-heading>
+          <h3 class="accordion-name">Certificate of Preference</h3>
+          <span class="accordion-subheader">10 qualifying applicants</span>
+          {{> icons.base icon="arrow-down" size="small" position="control"}}
+        </accordion-heading>
+        <div class="padding">
+          <p class="t-small no-margin">These applicants will be considered for up to 50 units</p>
+        </div>  
+        {{> tables.table--results }}
+      </accordion-group>
       
-      {{> tables.table--results }}
-    </accordion-group>
-    
-    <accordion-group>
-      <accordion-heading>
-        <h3 class="accordion-name">Displaced Tenants Housing Preference</h3>
-        <span class="accordion-subheader">15 qualifying applicants</span>
-      </accordion-heading>
+      <accordion-group>
+        <accordion-heading>
+          <h3 class="accordion-name">Displaced Tenants Housing Preference</h3>
+          <span class="accordion-subheader">15 qualifying applicants</span>
+          {{> icons.base icon="arrow-down" size="small" position="control"}}
+        </accordion-heading>
+        <div class="padding">
+          <p class="t-small no-margin">These applicants will be considered for up to 10 units</p>
+        </div>  
+        {{> tables.table--results }}
+      </accordion-group>
       
-      {{> tables.table--results }}
-    </accordion-group>
-    
+      <accordion-group>
+        <accordion-heading>
+          <h3 class="accordion-name">Neighborhood Resident Housing Preference</h3>
+          <span class="accordion-subheader">1200 qualifying applicants</span>
+          {{> icons.base icon="arrow-down" size="small" position="control"}}
+        </accordion-heading>
+        <div class="padding">
+          <p class="t-small no-margin">These applicants will be considered for up to 20 units</p>
+        </div>  
+        {{> tables.table--results }}
+      </accordion-group>
+
+      <accordion-group>
+        <accordion-heading>
+          <h3 class="accordion-name">Live/Work Preference</h3>
+          <span class="accordion-subheader">2800 qualifying applicants</span>
+          {{> icons.base icon="arrow-down" size="small" position="control"}}
+        </accordion-heading>
+        <div class="padding">
+          <p class="t-small no-margin">These applicants will be considered for any remaining units</p>
+        </div>  
+        {{> tables.table--results }}
+      </accordion-group>
+    </accordion>
+  </section>
+
+  <header class="padding-top padding-left">
+    <h2 class="h-caps-lined no-margin">General List</h2>
+  </header>
+
+  <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
     <accordion-group>
       <accordion-heading>
-        <h3 class="accordion-name">Neighborhood Resident Housing Preference</h3>
-        <span class="accordion-subheader">1200 qualifying applicants</span>
+        <h3 class="accordion-name">All Applicants</h3>
+        <span class="accordion-subheader">3000 total applicants</span>
+        {{> icons.base icon="arrow-down" size="small" position="control"}}
       </accordion-heading>
-
-      {{> tables.table--results }}
-    </accordion-group>
-
-    <accordion-group>
-      <accordion-heading>
-        <h3 class="accordion-name">Live/Work Preference</h3>
-        <span class="accordion-subheader">2800 qualifying applicants</span>
-      </accordion-heading>
-
-      {{> tables.table--results }}
     </accordion-group>
   </accordion>
 </div>
