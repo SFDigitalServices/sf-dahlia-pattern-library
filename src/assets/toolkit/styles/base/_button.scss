@@ -27,6 +27,10 @@ $dark-bg-colors: (
   &:hover,
   &:focus {
     background-color: $primary;
+
+    svg use { 
+      fill: #fff;
+    }
   }
 }
 
@@ -80,7 +84,8 @@ button,
 
     &:hover,
     &:focus {
-      background-color: darken($smoke, 5%);
+      background-color: $steel;
+      color: #fff;
     }
   }
 
@@ -90,7 +95,8 @@ button,
 
     &:hover,
     &:focus {
-      background-color: darken($tint, 5%);
+      background-color: $deep;
+      color: #fff;
     }
   }
 
@@ -105,6 +111,7 @@ button,
     }
   }
 
+  // Primary button with white background
   &.ghost-white {
     background-color: #fff;
     color: $primary;
@@ -116,11 +123,25 @@ button,
     }
   }
 
+  // Larger button styles
   &.large {
     @media #{$medium-up} {
       line-height: 1;
       padding: 1.625rem 2.25rem 1.625rem 2.25rem;
     }
+  }
+
+  // Full width buttons
+  &.expand {
+    &.small {
+      font-size: $button-font-sml;
+    }
+  }
+
+  // Add padding top and bottom
+  &.tall {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   // Remove button styles
@@ -137,25 +158,21 @@ button,
     text-transform: none;
     text-align: left;
 
-    svg {
-      use {
-        fill: $primary;
-      }
+    svg use {
+      fill: $primary;
     }
         
     &:focus {
       outline: none;
       color: $dark;
 
-      svg {
-        use {
-          fill: $dark;
-        }
+      svg use {
+        fill: $dark;
       }  
     }  
   }
 
-  // Text button with underline
+  // Button link with underline
   &.button-lined {
     color: $charcoal;
     font-weight: $t-regular !important;
@@ -169,22 +186,20 @@ button,
     border-radius: 50%;
     padding: .6rem;
 
-    svg {
+    .ui-icon {
       margin-top: 0;
-
-      use {
-        fill: $primary
-      }
+    }
+    
+    svg use {
+      fill: $primary
     }
 
     &:hover,
     &:focus {
       color: $primary;
 
-      svg {
-        use {
-          fill: #fff;
-        }
+      svg use {
+        fill: #fff;
       }
     }
 
@@ -218,22 +233,16 @@ button,
 
     .ui-icon {
       margin-right: .625rem;
+    }
 
-      svg {
-        margin-top: -3px;
-        
-        use { 
-          fill: $primary;
-        }
-      }
+    svg use { 
+      fill: $primary;
     }
 
     &:hover,
     &:focus {
-      svg {
-        use { 
-          fill: #fff;
-        }
+      svg use { 
+        fill: #fff;
       }
     }
   }
@@ -246,37 +255,16 @@ button,
       margin-left: .625rem;
     }
   }
-
-  &.expand {
-    &.small {
-      font-size: $button-font-sml;
-    }
-  }
-
-  &.tall {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
 }
 
+// Full width buttons on small screens
 .expand-small {
   @media #{$small-only} {
     width: 100%;
   }  
 }
 
-// Buttons stacked rather than inline
-.button-stack {
-  margin-bottom: 1rem;
-  
-  button,
-  .button {
-    margin: 0 auto .25rem;
-    display: block;
-    min-width: 15rem;
-  }
-}
-
+// Link converts to button style on small screens
 .button-on-small {
   display: block;
   padding-top: .5rem;
@@ -289,17 +277,30 @@ button,
 
     &:hover,
     &:focus {
-      svg {
-        use { 
-          fill: #fff;
-        }
+      svg use { 
+        fill: #fff;
       }
     }
   }
 
-  svg {
-    fill: $primary;
+  .ui-icon {
     margin-right: .5rem;
+  } 
+
+  svg use {
+    fill: $primary;
+  }
+}
+
+// Buttons stacked rather than inline
+.button-stack {
+  margin-bottom: 1rem;
+  
+  button,
+  .button {
+    margin: 0 auto .25rem;
+    display: block;
+    min-width: 15rem;
   }
 }
 
@@ -346,10 +347,8 @@ button,
       }
 
       &.active {
-        svg {
-          use {
-            fill: #fff;
-          }
+        svg use {
+          fill: #fff;
         }
       }    
     }

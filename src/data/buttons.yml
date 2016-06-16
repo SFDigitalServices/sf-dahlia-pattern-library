@@ -3,9 +3,11 @@ modifiers:
   primary:
   secondary:
   tertiary:
+  tint:
   deep:
   ghost-white:
   large:
+  tall:
   small:
   tiny:
   expand:
