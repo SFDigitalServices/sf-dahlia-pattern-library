@@ -6,6 +6,10 @@
 textarea,
 select {
   border-radius: $input-border-radius;
+
+  &.squared {
+    border-radius: 0;
+  }
 }
 
 form {

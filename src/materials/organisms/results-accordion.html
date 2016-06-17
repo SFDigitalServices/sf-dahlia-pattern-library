@@ -10,50 +10,58 @@
     <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
       <accordion-group>
         <accordion-heading>
-          <h3 class="accordion-name">Certificate of Preference</h3>
-          <span class="accordion-subheader">10 qualifying applicants</span>
+          <h3 class="accordion-name semi">Certificate of Preference</h3>
+          <span class="accordion-subheader tiny">10 qualifying applicants</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
           <p class="t-small no-margin">These applicants will be considered for up to 50 units</p>
-        </div>  
-        {{> tables.table--results }}
+        </div>
+        <div class="overflow-panel">
+          {{> tables.table--results }}
+        </div>
       </accordion-group>
       
       <accordion-group>
         <accordion-heading>
-          <h3 class="accordion-name">Displaced Tenants Housing Preference</h3>
-          <span class="accordion-subheader">15 qualifying applicants</span>
+          <h3 class="accordion-name semi">Displaced Tenants Housing Preference</h3>
+          <span class="accordion-subheader tiny">15 qualifying applicants</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
           <p class="t-small no-margin">These applicants will be considered for up to 10 units</p>
-        </div>  
-        {{> tables.table--results }}
+        </div>
+        <div class="overflow-panel">
+          {{> tables.table--results }}
+        </div>
       </accordion-group>
       
       <accordion-group>
         <accordion-heading>
-          <h3 class="accordion-name">Neighborhood Resident Housing Preference</h3>
-          <span class="accordion-subheader">1200 qualifying applicants</span>
+          <h3 class="accordion-name semi">Neighborhood Resident Housing Preference</h3>
+          <span class="accordion-subheader tiny">1200 qualifying applicants</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
           <p class="t-small no-margin">These applicants will be considered for up to 20 units</p>
-        </div>  
-        {{> tables.table--results }}
+        </div>
+        <div class="overflow-panel">
+          {{> tables.table--results }}
+        </div>
       </accordion-group>
 
       <accordion-group>
         <accordion-heading>
-          <h3 class="accordion-name">Live/Work Preference</h3>
-          <span class="accordion-subheader">2800 qualifying applicants</span>
+          <h3 class="accordion-name semi">Live/Work Preference</h3>
+          <span class="accordion-subheader tiny">2800 qualifying applicants</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
           <p class="t-small no-margin">These applicants will be considered for any remaining units</p>
-        </div>  
-        {{> tables.table--results }}
+        </div>
+        <div class="overflow-panel">
+          {{> tables.table--results }}
+        </div>
       </accordion-group>
     </accordion>
   </section>
@@ -65,10 +73,13 @@
   <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
     <accordion-group>
       <accordion-heading>
-        <h3 class="accordion-name">All Applicants</h3>
-        <span class="accordion-subheader">3000 total applicants</span>
+        <h3 class="accordion-name semi">All Applicants</h3>
+        <span class="accordion-subheader tiny">3000 total applicants</span>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
       </accordion-heading>
+      <div class="overflow-panel">
+        {{> tables.table--results }}
+      </div>
     </accordion-group>
   </accordion>
 </div>

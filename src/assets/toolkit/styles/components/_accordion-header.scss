@@ -19,10 +19,15 @@ accordion.has-toggle,
 .page-accordion {
   .accordion dd > a {
     border-bottom: 1px solid $smoke;
+    display: block;
     position: relative;
 
     &.active {
       background-color: $mist;
+
+      .ui-control {
+        transform: rotate(180deg);
+      }
     }
 
     .ui-control {
@@ -38,6 +43,13 @@ accordion.has-toggle,
   margin-bottom: .5rem;
   margin-right: 1rem;
   text-transform: uppercase;
+
+  &.semi {
+    letter-spacing: normal;
+    font-family: $sans-font-family;
+    font-weight: $t-semi;
+    margin-bottom: 0;
+  }
 }
 
 .accordion-subheader {
@@ -45,6 +57,10 @@ accordion.has-toggle,
   display: inline-block;
   line-height: 1.375;
   margin-right: 1rem;
+
+  &.tiny {
+    @include responsive-text-size('tiny');
+  }
 }
 
 .accordion-icon {

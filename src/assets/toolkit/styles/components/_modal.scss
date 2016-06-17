@@ -44,7 +44,7 @@
   position: relative;
 
   @media #{$medium-up} {
-    max-height: rem-calc(500);
+    max-height: rem-calc(450);
     overflow-y: auto;
   }
 }
@@ -58,4 +58,11 @@
 .close-reveal-modal {
   @include absolute(1.5rem,1.5rem,null,null);
   text-transform: uppercase;
+}
+
+.modal-overflow {
+  @media #{$medium-up} {
+    max-height: rem-calc(700);
+    overflow-y: auto;
+  }  
 }
