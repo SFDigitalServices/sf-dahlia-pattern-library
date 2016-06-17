@@ -1,0 +1,34 @@
+<div ng-controller="ModalController" aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="lottery-modal">
+
+  <section class="results-container row collapse">
+    <hgroup class="text-center padding--2x">
+      <h1 class="t-gamma margin-bottom--half">Lottery Results</h1>
+      <h2 id="modalTitle" class="t-caps t-small t-alt-sans t-bold">Potrero 1010</h1>
+      <p class="t-small">A total of 900 tickets were drawn in this lottery.</p>
+      <p class="t-small margin-bottom">Studio 20 units, 1 Bedroom 20 units, 2 Bedrooms 20 units</p>
+      </p>
+
+      <div class="">
+      {{> forms.icon-input }}
+
+      <p class="t-small">Lottery results are divided into multiple lists. Please check each one in order to confirm your ranking.</p>
+      </div>
+    
+    </hgroup>
+  
+    <div class="modal-overflow">
+    {{> results-accordion--search }}
+
+    <!-- <div class="overflow-panel">
+      <div class="overflow-panel_scroll">
+        {{> tables.table--results }}
+      </div>
+    </div> -->
+    </div>
+  </section>
+
+  <!-- <a class="close-reveal-modal" aria-label="Close"> -->
+  <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
+    {{> icons.base icon="close" size="medium" fill="primary"}}
+  </a>
+</div>
