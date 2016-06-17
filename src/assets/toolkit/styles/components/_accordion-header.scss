@@ -19,10 +19,15 @@ accordion.has-toggle,
 .page-accordion {
   .accordion dd > a {
     border-bottom: 1px solid $smoke;
+    display: block;
     position: relative;
 
     &.active {
       background-color: $mist;
+
+      .ui-control {
+        transform: rotate(180deg);
+      }
     }
 
     .ui-control {
