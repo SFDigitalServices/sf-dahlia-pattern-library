@@ -123,11 +123,12 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel'])
     };
   })
   .controller('ModalController', function ($scope, $modal) {
-    $scope.openModal = function (templateUrl) {
+    $scope.openModal = function (templateUrl, windowClass) {
       console.log("at open modal");
       var modalInstance = $modal.open({
         templateUrl: templateUrl,
-        controller: 'ModalInstanceController'
+        controller: 'ModalInstanceController',
+        windowClass: windowClass
       });
     };
   })
