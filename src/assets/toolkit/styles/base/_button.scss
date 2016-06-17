@@ -144,6 +144,10 @@ button,
     padding-bottom: 1.5rem;
   }
 
+  &.squared {
+    border-radius: 0;
+  }
+
   // Remove button styles
   &.button-link {
     background: transparent;
