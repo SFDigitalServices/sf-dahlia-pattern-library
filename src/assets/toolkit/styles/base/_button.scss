@@ -189,11 +189,11 @@ button,
   &.round-icon {
     border-radius: 50%;
     padding: .6rem;
-
-    .ui-icon {
+    
+    svg {
       margin-top: 0;
     }
-    
+
     svg use {
       fill: $primary
     }
@@ -220,7 +220,8 @@ button,
       margin-right: rem-calc(65);
       
       .inline {
-        @include translateY(-50%);
+        // @include translateY(-50%);
+        transform: translateY(-50%);
         position: absolute;
         left: 3rem;
         top: 50%;

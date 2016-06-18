@@ -17,7 +17,8 @@
   .medium-right-column {
     @media #{$medium-up} {
       @include absolute(0,0,0,null);
-      @include translateX(0);
+      // @include translateX(0);
+      transform: translateX(0px);
 
       .content {
         background-color: #fff;
@@ -30,7 +31,8 @@
 
     @media screen and (min-width: 1000px) {
       @include absolute(0,null,0,50%);
-      @include translateX(200px);
+      // @include translateX(200px);
+      transform: translateX(200px);
     }
   }
 }

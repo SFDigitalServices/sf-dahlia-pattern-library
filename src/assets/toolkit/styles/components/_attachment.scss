@@ -5,7 +5,8 @@
 
   &.is-loading {
     .spinner {
-      @extend %center-xy;
+      // @extend %center-xy;
+      @include scut-center-transform;
     }
   }
 }

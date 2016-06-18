@@ -48,7 +48,7 @@
   }
 
   a {
-    @include hide-text(left);
+    @include scut-image-replace;
     @include image-replace("../images/logo-portal.png");
     background-position: center left;
     background-size: auto 100%;

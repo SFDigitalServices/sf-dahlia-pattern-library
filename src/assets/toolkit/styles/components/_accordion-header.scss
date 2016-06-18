@@ -65,13 +65,15 @@ accordion.has-toggle,
 
 .accordion-icon {
   @include absolute(50%,null,null,.5rem);
-  @include translateY(-50%);
+  // @include translateY(-50%);
+  transform: translateY(-50%);
   width: 3.5rem;
 }
 
 .accordion-stat {
   @include absolute(50%,2.5rem,null,null);
-  @include translateY(-50%);
+  // @include translateY(-50%);
+  transform: translateY(-50%);
   text-align: center;
 }
 

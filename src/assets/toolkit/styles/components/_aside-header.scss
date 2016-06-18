@@ -10,7 +10,8 @@
 
 .aside-header_icon {
   @include absolute(50%,null,null,1rem);
-  @include translateY(-50%);
+  // @include translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .aside-header_group {

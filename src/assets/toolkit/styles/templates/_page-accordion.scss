@@ -55,7 +55,7 @@ $siderail-padding-full: 2rem;
   .medium-right-column {
     @media #{$medium-up} {
       @include absolute(0,0,0,null);
-      @include translateX(0);
+      transform: translateX(0px);
       background-color: #fff;
       z-index: 3;
 
@@ -73,7 +73,7 @@ $siderail-padding-full: 2rem;
     }
 
     @media screen and (min-width: $row-width) {
-      @include translateX(510px);
+      transform: translateX(510px);
       right: 50%;
 
       .content {

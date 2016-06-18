@@ -163,8 +163,8 @@ gulp.task('assemble', function (done) {
 			}
 		}
 	});
+	// reload();
 	done();
-	reload();
 });
 
 
@@ -175,6 +175,7 @@ gulp.task('serve', function () {
 		server: {
 			baseDir: config.dest
 		},
+		port: 3010,
 		notify: false,
 		logPrefix: 'FABRICATOR'
 	});
@@ -198,7 +199,10 @@ gulp.task('serve', function () {
 		}
 	}
 
-	gulp.task('assemble:watch', ['assemble'], reload);
+	gulp.task('assemble:watch', ['assemble'], function(done){
+		reload();
+		done();
+	});
 	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
 	gulp.task('styles:fabricator:watch', ['styles:fabricator']);

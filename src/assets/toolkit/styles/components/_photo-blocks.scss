@@ -15,7 +15,8 @@
 }
 
 .photo-block_title {
-  @extend %center-xy;
+  // @extend %center-xy;
+  @include scut-center-transform;
   @include responsive-text-size('small');
   @include type-weight(black);
   color: #fff;

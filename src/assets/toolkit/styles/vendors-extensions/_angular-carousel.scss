@@ -26,7 +26,8 @@ $carousel-arrow-size: 3.5rem;
       width: $carousel-arrow-size;
 
       @media #{$small-only} {
-        @include translateY(-50%);
+        // @include translateY(-50%);
+        transform: translateY(-50%);
       }  
 
       @media #{$medium-up} {

@@ -32,7 +32,8 @@
 
   &_icon {
     @include absolute(50%,null,null,0);
-    @include translateY(-50%);
+    // @include translateY(-50%);
+    transform: translateY(-50%);
     width: 3.5rem;
   }
 }

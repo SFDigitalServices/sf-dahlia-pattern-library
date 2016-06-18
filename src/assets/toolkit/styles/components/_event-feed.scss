@@ -46,7 +46,8 @@
   margin-top: .25rem;
 
   .ui-icon {
-    @extend %center-xy;
+    // @extend %center-xy;
+    @include scut-center-transform;
   }
 }
 

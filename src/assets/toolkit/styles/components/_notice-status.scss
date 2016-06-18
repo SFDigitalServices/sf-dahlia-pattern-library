@@ -25,7 +25,8 @@
   margin-top: .25rem;
 
   .ui-icon {
-    @extend %center-xy;
+    // @extend %center-xy;
+    @include scut-center-transform;
   }
 
   @media #{$medium-up} {
@@ -52,7 +53,8 @@
     &::after {
       @include triangle();
       @include absolute(null,null,0,50%);
-      @include translateX(-50%);
+      // @include translateX(-50%);
+      transform: translateX(-50%);
       display: none;
     }
 

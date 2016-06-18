@@ -4,12 +4,10 @@
 .reveal-modal {
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
-  // box-shadow: none;
-  // border-width: 0;
 
-  // &:focus {
-  //   outline: 0;
-  // }
+  &.modal-small {
+    max-width: 25rem;
+  }
 }
 
 // Scrolling panel
@@ -49,6 +47,13 @@
   }
 }
 
+.modal-overflow {
+  @media #{$medium-up} {
+    max-height: rem-calc(700);
+    overflow-y: auto;
+  }  
+}
+
 .message-modal {
   padding: 2rem;
 }
@@ -60,9 +65,3 @@
   text-transform: uppercase;
 }
 
-.modal-overflow {
-  @media #{$medium-up} {
-    max-height: rem-calc(700);
-    overflow-y: auto;
-  }  
-}
