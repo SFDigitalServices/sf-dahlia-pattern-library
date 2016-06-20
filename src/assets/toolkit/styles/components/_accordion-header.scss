@@ -78,10 +78,12 @@ accordion.has-toggle,
 }
 
 .accordion-stat_label {
-  @include responsive-text-size('tiny');
+  @include responsive-text-size('micro');
+  text-transform: uppercase;
 }
 
 .accordion-stat_value {
   @include responsive-text-size('gamma');
   display: block;
+  font-family: $serif-font-family;
 }
