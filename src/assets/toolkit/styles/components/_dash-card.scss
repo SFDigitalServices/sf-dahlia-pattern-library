@@ -8,11 +8,22 @@
 }
 
 .dash-card-inner {
-  padding: 1.5rem 2rem;
+  padding: 2rem;
 
   &.expand {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  &.inset {
+    @media #{$medium-up} {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }  
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
   }
 }
 

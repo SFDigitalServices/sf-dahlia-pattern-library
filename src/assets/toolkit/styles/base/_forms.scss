@@ -47,6 +47,11 @@ label {
     @include type-weight(regular);
     color: $steel !important;
   }
+
+  &.caps {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
 }
 
 // Additional input helper text
