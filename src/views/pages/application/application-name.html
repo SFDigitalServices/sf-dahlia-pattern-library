@@ -1,32 +1,41 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
-
 <div class="row margin-top--2x show-for-medium-up"></div>
 
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
+<section class="row collapse">
+  <div class="medium-6 medium-centered columns">
+    <div class="app-card form-card margin-bottom">
+      <header class="app-card_header">
+        <h1 class="app-card_title">Application: 123 Main St.</h1>
+      </header>
+      <div class="app-card_nav">
+        {{> navigation.progress-nav}}
+      </div>
+    </div>
 
-      <div class="form-count"><a href="#" class="lined margin-right">Back</a> Question 1 of 6</div>
-
-      <h2 class="application-title t-gamma padding-bottom">We’ll get started by getting some information about you. First, what’s your name?</h2>
-
-      <div class="form-group">
-        <h3 class="form-label">Your Name</h3>
-        {{> forms.text-input--base placeholder="First Name" label="First Name"}}
-        {{> forms.text-input--base placeholder="Last Name" label="Last Name"}}
+    <form class="app-card form-card">
+      <div class="app-inner leader border-bottom">
+        <div class="form-count"><a href="#" class="lined margin-right">Back</a></div>
+        <h2 class="app-card_question">We’ll get started by getting some information about you. First, what’s your name?</h2>
       </div>
 
-      <div class="form-group margin-bottom--2x">
-        <h3 class="form-label">Your Date of Birth</h3>
-        {{> forms.input-dob}}
+      <div class="app-inner inset">
+        <div class="form-group">
+          <h3 class="form-label caps">Your Name</h3>
+          {{> forms.text-input--base placeholder="First Name" label="First Name"}}
+          {{> forms.text-input--base placeholder="Last Name" label="Last Name"}}
+        </div>
+
+        <div class="form-group margin-bottom--2x">
+          <h3 class="form-label caps">Your Date of Birth</h3>
+          {{> forms.input-dob}}
+        </div>
       </div>
+
+      {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+
     </form>
-
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
   </div>
 </section>    
 

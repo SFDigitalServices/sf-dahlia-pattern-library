@@ -14,7 +14,7 @@ a, .btn-link {
   word-break: break-word;
 
 
-  &.lined {
+  &.has-line, &.lined {
     text-decoration: underline;
   }
 

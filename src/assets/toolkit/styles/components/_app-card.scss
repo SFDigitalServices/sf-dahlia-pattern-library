@@ -1,0 +1,65 @@
+//
+// Applications
+
+.app-card {
+  padding: 0;
+
+  .form-label {
+
+  }
+
+  .form-group {
+    @include clearfix;
+    margin-bottom: 1rem;
+  }
+}
+
+.app-inner {
+  @include scut-padding(2rem);
+
+  &.leader {
+   @include scut-padding(2rem 2rem 0); 
+
+   @media #{$medium-up} {
+    @include scut-padding(2rem 0 1rem);
+    @include scut-margin(n 2rem);
+   } 
+  }
+
+  &.inset {
+    @media #{$medium-up} {
+      @include scut-padding(n 2rem);
+      @include scut-margin(n 2rem);
+    }  
+  }
+}
+
+.app-card_header {
+  @include scut-padding(1rem);
+  background-color: $primary;
+  color: $white;
+  text-align: center;
+
+  @media #{$medium-up} {
+    border-top-left-radius: $form-card-radius;
+    border-top-right-radius: $form-card-radius; 
+  }
+}
+
+.app-card_title {
+  @include responsive-text-size('epsilon');
+  font-family: $alt-font-family;
+  font-weight: $t-bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.app-card_nav {
+  @include scut-padding(1rem);
+}
+
+.app-card_question {
+  @include responsive-text-size('gamma');
+  text-align: center;
+  padding-top: 1rem;
+}
