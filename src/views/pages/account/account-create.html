@@ -18,16 +18,30 @@ title: Dashboard
           <p class="t-small c-steel">You'll use this information to log in to your account, so make sure you can remember it.</p>
         </header>
 
-        <div class="dash-card-inner border-bottom">
+        <div class="dash-card-inner inset border-bottom">
+          <div class="form-group padding-bottom--2x">
+            <h2 class="form-label caps">Your Name</h2>
+            {{> forms.text-input--base placeholder="First Name" label="Email address" type="text"}}
+            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text"}}
+            {{> forms.text-input--base placeholder="Last Name" label="Last Name" type="text"}}
+          </div>
+
           <div class="form-group">
-            <h3 class="form-label">Email Address</h3>
+            <h2 class="form-label caps">Your Date of Birth</h2>
+            {{> forms.input-dob}}
+          </div>
+        </div>
+
+        <div class="dash-card-inner inset border-bottom">
+          <div class="form-group">
+            <h3 class="form-label caps">Email Address</h3>
             {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
             {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
           </div>
         </div>
-        <div class="dash-card-inner border-bottom">
+        <div class="dash-card-inner inset border-bottom">
           <div class="form-group">
-            <h3 class="form-label">Password</h3>
+            <h3 class="form-label caps">Password</h3>
             <p class="form-note margin-bottom">Must be at least 8 characters and include 1 numeric character.</p>
 
             {{> forms.text-input--base placeholder="Must be 8 characters" label="password"}}
