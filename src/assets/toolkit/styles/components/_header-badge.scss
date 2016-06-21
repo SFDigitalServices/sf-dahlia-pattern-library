@@ -1,0 +1,26 @@
+.header-badge {
+  @include scut-padding(n 1rem 1rem 1rem);
+  border-bottom: rem-calc(3) solid $primary;
+  display: inline-block;
+  margin-bottom: 1rem;
+  
+
+  @media #{$medium-up} {
+    @include scut-padding(n 2rem 1rem 2rem);
+    margin-bottom: 1.5rem;
+  }  
+
+  .ui-icon {
+    display: inline-block;
+  }
+
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    @media #{$medium-up} {
+      height: 3rem;
+      width: 3rem;
+    }  
+  }
+}

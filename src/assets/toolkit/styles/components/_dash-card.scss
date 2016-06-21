@@ -8,17 +8,16 @@
 }
 
 .dash-card-inner {
-  padding: 2rem;
+  @include scut-padding(2rem);
 
   &.expand {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    @include scut-padding(n 1rem);
   }
 
   &.inset {
     @media #{$medium-up} {
-      padding-left: 5rem;
-      padding-right: 5rem;
+      @include scut-padding(n 4rem);
+      @include scut-margin(n 1rem);
     }  
   }
 
@@ -29,8 +28,12 @@
 
 .dash-header {
   border-bottom: 1px solid $smoke;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+
+  @media #{$medium-up} {
+    padding: 2rem;
+  }  
 
   &.expand {
     margin-left: -$column-gutter/2;
@@ -44,4 +47,14 @@
 
 .dash-title {
   @include responsive-text-size('gamma');
+}
+
+.dash-summary {
+  @include responsive-text-size('small');
+  color: $steel;
+
+  @media #{$medium-up} {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }  
 }
