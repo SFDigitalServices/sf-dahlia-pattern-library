@@ -1,9 +1,9 @@
 <div ng-controller="AccordionSampleController">
   <section class="padding-bottom--2x">
     <header class="padding-top padding-left">
-      <h2 class="h-caps-lined no-margin">Your Housing Preferences</h2>
+      <h2 class="h-caps-lined">Your Preference Ranking</h2>
     </header>
-    <div class="padding">
+    <div class="padding padding-top-none">
       <p class="no-margin">Ranking in these lists is considered before your General ranking.</p>
     </div>
 
@@ -22,7 +22,7 @@
         </accordion-heading>
         
         <div class="bg-vapor padding">
-          <p>Your ranking in this list is 17 out of of 1200 qualified applicants.</p>
+          <p>Your ranking in this list is 10 out of of 10 qualified applicants.</p>
           <p class="t-small">20 units have been set aside for this preference.</p>
           <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
         </div>
@@ -34,14 +34,14 @@
           
           <div class="accordion-stat">
             <span class="accordion-stat_label">DTHP Rank</span>
-            <span class="accordion-stat_value">20</span>
+            <span class="accordion-stat_value">15</span>
           </div>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         
         <div class="bg-vapor padding">
-          <p>Your ranking in this list is 17 out of of 1200 qualified applicants.</p>
-          <p class="t-small">20 units have been set aside for this preference.</p>
+          <p>Your ranking in this list is 15 out of of 15 qualified applicants.</p>
+          <p class="t-small">10 units have been set aside for this preference.</p>
           <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
         </div>
       </accordion-group>
@@ -58,7 +58,7 @@
         </accordion-heading>
 
         <div class="bg-vapor padding semi">
-          <p>Your ranking in this list is 17 out of of 1200 qualified applicants.</p>
+          <p>Your ranking in this list is 285 out of of 1200 qualified applicants.</p>
           <p class="t-small">20 units have been set aside for this preference.</p>
           <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
         </div>
@@ -76,8 +76,8 @@
         </accordion-heading>
 
         <div class="bg-vapor padding">
-          <p>Your ranking in this list is 17 out of of 1200 qualified applicants.</p>
-          <p class="t-small">20 units have been set aside for this preference.</p>
+          <p>Your ranking in this list is 385 out of of 1200 qualified applicants.</p>
+          <p class="t-small">Any remaining units will be available for this preference.</p>
           <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
         </div>
       </accordion-group>
@@ -85,24 +85,24 @@
   </section>
   
   <header class="padding-top padding-left">
-    <h2 class="h-caps-lined no-margin">Your General Ranking</h2>
+    <h2 class="h-caps-lined">Your General Ranking</h2>
   </header>
 
   <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
     <accordion-group>
       <accordion-heading>
-        <h3 class="accordion-name semi">General Lottery</h3>
+        <h3 class="accordion-name semi">All Applicants</h3>
         
         <div class="accordion-stat">
-          <span class="accordion-stat_label">Your Rank</span>
+          <span class="accordion-stat_label">Gen Rank</span>
           <span class="accordion-stat_value">485</span>
         </div>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
       </accordion-heading>
       
       <div class="bg-vapor padding">
-        <p>Your ranking in this list is 17 out of of 1200 qualified applicants.</p>
-        <p class="t-small">20 units have been set aside for this preference.</p>
+        <p>Your ranking in this list is 485 out of 3000 total applicants.</p>
+        <p class="t-small">Any remaining units will be available for this preference.</p>
         <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
       </div>
     </accordion-group>
