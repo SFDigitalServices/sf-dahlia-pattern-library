@@ -11,12 +11,18 @@
       <div class="">
       {{> forms.icon-input }}
 
+      {{#compare state '==' 'results' }}
       <p class="t-small">Lottery results are divided into multiple lists. Please check each one in order to confirm your ranking.</p>
       </div>
+      {{/compare}}
     
     </hgroup>
   
-    {{> results-accordion }}
+    {{#compare state '==' 'results' }}
+      {{> results-accordion }}
+    {{else }}
+      {{> results-accordion--search }}
+    {{/compare}}
 
     <!-- <div class="overflow-panel">
       <div class="overflow-panel_scroll">
