@@ -1,73 +1,87 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
-
-<div class="row margin-top--2x show-for-medium-up"></div>
-
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
-
-      <div class="form-count"><a href="#" class="lined margin-right">Back</a> Question 2 of 6</div>
-
-      <h2 class="application-title t-gamma padding-bottom">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
-
-      <div class="form-group has-option">
-        <!-- <small class="required">Required</small> -->
-        {{> forms.input-tel}}
-
-        <div class="form-item padding-bottom">
-          {{> forms.checkbox text="I don't have a telephone number"}}
-        </div>
-      </div>
-
-      <div class="form-group has-option">
-        <label class="form-label no-margin">Your email address</label>
-        <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
-        {{> forms.input-email visibility="sr-only"}}
-
-        <div class="form-item padding-bottom">
-          {{> forms.checkbox text="I don't have an email address"}}
+<div class="app-container">
+  <section class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      <div class="app-header app-card form-card">
+        <header class="app-card_header">
+          <h1 class="app-card_title">Application: 123 Main St.</h1>
+        </header>
+        <div class="app-card_nav">
+          {{> navigation.progress-nav}}
         </div>
       </div>
       
-      <div class="form-group has-option">
-        <label class="form-label no-margin">Your address</label>
-        <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
-        {{> forms.input-address}}
-        
-        <div class="form-item padding-bottom">
-          <div class="radio">
-            <input type="radio" name="groupName" id="radio1" /> 
-            <label for="radio1">I don't have an address</label>
+      <form class="app-card form-card">
+
+        <div class="app-inner leader border-bottom">
+          <div class="form-count"><a href="#" class="lined margin-right">Back</a></div>
+          <h2 class="application-title t-gamma padding-bottom">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
+        </div>
+      
+        <div class="app-inner inset border-bottom">
+          <div class="form-group has-option">
+            {{> forms.input-tel classes="caps"}}
+
+            <div class="form-item padding-bottom">
+              {{> forms.checkbox text="I don't have a telephone number"}}
+            </div>
+          </div>
+          </div>
+
+        <div class="app-inner inset border-bottom">  
+          <div class="form-group has-option">
+            <label class="form-label caps">Your email address</label>
+            <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
+            {{> forms.input-email visibility="sr-only"}}
+
+            <div class="form-item padding-bottom">
+              {{> forms.checkbox text="I don't have an email address"}}
+            </div>
           </div>
         </div>
 
-        <div class="form-item padding-bottom">
-          <div class="radio">
-            <input type="radio" name="groupName" id="radio2" /> 
-            <label for="radio2">I have a seperate mailing address</label>
+        <div class="app-inner inset border-bottom">  
+          <div class="form-group row has-option">
+            <label class="form-label caps">Your address</label>
+            <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
+            {{> forms.input-address classes="expand" visibility="sr-only"}}
+            
+            <div class="form-item padding-bottom">
+              <div class="radio">
+                <input type="radio" name="groupName" id="radio1" /> 
+                <label for="radio1">I don't have an address</label>
+              </div>
+            </div>
+
+            <div class="form-item padding-bottom">
+              <div class="radio">
+                <input type="radio" name="groupName" id="radio2" /> 
+                <label for="radio2">I have a seperate mailing address</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row expand">
+            <label class="form-label caps">Mailing address</label>
+            <p class="form-note margin-bottom">Provide an address where you can receive updates and materials about your application.</p>
+            {{> forms.input-address classes="expand" visibility="sr-only"}}
           </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label class="form-label no-margin">Mailing address</label>
-        <p class="form-note margin-bottom">Provide an address where you can receive updates and materials about your application.</p>
-        {{> forms.input-address}}
-      </div>
+        <div class="app-inner inset">  
+          <div class="form-group">
+            <label class="form-label caps">What is your primary language?</label>
+            {{> forms.select}}
+          </div>
+        </div>
 
-      <div class="form-group">
-        <label class="form-label margin-bottom--half">What is your primary language?</label>
-        {{> forms.select}}
-      </div>
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
 
-    </form>
-
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
-  </div>
-</section>    
+      </form>
+    </div>
+  </section>    
+</div>
 
 {{> components.footer}}

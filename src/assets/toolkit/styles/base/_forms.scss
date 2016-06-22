@@ -18,6 +18,10 @@ form {
   label {
     @extend .form-label;
   }
+
+  .row .row.expand {
+    margin: 0 -0.6275rem;
+  }
 }
 
 label {

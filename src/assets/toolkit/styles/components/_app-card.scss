@@ -12,6 +12,10 @@
   .form-group {
     @include clearfix;
     margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
