@@ -69,9 +69,10 @@
 }
 
 .button-pager_row {
-  padding: 2rem;
+  padding: 1rem 2rem;
 
   &.primary {
+    padding: 2rem;
     background-color: $dust;
   }
 }

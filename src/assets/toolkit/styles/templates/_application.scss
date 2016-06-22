@@ -1,0 +1,20 @@
+// Appplication templates
+
+.app-body {
+  background-color: $vapor;
+}
+
+.app-container {
+  @media #{$medium-up} {
+    background-color: $vapor;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  &.tall {
+    @media #{$medium-up} {
+      padding-bottom: 4rem;
+      padding-top: 4rem;
+    }
+  } 
+}

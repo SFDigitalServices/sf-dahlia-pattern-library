@@ -14,11 +14,17 @@
   }
 }
 
+.app-header {
+  @media #{$medium-up} {
+    margin-bottom: 1rem;
+  }
+}
+
 .app-inner {
   @include scut-padding(2rem);
 
   &.leader {
-   @include scut-padding(2rem 2rem 0); 
+   @include scut-padding(1rem 2rem 0); 
 
    @media #{$medium-up} {
     @include scut-padding(2rem 0 1rem);
@@ -28,7 +34,7 @@
 
   &.inset {
     @media #{$medium-up} {
-      @include scut-padding(n 2rem);
+      @include scut-padding(n 3rem);
       @include scut-margin(n 2rem);
     }  
   }
@@ -55,11 +61,19 @@
 }
 
 .app-card_nav {
-  @include scut-padding(1rem);
+  @include scut-padding(1rem 0 2rem);
+
+  @media #{$small-only} {
+    @include scut-padding(1rem 0 1rem);
+    background-color: $dust;
+  }  
 }
 
 .app-card_question {
   @include responsive-text-size('gamma');
   text-align: center;
-  padding-top: 1rem;
+  
+  @media #{$medium-up} {
+    padding-top: 1rem;
+  }
 }
