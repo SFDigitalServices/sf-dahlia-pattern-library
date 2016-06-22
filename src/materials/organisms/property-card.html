@@ -8,7 +8,29 @@
       <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
         Address:formattedAddress" role="link" >
 
+    {{#compare state '==' 'closed' }}
+      <span class="status-label label label--flag">Lottery Results Posted: Feb 16th</span>
+      <span class="application-label label label--flag alert">Applications Closed: Jan 21st</span>
+    {{else compare state '==' 'results' }}
       <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
+    {{else compare state '==' 'matched' }}
+      <span class="status-label label label--flag success">
+      {{> icons.base icon="check" fill="white"}}  
+      Matched</span>
+      <span class="application-label label label--flag primary">
+      {{> icons.base icon="clock" fill="white"}}
+      Application Deadline: Nov 21, 2015 at 5PM</span>
+    {{else compare state '==' 'not-matched' }}
+      <span class="status-label label label--flag">Not a Match</span>
+      <span class="application-label label label--flag primary">
+      {{> icons.base icon="clock" fill="white"}}
+      Application Deadline: Nov 21, 2015 at 5PM</span>
+    {{else compare state '==' 'fave' }}
+      <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
+    {{else }}
+      <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
+    {{/compare}}
+
     </a>
 
     <figcaption class="property-card_info">
@@ -25,18 +47,22 @@
     </div>
 
     <div class="property-card_action">
+    {{#compare state '==' 'fave' }}
       <div class="show-for-medium-up left">
         {{> buttons.button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
         {{> buttons.button-round icon="forward" fill="primary" label="inline" text="Like" classes="has-label"}}
       </div>
-
       <ul class="button-group button-group--favorite row collapse hide-for-medium-up">
         <li class="small-6 columns">{{> buttons.button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary small"}}</li>
         <li class="small-6 columns">{{> buttons.button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary small"}}</li>
       </ul>
-
       <a class="button ghost-white expand-small right no-margin" href="/pages/property-grid.html">See Details</a>
+    {{else }}
+      {{> buttons.button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
+      <a class="button ghost-white right no-margin" href="/pages/property-grid.html">See Details</a>
+    {{/compare}}
     </div>
+
   </div>
 
 </div>
