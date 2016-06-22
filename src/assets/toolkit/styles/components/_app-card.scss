@@ -43,6 +43,10 @@
       @include scut-margin(n 2rem);
     }  
   }
+
+  &.short {
+    @include scut-padding(0 n);
+  }
 }
 
 .app-card_header {

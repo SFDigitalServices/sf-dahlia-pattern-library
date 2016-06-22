@@ -1,39 +1,45 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
-
-<div class="row margin-top--2x show-for-medium-up"></div>
-
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
-
-      <div class="form-count">1 of 5</div>
-
-      <h2 class="application-title t-gamma">Let’s move on the final topic: income. We’ll ask about your income first and then move on to your household.</h2>
-
-      <div class="form-group padding-bottom">
-        <p class="t-small c-steel">If you have more than one source of income, you’ll be able to add that on the next screen.</p>
-        <p class="t-small c-steel">You only need to provide estimated totals right now. Precise totals will be calculated, if you are selected in the lottery.</p>
+<div class="app-container">
+  <section class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      <div class="app-header app-card form-card">
+        <header class="app-card_header">
+          <h1 class="app-card_title">Application: 123 Main St.</h1>
+        </header>
+        <div class="app-card_nav">
+          {{> navigation.progress-nav}}
+        </div>
       </div>
 
-      <div class="form-group">
-         <label class="form-label margin-bottom--half">Where does this income come from?</label>
-        {{> forms.select}}
-      </div>
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Let’s move on the final topic: income. We’ll ask about your income first and then move on to your household.</h2>
 
-      <div class="form-group margin-bottom--2x">
-        <label class="form-label margin-bottom--half">How much is the income?</label>
-        {{> forms.input-income}}
-        {{> forms.radio-group name="income" items=inputs.income}}
-      </div>
+          <div class="form-group">
+            <p class="t-small c-steel">If you have more than one source of income, you’ll be able to add that on the next screen.</p>
+            <p class="t-small c-steel">You only need to provide estimated totals right now. Precise totals will be calculated, if you are selected in the lottery.</p>
+          </div>
+        </div>
 
-    </form>
+        <div class="app-inner inset">
+          <div class="form-group">
+             <label class="form-label margin-bottom--half">Where does this income come from?</label>
+            {{> forms.select}}
+          </div>
 
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
-  </div>
-</section>    
+          <div class="form-group">
+            <label class="form-label margin-bottom--half">How much is the income?</label>
+            {{> forms.input-income}}
+            {{> forms.radio-group name="income" items=inputs.income}}
+          </div>
+        </div>
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </section>
+</div> 
 
 {{> components.footer}}

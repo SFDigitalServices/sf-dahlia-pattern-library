@@ -1,106 +1,121 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
-
-<div class="row margin-top--2x show-for-medium-up"></div>
-
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
-      
-      {{> forms.alert-box }}
-
-      <div class="form-count">1 of 5</div>
-
-      <h2 class="application-title t-gamma padding-bottom">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
-
-      <div class="form-group has-option">
-        {{> forms.input-tel}}
-
-        <div class="form-item padding-bottom">
-          <div class="checkbox">
-            <input id="apple-pie" type="checkbox" name="apple-pie" checked="" />
-            <label for="apple-pie">I don't have a telephone number</label>
-          </div>
-          <small class="highlight">We’ll require an alternate contact phone number on a later screen</small>
+<div class="app-container">
+  <section class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      <div class="app-header app-card form-card">
+        <header class="app-card_header">
+          <h1 class="app-card_title">Application: 123 Main St.</h1>
+        </header>
+        <div class="app-card_nav">
+          {{> navigation.progress-nav}}
         </div>
       </div>
 
-      <div class="form-group has-option error">
-        <label class="form-label no-margin">Your email address</label>
-        <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
-        {{> forms.input-email visibility="sr-only" classes="error"}}
-        <small class="error">Please enter email address</small>
+      <form class="app-card form-card">
 
-        <div class="form-item padding-bottom">
-          {{> forms.checkbox text="I don't have an email address"}}
+        <div class="app-inner leader border-bottom">
+          <div class="form-count"><a href="#" class="lined margin-right">Back</a></div>
+          <h2 class="app-card_question">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
         </div>
-      </div>
-      
-      <div class="form-group has-option">
-        <label class="form-label no-margin">Your address</label>
-        <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
-        <div class="form-address row">
-          <div class="form-group-street form-item large-12 columns error">
-              <label for="address">Address</label>
-              <input type="text" name="address" placeholder="Street Address" class="error" />
-              <small class="error">Please enter a street address</small>
-          </div>
 
-          <div class="form-group-apt form-item large-12 columns">
-            <label for="address2">Address 2</label>
-            <input type="text" name="address2" placeholder="Apt or Unit #" class=""/>
-          </div>
+        {{> forms.alert-box }}
 
-          <div class="form-group-city form-item small-7 large-5 columns error">
-            <label for="city">City</label>
-            <input type="text" name="city" placeholder="City Name" class="error"/>
-            <small class="error">Please enter a street address</small>
-          </div>
+        <div class="app-inner inset border-bottom">
+          <div class="form-group has-option">
+            {{> forms.input-tel}}
 
-          <div class="form-group-state form-item small-5 large-3 columns">
-            <label for="state">State</label>
-            {{> forms.select name="state" placeholder="Select" options=inputs.states}}
-          </div>
-
-          <div class="form-group-zip form-item small-12 large-4 columns">
-            <label for="zip">Zip</label>
-            <input type="text" name="zip" placeholder="Zip Code" class=""/>
-          </div>
-        </div>  
-
-        <div class="form-item padding-bottom">
-          <div class="radio">
-            <input type="radio" name="groupName" id="radio1" /> 
-            <label for="radio1">I don't have an address</label>
+            <div class="form-item padding-bottom">
+              <div class="checkbox">
+                <input id="apple-pie" type="checkbox" name="apple-pie" checked="" />
+                <label for="apple-pie">I don't have a telephone number</label>
+              </div>
+              <small class="highlight">We’ll require an alternate contact phone number on a later screen</small>
+            </div>
           </div>
         </div>
 
-        <div class="form-item padding-bottom">
-          <div class="radio">
-            <input type="radio" name="groupName" id="radio2" /> 
-            <label for="radio2">I have a seperate mailing address</label>
+        <div class="app-inner inset border-bottom">
+          <div class="form-group has-option error">
+            <label class="form-label no-margin">Your email address</label>
+            <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
+            {{> forms.input-email visibility="sr-only" classes="error"}}
+            <small class="error">Please enter email address</small>
+
+            <div class="form-item padding-bottom">
+              {{> forms.checkbox text="I don't have an email address"}}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label class="form-label no-margin">Mailing address</label>
-        <p class="form-note margin-bottom">Provide an address where you can receive updates and materials about your application.</p>
-        {{> forms.input-address}}
-      </div>
+        <div class="app-inner inset border-bottom">
+          <div class="form-group row has-option">
+            <label class="form-label no-margin">Your address</label>
+            <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
+            <div class="form-address row expand">
+              <div class="form-group-street form-item large-12 columns error">
+                  <label for="address">Address</label>
+                  <input type="text" name="address" placeholder="Street Address" class="error" />
+                  <small class="error">Please enter a street address</small>
+              </div>
 
-      <div class="form-group">
-        <label class="form-label margin-bottom--half">What is your primary language?</label>
-        {{> forms.select}}
-      </div>
+              <div class="form-group-apt form-item large-12 columns">
+                <label for="address2">Address 2</label>
+                <input type="text" name="address2" placeholder="Apt or Unit #" class=""/>
+              </div>
 
-    </form>
+              <div class="form-group-city form-item small-7 columns error">
+                <label for="city">City</label>
+                <input type="text" name="city" placeholder="City Name" class="error"/>
+                <small class="error">Please enter a street address</small>
+              </div>
 
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
-  </div>
-</section>    
+              <div class="form-group-state form-item small-5 columns">
+                <label for="state">State</label>
+                {{> forms.select name="state" placeholder="Select" options=inputs.states}}
+              </div>
+
+              <div class="form-group-zip form-item small-12 columns">
+                <label for="zip">Zip</label>
+                <input type="text" name="zip" placeholder="Zip Code" class=""/>
+              </div>
+            </div>  
+
+            <div class="form-item padding-bottom">
+              <div class="radio">
+                <input type="radio" name="groupName" id="radio1" /> 
+                <label for="radio1">I don't have an address</label>
+              </div>
+            </div>
+
+            <div class="form-item padding-bottom">
+              <div class="radio">
+                <input type="radio" name="groupName" id="radio2" /> 
+                <label for="radio2">I have a seperate mailing address</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="form-label no-margin">Mailing address</label>
+            <p class="form-note margin-bottom">Provide an address where you can receive updates and materials about your application.</p>
+            {{> forms.input-address classes="expand" visibility="sr-only"}}
+          </div>
+        </div>
+
+        <div class="app-inner inset">
+          <div class="form-group">
+            <label class="form-label margin-bottom--half">What is your primary language?</label>
+            {{> forms.select}}
+          </div>
+        </div>
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+
+      </form>
+    </div>
+  </section>
+</div>
 
 {{> components.footer}}

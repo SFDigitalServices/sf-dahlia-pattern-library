@@ -1,67 +1,74 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
-
-<div class="row margin-top--2x show-for-medium-up"></div>
-
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
-
-      <div data-alert class="alert-box alert">
-        <span class="alert-icon">
-          {{> icons.base icon="warning"}}
-        </span>
-        <p class="alert-body">
-          Since you are not able to provide some of the required contact information, we’ll need you to provide alternate contact information.
-        </p>
-        <a href="#" class="close">&times;</a>
-      </div>
-
-      <header class="aside-header alert">
-        <hgroup class="aside-header_group">
-          <span class="t-tiny">Required Information</span>
-          <p class="c-alert t-semi no-margin">Your Phone or Alternate Phone</p>
-          <p class="c-alert t-semi">Your Address or Alternate Address</p>
-        </hgroup>
-      </header>
-
-      <div class="form-count">1 of 5</div>
-
-      <h2 class="application-title t-gamma padding-bottom">Who would you’d like us to contact if we can’t get ahold of you?</h2>
-
-      <div class="form-group error margin-bottom--2x">
-        <label class="form-label">Alternate contact</label>
-        <p class="form-note margin-bottom">Please select one.</p>
-          <div class="radio-group error">
-          <p class="radio-block">
-            <input type="radio" name="contacts" value="contacts-family" id="contacts-family" class="error">
-            <label class="radio-block_label" for="contacts-family">
-              Family member
-            </label>
-          </p>
-          <p class="radio-block">
-            <input type="radio" name="contacts" value="contacts-friend" id="contacts-friend" class="error">
-            <label class="radio-block_label" for="contacts-friend">
-              Friend
-            </label>
-          </p>
-          <p class="radio-block">
-            <input type="radio" name="contacts" value="contacts-social" id="contacts-social" class="error">
-            <label class="radio-block_label" for="contacts-social">
-              Social worker or housing counselor
-            </label>
-          </p>
+<div class="app-container">
+  <section class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      <div class="app-header app-card form-card">
+        <header class="app-card_header">
+          <h1 class="app-card_title">Application: 123 Main St.</h1>
+        </header>
+        <div class="app-card_nav">
+          {{> navigation.progress-nav}}
         </div>
-        <small class="error">Please select a alternate contact type</small>
       </div>
 
-    </form>
+      <form class="app-card form-card">
+      
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Who would you’d like us to contact if we can’t get ahold of you?</h2>
+        </div>
 
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
-  </div>
-</section>    
+        <div data-alert class="alert-box alert">
+          <span class="alert-icon">
+            {{> icons.base icon="warning"}}
+          </span>
+          <p class="alert-body">
+            Since you are not able to provide some of the required contact information, we’ll need you to provide alternate contact information.
+          </p>
+          <a href="#" class="close">&times;</a>
+        </div>
+
+        <header class="aside-header alert">
+          <hgroup class="aside-header_group">
+            <span class="t-tiny">Required Information</span>
+            <p class="c-alert t-semi no-margin">Your Phone or Alternate Phone</p>
+            <p class="c-alert t-semi">Your Address or Alternate Address</p>
+          </hgroup>
+        </header>
+
+        <div class="app-inner inset">
+          <div class="form-group error">
+            <label class="form-label">Alternate contact</label>
+            <p class="form-note margin-bottom">Please select one.</p>
+              <div class="radio-group error">
+              <p class="radio-block">
+                <input type="radio" name="contacts" value="contacts-family" id="contacts-family" class="error">
+                <label class="radio-block_label" for="contacts-family">
+                  Family member
+                </label>
+              </p>
+              <p class="radio-block">
+                <input type="radio" name="contacts" value="contacts-friend" id="contacts-friend" class="error">
+                <label class="radio-block_label" for="contacts-friend">
+                  Friend
+                </label>
+              </p>
+              <p class="radio-block">
+                <input type="radio" name="contacts" value="contacts-social" id="contacts-social" class="error">
+                <label class="radio-block_label" for="contacts-social">
+                  Social worker or housing counselor
+                </label>
+              </p>
+            </div>
+            <small class="error">Please select a alternate contact type</small>
+          </div>
+        </div>
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </section>    
+</div>
 
 {{> components.footer}}

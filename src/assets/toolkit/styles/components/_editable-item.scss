@@ -2,10 +2,23 @@
 // Editable
 // Multiline item with edit button
 
-.user-item {
+.user-item,
+.edit-item {
   @include clearfix;
+  position: relative;
 }
 
-.user-item_name {
+.user-item_name,
+.edit-item_name  {
   float: left;
+  padding-top: 1rem;
+}
+
+.edit-item_link {
+  @include responsive-text-size('tiny');
+  @include absolute(1.75rem,1rem,null,null);
+  color: $deep;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
