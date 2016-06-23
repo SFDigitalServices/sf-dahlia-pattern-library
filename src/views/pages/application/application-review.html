@@ -34,6 +34,18 @@
             {{/if }}
           </div>
           {{/each}}
+          {{#if multiple}}
+            <div class="border-top"></div>
+            {{#each item}}
+            <div class="info-item margin-bottom">
+              <h4 class="info-item_name">{{name}}</h4>
+              <p class="info-item_value">{{{value}}}</p>
+              {{#if note }}
+              <span class="info-item_note">{{note}}</span>
+              {{/if }}
+            </div>
+            {{/each}}
+          {{/if}}
         </div>  
         {{/each}}
 
