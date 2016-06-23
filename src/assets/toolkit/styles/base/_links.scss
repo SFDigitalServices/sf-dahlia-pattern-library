@@ -6,13 +6,7 @@ a, .btn-link {
   color: $primary;
   overflow-wrap: break-word;
   word-wrap: break-word;
-
-  // -ms-word-break: break-all;
-  // This is the dangerous one in WebKit, as it breaks things wherever
-  // word-break: break-all;
-  // Instead use this non-standard one:
   word-break: break-word;
-
 
   &.has-line, &.lined {
     text-decoration: underline;
@@ -42,3 +36,10 @@ a, .btn-link {
     padding-top: 1rem;
   }  
 }
+
+.edit-link {
+  @include responsive-text-size('tiny');
+  color: $deep;
+  text-transform: uppercase;
+  text-decoration: underline;
+}  
