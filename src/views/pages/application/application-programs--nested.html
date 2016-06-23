@@ -1,0 +1,55 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<div class="app-container">
+  <section class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      <div class="app-header app-card form-card">
+        <header class="app-card_header">
+          <h1 class="app-card_title">Application: 123 Main St.</h1>
+        </header>
+        <div class="app-card_nav">
+          {{> navigation.progress-nav}}
+        </div>
+      </div>
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">There are some special programs we’d like to ask you about. Do you have any of the following?</h2>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            <div class="checkbox-group">
+              <div class="" labelledby="special_programs_label">
+                <p class="checkbox-block">
+                  <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
+                  <label class="checkbox-block_label" for="preferences-displaced">
+                    <strong class="form-label caps">Displaced Tenants Preference</strong>
+                    <span class="checkbox-block_note">Primarily households displaced by Ellis Act evictions as defined by The Ellis Act Displacement Emergency Assistance Ordinance passed into law on December 18, 2013. (Formerly Ellis Act Preference)</span>
+                  </label>
+                </p>
+
+                <div class="form-group inset">
+                  <label class="form-label caps">Which household member has this preference?</label>
+                  {{> forms.select}}
+                </div>
+              </div>
+              <p class="checkbox-block">
+                <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
+                <label class="checkbox-block_label" for="preferences-cop">
+                  <strong class="form-label caps">Certificate of Preference</strong>
+                  <span class="checkbox-block_note">Primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action.</span>
+                </label>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+      </form>
+    </div>
+  </section>    
+</div>
+
+{{> components.footer}}

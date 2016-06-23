@@ -42,4 +42,9 @@ a, .btn-link {
   color: $deep;
   text-transform: uppercase;
   text-decoration: underline;
-}  
+
+  &.v-align-right {
+    @include absolute(50%,1rem,null,null);
+    transform: translateY(-50%);
+  }
+}

@@ -11,8 +11,6 @@
   @media #{$small-only} {
     max-width: rem-calc(480);
     margin: 0 auto 4rem;
-    // overflow: visible;
-    // padding-bottom: 2rem;
   }
 
   @media #{$medium-up} {
@@ -22,7 +20,6 @@
     .property-card_figure {
       @include grid-column(7);
       padding: 0;
-      background-color: $charcoal;
     }
     
     .property-card_content {
@@ -64,7 +61,6 @@
   line-height: .8;
 
   &.radius {
-
     img,
     .property-card_overlay:before {
       @media #{$medium-up} {
@@ -72,6 +68,10 @@
       }
     }
   }
+
+  @media #{$medium-up} {
+    background-color: $charcoal;
+  }  
 
   // Labels overlaying images
   .status-label {
