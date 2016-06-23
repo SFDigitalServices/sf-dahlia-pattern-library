@@ -2,19 +2,33 @@
 // Editable
 // Multiline item with edit button
 
-.user-item,
 .info-item {
   @include clearfix;
   position: relative;
+
+  &.tall {
+    @include scut-padding(1rem n);
+  }
 }
 
-.user-item_name,
 .info-item_name {
-  float: left;
-  padding-top: 1rem;
+  @include responsive-text-size('small');
+  font-family: $alt-font-family;
+  font-weight: $t-semi;
+  letter-spacing: $large-header-spacing;
+  margin-bottom: .25rem;
+  text-transform: uppercase;
+}
+
+.info-item_value,
+.info-item_note {
+  @include responsive-text-size('small');
+  color: $steel;
+  margin-bottom: 0;
 }
 
 .info-item_link {
-  @include absolute(1.75rem,1rem,null,null);
+  @include absolute(50%,1rem,null,null);
+  transform: translateY(-50%);
   line-height: 1.5rem;
 }

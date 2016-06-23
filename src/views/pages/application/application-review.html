@@ -17,12 +17,27 @@
         <div class="app-inner leader border-bottom">
           <h2 class="app-card_question">Take a moment to review your information before submitting your application.</h2>
         </div>
-      <div class="form-group margin-bottom--2x">
-        {{> forms.panel--editable}}
-      </div>
+      
+        {{#each application.sections}}
+        <header class="app-sub-header border-top">
+          <h3 class="app-sub-header_title">{{header}}</h3>
+          <a class="info-item_link edit-link" href="#">Edit</a>
+        </header>
+
+        <div class="app-inner">
+          {{#each info-items}}
+          <div class="info-item margin-bottom">
+            <h4 class="info-item_name">{{name}}</h4>
+            <p class="info-item_value">{{{value}}}</p>
+            {{#if note }}
+            <span class="info-item_note">{{note}}</span>
+            {{/if }}
+          </div>
+          {{/each}}
+        </div>  
+        {{/each}}
 
       {{> forms.button-pager left="Confirm" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
-
     </form>
 
   </div>

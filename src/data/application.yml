@@ -1,0 +1,48 @@
+sections:
+- header: You
+  info-items:
+    - name: Name
+      value: Laura Smith
+    - name: Date of Birth
+      value: 12/02/1980
+    - name: Email
+      value: lara.smith@gmail.com
+    - name: Mailing Address
+      value: 456 Mission St <br> San Francisco, CA 94117
+    - name: Primary Language
+      value: English
+- header: Alternate Contact
+  info-items:
+    - name: Relationship
+      value: Family Member
+    - name: Name
+      value: Michael Smith
+    - name: Phone
+      value: (415) 876 5432
+      note: Cell
+    - name: Mailing Address
+      value: 456 Mission St <br> San Francisco, CA 94117
+    - name: Primary Language
+      value: English
+- header: Household Members
+  info-items:
+    - name: Name
+      value: Michael Smith
+    - name: Date of Birth
+      value: 12/2/1980
+    - name: Relationship
+      value: Family Member
+- header: Self Declared Status
+  info-items:
+    - name: Vouchers and Subsidies
+      value: None
+    - name: You Have Claimed
+      value: Certificate of Preference
+      note: for Michael Smith
+    - name: Based on Your Address You Qualify for
+      value: Neighborhood Resident Housing Preference
+      note: for Michael Smith
+- header: Income
+  info-items:
+    - name: Household Income
+      value: $32,000 per year
