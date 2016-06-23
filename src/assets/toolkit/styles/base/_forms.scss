@@ -122,6 +122,10 @@ label,
       color: $primary !important;
     }
 
+    input[type="checkbox"] + label, input[type="radio"] + label {
+      margin-left: 0;
+    }
+
     &.error {
       small.error {
         margin-bottom: .25rem;
@@ -141,7 +145,7 @@ label,
   small.highlight {
     color: $success;
     display: inline-block;
-    margin-left: 2.25rem;
+    margin-left: 1.75rem;
   }
 
   small.required {
