@@ -19,7 +19,7 @@
           <h2 class="app-card_question">Who would you’d like us to contact if we can’t get ahold of you?</h2>
         </div>
 
-        <div data-alert class="alert-box alert">
+        <div data-alert class="alert-box alert invert has-notice">
           <span class="alert-icon">
             {{> icons.base icon="warning"}}
           </span>
@@ -29,17 +29,15 @@
           <a href="#" class="close">&times;</a>
         </div>
 
-        <header class="aside-header alert">
-          <hgroup class="aside-header_group">
-            <span class="t-tiny">Required Information</span>
-            <p class="c-alert t-semi no-margin">Your Phone or Alternate Phone</p>
-            <p class="c-alert t-semi">Your Address or Alternate Address</p>
-          </hgroup>
-        </header>
+        <div class="alert-notice alert">
+          <p class="alert-notice_title">Required Information</p>
+          <p class="alert-notice_item">Your Phone or Alternate Phone</p>
+          <p class="alert-notice_item">Your Address or Alternate Address</p>
+        </div>
 
         <div class="app-inner inset">
           <div class="form-group error">
-            <label class="form-label">Alternate contact</label>
+            <label class="form-label caps">Alternate contact</label>
             <p class="form-note margin-bottom">Please select one.</p>
               <div class="radio-group error">
               <p class="radio-block">

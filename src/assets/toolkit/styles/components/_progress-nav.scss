@@ -24,12 +24,12 @@
     background-color: $success;
     border-radius: 50%;
     content: "";
-    height: rem-calc(10);
+    height: rem-calc(12);
     left: 50%;
     position: absolute;
     top: 0;
     transform: translateX(-50%);
-    width: rem-calc(10);
+    width: rem-calc(12);
     z-index: 2;
   }
 
@@ -39,7 +39,7 @@
     height: 1px;
     left: 0;
     position: absolute;
-    top: rem-calc(5);
+    top: rem-calc(6);
     width: 100%;
   }
 
@@ -74,12 +74,17 @@
     &:before {
       background-color: $smoke;
       height: rem-calc(8);
-      top: rem-calc(1);
+      top: rem-calc(2);
       width: rem-calc(8);
+    }
+
+    a {
+      cursor: default;
+      pointer-events: none;
     }
   }
 
   a {
-    color: $steel;
+    color: $charcoal;
   }
 }
