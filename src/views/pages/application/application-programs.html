@@ -1,27 +1,7 @@
-{{> headers.version-header }}
-{{> navigation.top-bar }}
+---
+layout: angular
+title: Application Review
+content: programs
+---
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
-
-<div class="row margin-top--2x show-for-medium-up"></div>
-
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
-
-      <div class="form-count">1 of 5</div>
-
-      <h2 class="application-title t-gamma padding-bottom">There are some special programs we’d like to ask you about. Do you have any of the following?</h2>
-
-      <div class="form-group margin-bottom--2x">
-        {{> forms.checkbox-group--block name="preferences" items=inputs.preferences}}
-      </div>
-
-    </form>
-
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
-  </div>
-</section>    
-
-{{> components.footer}}
+{{> application}}
