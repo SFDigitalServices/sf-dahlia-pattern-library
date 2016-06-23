@@ -11,93 +11,13 @@
       {{> content-section--process}}
     </accordion-group>
 
-    <accordion-group> 
-      <accordion-heading>
-        <img class="accordion-icon" src="/assets/toolkit/images/listing-eligibility.svg" alt="eligibility-notebook">
-        <h3 class="accordion-name">Eligibility</h3>
-        <span class="accordion-subheader">Income, occupancy, preferences and rental assistance</span>
-        {{> icons.base icon="arrow-down" size="small" position="control"}}
-      </accordion-heading>
-      
-      <header class="listing-header show-for-medium-up">
-        <img class="listing-header_icon" src="/assets/toolkit/images/listing-eligibility.svg" alt="eligibility-notebook">
-        <hgroup class="listing-header_group">
-          <h3 class="listing-header_name">Eligibility</h3>
-          <span class="listing-header_subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
-        </hgroup>
-      </header>
+    {{> includes.eligibility}}
 
-        {{> content-section--eligibility-ordered}}
-    </accordion-group>
+    {{> includes.features}}
 
-    <accordion-group> 
-      <accordion-heading>
-        <img class="accordion-icon" src="/assets/toolkit/images/listing-features.svg" alt="features-options">
-        <h3 class="accordion-name">Features</h3>
-        <span class="accordion-subheader">Amenities, unit details and additional fees</span>
-        {{> icons.base icon="arrow-down" size="small" position="control"}}
-      </accordion-heading>
+    {{> includes.neighborhood}}
 
-      <header class="listing-header show-for-medium-up">
-        <img class="listing-header_icon" src="/assets/toolkit/images/listing-features.svg" alt="features-options">
-        <hgroup class="listing-header_group">
-          <h3 class="listing-header_name">Features</h3>
-          <span class="listing-header_subheader">Amenities, unit details and additional fees</span>
-        </hgroup>
-      </header>
+    {{> includes.additional-information}}
 
-      {{> content-section--features}}
-    </accordion-group>
-
-    <accordion-group> 
-      <accordion-heading>
-        <img class="accordion-icon" src="/assets/toolkit/images/listing-neighborhood.svg" alt="neighborhood-building">
-        <h3 class="accordion-name">Neighborhood</h3>
-        <span class="accordion-subheader">Location and transportation</span>
-        {{> icons.base icon="arrow-down" size="small" position="control"}}
-      </accordion-heading>
-
-      <header class="listing-header show-for-medium-up">
-        <img class="listing-header_icon" src="/assets/toolkit/images/listing-neighborhood.svg" alt="neighborhood-building">
-        <hgroup class="listing-header_group">
-          <h3 class="listing-header_name">Neighborhood</h3>
-          <span class="listing-header_subheader">Location and transportation</span>
-        </hgroup>
-      </header>
-
-      <div class="content-section">
-        
-          <div class="property-map map-panel">
-            <figure class="property-map_figure p-relative">
-              <img class="property-map_thumb" src="/assets/toolkit/images/map.png" alt="image of map">
-              <a href="#" class="map-link ui-link ui-small">
-                <span class="ui-icon i-deep">
-                  <svg>
-                    <use xlink:href="#i-map"></use>
-                  </svg>
-                </span>
-                Get Directions
-              </a>
-            </figure>
-          </div>
-   
-      </div>
-    </accordion-group>
-
-    <accordion-group> 
-      <accordion-heading>
-        <img class="accordion-icon" src="/assets/toolkit/images/listing-legal.svg" alt="legal-documents">
-        <h3 class="accordion-name">Additional Information</h3>
-        {{> icons.base icon="arrow-down" size="small" position="control"}}
-      </accordion-heading>
-
-      <header class="listing-header show-for-medium-up">
-        <h3 class="listing-header_name">Additional Information</h3>
-      </header>
-
-      <div class="content content-section">
-        {{> components.content-card-stack}}
-      </div>
-    </accordion-group>
-  </accordion>  
+  </accordion>
 </div>
