@@ -1,33 +1,39 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
+<div class="app-container">
+  <section class="row collapse">
+    <div class="medium-8 medium-centered columns">
+      
+      <h2 class="t-gamma text-center margin-top">Let’s get started on your application for</h2>
 
-<div class="row margin-top--2x show-for-medium-up"></div>
+      <form class="app-card form-card">
+        <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
+          <a href="#">Trinity Place Apartments</a>
+        </h1>
 
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card clearfix">
+        <figure class="property-card_figure radius">
+          <a class="property-card_overlay" href="/listings/id">
+            <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
+              Address:formattedAddress" role="link" >
 
-      <h2 class="application-title t-gamma padding-bottom">Let’s get started on your application for</h2>
+            <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
+          </a>
 
-      <div class="form-group">
-        
-        <div class="property-card no-margin">
-          <img class="property-thumb" src="/assets/toolkit/images/property3.jpg" alt="image of property3">
-          <h3 class="property-title t-serif gamma margin-top">
-            Trinity Place Apartments
-          </h3>
-          <p>1188 Mission St, San Francisco CA, 94134</p>
-          <p class="c-steel margin-bottom--half">Caritas Management Group</p>
-          <p>Application Due Februrary 2, 2016</p>
+          <figcaption class="property-card_info">
+            <h1 class="property-card_title show-for-medium-up">
+              <a href="#">Trinity Place Apartments</a>
+            </h1>
+            <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
+          </figcaption>
+        </figure>
         </div>
-        
+      </form>
+
+      <div class="text-center padding">
+        {{> buttons.button text="Get Started" classes="expand-small primary"}}
       </div>
 
-      {{> buttons.button text="Get Started" classes="expand-small primary"}}
-    </form>
-  </div>
-</section>    
-
+  </section>    
+</div>
 {{> components.footer}}

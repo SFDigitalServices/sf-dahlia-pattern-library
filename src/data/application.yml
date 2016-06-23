@@ -33,7 +33,7 @@ sections:
     - name: Relationship
       value: Family Member
   multiple:
-    item:
+    items:
       - name: Name
         value: Michael Johnson
       - name: Date of Birth

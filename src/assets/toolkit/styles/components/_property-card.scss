@@ -56,6 +56,22 @@
       }
     }
   }
+}
+
+.property-card_figure {
+  text-align: center;
+  position: relative;
+  line-height: .8;
+
+  &.radius {
+
+    img,
+    .property-card_overlay:before {
+      @media #{$medium-up} {
+        border-radius: $form-card-radius;
+      }
+    }
+  }
 
   // Labels overlaying images
   .status-label {
@@ -74,12 +90,6 @@
       @include absolute(.5rem,auto,auto,0);
     }
   }
-}
-
-.property-card_figure {
-  text-align: center;
-  position: relative;
-  line-height: 1;
 }
 
 .property-card_thumb {
