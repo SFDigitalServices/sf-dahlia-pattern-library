@@ -32,14 +32,13 @@ sections:
       value: 12/2/1980
     - name: Relationship
       value: Family Member
-  multiple:
-    items:
-      - name: Name
-        value: Michael Johnson
-      - name: Date of Birth
-        value: 12/2/1970
-      - name: Relationship
-        value: Family Member
+    - divider: true
+    - name: Name
+      value: Michael Johnson
+    - name: Date of Birth
+      value: 12/2/1970
+    - name: Relationship
+      value: Family Member
 - header: Self Declared Status
   info-items:
     - name: Vouchers and Subsidies
