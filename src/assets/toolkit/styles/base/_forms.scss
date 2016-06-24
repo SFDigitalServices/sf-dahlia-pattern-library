@@ -31,8 +31,12 @@ label {
 
 // Input and label wrapper
 .form-group {
-  &.inset {
-    @include scut-padding(n 2.5rem 2rem); 
+  &.input-inset {
+    @include scut-padding(n n 2rem 2.5rem);
+
+    @media #{$medium-up} {
+      @include scut-padding(n 2.5rem 2rem);
+    }
   }
 
   #{h1, h2, h3, h4, h5, h6} {
@@ -73,6 +77,12 @@ label {
     display: block;
     margin-top: -.75rem;
     margin-bottom: 1.5rem;
+  }
+
+  &.input-inset {
+    @media #{$medium-up} {
+      @include scut-padding(n 2rem);
+    }
   }
 }
 

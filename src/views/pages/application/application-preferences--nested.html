@@ -1,0 +1,71 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<div class="app-container">
+  <section class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      <div class="app-header app-card form-card">
+        <header class="app-card_header">
+          <h1 class="app-card_title">Application: 123 Main St.</h1>
+        </header>
+        <div class="app-card_nav">
+          {{> navigation.progress-nav}}
+        </div>
+      </div>
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Based on the address details you entered, it sounds like your household may qualify for additional preferences.</h2>
+          <div class="form-group">
+            <p class="t-small c-steel">Optional</p>
+            <p class="t-small c-steel">Upload any supporting documentation as instructed. If eligibility for a preference cannot be verified, your household will not receive the preference for which you indicate eligibility (you will not be otherwise penalized).</p>
+          </div>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            <div class="checkbox-group">
+              <div class="" labelledby="special_programs_label">
+                <p class="checkbox-block">
+                  <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
+                  <label class="checkbox-block_label" for="preferences-displaced">
+                    <strong class="form-label caps">Neighborhood Residence Housing Preference</strong>
+                    <span class="checkbox-block_note">At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project.</span>
+                  </label>
+                </p>
+
+                <div class="form-group input-inset padding-bottom-none">
+                  <label class="form-label caps">Which household member has this preference?</label>
+                  {{> forms.select}}
+                </div>
+
+                <div class="form-group input-inset">
+                  <label class="form-label caps">Which one of the following documents would you like to upload in order to prove eligibility?</label>
+                  {{> forms.select}}
+
+                  <div class="form-group text-center">
+                    {{> buttons.button text="Upload Proof of Preference"}}
+                    <p class="form-note input-inset margin-bottom">Please make sure the image is clear and you can read the address.</p>
+                    <p class="form-note input-inset">Max file size is 2MB. Supported file types: pdf, jpg, png</p>
+                  </div>
+                </div>
+
+              </div>
+              <p class="checkbox-block">
+                <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
+                <label class="checkbox-block_label" for="preferences-cop">
+                  <strong class="form-label caps">Work in San Francisco Preference</strong>
+                  <span class="checkbox-block_note">At least one household member must work in San Francisco at least 75% of their working hours.</span>
+                </label>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+      </form>
+    </div>
+  </section>    
+</div>
+
+{{> components.footer}}
