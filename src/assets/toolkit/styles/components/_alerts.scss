@@ -3,6 +3,12 @@
 //
 
 .alert-box {
+  background-color: $primary-tint;
+
+  &.primary {
+    background-color: $primary-tint;
+  }
+
   &.alert {
     background-color: $alert-tint;
   }

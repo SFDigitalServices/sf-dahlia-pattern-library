@@ -17,13 +17,20 @@
       {{/compare}}
     
     </hgroup>
-  
-    {{#compare state '==' 'results' }}
-      {{> results-accordion }}
-    {{else }}
-      {{> results-accordion--search }}
-    {{/compare}}
-
+    
+    
+      {{#compare state '==' 'results' }}
+        <div class="modal-overflow">
+          {{> results-accordion }}
+          <p class="text-center t-small padding--2x no-margin"><a href="#">Download Unsorted Results</a></p>
+        </div>
+      {{else }}
+        {{> results-accordion--search }}
+      {{/compare}}
+      <footer class="text-center padding-top">
+        <p class="t-small c-steel no-margin">Results Updated: February 21, 2016</p>
+      </footer>
+    </div>
   </section>
 
   <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
