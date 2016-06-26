@@ -1,10 +1,10 @@
 <div ng-controller="AccordionSampleController">
-  <section class="padding-bottom--2x">
+  <section class="padding-bottom">
     <header class="padding-top padding-left">
-      <h2 class="h-caps-lined">Housing Preferences</h2>
+      <h2 class="h-caps-lined no-margin">Housing Preferences</h2>
     </header>
-    <div class="padding padding-top-none">
-      <p class="no-margin">Ranking in these lists is considered before the General List.</p>
+    <div class="padding">
+      <p class="no-margin">Ranking in these lists is considered in the order shown here.</p>
     </div>
 
     <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
@@ -18,9 +18,7 @@
           <p class="t-small no-margin">10 applicants qualified for this preference</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
       
@@ -34,9 +32,7 @@
           <p class="t-small no-margin">15 applicants qualified for this preference</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
       
@@ -47,12 +43,11 @@
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
-          <p class="t-small no-margin">1200 applicants qualified for this preference</p>
+          <p class="t-small">1200 applicants qualified for this preference. Showing first 1000 applicants.</p>
+          <p class="t-small no-margin"><a href="#">Download Full Preference List</a></p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
 
@@ -63,12 +58,11 @@
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
-          <p class="t-small no-margin">2800 applicants qualified for this preference</p>
+          <p class="t-small">2800 applicants qualified for this preference. Showing first 1000 applicants.</p>
+          <p class="t-small no-margin"><a href="#">Download Full Preference List</a></p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
     </accordion>
@@ -85,10 +79,12 @@
         <span class="accordion-subheader tiny">any remaining units</span>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
       </accordion-heading>
+      <div class="padding">
+        <p class="t-small">200 applicants are in this list</p>
+        <p class="t-small no-margin">Please note, all preference holders will be considered for units first.</p>
+      </div>
       <div class="overflow-panel">
-        <div class="overflow-panel_scroll">
         {{> tables.table--results }}
-        </div>
       </div>
     </accordion-group>
   </accordion>
