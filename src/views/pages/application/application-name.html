@@ -10,19 +10,21 @@
     <form class="application-form form-card has-nav">
       {{> navigation.sub-nav--application}}
 
-      <div class="form-count"><a href="#" class="lined margin-right">Back</a> Question 1 of 6</div>
+      <div class="form-count"><a href="#" class="lined margin-right">Back</a></div>
 
       <h2 class="application-title t-gamma padding-bottom">We’ll get started by getting some information about you. First, what’s your name?</h2>
 
+      {{> forms.alert-box text="These fields are editable via your account settings" status="primary"}}
+
       <div class="form-group">
         <h3 class="form-label">Your Name</h3>
-        {{> forms.text-input--base placeholder="First Name" label="First Name"}}
-        {{> forms.text-input--base placeholder="Last Name" label="Last Name"}}
+        {{> forms.text-input--base placeholder="First Name" label="First Name" readonly="readonly"}}
+        {{> forms.text-input--base placeholder="Last Name" label="Last Name" readonly="readonly"}}
       </div>
 
       <div class="form-group margin-bottom--2x">
         <h3 class="form-label">Your Date of Birth</h3>
-        {{> forms.input-dob}}
+        {{> forms.input-dob readonly="readonly"}}
       </div>
     </form>
 

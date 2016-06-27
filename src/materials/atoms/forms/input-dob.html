@@ -5,14 +5,14 @@ notes: |
 <div class="form-date-of-birth row collapse">
   <div class="form-group-month large-2 columns">
     <label for="date_of_birth_1" class="sr-only">Month</label>
-    <input type="number" name="date_of_birth_1" min="1" max="12" placeholder="MM" />
+    <input type="number" name="date_of_birth_1" min="1" max="12" placeholder="MM" {{default readonly ''}} />
   </div>
   <div class="form-group-day large-2 columns">
     <label for="date_of_birth_2" class="sr-only">Day</label>
-    <input type="number" name="date_of_birth_2" min="1" max="31" placeholder="DD" />
+    <input type="number" name="date_of_birth_2" min="1" max="31" placeholder="DD" {{default readonly ''}} />
   </div>
   <div class="form-group-year large-2 columns end">
     <label for="date_of_birth_3" class="sr-only">Year</label>
-    <input type="number" name="date_of_birth_3" min="1900" max="2016" placeholder="YYYY" />
+    <input type="number" name="date_of_birth_3" min="1900" max="2016" placeholder="YYYY" {{default readonly ''}} />
   </div>
 </div>
