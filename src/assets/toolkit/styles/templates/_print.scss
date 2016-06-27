@@ -1,0 +1,32 @@
+@media print {
+  .footer-section .inline-list,
+  button, .button,
+  .menu-icon,
+  .version-bar,
+  .button-link,
+  .sub-nav, 
+  img,
+  button.button-link {
+    display: none;
+  }
+
+  body {
+    font: 12pt Georgia, "Times New Roman", Times, serif;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+    margin-top: 25px;
+  }
+
+  footer,
+  .text-center {
+    text-align: left;
+  }
+}
