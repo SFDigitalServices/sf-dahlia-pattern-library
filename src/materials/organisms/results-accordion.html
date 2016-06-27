@@ -1,74 +1,68 @@
 <div ng-controller="AccordionSampleController">
-  <section class="padding-bottom--2x">
+  <section class="padding-bottom">
     <header class="padding-top padding-left">
-      <h2 class="h-caps-lined">Housing Preferences</h2>
+      <h2 class="h-caps-lined no-margin">Housing Preferences</h2>
     </header>
-    <div class="padding padding-top-none">
-      <p class="no-margin">Ranking in these lists is considered before the General List.</p>
+    <div class="padding">
+      <p class="no-margin">Ranking in these lists is considered in the order shown here.</p>
     </div>
 
     <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Certificate of Preference</h3>
-          <span class="accordion-subheader tiny">10 qualifying applicants</span>
+          <span class="accordion-subheader tiny">up to 50 units available</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
-          <p class="t-small no-margin">These applicants will be considered for up to 50 units</p>
+          <p class="t-small no-margin">10 applicants qualified for this preference</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
       
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Displaced Tenants Housing Preference</h3>
-          <span class="accordion-subheader tiny">15 qualifying applicants</span>
+          <span class="accordion-subheader tiny">up to 10 units available</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
-          <p class="t-small no-margin">These applicants will be considered for up to 10 units</p>
+          <p class="t-small no-margin">15 applicants qualified for this preference</p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
       
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Neighborhood Resident Housing Preference</h3>
-          <span class="accordion-subheader tiny">1200 qualifying applicants</span>
+          <span class="accordion-subheader tiny">up to 20 units available</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
-          <p class="t-small no-margin">These applicants will be considered for up to 20 units</p>
+          <p class="t-small">1200 applicants qualified for this preference. Showing first 1000 applicants.</p>
+          <p class="t-small no-margin"><a href="#">Download Full Preference List</a></p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
 
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Live/Work Preference</h3>
-          <span class="accordion-subheader tiny">2800 qualifying applicants</span>
+          <span class="accordion-subheader tiny">at least 10 units available</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         <div class="padding">
-          <p class="t-small no-margin">These applicants will be considered for any remaining units</p>
+          <p class="t-small">2800 applicants qualified for this preference. Showing first 1000 applicants.</p>
+          <p class="t-small no-margin"><a href="#">Download Full Preference List</a></p>
         </div>
         <div class="overflow-panel">
-          <div class="overflow-panel_scroll">
           {{> tables.table--results }}
-          </div>
         </div>
       </accordion-group>
     </accordion>
@@ -81,14 +75,16 @@
   <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
     <accordion-group>
       <accordion-heading>
-        <h3 class="accordion-name semi">All Applicants</h3>
-        <span class="accordion-subheader tiny">3000 total applicants</span>
+        <h3 class="accordion-name semi">General Pool</h3>
+        <span class="accordion-subheader tiny">any remaining units</span>
         {{> icons.base icon="arrow-down" size="small" position="control"}}
       </accordion-heading>
+      <div class="padding">
+        <p class="t-small">200 applicants are in this list</p>
+        <p class="t-small no-margin">Please note, all preference holders will be considered for units first.</p>
+      </div>
       <div class="overflow-panel">
-        <div class="overflow-panel_scroll">
         {{> tables.table--results }}
-        </div>
       </div>
     </accordion-group>
   </accordion>

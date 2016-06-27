@@ -23,9 +23,9 @@ layout: angular
 <section class="results-section">
   <div class="row">
     <div class="large-12 columns">
-      {{> property-card--default}}
-      {{> property-card--default}}
-      {{> property-card--default}}
+      {{> property-card}}
+      {{> property-card}}
+      {{> property-card}}
     </div>
   </div>
 </section>
@@ -56,7 +56,7 @@ layout: angular
 
   <div class="row">
     <div class="large-12 columns">
-      {{> property-card--closed}}
+      {{> property-card state="closed"}}
     </div>
   </div>
 </section>
@@ -87,7 +87,7 @@ layout: angular
 
   <div class="row">
     <div class="large-12 columns">
-      {{> property-card--results}}
+      {{> property-card state="results"}}
     </div>
   </div>
 </section>
