@@ -1,12 +1,14 @@
 @media print {
-  .footer-section .inline-list,
-  button, .button,
+  button, 
+  .button,
+  button.button-link,
   .menu-icon,
   .version-bar,
   .button-link,
   .sub-nav, 
-  img,
-  button.button-link {
+  footer img,
+  .footer-section .inline-list,
+  .button-stack--paginate {
     display: none;
   }
 
@@ -25,8 +27,11 @@
     margin-top: 25px;
   }
 
-  footer,
+  a {
+    color: #000;
+  }
+
   .text-center {
-    text-align: left;
+    text-align: left !important;
   }
 }
