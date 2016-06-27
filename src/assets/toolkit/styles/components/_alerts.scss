@@ -3,22 +3,40 @@
 //
 
 .alert-box {
-  background-color: $primary-tint;
+  &.invert {
+    color: $white;
 
-  &.primary {
-    background-color: $primary-tint;
-  }
+    svg use {
+      fill: $white;
+    }
+
+    .close {
+      color: $white;
+    }
+  }  
 
   &.alert {
     background-color: $alert-tint;
+
+    &.invert {
+      background-color: $alert;
+    }
   }
 
   &.success {
     background-color: $success-tint;
+
+    &.invert {
+      background-color: $success;
+    }
   }
 
   .close {
     line-height: .9rem;
+  }
+
+  &.has-notice {
+    margin-bottom: 0;
   }
 }
 
@@ -29,7 +47,30 @@
 }
 
 .alert-body {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  @include scut-padding(n 2rem);
   margin-bottom: 0;
+}
+
+.alert-notice {
+  @include responsive-text-size('tiny');
+  @include scut-padding(1rem 2.75rem);
+  background-color: $vapor;
+  border: 2px solid $primary;
+
+  &.alert {
+    border-color: $alert;
+  }
+
+  p {
+    margin-bottom: .25rem;
+  }
+}
+
+.alert-notice_title {
+
+}
+
+.alert-notice_item {
+  color: $alert;
+  font-weight: $t-semi;
 }
