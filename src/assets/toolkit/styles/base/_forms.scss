@@ -110,7 +110,7 @@ label,
   &.has-option {
     .checkbox label,
     .radio label {
-      color: $primary !important;
+      color: $primary;
     }
 
     &.error {
@@ -120,7 +120,7 @@ label,
 
       .checkbox label,
       .radio label {
-        color: $primary !important;
+        color: $primary;
       }
     }  
   }  
