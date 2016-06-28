@@ -30,14 +30,14 @@
         </a>
         <ul class="dropdown">
           {{#each menus.account}}
-          <li class="dropdown-item has-icon">
+          <li class="dropdown-item {{#if icon}}has-icon{{/if}}">
             <a href="#">
-            <span class="ui-icon ui-medium">
-              <svg>
-                <use xlink:href="#i-{{default icon 'info'}}"></use>
-              </svg>
-            </span>
-            {{this.name}}</a></li>
+            {{#if icon}}
+              {{> icons.base }}
+            {{/if}}
+            {{this.name}}
+            </a>
+          </li>
           {{/each}}
         </ul>
       </li>

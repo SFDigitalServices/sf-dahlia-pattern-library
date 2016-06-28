@@ -3,8 +3,9 @@
 // Angualr overlay menu 
 
 .ng-pageslide {
-  background-color: $oil;
-
+  background-color: $white;
+  box-shadow: 0px 6px 0px 6px rgba(0,0,0,0.03);
+  
   @media #{$medium-up} {
     display: none;
   }  

@@ -7,5 +7,16 @@ account:
     icon: eligibility
   - name: Account Settings
     icon: settings
-  - name: Logout
-    icon: logout
+  - name: Sign Out
+mobile:
+  - name: Browse Properties
+    icon: browse
+  - name: Get Assistance
+    icon: assistance
+  - name: My Favorites
+    icon: favorite
+  - name: Eligibility Settings
+    icon: eligibility
+  - name: Account Settings
+    icon: settings
+  - name: Sign Out
