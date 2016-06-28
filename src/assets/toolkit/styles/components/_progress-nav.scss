@@ -9,7 +9,7 @@
 .progress-nav_item {
   @include responsive-text-size('quark');
   float: left;
-  padding-top: rem-calc(20);
+  display: block;
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -22,14 +22,15 @@
 
   &:before {
     background-color: $success;
+    border: 1px solid $white;
     border-radius: 50%;
     content: "";
-    height: rem-calc(12);
+    height: rem-calc(14);
     left: 50%;
     position: absolute;
     top: 0;
     transform: translateX(-50%);
-    width: rem-calc(12);
+    width: rem-calc(14);
     z-index: 2;
   }
 
@@ -39,7 +40,7 @@
     height: 1px;
     left: 0;
     position: absolute;
-    top: rem-calc(6);
+    top: rem-calc(7);
     width: 100%;
   }
 
@@ -59,9 +60,9 @@
   &.active {
     &:before {
       background-color: $warn;
-      height: rem-calc(8);
+      height: rem-calc(10);
       top: rem-calc(2);
-      width: rem-calc(8);
+      width: rem-calc(10);
     }
       
     a {
@@ -73,9 +74,9 @@
   &.disabled {
     &:before {
       background-color: $smoke;
-      height: rem-calc(8);
+      height: rem-calc(10);
       top: rem-calc(2);
-      width: rem-calc(8);
+      width: rem-calc(10);
     }
 
     a {
@@ -86,5 +87,9 @@
 
   a {
     color: $charcoal;
+    display: block;
+    padding-top: rem-calc(20);
+    position: relative;
+    z-index: 3;
   }
 }
