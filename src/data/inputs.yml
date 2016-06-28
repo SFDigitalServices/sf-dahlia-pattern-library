@@ -174,3 +174,9 @@ children:
     attr: five
   - name: "6"
     attr: six
+
+yesno:
+  - name: "Yes"
+    value: "yes"
+  - name: "No"
+    value: "no"

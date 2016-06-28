@@ -36,7 +36,7 @@
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
             {{> forms.input-email visibility="sr-only"}}
 
-            <div class="form-item padding-bottom">
+            <div class="form-item">
               {{> forms.checkbox text="I don't have an email address"}}
             </div>
           </div>
@@ -55,7 +55,7 @@
               </div>
             </div>
 
-            <div class="form-item padding-bottom">
+            <div class="form-item">
               <div class="radio">
                 <input type="radio" name="groupName" id="radio2" /> 
                 <label for="radio2">I have a seperate mailing address</label>
@@ -70,10 +70,18 @@
           </div>
         </div>
 
-        <div class="app-inner inset">  
+        <div class="app-inner inset border-bottom">  
           <div class="form-group">
             <label class="form-label caps">What is your primary language?</label>
             {{> forms.select}}
+          </div>
+        </div>
+
+        <div class="app-inner inset">  
+          <div class="form-group">
+            <label class="form-label caps">Do you work in San Francisco?</label>
+            <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>
+            {{> forms.radio-group--inline items=inputs.yesno classes="double"}}
           </div>
         </div>
 
