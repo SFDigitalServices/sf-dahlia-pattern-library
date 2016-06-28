@@ -1,9 +1,12 @@
-<div data-alert class="alert-box alert {{default classes ''}}">
-  <span class="alert-icon">
-    {{> icons.base icon="warning"}}
+<div data-alert class="alert-box {{default status 'alert'}} {{default classes ''}}">
+  <span class="alert-icon ui-icon ui-medium">
+      <svg>
+        <use xlink:href="#i-{{default icon 'info'}}"></use>
+      </svg>
+    </span>
   </span>
   <p class="alert-body">
-    You'll need to resolve any errors before moving on.
+    {{default text "You'll need to resolve any errors before moving on."}}
   </p>
   <a href="#" class="close">&times;</a>
 </div>

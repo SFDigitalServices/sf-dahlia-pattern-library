@@ -133,7 +133,7 @@ label,
   &.has-option {
     .checkbox label,
     .radio label {
-      color: $primary !important;
+      color: $primary;
     }
 
     input[type="checkbox"] + label, input[type="radio"] + label {
@@ -147,7 +147,7 @@ label,
 
       .checkbox label,
       .radio label {
-        color: $primary !important;
+        color: $primary;
       }
     }  
   }  

@@ -11,21 +11,27 @@
       <div class="">
       {{> forms.icon-input }}
 
+      {{#compare state '==' 'results' }}
       <p class="t-small">Lottery results are divided into multiple lists. Please check each one in order to confirm your ranking.</p>
       </div>
-    
-    </hgroup>
+      {{/compare}}
   
-    {{> results-accordion }}
-
-    <!-- <div class="overflow-panel">
-      <div class="overflow-panel_scroll">
-        {{> tables.table--results }}
-      </div>
-    </div> -->
+    </hgroup>
+    
+      {{#compare state '==' 'results' }}
+        <div class="modal-overflow">
+          {{> results-accordion }}
+          <p class="text-center t-small padding--2x no-margin"><a href="#">Download Unsorted Results</a></p>
+        </div>
+      {{else }}
+        {{> results-accordion--search }}
+      {{/compare}}
+      <footer class="text-center padding-top">
+        <p class="t-small c-steel no-margin">Results Updated: February 21, 2016</p>
+      </footer>
+    </div>
   </section>
 
-  <!-- <a class="close-reveal-modal" aria-label="Close"> -->
   <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
     {{> icons.base icon="close" size="medium" fill="primary"}}
   </a>

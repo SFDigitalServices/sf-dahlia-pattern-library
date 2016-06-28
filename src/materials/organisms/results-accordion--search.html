@@ -1,18 +1,19 @@
 <div ng-controller="AccordionSampleController">
-  <section class="padding-bottom--2x">
+  <section class="padding-bottom">
     <header class="padding-top padding-left">
       <h2 class="h-caps-lined">Your Preference Ranking</h2>
     </header>
     <div class="padding padding-top-none">
-      <p class="no-margin">Ranking in these lists is considered before your General ranking.</p>
+      <p class="no-margin">Ranking in these lists is considered in the order show here.</p>
     </div>
 
-    <p class="padding bg-tint t-small no-margin">Please note, there are other preferences that will be considered for units first.</p>
+    {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first."}}
+
     <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Certificate of Preference</h3>
-          
+          <span class="accordion-subheader tiny">up to 50 units available</span>
           <div class="accordion-stat">
             <span class="accordion-stat_label">COP Rank</span>
             <span class="accordion-stat_value">10</span>
@@ -31,7 +32,7 @@
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Displaced Tenants Housing Preference</h3>
-          
+          <span class="accordion-subheader tiny">up to 10 units available</span>
           <div class="accordion-stat">
             <span class="accordion-stat_label">DTHP Rank</span>
             <span class="accordion-stat_value">15</span>
@@ -49,7 +50,7 @@
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Neighborhood Resident Housing Preference</h3>
-          
+          <span class="accordion-subheader tiny">up to 20 units available</span>
           <div class="accordion-stat">
             <span class="accordion-stat_label">NRHP Rank</span>
             <span class="accordion-stat_value">285</span>
@@ -67,7 +68,7 @@
       <accordion-group>
         <accordion-heading>
           <h3 class="accordion-name semi">Live/Work Preference</h3>
-          
+          <span class="accordion-subheader tiny">at least 10 units available</span>
           <div class="accordion-stat">
             <span class="accordion-stat_label">LWP Rank</span>
             <span class="accordion-stat_value">385</span>
@@ -83,28 +84,4 @@
       </accordion-group>
     </accordion>
   </section>
-  
-  <header class="padding-top padding-left">
-    <h2 class="h-caps-lined">Your General Ranking</h2>
-  </header>
-
-  <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
-    <accordion-group>
-      <accordion-heading>
-        <h3 class="accordion-name semi">All Applicants</h3>
-        
-        <div class="accordion-stat">
-          <span class="accordion-stat_label">Gen Rank</span>
-          <span class="accordion-stat_value">485</span>
-        </div>
-        {{> icons.base icon="arrow-down" size="small" position="control"}}
-      </accordion-heading>
-      
-      <div class="bg-vapor padding">
-        <p>Your ranking in this list is 485 out of 3000 total applicants.</p>
-        <p class="t-small">Any remaining units will be available for this preference.</p>
-        <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
-      </div>
-    </accordion-group>
-  </accordion>  
 </div>

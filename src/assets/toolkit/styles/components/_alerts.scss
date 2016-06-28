@@ -3,33 +3,40 @@
 //
 
 .alert-box {
+  &.invert {
+    color: $white;
+
+    svg use {
+      fill: $white;
+    }
+
+    .close {
+      color: $white;
+    }
+  }  
+
   &.alert {
     background-color: $alert-tint;
 
     &.invert {
       background-color: $alert;
-      color: $white;
-
-      svg use {
-        fill: $white;
-      }
-
-      .close {
-        color: $white;
-      }
     }
   }
 
   &.success {
     background-color: $success-tint;
-  }
 
-  .close {
-    line-height: .9rem;
+    &.invert {
+      background-color: $success;
+    }
   }
 
   &.has-notice {
     margin-bottom: 0;
+  }
+
+  .close {
+    line-height: .9rem;
   }
 }
 
@@ -67,4 +74,3 @@
   color: $alert;
   font-weight: $t-semi;
 }
-
