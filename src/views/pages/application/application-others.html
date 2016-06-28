@@ -1,7 +1,25 @@
----
-layout: angular
-title: Application Review
-content: others
----
+{{> headers.version-header }}
+{{> navigation.top-bar }}
 
-{{> application}}
+{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
+
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row">
+  <div class="medium-8 medium-centered columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+      <div class="form-count">1 of 5</div>
+
+      <h2 class="application-title t-gamma padding-bottom">Next, we’ll get some info about any people who would live with you in the unit.</h2>
+
+      <div class="form-group padding-bottom--2x">
+        {{> forms.button-stack left="I will live alone" right="Other people will live with me" classes="tall"}}
+      </div>
+    </form>
+
+    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" right="Submit" r-classes="primary right expand-small"}}
+  </div>
+</section>    
+
+{{> components.footer}}

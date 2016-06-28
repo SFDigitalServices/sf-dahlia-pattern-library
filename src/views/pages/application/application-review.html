@@ -1,7 +1,27 @@
----
-layout: angular
-title: Application Review
-content: review
----
+{{> headers.version-header }}
+{{> navigation.top-bar }}
 
-{{> application}}
+{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
+
+<div class="row margin-top--2x show-for-medium-up"></div>
+
+<section class="row">
+  <div class="medium-8 medium-centered columns">
+    <form class="application-form form-card has-nav">
+      {{> navigation.sub-nav--application}}
+
+    <div class="form-count">1 of 5</div>
+
+    <h2 class="application-title t-gamma padding-bottom">Take a moment to review your information before submitting your application.</h2>
+
+    <div class="form-group margin-bottom--2x">
+      {{> forms.panel--editable}}
+    </div>
+
+    </form>
+
+    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" right="Submit" r-classes="primary right expand-small"}}
+  </div>
+</section>    
+
+{{> components.footer}}
