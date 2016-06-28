@@ -29,8 +29,16 @@
           My Account
         </a>
         <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
-          <li><a href="#">Active link in dropdown</a></li>
+          {{#each menus.account}}
+          <li class="dropdown-item has-icon">
+            <a href="#">
+            <span class="ui-icon ui-medium">
+              <svg>
+                <use xlink:href="#i-{{default icon 'info'}}"></use>
+              </svg>
+            </span>
+            {{this.name}}</a></li>
+          {{/each}}
         </ul>
       </li>
     </ul>
