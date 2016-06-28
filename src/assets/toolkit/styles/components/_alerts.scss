@@ -17,6 +17,12 @@
     background-color: $success-tint;
   }
 
+  &.no-icon {
+    .alert-body {
+      padding-left: 0;
+    }  
+  }
+
   .close {
     line-height: .9rem;
   }

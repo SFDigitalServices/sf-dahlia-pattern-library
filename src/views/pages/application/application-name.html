@@ -14,23 +14,24 @@
 
       <h2 class="application-title t-gamma padding-bottom">We’ll get started by getting some information about you. First, what’s your name?</h2>
 
-      {{> forms.alert-box text="These fields are editable via your account settings" status="primary"}}
+      {{> forms.alert-box text="These fields are editable via your account settings" status="primary" classes="no-icon"}}
 
       <div class="form-group">
-        <h3 class="form-label">Your Name</h3>
-        <div class="form-item has-icon">
+        <h3 class="form-label">Your Name {{> icons.base icon="lock" fill="primary"}}</h3>
+        <div class="form-item readonly">
           {{> forms.text-input--base placeholder="First Name" label="First Name" readonly="readonly"}}
-          {{> icons.base icon="lock" fill="base"}}
+          
         </div>
-        <div class="form-item has-icon">
+        <div class="form-item readonly">
           {{> forms.text-input--base placeholder="Last Name" label="Last Name" readonly="readonly"}}
-          {{> icons.base icon="lock" fill="base"}}
         </div>
       </div>
 
       <div class="form-group margin-bottom--2x">
-        <h3 class="form-label">Your Date of Birth</h3>
-        {{> forms.input-dob readonly="readonly"}}
+        <h3 class="form-label">Your Date of Birth {{> icons.base icon="lock" fill="primary"}}</h3>
+        <div class="form-item readonly">
+          {{> forms.input-dob readonly="readonly"}}
+        </div>
       </div>
     </form>
 

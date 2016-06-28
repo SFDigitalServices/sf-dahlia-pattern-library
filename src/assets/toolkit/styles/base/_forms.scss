@@ -150,6 +150,18 @@ label,
   }
 }
 
+.form-item {
+  &.readonly {
+    #{text-inputs(all, 'input')} {
+      background-color: transparent;
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-radius: 0;
+    }
+  }
+}
+
 // Error spacing for radio inline
 .radio-group-inline {
   &.error {
