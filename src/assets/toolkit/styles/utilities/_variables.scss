@@ -105,6 +105,7 @@ $warn:              #fdb81e;
 $warning-color:       $warn;
 $alert-color:       #e31c3d;
 $alert:        $alert-color;
+$alert-dark:        #b51630;
 
 $success-tint:      lighten($success, 45%);
 $warn-tint:         lighten($warn, 30%);
@@ -119,6 +120,7 @@ $colors: (
   secondary: $secondary,
   wash: $wash,
   alert: $alert,
+  alert-dark: $alert-dark,
   success: $success,
   ghost: $ghost,
   snow: $snow,
