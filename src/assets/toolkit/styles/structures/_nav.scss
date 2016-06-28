@@ -24,14 +24,32 @@
   }
 
   ul.dropdown {
+    box-shadow: 0px 6px 0px 6px rgba(0,0,0,0.03);
+
     li > a,
     li:not(.has-form) a:not(.button) {
       border-bottom-width: 0;
       padding-top: 1rem;
+      text-transform: capitalize;
 
       &:hover {
-        color: #fff !important;
+        
       }  
+    }
+  }
+
+  .dropdown-item {
+    border-bottom: 1px solid $smoke;
+
+    &:last-of-type {
+      border-bottom-width: 0; 
+    }
+
+    &.has-icon {
+      .ui-icon {
+        margin-right: .5rem;
+        margin-left: -.5rem;
+      }
     }
   }
 

@@ -3,24 +3,52 @@
 // Uses angular pageslide
 
 .nav-mobile {
-  margin: 1rem rem-calc(30);
   width: rem-calc(300);
 
   li {
-    margin-bottom: rem-calc(8);
+    border-bottom: 1px solid $smoke;
+    display: block;
   }
 
   a {
-    color: $wash;
+    @include scut-padding(1rem);
+    color: $steel;
+    display: block;
+
+    &:hover {
+      background-color: $dust;
+    }
   }
+
+  .ui-icon {
+    margin-right: 1rem;
+  }
+
+  svg {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+
+.nav-mobile_header {
+  @include scut-padding(1rem);
+  background-color: $primary;
 }
 
 .nav-mobile_menu-icon {
   display: block;
-  margin: 1rem 0 0 rem-calc(30);
+
+  svg {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
 }
 
 .nav-mobile_nested-list {
   margin-left: 1rem;
   margin-top: 1.5rem;
+}
+
+.nav-mobile_panel {
+  background-color: $white;
 }

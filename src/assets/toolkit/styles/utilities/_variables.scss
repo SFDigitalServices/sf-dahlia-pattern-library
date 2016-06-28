@@ -43,6 +43,12 @@ $type-weight: (
   black: 800
 );
 
+$t-light: 300;
+$t-regular: 400;
+$t-semi: 600;
+$t-bold: 700;
+$t-black: 800;
+
 $large-header-spacing: .1rem;
 $small-header-spacing: .2rem;
 
@@ -246,6 +252,13 @@ $topbar-link-bg-hover: $mist;
 $topbar-link-bg-color-hover: $mist;
 $topbar-menu-link-color: $ebony;
 $topbar-menu-icon-color: $ebony;
+
+$topbar-dropdown-bg: $white;
+$topbar-dropdown-link-color: $steel;
+$topbar-dropdown-link-color-hover: $oil;
+$topbar-dropdown-link-bg: $white;
+$topbar-dropdown-link-bg-hover: $dust;
+$topbar-dropdown-link-weight: $t-semi;
 
 // Alert Boxes
 $alert-border-width: 0;

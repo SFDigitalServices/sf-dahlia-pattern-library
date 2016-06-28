@@ -29,8 +29,16 @@
           My Account
         </a>
         <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
-          <li><a href="#">Active link in dropdown</a></li>
+          {{#each menus.account}}
+          <li class="dropdown-item {{#if icon}}has-icon{{/if}}">
+            <a href="#">
+            {{#if icon}}
+              {{> icons.base }}
+            {{/if}}
+            {{this.name}}
+            </a>
+          </li>
+          {{/each}}
         </ul>
       </li>
     </ul>

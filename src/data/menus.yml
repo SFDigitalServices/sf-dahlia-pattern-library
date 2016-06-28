@@ -1,0 +1,22 @@
+account:
+  - name: My Applications
+    icon: application
+  - name: My Favorites
+    icon: favorite
+  - name: Eligibility Settings
+    icon: eligibility
+  - name: Account Settings
+    icon: settings
+  - name: Sign Out
+mobile:
+  - name: Browse Properties
+    icon: browse
+  - name: Get Assistance
+    icon: assistance
+  - name: My Favorites
+    icon: favorite
+  - name: Eligibility Settings
+    icon: eligibility
+  - name: Account Settings
+    icon: settings
+  - name: Sign Out

@@ -1,25 +1,8 @@
-<div style="display: block;" id="demo-right">
-  <button href="#" class="nav-mobile_menu-icon button-link">
-    {{> icons.base icon="menu" size="large" fill="white"}}
-  </button>
-
-  <ul class="nav-mobile">
-    <li>
-      <a href="#">Browse Properties</a>
-    </li>
-    <li>
-      <a href="#">Get Assistance</a>
-    </li>
-    <li>
-      <a href="#">My Account</a>
-
-      <ul class="nav-mobile_nested-list">
-        <li><a href="#">My Applications</a></li>
-        <li><a href="#">My Favorites</a></li>
-        <li><a href="#">Eligibility Settings</a></li>
-        <li><a href="#">Account Settings</a></li>
-        <li><a href="#">Sign Out</a></li>
-      </ul>  
-    </li>
-  </ul>
+<div style="display: block;" id="demo-right" class="nav-mobile_panel">
+  <header class="nav-mobile_header">
+    <button href="#" class="nav-mobile_menu-icon button-link">
+      {{> icons.base icon="right" size="medium" fill="white"}}
+    </button>
+  </header>
+  {{> navigation.nav-mobile}}
 </div>
