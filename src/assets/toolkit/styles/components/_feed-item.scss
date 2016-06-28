@@ -13,7 +13,7 @@
 }
 
 .feed-item-inner {
-  padding: 1rem;
+  @include scut-padding(1rem);
 }
 
 .feed-item-header {
@@ -100,13 +100,12 @@
 
     &:after {
       @include absolute(50%,0,null,null);
-      transform: translateY(-50%);
-      background-color: $success;
+      @include scut-size(rem-calc(12));
+      background-color: $lush;
       border-radius: 50%;
       content: '';
       display: block;
-      height: rem-calc(12);
-      width: rem-calc(12);
+      transform: translateY(-50%);
     }
   }
 }
