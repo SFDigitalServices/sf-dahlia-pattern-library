@@ -86,8 +86,8 @@ label {
   }
 }
 
-// Application page count
-.form-count {
+// Application back button
+.form-back {
   @include responsive-text-size('small');
   @include type-weight(bold);
   color: $steel;

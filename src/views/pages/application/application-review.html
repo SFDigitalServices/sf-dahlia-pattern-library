@@ -1,17 +1,10 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<div class="app-container">
-  <section class="row collapse">
+<section class="app-container">
+  <div class="row collapse">
     <div class="medium-6 medium-centered columns">
-      <div class="app-header app-card form-card">
-        <header class="app-card_header">
-          <h1 class="app-card_title">Application: 123 Main St.</h1>
-        </header>
-        <div class="app-card_nav">
-          {{> navigation.progress-nav}}
-        </div>
-      </div>
+      {{> app-header }}
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
@@ -44,7 +37,7 @@
       </form>
 
     </div>
-  </section>    
-</div>
+  </div>
+</section>
 
 {{> components.footer}}
