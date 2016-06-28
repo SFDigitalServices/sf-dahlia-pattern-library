@@ -1,9 +1,14 @@
 .feed-item {
+  @include responsive-text-size('small');
   border-bottom: 1px solid $smoke;
   position: relative;
 
   &:last-of-type {
     border-bottom-width: 0;
+  }
+
+  &.is-editable {
+    background-color: $dust;
   }
 }
 
@@ -11,36 +16,110 @@
   padding: 1rem;
 }
 
+.feed-item-header {
+  @include grid-row($behavior: collapse);
+  @include scut-padding(.5rem n);
+
+  @media #{$medium-up} {  
+    border-bottom: 1px solid $smoke;
+    margin-bottom: 1rem;
+  }  
+}  
+
 .feed-item-title {
   @include responsive-text-size('delta');
-  font-family: $sans-font-family;
+  font-family: $alt-font-family;
+  letter-spacing: $large-header-spacing;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  
+  @media #{$medium-up} {
+    @include grid-column($columns:6, $collapse:true);
+  }
 } 
 
-.feed-item-title,
-.feed-item-status,
-.feed-item-number {
-  margin-bottom: 0; 
+.feed-item-due {
+  color: $steel;
+
+  @media #{$medium-up} {
+   @include grid-column($columns:6, $collapse:true);
+   text-align: right;
+  }
+}
+
+.feed-item-content {
+  @include grid-row($behavior: collapse);
+}
+
+.feed-item-details {
+  @media #{$medium-up} {
+    @include grid-column($columns:6, $collapse:true);
+  }
+}
+
+.feed-item-action {
+  padding-top: 1rem;
+  text-align: center;
+
+  @media #{$medium-up} {
+    @include grid-column($columns:6, $collapse:true);
+    padding-top: 0;
+    text-align: right;
+  }
+}
+
+.feed-item-footer {
+  @include grid-row($behavior: collapse);
+
+  @media #{$small-only} {
+    text-align: center;
+  }
+}
+
+.feed-item-links {
+  padding-bottom: 1rem;
+
+  @media #{$medium-up} {
+    @include grid-column($columns:6, $collapse:true);
+    padding-bottom: 0;
+  }
+}
+
+.feed-item-meta {
+  @media #{$medium-up} {
+    @include grid-column($columns:6, $collapse:true);
+    text-align: right;
+  }
+}
+
+.feed-item-label {
+  position: relative;
+
+  &.is-submitted {
+    padding-right: 1.5rem;
+
+    &:after {
+      @include absolute(50%,0,null,null);
+      transform: translateY(-50%);
+      background-color: $success;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: rem-calc(12);
+      width: rem-calc(12);
+    }
+  }
 }
 
 .feed-item-link {
-  @include responsive-text-size('small');
   margin-right: 1rem;
 }
 
 .feed-item-date {
   @include responsive-text-size('tiny');
   color: $steel;
-  
-  @media #{$medium-up} {
-    @include absolute(1rem,1rem,null,null);
-  }
 }
 
-.feed-item-units {
-  @include responsive-text-size('small');
+.feed-item-address {
   color: $steel;
 }
-
-.feed-item-footer {
-  padding-top: 1rem;
-}  
