@@ -1,34 +1,30 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      {{> app-header }}
 
-<div class="row margin-top--2x show-for-medium-up"></div>
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Here’s the income you’ve added so far for yourself.</h2>
+        </div>
 
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
+        <div class="form-group no-margin border-bottom">
+          {{> forms.income-source-item}}
+        </div>
 
-      <div class="form-count">1 of 5</div>
+        <div class="form-group no-margin border-bottom">
+          {{> forms.income-source-item--edit link="Cancel"}}
+        </div>
 
-      <h2 class="application-title t-gamma">Here’s the income you’ve added so far for yourself.</h2>
-
-      <div class="form-group no-margin border-bottom">
-        {{> forms.income-source-item}}
-      </div>
-
-      <div class="form-group no-margin border-bottom">
-        {{> forms.income-source-item--edit link="Cancel"}}
-      </div>
-
-      <div class="form-group no-margin border-bottom">
-        {{> forms.income-source-item}}
-      </div>
-
-    </form>
-
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
+        <div class="form-group no-margin border-bottom">
+          {{> forms.income-source-item}}
+        </div>
+         {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+      </form>
+    </div>
   </div>
 </section>    
 

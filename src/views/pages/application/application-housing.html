@@ -1,27 +1,27 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header title="Application: 123 Main St" background="dark" color="white" classes="bg-gradient"}}
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      {{> app-header }}
 
-<div class="row margin-top--2x show-for-medium-up"></div>
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">We’d like to ask about your current housing situation.</h2>
+          <p class="t-small c-steel">Thinking about the past 30 days, what best describes your living situation?</p>
+        </div>
 
-<section class="row">
-  <div class="medium-8 medium-centered columns">
-    <form class="application-form form-card has-nav">
-      {{> navigation.sub-nav--application}}
+        <div class="app-inner">
+          <div class="form-group">
+            {{> forms.radio-group--block name="homeless" items=inputs.homeless}}
+          </div>
+        </div>
 
-      <div class="form-count">1 of 5</div>
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
 
-      <h2 class="application-title t-gamma">We’d like to ask about your current housing situation.</h2>
-
-      <div class="form-group margin-bottom--2x">
-        <p class="t-bold">Thinking about the past 30 days, what best describes your living situation?</p>
-        {{> forms.radio-group--block name="homeless" items=inputs.homeless}}
-      </div>
-
-    </form>
-
-    {{> forms.button-stack--paginate left="Save and finish later" l-classes="button-link button-lined small-text-center expand-small" r-classes="primary right expand-small"}}
+    </div>
   </div>
 </section>    
 

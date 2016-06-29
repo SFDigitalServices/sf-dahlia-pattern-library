@@ -47,7 +47,7 @@
 }
 
 .alert-body {
-  @include scut-padding(n 2rem);
+  @include scut-padding(n .5rem n 2rem);
   margin-bottom: 0;
 }
 

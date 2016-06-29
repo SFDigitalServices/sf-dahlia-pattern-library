@@ -174,15 +174,18 @@ button,
         fill: $dark;
       }  
     }  
-  }
+  
+    // Button link with underline
+    &.button-lined {
+      color: $primary;
+      font-weight: $t-regular !important;
+      text-decoration: underline;
+      line-height: 3rem;
+    }
 
-  // Button link with underline
-  &.button-lined {
-    color: $charcoal;
-    font-weight: $t-regular !important;
-    text-transform: uppercase;
-    text-decoration: underline;
-    line-height: 3rem;
+    &.caps {
+      text-transform: uppercase;
+    }
   }
 
   // Round icon button

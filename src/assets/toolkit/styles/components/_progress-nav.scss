@@ -21,7 +21,7 @@
   }
 
   &:before {
-    background-color: $success;
+    background-color: $lush;
     border: 1px solid $white;
     border-radius: 50%;
     content: "";
@@ -59,7 +59,7 @@
 
   &.active {
     &:before {
-      background-color: $warn;
+      background-color: $primary;
       height: rem-calc(10);
       top: rem-calc(2);
       width: rem-calc(10);
