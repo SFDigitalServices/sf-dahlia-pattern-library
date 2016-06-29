@@ -181,6 +181,10 @@ button,
       font-weight: $t-regular !important;
       text-decoration: underline;
       line-height: 3rem;
+
+      &:focus {
+        color: $dark;
+      }  
     }
 
     &.caps {
