@@ -5,51 +5,57 @@ sections:
         value: Laura Smith
       - name: Date of Birth
         value: 12/02/1980
+      - name: Phone
+        value: 415-123-1234
+        note: Cell
+      - name: Additional Phone
+        value: 415-123-1234
+        note: Home
       - name: Email
         value: lara.smith@gmail.com
+      - name: Address
+        value: 649 Avalon St <br> San Francisco, CA 94117
       - name: Mailing Address
         value: 456 Mission St <br> San Francisco, CA 94117
       - name: Primary Language
         value: English
   - header: Alternate Contact
     info-items:
-      - name: Relationship
-        value: Family Member
       - name: Name
         value: Michael Smith
+        note: Family Member
+      - name: Email
+        value: michael.smith@gmail.com
       - name: Phone
-        value: (415) 876 5432
-        note: Cell
+        value: 415-876-5432
       - name: Mailing Address
         value: 456 Mission St <br> San Francisco, CA 94117
-      - name: Primary Language
-        value: English
   - header: Household Members
     info-items:
       - name: Name
         value: Michael Smith
+        note: Child
       - name: Date of Birth
         value: 12/2/1980
-      - name: Relationship
-        value: Family Member
       - divider: true
       - name: Name
         value: Michael Johnson
+        note: Family Member
       - name: Date of Birth
         value: 12/2/1970
-      - name: Relationship
-        value: Family Member
+      - name: Address
+        value: 700 Avalon St <br> San Francisco, CA 94117
   - header: Self Declared Status
     info-items:
-      - name: Vouchers and Subsidies
-        value: None
       - name: You Have Claimed
         value: Certificate of Preference
         note: for Michael Smith
-      - name: Based on Your Address You Qualify for
+      - name: Based on Your Address You Claimed
         value: Neighborhood Resident Housing Preference
-        note: for Michael Smith
+        note: for Michael Smith with Telephone bill
+      - name: Vouchers and Subsidies
+        value: None claimed
   - header: Income
     info-items:
-      - name: Household Income
+      - name: Household Pre-Tax Income
         value: $32,000 per year

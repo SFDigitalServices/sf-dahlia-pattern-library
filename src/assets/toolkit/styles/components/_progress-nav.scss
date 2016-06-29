@@ -8,8 +8,8 @@
 
 .progress-nav_item {
   @include responsive-text-size('quark');
-  float: left;
   display: block;
+  float: left;
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -21,26 +21,21 @@
   }
 
   &:before {
+    @include absolute(0,null,null,50%);
+    @include scut-size(rem-calc(14));
     background-color: $lush;
     border: 1px solid $white;
     border-radius: 50%;
     content: "";
-    height: rem-calc(14);
-    left: 50%;
-    position: absolute;
-    top: 0;
     transform: translateX(-50%);
-    width: rem-calc(14);
     z-index: 2;
   }
 
   &:after {
+    @include absolute(rem-calc(7),null,null,0);
     background-color: $smoke;
     content: "";
     height: 1px;
-    left: 0;
-    position: absolute;
-    top: rem-calc(7);
     width: 100%;
   }
 
@@ -59,10 +54,9 @@
 
   &.active {
     &:before {
+      @include scut-size(rem-calc(10));
       background-color: $primary;
-      height: rem-calc(10);
       top: rem-calc(2);
-      width: rem-calc(10);
     }
       
     a {
@@ -73,10 +67,9 @@
 
   &.disabled {
     &:before {
+      @include scut-size(rem-calc(10));
       background-color: $smoke;
-      height: rem-calc(10);
       top: rem-calc(2);
-      width: rem-calc(10);
     }
 
     a {
@@ -86,9 +79,9 @@
   }
 
   a {
+    @include scut-padding(rem-calc(20) n rem-calc(5));
     color: $charcoal;
     display: block;
-    padding-top: rem-calc(20);
     position: relative;
     z-index: 3;
   }

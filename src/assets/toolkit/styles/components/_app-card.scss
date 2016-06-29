@@ -84,7 +84,7 @@
 }
 
 .app-card_nav {
-  @include scut-padding(1rem 0 2rem);
+  @include scut-padding(1rem 0 1.5rem);
 
   @media #{$small-only} {
     @include scut-padding(1rem 0 1rem);

@@ -98,7 +98,7 @@ input[type="checkbox"]:checked + label::before {
 }
 
 input[type="checkbox"]:focus + label::before {
-  box-shadow: 0 0 0 1px $color-white, 0 0 0 2px $color-primary;
+  box-shadow: 0 0 0 1px $color-white, 0 0 3px 4px $color-primary;
 }
 
 input[type="checkbox"]:disabled + label {

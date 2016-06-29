@@ -120,6 +120,8 @@ $facebook:          #4862a3;
 $twitter:           #55acee;
 $linkedin:          #0074a1;
 
+$outline:           #5B9DD9;
+
 $colors: (
   primary: $primary,
   secondary: $secondary,
@@ -223,6 +225,9 @@ $input-border-radius: $global-radius;
 $input-box-shadow: none;
 $input-bg-color: $snow;
 $input-border-color: $iron;
+$input-focus-border-color: $outline;
+$input-focus-bg-color: $wash;
+// $input-include-glowing-effect: true;
 
 /* Buttons */
 

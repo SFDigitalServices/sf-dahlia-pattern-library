@@ -9,8 +9,8 @@
   margin-bottom: 1.5rem;
 
   @media #{$small-only} {
+    @include scut-margin(0 auto 4rem);
     max-width: rem-calc(480);
-    margin: 0 auto 4rem;
   }
 
   @media #{$medium-up} {

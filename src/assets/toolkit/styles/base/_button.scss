@@ -38,6 +38,11 @@ button,
 .button {
   @include custom-button();
 
+  &:focus {
+    text-decoration: underline;
+    outline-offset: -2px;
+  }
+
   // Creates button classes form $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
     &.#{"" + $color-name} {
@@ -49,6 +54,10 @@ button,
       &:focus {
         background-color: darken($color-value, 5%);
         color: $white;
+      }
+
+      &:focus {
+        outline: 5px auto lighten($color-value, 10%);
       }
     }
   }
@@ -167,7 +176,7 @@ button,
     }
         
     &:focus {
-      outline: none;
+      // outline: none;
       color: $dark;
 
       svg use {
@@ -177,6 +186,7 @@ button,
   
     // Button link with underline
     &.button-lined {
+      @include scut-padding(n 1rem);
       color: $primary;
       font-weight: $t-regular !important;
       text-decoration: underline;
