@@ -1,0 +1,35 @@
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns">
+      {{> app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">We have located the following address, please confirm that it is correct.</h2>
+        </div>
+
+        <div class="app-inner inset">
+          <div class="form-group">
+            <h3 class="form-label margin-bottom">Suggested Address:</h3>
+            <div class="form-item has-edit">
+              <div class="radio-block margin-bottom editable">
+                <input name="confirmed_home_address" name="confirmed_home_address_yes" value="confirmed_home_address_yes" type="radio">
+                <label class="radio-block_label" for="confirmed_home_address_yes">
+                  <p class="margin-bottom-none t-base">4106 TERRACE ST</p>
+                  <p class="margin-bottom-none t-base">OAKLAND, CA 94611-5162 </p></label>
+              </div>
+              <a class="edit-link a-top-right" href="#">Edit</a>
+            </div>
+          </div>
+        </div>
+        
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> components.footer}}

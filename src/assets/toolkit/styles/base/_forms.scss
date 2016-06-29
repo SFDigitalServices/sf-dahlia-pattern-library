@@ -30,13 +30,18 @@ label {
 }
 
 // Input and label wrapper
-.form-group {
+.form-group,
+.form-item {
   &.input-inset {
-    @include scut-padding(n n 2rem 2.5rem);
+    @include scut-padding(n n 2rem 2.125rem);
 
     @media #{$medium-up} {
-      @include scut-padding(n 2.5rem 2rem);
+      @include scut-padding(n 2.125rem 2rem);
     }
+  }
+
+  &.has-edit {
+    position: relative;
   }
 
   #{h1, h2, h3, h4, h5, h6} {
@@ -45,6 +50,10 @@ label {
 
   label {
     @extend .form-label;
+  }
+
+  .editable {
+    margin-right: 3rem;
   }
 }
 
@@ -92,6 +101,12 @@ label {
   @include type-weight(bold);
   color: $steel;
   margin-bottom: 1rem; 
+}
+
+.form-group,
+.form-item {
+
+  
 }
 
 // Error messages

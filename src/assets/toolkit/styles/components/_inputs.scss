@@ -120,7 +120,7 @@ input[type="radio"]:disabled + label::before {
   input[type="checkbox"] + label::before {
     position: absolute;
     top: .125rem;
-    left: .5rem;
+    left: .125rem;
   }
 
   strong {
@@ -129,7 +129,7 @@ input[type="radio"]:disabled + label::before {
 
   &_label {
     font-size: 1rem;
-    margin-left: 2.5rem !important;
+    margin-left: 2.125rem !important;
     line-height: 1.2;
   }
 

@@ -180,3 +180,7 @@ yesno:
     value: "yes"
   - name: "No"
     value: "no"
+
+address:
+  - name: "4106 TERRACE ST <br> OAKLAND, CA 94611-5162"
+    value: address
