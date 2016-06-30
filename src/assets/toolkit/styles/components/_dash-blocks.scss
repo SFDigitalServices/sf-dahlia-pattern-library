@@ -12,7 +12,7 @@
   background-color: #fff;
   color: $oil;
   display: block;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem;
   border-bottom: 1px solid $smoke;
   text-align: center;
 
@@ -24,6 +24,7 @@
 
   p {
     @include responsive-text-size('small');
+    margin-bottom: 0;
   }
 }
 
