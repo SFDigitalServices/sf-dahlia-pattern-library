@@ -50,9 +50,10 @@ sections:
       - name: You Have Claimed
         value: Certificate of Preference
         note: for Michael Smith
-      - name: Based on Your Address You Claimed
+      - name: 
         value: Neighborhood Resident Housing Preference
-        note: for Michael Smith with Telephone bill
+        note: for Michael Smith 
+        attachment: Telephone Bill attached
       - name: Vouchers and Subsidies
         value: None claimed
   - header: Income

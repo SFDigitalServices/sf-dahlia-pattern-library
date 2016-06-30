@@ -50,7 +50,7 @@
 }
 
 .btn-ghost {
-  @each $color-name, $color-value in $colors {
+  @each $color-name, $color-value in $btn-colors {
     &-#{"" + $color-name} {
       background-color: $color-value !important;
     }
