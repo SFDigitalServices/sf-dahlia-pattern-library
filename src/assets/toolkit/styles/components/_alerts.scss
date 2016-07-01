@@ -31,6 +31,14 @@
     }
   }
 
+  &.primary {
+    background-color: $primary-tint;
+
+    &.invert {
+      background-color: $primary;
+    }
+  }
+
   &.has-notice {
     margin-bottom: 0;
   }

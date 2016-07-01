@@ -4,7 +4,6 @@
 
 @import "settings";
 @import "vendors/normalize";
-//@import "vendors/foundation/foundation";
 
 // selectively include components
 @import
@@ -33,11 +32,34 @@
    "../../vendor/foundation/scss/foundation/components/top-bar",
    "../../vendor/foundation/scss/foundation/components/visibility";
 
+@import "../../vendor/Scut/src/general/circle";
+@import "../../vendor/Scut/src/general/reset";
+@import "../../vendor/Scut/src/general/triangle";
+@import "../../vendor/Scut/src/general/image-replace";
+@import "../../vendor/Scut/src/layout/center-absolutely";
+@import "../../vendor/Scut/src/layout/center-block";
+@import "../../vendor/Scut/src/layout/center-transform";
+@import "../../vendor/Scut/src/layout/clearfix";
+@import "../../vendor/Scut/src/layout/list-unstyled";
+@import "../../vendor/Scut/src/layout/list-inline";
+@import "../../vendor/Scut/src/layout/list-floated";
+@import "../../vendor/Scut/src/layout/padding";
+@import "../../vendor/Scut/src/layout/margin";
+@import "../../vendor/Scut/src/layout/ratio-box";
+@import "../../vendor/Scut/src/layout/sticky-footer-fixed";
+@import "../../vendor/Scut/src/layout/sticky-footer-fluid";
+@import "../../vendor/Scut/src/layout/vcenter-ib";
+@import "../../vendor/Scut/src/layout/vcenter-lh";
+@import "../../vendor/Scut/src/layout/vcenter-td";
+@import "../../vendor/Scut/src/layout/vcenter-tt";
+@import "../../vendor/Scut/src/layout/size";
+@import "../../vendor/Scut/src/typography/side-lined";
+@import "../../vendor/Scut/src/typography/truncate";
+
+@import "vendors/angular-carousel";
+
 @import "utilities/all";
 
-@import "vendors/scut";
-@import "vendors/buttons";
-@import "vendors/angular-carousel";
 @import "vendors-extensions/all";
 
 @import "base/all";

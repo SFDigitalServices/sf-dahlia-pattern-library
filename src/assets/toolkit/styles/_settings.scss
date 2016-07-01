@@ -56,7 +56,12 @@
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import '../../vendor/foundation/scss/foundation/functions';
-@import 'utilities/variables';
+// @import 'utilities/variables';
+
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -64,10 +69,10 @@
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+$base-font-size:      16px;
 
 // The $base-font-size is 100% while $base-line-height is 150%
-// $base-line-height: 150%;
+$base-line-height:    24px;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
@@ -80,49 +85,160 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
-// $total-columns: 12;
-// $column-gutter: rem-calc(30);
+$row-width: rem-calc(1024);
+$total-columns: 12;
+$column-gutter: rem-calc(30);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+$base-font-family: $font-family;
+$sans-font-family: $font-family;
+$body-font-family: $font-family;
+$sans-font-family-semibold: $font-family;
+$sans-font-family-bold: $font-family;
+$alt-font-family: "Lato", Helvetica, Arial, Verdana, sans-serif;
+$serif-font-family: "Droid Serif", Georgia, Times, serif;
+$fancy-serif-font-family: "Playfair Display", Georgia, Times, serif;
+$plain-font-family: Helvetica, Arial, Verdana, sans-serif;
 
 // We use these to define default font weights
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-// $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
-// $vapor       : #F6F6F6;
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
-// $base        : #AAAAAA;
-// $aluminum    : #999999;
-// $jumbo       : #888888;
-// $monsoon     : #777777;
-// $steel       : #666666;
-// $charcoal    : #555555;
-// $tuatara     : #444444;
-// $oil         : #333333;
-// $jet         : #222222;
-// $black       : #000000;
+$white:             #fff !default;
+$snow:              #f9f9f9 !default;
+$vapor:             #f6f6f6 !default;
+$white-smoke:       #f5f5f5 !default;
+$silver:            #b3b3b3;
+$smoke:             #dedee0;
+$gainsboro:         #ddd !default;
+$iron:              #ccc !default;
+$base:              #aaa !default;
+$aluminum:          #999 !default;
+$jumbo:             #888 !default;
+$steel:             #767676;
+$monsoon:           #777 !default;
+$charcoal:          #555 !default;
+$tuatara:           #30383a;
+$jet:               #222 !default;
+$black:             #000 !default;
+$wash-color:        #efefef;
+$ebony:             #242c2e;
+$oil:               #333;
+$mist:              #f7f7f7;
+$ghost:         $wash-color;
+$wash:          $wash-color;
+$dust:              #f5f8f9;
 
-// We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+// Brand Colors
+$primary-color:     #0077da;
+$secondary-color:   #f90;
+$attention:         #00bed5;
+$splash:            #ff6627;
+$royal:             #b85ed5;
+$panic:             #f60f60;
+$bright:            #008fff;
+$lush:              #99cd00;
+$primary:    $primary-color;
+$secondary:$secondary-color;
+
+$primary-tint:      lighten($primary-color, 50%);
+$secondary-tint:    lighten($secondary-color, 40%);
+$attention-tint:    #c8f1ff; // lighten($attention, 50%);
+$splash-tint:       lighten($splash, 30%);
+$royal-tint:        lighten($royal, 30%);
+$lush-tint:         lighten($lush, 50%);
+
+$bright:            #008fff;
+$deep:              #0067be;
+$dark:              #205493;
+$tint:              $primary-tint;
+
+$success-color:     #2e8540;
+$success:    $success-color;
+$warn:              #fdb81e;
+$warning-color:       $warn;
+$alert-color:       #e31c3d;
+$alert:        $alert-color;
+$alert-dark:        #b51630;
+
+$success-tint:      lighten($success, 45%);
+$warn-tint:         lighten($warn, 30%);
+$alert-tint:        lighten($alert, 40%);
+
+$facebook:          #4862a3;
+$twitter:           #55acee;
+$linkedin:          #0074a1;
+
+$outline:           #5B9DD9;
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  wash: $wash,
+  alert: $alert,
+  success: $success,
+  ghost: $ghost,
+  snow: $snow,
+  vapor: $vapor,
+  white: $white,
+  silver: $silver,
+  smoke: $smoke,
+  gainsboro: $gainsboro,
+  iron: $iron,
+  base: $base,
+  aluminum: $aluminum,
+  jumbo: $jumbo,
+  monsoon: $monsoon,
+  steel: $steel,
+  charcoal: $charcoal,
+  tuatara: $tuatara,
+  oil: $oil,
+  jet: $jet,
+  ebony: $ebony,
+  deep: $deep,
+  tint: $tint,
+  warn: $warn,
+  attention: $attention,
+  mist: $mist,
+  royal: $royal,
+  splash: $splash,
+  bright: $bright,
+  dark: $dark,
+  lush: $lush,
+  primary-tint: $primary-tint,
+  secondary-tint: $secondary-tint,
+  attention-tint: $attention-tint,
+  splash-tint: $splash-tint,
+  royal-tint: $royal-tint,
+  lush-tint: $lush-tint,
+  alert-tint: $alert-tint,
+  warn-tint: $warn-tint,
+  success-tint: $success-tint,
+  alert-dark: $alert-dark,
+  dust: $dust
+);
+
+$btn-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  alert: $alert,
+  success: $success,
+  warn: $warn,
+  attention: $attention,
+  bright: $bright,
+  dark: $dark,
+  royal: $royal,
+  splash: $splash,
+  deep: $deep,
+  tint: $tint,
+  charcoal: $charcoal,
+  oil: $oil,
+  jet: $jet,
+  ebony: $ebony
+);
 
 // We use these to control various global styles
 // $body-bg: $white;
@@ -141,7 +257,7 @@ $include-html-global-classes: $include-html-classes;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 4px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -152,16 +268,34 @@ $include-html-global-classes: $include-html-classes;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $small-breakpoint:  em-calc(640);
-// $medium-breakpoint: em-calc(1024);
-// $large-breakpoint:  em-calc(1440);
-// $xlarge-breakpoint: em-calc(1920);
+// Here we define the breakpoints which will become the upper border for each media size.
+// The function em-calc() calculates the em-value from a px-value.
+$small-breakpoint:  em-calc(768)  !default;
+$medium-breakpoint: em-calc(960) !default;
+$large-breakpoint:  em-calc(1024) !default;
+$xlarge-breakpoint: em-calc(1920) !default;
 
-// $small-range:   (0, $small-breakpoint);
-// $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
-// $large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
-// $xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
-// $xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));
+// Here we define the lower and upper bounds for each media size
+$small-range:   (0, $small-breakpoint) !default; /* 0, 640px */
+$medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint) !default; /* 641px, 1024px */
+$large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint)  !default; /* 1025px, 1440px */
+$xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint) !default; /* 1441px, 1920px */
+$xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999)) !default; /* 1921px, ... */
+
+$small-top: $small-breakpoint;
+$medium-bottom: $small-breakpoint + em-calc(1);
+$medium-top: $medium-breakpoint;
+$large-bottom: $medium-breakpoint + em-calc(1);
+$large-top: $large-breakpoint;
+$xlarge-bottom: $large-breakpoint + em-calc(1);
+$xlarge-top: $xlarge-breakpoint;
+
+$breakpoints: (
+  small:    $small-top,
+  medium:   $medium-bottom,
+  large:    $large-bottom,
+  x-large:  $xlarge-top
+);
 
 // $screen: "only screen";
 
@@ -221,12 +355,36 @@ $include-html-global-classes: $include-html-classes;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+// Fixed Mobile font sizes
+$h1-font-size: rem-calc(32);
+$h2-font-size: rem-calc(24);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
+
+// Fixed Desktop font sizes
+$h1-font-size-large: rem-calc(40);
+$h2-font-size-large: rem-calc(28);
+$h3-font-size-large: rem-calc(24);
+
+$font-weight-normal: 400;
+$type-weight: (
+  light: 300,
+  regular: 400,
+  semi: 600,
+  bold: 700,
+  black: 800
+);
+
+$t-light: 300;
+$t-regular: 400;
+$t-semi: 600;
+$t-bold: 700;
+$t-black: 800;
+
+$large-header-spacing: .1rem;
+$small-header-spacing: .2rem;
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10);
@@ -334,10 +492,10 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-accordion-classes: $include-html-classes;
 
 // $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: $silver;
+$accordion-navigation-bg-color: $white;
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: $jet;
+$accordion-navigation-font-color: $dark;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $body-font-family;
 
@@ -357,8 +515,8 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control text style.
 // $alert-font-weight: $font-weight-normal;
-// $alert-font-size: rem-calc(13);
-// $alert-font-color: $white;
+$alert-font-size: .9rem;
+$alert-font-color: #333;
 // $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
 
 // We use this for close hover effect.
@@ -366,7 +524,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control border styles.
 // $alert-border-style: solid;
-// $alert-border-width: 1px;
+$alert-border-width: 0;
 // $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
 // $alert-bottom-margin: rem-calc(20);
 
@@ -408,7 +566,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
+$crumb-bg: scale-color($smoke, $lightness: 55%);
 
 // We use these to set the padding around the breadcrumbs.
 // $crumb-padding: rem-calc(9 14 9);
@@ -452,10 +610,10 @@ $include-html-global-classes: $include-html-classes;
 // $button-font-family: $body-font-family;
 // $button-font-color: $white;
 // $button-font-color-alt: $oil;
-// $button-font-tny: rem-calc(11);
-// $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
-// $button-font-lrg: rem-calc(20);
+$button-font-tny: rem-calc(10);
+$button-font-sml: rem-calc(11);
+$button-font-med: rem-calc(13);
+$button-font-lrg: rem-calc(13);
 // $button-font-weight: $font-weight-normal;
 // $button-font-align: center;
 
@@ -463,7 +621,7 @@ $include-html-global-classes: $include-html-classes;
 // $button-function-factor: -20%;
 
 // We use these to control button border styles.
-// $button-border-width: 0;
+$button-border-width: 2px;
 // $button-border-style: solid;
 // $button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
@@ -486,6 +644,10 @@ $include-html-global-classes: $include-html-classes;
 // We use this to set default opacity and cursor for disabled buttons.
 // $button-disabled-opacity: .7;
 // $button-disabled-cursor: $cursor-default-value;
+
+$base-button-color:     $primary;
+$base-button-bg:        #fff;
+$btn-primary-border:    darken($base-button-bg, 5%);
 
 // 06. Button Groups
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -635,36 +797,37 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-// $form-spacing: rem-calc(16);
+$form-spacing: rem-calc(20);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
+$form-label-font-size: rem-calc(16);
 // $form-label-font-weight: $font-weight-normal;
 // $form-label-line-height: 1.5;
 // $form-label-font-color: scale-color($black, $lightness: 30%);
-// $form-label-small-transform: capitalize;
+$form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
-// $input-bg-color: $white;
-// $input-focus-bg-color: scale-color($white, $lightness: -2%);
-// $input-border-color: scale-color($white, $lightness: -20%);
-// $input-focus-border-color: scale-color($white, $lightness: -40%);
+$input-font-size: rem-calc(16);
+$input-bg-color: $snow;
+$input-focus-bg-color: $wash;
+$input-border-color: $iron;
+$input-focus-border-color: $outline;
 // $input-border-style: solid;
 // $input-border-width: 1px;
-// $input-border-radius: $global-radius;
+$input-border-radius: $global-radius;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow: none;
 // $input-include-glowing-effect: false;
+$input-placeholder-font-color: $steel;
 
 // We use these to style the fieldset border and spacing.
-// $fieldset-border-style: solid;
+$fieldset-border-width: 0;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: $gainsboro;
-// $fieldset-padding: rem-calc(20);
+$fieldset-padding: 0;
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
@@ -685,14 +848,14 @@ $include-html-global-classes: $include-html-classes;
 // $input-number-spinners: true;
 
 // We use these to style the error states for inputs and labels
-// $input-error-message-padding: rem-calc(6 9 9);
-// $input-error-message-top: -1px;
-// $input-error-message-font-size: rem-calc(12);
-// $input-error-message-font-weight: $font-weight-normal;
-// $input-error-message-font-style: italic;
-// $input-error-message-font-color: $white;
-// $input-error-message-bg-color: $alert-color;
-// $input-error-message-font-color-alt: $oil;
+$input-error-message-padding: rem-calc(6 0 6) !default;
+$input-error-message-top: -1px !default;
+$input-error-message-font-size: rem-calc(12) !default;
+$input-error-message-font-weight: $font-weight-normal !default;
+$input-error-message-font-style: normal;
+$input-error-message-font-color: $alert;
+$input-error-message-bg-color: transparent;
+$input-error-message-font-color-alt: $oil !default;
 
 // We use this to style the glowing effect of inputs when focused
 // $glowing-effect-fade-time: .45s;
@@ -706,6 +869,8 @@ $include-html-global-classes: $include-html-classes;
 // $select-bg-color: $ghost;
 // $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
 
+// Form cards
+$form-card-radius: rem-calc(8);
 
 // 12. Icon Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -987,25 +1152,25 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color($white, $lightness: -5%);
+$panel-bg: #fff;
 // $panel-border-style: solid;
-// $panel-border-size: 1px;
+$panel-border-size: 0;
 // $callout-panel-bg: scale-color($primary-color, $lightness: 94%);
 
 // We use this % to control how much we darken things on hover
 // $panel-border-color: scale-color($panel-bg, $lightness: -11%);
 
 // We use these to set default inner padding and bottom margin
-// $panel-margin-bottom: rem-calc(20);
-// $panel-padding: rem-calc(20);
+$panel-margin-bottom: 1rem;
+$panel-padding: 1rem;
 
 // We use these to set default font colors
-// $panel-font-color: $oil;
-// $panel-font-color-alt: $white;
+$panel-font-color: $oil;
+$panel-font-color-alt: $white !default;
 
-// $panel-header-adjust: true;
-// $callout-panel-link-color: $primary-color;
-// $callout-panel-link-color-hover: scale-color($callout-panel-link-color, $lightness: -14%);
+$panel-header-adjust: false;
+$callout-panel-link-color: $primary-color !default;
+$callout-panel-bg: scale-color($primary-color, $lightness: 94%) !default;
 
 // 22. Pricing Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1134,15 +1299,15 @@ $include-html-global-classes: $include-html-classes;
 // $reveal-modal-bg: $white;
 // $reveal-position-top: rem-calc(100);
 // $reveal-default-width: 80%;
-// $reveal-max-width: $row-width;
-// $reveal-modal-padding: rem-calc(20);
+$reveal-max-width: 50rem;
+$reveal-modal-padding: rem-calc(20);
 // $reveal-box-shadow: 0 0 10px rgba($black,.4);
 
 // We use these to style the reveal close button
-// $reveal-close-font-size: rem-calc(40);
-// $reveal-close-top: rem-calc(10);
+$reveal-close-font-size: rem-calc(14);
+$reveal-close-top: rem-calc(20);
 // $reveal-close-side: rem-calc(22);
-// $reveal-close-color: $base;
+$reveal-close-color: $primary;
 // $reveal-close-weight: $font-weight-bold;
 
 // We use this to set the default radius used throughout the core.
@@ -1246,10 +1411,10 @@ $include-html-global-classes: $include-html-classes;
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
 // $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: $aluminum;
+$sub-nav-font-color: $steel;
 // $sub-nav-font-weight: $font-weight-normal;
 // $sub-nav-text-decoration: none;
-// $sub-nav-padding: rem-calc(3 16);
+$sub-nav-padding: rem-calc(3 10);
 // $sub-nav-border-radius: 3px;
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
 
@@ -1294,22 +1459,22 @@ $include-html-global-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
 // $table-bg: $white;
-// $table-even-row-bg: $snow;
+$table-even-row-bg: $dust;
 
 // These control the table cell border style
 // $table-border-style: solid;
-// $table-border-size: 1px;
+$table-border-size: none;
 // $table-border-color: $gainsboro;
 
 // These control the table head styles
-// $table-head-bg: $white-smoke;
-// $table-head-font-size: rem-calc(14);
-// $table-head-font-color: $jet;
-// $table-head-font-weight: $font-weight-bold;
-// $table-head-padding: rem-calc(8 10 10);
+$table-head-bg: $white-smoke;
+$table-head-font-size: rem-calc(13);
+$table-head-font-color: $oil;
+$table-head-font-weight: 700;
+$table-head-padding: rem-calc(24 20);
 
 // These control the table foot styles
-// $table-foot-bg: $table-head-bg;
+$table-foot-bg: $white;
 // $table-foot-font-size: $table-head-font-size;
 // $table-foot-font-color: $table-head-font-color;
 // $table-foot-font-weight: $table-head-font-weight;
@@ -1322,10 +1487,13 @@ $include-html-global-classes: $include-html-classes;
 // $table-caption-font-weight: bold;
 
 // These control the row padding and font styles
-// $table-row-padding: rem-calc(9 10);
+$table-row-padding: rem-calc(20 20);
 // $table-row-font-size: rem-calc(14);
-// $table-row-font-color: $jet;
+$table-row-font-color: $charcoal;
 // $table-line-height: rem-calc(18);
+
+$table-padding-small: .5rem;
+$table-value-weight: 600;
 
 // These are for controlling the layout, display and margin of tables
 // $table-layout: auto;
@@ -1400,12 +1568,14 @@ $include-html-global-classes: $include-html-classes;
 
 // $include-html-top-bar-classes: $include-html-classes;
 
+$topbar-bg-color: #fff;
+
 // Background color for the top bar
 // $topbar-bg-color: $oil;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: rem-calc(45);
+$topbar-height: rem-calc(75);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1413,16 +1583,16 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-title-font-size: rem-calc(17);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
-// $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
+$topbar-link-color: $tuatara;
+$topbar-link-color-hover: $ebony;
+$topbar-link-color-active: $ebony;
+$topbar-link-color-active-hover: $ebony;
 // $topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: $jet;
-// $topbar-link-bg-color-hover: $charcoal;
+$topbar-link-bg: #fff;
+$topbar-link-bg-hover: $mist;
+$topbar-link-bg-color-hover: $mist;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
@@ -1434,12 +1604,13 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
-// $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $jet;
-// $topbar-dropdown-link-weight: $font-weight-normal;
+
+$topbar-dropdown-bg: $white;
+$topbar-dropdown-link-color: $steel;
+$topbar-dropdown-link-color-hover: $oil;
+$topbar-dropdown-link-bg: $white;
+$topbar-dropdown-link-bg-hover: $dust;
+$topbar-dropdown-link-weight: $t-semi;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
 // $topbar-dropdown-toggle-alpha: .4;
@@ -1454,8 +1625,8 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
+$topbar-menu-link-color: $ebony;
+$topbar-menu-icon-color: $ebony;
 // $topbar-menu-link-color-toggled: $jumbo;
 // $topbar-menu-icon-color-toggled: $jumbo;
 // $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
