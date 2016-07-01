@@ -111,6 +111,7 @@ $warn:              #fdb81e;
 $warning-color:       $warn;
 $alert-color:       #e31c3d;
 $alert:        $alert-color;
+$alert-dark:        #b51630;
 
 $success-tint:      lighten($success, 45%);
 $warn-tint:         lighten($warn, 30%);
@@ -125,6 +126,7 @@ $colors: (
   secondary: $secondary,
   wash: $wash,
   alert: $alert,
+  alert-dark: $alert-dark,
   success: $success,
   ghost: $ghost,
   snow: $snow,
@@ -274,6 +276,7 @@ $input-error-message-font-style: normal;
 $input-error-message-font-color: $alert;
 $input-error-message-bg-color: transparent;
 $input-error-message-font-color-alt: $oil !default;
+$input-disabled-bg: $smoke;
 
 // Modal
 $reveal-max-width: rem-calc(720);
