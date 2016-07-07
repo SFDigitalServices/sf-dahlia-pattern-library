@@ -16,19 +16,28 @@
   font-family: $alt-font-family;
   font-weight: $t-semi;
   letter-spacing: $large-header-spacing;
-  margin-bottom: .25rem;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 
 .info-item_value,
 .info-item_note {
   @include responsive-text-size('small');
+  font-family: $sans-font-family;
   color: $steel;
-  margin-bottom: 0;
+  display: block;
+
+  &.margin-bottom {
+    margin-bottom: .25rem !important;
+  }
 }
 
 .info-item_link {
   @include absolute(50%,1rem,null,null);
   transform: translateY(-50%);
   line-height: 1.5rem;
+}
+
+.info-item_divider {
+  margin-bottom: 2rem;
 }

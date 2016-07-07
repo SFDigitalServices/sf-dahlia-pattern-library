@@ -23,13 +23,16 @@ sections:
     info-items:
       - name: Name
         value: Michael Smith
-        note: Family Member
+        note: Counselor
+        secondary: MEDA
       - name: Email
         value: michael.smith@gmail.com
       - name: Phone
         value: 415-876-5432
       - name: Mailing Address
         value: 456 Mission St <br> San Francisco, CA 94117
+      - name: Primary Language
+        value: English
   - header: Household Members
     info-items:
       - name: Name
@@ -50,13 +53,13 @@ sections:
       - name: You Have Claimed
         value: Certificate of Preference
         note: for Michael Smith
-      - name: 
+      - name: You Have Claimed
         value: Neighborhood Resident Housing Preference
         note: for Michael Smith 
-        attachment: Telephone Bill attached
+        secondary: Telephone Bill attached
       - name: Vouchers and Subsidies
-        value: None claimed
+        value: "No"
   - header: Income
     info-items:
-      - name: Household Pre-Tax Income
+      - name: 
         value: $32,000 per year

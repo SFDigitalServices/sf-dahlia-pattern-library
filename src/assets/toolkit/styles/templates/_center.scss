@@ -1,9 +1,13 @@
-// Appplication templates
+// Dashboard templates
 
+.center-body,
+.dash-body,
 .app-body {
   background-color: $vapor;
 }
 
+.center-container,
+.dash-container,
 .app-container {
   @media #{$medium-up} {
     background-color: $vapor;

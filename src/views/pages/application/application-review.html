@@ -20,21 +20,25 @@
         <div class="app-inner">
           {{#each info-items}}
           <div class="info-item margin-bottom">
-            <h4 class="info-item_name">{{name}}</h4>
-            <p class="info-item_value">{{{value}}}</p>
+            <h4 class="info-item_value margin-bottom">{{name}}</h4>
+            <p class="info-item_name">{{{value}}}</p>
             {{#if note }}
             <span class="info-item_note">{{note}}</span>
             {{/if }}
-            {{#if attachment }}
-            <p class="info-item_note">{{attachment}}</p>
+            {{#if secondary }}
+            <span class="info-item_note t-bold">{{secondary}}</span>
             {{/if }}
           </div>
           {{#if divider }}
-            <div class="border-top margin-bottom--2x"></div>
+            <div class="border-top info-item_divider"></div>
           {{/if }}
           {{/each}}
         </div> 
         {{/each}}
+
+        <div class="padding text-center">
+          <a href="#">Print a copy for your records</a>
+        </div>
 
         {{> forms.button-pager left="Confirm" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
       </form>
