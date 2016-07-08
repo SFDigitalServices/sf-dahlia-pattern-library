@@ -73,7 +73,6 @@
   @media #{$medium-up} {
     border-bottom-left-radius: $form-card-radius;
     border-bottom-right-radius: $form-card-radius;
-    margin-bottom: -$column-gutter/2;
     overflow: hidden;
   }  
 }

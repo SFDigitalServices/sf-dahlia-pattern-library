@@ -100,3 +100,20 @@
     padding-top: 1rem;
   }
 }
+
+.app-card_note {
+  @include responsive-text-size('small');
+  color: $steel;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.app-card_footer {
+  @media #{$medium-up} {
+    border-bottom-left-radius: $form-card-radius;
+    border-bottom-right-radius: $form-card-radius;
+    overflow: hidden;
+  }  
+}
