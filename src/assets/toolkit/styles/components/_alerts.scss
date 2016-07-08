@@ -23,12 +23,26 @@
     }
   }
 
+  &.primary {
+    background-color: $primary-tint;
+  }  
+
   &.success {
     background-color: $success-tint;
 
     &.invert {
       background-color: $success;
     }
+  }
+
+  &.has-notice {
+    margin-bottom: 0;
+  }
+
+  &.no-icon {
+    .alert-body {
+      padding-left: 0;
+    }  
   }
 
   .close {
@@ -47,7 +61,7 @@
 }
 
 .alert-body {
-  @include scut-padding(n 2rem);
+  @include scut-padding(n .5rem n 2rem);
   margin-bottom: 0;
 }
 

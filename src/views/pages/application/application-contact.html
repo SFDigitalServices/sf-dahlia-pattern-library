@@ -14,6 +14,8 @@
 
       <h2 class="application-title t-gamma padding-bottom">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
 
+      {{> forms.alert-box text="Your email address is editable via your account settings" status="primary"}}
+
       <div class="form-group has-option">
         <!-- <small class="required">Required</small> -->
         {{> forms.input-tel}}
@@ -26,7 +28,11 @@
       <div class="form-group has-option">
         <label class="form-label no-margin">Your email address</label>
         <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
-        {{> forms.input-email visibility="sr-only"}}
+
+        <div class="form-item has-icon">  
+          {{> forms.input-email visibility="sr-only" readonly="readonly"}}
+          {{> icons.base icon="lock" fill="base"}}
+        </div>
 
         <div class="form-item padding-bottom">
           {{> forms.checkbox text="I don't have an email address"}}
