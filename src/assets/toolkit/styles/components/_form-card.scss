@@ -74,5 +74,10 @@
     border-bottom-left-radius: $form-card-radius;
     border-bottom-right-radius: $form-card-radius;
     overflow: hidden;
-  }  
+  } 
+}
+
+.form-radius {
+  border-radius: $form-card-radius;
+  overflow: hidden;
 }

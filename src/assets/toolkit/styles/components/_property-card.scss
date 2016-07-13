@@ -61,6 +61,10 @@
   line-height: .8;
 
   &.radius {
+    @media #{$medium-up} {
+      border-radius: $form-card-radius;
+    }
+
     img,
     .property-card_overlay:before {
       @media #{$medium-up} {

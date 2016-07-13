@@ -1,9 +1,11 @@
-// Dashboard templates
+// Center card templates
 
 .center-body,
 .dash-body,
 .app-body {
-  background-color: $vapor;
+  @media #{$medium-up} {
+    background-color: $vapor;
+  }
 }
 
 .center-container,
