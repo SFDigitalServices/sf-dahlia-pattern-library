@@ -12,7 +12,9 @@
           <div class="form-back"><a href="#" class="lined">Back</a></div>
           <h2 class="app-card_question">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
         </div>
-      
+        
+        {{> forms.alert-box text="Your email address is editable via your account settings" status="primary"}}
+
         <div class="app-inner inset border-bottom">
           <div class="form-group has-option">
             {{> forms.input-tel classes="caps"}}
@@ -23,14 +25,17 @@
           </div>
         </div>
 
+
         <div class="app-inner inset border-bottom">  
           <div class="form-group has-option">
-            <label class="form-label caps">Your email address</label>
+            <label class="form-label caps">Your email address {{> icons.base icon="lock" fill="primary"}}</label>
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
-            {{> forms.input-email visibility="sr-only"}}
+            {{> forms.input-email visibility="sr-only" readonly="readonly"}}
 
-            <div class="form-item">
-              {{> forms.checkbox text="I don't have an email address"}}
+            <div class="form-group has-option">
+              <div class="form-item">
+                {{> forms.checkbox text="I don't have an email address"}}
+              </div>
             </div>
           </div>
         </div>

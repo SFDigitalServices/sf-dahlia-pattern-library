@@ -109,8 +109,13 @@ label {
 
 .form-group,
 .form-item {
+  &.has-icon {
+    position: relative;
 
-  
+    .ui-icon {
+      @include absolute(.75rem,.75rem,null,null);
+    }
+  }
 }
 
 // Error messages
@@ -183,6 +188,20 @@ label,
 
   small.required {
     color: $alert;
+  }
+}
+
+.form-item {
+  &.readonly {
+    #{text-inputs(all, 'input')} {
+      // background-color: $dust;
+      // border-top-width: 0;
+      // border-left-width: 0;
+      // border-right-width: 0;
+      // border-radius: 0;
+      // border-color: transparent;
+      background-color: $dust;
+    }
   }
 }
 

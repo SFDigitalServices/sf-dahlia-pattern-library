@@ -1,10 +1,11 @@
 <div data-alert class="alert-box {{default status 'alert'}} {{default classes ''}}">
+  {{#if icon}}
   <span class="alert-icon ui-icon ui-medium">
-      <svg>
-        <use xlink:href="#i-{{default icon 'info'}}"></use>
-      </svg>
-    </span>
+    <svg>
+      <use xlink:href="#i-{{default icon 'info'}}"></use>
+    </svg>
   </span>
+  {{/if}}
   <p class="alert-body">
     {{default text "You'll need to resolve any errors before moving on."}}
   </p>

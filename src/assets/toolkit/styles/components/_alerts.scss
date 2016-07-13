@@ -23,14 +23,6 @@
     }
   }
 
-  &.success {
-    background-color: $success-tint;
-
-    &.invert {
-      background-color: $success;
-    }
-  }
-
   &.primary {
     background-color: $primary-tint;
 
@@ -39,8 +31,22 @@
     }
   }
 
+  &.success {
+    background-color: $success-tint;
+
+    &.invert {
+      background-color: $success;
+    }
+  }
+
   &.has-notice {
     margin-bottom: 0;
+  }
+
+  &.no-icon {
+    .alert-body {
+      padding-left: 0;
+    }
   }
 
   .close {
@@ -59,6 +65,7 @@
   margin-bottom: 0;
 }
 
+// secondary alert messaging
 .alert-notice {
   @include responsive-text-size('tiny');
   @include scut-padding(1rem 2.75rem);

@@ -17,14 +17,28 @@
     display: inline;
   }
 
+  &.active {
+    a {
+      background-color: $deep;
+    }
+  }
+
   a {
     @include responsive-text-size('small');
     color: $white;
     font-family: $alt-font-family;
     font-weight: $font-weight-bold;
-    display: inline-block;
+    display: block;
     padding: 1rem;
     text-transform: uppercase;
+
+    @media #{$medium-up} {
+      display: inline-block;
+    }
+
+    &:hover {
+      background-color: $dark;
+    }
   }
 }
 

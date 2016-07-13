@@ -39,7 +39,7 @@
 } 
 
 .feed-item-due {
-  color: $steel;
+  color: $charcoal;
 
   @media #{$medium-up} {
    @include grid-column($columns:6, $collapse:true);
@@ -95,7 +95,8 @@
 .feed-item-label {
   position: relative;
 
-  &.is-submitted {
+  &.is-submitted,
+  &.is-past-due {
     padding-right: 1.5rem;
 
     &:after {
@@ -108,6 +109,12 @@
       transform: translateY(-50%);
     }
   }
+
+  &.is-past-due {
+    &:after {
+      background-color: $alert;
+    }  
+  }  
 }
 
 .feed-item-link {
@@ -116,9 +123,9 @@
 
 .feed-item-date {
   @include responsive-text-size('tiny');
-  color: $steel;
+  color: $charcoal;
 }
 
 .feed-item-address {
-  color: $steel;
+  color: $charcoal;
 }

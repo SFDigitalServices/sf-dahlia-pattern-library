@@ -1,5 +1,7 @@
 {{#compare state '==' 'submitted' }}
 <article class="feed-item is-submitted">
+{{else compare state '==' 'past-due' }}
+<article class="feed-item is-past-due">
 {{else }}
 <article class="feed-item is-editable">
 {{/compare}}
@@ -15,6 +17,8 @@
       Studio: 22 units, 1 Bedroom: 33 units 2 Bedroom: 38 units</p>
       {{#compare state '==' 'submitted' }}
         <p class="feed-item-number">Your lottery number is #98AU18</p>
+      {{else compare state '==' 'past-due' }}
+        <p class="feed-item-number">Your application was not submitted</p>
       {{else }}
       {{/compare}}
       </div>
@@ -23,6 +27,8 @@
       {{#compare state '==' 'submitted' }}
         <p class="feed-item-status"><span class="feed-item-label is-submitted">Status: Submitted</span></p>
         <a href="#" class="button small">View Application</a>
+      {{else compare state '==' 'past-due' }}
+        <p class="feed-item-status"><span class="feed-item-label is-past-due">Status: Past Due</span></p>
       {{else }}
         <p class="feed-item-status">Status: In Progress</p>
         <a href="#" class="button small primary">Continue Application</a>

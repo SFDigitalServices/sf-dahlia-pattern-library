@@ -58,3 +58,10 @@
     padding-right: 2rem;
   }  
 }
+
+.dash-footer {
+  @media #{$medium-up} {
+    border-bottom-left-radius: $form-card-radius;
+    border-bottom-right-radius: $form-card-radius;
+  } 
+}  
