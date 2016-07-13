@@ -17,7 +17,7 @@
 
         <div class="app-inner inset border-bottom">
           <div class="form-group has-option">
-            {{> forms.input-tel classes="caps"}}
+            {{> forms.input-tel label="caps"}}
 
             <div class="form-item padding-bottom">
               {{> forms.checkbox text="I don't have a telephone number"}}
@@ -47,17 +47,11 @@
             {{> forms.input-address classes="expand" visibility="sr-only"}}
             
             <div class="form-item padding-bottom">
-              <div class="radio">
-                <input type="radio" name="groupName" id="radio1" /> 
-                <label for="radio1">I don't have an address</label>
-              </div>
+              {{> forms.checkbox text="I don't have an address" }}
             </div>
 
             <div class="form-item">
-              <div class="radio">
-                <input type="radio" name="groupName" id="radio2" /> 
-                <label for="radio2">I have a seperate mailing address</label>
-              </div>
+              {{> forms.checkbox text="I have a seperate mailing address" checked=true }}
             </div>
           </div>
 
