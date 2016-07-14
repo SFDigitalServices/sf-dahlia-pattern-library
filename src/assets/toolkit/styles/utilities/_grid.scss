@@ -1,0 +1,13 @@
+.fixed-width.columns {
+  &.medium-6 {
+    @media #{$medium-up} {
+      width: rem-calc(512);
+    }
+  }
+
+  &.medium-8 {
+    @media #{$medium-up} {
+      width: rem-calc(682);
+    }
+  }
+}

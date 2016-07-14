@@ -8,28 +8,31 @@ title: Center
 
 <section class="app-container">
   <div class="row collapse">
-    <div class="medium-6 medium-centered columns">
+    <div class="medium-6 medium-centered columns fixed-width">
       {{> app-header }}
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
           <div class="form-back"><a href="#" class="lined">Back</a></div>
-          <h2 class="app-card_question">Let’s move on the final topic: income. We’ll ask about your income first and then move on to your household.</h2>
+          <h2 class="app-card_question">Let’s move on the final topic: income.</h2>
 
           <div class="form-group">
-            <p class="t-small c-steel">If you have more than one source of income, you’ll be able to add that on the next screen.</p>
-            <p class="t-small c-steel">You only need to provide estimated totals right now. Precise totals will be calculated, if you are selected in the lottery.</p>
+            <p class="form-note margin-bottom">Add up your total gross (pre-tax) household income from wages, benefits and other sources from all household members.</p>
+            <p class="form-note margin-bottom">You only need to provide estimated totals right now. Precise totals will be calculated, if you are selected in the lottery.</p>
           </div>
+        </div>
+
+        {{> forms.alert-box classes="invert no-margin" icon="warning" text="Unfortunately it appears you did not qualify for this property listing. Your household income is too low."}}
+
+        <div class="alert-notice alert">
+          <p class="t-tiny c-steel margin-bottom">Please edit your income if you believe you might have made a mistake. Be aware that if you falsify any information on your application you will be disqualified.</p>
+          <p class="t-tiny c-steel margin-bottom">If the information you entered is accurate, we encourage you to check back in the future of as more properties become available.</p>
+          <p class="t-tiny c-steel"><a class="lined" href="#">Get Assistance</a></p>
         </div>
 
         <div class="app-inner inset">
           <div class="form-group">
-             <label class="form-label margin-bottom--half">Where does this income come from?</label>
-            {{> forms.select}}
-          </div>
-
-          <div class="form-group">
-            <label class="form-label margin-bottom--half">How much is the income?</label>
+            <label class="form-label caps">What is your household total pre-tax income?</label>
             {{> forms.input-income}}
             {{> forms.radio-group name="income" items=inputs.income}}
           </div>
