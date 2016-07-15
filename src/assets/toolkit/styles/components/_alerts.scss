@@ -3,6 +3,8 @@
 //
 
 .alert-box {
+  line-height: 1.375;
+
   &.invert {
     color: $white;
 
@@ -24,7 +26,7 @@
   }
 
   &.primary {
-    background-color: $primary-tint;
+    background-color: $dust;
 
     &.invert {
       background-color: $primary;
