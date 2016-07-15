@@ -21,26 +21,27 @@ title: Create an Account
           <p class="dash-summary">You'll use this information to log in to your account, so make sure you can remember it.</p>
         </header>
 
-        {{> forms.alert-box status="success" classes="invert no-margin" text="Changes will be reflected in any applications in progress." icon="check"}}
+        {{> forms.alert-box text="Please re-enter your email address to confirm." status="primary" classes="no-icon"}}
 
         <div class="dash-card-inner inset border-bottom">
           <div class="form-group padding-bottom--2x">
-            <h2 class="form-label caps">Your Name</h2>
-            {{> forms.text-input--base placeholder="First Name" label="Email address" type="text"}}
-            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text"}}
-            {{> forms.text-input--base placeholder="Last Name" label="Last Name" type="text"}}
+            <h2 class="form-label caps">Your Name {{> icons.base icon="lock" fill="primary"}}</h2>
+            {{> forms.text-input--base placeholder="First Name" label="Email address" type="text" readonly="readonly"}}
+            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text" readonly="readonly"}}
+            {{> forms.text-input--base placeholder="Last Name" label="Last Name" type="text" readonly="readonly"}}
           </div>
 
           <div class="form-group">
-            <h2 class="form-label caps">Your Date of Birth</h2>
-            {{> forms.input-dob}}
+            <h2 class="form-label caps">Your Date of Birth {{> icons.base icon="lock" fill="primary"}}</h2>
+            {{> forms.input-dob readonly="readonly"}}
           </div>
         </div>
 
         <div class="dash-card-inner inset border-bottom">
           <div class="form-group">
-            <h3 class="form-label caps">Email Address</h3>
-            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
+            <h3 class="form-label caps">Email Address {{> icons.base icon="lock" fill="primary"}}</h3>
+            <p class="form-note margin-bottom">We'll send you an email to verify this address is correct.</p>
+            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email" readonly="readonly"}}
             {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
           </div>
         </div>
