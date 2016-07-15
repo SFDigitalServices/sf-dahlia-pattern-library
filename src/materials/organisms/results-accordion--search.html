@@ -1,33 +1,31 @@
 <div ng-controller="AccordionSampleController">
-  <section class="">
-    <header class="">
+    <header class="modal-inner">
       <h2 class="h-caps-lined">Your Preference Ranking</h2>
-    </header>
-    <div class="modal-inner">
       <p class="t-small c-steel no-margin">Ranking in these lists is considered in the order show here.</p>
-    </div>
+    </header>
+    
+    {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first." icon="warning" classes="no-margin"}}
 
-    {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first." icon="warning"}}
-
-    <accordion close-others="oneAtATime" class="results-accordion accordion-container has-stat expanded-content">
-      {{#each lotteries.buckets}}
-      <accordion-group>
-        <accordion-heading>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">Rank</span>
-            <span class="accordion-stat_value">{{this.rank}}</span>
+    <section class="modal-inner">
+      <accordion close-others="oneAtATime" class="results-accordion accordion-container has-stat expanded-content">
+        {{#each lotteries.buckets}}
+        <accordion-group>
+          <accordion-heading>
+            <div class="accordion-stat">
+              <span class="accordion-stat_label">Rank</span>
+              <span class="accordion-stat_value">{{this.rank}}</span>
+            </div>
+            <h3 class="accordion-name semi">{{this.name}}</h3>
+            <span class="accordion-subheader tiny">{{this.units}}</span>
+            {{> icons.base icon="arrow-down" size="small" position="control"}}
+          </accordion-heading>
+          
+          <div class="bg-vapor padding">
+            <p class="t-small t-semi c-steel">{{this.overall}}</p>
           </div>
-          <h3 class="accordion-name semi">{{this.name}}</h3>
-          <span class="accordion-subheader tiny">{{this.units}}</span>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-        
-        <div class="bg-vapor padding">
-          <p class="t-small t-semi c-steel">{{this.overall}}</p>
-        </div>
-      </accordion-group>
-      {{/each}}
+        </accordion-group>
+        {{/each}}
 
-    </accordion>
+      </accordion>
   </section>
 </div>
