@@ -1,23 +1,25 @@
 <div ng-controller="ModalController"  aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="lottery-modal">
 
   <section class="results-container row collapse">
-    <hgroup class="text-center padding-top--2x padding-right--2x padding-left--2x">
+    <hgroup class="modal-header inset text-center padding-bottom">
       <h1 class="t-gamma margin-bottom--half">Lottery Results</h1>
       <h2 id="modalTitle" class="t-caps t-small t-alt-sans t-bold">Potrero 1010</h1>
       <p class="t-small">A total of 900 tickets were drawn in this lottery.</p>
       <p class="t-small margin-bottom">Studio 20 units, 1 Bedroom 20 units, 2 Bedrooms 20 units</p>
       </p>
-
-      <div class="">
-      {{> forms.icon-input }}
-
-      {{#compare state '==' 'results' }}
-      <p class="t-small">Lottery results are divided into multiple lists. Please check each one in order to confirm your ranking.</p>
-      </div>
-      {{/compare}}
-  
     </hgroup>
     
+    <div class="modal-inner bg-dust">
+      {{> forms.icon-input classes=""}}
+    </div>
+
+    {{#compare state '==' 'results' }}
+      <div class="modal-inner">
+        <p class="t-small">Lottery results are divided into multiple lists. Please check each one in order to confirm your ranking.</p>
+      </div>
+    {{/compare}}
+
+
       {{#compare state '==' 'results' }}
         <div class="modal-overflow">
           {{> results-accordion }}
@@ -26,7 +28,7 @@
       {{else }}
         {{> results-accordion--search }}
       {{/compare}}
-      <footer class="text-center padding-top">
+      <footer class="modal-footer text-center padding-top">
         <p class="t-small c-steel no-margin">Results Updated: February 21, 2016</p>
       </footer>
     </div>
