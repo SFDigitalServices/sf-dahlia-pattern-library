@@ -6,7 +6,11 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
 
   &.modal-small {
-    max-width: 25rem;
+    padding: 0;
+
+    @media #{$medium-up} {
+      max-width: 25rem;
+    }
   }
 }
 
@@ -52,6 +56,16 @@
     max-height: rem-calc(700);
     overflow-y: auto;
   }  
+}
+
+.modal-header,
+.modal-inner,
+.modal-footer {
+  @include scut-padding(1rem 1.5rem);
+
+  &.inset {
+    padding: 2rem;
+  }
 }
 
 .message-modal {
