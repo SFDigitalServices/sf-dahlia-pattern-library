@@ -9,70 +9,25 @@
 
     {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first." icon="warning"}}
 
-    <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
+    <accordion close-others="oneAtATime" class="results-accordion accordion-container has-stat expanded-content">
+      {{#each lotteries.buckets}}
       <accordion-group>
         <accordion-heading>
           <div class="accordion-stat">
             <span class="accordion-stat_label">Rank</span>
-            <span class="accordion-stat_value">10</span>
+            <span class="accordion-stat_value">{{this.rank}}</span>
           </div>
-          <h3 class="accordion-name semi">Certificate of Preference</h3>
-          <span class="accordion-subheader tiny">up to 50 units available</span>
+          <h3 class="accordion-name semi">{{this.name}}</h3>
+          <span class="accordion-subheader tiny">{{this.units}}</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
         
         <div class="bg-vapor padding">
-          <p class="t-small t-semi c-steel">Your ranking in this list is 10 out of of 10 qualified applicants.</p>
+          <p class="t-small t-semi c-steel">{{this.overall}}</p>
         </div>
       </accordion-group>
-      
-      <accordion-group>
-        <accordion-heading>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">Rank</span>
-            <span class="accordion-stat_value">15</span>
-          </div>
-          <h3 class="accordion-name semi">Displaced Tenants Housing Preference</h3>
-          <span class="accordion-subheader tiny">up to 10 units available</span>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-        
-        <div class="bg-vapor padding">
-          <p class="t-small t-semi c-steel">Your ranking in this list is 15 out of of 15 qualified applicants.</p>
-        </div>
-      </accordion-group>
-      
-      <accordion-group>
-        <accordion-heading>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">Rank</span>
-            <span class="accordion-stat_value">285</span>
-          </div>
-          <h3 class="accordion-name semi">Neighborhood Resident Housing Preference</h3>
-          <span class="accordion-subheader tiny">up to 20 units available</span>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
+      {{/each}}
 
-        <div class="bg-vapor padding semi">
-          <p class="t-small t-semi c-steel">Your ranking in this list is 285 out of of 1200 qualified applicants.</p>
-        </div>
-      </accordion-group>
-
-      <accordion-group>
-        <accordion-heading>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">Rank</span>
-            <span class="accordion-stat_value">385</span>
-          </div>
-          <h3 class="accordion-name semi">Live/Work Preference</h3>
-          <span class="accordion-subheader tiny">at least 10 units available</span>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-
-        <div class="bg-vapor padding">
-          <p class="t-small t-semi c-steel">Your ranking in this list is 385 out of of 1200 qualified applicants.</p>
-        </div>
-      </accordion-group>
     </accordion>
   </section>
 </div>
