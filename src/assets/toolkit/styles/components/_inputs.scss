@@ -344,6 +344,16 @@ input[type="radio"]:disabled + label::before {
   }
 }
 
-.icon-input {
-  
+// Field input with icon action
+
+$icon-input-height: 3.875rem;
+
+input.icon-input-field {
+  height: $icon-input-height;
+  padding: 1rem;
+}
+
+.icon-input-button {
+  line-height: $icon-input-height;
+  height: $icon-input-height;
 }
