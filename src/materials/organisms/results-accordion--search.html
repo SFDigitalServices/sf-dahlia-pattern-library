@@ -1,12 +1,12 @@
 <div ng-controller="AccordionSampleController">
-    <header class="modal-inner">
+    <header class="modal-inner padding-top--2x">
       <h2 class="h-caps-lined">Your Preference Ranking</h2>
       <p class="t-small c-steel no-margin">Ranking in these lists is considered in the order show here.</p>
     </header>
     
     {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first." icon="warning" classes="no-margin"}}
 
-    <section class="modal-inner">
+    <section>
       <accordion close-others="oneAtATime" class="results-accordion accordion-container has-stat expanded-content">
         {{#each lotteries.buckets}}
         <accordion-group>
@@ -20,8 +20,8 @@
             {{> icons.base icon="arrow-down" size="small" position="control"}}
           </accordion-heading>
           
-          <div class="bg-vapor padding">
-            <p class="t-small t-semi c-steel">{{this.overall}}</p>
+          <div class="bg-vapor padding padding-horizontal--3halves">
+            <p class="t-small t-semi c-charcoal">{{this.overall}}</p>
           </div>
         </accordion-group>
         {{/each}}

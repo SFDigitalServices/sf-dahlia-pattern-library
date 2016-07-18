@@ -508,9 +508,9 @@ $accordion-navigation-font-color: $dark;
 // $include-html-alert-classes: $include-html-classes;
 
 // We use this to control alert padding.
-// $alert-padding-top: rem-calc(14);
+$alert-padding-top: rem-calc(14);
 // $alert-padding-default-float: $alert-padding-top;
-// $alert-padding-opposite-direction: $alert-padding-top + rem-calc(10);
+$alert-padding-opposite-direction: $alert-padding-top + rem-calc(16);
 // $alert-padding-bottom: $alert-padding-top;
 
 // We use these to control text style.
@@ -531,7 +531,7 @@ $alert-border-width: 0;
 // We use these to style the close buttons
 // $alert-close-color: $oil;
 // $alert-close-top: 50%;
-// $alert-close-position: rem-calc(4);
+$alert-close-position: rem-calc(8);
 // $alert-close-font-size: rem-calc(22);
 // $alert-close-opacity: .3;
 // $alert-close-opacity-hover: .5;

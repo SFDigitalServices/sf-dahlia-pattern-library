@@ -1,10 +1,10 @@
 <div ng-controller="AccordionSampleController">
-  <header class="modal-inner padding-bottom-none">
+  <header class="modal-inner">
     <h2 class="h-caps-lined">Housing Preferences</h2>
     <p class="t-small c-steel no-margin">Ranking in these lists is considered in the order shown here.</p>
   </header>
 
-  <section class="modal-inner">
+  <section>
     <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
 
       {{#each lotteries.buckets}}
@@ -14,7 +14,7 @@
           <span class="accordion-subheader tiny">{{this.units}}</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
-        <div class="padding">
+        <div class="margin-bottom-last-child padding padding-horizontal--3halves">
           <p class="t-small">{{this.applicants}}</p>
           {{#if download}}
           <p class="t-small no-margin"><a href="#">Download Full Preference List</a></p>
@@ -29,11 +29,11 @@
     </accordion>
   </section>
 
-  <header class="modal-inner padding-bottom-none">
+  <header class="modal-inner">
     <h2 class="h-caps-lined no-margin">General List</h2>
   </header>
 
-  <section class="modal-inner">
+  <section>
     <accordion close-others="oneAtATime" class="results-accordion accordion-container expanded-content">
       <accordion-group>
         <accordion-heading>
@@ -41,7 +41,7 @@
           <span class="accordion-subheader tiny">any remaining units</span>
           {{> icons.base icon="arrow-down" size="small" position="control"}}
         </accordion-heading>
-        <div class="padding">
+        <div class="padding padding-horizontal--3halves">
           <p class="t-small">200 applicants are in this list</p>
           <p class="t-small no-margin">Please note, all preference holders will be considered for units first.</p>
         </div>

@@ -10,7 +10,7 @@ accordion.has-icon,
 accordion.has-stat {
   .accordion dd > a {
     min-height: 5rem;
-    padding-left: 5.5rem;
+    padding-left: 6.5rem;
   }
 }
 
@@ -70,7 +70,7 @@ accordion.has-toggle,
 }
 
 .accordion-stat {
-  @include absolute(50%,null,null,.5rem);
+  @include absolute(50%,null,null,1.5rem);
   @include scut-padding(.5rem n);
   background-color: $primary;
   color: $white;

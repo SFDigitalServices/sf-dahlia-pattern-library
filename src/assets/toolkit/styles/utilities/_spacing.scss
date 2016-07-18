@@ -343,7 +343,12 @@ $units: (
 }
 
 .padding--verticals {
-  @include units($variation: (top: true, bottom: true, left: true));
+  @include units($variation: (top: true, bottom: true));
+}
+
+.padding-horizontal--3halves {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 .no-padding {
@@ -396,6 +401,14 @@ $units: (
 
 .margin-right-none {
   margin-right: 0 !important;
+}
+
+.margin-bottom-last-child {
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .min-height--4x {
