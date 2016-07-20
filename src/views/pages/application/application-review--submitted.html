@@ -1,0 +1,65 @@
+---
+layout: center
+title: Center
+---
+
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      <div class="app-header app-card form-card">
+        <header class="app-card_header">
+          <h1 class="app-card_title">Application: 123 Main St</h1>
+        </header>
+        <div class="app-card_nav text-center">
+          {{> buttons.button classes="button-link button-lined small-text-center expand-small" text="Back to My Applications" }}
+        </div>
+      </div>
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Take a moment to review the information you submitted.</h2>
+        </div>
+      
+        {{#each application.sections}}
+        <header class="app-sub-header border-top">
+          <h3 class="app-sub-header_title">{{header}}</h3>
+        </header>
+
+        <div class="app-inner">
+          {{#each info-items}}
+          <div class="info-item margin-bottom">
+            <h4 class="info-item_value margin-bottom">{{name}}</h4>
+            <p class="info-item_name">{{{value}}}</p>
+            {{#if note }}
+            <span class="info-item_note">{{note}}</span>
+            {{/if }}
+            {{#if secondary }}
+            <span class="info-item_note t-bold">{{secondary}}</span>
+            {{/if }}
+          </div>
+          {{#if divider }}
+            <div class="border-top info-item_divider"></div>
+          {{/if }}
+          {{/each}}
+        </div> 
+        {{/each}}
+
+        <div class="padding--2x text-center">
+          <a class="t-small lined" href="#">Print a copy for your records</a>
+        </div>
+
+        <div class="button-pager">
+          <div class="button-pager_row primary app-card_footer">
+            {{> buttons.button classes="button-link button-lined small-text-center expand-small" text="Back to My Applications" }}
+          </div>
+          </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+{{> components.footer}}
