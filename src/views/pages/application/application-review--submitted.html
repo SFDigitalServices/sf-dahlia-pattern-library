@@ -14,13 +14,21 @@ title: Center
           <h1 class="app-card_title">Application: 123 Main St</h1>
         </header>
         <div class="app-card_nav text-center">
-          {{> buttons.button classes="button-link button-lined small-text-center expand-small" text="Back to My Applications" }}
+          {{> buttons.link classes="button-link button-lined small-text-center expand-small" text="View the original listing" }}
         </div>
       </div>
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
-          <h2 class="app-card_question">Take a moment to review the information you submitted.</h2>
+          <h2 class="app-card_question">Here's the information you submitted.</h2>
+          <p class="feed-item-date text-center">Submitted: January 12th 2016</p>
+        </div>
+
+        <div class="app-inner inset border-bottom">
+          <div class="form-group text-center">
+            <h3 class="form-label caps">Your lottery number</h3>
+            <p class="beta t-serif no-margin">#98AU18</p>
+          </div>
         </div>
       
         {{#each application.sections}}
@@ -48,7 +56,7 @@ title: Center
         {{/each}}
 
         <div class="padding--2x text-center">
-          <a class="t-small lined" href="#">Print a copy for your records</a>
+          <a class="t-small lined hide-for-print" href="#">Print a copy for your records</a>
         </div>
 
         <div class="button-pager">
