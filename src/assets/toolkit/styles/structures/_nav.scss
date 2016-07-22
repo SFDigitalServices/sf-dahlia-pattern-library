@@ -4,6 +4,10 @@
 
 .top-bar-section {
   ul.nav-menu {
+    @media #{$small-only} {
+      display: none;
+    }
+    
     li {
       background: transparent;
     }
