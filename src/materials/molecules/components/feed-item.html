@@ -18,7 +18,7 @@
       {{#compare state '==' 'submitted' }}
         <p class="feed-item-number">Your lottery number is #98AU18</p>
       {{else compare state '==' 'past-due' }}
-        <p class="feed-item-number">Your application was not submitted</p>
+        <p class="feed-item-number">Your application was never submitted</p>
       {{else }}
       {{/compare}}
       </div>
@@ -28,7 +28,7 @@
         <p class="feed-item-status"><span class="feed-item-label is-submitted">Status: Submitted</span></p>
         <a href="#" class="button small">View Application</a>
       {{else compare state '==' 'past-due' }}
-        <p class="feed-item-status"><span class="feed-item-label is-past-due">Status: Past Due</span></p>
+        <p class="feed-item-status"><span class="feed-item-label is-past-due">Status: Never Submitted</span></p>
       {{else }}
         <p class="feed-item-status">Status: In Progress</p>
         <a href="#" class="button small primary">Continue Application</a>
