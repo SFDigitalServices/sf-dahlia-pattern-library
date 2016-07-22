@@ -1,4 +1,4 @@
-<nav class="top-bar" role="navigation">
+<nav class="top-bar" role="navigation" ng-app="dahlia" ng-controller="NavController">
   <div class="row">
   <ul class="title-area">
     <li class="name">
@@ -18,14 +18,14 @@
         <a href="/browse/browse-grid--default.html">
           Browse Properties
         </a>
-      </li> 
+      </li>
       <li>
         <a href="/pages/get-assistance.html">
           Get Assistance
         </a>
       </li>
       <li class="has-dropdown">
-        <a href="#">
+        <a href="#" ng-class="{'dropdown-active': showDropdown}" ng-click="toggleDropdown()">
           My Account
         </a>
         <ul class="dropdown">
