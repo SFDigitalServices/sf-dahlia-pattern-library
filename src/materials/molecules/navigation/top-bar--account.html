@@ -1,4 +1,4 @@
-<nav class="top-bar" role="navigation" ng-app="dahlia" ng-controller="NavController">
+<nav top-bar class="top-bar" role="navigation" ng-app="dahlia">
   <div class="row">
     <ul class="title-area">
       <li class="name">
@@ -23,11 +23,11 @@
             Get Assistance
           </a>
         </li>
-        <li class="has-dropdown">
-          <a href="#" ng-class="{'dropdown-active': showDropdown}" ng-click="toggleDropdown()" aria-haspopup="true">
+        <li has-dropdown>
+          <a href="#" aria-haspopup="true" dropdown-toggle="#my-account-dropdown">
             My Account
           </a>
-          <ul class="dropdown">
+          <ul class="dropdown" id="my-account-dropdown">
           {{#each menus.account}}
             <li class="dropdown-item {{#if icon}}has-icon{{/if}}">
               <a href="#">
