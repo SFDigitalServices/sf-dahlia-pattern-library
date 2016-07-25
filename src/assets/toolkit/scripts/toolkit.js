@@ -145,12 +145,6 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel'])
     $scope.Carousel = Carousel;
 
   }])
-  .controller('NavController', ['$scope', function($scope) {
-    $scope.showDropdown = false;
-    $scope.toggleDropdown = function(ev) {
-      $scope.showDropdown = !$scope.showDropdown;
-    }
-  }])
   .directive('reflowAfterLoad', ['$window', function($window) {
     return {
       link: function(scope, element, attrs) {
