@@ -10,12 +10,17 @@
 
     li > a,
     li:not(.has-form) a:not(.button) {
+      @include scut-padding(2.5rem 1rem 1rem 1rem);
       background: transparent;
+      font-size: 0.75rem;
       line-height: 1rem;
-      padding-top: 2.5rem;
-      padding-bottom: 1rem;
       text-transform: uppercase;
       border-bottom: 3px solid transparent;
+
+      @media #{$large-up} {
+        @include scut-padding(n 1.5rem nn 1.5rem);
+        font-size: 0.8125rem;
+      }  
 
       &:hover {
         border-bottom-color: $primary;
