@@ -1,9 +1,9 @@
 {{#compare state '==' 'submitted' }}
 <article class="feed-item is-submitted">
 {{else compare state '==' 'past-due' }}
-<article class="feed-item is-past-due anim-fade-out" ng-hide="isHidden('{{state}}')">
+<article class="feed-item is-past-due animated-fade" ng-hide="isHidden('{{state}}')">
 {{else }}
-<article class="feed-item is-editable anim-fade-out" ng-hide="isHidden('{{state}}')">
+<article class="feed-item is-editable animated-fade" ng-hide="isHidden('{{state}}')">
 {{/compare}}
   <div class="feed-item-inner">
     <header class="feed-item-header">

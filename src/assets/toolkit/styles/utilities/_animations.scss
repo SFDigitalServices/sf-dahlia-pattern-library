@@ -1,7 +1,11 @@
- .anim-fade-out {
-  transition: 0.5s linear all;
+.animated-fade {
+  transition: opacity 0.33s ease;
   opacity: 1;
-  &.ng-hide {
+  &.ng-enter-active {
+    opacity: 1;
+  }
+  &.ng-hide,
+  &.ng-enter {
     opacity: 0;
   }
 }
