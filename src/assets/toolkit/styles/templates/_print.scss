@@ -1,23 +1,22 @@
 @media print {
   button,
-  .button,
-  button.button-link,
   .menu-icon,
   .top-bar,
   .version-bar,
   .translate-bar,
-  .button-link,
   .sub-nav,
   footer img,
   .footer-section .inline-list,
-  .button-stack--paginate {
+  .button-stack--paginate,
+  .button-pager,
+  .hide-for-print {
     display: none;
   }
 
   body {
-    font: 12pt Georgia, "Times New Roman", Times, serif;
+    font: 12pt Georgia, "Times New Roman", Times, serif !important;
     line-height: 1.3;
-    text-align: left;
+    text-align: left !important;
   }
 
   h1 {
@@ -29,11 +28,22 @@
     margin-top: 25px;
   }
 
-  a {
+  a, .button, .button.button-link.button-lined {
     color: #000;
+    text-align: left !important;
   }
 
+  a:link:after { 
+    content: "(" attr(href) ")"; 
+  }  
+
+  .app-card_header,
+  .app-card_question,
   .text-center {
     text-align: left !important;
+  }
+
+  .app-card_nav {
+    padding: 0;
   }
 }

@@ -17,8 +17,6 @@ sections:
         value: 649 Avalon St <br> San Francisco, CA 94117
       - name: Mailing Address
         value: 456 Mission St <br> San Francisco, CA 94117
-      - name: Primary Language
-        value: English
   - header: Alternate Contact
     info-items:
       - name: Name
@@ -31,8 +29,6 @@ sections:
         value: 415-876-5432
       - name: Mailing Address
         value: 456 Mission St <br> San Francisco, CA 94117
-      - name: Primary Language
-        value: English
   - header: Household Members
     info-items:
       - name: Name
@@ -59,7 +55,7 @@ sections:
         secondary: Telephone Bill attached
       - name: Vouchers and Subsidies
         value: "No"
-  - header: Income
+  - header: Household Income
     info-items:
       - name: 
         value: $32,000 per year

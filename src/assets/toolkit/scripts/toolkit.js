@@ -24,7 +24,10 @@ var foundationAccordion = require('../../vendor/foundation/js/foundation/foundat
 var foundationReveal = require('../../vendor/foundation/js/foundation/foundation.reveal.js');
 var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
 var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
-var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.equalizer.js');
+var foundationEqualizer = require('../../vendor/foundation/js/foundation/foundation.equalizer.js');
+var foundationTopbar = require('../../vendor/foundation/js/foundation/foundation.topbar.js');
+var Dropdown = require('../../vendor/foundation/js/foundation/foundation.dropdown.js');
+
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
