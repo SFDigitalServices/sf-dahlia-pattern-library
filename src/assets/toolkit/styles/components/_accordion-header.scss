@@ -88,6 +88,8 @@ accordion.has-toggle,
 }
 
 .accordion-stat_value {
-  @include responsive-text-size('gamma');
+  @include responsive-text-size('delta');
   display: block;
+  padding-left: .25rem;
+  padding-right: .25rem;
 }
