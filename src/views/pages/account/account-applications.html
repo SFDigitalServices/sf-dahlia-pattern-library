@@ -13,7 +13,7 @@ title: My Applications
   </div>
 </nav>
 
-<div class="dash-container">
+<div class="dash-container" ng-app="dahlia" ng-controller="AnimateController">
   <section class="row collapse">
     <div class="medium-8 medium-centered columns fixed-width">
       <main class="dash-card">
@@ -24,7 +24,7 @@ title: My Applications
           <h1 class="dash-title no-margin">My Applications</h1>
         </header>
 
-        {{> components.feed-item }}
+        {{> components.feed-item state="editable" }}
         {{> components.feed-item state="submitted" }}
         {{> components.feed-item state="past-due" }}
       </main>
