@@ -1,11 +1,12 @@
 ---
 fabricator: true
 ---
+<div ng-app="dahlia">
+  <h1 data-f-toggle="labels">Templates</h1>
 
-<h1 data-f-toggle="labels">Templates</h1>
+  {{#each materials.templates.items}}
 
-{{#each materials.templates.items}}
+  {{> f-item this}}
 
-{{> f-item this}}
-
-{{/each}}
+  {{/each}}
+</div>
