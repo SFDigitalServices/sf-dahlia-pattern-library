@@ -40,7 +40,7 @@ title: Application
 
                 <div class="form-group input-inset">
                   <label class="form-label caps">Which one of the following documents would you like to upload in order to prove eligibility?</label>
-                  {{> forms.select}}
+                  {{> forms.select name="proof" options=inputs.proof }}
 
                   <div class="form-group text-center">
                     {{> buttons.button text="Upload Proof of Preference"}}
