@@ -1,5 +1,5 @@
 {{#compare state '==' 'submitted' }}
-<article class="feed-item is-submitted">
+<article class="feed-item is-submitted animated-fade" ng-hide="isHidden('{{state}}')">
 {{else compare state '==' 'past-due' }}
 <article class="feed-item is-past-due animated-fade" ng-hide="isHidden('{{state}}')">
 {{else }}
@@ -40,6 +40,9 @@
       <div class="feed-item-links">
       {{#compare state '==' 'submitted' }}
         <a href="#" class="feed-item-link lined">See Listing</a>
+        <a class="feed-item-link a-alert lined" ng-click="delete('{{state}}')">
+            Delete (test)
+        </a>
       {{else }}
         <a href="#" class="feed-item-link lined">See Listing</a>
         <a class="feed-item-link a-alert lined" ng-click="delete('{{state}}')">

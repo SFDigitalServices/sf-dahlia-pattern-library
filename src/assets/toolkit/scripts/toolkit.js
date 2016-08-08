@@ -154,6 +154,9 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel', 'ngAnimate'])
     $scope.delete = function(id) {
       $scope.hidden[id] = true
     }
+    $scope.hasApplications = function() {
+      return Object.keys($scope.hidden).length < 3
+    }
   }])
   .directive('reflowAfterLoad', ['$window', function($window) {
     return {
