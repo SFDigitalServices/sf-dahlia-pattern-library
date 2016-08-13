@@ -24,7 +24,10 @@ var foundationAccordion = require('../../vendor/foundation/js/foundation/foundat
 var foundationReveal = require('../../vendor/foundation/js/foundation/foundation.reveal.js');
 var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
 var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
-var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.equalizer.js');
+var foundationEqualizer = require('../../vendor/foundation/js/foundation/foundation.equalizer.js');
+var foundationTopbar = require('../../vendor/foundation/js/foundation/foundation.topbar.js');
+var Dropdown = require('../../vendor/foundation/js/foundation/foundation.dropdown.js');
+
 
 //require('smoothstate/jquery.smoothState.min.js');
 // var smoothState = require('./jquery.smoothState.min.js');
@@ -72,6 +75,7 @@ $(document).ready(function () {
 
 // Angular (Loaded from node_modules)
 require('angular/angular.js');
+require('angular-animate/angular-animate.js');
 
 // Angular Foundation Directives (Loaded from bower)
 require('../../vendor/angular-foundation/mm-foundation-tpls.min.js');
@@ -79,7 +83,7 @@ require('../../vendor/hammerjs/hammer.min.js'); // for touch interaction w/ angu
 require('../../vendor/lifely-angular-carousel/angular-carousel.js');
 //require('angular-pageslide-directive');
 
-angular.module('dahlia', ['mm.foundation', 'angular-carousel'])
+angular.module('dahlia', ['mm.foundation', 'angular-carousel', 'ngAnimate'])
   .config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('{%');
     $interpolateProvider.endSymbol('%}');
@@ -141,6 +145,18 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel'])
 
     $scope.Carousel = Carousel;
 
+  }])
+  .controller('AnimateController', ['$scope', function($scope) {
+    $scope.hidden = {};
+    $scope.isHidden = function(id) {
+      return !! $scope.hidden[id]
+    }
+    $scope.delete = function(id) {
+      $scope.hidden[id] = true
+    }
+    $scope.hasApplications = function() {
+      return Object.keys($scope.hidden).length < 3
+    }
   }])
   .directive('reflowAfterLoad', ['$window', function($window) {
     return {

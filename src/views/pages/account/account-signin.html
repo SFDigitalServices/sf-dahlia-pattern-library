@@ -3,12 +3,16 @@ layout: center
 title: Sign In
 ---
 
+{{> headers.translate-header }}
 {{> headers.version-header }}
 {{> navigation.top-bar--account }}
 
 <div class="dash-container tall">
   <section class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
+      <div class="back-link-container small-only-text-center">
+        <a href="#" class="back-link">{{> icons.base icon="left" size="small" fill="primary"}} Continue with Application</a>
+      </div>
       <form class="dash-card">
         <header class="dash-header">
           <span class="header-badge">

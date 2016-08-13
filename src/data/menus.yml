@@ -1,4 +1,6 @@
 account:
+  - name: My Dashboard
+    icon: profile
   - name: My Applications
     icon: application
   - name: My Favorites

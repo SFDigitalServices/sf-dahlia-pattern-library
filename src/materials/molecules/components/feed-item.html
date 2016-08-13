@@ -1,9 +1,9 @@
 {{#compare state '==' 'submitted' }}
-<article class="feed-item is-submitted">
+<article class="feed-item is-submitted animated-fade" ng-hide="isHidden('{{state}}')">
 {{else compare state '==' 'past-due' }}
-<article class="feed-item is-past-due">
+<article class="feed-item is-past-due animated-fade" ng-hide="isHidden('{{state}}')">
 {{else }}
-<article class="feed-item is-editable">
+<article class="feed-item is-editable animated-fade" ng-hide="isHidden('{{state}}')">
 {{/compare}}
   <div class="feed-item-inner">
     <header class="feed-item-header">
@@ -18,7 +18,7 @@
       {{#compare state '==' 'submitted' }}
         <p class="feed-item-number">Your lottery number is #98AU18</p>
       {{else compare state '==' 'past-due' }}
-        <p class="feed-item-number">Your application was not submitted</p>
+        <p class="feed-item-number">Your application was never submitted</p>
       {{else }}
       {{/compare}}
       </div>
@@ -28,7 +28,7 @@
         <p class="feed-item-status"><span class="feed-item-label is-submitted">Status: Submitted</span></p>
         <a href="#" class="button small">View Application</a>
       {{else compare state '==' 'past-due' }}
-        <p class="feed-item-status"><span class="feed-item-label is-past-due">Status: Past Due</span></p>
+        <p class="feed-item-status"><span class="feed-item-label is-past-due">Status: Never Submitted</span></p>
       {{else }}
         <p class="feed-item-status">Status: In Progress</p>
         <a href="#" class="button small primary">Continue Application</a>
@@ -40,9 +40,14 @@
       <div class="feed-item-links">
       {{#compare state '==' 'submitted' }}
         <a href="#" class="feed-item-link lined">See Listing</a>
+        <a class="feed-item-link a-alert lined" ng-click="delete('{{state}}')">
+            Delete (test)
+        </a>
       {{else }}
         <a href="#" class="feed-item-link lined">See Listing</a>
-        <a href="#" class="feed-item-link a-alert lined">Delete</a>
+        <a class="feed-item-link a-alert lined" ng-click="delete('{{state}}')">
+            Delete
+        </a>
       {{/compare}}
       </div>
 

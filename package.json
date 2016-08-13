@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "angular": "^1.4.8",
+    "angular-animate": "1.5.8",
     "babel-core": "^5.2.17",
     "babel-loader": "5.0.0",
     "bower": "^1.7.2",

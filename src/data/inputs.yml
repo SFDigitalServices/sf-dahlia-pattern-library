@@ -175,6 +175,12 @@ children:
   - name: "6"
     attr: six
 
+proof:
+  - name: Letter from employer verifying employment in San Francisco with at least 75% of working hours in the City
+    attr: one
+  - name: Paystub (showing employer address in San Francisco)
+    attr: two
+    
 yesno:
   - name: "Yes"
     value: "yes"

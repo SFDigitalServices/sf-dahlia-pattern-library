@@ -1,47 +1,51 @@
-<nav class="top-bar" role="navigation">
+<nav top-bar class="top-bar" role="navigation">
   <div class="row">
-  <ul class="title-area">
-    <li class="name">
-      <h1 class="name-logo t-alt-sans"><a href="/pages/home.html">SF Affordable Housing Portal</a></h1>
-    </li>
-
-    <li class="toggle-topbar menu-icon">
-      <button href="#" class="button-link t-caps t-bold">
-        Menu
-        {{> icons.base icon="menu" fill="primary" size="large"}}
-      </button>
+    <ul class="title-area">
+      <li class="name">
+        <h1 class="name-logo t-alt-sans"><a href="/pages/home.html">SF Affordable Housing Portal</a></h1>
       </li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="nav-menu right">
-      <li>
-        <a href="/browse/browse-grid--default.html">
-          Browse Properties
-        </a>
-      </li> 
-      <li>
-        <a href="/pages/get-assistance.html">
-          Get Assistance
-        </a>
-      </li>
-      <li class="has-dropdown">
-        <a href="#">
-          My Account
-        </a>
-        <ul class="dropdown">
-          {{#each menus.account}}
-          <li class="dropdown-item {{#if icon}}has-icon{{/if}}">
-            <a href="#">
-            {{#if icon}}
-              {{> icons.base }}
-            {{/if}}
-            {{this.name}}
-            </a>
-          </li>
-          {{/each}}
-        </ul>
+      <li class="toggle-topbar menu-icon">
+        <button href="#" class="button-link t-caps t-bold">
+          Menu
+          {{> icons.base icon="menu" fill="primary" size="large"}}
+        </button>
       </li>
     </ul>
-  </section>
+    <section class="top-bar-section">
+      <ul class="nav-menu right">
+        <li>
+          <a href="/browse/browse-grid--default.html">
+            Browse Properties
+          </a>
+        </li>
+        <li>
+          <a href="/pages/get-assistance.html">
+            My Favorites
+          </a>
+        </li>
+        <li>
+          <a href="/pages/get-assistance.html">
+            Get Assistance
+          </a>
+        </li>
+        <li has-dropdown>
+          <a href="#" aria-haspopup="true" dropdown-toggle="#my-account-dropdown">
+            My Account
+          </a>
+          <ul class="dropdown" id="my-account-dropdown">
+          {{#each menus.account}}
+            <li class="dropdown-item {{#if icon}}has-icon{{/if}}">
+              <a href="#">
+              {{#if icon}}
+                {{> icons.base }}
+              {{/if}}
+              {{this.name}}
+              </a>
+            </li>
+          {{/each}}
+          </ul>
+        </li>
+      </ul>
+    </section>
   </div>
 </nav>
