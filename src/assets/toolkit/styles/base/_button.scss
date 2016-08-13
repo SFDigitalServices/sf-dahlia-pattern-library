@@ -1,7 +1,7 @@
 //
 // Foundation button variables
 // .button
-
+$button-radius: rem-calc(4);
 $dark-bg-colors: (
   oil: $oil,
   dark: $dark,
@@ -15,7 +15,7 @@ $dark-bg-colors: (
 @mixin custom-button() {
   @include type-weight(bold);
   background-color: transparent;
-  border-radius: rem-calc(4);
+  border-radius: $button-radius;
   border-color: $primary;
   color: $primary;
   font-family: $alt-font-family;
@@ -277,6 +277,11 @@ button,
       margin-left: .625rem;
     }
   }
+}
+
+// Adds radius to submits
+input[type="submit"] {
+  border-radius: $button-radius;
 }
 
 // Full width buttons on small screens
