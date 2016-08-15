@@ -27,6 +27,10 @@
         float: none;
         padding: 1rem;
         margin-left: 0;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
        }
     }
 
