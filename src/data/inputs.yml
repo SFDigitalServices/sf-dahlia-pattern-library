@@ -180,6 +180,10 @@ proof:
     attr: one
   - name: Paystub (showing employer address in San Francisco)
     attr: two
+  - name: Third-Party Proof of SF Homelessness
+    attr: three
+  - name: Proof of SF Homelessness
+    attr: three
     
 yesno:
   - name: "Yes"
