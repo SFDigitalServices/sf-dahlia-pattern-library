@@ -5,7 +5,7 @@
 .alert-box {
   line-height: 1.375;
   padding-right: 2.5rem;
-  
+
   &.invert {
     color: $white;
 
@@ -49,6 +49,14 @@
   &.no-icon {
     .alert-body {
       padding-left: 0;
+    }
+  }
+
+  &.no-close {
+    padding-right: 1rem;
+
+    .close {
+      display: none;
     }
   }
 
