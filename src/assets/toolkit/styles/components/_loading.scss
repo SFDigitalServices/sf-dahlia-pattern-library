@@ -1,0 +1,15 @@
+.loading {
+  position: relative;
+  
+  &:before {
+    @include absolute(0,0,0,0);
+    background-color: rgba(255,255,255,.8);
+    content: '';
+    z-index: 2;
+  }
+
+  .spinner {
+    @include scut-center-transform;
+    z-index: 3;
+  }
+}
