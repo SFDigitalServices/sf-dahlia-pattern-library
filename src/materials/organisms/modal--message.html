@@ -1,7 +1,9 @@
 <div ng-controller="ModalController" aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="message-modal">
-
-  <section class="modal-inner padding--3halves">
-    <h1 class="modal-title t-gamma margin-bottom">Confirmation needed</h1>
+  <header class="modal-inner">
+    <h1 class="modal-title t-gamma no-margin">Confirmation needed</h1>
+  </header>
+  {{> forms.alert-box status="primary" text="Email sent. Please check you inbox" classes="no-margin no-icon padding-left--3halves" close-style="text" close-text="close"}}
+  <section class="modal-inner">
     <p class="c-steel">An email has been sent to you@domain.com Please click on the link in that message to confirm your email address.</p>
     <p class="c-steel t-small no-margin">Didn't receive the email?</p>
     <p class="no-margin">{{> buttons.button text="Resend Confirmation" classes="button-link button-lined no-padding"}}</p>

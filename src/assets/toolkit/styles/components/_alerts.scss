@@ -53,6 +53,14 @@
 
   .close {
     line-height: .9rem;
+
+    &.text {
+      color: $primary;
+      font-size: rem-calc(12);
+      opacity: 1;
+      text-decoration: underline;
+      text-transform: capitalize;
+    }
   }
 }
 
