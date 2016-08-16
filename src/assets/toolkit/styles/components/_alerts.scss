@@ -6,6 +6,7 @@
   line-height: 1.375;
   padding-right: 2.5rem;
 
+  // Inverts color scheme of alert
   &.invert {
     color: $white;
 
@@ -42,16 +43,19 @@
     }
   }
 
+  // Removes margin when alert has additional text
   &.has-notice {
     margin-bottom: 0;
   }
 
+  // Adjust spacing when no icon required
   &.no-icon {
     .alert-body {
       padding-left: 0;
     }
   }
 
+  // Adjust spacing when no close button required
   &.no-close {
     padding-right: 1rem;
 
@@ -107,4 +111,25 @@
 .alert-notice_item {
   color: $alert;
   font-weight: $t-semi;
+}
+
+// Inset spacing for use in modals etc
+.alert-box.inset {
+  @include scut-padding(n 3rem n 1.5rem);
+
+  &.no-icon {
+    padding-left: 1.5rem; 
+  }
+
+  .alert-body {
+    padding-left: 2.5rem;
+  }  
+
+  .alert-icon {
+    left: 1.5rem;
+  }
+
+  .alert-close {
+    right: 1rem;
+  }
 }
