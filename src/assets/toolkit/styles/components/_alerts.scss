@@ -118,7 +118,11 @@
   @include scut-padding(n 3rem n 1.5rem);
 
   &.no-icon {
-    padding-left: 1.5rem; 
+    padding-left: 1.5rem;
+
+    .alert-body {
+      padding-left: 0;
+    }  
   }
 
   .alert-body {
@@ -129,7 +133,7 @@
     left: 1.5rem;
   }
 
-  .alert-close {
+  .close {
     right: 1rem;
   }
 }
