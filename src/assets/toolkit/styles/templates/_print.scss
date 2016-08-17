@@ -9,6 +9,7 @@
   .footer-section .inline-list,
   .button-stack--paginate,
   .button-pager,
+  .round-icon,
   .hide-for-print {
     display: none;
   }
@@ -29,7 +30,8 @@
   }
 
   a, .button, .button.button-link.button-lined {
-    color: #000;
+    border: 0;
+    color: #000 !important;
     text-align: left !important;
   }
 
