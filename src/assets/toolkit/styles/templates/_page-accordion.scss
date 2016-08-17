@@ -49,6 +49,10 @@ $siderail-padding-full: 2rem;
       display: block !important;
       padding: 0;
     }
+
+    @media print {
+      display: block !important;
+    }  
   }
 
   // responsive right hand column
