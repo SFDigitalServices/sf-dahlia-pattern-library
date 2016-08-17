@@ -23,6 +23,10 @@
   width: 100%;
   z-index: 1;
   overflow: hidden;
+
+  @media print {
+    display: none;
+  }
 }
 
 .property-hero_thumb {
@@ -54,7 +58,11 @@
 
   @media #{$medium-up} {
     @include absolute(null,0,0,null);
-  }  
+  }
+
+  @media print {
+    display: none;
+  }
 }
 
 .property-hero_content {

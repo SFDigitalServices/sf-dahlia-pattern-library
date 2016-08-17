@@ -10,7 +10,7 @@ accordion.has-icon,
 accordion.has-stat {
   .accordion dd > a {
     min-height: 5rem;
-    padding-right: 6rem;
+    padding-left: 6.5rem;
   }
 }
 
@@ -65,14 +65,17 @@ accordion.has-toggle,
 
 .accordion-icon {
   @include absolute(50%,null,null,.5rem);
-  // @include translateY(-50%);
   transform: translateY(-50%);
   width: 3.5rem;
 }
 
 .accordion-stat {
-  @include absolute(50%,2.5rem,null,null);
-  // @include translateY(-50%);
+  @include absolute(50%,null,null,1.5rem);
+  @include scut-padding(.5rem n);
+  background-color: $primary;
+  color: $white;
+  line-height: 1;
+  min-width: rem-calc(65);
   transform: translateY(-50%);
   text-align: center;
 }
@@ -80,10 +83,13 @@ accordion.has-toggle,
 .accordion-stat_label {
   @include responsive-text-size('micro');
   text-transform: uppercase;
+  line-height: .8;
+  display: inline-block;
 }
 
 .accordion-stat_value {
-  @include responsive-text-size('gamma');
+  @include responsive-text-size('delta');
   display: block;
-  font-family: $serif-font-family;
+  padding-left: .25rem;
+  padding-right: .25rem;
 }

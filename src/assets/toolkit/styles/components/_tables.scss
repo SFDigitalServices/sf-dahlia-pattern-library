@@ -90,6 +90,10 @@ table {
     @media #{$small-only} { 
       @include sr-only();  
     }
+
+    @media print {
+      display: none;
+    }  
   }
   
   td {

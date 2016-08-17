@@ -1,87 +1,31 @@
 <div ng-controller="AccordionSampleController">
-  <section class="padding-bottom">
-    <header class="padding-top padding-left">
+    <header class="modal-inner padding-top--2x">
       <h2 class="h-caps-lined">Your Preference Ranking</h2>
+      <p class="t-small c-steel no-margin">Ranking in these lists is considered in the order show here.</p>
     </header>
-    <div class="padding padding-top-none">
-      <p class="no-margin">Ranking in these lists is considered in the order show here.</p>
-    </div>
+    
+    {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first." icon="warning" classes="no-margin no-close"}}
 
-    {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first."}}
-
-    <accordion close-others="oneAtATime" class="accordion-container has-stat expanded-content">
-      <accordion-group>
-        <accordion-heading>
-          <h3 class="accordion-name semi">Certificate of Preference</h3>
-          <span class="accordion-subheader tiny">up to 50 units available</span>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">COP Rank</span>
-            <span class="accordion-stat_value">10</span>
+    <section>
+      <accordion close-others="oneAtATime" class="results-accordion accordion-container has-stat expanded-content">
+        {{#each lotteries.buckets}}
+        <accordion-group>
+          <accordion-heading>
+            <div class="accordion-stat">
+              <span class="accordion-stat_label">Rank</span>
+              <span class="accordion-stat_value">{{this.rank}}</span>
+            </div>
+            <h3 class="accordion-name semi">{{this.name}}</h3>
+            <span class="accordion-subheader tiny">{{this.units}}</span>
+            {{> icons.base icon="arrow-down" size="small" position="control"}}
+          </accordion-heading>
+          
+          <div class="bg-vapor padding padding-horizontal--3halves">
+            <p class="t-small t-semi c-charcoal">{{this.overall}}</p>
           </div>
+        </accordion-group>
+        {{/each}}
 
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-        
-        <div class="bg-vapor padding">
-          <p>Your ranking in this list is 10 out of of 10 qualified applicants.</p>
-          <p class="t-small">20 units have been set aside for this preference.</p>
-          <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
-        </div>
-      </accordion-group>
-      
-      <accordion-group>
-        <accordion-heading>
-          <h3 class="accordion-name semi">Displaced Tenants Housing Preference</h3>
-          <span class="accordion-subheader tiny">up to 10 units available</span>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">DTHP Rank</span>
-            <span class="accordion-stat_value">15</span>
-          </div>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-        
-        <div class="bg-vapor padding">
-          <p>Your ranking in this list is 15 out of of 15 qualified applicants.</p>
-          <p class="t-small">10 units have been set aside for this preference.</p>
-          <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
-        </div>
-      </accordion-group>
-      
-      <accordion-group>
-        <accordion-heading>
-          <h3 class="accordion-name semi">Neighborhood Resident Housing Preference</h3>
-          <span class="accordion-subheader tiny">up to 20 units available</span>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">NRHP Rank</span>
-            <span class="accordion-stat_value">285</span>
-          </div>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-
-        <div class="bg-vapor padding semi">
-          <p>Your ranking in this list is 285 out of of 1200 qualified applicants.</p>
-          <p class="t-small">20 units have been set aside for this preference.</p>
-          <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
-        </div>
-      </accordion-group>
-
-      <accordion-group>
-        <accordion-heading>
-          <h3 class="accordion-name semi">Live/Work Preference</h3>
-          <span class="accordion-subheader tiny">at least 10 units available</span>
-          <div class="accordion-stat">
-            <span class="accordion-stat_label">LWP Rank</span>
-            <span class="accordion-stat_value">385</span>
-          </div>
-          {{> icons.base icon="arrow-down" size="small" position="control"}}
-        </accordion-heading>
-
-        <div class="bg-vapor padding">
-          <p>Your ranking in this list is 385 out of of 1200 qualified applicants.</p>
-          <p class="t-small">Any remaining units will be available for this preference.</p>
-          <p class="t-small">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
-        </div>
-      </accordion-group>
-    </accordion>
+      </accordion>
   </section>
 </div>

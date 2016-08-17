@@ -100,3 +100,26 @@ listings:
         - You may be alerted to new listings by joining our <a href=/"/">Housing Alert Email List</a>
         - You may also view additional housing opportunities.
         - <a href=/"/">Browse Additional Housing Opportunities</a>
+buckets:
+ - name: Certificate of Preference
+   units: up to 50 units available
+   applicants: 10 applicants qualified for this preference
+   rank: "10"
+   overall: Your ranking in this list is 10 out of of 10 qualified applicants.
+ - name: Displaced Tenants Housing Preference
+   units: up to 10 units available
+   applicants: 15 applicants qualified for this preference
+   rank: "15"
+   overall: Your ranking in this list is 15 out of of 15 qualified applicants.
+ - name: Neighborhood Resident Housing Preference
+   units: up to 20 units available
+   applicants: 1200 applicants qualified for this preference. Showing first 1000 applicants.
+   download: true
+   rank: "285"
+   overall: Your ranking in this list is 285 out of of 1200 qualified applicants.
+ - name: Live/Work Preference
+   units: at least 10 units available
+   applicants: 2800 applicants qualified for this preference. Showing first 1000 applicants.
+   download: true
+   rank: "385"
+   overall: Your ranking in this list is 385 out of of 2800 qualified applicants.

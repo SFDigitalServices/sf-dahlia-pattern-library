@@ -182,6 +182,13 @@ button,
       svg use {
         fill: $dark;
       }  
+    }
+
+    &.disabled:hover,
+    &.disabled:focus,
+    &[disabled]:hover,
+    &[disabled]:focus {
+      background-color: transparent !important;
     }  
   
     // Button link with underline

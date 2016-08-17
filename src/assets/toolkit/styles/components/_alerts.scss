@@ -3,6 +3,10 @@
 //
 
 .alert-box {
+  line-height: 1.375;
+  padding-right: 2.5rem;
+
+  // Inverts color scheme of alert
   &.invert {
     color: $white;
 
@@ -24,7 +28,7 @@
   }
 
   &.primary {
-    background-color: $primary-tint;
+    background-color: $dust;
 
     &.invert {
       background-color: $primary;
@@ -39,18 +43,37 @@
     }
   }
 
+  // Removes margin when alert has additional text
   &.has-notice {
     margin-bottom: 0;
   }
 
+  // Adjust spacing when no icon required
   &.no-icon {
     .alert-body {
       padding-left: 0;
     }
   }
 
+  // Adjust spacing when no close button required
+  &.no-close {
+    padding-right: 1rem;
+
+    .close {
+      display: none;
+    }
+  }
+
   .close {
     line-height: .9rem;
+
+    &.text {
+      color: $primary;
+      font-size: rem-calc(12);
+      opacity: 1;
+      text-decoration: underline;
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -61,7 +84,7 @@
 }
 
 .alert-body {
-  @include scut-padding(n .5rem n 2rem);
+  @include scut-padding(n n n 2rem);
   margin-bottom: 0;
 }
 
@@ -88,4 +111,29 @@
 .alert-notice_item {
   color: $alert;
   font-weight: $t-semi;
+}
+
+// Inset spacing for use in modals etc
+.alert-box.inset {
+  @include scut-padding(n 3rem n 1.5rem);
+
+  &.no-icon {
+    padding-left: 1.5rem;
+
+    .alert-body {
+      padding-left: 0;
+    }  
+  }
+
+  .alert-body {
+    padding-left: 2.5rem;
+  }  
+
+  .alert-icon {
+    left: 1.5rem;
+  }
+
+  .close {
+    right: 1rem;
+  }
 }

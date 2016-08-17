@@ -9,16 +9,12 @@
     top: .75rem !important;
   }
 
-  &.active {
+  // open state on larger containers
+  &.active, {
     .ui-control {
       transform: rotate(180deg);
       top: .75rem;
     }
-  }
-
-  &.open {
-    display: inline-block;
-    margin-top: 1rem;
   }
 }
 
@@ -47,4 +43,21 @@
     color: $oil;
     text-transform: uppercase;
   }
+}
+
+// Smaller read more elements
+.toggle-more {
+  
+  .ui-icon {
+    margin-left: .25rem;
+  }
+
+  &.open {
+    display: inline-block;
+    margin-top: 1rem;
+
+    .ui-icon svg {
+      transform: rotate(180deg);
+    }
+  }   
 }

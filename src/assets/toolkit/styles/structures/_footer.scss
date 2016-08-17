@@ -27,12 +27,34 @@
         float: none;
         padding: 1rem;
         margin-left: 0;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
        }
     }
 
     @media #{$medium-up} {
       float: right;
     }
+  }
+}
+
+.footer-sole {
+  @include responsive-text-size('tiny');
+  @include type-weight(semi);
+  @include scut-padding(1.25em);
+  background-color: $black;
+  color: $white;
+  letter-spacing: rem-calc(1);
+  text-align: center;
+
+  a {
+    color: $white;
+  }
+
+  svg {
+    @include scut-margin(n .5em);
   }
 }
 
