@@ -90,10 +90,6 @@ table {
     @media #{$small-only} { 
       @include sr-only();  
     }
-
-    @media print {
-      display: none;
-    }  
   }
   
   td {
@@ -157,11 +153,19 @@ table {
       @media #{$medium-up} {
         display: none;
       }
+
+      @media print {
+        display: none;
+      }  
     }
   }
   
   th, td {
     @media #{$medium-up} {
+      display: table-cell;
+    }
+
+    @media print {
       display: table-cell;
     }
   }

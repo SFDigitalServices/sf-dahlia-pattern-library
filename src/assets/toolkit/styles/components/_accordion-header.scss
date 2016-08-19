@@ -32,6 +32,10 @@ accordion.has-toggle,
 
     .ui-control {
       @include absolute(1rem,1rem,null,null);
+
+      @media print {
+        display: none;
+      }  
     }
   }
 }

@@ -32,6 +32,12 @@
   border-bottom: 1px solid $primary;
 }
 
+.toggled {
+  @media print {
+    display: block !important;
+  }
+}
+
 .toggle-box_label {
   @include responsive-text-size('tiny');
   @include type-weight(normal);
@@ -47,7 +53,6 @@
 
 // Smaller read more elements
 .toggle-more {
-  
   .ui-icon {
     margin-left: .25rem;
   }
