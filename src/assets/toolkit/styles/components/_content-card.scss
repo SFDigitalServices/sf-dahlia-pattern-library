@@ -31,6 +31,35 @@
   }
 }
 
+.content-card_ordered {
+  display: clearfix;
+  margin-bottom: 1rem;
+}
+
+.content-card_number {
+  background-color: $white;
+  border-radius: 50%;
+  border: 2px solid $primary;
+  color: $primary;
+  float: left;
+  font-weight: bold;
+  padding: .5rem;
+  margin-right: .5rem;
+  margin-top: -4px;
+  width: 2.5rem;
+  white-space: nowrap;
+  
+  @media #{$medium-up} {
+    margin-left: -2.5rem;
+  }
+
+  sup {
+    font-weight: normal;
+    left: -.125rem;
+    top: -.35em;
+  }
+}
+
 .content-grid {
   @media #{$medium-up} {
     @include clearfix;
