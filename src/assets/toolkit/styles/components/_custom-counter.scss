@@ -12,8 +12,9 @@
   margin-bottom: 3rem;
 }
 
-@media #{$medium-up} {
-  .custom-counter_item {
+
+.custom-counter_item {
+  @media #{$medium-up} {
     counter-increment: step-counter;
     margin-bottom: 3rem;
     margin-left: 2rem;
@@ -33,21 +34,23 @@
       margin-bottom: 0;
     }
   }
+}
 
-  .custom-counter_header {
+.custom-counter_header {
+  @media #{$medium-up} {
     border-left: 2px solid $smoke;
     margin-bottom: 2rem;
     margin-left: -1rem;
     padding-left: 1rem;
   }
+}
 
-  .custom-counter_title {
-    font-family: $serif-font-family;
-    margin-bottom: .5rem;
-  }
+.custom-counter_title {
+  font-family: $serif-font-family;
+  margin-bottom: .5rem;
+}
 
-  .custom-counter_text {
-    @include responsive-text-size('small');
-    color: $charcoal;
-  }
+.custom-counter_text {
+  @include responsive-text-size('small');
+  color: $charcoal;
 }
