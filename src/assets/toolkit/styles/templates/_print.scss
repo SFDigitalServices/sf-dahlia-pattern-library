@@ -37,6 +37,10 @@
     text-align: left !important;
   }
 
+  .button {
+    padding: 0  !important;
+  }
+
   a:link:after { 
     content: "(" attr(href) ")"; 
   }  
@@ -49,6 +53,21 @@
 
   .app-card_nav {
     padding: 0;
+  }
+
+  .page-accordion {
+    .content-group_hours {
+      margin-top: 30px;
+    }
+
+    .content-group_days {
+      margin-bottom: 0;
+    }
+
+    .flag-label {
+      text-align: left;
+      font-weight: bold;
+    }
   }
 }
 

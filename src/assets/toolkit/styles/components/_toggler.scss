@@ -7,6 +7,10 @@
 
   .ui-control {
     top: .75rem !important;
+
+    @media print {
+      display: none;
+    }  
   }
 
   // open state on larger containers

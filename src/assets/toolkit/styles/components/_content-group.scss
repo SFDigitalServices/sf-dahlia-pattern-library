@@ -32,13 +32,13 @@
 }
 
 .content-group_title {
-    @include responsive-text-size('small');
-    color: $steel;
-    font-family: $font-family;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
+  @include responsive-text-size('small');
+  color: $steel;
+  font-family: $font-family;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
 
 .content-group_days {
   @include clearfix;
@@ -63,6 +63,10 @@
   font-family: $alt-font-family;
   font-weight: 700;
   line-height: 2;
+
+  @media print {
+    float: none;
+  }  
 }
 
 .content-group_address {

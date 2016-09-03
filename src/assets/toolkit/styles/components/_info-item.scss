@@ -9,6 +9,10 @@
   &.tall {
     @include scut-padding(1rem n);
   }
+
+  @media print {
+    margin-bottom: 20px;
+  }  
 }
 
 .info-item_name {
