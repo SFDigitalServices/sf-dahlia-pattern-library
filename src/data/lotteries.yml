@@ -102,24 +102,24 @@ listings:
         - <a href=/"/">Browse Additional Housing Opportunities</a>
 buckets:
  - name: Certificate of Preference
-   units: up to 50 units available
-   applicants: 10 applicants qualified for this preference
+   units: up to 50 units
+   applicants: 10 applicants on this list
    rank: "10"
    overall: Your ranking in this list is 10 out of of 10 qualified applicants.
  - name: Displaced Tenants Housing Preference
-   units: up to 10 units available
-   applicants: 15 applicants qualified for this preference
+   units: up to 10 units
+   applicants: 15 applicants on this list
    rank: "15"
    overall: Your ranking in this list is 15 out of of 15 qualified applicants.
  - name: Neighborhood Resident Housing Preference
-   units: up to 20 units available
-   applicants: 1200 applicants qualified for this preference. Showing first 1000 applicants.
+   units: up to 20 units
+   applicants: 1200 applicants on this list
    download: true
    rank: "285"
    overall: Your ranking in this list is 285 out of of 1200 qualified applicants.
  - name: Live/Work Preference
-   units: at least 10 units available
-   applicants: 2800 applicants qualified for this preference. Showing first 1000 applicants.
+   units: any remaining units
+   applicants: 2800 applicants on this list
    download: true
    rank: "385"
    overall: Your ranking in this list is 385 out of of 2800 qualified applicants.

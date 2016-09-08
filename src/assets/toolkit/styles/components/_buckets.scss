@@ -1,0 +1,61 @@
+.buckets {
+  &.has-border-top {
+
+  }
+}
+
+.bucket {
+  @include scut-padding(1rem 1.5rem);
+  border-top: 1px solid $smoke;
+  position: relative;
+
+  &.has-stat {
+    min-height: 5rem;
+    padding-left: 6.5rem;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid $smoke;
+  }
+}
+
+.bucket-title {
+  @include responsive-text-size('small');
+  font-family: $font-family;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: .25rem;
+}
+
+.bucket-subtitle {
+  @include responsive-text-size('small');
+  margin-bottom: .5rem;
+}
+
+.bucket-stat {
+  @include absolute(1rem,null,null,1.5rem);
+  @include scut-padding(.5rem n);
+  background-color: $primary;
+  color: $white;
+  line-height: 1;
+  min-width: rem-calc(65);
+  text-align: center;
+}
+
+.bucket-stat_label {
+  @include responsive-text-size('micro');
+  text-transform: uppercase;
+  line-height: .8;
+  display: inline-block;
+}
+
+.bucket-stat_value {
+  @include responsive-text-size('delta');
+  display: block;
+  padding-left: .25rem;
+  padding-right: .25rem;
+}
+
+.buckets-divider {
+  border-top: 3px solid $primary;
+}
