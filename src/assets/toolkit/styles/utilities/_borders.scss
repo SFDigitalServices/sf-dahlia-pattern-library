@@ -3,7 +3,12 @@
 
 
 // Border radius.
-.radius { border-radius: .3em; }
+.radius { border-radius: $global-radius; }
+
+.radius-bottom {
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+}
 
 .border {
   &-bottom {

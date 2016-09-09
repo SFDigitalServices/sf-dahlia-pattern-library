@@ -35,14 +35,19 @@
           </div>
         </div>
       {{/compare}}
-      <p class="text-center t-small padding--3halves no-margin bg-dust">
-        <a href="#" class="a-dark">Read About Housing Preferences</a></p>
       {{#compare state '==' 'results' }}
+      <p class="text-center t-small padding--3halves no-margin bg-dust">
+        <a href="#" class="a-dark">Read About Housing Preferences</a>
+      </p>
       <footer class="modal-footer text-center padding--3halves">
         <p class="t-small">Results from February 21, 2016</p>
         <p class="t-small"><a href="#" class="a-dark">Download Lottery Results PDF</a></p>
         <p class="t-small c-steel">Unsorted results are used to determine the rank within each preference.
       </footer>
+      {{else }}
+      <p class="text-center t-small padding--3halves no-margin bg-dust radius-bottom">
+        <a href="#" class="a-dark">Read About Housing Preferences</a>
+      </p>
       {{/compare}}
     </div>
   </section>
