@@ -16,25 +16,36 @@ title: Application
           <div class="form-back"><a href="#" class="lined margin-right">Back</a></div>
           <h2 class="app-card_question">Based on the address details you entered, it sounds like your household may qualify for additional preferences.</h2>
           <div class="form-group">
-            <p class="t-small c-steel">Optional</p>
-            <p class="t-small c-steel">Upload any supporting documentation as instructed. If eligibility for a preference cannot be verified, your household will not receive the preference for which you indicate eligibility (you will not be otherwise penalized).</p>
+            <p class="form-note margin-bottom">Optional</p>
+            <p class="form-note">Upload any supporting documentation as instructed. If eligibility for a preference cannot be verified, your household will not receive the preference for which you indicate eligibility (you will not be otherwise penalized).</p>
           </div>
         </div>
 
         <div class="app-inner">
           <div class="form-group">
             <div class="checkbox-group">
-              <div class="" labelledby="special_programs_label">
-                <p class="checkbox-block">
-                  <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
-                  <label class="checkbox-block_label" for="preferences-displaced">
-                    <strong class="form-label caps">Neighborhood Residence Housing Preference</strong>
-                    <span class="checkbox-block_note">At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project.</span>
-                  </label>
-                </p>
+              <div class="checkbox-block margin-bottom--2x" labelledby="special_programs_label">
+                <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
+                <label class="checkbox-block_label margin-bottom" for="preferences-displaced">
+                  <strong class="form-label caps">Neighborhood Residence Housing Preference</strong>
+                  <span class="checkbox-block_note">At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project.</span>
+                </label>
+              </div>
+
+              <div class="checkbox-block" labelledby="special_programs_label">
+                <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
+                <label class="checkbox-block_label margin-bottom" for="preferences-cop">
+                  <strong class="form-label caps">Live/Work in San Francisco Preference</strong>
+                  <span class="checkbox-block_note">At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.</span>
+                </label>
 
                 <div class="form-group input-inset padding-bottom-none">
-                  <label class="form-label caps">Which household member has this preference?</label>
+                  <label class="form-label caps">Which preference option would you like to claim?</label>
+                  {{> forms.select name="live-work" options=inputs.live-work}}
+                </div>
+
+                <div class="form-group input-inset padding-bottom-none">
+                  <label class="form-label caps">Whose name is on the document you're uploading?</label>
                   {{> forms.select}}
                 </div>
 
@@ -44,19 +55,11 @@ title: Application
 
                   <div class="form-group text-center">
                     {{> buttons.button text="Upload Proof of Preference"}}
-                    <p class="form-note input-inset margin-bottom">Please make sure the image is clear and you can read the address.</p>
-                    <p class="form-note input-inset">Max file size is 2MB. Supported file types: pdf, jpg, png</p>
+                    <p class="form-note micro input-inset margin-bottom">Please make sure the image is clear and you can read the address.</p>
+                    <p class="form-note micro input-inset">Max file size is 2MB. Supported file types: pdf, jpg, png</p>
                   </div>
                 </div>
-
               </div>
-              <p class="checkbox-block">
-                <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
-                <label class="checkbox-block_label" for="preferences-cop">
-                  <strong class="form-label caps">Work in San Francisco Preference</strong>
-                  <span class="checkbox-block_note">At least one household member must work in San Francisco at least 75% of their working hours.</span>
-                </label>
-              </p>
             </div>
           </div>
         </div>
