@@ -194,3 +194,9 @@ yesno:
 address:
   - name: "4106 TERRACE ST <br> OAKLAND, CA 94611-5162"
     value: address
+
+live-work:
+  - name: Live in San Francisco
+    attr: live
+  - name: Work in San Francisco
+    attr: work

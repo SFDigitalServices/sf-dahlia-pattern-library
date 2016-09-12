@@ -97,6 +97,10 @@ label {
       @include scut-padding(n 2rem);
     }
   }
+
+  &.micro {
+    @include responsive-text-size('micro');
+  }
 }
 
 // Application back button
