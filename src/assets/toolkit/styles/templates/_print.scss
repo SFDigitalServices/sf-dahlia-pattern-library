@@ -29,8 +29,8 @@
     margin-top: 25px;
   }
 
-  a, 
-  .button, 
+  a,
+  .button,
   .button.button-link.button-lined {
     border: 0;
     color: #000 !important;
@@ -41,9 +41,9 @@
     padding: 0  !important;
   }
 
-  a:link:after { 
-    content: "(" attr(href) ")"; 
-  }  
+  a:link:after {
+    content: "(" attr(href) ")";
+  }
 
   .app-card_header,
   .app-card_question,
@@ -74,11 +74,22 @@
 .hide-for-print {
   @media print {
     display: none;
-  }  
+  }
 }
 
 .show-for-print {
   @media print {
     display: block;
-  }  
+  }
 }
+
+@media print {
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+   display: block !important;
+  }
+
+  .ngTruncateToggleText {
+  display: none !important;
+  }
+}
+
