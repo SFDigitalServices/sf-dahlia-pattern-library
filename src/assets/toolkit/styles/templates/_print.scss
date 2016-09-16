@@ -71,25 +71,21 @@
   }
 }
 
+.print-only.show-for-print { display: none !important; }
+
 .hide-for-print {
   @media print {
-    display: none;
-  }
-}
-
-.show-for-print {
-  @media print {
-    display: block;
+    display: none !important;
   }
 }
 
 @media print {
-  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
-   display: block !important;
+  .show-for-print {
+    display: block;
   }
 
-  .ngTruncateToggleText {
-  display: none !important;
+  .ng-hide.show-for-print {
+    display: block !important;
   }
 }
 
