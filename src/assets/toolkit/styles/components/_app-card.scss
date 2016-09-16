@@ -5,10 +5,6 @@
   padding: 0;
   margin-bottom: 0;
 
-  .form-label {
-
-  }
-
   .form-group {
     @include clearfix;
     margin-bottom: 1rem;
@@ -37,13 +33,17 @@
 
 .app-sub-header_title {
   margin-bottom: 0;
+
+  @media print {
+    @include responsive-text-size('base');
+  }
 }  
 
 .app-inner {
   @include scut-padding(2rem);
 
   @media print {
-    @include scut-padding(5px n);
+    @include scut-padding(2px n);
   }
 
   &.leader {
@@ -103,6 +103,10 @@
   @media #{$medium-up} {
     padding-top: 1rem;
   }
+
+  @media print {
+    @include responsive-text-size('epsilon');
+  }
 }
 
 .app-card_note {
@@ -120,4 +124,22 @@
     border-bottom-right-radius: $form-card-radius;
     overflow: hidden;
   }  
+}
+
+// Application print exceptions
+@media print {
+  .app-card_header,
+  .app-card_question,
+  .text-center {
+    text-align: left !important;
+  }
+
+  .app-inner.leader {
+    padding-top: 0;
+  }
+
+  .app-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }

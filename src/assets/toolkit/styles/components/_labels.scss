@@ -46,4 +46,9 @@
   background-color: $oil;
   color: #fff;
   display: block;
+
+  @media print {
+    text-align: left;
+    font-weight: bold;
+  }
 }

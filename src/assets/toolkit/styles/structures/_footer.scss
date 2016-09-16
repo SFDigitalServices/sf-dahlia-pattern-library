@@ -38,6 +38,10 @@
       float: right;
     }
   }
+
+  @media print {
+    @include responsive-text-size('micro');
+  } 
 }
 
 .footer-sole {
@@ -48,6 +52,10 @@
   color: $white;
   letter-spacing: rem-calc(1);
   text-align: center;
+
+  @media print {
+    text-align: left;
+  }
 
   a {
     color: $white;

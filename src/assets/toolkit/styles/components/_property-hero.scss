@@ -50,7 +50,11 @@
     color: #fff;
     display: inline-block;
     z-index: 2;
-  }  
+  }
+
+  @media print {
+    text-align: left;
+  }
 }
 
 .property-hero_favorite {

@@ -14,6 +14,10 @@
 
 
 .custom-counter_item {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   @media #{$medium-up} {
     counter-increment: step-counter;
     margin-bottom: 3rem;
@@ -28,10 +32,6 @@
       font-size: rem-calc(70);
       line-height: .85;
       font-family: $serif-font-family;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
     }
   }
 }
@@ -48,6 +48,10 @@
 .custom-counter_title {
   font-family: $serif-font-family;
   margin-bottom: .5rem;
+
+  @media print {
+    @include responsive-text-size('base');
+  }
 }
 
 .custom-counter_text {

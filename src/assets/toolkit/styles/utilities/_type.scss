@@ -290,3 +290,52 @@ $text-sizing: (
     display: block;
   }  
 }
+
+// Various rule lines
+hr {
+  &.hr-1 {
+    height: 1px;
+  }
+
+  &.hr-2 {
+    height: 2px;
+  }
+
+  &.hr-3 {
+    height: 3px;
+  }
+
+  &.hr-4 {
+    height: 4px;
+  }
+
+  &.hr-5 {
+    height: 5px;
+  }
+
+  &.tall {
+    margin: 2rem 0;
+  }
+}
+
+// Fancy header styles
+@mixin h-caps($border-bottom: 0) {
+  @include type-weight(bold);
+  border-bottom: $border-bottom solid $primary;
+  display: inline-block;
+  font-family: $alt-font-family;
+  letter-spacing: $small-header-spacing;
+  text-transform: uppercase;
+}
+
+.h-caps-lined {
+  @include h-caps($border-bottom: 3px);
+  @include responsive-text-size('small');
+  margin-top: -.25rem;
+  vertical-align: top;
+  padding-bottom: 1rem;
+}
+
+.h-caps {
+  @include h-caps();
+}  

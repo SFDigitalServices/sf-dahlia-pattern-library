@@ -9,6 +9,10 @@
   padding: 1.25rem;
   margin-bottom: 1rem;
 
+  @media print {
+    padding: 1rem;
+  }
+
   p {
     &:last-of-type {
       margin-bottom: 0;
@@ -22,12 +26,21 @@
   font-weight: 600;
   text-transform: uppercase;
 
+  @media print {
+    @include responsive-text-size('micro');
+  }
+
   &.t-serif {
     @include responsive-text-size('delta');
     font-family: $serif-font-family;
     font-weight: normal;
     margin-bottom: .75rem;
     text-transform: none;
+
+    @media print {
+      @include responsive-text-size('small');
+      margin-bottom: .25rem;
+    }
   }
 }
 

@@ -17,6 +17,10 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    @media print {
+      @include responsive-text-size('micro');
+    }  
   }
 
   &.has-divider {
@@ -62,6 +66,9 @@
       line-height: 2;
     }
   }
+  @media print {
+    margin-bottom: 0;
+  }
 }
 
 .content-group_day {
@@ -73,7 +80,13 @@
 
 .content-group_hours, .content-group_date {
   @include clearfix;
-} 
+}
+
+.content-group_hours {
+  @media print {
+    margin-top: 30px;
+  }
+}
 
 .content-group_time {
   @include responsive-text-size('tiny');
