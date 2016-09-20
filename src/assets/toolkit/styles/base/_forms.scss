@@ -14,6 +14,10 @@ select {
   &.squared {
     border-radius: 0;
   }
+
+  &::-ms-clear {
+    display: none;
+  }
 }
 
 form {
