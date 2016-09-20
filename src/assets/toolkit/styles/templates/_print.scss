@@ -71,21 +71,21 @@
   }
 }
 
-.print-only.show-for-print { display: none !important; }
-
-.hide-for-print {
-  @media print {
-    display: none !important;
+@media screen {
+  .show-for-print {
+    &:not(.print-only):not(.ng-hide) {
+      display: block !important;
+    }
+  }
+  span.show-for-print {
+    &:not(.print-only):not(.ng-hide) {
+      display: inherit !important;
+    }
   }
 }
 
 @media print {
-  .show-for-print {
-    display: block;
-  }
-
   .ng-hide.show-for-print {
     display: block !important;
   }
 }
-
