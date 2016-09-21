@@ -4,17 +4,27 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  display: table;
 }
 
 .progress-nav_item {
   @include responsive-text-size('quark');
-  display: block;
-  float: left;
+  @include scut-padding(0 1rem);
+  // display: block;
+  // float: left;
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  white-space:nowrap;
-  width: 20%;
+  white-space: nowrap;
+  max-width: 20%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: table-cell;
+  float: none;
+
+  @media #{$small-only} {
+    @include scut-padding(0 .75rem);
+  }
 
   @media #{$medium-up} {
     @include responsive-text-size('tiny');
