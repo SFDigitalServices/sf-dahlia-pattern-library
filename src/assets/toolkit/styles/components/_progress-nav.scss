@@ -10,8 +10,6 @@
 .progress-nav_item {
   @include responsive-text-size('quark');
   @include scut-padding(0 1rem);
-  // display: block;
-  // float: left;
   position: relative;
   text-align: center;
   text-transform: uppercase;
