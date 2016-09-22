@@ -9,7 +9,7 @@
   // Footer navigation
   .inline-list {
     overflow: visible;
-    
+
     a {
       color: $aluminum;
 
@@ -51,6 +51,8 @@
 
   a {
     color: $white;
+    border-bottom: 1px dotted $monsoon;
+    text-decoration: none;
   }
 
   svg {
