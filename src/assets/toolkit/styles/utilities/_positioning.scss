@@ -126,3 +126,16 @@ $position-default: null !default;
   height: 1px; width: 1px;
   margin: -1px; padding: 0; border: 0;
 }
+
+// responsive floats
+.right-on-medium {
+  @media #{$medium-up} {
+    float: right;
+  }  
+}
+
+.left-on-medium {
+  @media #{$medium-up} {
+    float: left;
+  }
+}

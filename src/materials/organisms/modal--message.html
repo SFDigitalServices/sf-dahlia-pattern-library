@@ -5,8 +5,7 @@
   {{> forms.alert-box status="primary" text="Email sent. Please check you inbox" classes="no-margin no-icon padding-left--3halves" close-style="text" close-text="close"}}
   <section class="modal-inner">
     <p class="c-steel">An email has been sent to you@domain.com Please click on the link in that message to confirm your email address.</p>
-    <p class="c-steel t-small no-margin">Didn't receive the email?</p>
-    <p class="no-margin">{{> buttons.button text="Resend Confirmation" classes="button-link button-lined no-padding"}}</p>
+    {{> forms.button-stack left="OK" l-classes="primary right-on-medium" right="Resend the Email" r-classes="button-link button-lined small-text-center left-on-medium"}}
   </section>
   <!-- <a class="close-reveal-modal" aria-label="Close"> -->
   <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
