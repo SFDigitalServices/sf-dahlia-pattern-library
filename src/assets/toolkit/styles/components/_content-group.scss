@@ -40,8 +40,28 @@
   text-transform: uppercase;
 }
 
+// Multi Column Layout
 .content-group_days {
   @include clearfix;
+
+  // temp fix until salesforce can add additional fields
+  &.inline {
+    @include responsive-text-size('small');
+    color: $oil;
+    font-family: $alt-font-family;
+    text-transform: uppercase;
+    line-height: 2;
+
+    strong, b {
+      @include responsive-text-size('tiny');
+      clear: right;
+      color: $oil;
+      float: right;
+      font-family: $alt-font-family;
+      font-weight: 700;
+      line-height: 2;
+    }
+  }
 }
 
 .content-group_day {
