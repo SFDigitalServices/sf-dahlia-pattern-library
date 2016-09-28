@@ -16,4 +16,8 @@
     position: fixed;
     z-index: 103;
   }
+
+  .footer-section & .spinner {
+    display: none;
+  }
 }
