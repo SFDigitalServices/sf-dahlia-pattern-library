@@ -13,6 +13,7 @@
 
   .spinner {
     @include scut-center-transform;
+    position: fixed;
     z-index: 103;
   }
 }
