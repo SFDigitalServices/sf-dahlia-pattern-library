@@ -23,6 +23,17 @@
     max-width: none;
     width: 100%;
   }
+
+  @media print {
+    width: 65%;
+
+    padding-bottom: 40%;
+
+    // iframe {
+    //   width: 50% !important;
+    //   height: 50% !important;
+    // }  
+  }
 }
 
 .map-link {

@@ -11,7 +11,7 @@
   }
 
   @media print {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }  
 }
 
@@ -22,6 +22,10 @@
   letter-spacing: $large-header-spacing;
   margin-bottom: 0;
   text-transform: uppercase;
+
+  @media print {
+    @include responsive-text-size('micro');
+  }  
 }
 
 .info-item_value,
@@ -34,6 +38,10 @@
   &.margin-bottom {
     margin-bottom: .25rem !important;
   }
+
+  @media print {
+    @include responsive-text-size('micro');
+  }
 }
 
 .info-item_link {
@@ -44,4 +52,8 @@
 
 .info-item_divider {
   margin-bottom: 2rem;
+
+  @media print {
+    margin-bottom: 1rem;
+  }  
 }

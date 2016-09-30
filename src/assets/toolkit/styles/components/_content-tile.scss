@@ -34,4 +34,14 @@
     margin-left: -1rem;
     margin-bottom: 0;
   }
+
+  @media print {
+    @include responsive-text-size('base');
+  }
+}
+
+.feature-tile_content {
+  @media #{$medium-up} {
+    padding-top: .25rem;
+  }
 }

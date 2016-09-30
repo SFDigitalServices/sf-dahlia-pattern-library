@@ -10,23 +10,34 @@
   .button-stack--paginate,
   .button-pager,
   .round-icon,
-  .hide-for-print {
+  .app-card_nav {
     display: none;
   }
 
   body {
-    font: 12pt Georgia, "Times New Roman", Times, serif;
-    line-height: 1.3;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    // line-height: 1.3;
     text-align: left !important;
   }
 
-  h1 {
-    font-size: 24pt;
+  h1, .t-alpha {
+    font-size: 20px;
   }
 
-  h2 {
-    font-size: 14pt;
-    margin-top: 25px;
+  h2, .t-beta {
+    font-size: 14px;
+  }
+
+  h3, .t-gamma {
+    font-size: 14px;
+  }
+
+  h4, .t-delta {
+    font-size: 14px;
+  }
+
+  small, .t-small {
+    font-size: 12px;
   }
 
   a,
@@ -85,7 +96,17 @@
 }
 
 @media print {
+  .show-for-print {
+    display: block;
+  }
+
   .ng-hide.show-for-print {
     display: block !important;
   }
+
+  .hide-for-print {
+    display: none !important;
+  }
 }
+
+.print-only.show-for-print { display: none !important; }

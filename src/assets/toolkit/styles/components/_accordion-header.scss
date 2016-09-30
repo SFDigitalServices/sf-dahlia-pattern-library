@@ -55,6 +55,10 @@ accordion.has-toggle,
     font-weight: $t-semi;
     margin-bottom: 0;
   }
+
+  @media print {
+    margin-bottom: 0;
+  }
 }
 
 .accordion-subheader {

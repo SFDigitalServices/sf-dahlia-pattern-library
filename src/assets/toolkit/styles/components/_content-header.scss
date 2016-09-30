@@ -11,6 +11,10 @@
   padding: 1rem 2rem 1rem 0;
   position: relative;
 
+  @media print {
+    @include responsive-text-size('micro');
+  } 
+
   &_group {
     border-left: 3px solid $primary;
     margin-left: 4rem;
