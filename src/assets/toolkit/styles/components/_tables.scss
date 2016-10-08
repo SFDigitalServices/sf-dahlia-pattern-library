@@ -98,13 +98,8 @@ table {
     }
   }
   
-  th {
-    @media #{$small-only} { 
-      @include sr-only();  
-    }
-  }
-  
-  td {
+  td,
+  tbody th {
     display: block;
 
     @media #{$small-only} {
@@ -169,6 +164,12 @@ table {
       @media print {
         display: none;
       }  
+    }
+  }
+
+  thead th {
+    @media #{$small-only} { 
+      @include sr-only();  
     }
   }
   
