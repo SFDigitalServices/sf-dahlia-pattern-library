@@ -8,22 +8,24 @@
   line-height: 1.5;
   margin-bottom: 1.5rem;
 
-  @media #{$small-only} {
+  @media #{$medium-up} {
     @include scut-margin(0 auto 4rem);
-    max-width: rem-calc(480);
+    max-width: rem-calc(640);
   }
 
-  @media #{$medium-up} {
+  @media #{$large-up} {
     @include grid-row();
     margin-bottom: 1.5rem;
 
     .property-card_figure {
       @include grid-column(7);
+      width: 55%;
       padding: 0;
     }
     
     .property-card_content {
       @include grid-column(5);
+      width: 45%;
       padding: 0;
       padding-left: 1rem;
     }
@@ -95,6 +97,10 @@
     }
   }
 }
+
+.property-card_stats {
+  margin-bottom: 1.5rem;
+}  
 
 .property-card_thumb {
   width: 100%;
@@ -170,8 +176,19 @@
   } 
 }
 
-.property-card_stats {
-  table tbody tr td {
-    white-space: nowrap;
-  }
+.property-card_label {
+  @include responsive-text-size('micro');
+  display: block;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  margin-bottom: .5rem;
+  margin-top: .75rem;
+  text-transform: uppercase;
+}
+
+.property-card_caption {
+  @include responsive-text-size('micro');
+  color: $charcoal;
+  display: block;
+  padding-top: .75rem;
 }  

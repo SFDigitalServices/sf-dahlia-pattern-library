@@ -1,16 +1,22 @@
-<header class="status-header status--other">
-  <div class="status-header_icon">
-    <span class="ui-icon ui-xlarge">
-      <svg>
-        <use xlink:href="#i-building"></use>
-      </svg>
-    </span>
+<header class="status-header status--{{default status 'other'}} {{default classes ''}}">
+  <div class="status-header_content">
+    <div class="status-header_icon">
+      <span class="ui-icon ui-xlarge">
+        <svg>
+          <use xlink:href="#i-{{default icon 'building'}}"></use>
+        </svg>
+      </span>
+    </div>
+
+    <hgroup class="status-header_group">
+      <h2 class="status-header_title gamma">
+        {{default title 'Other Listings'}}
+      </h2>
+      <p class="no-margin">{{default text 'We know you may have options about how many people will live with you. Here are listings for other houseshold sizes and income levels.'}}</p>
+    </hgroup>
   </div>
 
-  <hgroup class="status-header_group">
-    <h2 class="status-header_title gamma">
-      Other Listings
-    </h2>
-    <p class="no-margin">We know you may have options about how many people will live with you. Here are listings for other houseshold sizes and income levels.</p>
-  </hgroup>
+  <div class="status-header_action">
+    <button class="button ghost-white expand-small right no-margin toggler"">{{default button 'Show Lottery Results (6)'}}</button>
+  </div>
 </header>

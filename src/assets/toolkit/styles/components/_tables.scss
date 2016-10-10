@@ -5,7 +5,7 @@ table {
     tr {
       th {
         font-weight: $table-value-weight;
-
+        letter-spacing: .1rem;
         border-bottom: 1px solid $primary;
         text-transform: uppercase;
 
@@ -46,17 +46,16 @@ table {
     font-weight: 400;  
   }
 
-  &.table-small {
+  // Remove zebra coloring and adds border
+  &.plain {
     tr th {
       background-color: $dust;
       border-bottom: 0;
-      padding: .75rem;
     }
 
     tr td {
       background: transparent;
       border-bottom: 1px solid $smoke;
-      padding: .75rem;
     }
 
     tr {
@@ -64,6 +63,44 @@ table {
     }
   }
 
+  // Shorten table cell spacing
+  &.td-small {
+    border-bottom: 1px solid $smoke;
+
+    tr td {
+      padding: .75rem;
+    }
+  }
+
+  &.th-small {
+    th td {
+      padding: .75rem;
+    }
+  }
+
+  &.td-nowrap {
+    tbody tr td {
+      @media #{$medium-up} {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.th-nowrap {
+    thead tr th {
+      @media #{$medium-up} {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.td-light {
+    tbody tr td {
+      font-weight: normal;
+    }  
+  }
+
+  // Smaller tables with dark headers and centered content
   &.table-results {
     tr th {
       color: $deep;

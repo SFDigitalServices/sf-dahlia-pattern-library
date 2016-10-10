@@ -9,6 +9,23 @@ minimum:
     - type: 2 Bedroom
       income: 2,998
       rent: 1,199
+minimum-range:
+  units:
+    - type: Studio
+      income-low: 1,078
+      income-high: 1,678
+      rent-low: 539
+      rent-high: 839
+    - type: 1 Bedroom
+      income-low: 1,518
+      income-high: 1,958
+      rent-low: 759
+      rent-high: 979
+    - type: 2 Bedroom
+      income-low: 2,185
+      income-high: 2,685
+      rent-low: 939
+      rent-high: 1,250
 maximum:
   households:
     - size: 1

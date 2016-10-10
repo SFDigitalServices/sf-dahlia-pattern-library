@@ -2,7 +2,8 @@
 .status-header {
   position: relative;
   padding: 1rem;
-  margin-bottom: 2rem;
+  overflow: hidden;
+  // margin-bottom: 2rem;
   
   @media #{$small-only} {
     margin-left: -($column-gutter/2);
@@ -36,6 +37,19 @@
       border-color: $steel;
     }
   }
+
+  &.has-button {
+    @media #{$medium} {
+      .status-header_content {
+        @include grid-column(8);
+      }
+
+      .status-header_action {
+        @include grid-column(4);
+        float: right;
+      }
+    }  
+  }
 }
 
 .status-header_icon {
@@ -48,6 +62,13 @@
     display: block;
   }
 }
+
+.status-header_action { 
+ .button {
+    @include scut-center-transform(y);
+    right: 0;
+  }
+}  
 
 .status-header_group {
   @media #{$medium-up} {

@@ -1,18 +1,18 @@
-<table role="grid">
+<table class="td-small td-nowrap th-nowrap td-light no-margin" role="grid">
   <thead>
     <tr>
-      <th scope="col">Unit Type</th>
+      <th scope="col">Type</th>
       <th scope="col">Mimumum Income</th>
       <th scope="col" class="text-right">Rent</th>
     </tr>
   </thead>
   <tbody>
-    {{#each tables.minimum.units}}
+  {{#each tables.minimum-range.units}}
     <tr>
-      <td scope="row">{{type}}</td>
-      <td>${{income}}<small>/month</small></td>
-      <td class="text-right">${{rent}}<small>/month</small></td>
+      <td scope="row">{{this.type}}</td>
+      <td>${{this.income-low}}-${{this.income-high}}<small>/month</small></td>
+      <td class="text-right">${{this.rent-low}}-${{this.rent-high}}<small>/month</small></td>
     </tr>
-    {{/each}}
+  {{/each}}
   </tbody>
 </table>

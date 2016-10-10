@@ -5,3 +5,33 @@
     padding: 2rem 0;
   }  
 }
+
+.results-section_subheader {
+  @include responsive-text-size('micro');
+  background: $white;
+  display: inline-block;
+  font-family: $sans-font-family;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  
+  padding-right: 1rem;
+  z-index: 3;
+}
+
+.results-section_divider {
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+  line-height: 1em;
+  position: relative;
+
+  &:before {
+    @include absolute(.5em,0,null,0);
+    content: '';
+    background-color: $smoke;
+    height: 1px;
+    width: 100%;
+    z-index: -1;
+  }
+}

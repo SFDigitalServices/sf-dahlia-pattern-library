@@ -25,6 +25,11 @@
     }
   }
 
+  &.medium {
+    @include responsive-text-size('micro');
+    @include scut-padding(.5rem 1rem);
+  }
+
   &.alert-tint {
     background-color: $alert-tint;
     color: $oil;

@@ -11,3 +11,8 @@ units:
   minimum: "2,998"
   rent: "1,199"
   available: "39"
+results:
+- title: Test
+  available: Available Units
+- title: Test
+- title: Test

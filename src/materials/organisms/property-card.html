@@ -1,6 +1,6 @@
 <div class="property-card {{ default classes ''}}">
   <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
-    <a href="#">Trinity Place Apartments</a>
+    <a href="#">{{default title 'Trinity Place Apartments'}}</a>
   </h1>
 
   <figure class="property-card_figure">
@@ -38,12 +38,19 @@
         <a href="#">Trinity Place Apartments</a>
       </h1>
       <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
+      <span class="label radius medium negative">Senior Community Building</span>
     </figcaption>
   </figure>
 
   <div class="property-card_content">
     <div class="property-card_stats">
-      {{> tables.table--rent}}
+      <span class="property-card_label">{{default available 'Waitlist'}}</span>
+      
+      {{> tables.table--rent items=tables.minimum-range.units}}
+
+      {{#if priority-units}}
+      <span class="property-card_caption">Priority Units for People with Visual, Hearing and Mobility Impairments</span>
+      {{/if}}
     </div>
 
     <div class="property-card_action">
