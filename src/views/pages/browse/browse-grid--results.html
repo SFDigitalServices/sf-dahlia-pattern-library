@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row margin-top--2x">
     <div class="large-12 columns">
       {{> property-card state="matched"}}
     </div>
@@ -47,94 +47,51 @@
 <section class="results-section border-top">
   <div class="row">
     <div class="large-12 columns">
-
-      <header class="status-header status--other">
-        <div class="status-header_icon">
-          <span class="ui-icon ui-xlarge">
-            <svg>
-              <use xlink:href="#i-building"></use>
-            </svg>
-          </span>
-        </div>
-
-        <hgroup class="status-header_group">
-          <h2 class="status-header_title gamma">
-            Other Listings
-          </h2>
-          <p class="no-margin">We know you may have options about how many people will live with you. Here are listings for other houseshold sizes and income levels.</p>
-        </hgroup>
-      </header>
+      {{> headers.status-header classes="has-button" status="other" icon="building" title="Additional Listings" text="We know you may have options about how many people will live with you. Here are listings for other houseshold sizes and income levels." button="Show Additional Listing (3)"}}
     </div>
   </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      {{> property-card state="not-matched"}}
+  <section class="toggled margin-top--2x" style="display: none">
+    <div class="row">
+      <div class="large-12 columns">
+        {{> property-card state="not-matched"}}
+      </div>
     </div>
-  </div>
+  </section>
 </section>
 
-<section class="results-section border-top">
+
+<section class="results-section border-top border-bottom">
   <div class="row">
     <div class="large-12 columns">
-
-      <header class="status-header status--closed">
-        <div class="status-header_icon">
-          <span class="ui-icon ui-large">
-            <svg>
-              <use xlink:href="#i-clock"></use>
-            </svg>
-          </span>
-        </div>
-
-        <hgroup class="status-header_group">
-          <h2 class="status-header_title gamma">
-            Closed Listings
-          </h2>
-          <p class="no-margin">The remaining properties are no longer taking applications but will post lottery results soon.</p>
-        </hgroup>
-      </header>
+      {{> headers.status-header classes="has-button" status="closed" icon="result" title="Lottery Results" text="The remaining properties are no longer taking applications but can be used to check lottery results."}}
     </div>
   </div>
 
-  <div class="row">
-    <div class="large-12 columns">
-      {{> property-card state="closed"}}
+  <section class="toggled margin-top--2x" style="display: none">
+    <div class="row">
+      <div class="large-12 columns">
+        {{> property-card state="results"}}
+      </div>
     </div>
-  </div>
+
+    <article class="row">
+      <div class="large-12 columns">
+        <header class="results-section_divider">
+          <h3 class="results-section_subheader">Lottery Results Coming Soon</h3>
+        </header>
+      </div>
+    </article>
+
+     <article class="row">
+      <div class="large-12 columns">
+        {{> property-card state="closed"}}
+      </div>
+    </article>
+  </section>
 </section>
 
-<section class="results-section border-top">
-  <div class="row">
-    <div class="large-12 columns">
-
-      <header class="status-header status--closed">
-        <div class="status-header_icon">
-          <span class="ui-icon ui-large">
-            <svg>
-              <use xlink:href="#i-result"></use>
-            </svg>
-          </span>
-        </div>
-
-        <hgroup class="status-header_group">
-          <h2 class="status-header_title gamma">
-            Lottery Results
-          </h2>
-          <p class="no-margin">The remaining properties are no longer taking applications but can be used to check lottery results.</p>
-        </hgroup>
-      </header>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="large-12 columns">
-      {{> property-card state="results"}}
-    </div>
-  </div>
-</section>
-
-<section class="margin-top margin-bottom">
+<section class="margin-top margin-bottom--2x">
   <div class="row">
     <div class="large-12 columns">
       {{> blocks.block-icon size="short" icon="icon-mail.png" description="Get emailed whenever a new listing is posted." action="Sign Up Today" classes="bg-dust"}}
@@ -142,12 +99,12 @@
   </div>  
 </section>
 
-<section class="padding-top padding-bottom">
+<!-- <section class="padding-top padding-bottom">
   <div class="row">
     <div class="large-12 columns">
       {{> components.photo-block}}
     </div>
   </div>
-</section>
+</section> -->
 
 {{> components.footer}}

@@ -46,6 +46,13 @@ table {
     font-weight: 400;  
   }
 
+  em {
+    @include responsive-text-size('quark');
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-style: normal;
+  }
+
   // Remove zebra coloring and adds border
   &.plain {
     tr th {

@@ -1,0 +1,16 @@
+<table role="grid">
+  <thead>
+    <tr>
+      <th scope="col">Unit Type</th>
+      <th scope="col">Occupancy</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tables.priority.units}}
+    <tr>
+      <td scope="row">{{type}}</td>
+      <td>{{occupancy}} <small>units</small></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -33,7 +33,11 @@
 
     </accordion-group>
 
-    {{> includes.eligibility}}
+    {{#compare multifamily '==' true }}
+      {{> includes.eligibility--multifamily}}
+    {{else }}
+      {{> includes.eligibility}}
+    {{/compare}}
 
     {{> includes.features}}
 

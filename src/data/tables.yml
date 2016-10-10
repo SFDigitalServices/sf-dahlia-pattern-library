@@ -46,6 +46,26 @@ maximum:
     - size: 6
       month: 5,416
       year: 65,000 
+maximum-ami:
+  households:
+    - size: 1
+      month: 30,245
+      year: 38,950
+    - size: 2
+      month: 30,708
+      year: 44,500
+    - size: 3
+      month: 40,204
+      year: 50,450
+    - size: 4
+      month: 40,670
+      year: 56,050
+    - size: 5
+      month: 50,045
+      year: 60,550
+    - size: 6
+      month: 50,416
+      year: 65,000 
 occupancy:
   units:
     - type: Studio
@@ -56,6 +76,14 @@ occupancy:
       occupancy: 2-4
     - type: 3 Bedroom
       occupancy: 3-6
+priority:
+  units:
+    - type: Served in US Military
+      occupancy: 2
+    - type: Person with Mobility Impairment
+      occupancy: 3
+    - type: Person with Developmental Disability
+      occupancy: 4
 features:
   studio:
     units:

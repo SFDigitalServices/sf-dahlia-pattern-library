@@ -65,8 +65,13 @@
 
 .status-header_action { 
  .button {
-    @include scut-center-transform(y);
-    right: 0;
+    margin-top: 1rem !important;
+
+    @media #{$medium-up} {
+      @include scut-center-transform(y);
+      right: 0;
+      margin-top: 0;
+    }
   }
 }  
 
