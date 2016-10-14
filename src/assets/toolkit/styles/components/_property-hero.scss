@@ -3,7 +3,7 @@
 // Hero element at the top of single property
 
 .property-hero {
-
+  position: relative;
 }
 
 .property-hero_figure {
@@ -108,4 +108,10 @@
 
 .property-hero_stat-header {
   @include responsive-text-size('gamma');
+}
+
+.property-hero_label {
+  @include scut-center-transform(x);
+  @include absolute(1rem,null,null,null);
+  z-index: 3;
 }
