@@ -36,41 +36,13 @@
           <p class="custom-counter_text">Anyone may enter the housing lottery for this listing. If your household has one of the following preferences, you will be considered in the order shown here. Each preference holder will be reviewed in lottery rank order.</p>
         </header>
 
-        <div class="content-card">
-          <header class="content-card_ordered">
-            <span class="content-card_number">1 <sup>st</sup></span>
-            <h4 class="content-card_title no-margin">Certificate of Preference (COP)</h4>
-            <p class="c-steel">Up to 11 units available</p>
-          </header>
-          <p class="c-steel">Households in which one member holds a Certificate of Preference from the former San Francisco Redevelopment Agency. COP holders were displaced by Agency action generally during the 1960s and 1970s.<br><a href="#">Read More</a></p>
-        </div>
+        {{> components.content-card--ordered number="1 <sup>st</sup>" name="Certificate of Preference" subtitle="Up to 11 units available" description="Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960s and 1970s, but may also include other persons displaced by Agency action." more="true"}}
 
-        <div class="content-card">
-          <header class="content-card_ordered">
-            <span class="content-card_number">2 <sup>nd</sup></span>
-            <h4 class="content-card_title no-margin">Displaced Tenant Housing Preference (DTHP)</h4>
-            <p class="c-steel">Up to 2 units available</p>
-          </header>  
-          <p class="c-steel">Households in which one member holds a Displaced Tenant Housing Preference Certificate. DTHP Certificate holders are people who have been evicted through either an Ellis Act Eviction or an Owner Move-In Eviction in 2010 or later. Once all units reserved for this preference are filled, remaining DTHP holders will receive Live/Work preference, regardless of their current living or working location.<br><a href="#">Read More</a></p>
-        </div>
+        {{> components.content-card--ordered number="2 <sup>nd</sup>" name="Displaced Tenant Housing Preference (DTHP)" subtitle="Up to 2 units available" description="Households in which one member holds a Displaced Tenant Housing Preference Certificate. DTHP Certificate holders are people who have been evicted through either an Ellis Act Eviction or an Owner Move-In Eviction in 2010 or later. Once all units reserved for this preference are filled, remaining DTHP holders will receive Live/Work preference, regardless of their current living or working location." more="true"}}
 
-        <div class="content-card">
-          <header class="content-card_ordered">
-            <span class="content-card_number">3 <sup>rd</sup></span>
-            <h4 class="content-card_title no-margin">Neighborhood Resident Housing Preference (NRHP)</h4>
-            <p class="c-steel">Up to 4 units available</p>
-          </header>  
-          <p class="c-steel">Households that submit acceptable documentation that at least one member lives either within supervisorial district 10 or within a half-mile of the project.<br><a href="#">Read More</a></p>
-        </div>
+        {{> components.content-card--ordered number="3 <sup>rd</sup>" name="Neighborhood Resident Housing Preference (NRHP)" subtitle="Up to 4 units available" description="Households that submit acceptable documentation that at least one member lives either within supervisorial district 10 or within a half-mile of the project." more="true"}}
 
-        <div class="content-card">
-          <header class="content-card_ordered">
-            <span class="content-card_number">4 <sup>th</sup></span>
-            <h4 class="content-card_title no-margin">Live/Work Preference</h4>
-            <p class="c-steel">All remaining units</p>
-          </header>  
-          <p class="c-steel">Households that submit acceptable documentation that at least one member lives or works in San Francisco. In order to claim Work Preference, you or a household member must currently work in San Francisco at least 75% of your working hours.
-        </div>
+        {{> components.content-card--ordered number="4 <sup>th</sup>" name="Live/Work Preference" units="All remaining subtitle" description="Households that submit acceptable documentation that at least one member lives or works in San Francisco. In order to claim Work Preference, you or a household member must currently work in San Francisco at least 75% of your working hours."}}
 
         <p class="custom-counter_text">After all preference holders have been considered, any remaining units will be available to qualified applicants who do not live or work in San Francisco.</p>
       </div>
@@ -83,7 +55,10 @@
           <p class="custom-counter_text">This building has units set aside if any of the following apply to you or someone in your household:</p>
         </header>
 
-        {{> tables.table--priority}}
+        {{> components.content-card name="People with Developmental Disabilities" subtitle="15 units" description="The head of household, spouse or one or more adult occupant must meet the definition of developmental disability as defined in the HUD Handbook 4350.3, Chapter 3, Section 2, Figures 2-5 and 3-6." more="true" has-subtitle="true"}}
+
+        {{> components.content-card name="Veterans" subtitle="1 unit" description="Duis posuere nisi at urna semper, nec congue lacus mattis. Ut posuere blandit dui, id mollis neque hendrerit ut. Aenean ut ex quis dolor vehicula facilisis in sit amet libero. " has-subtitle="true"}}
+
       </div>
     </li>
 
