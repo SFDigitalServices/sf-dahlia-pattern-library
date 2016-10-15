@@ -34,6 +34,11 @@
     }
   }
 
+  &.text-wrap {
+    white-space: normal;
+  }
+
+  // Nested icon
   .ui-icon {
     margin-right: .5rem;
   }
