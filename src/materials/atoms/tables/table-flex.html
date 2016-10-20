@@ -1,4 +1,4 @@
-<table class="pricing-table table-flex" role="grid">
+<table class="pricing-table table-flex {{default classes ''}}" role="grid">
   <thead>
     <tr>
       <th scope="col">Unit Type</th>
@@ -9,15 +9,15 @@
   </thead>
   <tbody>
     <tr>
-      <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">Studio</span></td>
-      <td data-th="Min. Income">$2,347<small>/month</small></td>
-      <td data-th="Rent">$939<small>/month</small></td>
+      <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">Studio{{#if studio-note}} <span class="c-primary">*</span>{{/if}}</span></td>
+      <td data-th="Min. Income">{{{default income-studio '$2,347<small>/month</small>'}}}</td>
+      <td data-th="Rent">{{{default rent-studio '$939<small>/month</small>'}}}</td>
       <td data-th="Availabililty">{{{default availability-studio '1 <small>unit</small>'}}}</td>
     </tr>
     <tr>
       <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">1 Bedroom</span></td>
-      <td data-th="Min. Income">$2,650<small>/month</small></td>
-      <td data-th="Rent">$1066<small>/month</small></td>
+      <td data-th="Min. Income">{{{default income-bedroom '$2,650<small>/month</small>'}}}</td>
+      <td data-th="Rent">{{{default rent-bedroom '$1,066<small>/month</small>'}}}</small></td>
       <td data-th="Availabililty">{{{default availability-bedroom '9 <small>units</small>'}}}</td>
     </tr>
   </tbody>
