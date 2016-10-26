@@ -23,12 +23,14 @@
 }
 
 // Block modifier with icon
+// Update required in app to remove BEM naming
 .icon-block,
 .block--icon {
   @include block();
 }
 
-  // Block modifier with more responsive padding
+// Block modifier with more responsive padding
+// Update required in app to remove BEM naming
 .tall-block,
 .block--tall {
   @include block();
@@ -38,6 +40,7 @@
   }
 }
 
+.short-block,
 .block--short {
   @include block();
   padding: 1.5rem;
@@ -87,7 +90,7 @@
   }  
 }
 
-// Block Icon calls to action
+// Home page block icon calls to action
 .splash-wells {
   .columns {
     .block--tall {
