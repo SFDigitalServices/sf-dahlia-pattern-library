@@ -23,7 +23,7 @@ layout: angular
 <section class="results-section">
   <div class="row">
     <div class="large-12 columns">
-      {{> property-card available="Waitlist"}}
+      {{> property-card available="Open Waitlist"}}
       {{> property-card available="Available Units" priority-units="yes"}}
     </div>
   </div>
@@ -39,7 +39,7 @@ layout: angular
   <section class="toggled margin-top--2x" style="display: none">
     <article class="row">
       <div class="large-12 columns">
-        {{> property-card state="results"}}
+        {{> property-card state="results" available="Open Waitlist"}}
       </div>
     </article>
 
@@ -53,7 +53,7 @@ layout: angular
 
     <article class="row">
       <div class="large-12 columns">
-        {{> property-card state="closed"}}
+        {{> property-card state="closed" available="Open Waitlist"}}
       </div>
     </article>
   </section>

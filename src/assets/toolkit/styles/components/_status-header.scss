@@ -65,7 +65,7 @@
 
 .status-header_action { 
  .button {
-    margin-top: 1rem !important;
+    margin-top: 1rem;
 
     @media #{$medium-up} {
       @include scut-center-transform(y);
