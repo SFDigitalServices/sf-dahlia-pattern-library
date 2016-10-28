@@ -70,6 +70,21 @@ table {
     }
   }
 
+  // Uses gray and white striping
+  &.td-bw {
+    tr:nth-of-type(even) {
+      background-color: $snow;
+    }
+  }
+
+  &.td-highlight {
+    background-color: $dust;
+
+    tr td {
+      border-bottom: 1px solid $smoke;
+    }  
+  }  
+
   // Shorten table cell spacing
   &.td-small {
     border-bottom: 1px solid $smoke;
@@ -105,6 +120,16 @@ table {
     tbody tr td {
       font-weight: normal;
     }  
+  }
+
+  &.no-thead {
+    thead th {
+      @include sr-only;
+    }
+
+    tbody {
+      border-top: 1px solid $smoke;
+    }
   }
 
   // Smaller tables with dark headers and centered content

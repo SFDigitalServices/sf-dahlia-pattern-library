@@ -10,8 +10,8 @@
   {{#each tables.minimum-range.units}}
     <tr>
       <td scope="row">{{this.type}}</td>
-      <td>${{this.income}}<small>/month</small></td>
-      <td class="text-right">${{this.rent}}<small>/month</small></td>
+      <td>${{this.income-low}}-${{this.income-high}}<small>/month</small></td>
+      <td class="text-right">${{this.rent-low}}-${{this.rent-high}}<small>/month</small></td>
     </tr>
   {{/each}}
   </tbody>

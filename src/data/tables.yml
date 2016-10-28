@@ -26,6 +26,14 @@ minimum-range:
       income-high: 2,685
       rent-low: 939
       rent-high: 1,250
+percent:
+  units:
+    - type: Studio
+      income: none
+      rent: 30% income
+    - type: 1 Bedroom
+      income: none
+      rent: 30% income
 maximum:
   households:
     - size: 1

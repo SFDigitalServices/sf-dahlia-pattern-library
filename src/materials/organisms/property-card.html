@@ -44,12 +44,18 @@
 
   <div class="property-card_content">
     <div class="property-card_stats">
-      <span class="property-card_label">{{default available 'Waitlist'}}</span>
+      <span class="property-card_label">{{default available 'Open Waitlist'}}</span>
       
-      {{> tables.table--rent items=tables.minimum-range.units}}
-
+      {{> tables.table--range items=tables.minimum-range.units classes="no-margin"}}
       {{#if priority-units}}
-      <span class="property-card_caption">Priority Units for People with Visual, Hearing and Mobility Impairments</span>
+      <span class="property-card_caption margin-bottom">Includes Priority Units for People with Visual, Hearing Impairments</span>
+      {{/if}}
+
+      {{#if subsidy-table}}
+        {{> tables.table--percent items=tables.percentage.units classes="no-thead margin-top"}}
+      {{/if}}
+      {{#if subsidy-units}}
+      <span class="property-card_caption bg-dust margin-bottom--2x"><span class="c-primary">*</span> Priority Units for People with Developmental Disabilities</span>
       {{/if}}
     </div>
 
