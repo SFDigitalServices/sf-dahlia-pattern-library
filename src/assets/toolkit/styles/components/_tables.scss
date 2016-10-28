@@ -124,7 +124,7 @@ table {
 
   &.no-thead {
     thead th {
-      @include sr-only;
+      @include scut-hide-visually;
     }
 
     tbody {

@@ -29,10 +29,10 @@ minimum-range:
 percent:
   units:
     - type: Studio
-      income: none
+      income: <em>none</em>
       rent: 30% income
     - type: 1 Bedroom
-      income: none
+      income: <em>none</em>
       rent: 30% income
 maximum:
   households:

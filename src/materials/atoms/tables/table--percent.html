@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <th scope="col">Type</th>
-      <th scope="col">Mimumum Income</th>
+      <th scope="col">Minimum Income</th>
       <th scope="col" class="text-right">Rent</th>
     </tr>
   </thead>
@@ -10,7 +10,7 @@
   {{#each tables.percent.units}}
     <tr>
       <td scope="row">{{this.type}} <span class="c-primary">*</span></td>
-      <td>{{this.income}}</td>
+      <td>{{{this.income}}}</td>
       <td class="text-right">{{this.rent}}</td>
     </tr>
   {{/each}}
