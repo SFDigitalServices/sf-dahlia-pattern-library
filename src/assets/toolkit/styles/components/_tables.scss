@@ -42,6 +42,14 @@ table {
     }
   }
 
+  caption {
+    @include responsive-text-size('micro');
+    color: $charcoal;
+    font-weight: $t-regular;
+    text-align: left;
+    padding-bottom: .5rem;
+  }
+
   small {
     font-weight: 400;  
   }

@@ -179,7 +179,8 @@
 .property-card_label {
   @include responsive-text-size('micro');
   display: block;
-  font-weight: 700;
+  font-family: $sans-font-family;
+  font-weight: $t-bold;
   letter-spacing: .2rem;
   margin-bottom: .5rem;
   margin-top: .5rem;
