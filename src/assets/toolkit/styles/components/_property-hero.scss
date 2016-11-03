@@ -108,10 +108,33 @@
 
 .property-hero_stat-header {
   @include responsive-text-size('gamma');
+  @include scut-padding(1rem n 1rem 1rem);
+  background-color: $mist;
+  border-bottom: 1px solid $primary;
+  margin-bottom: 0;
+
+  @media #{$medium-up} {
+    @include scut-padding(0 n 0 n);
+    background-color: transparent;
+    border-bottom: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.property-hero_stat-note {
+  @include scut-padding(.5rem n n 1rem);
+  margin-bottom: 1.5rem;
 }
 
 .property-hero_label {
   @include scut-center-transform(x);
   @include absolute(1rem,null,null,null);
+  @include responsive-text-size('micro');
+  @include scut-padding(.5rem 1rem);
   z-index: 3;
+
+  @media #{$medium-up} {
+    @include responsive-text-size('small');
+    @include scut-padding(.625rem 1.25rem);
+  }
 }

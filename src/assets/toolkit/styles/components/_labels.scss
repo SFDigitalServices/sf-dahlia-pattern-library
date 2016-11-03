@@ -25,11 +25,7 @@
     }
   }
 
-  &.medium {
-    @include responsive-text-size('micro');
-    @include scut-padding(.5rem 1rem);
-  }
-
+  // lighter background applied to alerts 
   &.alert-tint {
     background-color: $alert-tint;
     color: $oil;
@@ -39,8 +35,19 @@
     }
   }
 
+  // label icon
   .ui-icon {
     margin-right: .5rem;
+  }
+
+  &.medium {
+    @include responsive-text-size('micro');
+    @include scut-padding(.5rem 1rem);
+  }
+
+  &.large {
+    @include responsive-text-size('small');
+    @include scut-padding(.625rem 1.25rem);
   }
 }
 

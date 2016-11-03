@@ -182,8 +182,14 @@
   font-weight: 700;
   letter-spacing: .2rem;
   margin-bottom: .5rem;
-  margin-top: .75rem;
+  margin-top: .5rem;
   text-transform: uppercase;
+}
+
+.property-card_subheader {
+  @include responsive-text-size('micro');
+  color: $charcoal;
+  display: block;
 }
 
 .property-card_caption {
@@ -193,4 +199,4 @@
   padding-top: .75rem;
   padding-left: .5rem;
   padding-bottom: .75rem;
-}  
+}

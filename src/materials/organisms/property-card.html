@@ -47,11 +47,11 @@
   <div class="property-card_content">
     <div class="property-card_stats">
       <span class="property-card_label">{{default available 'Open Waitlist'}}</span>
-      
-      {{> tables.table--range items=tables.minimum-range.units classes="no-margin"}}
       {{#if priority-units}}
-      <span class="property-card_caption margin-bottom">Includes Priority Units for People with Visual, Hearing Impairments</span>
+      <span class="property-card_subheader margin-bottom">Includes Priority Units for People with Visual and Hearing Impairments</span>
       {{/if}}
+      
+      {{> tables.table--range items=tables.minimum-range.units classes=""}}
 
       {{#if subsidy-table}}
         {{> tables.table--percent items=tables.percentage.units classes="no-thead margin-top"}}
