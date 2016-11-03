@@ -105,14 +105,14 @@ sections-general:
         value: 12/2/1970
       - name: Address
         value: 700 Avalon St <br> San Francisco, CA 94117
-  - header: Self Declared Status
-    info-items:
-      - name: Preferences
-        value: Based on the information you have entered, your household has not claimed any housing lottery preferences. you will be in the general lottery.
-        is-sentence: yes
-      - name: Vouchers and Subsidies
-        value: "No"
-  - header: Household Income
+  - header: Preferences
     info-items:
       - name: 
+        value: Based on the information you have entered, your household has not claimed any housing lottery preferences. you will be in the general lottery.
+        is-sentence: yes
+  - header: Income
+    info-items:
+      - name: Vouchers and Subsidies
+        value: "No"
+      - name: Household Income
         value: $32,000 per year
