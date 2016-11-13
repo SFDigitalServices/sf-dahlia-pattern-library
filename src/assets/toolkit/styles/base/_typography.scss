@@ -4,7 +4,7 @@
 
 #{h1, h2, h3, h4, h5, h6} {
   font-family: $serif-font-family;
-  font-weight: 400;
+  font-weight: $t-regular;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -59,6 +59,31 @@ small,
 
 .t-quark {
   @include responsive-text-size('quark');
+}
+
+// paragraph line heights
+.p-gamma {
+  line-height: 1.5;
+}
+
+.p-delta {
+  line-height: 1.5;
+}
+
+.p-epsilon {
+  line-height: 1.5;
+}
+
+.p-base {
+  line-height: 1.5;
+}
+
+.p-small {
+  line-height: 1.5;
+}
+
+.p-tiny {
+  line-height: 1.5;
 }
 
 body {
