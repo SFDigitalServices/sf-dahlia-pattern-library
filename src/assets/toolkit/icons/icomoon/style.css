@@ -1,0 +1,56 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.i-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.i-application {
+  width: 0.75em;
+}
+
+.i-assistance {
+  width: 1.0498046875em;
+}
+
+.i-asterisk {
+  width: 0.9501953125em;
+}
+
+.i-bed {
+  width: 1.150390625em;
+}
+
+.i-calendar {
+  width: 0.9501953125em;
+}
+
+.i-eligibility {
+  width: 0.75em;
+}
+
+.i-favorite {
+  width: 1.099609375em;
+}
+
+.i-lock {
+  width: 0.650390625em;
+}
+
+.i-map {
+  width: 0.5498046875em;
+}
+
+.i-trash {
+  width: 0.7998046875em;
+}
