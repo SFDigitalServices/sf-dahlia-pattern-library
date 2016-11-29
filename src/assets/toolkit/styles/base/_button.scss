@@ -28,7 +28,7 @@ $dark-bg-colors: (
   &:focus {
     background-color: $primary;
 
-    svg use { 
+    svg use {
       fill: #fff;
     }
   }
@@ -124,7 +124,7 @@ button,
   &.ghost-white {
     background-color: #fff;
     color: $primary;
-    
+
     &:hover,
     &:focus {
       background-color: $primary;
@@ -174,14 +174,14 @@ button,
     svg use {
       fill: $primary;
     }
-        
+
     &:focus {
       // outline: none;
       color: $dark;
 
       svg use {
         fill: $dark;
-      }  
+      }
     }
 
     &.disabled:hover,
@@ -189,8 +189,8 @@ button,
     &[disabled]:hover,
     &[disabled]:focus {
       background-color: transparent !important;
-    }  
-  
+    }
+
     // Button link with underline
     &.button-lined {
       @include scut-padding(n 1rem);
@@ -201,7 +201,7 @@ button,
 
       &:focus {
         color: $dark;
-      }  
+      }
     }
 
     &.caps {
@@ -213,7 +213,7 @@ button,
   &.round-icon {
     border-radius: 50%;
     padding: .6rem;
-    
+
     svg {
       margin-top: 0;
     }
@@ -247,7 +247,7 @@ button,
     // Expose label, hidden by default
     &.has-label {
       margin-right: rem-calc(65);
-      
+
       .inline {
         // @include translateY(-50%);
         transform: translateY(-50%);
@@ -258,7 +258,7 @@ button,
         letter-spacing: normal;
         text-transform: none;
       }
-    }  
+    }
   }
 
   // Icon button styles
@@ -269,13 +269,16 @@ button,
       margin-right: .625rem;
     }
 
-    svg use { 
+    svg use {
       fill: $primary;
+    }
+    &.primary svg use {
+      fill: #fff;
     }
 
     &:hover,
     &:focus {
-      svg use { 
+      svg use {
         fill: #fff;
       }
     }
@@ -300,7 +303,7 @@ input[type="submit"] {
 .expand-small {
   @media #{$small-only} {
     width: 100%;
-  }  
+  }
 }
 
 // Link converts to button style on small screens
@@ -316,7 +319,7 @@ input[type="submit"] {
 
     &:hover,
     &:focus {
-      svg use { 
+      svg use {
         fill: #fff;
       }
     }
@@ -324,7 +327,7 @@ input[type="submit"] {
 
   .ui-icon {
     margin-right: .5rem;
-  } 
+  }
 
   svg use {
     fill: $primary;
@@ -334,7 +337,7 @@ input[type="submit"] {
 // Buttons stacked rather than inline
 .button-stack {
   margin-bottom: 1rem;
-  
+
   button,
   .button {
     margin: 0 auto .25rem;

@@ -35,7 +35,12 @@
     }
   }
 
-  // label icon
+  // Allow label text to wrap
+  &.text-wrap {
+    white-space: normal;
+  }
+
+  // Nested icon
   .ui-icon {
     margin-right: .5rem;
   }

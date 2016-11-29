@@ -23,6 +23,11 @@
   margin-bottom: 0;
   text-transform: uppercase;
 
+  &.sentence {
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
   @media print {
     @include responsive-text-size('micro');
   }  
