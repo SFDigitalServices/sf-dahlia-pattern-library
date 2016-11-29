@@ -12,7 +12,7 @@
 
   @media print {
     margin-bottom: 15px;
-  }  
+  }
 }
 
 .info-item_name {
@@ -23,9 +23,14 @@
   margin-bottom: 0;
   text-transform: uppercase;
 
+  &.sentence {
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
   @media print {
     @include responsive-text-size('micro');
-  }  
+  }
 }
 
 .info-item_value,
@@ -55,5 +60,5 @@
 
   @media print {
     margin-bottom: 1rem;
-  }  
+  }
 }
