@@ -1,10 +1,12 @@
+// Text message with bouning box. 
+
 .message {
   @include scut-padding(.5rem 1rem);
   background-color: $mist;
   margin-bottom: .5rem;
 
   // Reserved state
-  &.reserved {
+  &.is-reserved {
     background-color: lighten($splash-tint, 10%);
     box-shadow: inset 3px 0px 0px 0px rgba(255,102,39,1);
 

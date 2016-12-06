@@ -1,3 +1,7 @@
+$td-reserved-light: lighten($splash-tint, 10%);
+$td-reserved-lighter: lighten($splash-tint, 11%);
+$td-reserved-inset: inset 3px 0px 0px 0px rgba(255,102,39,1);
+
 table {
   width: 100%;
 
@@ -160,22 +164,15 @@ table {
     }
   }
 
-  .td-reserved {
-    background-color: lighten($splash-tint, 10%);
+  // Calling out reserved units
+  tr.tr-reserved {
+    background-color: $td-reserved-light;
+    box-shadow: $td-reserved-inset;
     border-bottom: 1px solid $white;
 
     &:nth-of-type(even) {
-      background-color: lighten($splash-tint, 11%);
+      background-color: $td-reserved-lighter;
     }
-
-    &:first-child {
-      box-shadow: inset 3px 0px 0px 0px rgba(255,102,39,1);
-    }
-  }  
-
-  // Calling out reserved units
-  tr.tr-reserved td {
-    @extend .td-reserved;
   }
 }
 
@@ -191,9 +188,17 @@ table {
       }  
     }
 
+    // support resverved unit tinting within flexible table
     &.tr-reserved {
-      td:nth-of-type(odd) {
-        background-color: lighten($splash-tint, 10%) !important;
+      @media #{$small-only} {
+        td {
+          box-shadow: $td-reserved-inset;
+          background-color: $td-reserved-light;
+
+          &:nth-of-type(even) {
+            background-color: $td-reserved-lighter;
+          }
+        }  
       }
     }
   }
