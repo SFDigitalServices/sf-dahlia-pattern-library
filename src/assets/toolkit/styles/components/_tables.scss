@@ -159,6 +159,24 @@ table {
       }
     }
   }
+
+  .td-reserved {
+    background-color: lighten($splash-tint, 10%);
+    border-bottom: 1px solid $white;
+
+    &:nth-of-type(even) {
+      background-color: lighten($splash-tint, 11%);
+    }
+
+    &:first-child {
+      box-shadow: inset 3px 0px 0px 0px rgba(255,102,39,1);
+    }
+  }  
+
+  // Calling out reserved units
+  tr.tr-reserved td {
+    @extend .td-reserved;
+  }
 }
 
 
@@ -166,12 +184,17 @@ table {
 // using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
 
 .table-flex {
-
   tr {
     &:nth-of-type(even) {
       @media #{$small-only} {
         background: transparent;
       }  
+    }
+
+    &.tr-reserved {
+      td:nth-of-type(odd) {
+        background-color: lighten($splash-tint, 10%) !important;
+      }
     }
   }
   
@@ -261,22 +284,22 @@ table {
   }
 }
 
-// Result set
-// List psuedo table
-.result-set {
-  width: 100%;
-  overflow: hidden;
+// // Result set
+// // List psuedo table
+// .result-set {
+//   width: 100%;
+//   overflow: hidden;
   
-  li {
-    overflow: hidden;
-    padding: .5rem;
-    border-bottom: 1px solid $smoke;
-    position: relative;
-    width: 100%;
+//   li {
+//     overflow: hidden;
+//     padding: .5rem;
+//     border-bottom: 1px solid $smoke;
+//     position: relative;
+//     width: 100%;
 
-    .right {
-      display: inline-block;
-      width: 50%;
-    }
-  }
-}
+//     .right {
+//       display: inline-block;
+//       width: 50%;
+//     }
+//   }
+// }
