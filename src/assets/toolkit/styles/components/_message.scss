@@ -1,0 +1,30 @@
+.message {
+  @include scut-padding(.5rem 1rem);
+  background-color: $mist;
+  margin-bottom: .5rem;
+
+  // Reserved state
+  &.reserved {
+    background-color: lighten($splash-tint, 10%);
+    box-shadow: inset 3px 0px 0px 0px rgba(255,102,39,1);
+
+    // Icon color
+    .i-color {
+      fill: $splash;
+    }
+  }
+}
+
+.message-icon {
+  margin-right: .5rem;
+}
+
+.message-text {
+  @include responsive-text-size('tiny');
+  font-weight: $t-semi;
+  text-transform: uppercase;
+}
+
+.message-group {
+  margin-bottom: 2rem;
+}

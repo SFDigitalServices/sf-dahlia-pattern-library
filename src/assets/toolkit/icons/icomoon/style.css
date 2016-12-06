@@ -15,6 +15,10 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.i-star {
+  width: 0.875em;
+}
+
 .i-application {
   width: 0.75em;
 }
