@@ -24,14 +24,17 @@ $dark-bg-colors: (
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $primary;
 
     svg use {
       fill: #fff;
     }
   }
+
+  &:active {
+    background-color: $dark;
+  }  
 }
 
 button,
@@ -41,46 +44,51 @@ button,
   &:focus {
     text-decoration: none;
     outline-offset: -2px;
+    // background-color: inherit;
+    // color: inherit;
   }
 
-  // Creates button classes form $dark-bg-colors map
+  // Creates button classes from $dark-bg-colors map
   @each $color-name, $color-value in $dark-bg-colors {
     &.#{"" + $color-name} {
       background-color: $color-value;
       color: $white;
       border-color: $color-value;
 
-      &:hover,
-      &:focus {
+      &:hover {
         background-color: darken($color-value, 5%);
         color: $white;
       }
 
       &:focus {
+        // background-color: darken($color-value, 10%);
         outline: 5px auto lighten($color-value, 10%);
       }
     }
   }
 
-  // Light background buttons
   &.primary {
     background-color: $primary;
     color: #fff;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: darken($primary, 5%);
       color: #fff;
     }
   }
 
+  // Light background buttons
   &.secondary {
     background-color: transparent;
     border-color: $primary;
     color: $primary;
 
-    &:hover,
     &:focus {
+      background-color: transparent;
+      color: $primary; 
+    }
+
+    &:hover {
       background-color: darken($primary, 5%);
       color: #fff;
     }
@@ -91,8 +99,7 @@ button,
     border-color: $steel;
     color: $steel;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: $steel;
       color: #fff;
     }
@@ -102,8 +109,7 @@ button,
     background-color: $tint;
     color: $deep;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: $deep;
       color: #fff;
     }
@@ -113,8 +119,7 @@ button,
     background-color: #fff;
     color: $primary;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: #fff;
       background-color: darken($primary, 5%);
     }
@@ -125,10 +130,13 @@ button,
     background-color: #fff;
     color: $primary;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: $primary;
       color: #fff;
+    }
+
+    &:active {
+      background-color: $dark;
     }
   }
 
@@ -272,12 +280,12 @@ button,
     svg use {
       fill: $primary;
     }
+
     &.primary svg use {
       fill: #fff;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       svg use {
         fill: #fff;
       }
