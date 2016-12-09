@@ -73,7 +73,56 @@ maximum-ami:
       year: 60,550
     - size: 6
       month: 50,416
-      year: 65,000 
+      year: 65,000
+minimum-flex:
+  - type: Studio
+    income: $2,347<small>/month</small>
+    rent: $939<small>/month</small>
+    availability: 1 <small>unit</small>
+  - type: 1 Bedroom
+    income: $2,685<small>/month</small>
+    rent: $1,074<small>/month</small>
+    availability: 2 <small>units</small>
+  - type: 2 Bedroom
+    income: $2,998<small>/month</small>
+    rent: $1,199<small>/month</small>
+    availability: 9 <small>units</small>
+minimum-flex-reserved:
+  - type: Studio
+    income: <em>none</em>
+    rent: 30%<small>/income</small>
+    availability: 1 <small>unit</small>
+    reserved: true
+    icon: star
+  - type: Studio
+    income: <em>none</em>
+    rent: 30%<small>/income</small>
+    availability: <em>waitlist</em>
+    reserved: true
+    icon: star
+  - type: Studio
+    income: <em>none</em>
+    rent: 30%<small>/income</small>
+    availability: 1 <small>unit</small>
+    reserved: true
+  - type: Studio
+    income: $1,957<small>/month</small>
+    rent: 30%<small>/income</small>
+    availability: 1 <small>unit</small>
+    reserved: true
+  - type: Studio
+    income: $2,347<small>/month</small>
+    rent: $939<small>/month</small>
+    availability: 1 <small>unit</small>
+  - type: Studio
+    income: $2,347<small>/month</small>
+    rent: $939<small>/month</small>
+    availability: <em>waitlist</em>
+  - type: 1 Bedroom
+    income: $2,685<small>/month</small>
+    rent: 30%<small>/income</small>
+    availability: 2 <small>units</small>
+    reserved: true
 occupancy:
   units:
     - type: Studio

@@ -8,17 +8,24 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">Studio{{#if studio-icon}} {{> icons.base scale="tiny" icon="star" fill="splash" classes="message-icon"}}{{/if}}</span></td>
-      <td data-th="Min. Income">{{{default income-studio '$2,347<small>/month</small>'}}}</td>
-      <td data-th="Rent">{{{default rent-studio '$939<small>/month</small>'}}}</td>
-      <td data-th="Availabililty">{{{default availability-studio '1 <small>unit</small>'}}}</td>
+
+    {{#each items}}
+    <tr {{#if reserved}}class="tr-reserved"{{/if}}>
+      <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">{{{type}}}{{#if icon}}{{> icons.base scale="tiny" icon="star" fill="splash" classes="message-icon"}}{{/if}}</span></td>
+      <td data-th="Min. Income">{{{income}}}</td>
+      <td data-th="Rent">{{{rent}}}</td>
+      <td data-th="Availabililty">{{{availability}}}</td>
     </tr>
-    <tr>
-      <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">1 Bedroom {{#if 1br-icon}} {{> icons.base scale="tiny" icon="star" classes="message-icon"}}{{/if}}</span></td>
-      <td data-th="Min. Income">{{{default income-bedroom '$2,650<small>/month</small>'}}}</td>
-      <td data-th="Rent">{{{default rent-bedroom '$1,066<small>/month</small>'}}}</small></td>
-      <td data-th="Availabililty">{{{default availability-bedroom '9 <small>units</small>'}}}</td>
-    </tr>
+    {{else}}
+      {{#each tables.minimum-flex}}
+        <tr class="">
+          <td class="tr" scope="row" data-th="Unit Type">{{type}}</td>
+          <td data-th="Min. Income">{{{income}}}</td>
+          <td data-th="Rent">{{{rent}}}</td>
+          <td data-th="Availabililty">{{{availability}}}</td>
+        </tr>
+      {{/each}}
+    {{/each}}
+
   </tbody>
 </table>
