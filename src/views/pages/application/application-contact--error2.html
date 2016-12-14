@@ -21,14 +21,6 @@ title: Application
             <p class="t-small c-steel">We'll need at least one way to contact you after the application deadline.</p>
          </div> 
         </div>
-        
-        {{> forms.alert-box classes="invert no-margin" icon="warning" text="Please provide at least one way to contact you."}}
-
-        <div class="alert-notice alert">
-          <p class="alert-notice_item">Your Phone Number</p>
-          <p class="alert-notice_item">Your Email Address</p>
-          <p class="alert-notice_item">Your Address</p>
-        </div>
 
         <div class="app-inner inset border-bottom">
           <div class="form-group has-option">
@@ -41,11 +33,11 @@ title: Application
         </div>
 
         <div class="app-inner inset border-bottom">  
-          <div class="form-group has-option">
-            <label class="form-label caps">Your email address</label>
+          <div class="form-group has-option is-locked">
+            <label class="form-label caps">Your email address {{> icons.base icon="lock" fill="primary"}}</label>
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
-            {{> forms.input-email visibility="sr-only"}}
-
+            {{> forms.input-email visibility="sr-only" readonly="readonly"}}
+            <small class="lock-note">Your email is editable via your account settings</small>
             <div class="form-item">
               {{> forms.checkbox text="I don't have an email address"}}
             </div>
@@ -92,6 +84,8 @@ title: Application
             <label class="form-label caps">Do you work in San Francisco?</label>
             <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>
             {{> forms.radio-group--inline items=inputs.yesno classes="double"}}
+
+            <small class="highlight">In order to claim this as a lottery preference, you'll need to upload supporting documentation as instructed on a later screen.</small>
           </div>
         </div>
 
