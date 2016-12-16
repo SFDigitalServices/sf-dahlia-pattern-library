@@ -27,6 +27,8 @@
       {{> content-section--lottery}}
     {{else compare state '==' 'post-results-modal' }}
       {{> content-section--lottery-modal}}
+    {{else compare state '==' 'open-nopickup' }}
+      {{> content-section--process-nopickup}}
     {{else }}
       {{> content-section--process}}
     {{/compare}}

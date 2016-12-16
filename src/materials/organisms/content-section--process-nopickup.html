@@ -1,14 +1,7 @@
 <section class="content-wrap">
-  <div class="content-group no-padding show-for-medium-up">
+  <div class="content-group no-padding">
     {{> components.flag-label classes="text-wrap"}}
   </div>
-
-  {{#compare multifamily '==' true }}
-  <div class="content-group">
-    <h4 class="content-group_title c-primary">Apply to the Waitlist for 84 Units</h4>
-    <p class="t-small c-steel">There are no vacant units available for this listing at this time. Once vacancies are filled the top portion of lottery applicants will be placed on a waitlist and be reviewed based on their ranking as units become available.</p> 
-  </div>
-  {{/compare}}
 
   <div class="content-group">
     <h4 class="content-group_title">Information Session</h4>
@@ -43,7 +36,7 @@
   </div>
 
   <div class="show-for-medium-up">
-    {{> content-column--apply application_pickup=true}} 
+    {{> content-column--apply application_pickup=false}} 
   </div>
 
   <div class="content-group">
