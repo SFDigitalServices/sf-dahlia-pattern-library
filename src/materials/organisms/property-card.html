@@ -39,7 +39,7 @@
       </h1>
       <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
       {{#if community-building}}
-      <span class="label radius medium negative">Senior Community Building</span>
+      <span class="label radius medium bg-splash">Senior Community Building</span>
       {{/if}}
     </figcaption>
   </figure>
@@ -47,14 +47,16 @@
   <div class="property-card_content">
     <div class="property-card_stats">
       <h2 class="property-card_label">{{default available 'Open Waitlist'}}</h2>
-      
-      {{> tables.table--range items=tables.minimum-range.units caption="Includes Priority Units for People with Visual and Hearing Impairments"}}
+      <p class="property-card_subheader">Includes Priority Units for People with Visual and Hearing Impairments</p>
 
-      {{#if subsidy-table}}
-        {{> tables.table--percent items=tables.percentage.units classes="no-thead margin-top"}}
-      {{/if}}
-      {{#if subsidy-units}}
-      <span class="property-card_caption bg-dust margin-bottom--2x"><span class="c-primary">*</span> Reserved Units for People with Developmental Disabilities</span>
+      {{#compare state '==' 'community' }}
+        {{> tables.table--range items=tables.minimum-range.units classes="table-reserved"}}
+      {{else }}
+        {{> tables.table--range items=tables.minimum-range.units }}
+      {{/compare}}
+
+      {{#if reserved-table}}
+        {{> tables.table--percent items=tables.percentage.units classes="no-thead margin-top table-reserved"}}
       {{/if}}
     </div>
 

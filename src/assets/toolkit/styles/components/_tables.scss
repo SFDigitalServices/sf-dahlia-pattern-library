@@ -47,11 +47,16 @@ table {
   }
 
   caption {
-    @include responsive-text-size('micro');
+    @include responsive-text-size('quark');
     color: $charcoal;
-    font-weight: $t-regular;
+    font-family: $sans-font-family;
+    font-weight: $t-bold;
+    letter-spacing: .1rem;
     text-align: left;
     padding-bottom: .5rem;
+    padding-left: .75rem;
+    padding-top: .5rem;
+    text-transform: uppercase;
   }
 
   small {
@@ -128,12 +133,14 @@ table {
     }
   }
 
+  // lightens color of table contents
   &.td-light {
     tbody tr td {
       font-weight: normal;
     }  
   }
 
+  // removes header from table
   &.no-thead {
     thead th {
       @include scut-hide-visually;
@@ -161,6 +168,32 @@ table {
       &:last-child {
         padding-right: 3rem;
       }
+    }
+  }
+
+  &.table-reserved {
+    tbody {
+      border-top: 0;
+    }
+
+    caption {
+      border-bottom: 1px solid $splash;
+      background-color: $td-reserved-light;
+      box-shadow: $td-reserved-inset;
+    }
+      
+    tr {
+      background-color: $white;
+      box-shadow: $td-reserved-inset;
+      border-bottom: 0;
+
+      &:nth-of-type(even) {
+        background-color: $td-reserved-light;
+      }
+    }
+
+    thead tr {
+      box-shadow: none;
     }
   }
 

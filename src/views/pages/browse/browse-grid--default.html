@@ -23,8 +23,9 @@ layout: angular
 <section class="results-section">
   <div class="row">
     <div class="large-12 columns">
-      {{> property-card available="Open Waitlist" community-building="yes"}}
-      {{> property-card available="Available Units" has-caption="no" subsidy-table="yes" subsidy-units="yes"}}
+      
+      {{> property-card available="Available Units" reserved-table="yes" reserved-caption="Reserved for Seniors 55+"}}
+      {{> property-card available="Open Waitlist" state="community" has-caption="yes" caption="Reserved for Seniors 55+" community-building="yes" reserved-table="yes" reserved-caption="Reserved for Seniors 55+ with Developmental Disabilities" }}
     </div>
   </div>
 </section>

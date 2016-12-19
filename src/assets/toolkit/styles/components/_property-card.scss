@@ -62,6 +62,7 @@
   position: relative;
   line-height: .8;
 
+  // Image with rounded corners
   &.radius {
     @media #{$medium-up} {
       border-radius: $form-card-radius;
@@ -177,13 +178,12 @@
 }
 
 .property-card_label {
-  @include responsive-text-size('micro');
+  @include responsive-text-size('small');
   display: block;
   font-family: $sans-font-family;
   font-weight: $t-bold;
   letter-spacing: .2rem;
   margin-bottom: .5rem;
-  margin-top: .5rem;
   text-transform: uppercase;
 }
 
@@ -191,6 +191,7 @@
   @include responsive-text-size('micro');
   color: $charcoal;
   display: block;
+  margin-bottom: 1rem;
 }
 
 .property-card_caption {
