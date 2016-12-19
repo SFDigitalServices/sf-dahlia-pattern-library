@@ -134,7 +134,7 @@ $dust:              #f5f8f9;
 
 // Brand Colors
 $primary-color:     #0077da;
-$secondary-color:   #f90;
+$secondary-color:   #0067be;
 $attention:         #00bed5;
 $splash:            #ff6627;
 $royal:             #b85ed5;
@@ -152,7 +152,7 @@ $royal-tint:        lighten($royal, 30%);
 $lush-tint:         lighten($lush, 50%);
 
 $bright:            #008fff;
-$deep:              #0067be;
+$deep:              $secondary-color;
 $dark:              #205493;
 $tint:              $primary-tint;
 

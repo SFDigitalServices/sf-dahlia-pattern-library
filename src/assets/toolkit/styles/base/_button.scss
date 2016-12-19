@@ -2,107 +2,98 @@
 // Foundation button variables
 // .button
 $button-radius: rem-calc(4);
-$dark-bg-colors: (
-  oil: $oil,
-  dark: $dark,
-  deep: $deep,
-  ebony: $ebony,
-  tuatara: $tuatara,
-  steel: $steel,
-  attention: $attention
-);
 
-@mixin custom-button() {
+@mixin custom-button-styles() {
   @include type-weight(bold);
-  background-color: transparent;
+  @include scut-padding(n 1.5rem);
   border-radius: $button-radius;
-  border-color: $primary;
-  color: $primary;
   font-family: $alt-font-family;
-  text-transform: uppercase;
   letter-spacing: .2em;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  &:hover {
-    background-color: $primary;
-
-    svg use {
-      fill: #fff;
-    }
-  }
-
-  &:active {
-    background-color: $dark;
-  }  
-}
-
-button,
-.button {
-  @include custom-button();
+  text-transform: uppercase;
 
   &:focus {
     text-decoration: none;
     outline-offset: -2px;
-    // background-color: inherit;
-    // color: inherit;
+  }
+}
+
+// Inverted buttons
+@mixin custom-button-light($cb-light-color: $primary) {
+  background-color: $white;
+  border-color: $cb-light-color;
+  color: $cb-light-color;
+
+  svg use {
+    fill: $cb-light-color;
   }
 
-  // Creates button classes from $dark-bg-colors map
-  @each $color-name, $color-value in $dark-bg-colors {
-    &.#{"" + $color-name} {
-      background-color: $color-value;
-      color: $white;
-      border-color: $color-value;
+  &:focus {
+    background-color: $white;
+    color: $cb-light-color;
+  }
 
-      &:hover {
-        background-color: darken($color-value, 5%);
-        color: $white;
-      }
+  &:hover {
+    background-color: $cb-light-color;
+    color: $white;
 
-      &:focus {
-        // background-color: darken($color-value, 10%);
-        outline: 5px auto lighten($color-value, 10%);
-      }
+    svg use {
+      fill: $white;
     }
   }
+
+  &:active {
+    background-color: darken($cb-light-color, 10%);
+  }
+}
+
+// Solid buttons
+@mixin custom-button-dark($cb-dark-color: $primary) {
+  background-color: $cb-dark-color;
+  border-color: $cb-dark-color;
+  color: $white;
+
+  svg use {
+    fill: $white;
+  }
+
+  &:focus {
+    background-color: $cb-dark-color;
+    color: $white;
+  }
+
+  &:hover {
+    background-color: darken($cb-dark-color, 5%);
+    color: $white;
+
+    svg use {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    background-color: darken($cb-dark-color, 10%);
+  }
+}
+
+button,
+.button {
+  @include custom-button-styles();
+  @include custom-button-light($cb-light-color: $primary);
 
   &.primary {
-    background-color: $primary;
-    color: #fff;
-
-    &:hover {
-      background-color: darken($primary, 5%);
-      color: #fff;
-    }
+    @include custom-button-dark($cb-dark-color: $primary);
   }
 
-  // Light background buttons
   &.secondary {
-    background-color: transparent;
-    border-color: $primary;
-    color: $primary;
-
-    &:focus {
-      background-color: transparent;
-      color: $primary; 
-    }
-
-    &:hover {
-      background-color: darken($primary, 5%);
-      color: #fff;
-    }
+    @include custom-button-light($cb-light-color: $primary);
   }
 
   &.tertiary {
-    background-color: transparent;
-    border-color: $steel;
-    color: $steel;
+    @include custom-button-light($cb-light-color: $steel);
+  }
 
-    &:hover {
-      background-color: $steel;
-      color: #fff;
-    }
+  &.deep {
+    @include custom-button-dark($cb-dark-color: $deep);
   }
 
   &.tint {
@@ -111,33 +102,23 @@ button,
 
     &:hover {
       background-color: $deep;
-      color: #fff;
+      color: $white;
     }
   }
 
   &.blank {
-    background-color: #fff;
+    background-color: $white;
     color: $primary;
 
     &:hover {
-      color: #fff;
       background-color: darken($primary, 5%);
+      color: $white;
     }
   }
 
   // Primary button with white background
   &.ghost-white {
-    background-color: #fff;
-    color: $primary;
-
-    &:hover {
-      background-color: $primary;
-      color: #fff;
-    }
-
-    &:active {
-      background-color: $dark;
-    }
+    @extend .secondary;
   }
 
   // Larger button styles
@@ -230,7 +211,6 @@ button,
       fill: $primary
     }
 
-    // &:hover,
     &:focus {
       box-shadow: 0 0 0 1px #fff, 0 0 3px 3px $attention-tint;
       color: $primary;
@@ -257,7 +237,6 @@ button,
       margin-right: rem-calc(65);
 
       .inline {
-        // @include translateY(-50%);
         transform: translateY(-50%);
         position: absolute;
         left: 3rem;
@@ -322,7 +301,8 @@ input[type="submit"] {
 
   @media #{$small-only} {
     @include button;
-    @include custom-button();
+    @include custom-button-styles();
+    @include custom-button-light($cb-light-color: $primary);
     display: block;
 
     &:hover,
