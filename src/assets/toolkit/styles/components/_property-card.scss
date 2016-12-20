@@ -6,7 +6,7 @@
   @include clearfix;
   font-size: .9rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 
   @media #{$medium-up} {
     @include scut-margin(0 auto 4rem);
@@ -15,7 +15,7 @@
 
   @media #{$large-up} {
     @include grid-row();
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 
     .property-card_figure {
       @include grid-column(7);
@@ -184,7 +184,12 @@
   font-weight: $t-bold;
   letter-spacing: .2rem;
   margin-bottom: .5rem;
+  padding-top: .5rem;
   text-transform: uppercase;
+
+  @media #{$large-up} {
+    padding-top: 0;
+  }  
 }
 
 .property-card_subheader {
