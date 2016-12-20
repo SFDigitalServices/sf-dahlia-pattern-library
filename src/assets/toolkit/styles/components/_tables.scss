@@ -104,7 +104,7 @@ table {
 
   // Shorten table cell spacing
   &.td-small {
-    border-bottom: 1px solid $smoke;
+    // border-bottom: 1px solid $smoke;
 
     tr td {
       padding: .75rem;
@@ -172,8 +172,14 @@ table {
   }
 
   &.table-reserved {
+    border-bottom: 0;
+
     tbody {
       border-top: 0;
+    }
+
+    thead tr {
+      box-shadow: none;
     }
 
     caption {
@@ -190,10 +196,6 @@ table {
       &:nth-of-type(even) {
         background-color: $td-reserved-light;
       }
-    }
-
-    thead tr {
-      box-shadow: none;
     }
   }
 
