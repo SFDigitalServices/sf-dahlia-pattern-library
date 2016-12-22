@@ -10,7 +10,7 @@ title: Application
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
       {{> app-header }}
-      
+
       <form class="app-card form-card">
 
         <div class="app-inner leader border-bottom">
@@ -19,7 +19,7 @@ title: Application
 
           <div class="form-group text-center">
             <p class="t-small c-steel">We'll need at least one way to contact you after the application deadline.</p>
-         </div> 
+         </div>
         </div>
 
         <div class="app-inner inset border-bottom">
@@ -32,34 +32,34 @@ title: Application
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group has-option is-locked">
             <label class="form-label caps">Your email address {{> icons.base icon="lock" fill="primary"}}</label>
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
             {{> forms.input-email visibility="sr-only" readonly="readonly"}}
-            <small class="lock-note">Your email is editable via your account settings</small>
+            <small class="lock-note">Your email is editable via your <a class="lined" href="#">account settings</a></small>
             <div class="form-item">
               {{> forms.checkbox text="I don't have an email address"}}
             </div>
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group row has-option">
             <label class="form-label caps">Your address</label>
             <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
             {{> forms.input-address classes="expand" visibility="sr-only"}}
-            
+
             <div class="form-item padding-bottom">
               <div class="radio">
-                <input type="radio" name="groupName" id="radio1" /> 
+                <input type="radio" name="groupName" id="radio1" />
                 <label for="radio1">I don't have an address</label>
               </div>
             </div>
 
             <div class="form-item">
               <div class="radio">
-                <input type="radio" name="groupName" id="radio2" /> 
+                <input type="radio" name="groupName" id="radio2" />
                 <label for="radio2">I have a seperate mailing address</label>
               </div>
             </div>
@@ -72,14 +72,14 @@ title: Application
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group">
             <label class="form-label caps">What is your primary language?</label>
             {{> forms.select}}
           </div>
         </div>
 
-        <div class="app-inner inset">  
+        <div class="app-inner inset">
           <div class="form-group">
             <label class="form-label caps">Do you work in San Francisco?</label>
             <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>
