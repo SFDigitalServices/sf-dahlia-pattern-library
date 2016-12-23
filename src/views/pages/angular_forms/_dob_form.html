@@ -1,0 +1,22 @@
+<div class="form-group" ng-class="{ error: (inputInvalid('date_of_birth_day') || inputInvalid('date_of_birth_month') || inputInvalid('date_of_birth_year')) }">
+  <h3 class="form-label caps">Your Date of Birth</h3>
+  <div class="form-date-of-birth row collapse">
+    <div class="form-group-month large-2 columns">
+      <label class="sr-only" for="date_of_birth_month">Day</label>
+      <input aria-describedby="date_of_birth_error" autocomplete="off" class="no-margin" id="date_of_birth_month" maxlength="2" name="date_of_birth_month" ng-change="recheckDOB('applicant')" ng-class="{ error: inputInvalid('date_of_birth_month') }" ng-model="applicant.dob_month" ng-required="true" numeric-only="" pattern="\d*" placeholder="MM" type="text" ui-validate="'DOBValid(\'month\', $value)'">
+    </div>
+    <div class="form-group-day large-2 columns">
+      <label class="sr-only" for="date_of_birth_day">Month</label>
+      <input aria-describedby="date_of_birth_error" autocomplete="off" class="no-margin" id="date_of_birth_day" maxlength="2" name="date_of_birth_day" ng-change="recheckDOB('applicant')" ng-class="{ error: inputInvalid('date_of_birth_day') }" ng-model="applicant.dob_day" ng-required="true" numeric-only="" pattern="\d*" placeholder="DD" type="text" ui-validate="'DOBValid(\'day\', $value)'">
+    </div>
+    <div class="form-group-year large-2 columns end">
+      <label class="sr-only" for="date_of_birth_year">Year</label>
+      <input aria-describedby="date_of_birth_error" autocomplete="off" class="no-margin" id="date_of_birth_year" maxlength="4" name="date_of_birth_year" ng-change="recheckDOB('applicant')" ng-class="{ error: inputInvalid('date_of_birth_year') }" ng-model="applicant.dob_year" ng-required="true" numeric-only="" pattern="\d*" placeholder="YYYY" type="text" ui-validate="'DOBValid(\'year\', $value) && !primaryApplicantUnder18($value)'">
+    </div>
+  </div>
+
+  <small class="error" id="date_of_birth_error" ng-if="inputInvalid('date_of_birth_day') || inputInvalid('date_of_birth_month') || inputInvalid('date_of_birth_year')">
+    <span ng-if="!primaryApplicantUnder18()">Please enter a valid Date of Birth</span>
+    <span ng-if="primaryApplicantUnder18()">The primary applicant must be 18 years of age or older.</span>
+  </small>
+</div>

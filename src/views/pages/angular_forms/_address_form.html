@@ -1,0 +1,44 @@
+<div class="form-group row has-option" ng-class="{error: addressInputInvalid('home_address')}">
+  <label class="form-label caps">Address</label>
+  <p class="form-note margin-bottom ">
+    We need the address where you currently live.
+  </p>
+  <div class="form-address row expand ng-scope">
+    <div class="form-group-street form-item large-12 columns" ng-class="{ error: inputInvalid('address1', addressType) }">
+      <label class="sr-only ng-scope" for="applicant_home_address_address1">Street Address</label>
+      <input aria-describedby="applicant_home_address_address1_error" id="applicant_home_address_address1" name="home_address_address1" ng-class="{ error: inputInvalid('address1', addressType) }" ng-disabled="applicant.noAddress" ng-model="applicant[addressType].address1" ng-required="!applicant.noAddress" placeholder="Street Address" type="text">
+      <small class="error ng-hide" id="applicant_home_address_address1_error" ng-show="inputInvalid('address1', addressType)">Please enter an address</small>
+    </div>
+    <div class="form-group-apt large-12 column">
+      <label for="applicant_home_address_address2">Apt or Unit #</label>
+      <input id="applicant_home_address_address2" name="home_address_address2" ng-disabled="applicant.noAddress" ng-model="applicant[addressType].address2" placeholder="Apt or Unit #" type="text">
+    </div>
+    <div class="form-group-city form-item small-7 columns" ng-class="{ error: inputInvalid('city', addressType) }">
+      <label for="applicant_home_address_city">City Name</label>
+      <input aria-describedby="applicant_home_address_city_error" id="applicant_home_address_city" name="home_address_city" ng-class="{ error: inputInvalid('city', addressType) }" ng-disabled="applicant.noAddress" ng-model="applicant[addressType].city" ng-required="!applicant.noAddress" placeholder="City Name" type="text">
+      <small class="error  ng-hide" id="applicant_home_address_city_error" ng-show="inputInvalid('city', addressType)">Please enter a city</small>
+    </div>
+    <div class="form-group-state form-item small-5 columns" ng-class="{ error: inputInvalid('state', addressType) }">
+      <label for="applicant_home_address_state">State</label>
+      <select aria-describedby="applicant_home_address_state_error" data-width="auto" id="applicant_home_address_state" name="home_address_state" ng-class="{ error: inputInvalid('state', addressType) }" ng-disabled="applicant.noAddress" ng-model="applicant[addressType].state" ng-required="!applicant.noAddress">
+        <option value="">
+          {{default placeholder 'Select one'}}
+        </option>
+        {{#each inputs.states}}
+          <option value="{{attr name}}">{{name}}</option>
+        {{/each}}
+      </select>
+      <small class="error  ng-hide" id="applicant_home_address_state_error" ng-show="inputInvalid('state', addressType)">Please enter a state</small>
+    </div>
+    <div class="form-group-zip form-item small-12 columns" ng-class="{ error: inputInvalid('zip', addressType) }">
+      <label for="applicant_home_address_zip">Zip</label><input aria-describedby="applicant_home_address_zip_error" id="applicant_home_address_zip" name="home_address_zip" ng-class="{ error: inputInvalid('zip', addressType) }" ng-disabled="applicant.noAddress" ng-model="applicant[addressType].zip" ng-required="!applicant.noAddress" placeholder="Zipcode" type="text" ui-mask="99999" ui-mask-placeholder="">
+      <small class="error" id="applicant_home_address_zip_error" ng-show="inputInvalid('zip', addressType)">Please enter a zipcode</small>
+    </div>
+  </div>
+  <div class="form-item padding-bottom">
+    <div class="checkbox">
+      <input data-event="gtm-applicant-no-address" id="applicant_no_address" name="no_address" ng-change="applicant.hasAltMailingAddress = false;" ng-disabled="validMailingAddress() && !applicant.noAddress || addressFailedValidation('home_address') || applicant.hasAltMailingAddress" ng-model="applicant.noAddress" type="checkbox">
+      <label for="applicant_no_address">I don't have an address</label>
+    </div>
+  </div>
+</div>

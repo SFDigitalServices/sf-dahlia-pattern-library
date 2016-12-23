@@ -1,0 +1,8 @@
+<div class="form-group" ng-class="{ error: (inputInvalid('firstName')) }">
+  <h3 class="form-label caps ng-binding">Your Name</h3>
+  <label class="sr-only" for="applicantFirstName">First Name</label>
+  <input id="applicant_first_name" aria-describedby="applicant_first_name_error" name="firstName" ng-class="{ error: inputInvalid('firstName') }" ng-model="applicant.firstName" ng-required="true" placeholder="First Name" type="text" />
+  <small class="error" id="applicant_first_name_error" ng-if="inputInvalid('firstName')">
+    Please enter a First Name
+  </small>
+</div>

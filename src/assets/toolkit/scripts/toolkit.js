@@ -73,9 +73,12 @@ $(document).ready(function () {
 //
 //
 
-// Angular (Loaded from node_modules)
+// Angular + npm packages (Loaded from node_modules)
 require('angular/angular.js');
+require('angular-aria/angular-aria.js');
+require('angular-ui-validate/dist/validate.js');
 require('angular-animate/angular-animate.js');
+require('lodash/lodash.js');
 
 // Angular Foundation Directives (Loaded from bower)
 require('../../vendor/angular-foundation/mm-foundation-tpls.min.js');
@@ -83,7 +86,15 @@ require('../../vendor/hammerjs/hammer.min.js'); // for touch interaction w/ angu
 require('../../vendor/lifely-angular-carousel/angular-carousel.js');
 //require('angular-pageslide-directive');
 
-angular.module('dahlia', ['mm.foundation', 'angular-carousel', 'ngAnimate'])
+angular.module('dahlia',
+  [
+    'mm.foundation',
+    'angular-carousel',
+    'ngAnimate',
+    'ngAria',
+    'ui.validate'
+  ]
+)
   .config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('{%');
     $interpolateProvider.endSymbol('%}');
@@ -147,7 +158,7 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel', 'ngAnimate'])
 
   }])
   .controller('AnimateController', ['$scope', function($scope) {
-    $scope.hidden = {};
+    $scope.hidden = {}
     $scope.isHidden = function(id) {
       return !! $scope.hidden[id]
     }
@@ -170,3 +181,6 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel', 'ngAnimate'])
       }
     }
   }])
+
+// include FormValidationController
+require('./form-validation-controller.js')

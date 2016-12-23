@@ -1,0 +1,37 @@
+---
+layout: angular
+title: Form Validation
+---
+
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<div class="app-container" ng-controller="FormValidationController">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      <form novalidate="" name="form.applicationForm" ng-submit="submitForm()">
+        <div class="app-card form-card">
+
+          <!-- 1. Single Input with inline error -->
+          <div class="app-inner inset border-bottom" ng-include="'_name_form.html'"></div>
+
+          <!-- 2. Multiple Inputs with inline error per field (address) -->
+          <div class="app-inner inset border-bottom" ng-include="'_address_form.html'"></div>
+
+          <!-- 3. Multiple inputs with single error for all inputs (date) -->
+          <div class="app-inner inset border-bottom" ng-include="'_dob_form.html'"></div>
+
+
+          <div class="button-pager">
+            <div class="button-pager_row primary">
+              <input class="button primary radius" id="submit" ng-disabled="isLoading()" type="submit" value="Submit">
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{> components.footer}}
