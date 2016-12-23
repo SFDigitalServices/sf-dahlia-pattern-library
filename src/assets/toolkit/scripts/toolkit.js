@@ -77,6 +77,7 @@ $(document).ready(function () {
 require('angular/angular.js');
 require('angular-aria/angular-aria.js');
 require('angular-ui-validate/dist/validate.js');
+require('ng-currency/dist/ng-currency.js');
 require('angular-animate/angular-animate.js');
 require('lodash/lodash.js');
 
@@ -92,7 +93,8 @@ angular.module('dahlia',
     'angular-carousel',
     'ngAnimate',
     'ngAria',
-    'ui.validate'
+    'ui.validate',
+    'ng-currency',
   ]
 )
   .config(function($interpolateProvider) {

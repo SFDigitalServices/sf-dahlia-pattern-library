@@ -71,6 +71,10 @@ angular.module('dahlia')
       },
       preferences: {
         dthp: true
+      },
+      householdIncome: {
+        incomeTotal: 25250,
+        incomeTimeframe: 'per_year'
       }
     }
     angular.copy(filled, $scope.applicant)
@@ -158,6 +162,7 @@ angular.module('dahlia')
   // --- </ end DOB checking functions
 
   $scope.checkboxesEmpty = function(field) {
+    // a way to ng-require that at least one option in a checkbox group is selected
     if (_.isEmpty($scope.applicant[field])) {
       return true
     }

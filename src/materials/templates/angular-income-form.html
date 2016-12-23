@@ -1,0 +1,23 @@
+<div class="form-group" ng-class="{ error: (inputInvalid('incomeTotal') || inputInvalid('incomeTimeframe')) }">
+  <label class="form-label margin-bottom--half">
+    What is your household total pre-tax income?
+  </label>
+  <div class="form-income">
+    <label class="sr-only" for="incomeTotal">Income</label>
+    <span class="label-dollar">$</span>
+    <input aria-describedby="incomeTotal_error" class="form-income_input" currency-symbol="" id="incomeTotal" name="incomeTotal" ng-change="invalidateIncomeForm()" ng-class="{ error: inputInvalid('incomeTotal') }" ng-currency="" ng-model="applicant.householdIncome.incomeTotal" ng-required="true" placeholder="Total all of your income sources" type="text">
+    <small class="error" id="incomeTotal_error" ng-show="inputInvalid('incomeTotal')">
+      Please enter an income amount
+    </small>
+  </div>
+  <div aria-label="Income" class="radio-group" ng-class="{ error: inputInvalid('incomeTimeframe') }" role="radiogroup">
+    <p class="radio-block">
+      <input id="per_month" name="incomeTimeframe" ng-model="applicant.householdIncome.incomeTimeframe" ng-required="true" type="radio" value="per_month">
+      <label class="radio-block_label" for="per_month">per month</label>
+    </p>
+    <p class="radio-block">
+      <input aria-describedby="per_year_error" id="per_year" name="incomeTimeframe" ng-click="invalidateIncomeForm()" ng-model="applicant.householdIncome.incomeTimeframe" ng-required="true" type="radio" value="per_year">
+      <label class="radio-block_label" for="per_year">per year</label>
+    </p><small class="error" id="per_year_error" ng-show="inputInvalid('incomeTimeframe')" aria-hidden="true">Please enter an income timeframe</small>
+  </div>
+</div>
