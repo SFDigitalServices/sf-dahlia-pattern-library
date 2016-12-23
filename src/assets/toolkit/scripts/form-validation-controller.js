@@ -7,6 +7,7 @@ angular.module('dahlia')
   $scope.applicant = {}
   $scope.form = {}
   $scope.addressType = 'home_address'
+  $scope.showAlert = false
 
   $scope.inputInvalid = function(fieldName, identifier) {
     var field, form
@@ -27,9 +28,9 @@ angular.module('dahlia')
   $scope.submitForm = function() {
     var form = $scope.form.applicationForm
     if (form.$valid) {
-      $scope.applicant = {}
-      form.$setPristine()
-      form.$setUntouched()
+      $scope.showAlert = false
+    } else {
+      $scope.showAlert = true
     }
   }
 
@@ -40,6 +41,40 @@ angular.module('dahlia')
     return $scope.inputInvalid('address1', identifier) || $scope.inputInvalid('city', identifier) || $scope.inputInvalid('state', identifier) || $scope.inputInvalid('zip', identifier)
   }
 
+  // helper functions
+  $scope.resetForm = function($ev) {
+    $scope.showAlert = false
+    if ($ev != null) $ev.preventDefault()
+    angular.copy({}, $scope.applicant)
+    var form = $scope.form.applicationForm
+    form.$setPristine()
+    form.$setUntouched()
+  }
+
+  $scope.fillForm = function($ev) {
+    if ($ev != null) $ev.preventDefault()
+    var filled = {
+      firstName: 'Jane',
+      home_address: {
+        address1: '123 Main St.',
+        city: 'San Francisco',
+        state: 'california',
+        zip: '94110'
+      },
+      dob_month: 5,
+      dob_day: 4,
+      dob_year: 1977,
+      workInSf: 'Yes',
+      referral: {
+        newspaper: true,
+        website: true
+      },
+      preferences: {
+        dthp: true
+      }
+    }
+    angular.copy(filled, $scope.applicant)
+  }
 
 
   // DOB checking functions ---->
@@ -122,4 +157,13 @@ angular.module('dahlia')
   }
   // --- </ end DOB checking functions
 
+  $scope.checkboxesEmpty = function(field) {
+    if (_.isEmpty($scope.applicant[field])) {
+      return true
+    }
+    if (_.some(_.values($scope.applicant[field]), function(x) { return x == true})) {
+      return false
+    }
+    return true
+  }
 }])

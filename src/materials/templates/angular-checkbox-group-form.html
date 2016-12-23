@@ -1,0 +1,17 @@
+<div class="form-group" ng-class="{error: inputInvalid('preferences')}">
+  <div class="checkbox-group" role="group">
+    <p class="checkbox-block">
+      <input ng-class="{error: inputInvalid('preferences')}" id="preferences-certOfPreference" name="preferences" ng-model="applicant.preferences.cop" ng-required="checkboxesEmpty('preferences')" type="checkbox">
+      <label class="checkbox-block_label" for="preferences-certOfPreference"><strong class="form-label caps">Certificate of Preference (COP)</strong>
+        <span class="checkbox-block_note">If you hold a Certificate of Preference (COP) from the former San Francisco Redevelopment Agency. COP holders were displaced by Agency action generally during the 1960s and 1970s.</span>
+      </label>
+    </p>
+    <p class="checkbox-block">
+      <input ng-class="{error: inputInvalid('preferences')}" id="preferences-displaced" name="preferences" ng-model="applicant.preferences.dthp" ng-required="checkboxesEmpty('preferences')" type="checkbox">
+       <label class="checkbox-block_label" for="preferences-displaced">
+         <strong class="form-label caps">Displaced Tenant Housing Preference (DTHP)</strong>
+         <span class="checkbox-block_note">If you hold a Displaced Tenant Housing Preference Certificate (DTHP). DTHP Certificate holders are people who have been evicted through either an Ellis Act Eviction or an Owner Move In Eviction in 2010 or later.</span>
+       </label>
+    </p>
+  </div>
+</div>

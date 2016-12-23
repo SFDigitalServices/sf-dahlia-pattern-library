@@ -1,0 +1,26 @@
+<div class="form-group" ng-class="{error: inputInvalid('referral')}">
+  <label class="form-label caps" id="referral_label">
+    How did you hear about this listing?
+  </label>
+  <div class="checkbox-group" role="group">
+    <div class="form-item padding-bottom" ng-class="{error: inputInvalid('referral')}">
+      <div class="checkbox">
+        <input aria-describedby="referral_error" id="referral_newspaper" name="referral" ng-model="applicant.referral.newspaper" type="checkbox" ng-required="checkboxesEmpty('referral')" ng-class="{error: inputInvalid('referral')}">
+        <label for="referral_newspaper">Newspaper</label>
+      </div>
+    </div>
+    <div class="form-item padding-bottom" ng-class="{error: inputInvalid('referral')}">
+      <div class="checkbox">
+        <input aria-describedby="referral_error" id="referral_website" name="referral" ng-model="applicant.referral.website" type="checkbox" ng-required="checkboxesEmpty('referral')" ng-class="{error: inputInvalid('referral')}">
+        <label for="referral_website">Website</label>
+      </div>
+    </div>
+    <div class="form-item padding-bottom" ng-class="{error: inputInvalid('referral')}">
+      <div class="checkbox">
+        <input aria-describedby="referral_error" id="referral_flyer" name="referral" ng-model="applicant.referral.flyer" type="checkbox" ng-required="checkboxesEmpty('referral')" ng-class="{error: inputInvalid('referral')}">
+        <label for="referral_flyer">Flyer</label>
+      </div>
+    </div>
+    <small class="error" id="referral_error" ng-show="inputInvalid('referral')" >This field is required.</small>
+  </div>
+</div>

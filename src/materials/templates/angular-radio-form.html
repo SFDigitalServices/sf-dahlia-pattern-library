@@ -1,0 +1,21 @@
+<div class="form-group" ng-class="{ error: inputInvalid('workInSf') }">
+  <label class="form-label caps">
+    Do you work in San Francisco?
+  </label>
+  <p class="form-note margin-bottom">
+    This means you currently work in San Francisco at least 75% of your working hours.
+  </p>
+  <div aria-label="Do you work in San Francisco?" class="radio-group-inline double" role="radiogroup">
+    <div class="radio-block margin-bottom" aria-describedby="workInSf_error">
+      <input aria-describedby="workInSf_error" id="workInSf_yes" name="workInSf" ng-class="{ error: inputInvalid('workInSf')}" ng-model="applicant.workInSf" ng-required="true" type="radio" value="Yes">
+      <label class="radio-block_label" for="workInSf_yes">Yes</label>
+    </div>
+    <div class="radio-block margin-bottom" aria-describedby="workInSf_error">
+      <input aria-describedby="workInSf_error" id="workInSf_no" name="workInSf" ng-class="{ error: inputInvalid('workInSf')}" ng-model="applicant.workInSf" ng-required="true" type="radio" value="No">
+      <label class="radio-block_label" for="workInSf_no">No</label>
+    </div>
+  </div>
+  <small class="error" id="workInSf_error" ng-show="inputInvalid('workInSf')">
+    This field is required.
+  </small>
+</div>
