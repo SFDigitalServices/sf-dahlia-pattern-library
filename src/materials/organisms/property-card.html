@@ -50,7 +50,7 @@
       <p class="property-card_subheader">Includes Priority Units for People with Visual and Hearing Impairments</p>
 
       {{#compare state '==' 'community' }}
-        {{> tables.table--range items=tables.minimum-range.units classes="table-reserved"}}
+        {{> tables.table--percent items=tables.minimum-range.units classes="table-reserved" reserved-caption="Reserved for Seniors 55+"}}
       {{else }}
         {{> tables.table--range items=tables.minimum-range.units }}
       {{/compare}}

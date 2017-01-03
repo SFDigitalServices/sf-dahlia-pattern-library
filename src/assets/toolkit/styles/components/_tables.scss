@@ -108,12 +108,20 @@ table {
 
     tr td {
       padding: .75rem;
+
+      &:first-child {
+        width: rem-calc(100);
+      }
     }
   }
 
   &.th-small {
-    th td {
-      padding: .75rem;
+    tr th {
+      padding: 1.5rem .75rem;
+
+      &:first-child {
+        width: rem-calc(100);
+      }
     }
   }
 
@@ -142,8 +150,10 @@ table {
 
   // removes header from table
   &.no-thead {
-    thead th {
+    thead {
       @include scut-hide-visually;
+      height: auto;
+      width: 100%;
     }
 
     tbody {
@@ -180,6 +190,7 @@ table {
 
     thead tr {
       box-shadow: none;
+      background-color: inherit;
     }
 
     caption {
