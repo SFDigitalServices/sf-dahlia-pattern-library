@@ -88,6 +88,29 @@ angular.module('dahlia', ['mm.foundation', 'angular-carousel', 'ngAnimate'])
     $interpolateProvider.startSymbol('{%');
     $interpolateProvider.endSymbol('%}');
   })
+  .controller('SharedController', function($scope) {
+    $scope.focusOnMainContent = function() {
+      var main;
+      main = angular.element(document.getElementById('main-content'));
+      if (!main) {
+        return;
+      }
+      return $scope.focusOnElement(main);
+    };
+    $scope.focusOnElement = function(el) {
+      el.attr('tabindex', -1);
+      el.on('blur focusout', function() {
+        return angular.element(this).removeAttr('tabindex');
+      });
+      el[0].focus();
+      return el[0].blur();
+    };
+    $scope.focusOnBody = function() {
+      var body;
+      body = angular.element(document.body);
+      return $scope.focusOnElement(body);
+    };
+  })
   .controller('AccordionSampleController', function($scope) {
     $scope.oneAtATime = true;
 

@@ -17,7 +17,7 @@
 
 </head>
 
-<body ng-app="dahlia" id="ng-app">
+<body ng-app="dahlia" id="ng-app" ng-controller="SharedController">
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N4J8N2"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -27,6 +27,10 @@
   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-N4J8N2');</script>
   <!-- End Google Tag Manager -->
+
+  <button class="button-link sr-only" ng-click="focusOnMainContent()">
+    Skip to main content
+  </button>
 
   {{> icons}}
 
