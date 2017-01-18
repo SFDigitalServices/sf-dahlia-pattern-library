@@ -268,7 +268,7 @@ $text-sizing: (
   overflow:hidden;
 
   &:focus {
-    // position:static; 
+    position:static;
     width:auto; 
     height:auto; 
   }
