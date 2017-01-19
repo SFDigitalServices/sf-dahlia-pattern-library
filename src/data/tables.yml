@@ -53,7 +53,7 @@ maximum:
       year: 60,550
     - size: 6
       month: 5,416
-      year: 65,000 
+      year: 65,000
 maximum-ami:
   households:
     - size: 1
@@ -90,24 +90,24 @@ minimum-flex:
 minimum-flex-reserved:
   - type: Studio
     income: <em>none</em>
-    rent: 30%<small>/income</small>
+    rent: 30%<small> income</small>
     availability: 1 <small>unit</small>
     reserved: true
     icon: star
   - type: Studio
     income: <em>none</em>
-    rent: 30%<small>/income</small>
+    rent: 30%<small> income</small>
     availability: <em>waitlist</em>
     reserved: true
     icon: star
   - type: Studio
     income: <em>none</em>
-    rent: 30%<small>/income</small>
+    rent: 30%<small> income</small>
     availability: 1 <small>unit</small>
     reserved: true
   - type: Studio
     income: $1,957<small>/month</small>
-    rent: 30%<small>/income</small>
+    rent: 30%<small> income</small>
     availability: 1 <small>unit</small>
     reserved: true
   - type: Studio
@@ -120,7 +120,7 @@ minimum-flex-reserved:
     availability: <em>waitlist</em>
   - type: 1 Bedroom
     income: $2,685<small>/month</small>
-    rent: 30%<small>/income</small>
+    rent: 30%<small> income</small>
     availability: 2 <small>units</small>
     reserved: true
 occupancy:
@@ -197,7 +197,7 @@ fees:
       amount: $40
       note: per applicant age 18 and over, due post lottery
     - type: Deposit
-      amount: $500 - 941 
+      amount: $500 - 941
       note: or one month's rent, may be higher for lower credit scores
     - type: Rental Late Fee
       amount: $50
@@ -225,4 +225,3 @@ fees:
       note: for each replacement
     - type: Utilities
       note: The building pays water, sewer and trash only. Tenants are responsible for all other utilities
-    

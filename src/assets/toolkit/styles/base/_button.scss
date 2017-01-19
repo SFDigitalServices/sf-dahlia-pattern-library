@@ -198,6 +198,15 @@ button,
     }
   }
 
+  &.skip-link {
+    &:focus {
+      @include absolute(0,null,null,0);
+      padding: .5rem;
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
   // Round icon button
   &.round-icon {
     border-radius: 50%;
