@@ -3,10 +3,11 @@ layout: angular
 title: Angular
 ---
 
+{{> headers.translate-header }}
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<div class="p-relative">
+<div class="p-relative" id="main-content">
   <section class="section-hero">
     <div class="accordion-offset accordion-offset--hero">
       {{> property-hero}}

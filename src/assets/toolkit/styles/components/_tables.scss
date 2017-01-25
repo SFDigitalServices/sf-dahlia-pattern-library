@@ -104,16 +104,24 @@ table {
 
   // Shorten table cell spacing
   &.td-small {
-    border-bottom: 1px solid $smoke;
+    // border-bottom: 1px solid $smoke;
 
     tr td {
       padding: .75rem;
+
+      &:first-child {
+        width: rem-calc(100);
+      }
     }
   }
 
   &.th-small {
-    th td {
-      padding: .75rem;
+    tr th {
+      padding: 1.5rem .75rem;
+
+      &:first-child {
+        width: rem-calc(100);
+      }
     }
   }
 
@@ -142,8 +150,10 @@ table {
 
   // removes header from table
   &.no-thead {
-    thead th {
+    thead {
       @include scut-hide-visually;
+      height: auto;
+      width: 100%;
     }
 
     tbody {
@@ -172,8 +182,15 @@ table {
   }
 
   &.table-reserved {
+    border-bottom: 0;
+
     tbody {
       border-top: 0;
+    }
+
+    thead tr {
+      box-shadow: none;
+      background-color: inherit;
     }
 
     caption {
@@ -190,10 +207,6 @@ table {
       &:nth-of-type(even) {
         background-color: $td-reserved-light;
       }
-    }
-
-    thead tr {
-      box-shadow: none;
     }
   }
 
