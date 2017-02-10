@@ -145,9 +145,7 @@ input[type="radio"]:disabled + label::before {
   &_more {
     @include responsive-text-size('micro');
     margin-top: 1rem;
-    strong {
-      margin-bottom: 0.5rem;
-    }
+    line-height: 1.4;
   }
 }
 

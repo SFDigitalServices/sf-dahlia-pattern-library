@@ -57,6 +57,13 @@ $(document).ready(function () {
     if ($(this).data('toggle') == 'bottom') {
       $(this).toggleClass('open-bottom')
     }
+    if ($(this).find('.toggler-text')) {
+      if ($(this).hasClass('open')) {
+        $(this).find('.toggler-text').text('read less')
+      } else {
+        $(this).find('.toggler-text').text('read less')
+      }
+    }
     $(".toggled").toggle(); /*shows or hides #box*/
   });
 
