@@ -53,7 +53,15 @@
   }
 
   a:link:after {
-    content: "(" attr(href) ")";
+    display: block;
+    text-transform: none;
+    font-size: 12px;
+    // add full URL in front of relative links like "/listings"
+    content: "https://housing.sfgov.org" attr(href);
+  }
+  a[href^="http"]:link:after {
+    // if link already starts with http, then just print that
+    content: attr(href);
   }
 
   .app-card_header,
@@ -79,6 +87,25 @@
   .property-hero_apply .label--flag {
     text-align: left;
     font-weight: bold;
+  }
+
+  .property-card_title.hide-for-medium-up {
+    display: none;
+  }
+
+  .property-card_figure {
+    text-align: left;
+    .property-card_overlay {
+      display: none;
+    }
+  }
+
+  .property-card_action {
+    display: none;
+  }
+
+  button.toggler {
+    display: none;
   }
 }
 
