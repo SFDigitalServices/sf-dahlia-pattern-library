@@ -37,7 +37,7 @@
   @media print {
     @include responsive-text-size('base');
   }
-}  
+}
 
 .app-inner {
   @include scut-padding(2rem);
@@ -47,19 +47,19 @@
   }
 
   &.leader {
-   @include scut-padding(1rem 2rem 0); 
+   @include scut-padding(1rem 2rem 0);
 
    @media #{$medium-up} {
     @include scut-padding(2rem 0 1rem);
     @include scut-margin(n 2rem);
-   } 
+   }
   }
 
   &.inset {
     @media #{$medium-up} {
       @include scut-padding(n 3rem);
       @include scut-margin(n 2rem);
-    }  
+    }
   }
 
   &.short {
@@ -75,7 +75,7 @@
 
   @media #{$medium-up} {
     border-top-left-radius: $form-card-radius;
-    border-top-right-radius: $form-card-radius; 
+    border-top-right-radius: $form-card-radius;
   }
 }
 
@@ -99,7 +99,7 @@
 .app-card_question {
   @include responsive-text-size('gamma');
   text-align: center;
-  
+
   @media #{$medium-up} {
     padding-top: 1rem;
   }
@@ -123,7 +123,7 @@
     border-bottom-left-radius: $form-card-radius;
     border-bottom-right-radius: $form-card-radius;
     overflow: hidden;
-  }  
+  }
 }
 
 // Application print exceptions
