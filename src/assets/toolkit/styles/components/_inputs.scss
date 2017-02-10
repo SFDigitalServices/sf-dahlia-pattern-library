@@ -135,10 +135,19 @@ input[type="radio"]:disabled + label::before {
   }
 
   &_note {
+    margin: 0 1rem 0 2.125rem;
+    color: $charcoal;
     @include responsive-text-size('tiny');
     @include type-weight('regular');
     display: inline-block;
     margin-top: .25rem;
+  }
+  &_more {
+    @include responsive-text-size('micro');
+    margin-top: 1rem;
+    strong {
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -160,7 +169,7 @@ input[type="radio"]:disabled + label::before {
   &.double {
     .radio-inline {
       width: 45%;
-    }  
+    }
   }
 }
 

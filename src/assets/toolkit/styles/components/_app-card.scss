@@ -67,6 +67,16 @@
   }
 }
 
+.leader-header {
+  @include scut-padding(1rem 2rem);
+  &.featured-leader {
+    background-color: $success-tint;
+    p {
+      color: $charcoal;
+    }
+  }
+}
+
 .app-card_header {
   @include scut-padding(1rem);
   background-color: $primary;

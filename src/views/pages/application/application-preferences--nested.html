@@ -27,18 +27,18 @@ title: Application
             <div class="checkbox-group">
               <div class="checkbox-block margin-bottom--2x" labelledby="special_programs_label">
                 <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
-                <label class="checkbox-block_label margin-bottom" for="preferences-displaced">
+                <label class="checkbox-block_label" for="preferences-displaced">
                   <strong class="form-label caps">Neighborhood Residence Housing Preference</strong>
-                  <span class="checkbox-block_note">At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project.</span>
                 </label>
+                <div class="checkbox-block_note">At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project.</div>
               </div>
 
               <div class="checkbox-block" labelledby="special_programs_label">
                 <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
-                <label class="checkbox-block_label margin-bottom" for="preferences-cop">
+                <label class="checkbox-block_label" for="preferences-cop">
                   <strong class="form-label caps">Live or Work in San Francisco Preference</strong>
-                  <span class="checkbox-block_note">At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.</span>
                 </label>
+                <div class="checkbox-block_note margin-bottom">At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.</div>
 
                 <div class="form-group input-inset padding-bottom-none">
                   <label class="form-label caps">Which preference option would you like to claim?</label>
@@ -64,8 +64,8 @@ title: Application
             </div>
           </div>
         </div>
-        
-        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
       </form>
     </div>
   </div>

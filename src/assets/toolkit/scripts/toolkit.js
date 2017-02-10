@@ -51,7 +51,12 @@ $(document).ready(function () {
       }
   });
 
-  $("body").on("click", ".toggler", function() {
+  $("body").on("click", ".toggler", function(e) {
+    e.preventDefault()
+    $(this).toggleClass('open')
+    if ($(this).data('toggle') == 'bottom') {
+      $(this).toggleClass('open-bottom')
+    }
     $(".toggled").toggle(); /*shows or hides #box*/
   });
 
