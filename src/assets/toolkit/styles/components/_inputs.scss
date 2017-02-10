@@ -139,6 +139,11 @@ input[type="radio"]:disabled + label::before {
     @include type-weight('regular');
     display: inline-block;
     margin-top: .25rem;
+    margin-left: 2.125rem !important;
+  }
+
+  .toggler {
+    margin-left: 2.125rem;
   }
 }
 
