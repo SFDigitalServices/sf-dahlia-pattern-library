@@ -1,6 +1,6 @@
 <div class="property-card {{ default classes ''}}">
   <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
-    <a href="#">{{default title 'Trinity Place Apartments'}}</a>
+    <a href="#/listings/trinity-place-apts">{{default title 'Trinity Place Apartments'}}</a>
   </h1>
 
   <figure class="property-card_figure">
@@ -15,7 +15,7 @@
       <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
     {{else compare state '==' 'matched' }}
       <span class="status-label label label--flag success">
-      {{> icons.base icon="check" fill="white"}}  
+      {{> icons.base icon="check" fill="white"}}
       Matched</span>
       <span class="application-label label label--flag primary">
       {{> icons.base icon="clock" fill="white"}}
@@ -43,6 +43,8 @@
       {{/if}}
     </figcaption>
   </figure>
+
+  <div class="print-only">Application Deadline: Nov 21, 2015 at 5PM</div>
 
   <div class="property-card_content">
     <div class="property-card_stats">
