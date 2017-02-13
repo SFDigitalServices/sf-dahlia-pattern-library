@@ -25,20 +25,12 @@ title: Application
         <div class="app-inner">
           <div class="form-group">
             <div class="checkbox-group">
-              <div class="checkbox-block margin-bottom--2x" labelledby="special_programs_label">
-                <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
-                <label class="checkbox-block_label margin-bottom" for="preferences-displaced">
-                  <strong class="form-label caps">Neighborhood Residence Housing Preference</strong>
-                  <span class="checkbox-block_note">At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project.</span>
-                </label>
+              <div class="margin-bottom--2x">
+              {{> forms.checkbox-block title="Neighborhood Residence Housing Preference" name="preferences" value="displaced" note="At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project."}}
               </div>
 
-              <div class="checkbox-block" labelledby="special_programs_label">
-                <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
-                <label class="checkbox-block_label margin-bottom" for="preferences-cop">
-                  <strong class="form-label caps">Live or Work in San Francisco Preference</strong>
-                  <span class="checkbox-block_note">At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.</span>
-                </label>
+              <div class="">
+                {{> forms.checkbox-block title="Live or Work in San Francisco Preference" name="preferences" value="displaced" note="At least one household member must live in San Francisco or work in San Francisco at least 75% of their working hours."}}
 
                 <div class="form-group input-inset padding-bottom-none">
                   <label class="form-label caps">Which preference option would you like to claim?</label>

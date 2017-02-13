@@ -1,0 +1,10 @@
+<p class="checkbox-block">
+  <input type="checkbox" name="{{name}}" value="{{name}}-{{value}}" id="{{name}}-{{value}}">
+  <label class="checkbox-block_label" for="{{name}}-{{value}}">
+    <strong class="form-label caps">{{title}}</strong>
+  </label>
+
+  {{#if note}}
+  <span class="checkbox-block_note">{{note}}</span>
+  {{/if}}
+</p>

@@ -48,6 +48,20 @@ label {
     }
   }
 
+  &.input-expand {
+    @include scut-margin(n -2rem -2rem -2.125rem);
+    @include scut-padding(n 2rem n 2.125rem);
+
+    @media #{$medium-up} {
+      @include scut-margin(n -2.125rem -2rem);
+      @include scut-padding(n 2.125rem n);
+    }
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
   &.has-edit {
     position: relative;
   }

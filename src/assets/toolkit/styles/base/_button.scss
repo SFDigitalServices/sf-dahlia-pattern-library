@@ -44,6 +44,18 @@ $button-radius: rem-calc(4);
   &:active {
     background-color: darken($cb-light-color, 10%);
   }
+
+  &.disabled {
+    background-color: $white;
+    border-color: $cb-light-color;
+    color: $cb-light-color;
+
+    &:hover, &:active, &:focus {
+      background-color: $white;
+      border-color: $cb-light-color;
+      color: $cb-light-color;
+    }
+  }
 }
 
 // Solid buttons
@@ -72,6 +84,18 @@ $button-radius: rem-calc(4);
 
   &:active {
     background-color: darken($cb-dark-color, 10%);
+  }
+
+  &.disabled {
+    background-color: $cb-dark-color;
+    border-color: $cb-dark-color;
+    color: $white;
+
+    &:hover, &:active, &:focus {
+      background-color: $cb-dark-color;
+      border-color: $cb-dark-color;
+      color: $white;
+    }
   }
 }
 
@@ -264,30 +288,40 @@ button,
     .ui-icon {
       margin-right: .625rem;
     }
+  }
 
+  &.has-icon--right {
+    padding-right: 2.5rem;
+
+    .ui-icon {
+      @include absolute(1.2em,1em,null,null);
+    }
+  }
+
+  &.has-icon,
+  &.has-icon--right {
     svg use {
       fill: $primary;
     }
 
     &.primary svg use {
-      fill: #fff;
+      fill: $white;
     }
 
     &:hover {
       svg use {
-        fill: #fff;
+        fill: $white;
       }
     }
-  }
 
-  &.has-icon--right {
-    padding-right: .925rem;
-
-    .ui-icon {
-      margin-right: 0;
-      margin-left: .625rem;
+    &.disabled {
+      &:hover {
+        svg use {
+          fill: $primary;
+        }
+      }  
     }
-  }
+  }  
 }
 
 // Adds radius to submits
