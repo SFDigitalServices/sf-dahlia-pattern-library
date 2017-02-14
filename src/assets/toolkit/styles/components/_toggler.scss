@@ -65,7 +65,9 @@
     display: inline-block;
     margin-top: 1rem;
     &-bottom {
-      margin-top: 0;
+      display: inline-block;
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
     }
 
     .ui-icon svg {

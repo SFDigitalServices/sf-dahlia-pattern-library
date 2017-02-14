@@ -53,18 +53,19 @@ $(document).ready(function () {
 
   $("body").on("click", ".toggler", function(e) {
     e.preventDefault()
-    $(this).toggleClass('open')
-    if ($(this).data('toggle') == 'bottom') {
-      $(this).toggleClass('open-bottom')
-    }
-    if ($(this).find('.toggler-text')) {
-      if ($(this).hasClass('open')) {
-        $(this).find('.toggler-text').text('read less')
+    var $el = $(this)
+    $el.toggleClass('open')
+    // if ($(this).data('toggle') == 'bottom') {
+    //   $(this).toggleClass('open-bottom')
+    // }
+    if ($el.find('.toggler-text')) {
+      if ($el.hasClass('open')) {
+        $el.find('.toggler-text').text('read more')
       } else {
-        $(this).find('.toggler-text').text('read less')
+        $el.find('.toggler-text').text('read less')
       }
     }
-    $(".toggled").toggle(); /*shows or hides #box*/
+    $el.next(".toggled").toggle(); /*shows or hides #box*/
   });
 
   $('body').addClass('js');

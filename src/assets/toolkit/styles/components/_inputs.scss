@@ -140,13 +140,10 @@ input[type="radio"]:disabled + label::before {
     @include responsive-text-size('tiny');
     @include type-weight('regular');
     display: inline-block;
-    margin-top: .25rem;
-    margin-left: 2.125rem !important;
   }
 
   &_more {
     @include responsive-text-size('micro');
-    margin-top: 1rem;
     line-height: 1.4;
   }
 }

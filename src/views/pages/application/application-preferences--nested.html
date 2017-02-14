@@ -30,7 +30,23 @@ title: Application
                 <label class="checkbox-block_label" for="preferences-displaced">
                   <strong class="form-label caps">Neighborhood Residence Housing Preference</strong>
                 </label>
-                <div class="checkbox-block_note">At least one household member must live within the same Supervisorial District are within a 1/2 mile buffer of the project.</div>
+                <div id="nrhp-description" class="checkbox-block_note">
+                  <p>
+                    You said someone in your household lives in the same neighborhood as this listing.
+                  </p>
+                  <a href="#" class="toggler toggle-more hide-for-print open open-bottom margin-top-none" data-toggle="bottom">
+                    <span class="toggler-text">read more</span>
+                    <span class="ui-icon ui-tiny i-primary">
+                      <svg>
+                        <use xlink:href="#i-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="checkbox-block_more toggled" style="display:none;">
+                    <strong>Neighborhood Resident Housing Preference</strong>
+                    means at least one household member lives within the same Supervisorial District or within a 1/2 mile buffer of the project.
+                  </p>
+                </div>
               </div>
 
               <div class="checkbox-block" labelledby="special_programs_label">
@@ -38,7 +54,21 @@ title: Application
                 <label class="checkbox-block_label" for="preferences-cop">
                   <strong class="form-label caps">Live or Work in San Francisco Preference</strong>
                 </label>
-                <div class="checkbox-block_note margin-bottom">At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.</div>
+
+                <div id="livework-description" class="checkbox-block_note">
+                  <a href="#" class="toggler toggle-more hide-for-print open open-bottom" data-toggle="bottom">
+                    <span class="toggler-text">read more</span>
+                    <span class="ui-icon ui-tiny i-primary">
+                      <svg>
+                        <use xlink:href="#i-arrow-down"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="checkbox-block_more toggled" style="display:none;">
+                    At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.
+                  </p>
+                </div>
+
 
                 <div class="form-group input-inset padding-bottom-none">
                   <label class="form-label caps">Which preference option would you like to claim?</label>
