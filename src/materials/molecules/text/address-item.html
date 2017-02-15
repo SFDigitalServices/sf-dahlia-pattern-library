@@ -1,0 +1,9 @@
+<div class="info-item border-bottom tall">
+  <p class="info-item_name">{{default name '4106 Terrace St'}}</p>
+  <p class="info-item_value">{{default value 'Laura Smith (You)'}}</p>
+  {{#if doc}}
+  <p class="info-item_doc">{{> icons.base icon='check' size='tiny' }} Copy or Lease</p>
+  <p class="info-item_doc">{{> icons.base icon='check' size='tiny' }}  Proof of Rent Payment</p>
+  {{/if}}
+  <a class="edit-link info-item_link" href="#">{{default link 'Edit'}}</a>
+</div>

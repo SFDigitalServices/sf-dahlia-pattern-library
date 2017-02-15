@@ -1,0 +1,47 @@
+---
+layout: center
+title: Application
+---
+
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <div class="form-back"><a href="#" class="lined margin-right">Back</a></div>
+          <h2 class="app-card_question">You qualify for this preference because you said your household is currently spending more than 50% of your income on rent.</h2>
+          <div class="form-group">
+            <p class="form-note margin-bottom">Just upload a copy of a valid lease and proof of rent payment for a higher ranking in the lottery.</p>
+          </div>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            <div class="checkbox-group">
+              <div class="">
+                {{> forms.checkbox-block title="Rent Burden Preference" name="preference" value="rent-burdened"}}
+
+                <div class="form-group input-inset">
+                  <p class="form-label caps">Upload Documents for Each Address</p>
+
+                  {{> text.address-item doc="true"}}
+                  {{> text.address-item link="Start Upload"}}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> components.footer}}

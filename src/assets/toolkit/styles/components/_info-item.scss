@@ -4,6 +4,7 @@
 
 .info-item {
   @include clearfix;
+  @include responsive-text-size('small');
   position: relative;
 
   &.tall {
@@ -34,7 +35,8 @@
 }
 
 .info-item_value,
-.info-item_note {
+.info-item_note,
+.info-item_doc {
   @include responsive-text-size('small');
   font-family: $sans-font-family;
   color: $steel;
@@ -48,6 +50,14 @@
     @include responsive-text-size('micro');
   }
 }
+
+.info-item_doc {
+  margin-bottom: 0;
+
+  .ui-icon {
+    margin-right: .25rem;
+  }
+}  
 
 .info-item_link {
   @include absolute(50%,1rem,null,null);
