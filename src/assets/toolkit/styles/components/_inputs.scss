@@ -134,12 +134,18 @@ input[type="radio"]:disabled + label::before {
     line-height: 1.2;
   }
 
-  &_note {
-    margin: 0 1rem 0 2.125rem;
+  &_note, &_note-inner {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
     color: $charcoal;
     @include responsive-text-size('tiny');
     @include type-weight('regular');
     display: inline-block;
+  }
+
+  &_note-inner {
+    margin: 0 1rem 0 2.125rem;
+    display: block;
   }
 
   &_more {
