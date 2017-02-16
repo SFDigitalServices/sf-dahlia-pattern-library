@@ -1,0 +1,17 @@
+<div class="alert-notice alert">
+  <p class="t-tiny c-alert margin-bottom">
+    {{default alert-text "Your household income is too low."}}
+  </p>
+
+  {{#if alert-text-alt}}
+  <p class="t-tiny c-alert margin-bottom">
+    {{default alert-text-alt "Your household income is too low."}}
+  </p>
+  {{/if}}
+
+  <p class="t-tiny c-steel margin-bottom">{{default text "Please edit your income if you believe you might have made a mistake. Be aware that if you falsify any information on your application you will be disqualified."}}</p>
+  <p class="t-tiny c-steel margin-bottom">{{default alt-text "If the information you entered is accurate, we encourage you to check back in the future of as more properties become available."}}</p>
+  {{#if link-text}}
+  <p class="t-tiny c-steel"><a class="lined" href="#">{{default link-text "Get Assistance"}}</a></p>
+  {{/if}}
+</div>
