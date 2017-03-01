@@ -70,7 +70,7 @@
 .leader-header {
   @include scut-padding(1rem 2rem);
   &.featured-leader {
-    background-color: $success-tint;
+    background-color: $success-light;
     p {
       color: $charcoal;
     }
