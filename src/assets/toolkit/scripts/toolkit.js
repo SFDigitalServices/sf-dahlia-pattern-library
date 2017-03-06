@@ -206,6 +206,22 @@ angular.module('dahlia',
       }
     }
   }])
+  .directive('ngModel', function() {
+    return {
+      link: function(scope, element, attrs) {
+        if (!scope.inputInvalid) {
+          return
+        }
+        element.attr('aria-invalid', scope.inputInvalid(attrs.name))
+        scope.$watch(function ngAriaInvalidWatch() {
+          return scope.inputInvalid(attrs.name)
+        }, function ngAriaInvalidReaction(newVal) {
+          element.attr('aria-invalid', newVal);
+        });
+      }
+    }
+  })
+
 
 // include FormValidationController
 require('./form-validation-controller.js')
