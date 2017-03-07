@@ -34,30 +34,31 @@ layout: angular
 <section class="results-section border-top border-bottom">
   <article class="row">
     <div class="large-12 columns">
-      {{> headers.status-header classes="has-button" status="closed" icon="result" title="Lottery Results" text="The remaining properties are no longer taking applications but can be used to check lottery results."}}
+      {{> headers.status-header classes="has-button" status="closed" icon="result" title="Recent Listings" button="Show Recent Listings (6)" text="The application deadline has passed on the following listings, but you can still get information on the lottery date and time, and check lottery results."}}
     </div>
   </article>
 
   <section class="toggled margin-top--2x" style="display: none">
-    <article class="row">
+     <article class="row">
       <div class="large-12 columns">
-        {{> property-card state="results" available="Open Waitlist"}}
+        {{> property-card state="closed" available="Open Waitlist"}}
       </div>
     </article>
 
     <div class="row">
       <div class="large-12 columns">
         <header class="results-section_divider">
-          <h3 class="results-section_subheader">Lottery Results Coming Soon</h3>
+          <h3 class="results-section_subheader">Lottery Results Available</h3>
         </header>
       </div>
     </div>
 
     <article class="row">
       <div class="large-12 columns">
-        {{> property-card state="closed" available="Open Waitlist"}}
+        {{> property-card state="results" available="Open Waitlist"}}
       </div>
     </article>
+   
   </section>
 </section>
 
