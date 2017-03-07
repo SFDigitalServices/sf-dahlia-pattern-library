@@ -10,13 +10,6 @@
 
 .custom-counter_item {
   margin-bottom: 3rem;
-}
-
-
-.custom-counter_item {
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 
   @media #{$medium-up} {
     counter-increment: step-counter;
@@ -33,6 +26,28 @@
       line-height: .85;
       font-family: $serif-font-family;
     }
+  }
+
+  &.small {
+    margin-bottom: 2.5rem;
+    counter-increment: step-counter;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    position: relative;
+
+    &::before {
+      @include absolute(0,null,null,-2rem);
+      content: counter(step-counter);
+      margin-right: 5px;
+      color: $primary;
+      font-size: rem-calc(30);
+      line-height: .75;
+      font-family: $serif-font-family;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 
