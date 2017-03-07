@@ -51,8 +51,21 @@ $(document).ready(function () {
       }
   });
 
-  $("body").on("click", ".toggler", function() {
-    $(".toggled").toggle(); /*shows or hides #box*/
+  $("body").on("click", ".toggler", function(e) {
+    e.preventDefault()
+    var $el = $(this)
+    $el.toggleClass('open')
+    // if ($(this).data('toggle') == 'bottom') {
+    //   $(this).toggleClass('open-bottom')
+    // }
+    if ($el.find('.toggler-text')) {
+      if ($el.hasClass('open')) {
+        $el.find('.toggler-text').text('read more')
+      } else {
+        $el.find('.toggler-text').text('read less')
+      }
+    }
+    $el.next(".toggled").toggle(); /*shows or hides #box*/
   });
 
   $('body').addClass('js');
