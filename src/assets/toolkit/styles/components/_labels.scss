@@ -21,11 +21,11 @@
     color: $oil;
 
     svg use {
-      fill: $primary !important;
+      fill: $charcoal !important;
     }
   }
 
-  // lighter background applied to alerts 
+  // lighter background applied to alerts
   &.alert-tint {
     background-color: $alert-tint;
     color: $oil;
