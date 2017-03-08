@@ -51,21 +51,24 @@ $(document).ready(function () {
       }
   });
 
-  $("body").on("click", ".toggler", function(e) {
+  $('body').on('click', '.toggler', function(e) {
     e.preventDefault()
     var $el = $(this)
-    $el.toggleClass('open')
-    // if ($(this).data('toggle') == 'bottom') {
-    //   $(this).toggleClass('open-bottom')
-    // }
-    if ($el.find('.toggler-text')) {
-      if ($el.hasClass('open')) {
-        $el.find('.toggler-text').text('read more')
-      } else {
-        $el.find('.toggler-text').text('read less')
+    // different behavior for "read more" links inside pref checkboxes
+    if ($el.parents('.checkbox-block_note-inner').length) {
+      $el.toggleClass('open')
+      if ($el.find('.toggler-text')) {
+        if (!$el.hasClass('open')) {
+          $el.find('.toggler-text').text('read more')
+        } else {
+          $el.find('.toggler-text').text('read less')
+        }
       }
+      $el.parents('.checkbox-block_note-inner').find('.toggled').toggle(); /*shows or hides #box*/
+    } else {
+      // default toggler behavior
+      $('.toggled').toggle(); /*shows or hides #box*/
     }
-    $el.next(".toggled").toggle(); /*shows or hides #box*/
   });
 
   $('body').addClass('js');
