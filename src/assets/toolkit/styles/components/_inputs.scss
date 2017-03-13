@@ -140,6 +140,7 @@ input[type="radio"]:disabled + label::before {
     color: $charcoal;
     @include responsive-text-size('tiny');
     @include type-weight('regular');
+    line-height: 1.35;
     display: inline-block;
   }
 
@@ -149,8 +150,8 @@ input[type="radio"]:disabled + label::before {
   }
 
   &_more {
-    @include responsive-text-size('micro');
-    line-height: 1.4;
+    @include responsive-text-size('tiny');
+    line-height: 1.35;
   }
 }
 
