@@ -1,0 +1,83 @@
+---
+layout: center
+title: Application
+---
+
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader">
+          <div class="form-back"><a href="#" class="lined margin-right">Back</a></div>
+        </div>
+        <div class="leader-header featured-leader border-bottom">
+          <h2 class="app-card_question">
+            Good news! You qualify for a higher ranking in the lottery.
+          </h2>
+          <div class="form-group">
+            <p class="form-note t-regular margin-bottom">
+              <strong>Your address</strong> qualifies you for a better ranking because you live so close to this listing.
+              <br><br>
+              Just upload valid proof of this address and <strong>we'll also give you Live in San Francisco Preference.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+
+            <p class="form-note margin-bottom">
+              Please select to get your lottery preference.
+            </p>
+
+            <div class="checkbox-group border-bottom margin-bottom--2x">
+              <div class="checkbox-block margin-bottom">
+                <input type="checkbox" name="preferences" value="nrhp-preference" id="nrhp-preference" aria-describedby="nrhp-description">
+                <label class="checkbox-block_label" for="nrhp-preference">
+                  <strong class="form-label caps">
+                    Live in the Neighborhood
+                  </strong>
+                  <p class="checkbox-block_note">
+                    You said someone in your household lives in the same neighborhood as this listing.
+                  </p>
+                </label>
+                <div id="nrhp-description" class="checkbox-block_note-inner">
+                  {{> text.more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+                  <p class="checkbox-block_more toggled" style="display:none;">
+                    <strong>Neighborhood Resident Housing Preference</strong>
+                    means at least one household member lives within the same Supervisorial District or within a 1/2 mile buffer of the project.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="checkbox-group">
+              <div class="checkbox-block margin-bottom--2x">
+                <input type="checkbox" name="preferences" value="nrhp-preference" id="nrhp-opt-out" aria-describedby="nrhp-description">
+                <label class="checkbox-block_label" for="nrhp-opt-out">
+                  <strong class="form-label">
+                    I don't want this lottery preference
+                  </strong>
+                  <p id="nrhp-description" class="checkbox-block_note">
+                    You'll still have the opportunity to claim other preferences that have less value.
+                  </p>
+                </label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> components.footer}}
