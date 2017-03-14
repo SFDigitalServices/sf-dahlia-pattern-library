@@ -24,8 +24,13 @@ title: Application
           <div class="form-group">
             <div class="checkbox-group">
               <div class="">
-                {{> forms.checkbox-block title="Rent Burden Preference" name="preference" value="rent-burdened"}}
+                {{> forms.checkbox-block title="Rent Burden Preference" name="preference" value="rent-burdened" note="Households who are currently spending more than 50% of your income on rent."}}
+                <!-- <div class="checkbox-block_note-inner">
+                  {{> text.more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
 
+                  <p class="checkbox-block_more toggled" style="display:none;">Households who are currently spending more than 50% of your income on rent.</p>
+                </div>
+ -->
                 <div class="form-group input-inset">
                   <p class="form-label caps">Upload Documents for Each Address</p>
 
