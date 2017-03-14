@@ -10,6 +10,7 @@ account:
   - name: Account Settings
     icon: settings
   - name: Sign Out
+
 mobile:
   - name: Browse Properties
     icon: browse
@@ -22,3 +23,27 @@ mobile:
   - name: Account Settings
     icon: settings
   - name: Sign Out
+
+shortform:
+  - name: You
+    active: true
+  - name: Household
+    disabled: true
+  - name: Preferences
+    disabled: true
+  - name: Income
+    disabled: true
+  - name: Review
+    disabled: true
+
+shortformes:
+  - name: "Tú"
+    active: true
+  - name: "Casa"
+    disabled: true
+  - name: "Preferencias"
+    disabled: true
+  - name: "Ingresos"
+    disabled: true
+  - name: "Revisión"
+    disabled: true

@@ -18,16 +18,15 @@ title: Application
         </h1>
 
         <figure class="property-card_figure radius">
-          <a class="property-card_overlay" href="/listings/id">
-            <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
-              Address:formattedAddress" role="link" >
+          <div class="property-card_overlay">
+            <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg">
 
             <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
-          </a>
+          </div>
 
           <figcaption class="property-card_info">
             <h1 class="property-card_title show-for-medium-up">
-              <a href="#">Trinity Place Apartments</a>
+              Trinity Place Apartments
             </h1>
             <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
           </figcaption>
@@ -35,8 +34,12 @@ title: Application
         </div>
       </form>
 
-      <div class="text-center padding">
-        {{> buttons.button text="Get Started" classes="expand-small primary"}}
+      <div class="text-center padding margin-top--2x">
+        <h3 class="h-caps t-base d-block">Choose your language</h3>
+        {{> buttons.button text="Begin" classes="secondary expand-small primary"}}
+        {{> buttons.button text="Empezar" classes="secondary expand-small primary"}}
+        {{> buttons.button text="開始" classes="t-ch secondary expand-small primary"}}
+        {{> buttons.button text="Magsimula" classes="secondary expand-small primary"}}
       </div>
 
     </div>

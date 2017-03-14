@@ -136,6 +136,14 @@
   }
 }
 
+.app-language {
+  @include clearfix;
+  
+  @media #{$medium-up} {
+    margin-bottom: 1rem;
+  }
+}
+
 // Application print exceptions
 @media print {
   .app-card_header,
