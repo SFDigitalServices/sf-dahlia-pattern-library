@@ -1,0 +1,36 @@
+// Content stat
+// Infostat
+
+.content-stat {
+  .content-stat-count {
+    @include responsive-text-size('small');
+    @include scut-margin(n rem-calc(11) n n);
+    color: $oil;
+    display: inline-block;
+    font-family: $alt-font-family;
+    font-weight: 700;
+    line-height: 2;
+    text-align: right;
+    width: rem-calc(28);
+  }
+
+  .content-stat-label {
+    @include responsive-text-size('small');
+    color: $oil;
+    font-family: $alt-font-family;
+    font-weight: normal;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+
+  &.emphasis {
+    .content-stat-count {
+      @include responsive-text-size('base');
+    }
+
+    .content-stat-label {
+      font-weight: 700;
+    }
+  }
+}
+
