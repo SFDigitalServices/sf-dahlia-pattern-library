@@ -1,6 +1,6 @@
 <div class="checkbox-group">
   {{#each items}}
-  <p class="checkbox-block">
+  <div class="checkbox-block margin-bottom--2x">
     <input type="checkbox" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
     <label class="checkbox-block_label" for="{{../name}}-{{value}}">
       <strong>{{name}}</strong>
@@ -9,9 +9,10 @@
     <span class="checkbox-block_note">{{note}}</span>
     {{/if}}
   </p>
+
   {{else}}
     {{#each inputs.preferences}}
-      <p class="checkbox-block">
+      <div class="checkbox-block margin-bottom--2x">
         <input type="checkbox" name="preferences" value="preferences-{{value}}" id="preferences-{{value}}">
         <label class="checkbox-block_label" for="preferences-{{value}}">
           <strong>{{name}}</strong>
@@ -23,4 +24,3 @@
     {{/each}}
   {{/each}}
 </div>
-

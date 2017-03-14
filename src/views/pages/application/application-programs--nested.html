@@ -20,14 +20,17 @@ title: Application
         <div class="app-inner">
           <div class="form-group">
             <div class="checkbox-group">
+
               <div class="">
                 {{> forms.checkbox-block title="Displaced Tenants Preference"name="preferences" value="displaced" note="Primarily households displaced by Ellis Act evictions as defined by The Ellis Act Displacement Emergency Assistance Ordinance passed into law on December 18, 2013. (Formerly Ellis Act Preference)"}}
+
 
                 <div class="form-group input-inset">
                   <label class="form-label caps">Which household member has this preference?</label>
                   {{> forms.select}}
                 </div>
               </div>
+
               <div class="">
                 {{> forms.checkbox-block title="Certificate of Preference"name="preferences" value="displaced" note="Primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action."}}
 
@@ -35,8 +38,8 @@ title: Application
             </div>
           </div>
         </div>
-        
-        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
       </form>
     </div>
   </div>

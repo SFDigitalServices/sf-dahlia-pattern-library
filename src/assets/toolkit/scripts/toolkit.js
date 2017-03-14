@@ -51,8 +51,24 @@ $(document).ready(function () {
       }
   });
 
-  $("body").on("click", ".toggler", function() {
-    $(".toggled").toggle(); /*shows or hides #box*/
+  $('body').on('click', '.toggler', function(e) {
+    e.preventDefault()
+    var $el = $(this)
+    // different behavior for "read more" links inside pref checkboxes
+    if ($el.parents('.checkbox-block_note-inner').length) {
+      $el.toggleClass('open')
+      if ($el.find('.toggler-text')) {
+        if (!$el.hasClass('open')) {
+          $el.find('.toggler-text').text('read more')
+        } else {
+          $el.find('.toggler-text').text('read less')
+        }
+      }
+      $el.parents('.checkbox-block_note-inner').find('.toggled').toggle(); /*shows or hides #box*/
+    } else {
+      // default toggler behavior
+      $('.toggled').toggle(); /*shows or hides #box*/
+    }
   });
 
   $('body').addClass('js');
@@ -206,6 +222,22 @@ angular.module('dahlia',
       }
     }
   }])
+  .directive('ngModel', function() {
+    return {
+      link: function(scope, element, attrs) {
+        if (!scope.inputInvalid) {
+          return
+        }
+        element.attr('aria-invalid', scope.inputInvalid(attrs.name))
+        scope.$watch(function ngAriaInvalidWatch() {
+          return scope.inputInvalid(attrs.name)
+        }, function ngAriaInvalidReaction(newVal) {
+          element.attr('aria-invalid', newVal);
+        });
+      }
+    }
+  })
+
 
 // include FormValidationController
 require('./form-validation-controller.js')

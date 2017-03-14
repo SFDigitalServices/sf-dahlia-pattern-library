@@ -15,7 +15,6 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color: $snow;
-  // background-image: url('../images/arrow-down.png');
   background-image: none, url('../images/arrow-down.svg'), url('../images/arrow-down.png');
   background-position: right .75rem center;
   background-repeat: no-repeat;
@@ -29,7 +28,6 @@ select {
 
 input[type="checkbox"],
 input[type="radio"] {
-  // @include sr-only();
   opacity: 0;
   position: absolute;
   margin-left: -20px;
@@ -134,13 +132,15 @@ input[type="radio"]:disabled + label::before {
     line-height: 1.2;
   }
 
-  &_note {
+  &_note, &_note-inner {
     @include responsive-text-size('tiny');
     @include type-weight('regular');
+    color: $charcoal;
+    line-height: 1.4;
     display: inline-block;
     margin-top: .25rem;
-
     margin-left: 2.125rem;
+    margin-bottom: 0;
   }
 }
 
@@ -162,7 +162,7 @@ input[type="radio"]:disabled + label::before {
   &.double {
     .radio-inline {
       width: 45%;
-    }  
+    }
   }
 }
 

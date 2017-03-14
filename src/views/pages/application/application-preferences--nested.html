@@ -32,6 +32,14 @@ title: Application
               <div class="">
                 {{> forms.checkbox-block title="Live or Work in San Francisco Preference" name="preferences" value="displaced" note="At least one household member must live in San Francisco or work in San Francisco at least 75% of their working hours."}}
 
+                <div id="livework-description" class="checkbox-block_note-inner">
+                  {{> text.more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+
+                  <p class="checkbox-block_more toggled" style="display:none;">
+                    At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.
+                  </p>
+                </div>
+
                 <div class="form-group input-inset padding-bottom-none">
                   <label class="form-label caps">Which preference option would you like to claim?</label>
                   {{> forms.select name="live-work" options=inputs.live-work}}
@@ -56,8 +64,8 @@ title: Application
             </div>
           </div>
         </div>
-        
-        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
       </form>
     </div>
   </div>

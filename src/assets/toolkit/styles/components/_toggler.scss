@@ -10,7 +10,7 @@
 
     @media print {
       display: none;
-    }  
+    }
   }
 
   // open state on larger containers
@@ -64,9 +64,14 @@
   &.open {
     display: inline-block;
     margin-top: 1rem;
+    &-bottom {
+      display: inline-block;
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
 
     .ui-icon svg {
       transform: rotate(180deg);
     }
-  }   
+  }
 }
