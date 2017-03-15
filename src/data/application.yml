@@ -116,3 +116,57 @@ sections-general:
         value: "No"
       - name: Household Income
         value: $32,000 per year
+sections-preview:
+  - header: You
+    info-items:
+      - name: Name
+        value: Laura Smith
+      - name: Date of Birth
+        value: 12/02/1980
+      - name: Phone
+        value: 415-123-1234
+        note: Cell
+      - name: Additional Phone
+        value: 415-123-1234
+        note: Home
+      - name: Email
+        value: lara.smith@gmail.com
+      - name: Address
+        value: 649 Avalon St <br> San Francisco, CA 94117
+      - name: Mailing Address
+        value: 456 Mission St <br> San Francisco, CA 94117
+  - header: Alternate Contact
+    info-items:
+      - name: Name
+        value: Michael Smith
+        note: Counselor
+        secondary: MEDA
+      - name: Email
+        value: michael.smith@gmail.com
+      - name: Phone
+        value: 415-876-5432
+      - name: Mailing Address
+        value: 456 Mission St <br> San Francisco, CA 94117
+  - header: Household Members
+    info-items:
+      - name: Name
+        value: Michael Smith
+        note: Child
+      - name: Date of Birth
+        value: 12/2/1980
+      - divider: true
+      - name: Name
+        value: Michael Johnson
+        note: Family Member
+      - name: Date of Birth
+        value: 12/2/1970
+      - name: Address
+        value: 700 Avalon St <br> San Francisco, CA 94117
+  - header: Household Details
+    info-items:
+      - name: Seniors in Household
+        value: Yes
+      - name: Veterans in Household
+        value: Yes
+      - name: People with Developmental Disabilities
+        value: Yes
