@@ -1,6 +1,9 @@
 <ul class="lined-nav">
-  <li class="lined-nav_item"><a class="active" href="#">English</a></li>
-  <li class="lined-nav_item"><a href="#">Español</a></li>
-  <li class="lined-nav_item"><a class="t-ch" href="#">中文</a></li>
-  <li class="lined-nav_item"><a href="#">Filipino</a></li>
+  {{#each items}}
+  <li class="lined-nav_item{{#if active}} active{{/if}}"><a class="{{#if chinese}} t-ch{{/if}}" href="{{url}}">{{{name}}}</a></li>
+  {{else}}
+    {{#each menus.lang}}
+     <li class="lined-nav_item{{#if active}} active{{/if}}"><a class="{{#if chinese}} t-ch{{/if}}" href="{{url}}">{{name}}</a></li>
+    {{/each}}
+  {{/each}}
 </ul>

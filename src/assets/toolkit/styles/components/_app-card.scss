@@ -104,6 +104,10 @@
     @include scut-padding(1rem 0 1rem);
     background-color: $dust;
   }
+
+  &.t-ch .progress-nav_item {
+    @include responsive-text-size('base');
+  }
 }
 
 .app-card_question {

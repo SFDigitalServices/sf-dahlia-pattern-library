@@ -11,10 +11,10 @@ title: Application
     <div class="medium-6 medium-centered columns fixed-width">
       
       <div class="app-language">
-        {{> navigation.lined-nav}}
+        {{> navigation.lined-nav items=menus.lang-es}}
       </div>
 
-      {{> app-header items=menus.shortformes}}
+      {{> app-header items=menus.shortform-es}}
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
@@ -33,7 +33,7 @@ title: Application
           </div>
         </div>
 
-        {{> forms.button-pager left="Siguiente" l-classes="primary" right="Guardar y terminar más tarde" r-classes="button-link button-lined small-text-center expand-small"}}
+        {{> forms.link-pager left="Siguiente" l-classes="primary" right="Guardar y terminar más tarde" r-classes="button-link button-lined small-text-center expand-small" l-url="application-name--es.html"}}
 
       </form>
     </div>

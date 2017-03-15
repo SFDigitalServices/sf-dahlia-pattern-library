@@ -24,17 +24,17 @@
     border-bottom: 3px solid $ghost;
     display: inline-block;
 
-    &:focus {
-      border-bottom-color: $charcoal;
-    }
-
-    &:hover, &.active {
+    &:hover {
       border-bottom-color: $primary;
     }
 
     @media #{$medium-up} {
       @include responsive-text-size('small');
     }
+  }
+
+  &.active a {
+    border-bottom-color: $primary;
   }
 
   @media #{$small-only} {
