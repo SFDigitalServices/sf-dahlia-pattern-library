@@ -1,7 +1,9 @@
 <ol class="progress-nav">
-  <li class="progress-nav_item"><a href="#">You</a></li>
-  <li class="progress-nav_item"><a href="#">Household</a></li>
-  <li class="progress-nav_item active"><a href="#">Preferences</a></li>
-  <li class="progress-nav_item disabled"><a href="#">Income</a></li>
-  <li class="progress-nav_item disabled"><a href="#">Review</a></li>
+  {{#each items}}
+  <li class="progress-nav_item{{#if active}} active{{/if}}{{#if disabled}} disabled{{/if}}"><a href="#">{{name}}</a></li>
+  {{else}}
+    {{#each menus.shortform}}
+    <li class="progress-nav_item{{#if active}} active{{/if}}{{#if disabled}} disabled{{/if}}"><a href="#">{{name}}</a></li>
+    {{/each}}
+  {{/each}}
 </ol>
