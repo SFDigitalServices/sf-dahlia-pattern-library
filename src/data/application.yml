@@ -79,8 +79,8 @@ sections:
         value: Rent Burden Preference
         note: for 2106 Park Blvd
         secondary: Copy of Lease and Cancelled Check attached
-        note-2: 4106 Terrace St
-        secondary-2: Copy of Lease and Cancelled Check attached
+        note-2: for 4106 Terrace St
+        secondary-2: Copy of Lease and Money order attached
 
 sections-general:
   - header: You
