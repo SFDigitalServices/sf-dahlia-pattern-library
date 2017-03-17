@@ -212,15 +212,15 @@ $text-sizing: (
 }  
 
 .t-black {
-   @include type-weight(black);
+  @include type-weight(black);
 }
 
 .t-bold {
-   @include type-weight(bold);
+  @include type-weight(bold);
 }
 
 .t-semi {
-   @include type-weight(semi);
+  @include type-weight(semi);
 }
 
 .t-normal {
@@ -282,6 +282,14 @@ $text-sizing: (
 // Allow chinese characters to show by reverting to standard font
 .t-ch {
   font-family: $plain-font-family !important;
+}
+
+.t-zh {
+  font-family: $plain-font-family !important;
+
+  &, p, a {
+    @include responsive-text-size('base');
+  }
 }
 
 // Line break on small screens
