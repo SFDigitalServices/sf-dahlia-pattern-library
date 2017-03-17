@@ -6,7 +6,7 @@ title: Application
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-<section class="app-container t-ch">
+<section class="app-container t-zh">
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
       
@@ -14,9 +14,9 @@ title: Application
         {{> navigation.lined-nav items=menus.lang-zh}}
       </div>
 
-      {{> app-header items=menus.shortform-zh language="t-ch"}}
+      {{> app-header items=menus.shortform-zh}}
 
-      <form class="app-card form-card t-ch">
+      <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
           <h2 class="app-card_question t-ch">我們將開始獲取一些關於您的信息。首先，你叫什麼名字</h2>
         </div>
@@ -25,19 +25,19 @@ title: Application
 
         <div class="app-inner inset">
           <div class="form-group">
-            <h3 class="form-label caps t-ch">你的名字</h3>
+            <h3 class="form-label caps">你的名字</h3>
             {{> forms.text-input--base placeholder="First Name" label="First Name"}}
             {{> forms.text-input--base placeholder="Middle Name (可選的)" label="中間名字 (可選的)"}}
             {{> forms.text-input--base placeholder="Last Name" label="姓"}}
           </div>
 
           <div class="form-group">
-            <h3 class="form-label caps t-ch">您的出生日期</h3>
+            <h3 class="form-label caps">您的出生日期</h3>
             {{> forms.input-dob month="" day="" year=""}}
           </div>
         </div>
 
-        {{> forms.button-pager left="下一個" l-classes="primary t-ch" right="保存並稍後完成" r-classes="button-link button-lined small-text-center expand-small t-ch"}}
+        {{> forms.link-pager left="下一個" l-classes="primary" right="保存並稍後完成" r-classes="button-link button-lined small-text-center expand-small"}}
 
       </form>
     </div>

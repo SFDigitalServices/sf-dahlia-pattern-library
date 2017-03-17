@@ -285,10 +285,9 @@ $text-sizing: (
 }
 
 .t-zh {
-  font-family: $plain-font-family !important;
-
-  &, p, a {
+  &, p, a, button, ::placeholder, .form-label, {
     @include responsive-text-size('base');
+    font-family: $plain-font-family !important;
   }
 }
 
