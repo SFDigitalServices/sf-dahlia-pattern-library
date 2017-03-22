@@ -14,19 +14,16 @@ title: Application
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
           <div class="form-back"><a href="#" class="lined">Back</a></div>
-          <h2 class="app-card_question">Let’s move on to income.</h2>
+          <h2 class="app-card_question">Does anyone in your household receive any housing vouchers or rental subsidies?</h2>
 
           <div class="form-group">
-            <p class="form-note margin-bottom">Add up your total gross (pre-tax) household income from wages, benefits and other sources from all household members.</p>
-            <p class="form-note margin-bottom">You only need to provide an estimated total right now. The actual total will be calculated if you are selected in the lottery.</p>
+            <p class="form-note margin-bottom">For example: Section 8, VASH, HSA, HOPWA, Catholic Charities, AIDS Foundation, etc.</p>
           </div>
         </div>
         
         <div class="app-inner inset">
           <div class="form-group">
-            <label class="form-label caps">What is your household total pre-tax income?</label>
-            {{> forms.input-income}}
-            {{> forms.radio-group name="income" items=inputs.income}}
+            {{> forms.radio-group name="income" items=inputs.yesno}}
           </div>
         </div>
 
