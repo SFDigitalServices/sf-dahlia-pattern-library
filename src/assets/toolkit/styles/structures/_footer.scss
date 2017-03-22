@@ -44,6 +44,12 @@
   } 
 }
 
+.footer-sock {
+  @media #{$medium-up} {
+    line-height: rem-calc(42);
+  }
+}
+
 .footer-sole {
   @include responsive-text-size('tiny');
   @include type-weight(semi);
@@ -65,6 +71,13 @@
 
   svg {
     @include scut-margin(n .5em);
+  }
+
+  &.split {
+    @media #{$medium-up} {
+      text-align: left;
+      line-height: rem-calc(42);
+    }  
   }
 }
 
