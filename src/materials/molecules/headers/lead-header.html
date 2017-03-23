@@ -2,7 +2,12 @@
   <div class="row">
     <div class="large-12 columns">
       <hgroup class="lead-header_group">
-        <h1 class="lead-header_title t-beta c-{{default color 'oil'}}">{{default title 'Page Header'}}</h1>
+        <h1 class="lead-header_title c-{{default color 'oil'}}">{{default title 'Page Header'}}</h1>
+        {{#if description}}
+        <div class="medium-8 columns no-padding show-for-medium-up">
+          <p class="t-epsilon t-serif c-{{default color 'oil'}}">{{default description "Enter details about household size and income and we'll highlight properties you might be eligible for"}}</p>
+        </div>
+        {{/if}}
       </hgroup>
     </div>
   </div>
