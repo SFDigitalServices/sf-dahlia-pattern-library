@@ -6,7 +6,9 @@
       <strong class="form-label caps">{{name}}</strong>
     </label>
     {{#if note}}
-      <div class="checkbox-block_note">{{note}}</div>
+      <div class="checkbox-block_note-inner">
+        <div class="checkbox-block_note">{{note}}</div>
+      </div>
     {{/if}}
   </div>
   {{else}}
@@ -17,7 +19,9 @@
           <strong class="form-label caps">{{name}}</strong>
         </label>
         {{#if note}}
-          <div class="checkbox-block_note">{{note}}</div>
+          <div class="checkbox-block_note-inner">
+            <div class="checkbox-block_note">{{note}}</div>
+          </div>  
         {{/if}}
       </div>
     {{/each}}
