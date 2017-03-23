@@ -74,10 +74,22 @@
   }
 
   &.split {
+    text-align: center;
+
     @media #{$medium-up} {
       text-align: left;
       line-height: rem-calc(42);
-    }  
+    }
+
+    img {
+      margin-top: rem-calc(24);
+      float: none;
+      
+      @media #{$medium-up} {
+        margin-top: 0;
+        float: right;
+      }  
+    }
   }
 }
 
