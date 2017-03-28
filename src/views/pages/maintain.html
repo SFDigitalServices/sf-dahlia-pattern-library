@@ -1,0 +1,30 @@
+---
+layout: angular
+---
+{{> headers.translate-header }}
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<header class="lead-header bg-dust" id="main-content">
+  <div class="row">
+    <div class="medium-12 columns">
+
+      <div class="lead-header_group">
+        <h1 class="lead-header_title c-steel">We'll be right back</h1>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<section class="results-section border-top border-bottom">
+  <article class="row">
+    <div class="large-12 columns">
+      {{> headers.status-header classes="has-button" status="closed" icon="clock" title="Oops" button="Browse Listings" text="We are in the process of updating this page right now. Check back soon."}}
+    </div>
+  </article>
+
+</section>
+
+
+{{> components.footer}}
