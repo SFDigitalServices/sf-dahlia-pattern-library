@@ -29,7 +29,7 @@ $align-class-breakpoints:
   $xlarge-up,
   $xxlarge-only,
   $xxlarge-up;
-  
+
 // Generates text align and justify classes
 @mixin align-classes{
   .text-left    { text-align: left !important; }
@@ -209,7 +209,7 @@ $text-sizing: (
 
 .t-alt-sans {
   font-family: $alt-font-family !important;
-}  
+}
 
 .t-black {
    @include type-weight(black);
@@ -229,6 +229,10 @@ $text-sizing: (
 
 .t-light {
   @include type-weight(light);
+}
+
+.t-italic {
+  font-style: italic;
 }
 
 .t-caps {
@@ -260,17 +264,17 @@ $text-sizing: (
 }
 
 .sr-only {
-  position:absolute; 
-  left:-10000px; 
-  top:auto; 
-  width:1px; 
-  height:1px; 
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
   overflow:hidden;
 
   &:focus {
     position:static;
-    width:auto; 
-    height:auto; 
+    width:auto;
+    height:auto;
   }
 }
 
@@ -288,7 +292,7 @@ $text-sizing: (
 .br-small {
   @media #{$small-only} {
     display: block;
-  }  
+  }
 }
 
 // Various rule lines
@@ -338,4 +342,4 @@ hr {
 
 .h-caps {
   @include h-caps();
-}  
+}
