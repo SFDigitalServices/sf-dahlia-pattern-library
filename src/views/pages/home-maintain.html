@@ -1,0 +1,41 @@
+<section class="bg-dust">
+  <div class="row">
+    <div class="row">
+      <div class="small-6 medium-4 small-centered columns">
+      <img src="/assets/toolkit/images/logo-portal.png">
+      </div>
+    </div>
+    <header class="hero-header text-center">
+      <h1 class="hero-title">We'll be right back</h1>
+
+      <div class="row">
+        <div class="medium-9 medium-centered columns">
+          <p class="delta t-sans">We are in the process of updating the site right now. Check back soon.</p>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>  
+
+<section class="row p-relative">
+  <div class="medium-8 columns margin-top--2x">
+    <header class="content-stack_header padding-top--2x padding-bottom">
+      <h3 class="h-caps-lined">Rentals</h3>
+      <p class="t-base t-serif">Other rental housing funded by the City as well as lists developed each month by community nonprofit agencies.</p>
+    </header>
+
+    {{> components.content-grid items=resources.rentals }}
+
+    <header class="content-stack_header padding-top--2x padding-bottom">
+      <h3 class="h-caps-lined">Ownership</h3>
+      <p class="t-base t-serif">The following will show any available units for sale. They are priced at a “below market rate” and affordable to lower or middle income households.</p>
+    </header>
+
+    {{> components.content-grid items=resources.ownership }}
+    
+  </div>
+
+  <div class="medium-4 columns padding-top box-shadow full-height small-no-padding">
+    {{> components.aside-contact }}
+  </div>
+</section>
