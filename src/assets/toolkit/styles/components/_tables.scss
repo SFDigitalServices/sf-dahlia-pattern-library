@@ -22,12 +22,12 @@ table {
           font-size: 12px;
           padding-top: 5px;
           padding-bottom: 5px;
-        }  
+        }
       }
     }
-  }  
+  }
 
-  tbody { 
+  tbody {
     tr {
       td {
         font-weight: $table-value-weight;
@@ -60,7 +60,7 @@ table {
   }
 
   small {
-    font-weight: 400;  
+    font-weight: 400;
   }
 
   em {
@@ -99,8 +99,8 @@ table {
 
     tr td {
       border-bottom: 1px solid $smoke;
-    }  
-  }  
+    }
+  }
 
   // Shorten table cell spacing
   &.td-small {
@@ -145,7 +145,7 @@ table {
   &.td-light {
     tbody tr td {
       font-weight: normal;
-    }  
+    }
   }
 
   // removes header from table
@@ -170,7 +170,7 @@ table {
     tr th,
     tr td {
       text-align: center;
-      
+
       &:first-child {
         padding-left: 3rem;
       }
@@ -198,14 +198,17 @@ table {
       background-color: $td-reserved-light;
       box-shadow: $td-reserved-inset;
     }
-      
+
     tr {
       background-color: $white;
-      box-shadow: $td-reserved-inset;
       border-bottom: 0;
 
       &:nth-of-type(even) {
         background-color: $td-reserved-light;
+      }
+
+      td:first-of-type {
+        box-shadow: $td-reserved-inset;
       }
     }
   }
@@ -213,11 +216,14 @@ table {
   // Calling out reserved units
   tr.tr-reserved {
     background-color: $td-reserved-light;
-    box-shadow: $td-reserved-inset;
     border-bottom: 1px solid $white;
 
     &:nth-of-type(even) {
       background-color: $td-reserved-lighter;
+    }
+
+    td:first-of-type {
+      box-shadow: $td-reserved-inset;
     }
   }
 }
@@ -231,7 +237,7 @@ table {
     &:nth-of-type(even) {
       @media #{$small-only} {
         background: transparent;
-      }  
+      }
     }
 
     // support resverved unit tinting within flexible table
@@ -244,11 +250,11 @@ table {
           &:nth-of-type(even) {
             background-color: $td-reserved-lighter;
           }
-        }  
+        }
       }
     }
   }
-  
+
   td,
   tbody th {
     display: block;
@@ -301,12 +307,12 @@ table {
 
       // optional stuff to make it look nicer
       width: 8.5rem; // magic number :( adjust according to your own content
-      
+
       @media #{$small-only} {
         @include responsive-text-size('tiny');
         text-transform: uppercase;
         letter-spacing: $small-header-spacing;
-      }  
+      }
 
       @media #{$medium-up} {
         display: none;
@@ -314,16 +320,16 @@ table {
 
       @media print {
         display: none;
-      }  
+      }
     }
   }
 
   thead th {
-    @media #{$small-only} { 
-      @include sr-only();  
+    @media #{$small-only} {
+      @include sr-only();
     }
   }
-  
+
   th, td {
     @media #{$medium-up} {
       display: table-cell;
@@ -340,7 +346,7 @@ table {
 // .result-set {
 //   width: 100%;
 //   overflow: hidden;
-  
+
 //   li {
 //     overflow: hidden;
 //     padding: .5rem;
