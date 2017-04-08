@@ -4,12 +4,15 @@
 
 .property-card {
   @include clearfix;
+  border-bottom: 1px solid $smoke;
   font-size: .9rem;
   line-height: 1.5;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
 
   @media #{$medium-up} {
     @include scut-margin(0 auto 4rem);
+    border-bottom: none;
     max-width: rem-calc(640);
   }
 
@@ -54,6 +57,10 @@
         padding-right: 0;
       }
     }
+  }
+
+  &:last-of-type {
+    border-bottom: none;
   }
 }
 
@@ -134,14 +141,16 @@
 }
 
 .property-card_title {
-  @include responsive-text-size('delta');
+  @include responsive-text-size('gamma');
   font-family: $alt-font-family;
+  font-weight: $t-semi;
   letter-spacing: .2rem;
   text-transform: uppercase;
   margin-bottom: .5rem;
 
   @media #{$medium-up} {
     @include responsive-text-size('beta');
+    font-weight: $t-regular;
 
     a {
       color: #fff;
