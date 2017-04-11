@@ -4,12 +4,15 @@
 
 .property-card {
   @include clearfix;
+  border-bottom: 1px solid $smoke;
   font-size: .9rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
 
   @media #{$medium-up} {
     @include scut-margin(0 auto 4rem);
+    border-bottom: none;
     max-width: rem-calc(640);
   }
 
@@ -54,6 +57,20 @@
         padding-right: 0;
       }
     }
+  }
+
+  &:last-of-type, &.last {
+    border-bottom: none;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+  }
+
+  &:first-of-type, &.first {
+    margin-top: 1rem;
+
+    @media #{$medium-up} {
+      margin-top: 0;
+    }  
   }
 }
 
@@ -134,14 +151,16 @@
 }
 
 .property-card_title {
-  @include responsive-text-size('delta');
+  @include responsive-text-size('gamma');
   font-family: $alt-font-family;
+  font-weight: $t-semi;
   letter-spacing: .2rem;
   text-transform: uppercase;
   margin-bottom: .5rem;
 
   @media #{$medium-up} {
     @include responsive-text-size('beta');
+    font-weight: $t-regular;
 
     a {
       color: #fff;
