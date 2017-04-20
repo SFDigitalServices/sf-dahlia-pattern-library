@@ -139,8 +139,11 @@ input[type="radio"]:disabled + label::before {
     line-height: 1.4;
     display: inline-block;
     margin-top: .25rem;
-    margin-left: 2.125rem;
     margin-bottom: 0;
+  }
+
+  &_note-inner {
+    margin-left: 2.125rem;
   }
 }
 
