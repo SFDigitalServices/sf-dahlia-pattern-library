@@ -58,10 +58,6 @@ label {
     }
   }
 
-  &:last-of-type {
-    padding-bottom: 0;
-  }
-
   &.has-edit {
     position: relative;
   }
@@ -76,6 +72,12 @@ label {
 
   .editable {
     margin-right: 3rem;
+  }
+}
+
+.form-item {
+  &:last-of-type {
+    padding-bottom: 0;
   }
 }
 

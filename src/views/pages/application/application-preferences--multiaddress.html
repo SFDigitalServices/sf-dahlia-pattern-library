@@ -36,17 +36,18 @@ title: Application
 
                   {{> text.address-item doc="true"}}
                   {{> text.address-item link="Start Upload"}}
+                  {{> text.address-item error="true"}}
 
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
-        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}  
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
       </form>
     </div>
   </div>
 </section>
 
-{{> components.footer}}
+{{> footer}}

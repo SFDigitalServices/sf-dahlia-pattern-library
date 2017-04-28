@@ -11,6 +11,12 @@
     @include scut-padding(1rem n);
   }
 
+  &.error {
+    .info-item_name {
+      color: $alert;
+    }
+  }
+
   @media print {
     margin-bottom: 15px;
   }
@@ -23,6 +29,7 @@
   letter-spacing: $large-header-spacing;
   margin-bottom: 0;
   text-transform: uppercase;
+
 
   &.sentence {
     letter-spacing: normal;
@@ -54,10 +61,22 @@
 .info-item_doc {
   margin-bottom: 0;
 
+  svg use {
+    fill: $success;
+  }
+
+  &.error {
+    svg use {
+      fill: $alert;
+    }
+  }
+
+
+
   .ui-icon {
     margin-right: .25rem;
   }
-}  
+}
 
 .info-item_link {
   @include absolute(50%,1rem,null,null);
