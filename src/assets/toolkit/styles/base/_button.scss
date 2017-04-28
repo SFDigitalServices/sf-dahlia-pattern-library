@@ -116,6 +116,10 @@ button,
     @include custom-button-light($cb-light-color: $steel);
   }
 
+  &.alert, &.error {
+    @include custom-button-light($cb-light-color: $alert);
+  }
+
   &.deep {
     @include custom-button-dark($cb-dark-color: $deep);
   }
