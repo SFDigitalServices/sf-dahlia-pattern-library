@@ -3,24 +3,27 @@
   <div class="checkbox-block margin-bottom--2x">
     <input type="checkbox" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
     <label class="checkbox-block_label" for="{{../name}}-{{value}}">
-      <strong>{{name}}</strong>
+      <strong class="form-label caps">{{name}}</strong>
     </label>
     {{#if note}}
-    <span class="checkbox-block_note">{{note}}</span>
+      <div class="checkbox-block_note-inner">
+        <span class="checkbox-block_note">{{note}}</span>
+      </div>
     {{/if}}
-  </p>
-
+  </div>
   {{else}}
     {{#each inputs.preferences}}
       <div class="checkbox-block margin-bottom--2x">
         <input type="checkbox" name="preferences" value="preferences-{{value}}" id="preferences-{{value}}">
         <label class="checkbox-block_label" for="preferences-{{value}}">
-          <strong>{{name}}</strong>
+          <strong class="form-label caps">{{name}}</strong>
         </label>
         {{#if note}}
-        <span class="checkbox-block_note">{{note}}</span>
+          <div class="checkbox-block_note-inner">
+            <span class="checkbox-block_note">{{note}}</span>
+          </div>
         {{/if}}
-      </p>
+      </div>
     {{/each}}
   {{/each}}
 </div>
