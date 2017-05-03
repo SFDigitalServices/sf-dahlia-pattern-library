@@ -1,16 +1,15 @@
 <div class="property-card {{ default classes ''}}">
   <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
-    <a href="#/listings/trinity-place-apts">{{default title 'Trinity Place Apartments'}}</a>
+    <a href="#/listings/trinity-place-apts">{{default property-name 'Trinity Place Apartments'}}</a>
   </h1>
 
   <figure class="property-card_figure">
     <a class="property-card_overlay" href="/listings/id">
-      <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
+      <img class="property-card_thumb" src="{{default property-image '/assets/toolkit/images/property5.jpg'}}" alt="Listing Name:listing.Building_Name,
         Address:formattedAddress" role="link" >
 
     {{#compare state '==' 'closed' }}
-      <!-- <span class="status-label label label--flag">Lottery Results Posted: Feb 16th</span> -->
-      <span class="application-label label label--flag alert">Applications Closed: Jan 21st</span>
+      <span class="application-label label label--flag alert">Applications Closed: Mar 12th</span>
     {{else compare state '==' 'results' }}
       <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
     {{else compare state '==' 'matched' }}
@@ -19,32 +18,32 @@
       Matched</span>
       <span class="application-label label label--flag primary">
       {{> icons.base icon="clock" fill="white"}}
-      Application Deadline: Nov 21, 2015 at 5PM</span>
+      Application Deadline: Nov 21, 2017 at 5PM</span>
     {{else compare state '==' 'not-matched' }}
       <span class="status-label label label--flag">Not a Match</span>
       <span class="application-label label label--flag primary">
       {{> icons.base icon="clock" fill="white"}}
-      Application Deadline: Nov 21, 2015 at 5PM</span>
+      Application Deadline: Nov 21, 2017 at 5PM</span>
     {{else compare state '==' 'fave' }}
       <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
     {{else }}
-      <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
+      <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2017 at 5PM</span>
     {{/compare}}
 
     </a>
 
     <figcaption class="property-card_info">
       <h1 class="property-card_title show-for-medium-up">
-        <a href="#">Trinity Place Apartments</a>
+        <a href="#">{{default property-name 'Trinity Place Apartments'}}</a>
       </h1>
-      <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
+      <p class="property-card_address">{{default property-address '1188 Mission St'}}, <br class="show-for-small-only"> San Francisco CA, 94134</p>
       {{#if community-building}}
       <span class="label radius medium bg-splash">Senior Community Building</span>
       {{/if}}
     </figcaption>
   </figure>
 
-  <div class="print-only">Application Deadline: Nov 21, 2015 at 5PM</div>
+  <div class="print-only">Application Deadline: Nov 21, 2017 at 5PM</div>
 
   <div class="property-card_content">
     <div class="property-card_stats">
@@ -80,5 +79,4 @@
     </div>
 
   </div>
-
 </div>

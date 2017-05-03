@@ -1,0 +1,48 @@
+---
+layout: center
+title: Application
+---
+
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<section class="app-container t-zh">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      
+      <div class="app-language">
+        {{> navigation.lined-nav items=menus.lang-zh}}
+      </div>
+
+      {{> app-header items=menus.shortform-zh}}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question t-ch">我們將開始獲取一些關於您的信息。首先，你叫什麼名字</h2>
+        </div>
+
+<!--         {{> forms.alert-box text="These fields are editable via your account settings" status="primary" classes="no-icon"}} -->
+
+        <div class="app-inner inset">
+          <div class="form-group">
+            <h3 class="form-label caps">你的名字</h3>
+            {{> forms.text-input--base placeholder="名字" label="First Name"}}
+            {{> forms.text-input--base placeholder="中間名字 (可選的)" label="中間名字 (可選的)"}}
+            {{> forms.text-input--base placeholder="姓" label="姓"}}
+          </div>
+
+          <div class="form-group">
+            <h3 class="form-label caps">您的出生日期</h3>
+            <p class="form-note margin-bottom">例如: 四月 28, 1986 等於 04 28 1986</p>
+            {{> forms.input-dob month="MM月" day="DD日" year="YYYY年"}}
+          </div>
+        </div>
+
+        {{> forms.link-pager left="下一個" l-classes="primary" right="保存並稍後完成" r-classes="button-link button-lined small-text-center expand-small"}}
+
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> components.footer}}

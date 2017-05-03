@@ -105,6 +105,10 @@
     @include scut-padding(1rem 0 1rem);
     background-color: $dust;
   }
+
+  &.t-ch .progress-nav_item {
+    @include responsive-text-size('base');
+  }
 }
 
 .app-card_question {
@@ -134,6 +138,14 @@
     border-bottom-left-radius: $form-card-radius;
     border-bottom-right-radius: $form-card-radius;
     overflow: hidden;
+  }
+}
+
+.app-language {
+  @include clearfix;
+  
+  @media #{$medium-up} {
+    margin-bottom: 1rem;
   }
 }
 

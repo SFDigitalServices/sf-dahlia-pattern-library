@@ -39,8 +39,6 @@
 
 @import "vendors-extensions/all";
 
-@import "base/all";
-@import "structures/all";
-@import "components/all";
-
-@import "templates/all";
+@import "atoms/all";
+@import "molecules/all";
+@import "organisms/all";

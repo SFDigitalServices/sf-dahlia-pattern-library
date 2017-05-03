@@ -10,6 +10,7 @@ account:
   - name: Account Settings
     icon: settings
   - name: Sign Out
+
 mobile:
   - name: Browse Properties
     icon: browse
@@ -22,3 +23,76 @@ mobile:
   - name: Account Settings
     icon: settings
   - name: Sign Out
+
+shortform:
+  - name: You
+    active: true
+  - name: Household
+    disabled: true
+  - name: Preferences
+    disabled: true
+  - name: Income
+    disabled: true
+  - name: Review
+    disabled: true
+
+shortform-es:
+  - name: "Tú"
+    active: true
+  - name: "Casa"
+    disabled: true
+  - name: "Preferencias"
+    disabled: true
+  - name: "Ingresos"
+    disabled: true
+  - name: "Revisión"
+    disabled: true
+
+shortform-zh:
+  - name: "您"
+    active: true
+  - name: "家庭"
+    disabled: true
+  - name: "优先"
+    disabled: true
+  - name: "收入"
+    disabled: true
+  - name: "评论"
+    disabled: true
+
+lang:
+  - name: English
+    active: true
+    url: application-expect.html
+  - name: Español
+    url: application-expect--es.html
+  - name: '中文'
+    chinese: true
+    url: application-expect--zh.html
+  - name: Filipino
+    url: "#"
+
+lang-es:
+  - name: English
+    url: application-expect.html
+  - name: Español
+    url: application-expect--es.html
+    active: true
+  - name: '中文'
+    chinese: true
+    url: application-expect--zh.html
+  - name: Filipino
+    url: "#"
+
+lang-zh:
+  - name: English
+    url: application-expect.html
+  - name: Español
+    url: application-expect--es.html
+  - name: '中文'
+    active: true
+    chinese: true
+    url: application-expect--zh.html
+  - name: Filipino
+    url: "#"
+    disabled: true
