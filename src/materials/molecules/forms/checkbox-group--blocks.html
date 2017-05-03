@@ -1,27 +1,36 @@
 <div class="checkbox-group">
   {{#each items}}
   <div class="checkbox-block margin-bottom--2x">
-    <input type="checkbox" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
+    <input aria-describedby="description-{{value}}" type="checkbox" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
     <label class="checkbox-block_label" for="{{../name}}-{{value}}">
       <strong class="form-label caps">{{name}}</strong>
     </label>
     {{#if note}}
       <div class="checkbox-block_note-inner">
+<<<<<<< HEAD:src/materials/molecules/forms/checkbox-group--blocks.html
         <span class="checkbox-block_note">{{note}}</span>
+=======
+        <p class="checkbox-block_note" id="description-{{value}}">{{note}}</p>
+>>>>>>> css-atomic-refactor:src/materials/molecules/forms/checkbox-group--block.html
       </div>
     {{/if}}
   </div>
   {{else}}
     {{#each inputs.preferences}}
       <div class="checkbox-block margin-bottom--2x">
-        <input type="checkbox" name="preferences" value="preferences-{{value}}" id="preferences-{{value}}">
+        <input aria-describedby="description-{{value}}" type="checkbox" name="preferences" value="preferences-{{value}}" id="preferences-{{value}}">
         <label class="checkbox-block_label" for="preferences-{{value}}">
           <strong class="form-label caps">{{name}}</strong>
         </label>
         {{#if note}}
           <div class="checkbox-block_note-inner">
+<<<<<<< HEAD:src/materials/molecules/forms/checkbox-group--blocks.html
             <span class="checkbox-block_note">{{note}}</span>
           </div>
+=======
+            <p class="checkbox-block_note" id="description-{{value}}">{{note}}</p>
+          </div>  
+>>>>>>> css-atomic-refactor:src/materials/molecules/forms/checkbox-group--block.html
         {{/if}}
       </div>
     {{/each}}
