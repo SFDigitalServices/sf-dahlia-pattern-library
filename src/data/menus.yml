@@ -95,3 +95,4 @@ lang-zh:
     url: application-expect--zh.html
   - name: Filipino
     url: "#"
+    disabled: true

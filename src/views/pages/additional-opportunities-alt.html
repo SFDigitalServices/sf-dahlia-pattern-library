@@ -2,69 +2,23 @@
 {{> headers.version-header }}
 {{> navigation.top-bar }}
 
-{{> headers.lead-header--sub title="Additional Housing Opportunities" description="We encourage you to browse other affordable housing resources." background="image" color="white" classes="bg-gradient"}}
+{{> headers.lead-header title="Additional Housing Opportunities" description="We encourage you to browse other affordable housing resources." background="image" color="white" classes="bg-gradient"}}
 
 <section class="row p-relative">
   <div class="medium-8 columns margin-top--2x">
-    <header class="content-stack_header padding-top--2x padding-bottom">
+    <header class="content-grid_header padding-top--2x padding-bottom">
       <h3 class="h-caps-lined">Rentals</h3>
       <p class="t-base t-serif">Other rental housing funded by the City as well as lists developed each month by community nonprofit agencies.</p>
     </header>
 
-    <ul class="content-grid margin-bottom--2x">
-      <li class="content-item">
-        <div class="content-card bg-dust">
-          <h4 class="t-sans t-base t-bold margin-bottom--half">
-            <a href="#">City of SF Affordable</a>
-          </h4>
-          <p>Family Housing<br>
-          San Francisco</p>
-        </div>
-      </li>
-      <li class="content-item">
-        <div class="content-card bg-dust">
-          <h4 class="t-sans t-base t-bold margin-bottom--half">
-            <a href="#">City of SF Middle-Income</a>
-          </h4>
-          <p>Family Housing<br>
-          San Francisco</p>
-        </div>
-      </li>
-      <li class="content-item">
-        <div class="content-card bg-dust">
-          <h4 class="t-sans t-base t-bold margin-bottom--half">
-            <a href="#">Episcopal Community Services</a>
-          </h4>
-          <p>Individual and Family Housing <br>
-          San Francisco Bay Area</p>
-        </div>
-      </li>
-      <li class="content-item">
-        <div class="content-card bg-dust">
-          <h4 class="t-sans t-base t-bold margin-bottom--half">
-            <a href="#">Compass One Home</a>
-          </h4>
-          <p>Family Housing <br>
-          San Francisco Bay Area and Beyond</p>
-        </div>
-      </li>
-    </ul>
+    {{> components.content-grid items=resources.rentals}}
 
-    <header class="content-stack_header padding-top--2x padding-bottom">
+    <header class="content-grid_header padding-top--2x padding-bottom">
       <h3 class="h-caps-lined">Ownership</h3>
       <p class="t-base t-serif">The following will show any available units for sale. They are priced at a “below market rate” and affordable to lower or middle income households.</p>
     </header>
 
-    <ul class="content-grid padding-bottom--2x margin-bottom--2x">
-      <li class="content-item">
-        <div class="content-card bg-dust">
-          <h4 class="t-sans t-base t-bold margin-bottom--half">
-            <a href="#">Below Market Rate Ownership Units</a>
-          </h4>
-          <p>San Francisco Bay Area</p>
-        </div>
-      </li>
-    </ul>  
+    {{> components.content-grid items=resources.ownership }} 
   </div>
 
   <div class="medium-4 columns padding-top box-shadow full-height small-no-padding">
@@ -72,4 +26,4 @@
   </div>
 </section>
 
-{{> components.footer}}
+{{> footer}}

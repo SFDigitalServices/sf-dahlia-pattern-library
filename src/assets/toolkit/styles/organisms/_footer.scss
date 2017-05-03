@@ -44,6 +44,12 @@
   } 
 }
 
+.footer-sock {
+  @media #{$medium-up} {
+    line-height: rem-calc(42);
+  }
+}
+
 .footer-sole {
   @include responsive-text-size('tiny');
   @include type-weight(semi);
@@ -57,7 +63,7 @@
     text-align: left;
   }
 
-  a {
+  span a {
     color: $white;
     border-bottom: 1px dotted $monsoon;
     text-decoration: none;
@@ -65,6 +71,25 @@
 
   svg {
     @include scut-margin(n .5em);
+  }
+
+  &.split {
+    text-align: center;
+
+    @media #{$medium-up} {
+      text-align: left;
+      line-height: rem-calc(42);
+    }
+
+    img {
+      margin-top: rem-calc(24);
+      float: none;
+      
+      @media #{$medium-up} {
+        margin-top: 0;
+        float: right;
+      }  
+    }
   }
 }
 

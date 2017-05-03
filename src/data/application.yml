@@ -44,7 +44,29 @@ sections:
         value: 12/2/1970
       - name: Address
         value: 700 Avalon St <br> San Francisco, CA 94117
-  - header: Self Declared Status
+  - header: Household Details
+    info-items:
+      - name: Rent at 2106 Park Blvd
+        value: $1200 per month
+        note: for Michael Smith
+      - name: Rent at 4106 Terrace St
+        value: $1200 per month
+        note: for Jane Smith and Denise Jones
+      - name: Seniors in Household
+        value: Yes
+      - name: Veterans in Household
+        value: Yes
+      - name: People with Developmental Disabilities
+        value: Yes
+      - name: ADA Accessible Units
+        value: Mobility Impairments<br> Visual Impairments
+  - header: Income
+    info-items:
+      - name: Vouchers and Subsidies
+        value: Yes
+      - name: Household Income
+        value: $32,000 per year
+  - header: Preferences
     info-items:
       - name: You Have Claimed
         value: Certificate of Preference
@@ -53,12 +75,13 @@ sections:
         value: Neighborhood Resident Housing Preference
         note: for Michael Smith 
         secondary: Telephone Bill attached
-      - name: Vouchers and Subsidies
-        value: "No"
-  - header: Household Income
-    info-items:
-      - name: 
-        value: $32,000 per year
+      - name: You Have Claimed
+        value: Rent Burden Preference
+        note: for 2106 Park Blvd
+        secondary: Copy of Lease and Cancelled Check attached
+        note-2: for 4106 Terrace St
+        secondary-2: Copy of Lease and Money order attached
+
 sections-general:
   - header: You
     info-items:
@@ -116,6 +139,7 @@ sections-general:
         value: "No"
       - name: Household Income
         value: $32,000 per year
+
 sections-preview:
   - header: You
     info-items:

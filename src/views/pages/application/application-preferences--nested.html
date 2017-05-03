@@ -25,56 +25,59 @@ title: Application
         <div class="app-inner">
           <div class="form-group">
             <div class="checkbox-group">
-              <div class="checkbox-block margin-bottom--2x" labelledby="special_programs_label">
-                <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
-                <label class="checkbox-block_label" for="preferences-displaced">
-                  <strong class="form-label caps">Neighborhood Residence Housing Preference</strong>
-                  <p class="checkbox-block_note">
-                    You said someone in your household lives in the same neighborhood as this listing.
-                  </p>
-                </label>
-                <div id="nrhp-description" class="checkbox-block_note-inner">
-                  {{> text.more classes="open-bottom margin-top-none" icon="arrow-down" size="tiny" fill="primary"}}
-                  <p class="checkbox-block_more toggled" style="display:none;">
-                    <strong>Neighborhood Resident Housing Preference</strong>
-                    means at least one household member lives within the same Supervisorial District or within a 1/2 mile buffer of the project.
-                  </p>
+              <div class="">
+                <div class="checkbox-block margin-bottom--2x">
+                  <input aria-decribedby="description-nhrp" type="checkbox" name="preferences-nhrp" value="preferences-nhrp" id="preferences-nhrp">
+                  <label class="checkbox-block_label" for="preferences-displaced">
+                    <strong class="form-label caps">Neighborhood Residents Housing Preference</strong>
+                    <p class="checkbox-block_note">
+                      You said someone in your household lives in the same neighborhood as this listing.
+                    </p>
+                  </label>
+                  <div class="checkbox-block_note-inner">
+                    {{> text.more classes="open-bottom margin-top-none" icon="arrow-down" size="tiny" fill="primary"}}
+                    <p class="checkbox-block_more toggled" id="description-nhrp" style="display:none;">
+                      <strong>Neighborhood Resident Housing Preference</strong>
+                      means at least one household member lives within the same Supervisorial District or within a 1/2 mile buffer of the project.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="checkbox-block" labelledby="special_programs_label">
-                <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
-                <label class="checkbox-block_label" for="preferences-cop">
-                  <strong class="form-label caps">Live or Work in San Francisco Preference</strong>
-                </label>
+              <div class="">
+                <div class="checkbox-block" labelledby="special_programs_label">
+                  <input aria-decribedby="description-livework" type="checkbox" name="preferences-livework" value="preferences-livework" id="preferences-livework">
+                  <label class="checkbox-block_label" for="preferences-live">
+                    <strong class="form-label caps">Live or Work in San Francisco Preference</strong>
+                  </label>
 
-                <div id="livework-description" class="checkbox-block_note-inner">
-                  {{> text.more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+                  <div class="checkbox-block_note-inner">
+                    {{> text.more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
 
-                  <p class="checkbox-block_more toggled" style="display:none;">
-                    At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.
-                  </p>
-                </div>
+                    <p class="checkbox-block_more toggled" id="description-livework" style="display:none;">
+                      At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.
+                    </p>
+                  </div>
 
+                  <div class="form-group input-inset padding-bottom-none">
+                    <label class="form-label caps">Which preference option would you like to claim?</label>
+                    {{> forms.select name="live-work" options=inputs.live-work}}
+                  </div>
 
-                <div class="form-group input-inset padding-bottom-none">
-                  <label class="form-label caps">Which preference option would you like to claim?</label>
-                  {{> forms.select name="live-work" options=inputs.live-work}}
-                </div>
+                  <div class="form-group input-inset padding-bottom-none">
+                    <label class="form-label caps">Whose name is on the document you're uploading?</label>
+                    {{> forms.select}}
+                  </div>
 
-                <div class="form-group input-inset padding-bottom-none">
-                  <label class="form-label caps">Whose name is on the document you're uploading?</label>
-                  {{> forms.select}}
-                </div>
+                  <div class="form-group input-inset">
+                    <label class="form-label caps">Which one of the following documents would you like to upload in order to prove eligibility?</label>
+                    {{> forms.select name="proof" options=inputs.proof }}
 
-                <div class="form-group input-inset">
-                  <label class="form-label caps">Which one of the following documents would you like to upload in order to prove eligibility?</label>
-                  {{> forms.select name="proof" options=inputs.proof }}
-
-                  <div class="form-group text-center">
-                    {{> buttons.button text="Upload Proof of Preference"}}
-                    <p class="form-note micro input-inset margin-bottom">Please make sure the image is clear and you can read the address.</p>
-                    <p class="form-note micro input-inset">Max file size is 2MB. Supported file types: pdf, jpg, png</p>
+                    <div class="form-group text-center">
+                      {{> buttons.button text="Upload Proof of Preference"}}
+                      <p class="form-note micro input-inset margin-bottom">Please make sure the image is clear and you can read the address.</p>
+                      <p class="form-note micro input-inset">Max file size is 2MB. Supported file types: pdf, jpg, png</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -88,4 +91,4 @@ title: Application
   </div>
 </section>
 
-{{> components.footer}}
+{{> footer}}

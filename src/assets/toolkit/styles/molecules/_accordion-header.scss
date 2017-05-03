@@ -1,4 +1,7 @@
-// smaller screen listing accordion headers
+// Accordion headers
+// supports icons, stats (numbers) and toggle
+//
+
 accordion.has-icon,
 .page-accordion {
   .accordion dd > a {
@@ -39,7 +42,6 @@ accordion.has-toggle,
     }
   }
 }
-
 
 .accordion-name {
   @include responsive-text-size('small');

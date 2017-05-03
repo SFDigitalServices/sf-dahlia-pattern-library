@@ -1,0 +1,13 @@
+<div class="checkbox-block">
+  <input type="checkbox" name="{{name}}" value="{{name}}-{{value}}" id="{{name}}-{{value}}">
+  <label class="checkbox-block_label" for="{{name}}-{{value}}">
+    <strong class="form-label caps">{{title}}</strong>
+  </label>
+
+  {{#if note}}
+  <div class="checkbox-block_note-inner">
+    {{> text.more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+    <p class="checkbox-block_more">{{note}}</p>
+  </div>
+  {{/if}}
+</div>
