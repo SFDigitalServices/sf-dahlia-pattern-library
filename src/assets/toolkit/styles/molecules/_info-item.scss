@@ -4,10 +4,17 @@
 
 .info-item {
   @include clearfix;
+  @include responsive-text-size('small');
   position: relative;
 
   &.tall {
     @include scut-padding(1rem n);
+  }
+
+  &.error {
+    .info-item_name {
+      color: $alert;
+    }
   }
 
   @media print {
@@ -23,6 +30,7 @@
   margin-bottom: 0;
   text-transform: uppercase;
 
+
   &.sentence {
     letter-spacing: normal;
     text-transform: none;
@@ -34,7 +42,8 @@
 }
 
 .info-item_value,
-.info-item_note {
+.info-item_note,
+.info-item_doc {
   @include responsive-text-size('small');
   font-family: $sans-font-family;
   color: $steel;
@@ -46,6 +55,26 @@
 
   @media print {
     @include responsive-text-size('micro');
+  }
+}
+
+.info-item_doc {
+  margin-bottom: 0;
+
+  svg use {
+    fill: $success;
+  }
+
+  &.error {
+    svg use {
+      fill: $alert;
+    }
+  }
+
+
+
+  .ui-icon {
+    margin-right: .25rem;
   }
 }
 

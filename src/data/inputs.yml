@@ -184,6 +184,16 @@ proof:
     attr: three
   - name: Proof of SF Homelessness
     attr: three
+
+rent:
+  - name: Money Order
+    attr: one
+  - name: Cancelled Check
+    attr: two
+  - name: Debit from your Bank Account
+    attr: three
+  - name: Screenshot of Online Payment
+    attr: three
     
 yesno:
   - name: "Yes"
