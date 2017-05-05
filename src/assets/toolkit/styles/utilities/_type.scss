@@ -288,6 +288,11 @@ $text-sizing: (
   font-family: $plain-font-family !important;
 }
 
+.t-ch-button {
+  line-height: 1rem; 
+  vertical-align: top;
+}
+
 .t-zh {
   &, p, a, small, button, ::placeholder, .form-label, small.error {
     @include responsive-text-size('base');
