@@ -48,6 +48,11 @@
   @media #{$medium-up} {
     line-height: rem-calc(42);
   }
+
+  span {
+    line-height: 1.5rem;
+    display: inline-block;
+  }
 }
 
 .footer-sole {
