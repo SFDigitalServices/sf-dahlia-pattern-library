@@ -1,16 +1,16 @@
 {{#each lotteries.listings}}
-<article class="lottery-card card">
-  <section class="card-details">
-    <hgroup class="card-address">
-      <h3 class="card-title">{{name}}</h3>
+<article class="lottery-card">
+  <section class="lottery-card-details">
+    <hgroup class="lottery-card-address">
+      <h3 class="lottery-card-title">{{name}}</h3>
       <p>{{address}}</p>
     </hgroup>
   
-    <p class="card-units">{{units}}</p>
+    <p class="lottery-card-units">{{units}}</p>
     
-    <p class="card-number">Your lottery number is {{number}}</p>
+    <p class="lottery-card-number">Your lottery number is {{number}}</p>
     
-    <div class="card-group">
+    <div class="lottery-card-group">
       <div class="notice-container">
         <ul class="notice-timeline {{status-class}}">
           <li class="timeline-icon time-open">
@@ -49,9 +49,9 @@
       </div>
     </div>
 
-    <footer class="card-footer">
-      <a href="#" class="card-more left">{{> icons.base icon="arrow-down" size="tiny" fill="primary" position="link"}} Hide Lottery Status</a>
-      <span class="card-date right show-for-medium-up">Updated: {{updated}}</span>
+    <footer class="lottery-card-footer">
+      <a href="#" class="lottery-card-more left">{{> icons.base icon="arrow-down" size="tiny" fill="primary" position="link"}} Hide Lottery Status</a>
+      <span class="lottery-card-date right show-for-medium-up">Updated: {{updated}}</span>
     </footer>  
   </section>
 

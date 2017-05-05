@@ -1,42 +1,42 @@
-// Card object
+// Lottery card object
 // Flexible content container
 
-.card {
+.lottery-card {
   position: relative;
 }
 
 // card container
-.card-inner,
-.card-details {
+.lottery-card-inner,
+.lottery-card-details {
   padding: 1rem;
 }
 
-.card-address {
+.lottery-card-address {
   overflow: hidden;
 }
 
-.card-title {
+.lottery-card-title {
   margin-bottom: 0;
 }
 
-.card-group {
+.lottery-card-group {
   margin-bottom: 1rem;
 }
 
-.card-more {
+.lottery-card-more {
   @include responsive-text-size('small');
   display: inline-block;
 }
 
-.card-date {
+.lottery-card-date {
   @include responsive-text-size('small');
 }
 
-.card-footer {
+.lottery-card-footer {
   @include clearfix;
 }
 
-.card-link {
+.lottery-card-link {
   @include responsive-text-size('small');
   margin-right: 1rem;
 }
