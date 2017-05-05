@@ -139,7 +139,7 @@ input[type="radio"]:disabled + label::before {
     line-height: 1.4;
     display: inline-block;
     margin-top: .25rem;
-    margin-bottom: 0;
+    margin-bottom: .5rem;
   }
 
   &_note-inner {

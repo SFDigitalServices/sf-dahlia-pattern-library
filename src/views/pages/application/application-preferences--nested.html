@@ -70,8 +70,11 @@ title: Application
                   </div>
 
                   <div class="form-group input-inset">
-                    <label class="form-label caps">Which one of the following documents would you like to upload in order to prove eligibility?</label>
-                    {{> forms.select name="proof" options=inputs.proof }}
+                    <div class="form-group margin-bottom-none">
+                      <label class="form-label caps">Which one of the following documents would you like to upload in order to prove eligibility?</label>
+                      {{> forms.select name="proof" options=inputs.proof }}
+                      <p class="form-note margin-bottom">Letter must verify employment in San Francisco with at least 75% of working hours in the City.</p>
+                    </div>
 
                     <div class="form-group text-center">
                       {{> buttons.button text="Upload Proof of Preference"}}
