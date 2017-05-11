@@ -87,6 +87,11 @@ minimum-flex:
     income: $2,998<small>/month</small>
     rent: $1,199<small>/month</small>
     availability: 9 <small>units</small>
+minimum-sro:
+  - type: SRO
+    income: $1,356<small>/month</small>
+    rent: $678<small>/month</small>
+    availability: 12 <small>units</small>
 minimum-flex-reserved:
   - type: Studio
     income: <em>none</em>
