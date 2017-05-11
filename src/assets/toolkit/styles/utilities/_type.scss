@@ -294,7 +294,7 @@ $text-sizing: (
 }
 
 .t-zh {
-  &, p, a, small, button, ::placeholder, .form-label, small.error {
+  &, p, a, small, button, ::placeholder, .form-label, small.error, .button {
     @include responsive-text-size('base');
   }
 }
