@@ -115,3 +115,9 @@
   border-bottom-color: $tint;
   border-top-width: 0;
 }
+
+@mixin image-replace($imageURL) {
+  background: url($imageURL) no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+}

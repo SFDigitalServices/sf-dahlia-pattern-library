@@ -1,22 +1,20 @@
 // @import "app-header";
 @import "app-card"; // html
-@import "center-body"; // helpers
+@import "center-body"; // helpers. layout container
 // @import "content-panel...";
 // @import "content-section...";
 @import "dash-section"; // html
 @import "dash-card"; // html
 @import "footer";
-@import "event-feed"; // html
 @import "form-card"; // html
-@import "header"; // helpers
-@import "hero"; // html
-@import "lottery-card";
+@import "header"; // helpers. layout container
+@import "hero";
 @import "modal";
-@import "page-accordion"; // html?
+@import "page-accordion"; // html? depends on angular
 @import "page-content"; // helpers
-@import "page-tabs"; // html?
+@import "page-tabs"; // html? not currently implemented
 @import "pageslide";
 @import "property-card";
 @import "property-hero";
 @import "results"; // html
-@import "wide-right-column"; // helpers
+@import "wide-right-column"; // helpers. layout container
