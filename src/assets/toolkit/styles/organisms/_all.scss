@@ -9,10 +9,10 @@
 @import "form-card"; // html
 @import "header"; // helpers. layout container
 @import "hero";
-@import "modal";
-@import "page-accordion"; // html? depends on angular
+@import "modal"; // html. needs a trigger to launch
+@import "page-accordion"; // html. depends on angular
 @import "page-content"; // helpers
-@import "page-tabs"; // html? not currently implemented
+@import "page-tabs"; // not currently implemented
 @import "pageslide";
 @import "property-card";
 @import "property-hero";
