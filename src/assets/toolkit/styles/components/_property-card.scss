@@ -25,7 +25,7 @@
       width: 55%;
       padding: 0;
     }
-    
+
     .property-card_content {
       @include grid-column(5);
       width: 45%;
@@ -42,7 +42,7 @@
 
         .inline {
           display: none !important;
-        }  
+        }
       }
     }
 
@@ -59,7 +59,7 @@
     }
   }
 
-  &:last-of-type, &.last {
+  &.last {
     border-bottom: none;
     margin-bottom: 1rem;
     padding-bottom: 0;
@@ -70,7 +70,7 @@
 
     @media #{$medium-up} {
       margin-top: 0;
-    }  
+    }
   }
 }
 
@@ -95,7 +95,7 @@
 
   @media #{$medium-up} {
     background-color: $charcoal;
-  }  
+  }
 
   // Labels overlaying images
   .status-label {
@@ -103,7 +103,7 @@
 
     @media #{$medium-up} {
       @include absolute(.5rem,0,null,auto);
-    }  
+    }
   }
 
   .application-label {
@@ -118,7 +118,7 @@
 
 .property-card_stats {
   margin-bottom: 1.5rem;
-}  
+}
 
 .property-card_thumb {
   width: 100%;
@@ -179,21 +179,21 @@
   @media #{$small-only} {
     margin-top: .5rem;
     margin-bottom: 1rem;
-  }  
+  }
 
   @media #{$medium-up} {
     color: #fff;
   }
 }
 
-.property-card_action {    
+.property-card_action {
   button {
     margin-bottom: 0;
 
     @media #{$small-only} {
       margin-bottom: 1rem;
-    }  
-  } 
+    }
+  }
 }
 
 .property-card_label {
@@ -208,7 +208,7 @@
 
   @media #{$large-up} {
     padding-top: 0;
-  }  
+  }
 }
 
 .property-card_subheader {
