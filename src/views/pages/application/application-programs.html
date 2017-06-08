@@ -3,7 +3,7 @@ layout: center
 title: Application
 ---
 
-{{> headers.version-header }}
+{{> headers.version-bar }}
 {{> navigation.top-bar }}
 
 <section class="app-container">
@@ -19,7 +19,7 @@ title: Application
 
         <div class="app-inner">
           <div class="form-group">
-            {{> forms.checkbox-group--block name="preferences" items=inputs.preferences}}
+            {{> forms.checkbox-group--blocks name="preferences" items=inputs.preferences}}
           </div>
         </div>
         

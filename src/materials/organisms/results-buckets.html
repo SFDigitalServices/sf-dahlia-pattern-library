@@ -4,15 +4,7 @@
     <p class="t-small c-steel no-margin">Ranking in these lists is considered in the order shown here.</p>
   </header>
 
-  <section class="buckets">
-    {{#each lotteries.buckets}}
-    <div class="bucket">
-      <h3 class="bucket-title">{{this.name}}</h3>
-      <p class="bucket-subtitle">{{this.units}}</p>
-      <p class="t-tiny c-steel no-margin">{{this.applicants}}</p>
-    </div>
-    {{/each}}
-  </section>
+  {{> components.buckets }}
 
   <div class="modal-inner bg-dust">
     <div class="buckets-divider"></div>

@@ -3,7 +3,7 @@ layout: center
 title: Application
 ---
 
-{{> headers.version-header }}
+{{> headers.version-bar }}
 {{> navigation.top-bar }}
 
 <section class="app-container">
@@ -20,14 +20,14 @@ title: Application
         <div class="app-inner">
           <div class="form-group">
             <div class="checkbox-group">
-              <div class="" labelledby="special_programs_label">
+              <div class="">
                 <div class="checkbox-block">
-                  <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
+                  <input aria-decribedby="description-displaced" type="checkbox" name="preferences-displaced" value="preferences-displaced" id="preferences-displaced">
                   <label class="checkbox-block_label" for="preferences-displaced">
                     <strong class="form-label caps">Displaced Tenants Preference</strong>
                   </label>
                   <div class="checkbox-block_note-inner">
-                    <div class="checkbox-block_note margin-bottom">Primarily households displaced by Ellis Act evictions as defined by The Ellis Act Displacement Emergency Assistance Ordinance passed into law on December 18, 2013. (Formerly Ellis Act Preference)</div>
+                    <div class="checkbox-block_note margin-bottom" id="description-displaced">Primarily households displaced by Ellis Act evictions as defined by The Ellis Act Displacement Emergency Assistance Ordinance passed into law on December 18, 2013. (Formerly Ellis Act Preference)</div>
                   </div>  
                 </div>
 
@@ -36,6 +36,7 @@ title: Application
                   {{> forms.select}}
                 </div>
               </div>
+
               <div class="checkbox-block">
                 <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
                 <label class="checkbox-block_label" for="preferences-cop">
@@ -55,4 +56,4 @@ title: Application
   </div>
 </section>
 
-{{> footer-alt}}
+{{> footer}}

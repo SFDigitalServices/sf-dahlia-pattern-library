@@ -1,8 +1,8 @@
 ---
 layout: angular
 ---
-{{> headers.translate-header }}
-{{> headers.version-header }}
+{{> headers.translate-bar }}
+{{> headers.version-bar }}
 {{> navigation.top-bar }}
 
 <header class="lead-header bg-dust" id="main-content">
@@ -21,15 +21,7 @@ layout: angular
   </div>
 </header>
 
-<section class="results-section">
-  <div class="row">
-    <div class="large-12 columns">
-
-      {{> property-card available="Available Units" reserved-table="yes" reserved-caption="Reserved for Seniors 55+"}}
-      {{> property-card available="Open Waitlist" state="community" community-building="yes" has-caption="yes" caption="Reserved for Seniors 55+" reserved-table="yes" reserved-caption="Reserved for Seniors 55+ with Developmental Disabilities" }}
-    </div>
-  </div>
-</section>
+{{> results}}
 
 <section class="results-section border-top border-bottom">
   <article class="row">
@@ -59,7 +51,7 @@ layout: angular
         {{> property-card state="results" available="Open Waitlist"}}
       </div>
     </article>
-   
+
   </section>
 </section>
 

@@ -3,53 +3,13 @@ layout: center
 title: Center
 ---
 
-{{> headers.translate-header }}
-{{> headers.version-header }}
+{{> headers.translate-bar }}
+{{> headers.version-bar }}
 {{> navigation.top-bar--account }}
-  
+
 <div class="dash-container tall">
   <section class="row" data-equalizer>
-    <div class="dash-section">
-      <div class="dash-block">
-        <a href="#" class="dash-item" data-equalizer-watch>
-          <span class="header-badge">
-            {{> icons.base icon="application" }}
-          </span>
-          <h1 class="dash-name">My Applications</h1>
-          <p>See lottery dates and listings for properties for which you've applied</p>
-        </a>
-      </div>
-
-      <div class="dash-block">
-        <a href="#" class="dash-item" data-equalizer-watch>
-          <span class="header-badge">
-            {{> icons.base icon="favorite" }}
-          </span>
-          <h1 class="dash-name t-beta">My Favorites</h1>
-          <p>See properties you favorited in the past</p>
-        </a>
-      </div>
-
-      <div class="dash-block">
-        <a href="#" class="dash-item" data-equalizer-watch>
-          <span class="header-badge">
-            {{> icons.base icon="eligibility" }}
-          </span>
-          <h3 class="dash-name">Eligibility Settings</h3>
-          <p>Quickly search based on eligibility filters</p>
-        </a>
-      </div>
-
-      <div class="dash-block">
-        <a href="#" class="dash-item" data-equalizer-watch>
-          <span class="header-badge">
-            {{> icons.base icon="settings" }}
-          </span>
-          <h3 class="dash-name">Account Settings</h3>
-          <p>Account settings, email and password</p>
-        </a>
-      </div>
-    </div>
+    {{> dash-section }}
   </section>
 </div>
 

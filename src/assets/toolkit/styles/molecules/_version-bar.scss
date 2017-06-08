@@ -1,0 +1,7 @@
+.version-bar {
+  @include scut-padding(.5rem n);
+
+  @media #{$small-only} {
+    display: none;
+  }
+}

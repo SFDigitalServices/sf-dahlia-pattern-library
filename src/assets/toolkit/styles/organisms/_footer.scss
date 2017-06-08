@@ -1,0 +1,125 @@
+//
+// Footer
+
+.footer-section {
+  .city-logo {
+    max-width: rem-calc(120);
+  }
+
+  // Footer navigation
+  .inline-list {
+    overflow: visible;
+
+    a {
+      color: $aluminum;
+
+      &:focus {
+        color: $white;
+      }
+    }
+
+    @media #{$small-only} {
+      margin-top: 1rem;
+      margin-left: 0;
+
+       > li {
+        display: block;
+        float: none;
+        padding: 1rem;
+        margin-left: 0;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+       }
+    }
+
+    @media #{$medium-up} {
+      float: right;
+    }
+  }
+
+  @media print {
+    @include responsive-text-size('micro');
+  } 
+}
+
+.footer-sock {
+  @media #{$medium-up} {
+    line-height: rem-calc(42);
+  }
+
+  span {
+    line-height: 1.5rem;
+    display: inline-block;
+  }
+}
+
+.footer-sole {
+  @include responsive-text-size('tiny');
+  @include type-weight(semi);
+  @include scut-padding(1.25em);
+  background-color: $black;
+  color: $white;
+  letter-spacing: rem-calc(1);
+  text-align: center;
+
+  @media print {
+    text-align: left;
+  }
+
+  span a {
+    color: $white;
+    border-bottom: 1px dotted $monsoon;
+    text-decoration: none;
+  }
+
+  svg {
+    @include scut-margin(n .5em);
+  }
+
+  &.split {
+    text-align: center;
+
+    @media #{$medium-up} {
+      text-align: left;
+      line-height: rem-calc(42);
+    }
+
+    img {
+      margin-top: rem-calc(24);
+      float: none;
+      
+      @media #{$medium-up} {
+        margin-top: 0;
+        float: right;
+      }  
+    }
+  }
+}
+
+
+// Sticky footer
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: table;
+  width: 100%;
+}
+
+body.body-block {
+  display: block;
+}
+
+.site-container {
+  display: table-row;
+  height: 100%;
+}
+
+.footer-section {
+  display: table-row;
+  height: 1px;
+}

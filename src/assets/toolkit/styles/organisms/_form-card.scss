@@ -1,0 +1,87 @@
+//
+// Form card
+// Container for form elments
+
+.form-card {
+  background: #fff;
+  padding-top: 1rem;
+
+  @media #{$medium-up} {
+    border: 1px solid $smoke;
+    border-radius: $form-card-radius;
+    padding: $column-gutter/2;
+  }
+
+  // form card with sub-nav
+  &.has-nav {
+    padding-top: 0;
+
+    @media #{$medium-up} {
+      padding-top: 1rem
+    }
+
+    .sub-nav {
+      margin-top: 0;
+      margin-left: -1rem;
+      margin-right: -1rem;  
+    }
+  }
+
+  &.no-padding-top {
+    padding-top: 0;
+  }
+
+  &.app-card {
+    padding: 0;
+  }
+
+  .border-bottom {
+    border-color: $smoke;
+  }
+
+  .note {
+    p {
+      line-height: 1.625;
+    }
+  }
+
+  .form-section {
+    &.expand {
+      margin-left: -$column-gutter/2;
+      margin-right: -$column-gutter/2;
+    }
+  }
+}
+
+.form-card_header,
+.form-card_footer {
+  margin-left: -$column-gutter/2;
+  margin-right: -$column-gutter/2;
+}
+
+.form-card_header {
+  margin-top: -$column-gutter/2;
+
+  @media #{$medium-up} {
+    border-top-left-radius: $form-card-radius;
+    border-top-right-radius: $form-card-radius;  
+    overflow: hidden;
+  }
+
+  .alert-box {
+    margin-bottom: 0;
+  }
+}
+    
+.form-card_footer {
+  @media #{$medium-up} {
+    border-bottom-left-radius: $form-card-radius;
+    border-bottom-right-radius: $form-card-radius;
+    overflow: hidden;
+  } 
+}
+
+.form-radius {
+  border-radius: $form-card-radius;
+  overflow: hidden;
+}

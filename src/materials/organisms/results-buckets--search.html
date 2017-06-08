@@ -6,17 +6,5 @@
   
   {{> forms.alert-box status="primary" text="Please note, there are other preferences that will be considered for units first." icon="info" classes="no-margin no-close"}}
 
-  <section class="buckets">
-    {{#each lotteries.buckets}}
-    <div class="bucket has-stat">
-        <div class="bucket-stat">
-          <span class="bucket-stat_label">Rank</span>
-          <span class="bucket-stat_value">{{this.rank}}</span>
-        </div>
-        <h3 class="bucket-title">{{this.name}}</h3>
-        <p class="bucket-subtitle">{{this.units}}</span>
-        <p class="t-tiny c-steel no-margin">{{this.applicants}}</p>
-    </div>
-    {{/each}}
-  </section>
+  {{> components.buckets items=lotteries.buckets-stats }}
 </div>
