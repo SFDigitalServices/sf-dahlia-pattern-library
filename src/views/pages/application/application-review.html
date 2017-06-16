@@ -47,11 +47,15 @@ title: Center
         </div> 
         {{/each}}
 
-        <div class="padding--2x text-center hide-for-print">
+<!--         <div class="padding--2x text-center hide-for-print">
           <a class="t-small lined" href="#">Print a copy for your records</a>
+        </div> -->
+
+        <div class="app-inner text-center border-top">
+          <p class="t-small no-margin c-charcoal t-bold">This is your last chance to edit before submitting.</p>
         </div>
 
-        {{> forms.button-pager left="Confirm" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+        {{> forms.button-pager left="Confirm" l-classes="primary" right="Save draft and come back later" r-classes="secondary expand-small" r-row-classes="padding-top--2x padding-bottom--2x"}}
       </form>
 
     </div>

@@ -147,6 +147,17 @@ input[type="radio"]:disabled + label::before {
   }
 }
 
+.checkbox-inset {
+  input[type="checkbox"] + label {
+    color: $primary;
+    padding-left: 2rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    margin-left: -1.8rem;
+  }
+}
+
 .radio-group,
 .radio-group-inline {
   p {

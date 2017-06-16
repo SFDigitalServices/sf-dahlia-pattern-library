@@ -1,0 +1,30 @@
+---
+layout: center
+title: Center
+---
+
+{{> headers.version-bar }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> app-header }}
+
+<div class="app-card form-card ng-scope"><div><header class="app-inner leader border-bottom" ng-class="hasBorderBottom()"><!-- ngIf: showBackButton --><div class="form-back ng-scope" ng-if="showBackButton"><a class="lined ng-binding" ui-sref="dahlia.short-form-application.review-sign-in" href="/listings/a0W0P00000DZKPdUAP/apply/review-sign-in">Back</a></div><!-- end ngIf: showBackButton --><!-- ngIf: !featuredLeader --><ng-transclude ng-if="!featuredLeader" class="ng-scope"><!-- ngIf: accountSuccess.messages.login --><h2 class="app-card_question ng-binding ng-scope">Terms</h2></ng-transclude><!-- end ngIf: !featuredLeader --></header><!-- ngIf: featuredLeader --><div id="short-form-alerts"><alert-box address-error="addressError" custom-message="customInvalidMessage" preference-warning="preferenceCheckboxInvalid()" short-form="true" class="ng-isolate-scope"><div ng-show="showAlert()" aria-hidden="true" class="ng-hide"><div class="alert-box alert invert no-margin" ng-class="getStyles()" role="alert"><!-- ngIf: !primary --><span class="alert-icon ng-scope" ng-if="!primary"><span class="ui-icon ui-static ui-medium" ng-class="isIconInverted"><svg><use xlink:href="#i-warning" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span></span><!-- end ngIf: !primary --><button aria-label="Close Alert Box" class="button-link close" ng-click="close($event)">×</button><p class="alert-body ng-binding" ng-bind-html="alertText()">You'll need to resolve any errors before moving on.</p></div><div class="alert-notice alert ng-hide" ng-show="preferenceWarning" aria-hidden="true"><p class="alert-notice_title ng-scope" translate="ERROR.PLEASE_SELECT_PREFERENCE_CONTENT">We strongly encourage you to upload documents to claim the preference before submitting to have a better chance in the lottery.</p></div><div class="alert-notice alert ng-hide" ng-show="customSubMessage" aria-hidden="true"><p class="alert-notice_title ng-binding"></p></div><div class="alert-notice alert ng-hide" ng-show="eligibilityErrors &amp;&amp; eligibilityErrors.length" aria-hidden="true"><!-- ngRepeat: error in eligibilityErrors --><p class="t-tiny margin-bottom ng-scope" translate="ERROR.NOT_ELIGIBLE_DESCRIPTION">Please make changes if you believe you might have made a mistake. Be aware that if you falsify any information on your application you will be disqualified.<br><br>If the information you entered is accurate, we encourage you to check back in the future of as more properties become available.</p><p class="t-tiny c-alert margin-bottom"><a ui-sref="dahlia.additional-resources" class="ng-binding" href="/additional-resources">Get Assistance</a></p></div></div></alert-box><!-- ngIf: loggedIn() && loggedInMessage --><!-- ngIf: eligibilityErrors.length --></div></div><div class="app-inner"><p translate="F2_REVIEW_TERMS.P1" translate-value-date="Aug 31, 2017" class="ng-scope">This application must be submitted by Aug 31, 2017.</p><p translate="F2_REVIEW_TERMS.P2" class="ng-scope">Applicants will be contacted by the leasing agent in lottery rank and preference order until vacancies are filled.</p><p translate="F2_REVIEW_TERMS.P3" class="ng-scope">All of the information that you have provided will be verified and your eligibility confirmed.  Your application will be removed from the lottery if you have made any fraudulent statements, or if any household member appears on more than one application for this listing. If we cannot verify a housing lottery preference that you have claimed, you will not receive the preference but will not be otherwise penalized.</p><p translate="F2_REVIEW_TERMS.P4" class="ng-scope">Should your application be chosen from the lottery, be prepared to fill out a more detailed application and provide required supporting documents.  For more information, please contact the developer or leasing agent posted in the listing. Completing this lottery application does not entitle you to housing or indicate you are eligible for housing; all applicants will be screened as outlined in the property's Resident Selection Criteria.<br><br>You cannot change your online application after you submit.</p><p translate="F2_REVIEW_TERMS.P5" class="ng-scope">I declare that the foregoing is true and accurate, and acknowledge that any misstatement fraudulently or negligently made on this application will result in removal from the lottery.</p>
+
+<div class="form-item padding-bottom margin-top--2x" ng-class="{error: inputInvalid(name)}" error="You must agree to the terms in order to continue" is-required="true" label="I agree" name="terms" option="yes" user="applicant">
+
+<div class="checkbox checkbox-inset">
+
+<input aria-describedby="terms_yes_error" id="terms_yes" name="terms" type="checkbox" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" aria-invalid="false" required="required">
+
+<label for="terms_yes" class="ng-binding">I agree and understand that I cannot change anything after I submit.</label>
+
+</div>
+</div>
+</div>
+
+        {{> forms.button-pager left="Confirm" l-classes="primary" right="Save draft and come back later" r-classes="secondary expand-small" r-row-classes="padding-top--2x padding-bottom--2x"}}
+
+</div>
