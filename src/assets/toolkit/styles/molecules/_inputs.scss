@@ -111,6 +111,19 @@ input[type="radio"]:disabled + label::before {
   cursor: not-allowed;
 }
 
+// Checkbox with multiline label and offset
+.checkbox-inset {
+  input[type="checkbox"] + label {
+    color: $primary;
+    padding-left: 2rem;
+  }
+
+  input[type="checkbox"] + label::before {
+    margin-left: -1.8rem;
+  }
+}
+
+// Checkboxes and radios with all caps labels and nested elements
 .radio-block,
 .checkbox-block {
   position: relative;
@@ -147,17 +160,7 @@ input[type="radio"]:disabled + label::before {
   }
 }
 
-.checkbox-inset {
-  input[type="checkbox"] + label {
-    color: $primary;
-    padding-left: 2rem;
-  }
-
-  input[type="checkbox"] + label::before {
-    margin-left: -1.8rem;
-  }
-}
-
+// Inline radio buttons
 .radio-group,
 .radio-group-inline {
   p {
@@ -180,6 +183,7 @@ input[type="radio"]:disabled + label::before {
   }
 }
 
+// Helper class for Elements with nested radio buttons
 .has-radio {
   input {
     margin-bottom: 0 !important;
@@ -307,6 +311,7 @@ input[type="radio"]:disabled + label::before {
   }
 }
 
+// Radio buttons displayed as button group
 .segmented-radios {
   input[type=radio] {
    + label::before {
