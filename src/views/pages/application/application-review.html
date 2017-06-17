@@ -3,7 +3,7 @@ layout: center
 title: Center
 ---
 
-{{> headers.version-header }}
+{{> headers.version-bar }}
 {{> navigation.top-bar }}
 
 <section class="app-container">
@@ -33,6 +33,12 @@ title: Center
             {{#if secondary }}
             <span class="info-item_note t-bold">{{secondary}}</span>
             {{/if }}
+            {{#if note-2 }}
+            <span class="info-item_note">{{note-2}}</span>
+            {{/if }}
+            {{#if secondary-2 }}
+            <span class="info-item_note t-bold">{{secondary-2}}</span>
+            {{/if }}
           </div>
           {{#if divider }}
             <div class="border-top info-item_divider"></div>
@@ -41,11 +47,15 @@ title: Center
         </div> 
         {{/each}}
 
-        <div class="padding--2x text-center hide-for-print">
+<!--         <div class="padding--2x text-center hide-for-print">
           <a class="t-small lined" href="#">Print a copy for your records</a>
+        </div> -->
+
+        <div class="app-inner text-center border-top">
+          <p class="t-small no-margin c-charcoal t-bold">This is your last chance to edit before submitting.</p>
         </div>
 
-        {{> forms.button-pager left="Confirm" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+        {{> forms.button-pager left="Confirm" l-classes="primary" right="Save draft and come back later" r-classes="secondary expand-small" r-row-classes="padding-top--2x padding-bottom--2x"}}
       </form>
 
     </div>
