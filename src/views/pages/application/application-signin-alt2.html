@@ -1,0 +1,58 @@
+---
+layout: center
+title: Application
+---
+
+{{> headers.version-header }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader">
+          <div class="form-back"><a href="#" class="lined">Back</a></div>
+          <h2 class="app-card_question">Don't have an account?</h2>
+          <p class="form-note margin-bottom">Creating an account will save your information, and allow you to check the status of this application at any time. You can also continue without an account.</p>
+        </div>
+
+        <div class="button-pager">
+          <div class="button-pager_row primary">
+            {{> buttons.button text="Create an Account" classes="no-margin primary" }}
+          </div>
+        </div>
+
+        <div class="app-inner inset border-top">
+          <h2 class="app-card_question">Already have an account?</h2>
+           <div class="form-group">
+            <h3 class="form-label caps">Email {{> icons.base icon="lock" fill="primary"}}</h3>
+            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email" readonly="readonly"}}
+          </div>
+
+          <div class="form-group">
+            <h3 class="form-label caps">Password</h3>
+            {{> forms.text-input--base placeholder="Must be 6 characters" label="password"}}
+            <small class="form-note shift-up margin-bottom-none"><a href="#">Forgot Password?</a></small>
+          </div>
+
+          <div class="form-group text-center">
+            <p class="t-small c-steel padding-top">{{> buttons.button text="Sign In" classes="primary no-margin" }}</p>
+          </div>
+        </div>
+
+        <div class="button-pager border-top">
+          <div class="button-pager_row padding-top--2x">
+           <button class="button">Continue without an account</button>
+          </div>
+          <div class="button-pager_row">
+           <button class="button button-link button-lined small-text-center expand-small">Save and finish later</button>
+          </div>
+       </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> footer}}
