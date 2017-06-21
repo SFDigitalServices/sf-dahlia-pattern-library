@@ -1,0 +1,11 @@
+padding:
+  - padding
+  - padding-top
+  - padding-right
+  - padding-bottom
+  - padding-left
+  - padding--2x
+  - padding-top--2x
+  - padding-right--2x
+  - padding-bottom--2x
+  - padding-left--2x
