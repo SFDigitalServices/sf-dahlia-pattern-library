@@ -1,9 +1,19 @@
 padding:
+  - padding--half
+  - padding-top--half
+  - padding-right--half
+  - padding-bottom--half
+  - padding-left--half
   - padding
   - padding-top
   - padding-right
   - padding-bottom
   - padding-left
+  - padding--3halves
+  - padding-top--3halves
+  - padding-right--3halves
+  - padding-bottom--3halves
+  - padding-left--3halves
   - padding--2x
   - padding-top--2x
   - padding-right--2x
