@@ -1,19 +1,19 @@
 <div class="radio-group {{ default classes "" }}">
   {{#each items}}
-  <p class="radio-block">
-    <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
+  <div class="radio-block margin-bottom">
+    <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}" aria-describedby="ariaDescribedby">
     <label class="radio-block_label" for="{{../name}}-{{value}}">
       {{name}}
     </label>
-  </p>
+  </div>
   {{else}}
     {{#each inputs.contacts}}
-      <p class="radio-block">
-        <input type="radio" name="contacts" value="contacts-{{value}}" id="contacts-{{value}}">
+      <div class="radio-block margin-bottom">
+        <input type="radio" name="contacts" value="contacts-{{value}}" id="contacts-{{value}}" aria-describedby="ariaDescribedby">
         <label class="radio-block_label" for="contacts-{{value}}">
           {{name}}
         </label>
-      </p>
+      </div>
     {{/each}}
   {{/each}}
 </div>
