@@ -3,7 +3,7 @@
   <div class="checkbox-block margin-bottom--2x">
     <input type="checkbox" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
     <label class="checkbox-block_label" for="{{../name}}-{{value}}">
-      <strong class="form-label">{{name}}</strong>
+      <strong class="form-label caps">{{name}}</strong>
     </label>
     {{#if note}}
       <div class="checkbox-block_note-inner">
@@ -21,7 +21,7 @@
         {{#if note}}
           <div class="checkbox-block_note-inner">
             <div class="checkbox-block_note">{{note}}</div>
-          </div>
+          </div>  
         {{/if}}
       </div>
     {{/each}}

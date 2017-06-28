@@ -1,4 +1,4 @@
-<div ng-controller="ModalController"  aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="lottery-modal modal-buckets">
+<div ng-controller="ModalController"  aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="lottery-modal">
 
   <section class="results-container row collapse">
     <hgroup class="modal-header inset text-center padding-bottom">
@@ -7,7 +7,7 @@
       <p class="t-small c-steel t-semi padding-horizontal--3halves">3000 applications were submitted for 50 avaiable units</p>
       </p>
     </hgroup>
-
+    
     <div class="modal-inner bg-dust">
       {{> forms.icon-input classes=""}}
     </div>
@@ -37,7 +37,7 @@
       {{/compare}}
       {{#compare state '==' 'results' }}
       <p class="text-center t-small padding--3halves no-margin bg-dust">
-        <a href="#" class="a-dark" target="_blank">Read About Housing Preferences</a>
+        <a href="#" class="a-dark">Read About Housing Preferences</a>
       </p>
       <footer class="modal-footer text-center padding--3halves">
         <p class="t-small">Results from February 21, 2016</p>
