@@ -1,10 +1,20 @@
 ---
 notes: |
-  Add a class to an element for global padding or padding in any one direction. Units of padding are based on `1rem | 16px` units. 
+  Add a class to an element for global padding/margin (all directions), or padding/margin in any one direction. Units of padding are based on `1rem | 16px` units.
 ---
+
+<h3>Padding</h3>
 
 {{#each utilities.padding}}
   <div class="demo-padding_container {{this}}">
-    <div class="demo-padding_box">.{{this}}</div>
+    <div class="demo-padding_box padding--half">.{{this}}</div>
+  </div>
+{{/each}}
+
+<h3>Margin</h3>
+
+{{#each utilities.margin}}
+  <div class="demo-margin_container">
+    <div class="demo-margin_box {{this}} padding--half">.{{this}}</div>
   </div>
 {{/each}}

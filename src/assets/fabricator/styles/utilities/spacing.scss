@@ -1,8 +1,17 @@
-.demo-padding_container {
-  background-color: #0077da;
+@import 'colors';
+
+.demo-padding_container,
+.demo-margin_container {
+  background-color: $primary;
+  border: 1px solid $primary;
   margin-bottom: 1rem;
 }
 
-.demo-padding_box {
-  background-color: #daeeff;
+.demo-padding_box,
+.demo-margin_box {
+  background-color: $primary-tint;
+}
+
+.demo-margin_box {
+  border: 1px solid gray;
 }
