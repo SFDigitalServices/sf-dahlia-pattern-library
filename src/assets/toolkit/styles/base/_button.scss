@@ -339,6 +339,6 @@ input[type="submit"] {
   .button {
     margin: 0 auto .25rem;
     display: block;
-    width: 100%;
+    min-width: 15rem;
   }
 }
