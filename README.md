@@ -1,4 +1,7 @@
-#Dahlia Pattern Libary
+# Dahlia Pattern Libary
+
+https://sf-dahlia-pattern-library.herokuapp.com/
+
 
 Includes:
 
@@ -36,19 +39,22 @@ To deploy the application (run this from the project directory):
 
 ## Branches
 
-* `alpha` is for updates to the public version of the app
-* `master` is for engineers working on feature updates
+Branches can be used for one-off small feature updates, as well as epic feature branches that contain all of the updates for a particular epic feature. These branches generally correspond to features in the [DAHLIA web app](https://github.com/Exygy/sf-dahlia-web).
+
+* `master` corresponds to `sf-dahlia-web:master`, in that they both represent the current state of all accepted features in QA.
+* an example epic feature branch might be `multifamily-shortform` which has all the updates for an entire epic feature (Multifamily Shortform Application)
+* an example small feature branch might be `features/utilities-documentation-#143062915` which includes a set of changes specific to one user story (with the pivotal tracker ID found at the end of the branch e.g. `#143062915`)
 
 ## Structure
 Pattern library is organized from the abstract to the discrete, small to large.
 
-### /base
-Otherwise known as globals are the underlying variables the fuel the entire pattern library.
+### Base
+Otherwise known as globals, these are the underlying variables the fuel the entire pattern library.
 
-### /atoms, /molecules, /organisms
+### Atoms, Molecules, Organisms
 Documentation of our UI components via the browser. Allow clients and designers to sign off on each outside the context of a specific context. Allow the front end dev to sanity check that styles are flowing as predicted. Must include the hologram comment format in your sass file for these to render at the appropriate level.
 
-### /pages
+### Pages, Templates
 If you are building a page to test content rules or component variations within a template, you should name that file a page. Pages do not introduce any new components or templates but are used for edge cases and content previews.
 
 ## Source:
@@ -60,34 +66,24 @@ Atomic design front-end partials.
 Page level layout templates.
 
 ### /assets/toolkit/styles
-Follows a SMACSS based approach to organizing Sass files.
-http://www.sitepoint.com/architecture-sass-project/
+Follows the [Atomic Design](http://atomicdesign.bradfrost.com/table-of-contents/) methodology to organizing files.
 
-### ../base
-Resets, global style settings and simplest atomic elements.
+### ../atoms
+Basic HTML elements like typography, forms, inputs, buttons. Atoms are elements that can't be broken down any further without ceasing to be functional.
 
-### ../components
-Discrete parts of the UI. Flat directory instead of an atomic structure for simplicity.
+### ../molecules
+Simple groups of UI elements that function together, for example block lists, mobile nav, top bar.
 
-### ../structures
-More substantial persistent UI elements, such as header, footer, modal and navigation
+### ../organisms
+Relatively complex UI components composed of molecules, atoms and/or other organisms. These include elements such as the footer, page accordions, property card (displaying a single listing).
 
-### ../layouts
-Non component, pure layout based rule sets. Define key page templates
-
-### ../pages
-Rules specific to specific page rules or a unique url
-
-### ../helpers
-Utility classes that override component settings, such as padding and color
-
-### ../patterns
-Styles specific to the pattern library itself
+### ../utilities
+Utility classes that augment or override component settings, such as padding, borders and colors.
 
 ### ../vendors
-CSS files from specific external plugin
+CSS files from specific external plugins
 
-### /_settings.scss
+### /\_settings.scss
 Reference for all foundation default settings. Not editable
 
 ### /toolkit.css
