@@ -1,0 +1,44 @@
+//
+// Lined nav
+// Simple local navigation
+
+.lined-nav {
+  @include scut-list-floated;
+  display: block;
+  float: right;
+
+  @media #{$small-only} {
+    border-bottom: 3px solid $ghost;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }  
+}
+
+.lined-nav_item {
+  text-align: center;
+
+  a {
+    @include responsive-text-size('base');
+    @include scut-padding(0.5rem 1rem);
+    border-bottom: 3px solid $ghost;
+    display: inline-block;
+
+    &:hover {
+      border-bottom-color: $primary;
+    }
+
+    @media #{$medium-up} {
+      @include responsive-text-size('small');
+    }
+  }
+
+  &.active a {
+    border-bottom-color: $primary;
+  }
+
+  @media #{$small-only} {
+    width: 25%;
+    margin-bottom: -3px;
+  }
+}
