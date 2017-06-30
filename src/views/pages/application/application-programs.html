@@ -4,7 +4,6 @@ title: Application
 ---
 
 {{> headers.version-bar }}
-{{> headers.version-bar }}
 {{> navigation.top-bar }}
 
 <section class="app-container">
@@ -20,10 +19,10 @@ title: Application
 
         <div class="app-inner">
           <div class="form-group">
-            {{> forms.checkbox-group--blocks name="preferences" items=inputs.preferences}}
+            {{> forms.checkbox-group--block name="preferences" items=inputs.preferences}}
           </div>
         </div>
-        
+
         {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
       </form>
     </div>

@@ -1,4 +1,4 @@
-<div ng-controller="ModalController"  aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="lottery-modal">
+<div ng-controller="ModalController"  aria-labelledby="modalTitle" aria-hidden="true" role="dialog" class="lottery-modal modal-buckets">
 
   <section class="results-container row collapse">
     <hgroup class="modal-header inset text-center padding-bottom">
@@ -34,21 +34,23 @@
           <p class="c-steel t-small">If all vacancies are filled for a preference you will still be eligible for units in your following preference.</p>
         </div>
       </div>
-    {{/compare}}
-    {{#compare state '==' 'results' }}
-    <p class="text-center t-small padding--3halves no-margin bg-dust">
-      <a href="#" class="a-dark">Read About Housing Preferences</a>
-    </p>
-    <footer class="modal-footer text-center padding--3halves">
-      <p class="t-small">Results from February 21, 2016</p>
-      <p class="t-small"><a href="#" class="a-dark">Download Lottery Results PDF</a></p>
-      <p class="t-small c-steel">Unsorted results are used to determine the rank within each preference.
-    </footer>
-    {{else }}
-    <p class="text-center t-small padding--3halves no-margin bg-dust radius-bottom">
-      <a href="#" class="a-dark">Read About Housing Preferences</a>
-    </p>
-    {{/compare}}
+
+      {{/compare}}
+      {{#compare state '==' 'results' }}
+      <p class="text-center t-small padding--3halves no-margin bg-dust">
+        <a href="#" class="a-dark" target="_blank">Read About Housing Preferences</a>
+      </p>
+      <footer class="modal-footer text-center padding--3halves">
+        <p class="t-small">Results from February 21, 2016</p>
+        <p class="t-small"><a href="#" class="a-dark">Download Lottery Results PDF</a></p>
+        <p class="t-small c-steel">Unsorted results are used to determine the rank within each preference.
+      </footer>
+      {{else }}
+      <p class="text-center t-small padding--3halves no-margin bg-dust radius-bottom">
+        <a href="#" class="a-dark">Read About Housing Preferences</a>
+      </p>
+      {{/compare}}
+    </div>
   </section>
 
   <a class="close-reveal-modal" aria-label="Close"  ng-click="closeModal()">
