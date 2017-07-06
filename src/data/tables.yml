@@ -12,9 +12,9 @@ minimum:
 minimum-range:
   units:
     - type: Studio
-      income-low: 1,078
+      income-low: 1,347
       income-high: 1,678
-      rent-low: 539
+      rent-low: 639
       rent-high: 839
     - type: 1 Bedroom
       income-low: 1,518
@@ -26,6 +26,11 @@ minimum-range:
       income-high: 2,685
       rent-low: 939
       rent-high: 1,250
+minimum-sro:
+  units:
+    - type: SRO
+      income: 1,347
+      rent: 639
 percent:
   units:
     - type: Studio
@@ -87,6 +92,11 @@ minimum-flex:
     income: $2,998<small>/month</small>
     rent: $1,199<small>/month</small>
     availability: 9 <small>units</small>
+minimum-flex-sro:
+  - type: SRO
+    income: $1,356<small>/month</small>
+    rent: $678<small>/month</small>
+    availability: 12 <small>units</small>
 minimum-flex-reserved:
   - type: Studio
     income: <em>none</em>

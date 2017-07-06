@@ -1,0 +1,218 @@
+//
+// Property card
+// Browse property element with semantic grid
+
+.property-card {
+  @include clearfix;
+  border-bottom: 1px solid $smoke;
+  font-size: .9rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+
+  @media #{$medium-up} {
+    @include scut-margin(0 auto 4rem);
+    border-bottom: none;
+    max-width: rem-calc(640);
+  }
+
+  @media #{$large-up} {
+    @include grid-row();
+    margin-bottom: 2.5rem;
+
+    .property-card_figure {
+      @include grid-column(7);
+      width: 55%;
+      padding: 0;
+    }
+
+    .property-card_content {
+      @include grid-column(5);
+      width: 45%;
+      padding: 0;
+      padding-left: 1rem;
+    }
+  }
+
+  // Exceptions for nesting in dashboard
+  &.nested {
+    @media #{$medium-only} {
+      button.round-icon.has-label {
+        margin-right: 0 !important;
+
+        .inline {
+          display: none !important;
+        }
+      }
+    }
+
+    @media #{$medium-up} {
+      .property-card_figure {
+        @include grid-column(6);
+        padding: 0;
+      }
+
+      .property-card_content {
+        @include grid-column(6);
+        padding-right: 0;
+      }
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.property-card_figure {
+  text-align: center;
+  position: relative;
+  line-height: .8;
+
+  // Image with rounded corners
+  &.radius {
+    @media #{$medium-up} {
+      border-radius: $form-card-radius;
+    }
+
+    img,
+    .property-card_overlay:before {
+      @media #{$medium-up} {
+        border-radius: $form-card-radius;
+      }
+    }
+  }
+
+  @media #{$medium-up} {
+    background-color: $charcoal;
+  }
+
+  // Labels overlaying images
+  .status-label {
+    @include absolute(.5rem,null,null,0);
+
+    @media #{$medium-up} {
+      @include absolute(.5rem,0,null,auto);
+    }
+  }
+
+  .application-label {
+    @include absolute(null,1rem,0,1rem);
+    z-index: 2;
+
+    @media #{$medium-up} {
+      @include absolute(.5rem,auto,auto,0);
+    }
+  }
+}
+
+.property-card_stats {
+  margin-bottom: 1.5rem;
+}
+
+.property-card_thumb {
+  width: 100%;
+  max-width: none;
+}
+
+.property-card_overlay {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+
+  &:before {
+    @include overlay-image;
+    @include custom-linear-gradient(transparent, rgba(0,0,0, .8));
+  }
+}
+
+.property-card_content {
+  position: relative;
+}
+
+.property-card_info {
+  @media #{$medium-up} {
+    @include absolute(null,.5rem,1rem,.5rem);
+    display: inline-block;
+    color: #fff;
+    z-index: 2;
+  }
+}
+
+.property-card_title {
+  @include responsive-text-size('gamma');
+  font-family: $alt-font-family;
+  font-weight: $t-semi;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+
+  @media #{$medium-up} {
+    @include responsive-text-size('beta');
+    font-weight: $t-regular;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.property-card_address {
+  @include responsive-text-size('tiny');
+  color: $oil;
+  font-family: $alt-font-family;
+  letter-spacing: $small-header-spacing;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  @media #{$small-only} {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media #{$medium-up} {
+    color: #fff;
+  }
+}
+
+.property-card_action {
+  button {
+    margin-bottom: 0;
+
+    @media #{$small-only} {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.property-card_label {
+  @include responsive-text-size('small');
+  display: block;
+  font-family: $sans-font-family;
+  font-weight: $t-bold;
+  letter-spacing: .2rem;
+  margin-bottom: .5rem;
+  padding-top: .5rem;
+  text-transform: uppercase;
+
+  @media #{$large-up} {
+    padding-top: 0;
+  }
+}
+
+.property-card_subheader {
+  @include responsive-text-size('micro');
+  color: $charcoal;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.property-card_caption {
+  @include responsive-text-size('micro');
+  color: $charcoal;
+  display: block;
+  padding-top: .75rem;
+  padding-left: .5rem;
+  padding-bottom: .75rem;
+}

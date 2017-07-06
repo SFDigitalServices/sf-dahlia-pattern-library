@@ -1,0 +1,260 @@
+//
+// Forms
+//
+
+#{text-inputs(all, 'input')},
+textarea,
+select {
+  border-radius: $input-border-radius;
+
+  &:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+
+  &.squared {
+    border-radius: 0;
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+form {
+  font-family: $font-family;
+
+  label {
+    @extend .form-label;
+  }
+
+  .row .row.expand {
+    margin: 0 -0.6275rem;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+// Input and label wrapper
+.form-group,
+.form-item {
+  &.input-inset {
+    @include scut-padding(n n 2rem 2.125rem);
+
+    @media #{$medium-up} {
+      @include scut-padding(n 2.125rem 2rem);
+    }
+  }
+
+  &.input-expand {
+    @include scut-margin(n -2rem -2rem -2.125rem);
+    @include scut-padding(n 2rem n 2.125rem);
+
+    @media #{$medium-up} {
+      @include scut-margin(n -2.125rem -2rem);
+      @include scut-padding(n 2.125rem n);
+    }
+  }
+
+  &.has-edit {
+    position: relative;
+  }
+
+  #{h1, h2, h3, h4, h5, h6} {
+    font-family: $sans-font-family;
+  }
+
+  label {
+    @extend .form-label;
+  }
+
+  .editable {
+    margin-right: 3rem;
+  }
+}
+
+.form-item {
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+// Input label
+.form-label {
+  @include responsive-text-size('small');
+  @include type-weight(semi);
+  margin-bottom: .5rem;
+  text-transform: none;
+
+  &.label-secondary {
+    @include type-weight(regular);
+    color: $steel !important;
+  }
+
+  &.caps {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
+}
+
+// Additional input helper text
+.form-note {
+  @include responsive-text-size('small');
+  @include type-weight(semi);
+  color: $steel;
+  margin-bottom: 0;
+
+  &.shift-up {
+    display: block;
+    margin-top: -.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &.input-inset {
+    @media #{$medium-up} {
+      @include scut-padding(n 2rem);
+    }
+  }
+
+  &.micro {
+    @include responsive-text-size('micro');
+  }
+}
+
+// Application back button
+.form-back {
+  @include responsive-text-size('small');
+  @include type-weight(bold);
+  color: $steel;
+  margin-bottom: 1rem;
+}
+
+.form-group,
+.form-item {
+  &.has-icon {
+    position: relative;
+
+    .ui-icon {
+      @include absolute(.75rem,.75rem,null,null);
+    }
+  }
+}
+
+// Error messages
+label,
+.form-item,
+.form-group,
+.radio-group,
+.radio-group-inline {
+  #{text-inputs(all, 'input')},
+  select,
+  textarea {
+    margin: 0 0 $form-spacing 0;
+
+    &.error {
+      margin-bottom: 0;
+    }
+  }
+
+  &.error {
+    input.error,
+    select.error,
+    textarea.error {
+      border: 2px solid $alert;
+    }
+
+    input[type="checkbox"].error + label::before {
+      box-shadow: 0 0 0 2px $alert;
+    }
+
+    input[type="radio"].error + label::before {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px $alert;
+    }
+
+    .form-label {
+      color: $alert;
+    }
+  }
+
+  &.has-option {
+    .checkbox label,
+    .radio label {
+      color: $primary;
+    }
+
+    input[type="checkbox"] + label, input[type="radio"] + label {
+      margin-left: 0;
+    }
+
+    &.error {
+      small.error {
+        margin-bottom: .25rem;
+      }
+
+      .checkbox label,
+      .radio label {
+        color: $primary;
+      }
+    }
+  }
+
+  &.is-locked {
+    #{text-inputs(all, 'input')},
+    select,
+    textarea {
+      margin-bottom: 0;
+    }
+
+    small.lock-note {
+      color: $success;
+      display: block;
+      font-size: 0.75rem;
+      margin-bottom: .25rem;
+      padding: 0.375rem 0 0.375rem;
+      a {
+        color: $success;
+      }
+    }
+  }
+
+  small {
+    text-transform: none !important;
+  }
+
+  small.highlight {
+    color: $success;
+    display: inline-block;
+    margin-left: 1.75rem;
+  }
+
+  small.required {
+    color: $alert;
+  }
+}
+
+.form-item {
+  &.readonly {
+    #{text-inputs(all, 'input')} {
+      // background-color: $dust;
+      // border-top-width: 0;
+      // border-left-width: 0;
+      // border-right-width: 0;
+      // border-radius: 0;
+      // border-color: transparent;
+      background-color: $dust;
+    }
+  }
+}
+
+// Error spacing for radio inline
+.radio-group-inline {
+  &.error {
+    margin-top: $form-spacing;
+
+    .radio-inline {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -180,7 +180,6 @@ angular.module('dahlia',
   })
   .controller('ModalController', function ($scope, $modal) {
     $scope.openModal = function (templateUrl, windowClass) {
-      console.log("at open modal");
       var modalInstance = $modal.open({
         templateUrl: templateUrl,
         controller: 'ModalInstanceController',

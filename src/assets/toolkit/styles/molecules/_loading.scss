@@ -1,0 +1,24 @@
+.loading {
+  position: relative;
+
+  &:before {
+    @include absolute(0,0,0,0);
+    background-color: rgba(255,255,255,.8);
+    content: '';
+    z-index: 102;
+  }
+  
+  &-overlay {
+    min-height: 350px;
+  }
+
+  .spinner {
+    @include scut-center-transform;
+    position: fixed;
+    z-index: 103;
+  }
+
+  .footer-section & .spinner {
+    display: none;
+  }
+}

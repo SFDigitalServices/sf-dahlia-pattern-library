@@ -1,0 +1,48 @@
+ //
+// Property Map styles
+
+.property-map {
+
+}
+
+.property-map_figure {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  img {
+    max-width: none;
+    width: 100%;
+  }
+
+  @media print {
+    width: 65%;
+
+    padding-bottom: 40%;
+
+    // iframe {
+    //   width: 50% !important;
+    //   height: 50% !important;
+    // }  
+  }
+}
+
+.map-link {
+  @include responsive-text-size('small');
+  color: $deep;
+  display: block;
+  line-height: 1;
+  overflow: visible;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}

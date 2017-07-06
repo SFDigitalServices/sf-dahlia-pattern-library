@@ -1,0 +1,168 @@
+//
+// Applications
+//
+
+.app-card {
+  padding: 0;
+  margin-bottom: 0;
+
+  .form-group {
+    @include clearfix;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.app-header {
+  @media #{$medium-up} {
+    margin-bottom: 1rem;
+  }
+}
+
+.app-sub-header {
+  @include scut-padding(1rem 2rem);
+  background-color: $vapor;
+  position: relative;
+
+  .edit-link {
+    right: 2rem;
+  }
+}
+
+.app-sub-header_title {
+  margin-bottom: 0;
+
+  @media print {
+    @include responsive-text-size('base');
+  }
+}
+
+.app-inner {
+  @include scut-padding(2rem);
+
+  @media print {
+    @include scut-padding(2px n);
+  }
+
+  &.leader {
+   @include scut-padding(1rem 2rem 0);
+
+   @media #{$medium-up} {
+    @include scut-padding(2rem 0 1rem);
+    @include scut-margin(n 2rem);
+   }
+  }
+
+  &.inset {
+    @media #{$medium-up} {
+      @include scut-padding(n 3rem);
+      @include scut-margin(n 2rem);
+    }
+  }
+
+  &.short {
+    @include scut-padding(0 n);
+  }
+}
+
+.leader-header {
+  @include scut-padding(1rem 2rem);
+  &.featured-leader {
+    background-color: $success-light;
+    p {
+      color: $charcoal;
+    }
+  }
+}
+
+.app-card_header {
+  @include scut-padding(1rem);
+  background-color: $primary;
+  color: $white;
+  text-align: center;
+
+  @media #{$medium-up} {
+    border-top-left-radius: $form-card-radius;
+    border-top-right-radius: $form-card-radius;
+  }
+}
+
+.app-card_title {
+  @include responsive-text-size('epsilon');
+  font-family: $alt-font-family;
+  font-weight: $t-bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.app-card_nav {
+  @include scut-padding(1rem .5rem 1.5rem);
+
+  @media #{$small-only} {
+    @include scut-padding(1rem 0 1rem);
+    background-color: $dust;
+  }
+
+  &.t-ch .progress-nav_item {
+    @include responsive-text-size('base');
+  }
+}
+
+.app-card_question {
+  @include responsive-text-size('gamma');
+  text-align: center;
+
+  @media #{$medium-up} {
+    padding-top: 1rem;
+  }
+
+  @media print {
+    @include responsive-text-size('epsilon');
+  }
+}
+
+.app-card_note {
+  @include responsive-text-size('small');
+  color: $steel;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.app-card_footer {
+  @media #{$medium-up} {
+    border-bottom-left-radius: $form-card-radius;
+    border-bottom-right-radius: $form-card-radius;
+    overflow: hidden;
+  }
+}
+
+.app-language {
+  @include clearfix;
+  
+  @media #{$medium-up} {
+    margin-bottom: 1rem;
+  }
+}
+
+// Application print exceptions
+@media print {
+  .app-card_header,
+  .app-card_question,
+  .text-center {
+    text-align: left !important;
+  }
+
+  .app-inner.leader {
+    padding-top: 0;
+  }
+
+  .app-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}

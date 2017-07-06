@@ -3,6 +3,7 @@ modifiers:
   primary:
   secondary:
   tertiary:
+  alert:
   tint:
   deep:
   ghost-white:
