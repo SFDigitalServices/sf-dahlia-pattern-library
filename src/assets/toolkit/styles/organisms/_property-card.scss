@@ -59,8 +59,18 @@
     }
   }
 
-  &:last-of-type {
+  &.last {
     border-bottom: none;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+  }
+
+  &.first {
+    margin-top: 1rem;
+
+    @media #{$medium-up} {
+      margin-top: 0;
+    }
   }
 }
 
