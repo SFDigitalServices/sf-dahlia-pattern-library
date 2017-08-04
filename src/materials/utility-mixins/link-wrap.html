@@ -1,0 +1,18 @@
+---
+notes: |
+  `.link-wrap` allows a link to wrap instead of sticking outside of its container. Note this behavior is added globally to all `<a>` tags in `_links.scss`, and so would only need to be added to other pieces of text e.g. with long URLs.
+---
+
+<div class="demo-padding_box padding" style="width: 350px;">
+  &lt;a&gt; with .link-wrap
+  <a class="link-wrap" href="#">
+    https://smile.amazon.com/dp/B01J24C0TI/ref=ods_gw_d_kt_2pack_street?pf_rd_p=b77fecf2-bed7-4fa5-a11f-cea7545af6af&pf_rd_r=E9MSD5E40JYXHAX70Q40
+  </a>
+
+  <br>
+  &lt;span&gt; without .link-wrap
+  <br>
+  <span href="#" style="color:blue;">
+    https://smile.amazon.com/dp/B01J24C0TI/ref=ods_gw_d_kt_2pack_street?pf_rd_p=b77fecf2-bed7-4fa5-a11f-cea7545af6af&pf_rd_r=E9MSD5E40JYXHAX70Q40
+  </span>
+</div>
