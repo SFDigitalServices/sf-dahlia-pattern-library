@@ -1,0 +1,10 @@
+@import 'colors';
+
+.demo-border_box {
+  background-color: $primary-light;
+  margin-bottom: 1rem;
+  &-dark {
+    background-color: $primary;
+    color: white;
+  }
+}
