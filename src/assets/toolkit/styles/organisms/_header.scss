@@ -1,0 +1,35 @@
+//
+// Header
+// Based on foundation top bar
+
+// Top Bar
+// Customizing foundation top bar for main nav
+
+.top-bar-container {
+  background-color: #fff;
+}
+
+.top-bar {
+  background-color: #fff;
+  border-bottom: 1px solid $smoke;
+  
+  .row {
+    max-width: $row-width;
+  }
+
+  .toggle-topbar {
+    &.menu-icon {
+      margin-top: 0;
+      padding-right: .5rem;
+      top: 0;
+    }
+  }
+}
+
+.title-area {
+  width: 100%;
+
+  @media #{$medium-up} {
+    width: 30%;
+  }
+}

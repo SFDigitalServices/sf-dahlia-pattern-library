@@ -1,0 +1,12 @@
+@import 'colors';
+$tint: $primary;
+
+@import '../../../toolkit/styles/utilities/mixins';
+
+.triangle {
+  @include triangle();
+}
+
+.triangle-large {
+  @include triangle(1em 0.75em);
+}

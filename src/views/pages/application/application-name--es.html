@@ -1,0 +1,62 @@
+---
+layout: center
+title: Application
+---
+
+{{> headers.version-bar }}
+{{> headers.version-bar }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      
+      <div class="app-language">
+        {{> navigation.lined-nav items=menus.lang-es}}
+      </div>
+
+      {{> app-header items=menus.shortform-es}}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Comenzaremos obteniendo información sobre su. Primero, ¿cuál es su nombre?</h2>
+        </div>
+
+        <div class="app-inner inset">
+          <div class="form-group">
+            <h3 class="form-label caps">Tu nombre</h3>
+            {{> forms.text-input--base placeholder="First Name" label="First Name"}}
+            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)"}}
+            {{> forms.text-input--base placeholder="Last Name" label="Last Name"}}
+          </div>
+
+          <div class="form-group">
+            <h3 class="form-label caps">Tu fecha de nacimiento</h3>
+            {{> forms.input-dob readonly="readonly"}}
+          </div>
+        </div>
+
+       <!--  {{> forms.alert-box text="Ang mga patlang ay mae-edit sa pamamagitan ng iyong mga setting ng account" status="primary" classes="no-icon"}}
+
+        <div class="app-inner inset">
+          <div class="form-group">
+            <h3 class="form-label caps">Tu nombre {{> icons.base icon="lock" fill="primary"}}</h3>
+            {{> forms.text-input--base placeholder="First Name" label="First Name" readonly="readonly"}}
+            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" readonly="readonly"}}
+            {{> forms.text-input--base placeholder="Last Name" label="Last Name" readonly="readonly"}}
+          </div>
+
+          <div class="form-group">
+            <h3 class="form-label caps">Tu fecha de nacimiento {{> icons.base icon="lock" fill="primary"}}</h3>
+            {{> forms.input-dob readonly="readonly"}}
+          </div>
+        </div> -->
+
+        {{> forms.link-pager left="Siguiente" l-classes="primary" right="Guardar y terminar más tarde" r-classes="button-link button-lined small-text-center expand-small" l-url="application-name--es.html"}}
+
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> footer}}

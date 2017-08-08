@@ -4,7 +4,7 @@
     <hgroup class="modal-header inset text-center padding-bottom">
       <h1 class="t-gamma margin-bottom--half">Lottery Results</h1>
       <h2 id="modalTitle" class="t-caps t-small t-alt-sans t-bold">Potrero 1010</h1>
-      <p class="t-small c-steel t-semi padding-horizontal--3halves">3000 applications were submitted for 50 avaiable units</p>
+      <p class="t-small c-steel t-semi padding-horizontal--3halves">3000 applications were submitted for 50 avaiable units
       </p>
     </hgroup>
 
@@ -19,21 +19,22 @@
     {{/compare}}
 
 
-      {{#compare state '==' 'results' }}
-        <div class="modal-buckets-container">
-          {{> results-buckets }}
+    {{#compare state '==' 'results' }}
+      <div class="modal-buckets-container">
+        {{> results-buckets }}
+      </div>
+    {{else }}
+      {{> results-buckets--search }}
+      <div class="t-small padding--3halves">
+        <div class="toggled">
+          <a href="#" class="a-dark toggler toggle-more t-small">What happens next? {{> icons.base icon="arrow-down" size="tiny" fill="dark"}}
+          </a>
+          <p class="c-steel t-small margin-top">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
+          <p class="c-steel t-small">Should your application be chosen from the lottery, be prepared to fill out a more detailed application and provide required supporting documents.</p>
+          <p class="c-steel t-small">If all vacancies are filled for a preference you will still be eligible for units in your following preference.</p>
         </div>
-      {{else }}
-        {{> results-buckets--search }}
-        <div class="t-small padding--3halves">
-          <div class="toggled">
-            <a href="#" class="a-dark toggler toggle-more t-small">What happens next? {{> icons.base icon="arrow-down" size="tiny" fill="dark"}}
-            </a>
-            <p class="c-steel t-small margin-top">Applicants will be contacted by the leasing agent in preference rank order until vacancies are filled.</p>
-            <p class="c-steel t-small">Should your application be chosen from the lottery, be prepared to fill out a more detailed application and provide required supporting documents.</p>
-            <p class="c-steel t-small">If all vacancies are filled for a preference you will still be eligible for units in your following preference.</p>
-          </div>
-        </div>
+      </div>
+
       {{/compare}}
       {{#compare state '==' 'results' }}
       <p class="text-center t-small padding--3halves no-margin bg-dust">

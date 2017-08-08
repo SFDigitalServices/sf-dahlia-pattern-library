@@ -1,0 +1,29 @@
+<section class="buckets">
+  {{#each items}}
+  <div class="bucket{{#if has-stat}} has-stat{{/if}}">
+    {{#if has-stat}}
+    <div class="bucket-stat">
+      <span class="bucket-stat_label">Rank</span>
+      <span class="bucket-stat_value">{{this.rank}}</span>
+    </div>
+    {{/if}}
+    <h3 class="bucket-title">{{this.name}}</h3>
+    <p class="bucket-subtitle">{{this.units}}</p>
+    <p class="t-tiny c-steel no-margin">{{this.applicants}}</p>
+  </div>
+  {{else}}
+    {{#each lotteries.buckets}}
+    <div class="bucket{{#if has-stat}} has-stat{{/if}}">
+      {{#if has-stat}}
+      <div class="bucket-stat">
+        <span class="bucket-stat_label">Rank</span>
+        <span class="bucket-stat_value">{{this.rank}}</span>
+      </div>
+      {{/if}}
+      <h3 class="bucket-title">{{this.name}}</h3>
+      <p class="bucket-subtitle">{{this.units}}</p>
+      <p class="t-tiny c-steel no-margin">{{this.applicants}}</p>
+    </div>
+  {{/each}}
+  {{/each}}
+</section>

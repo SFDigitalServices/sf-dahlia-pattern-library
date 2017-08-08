@@ -1,0 +1,11 @@
+.version-bar {
+  @include scut-padding(.5rem n);
+
+  @media #{$small-only} {
+    display: none;
+  }
+}
+
+.translate-bar {
+  min-height: 2.1875rem;
+}  
