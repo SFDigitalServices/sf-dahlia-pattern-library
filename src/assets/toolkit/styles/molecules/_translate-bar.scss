@@ -11,4 +11,11 @@
   .inline-list > li {
     margin-left: 2rem;
   }
+
+  a {
+    color: $silver;
+    &.active, &:hover {
+      color: $white;
+    }
+  }
 }
