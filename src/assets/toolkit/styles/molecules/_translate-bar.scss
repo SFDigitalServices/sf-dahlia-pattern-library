@@ -1,4 +1,14 @@
 .translate-bar {
-  @include scut-padding(.5rem n);
+  @include scut-padding(.625rem n);
   min-height: 2.1875rem;
+
+  .translate-bar_notice {
+    @media #{$xlarge-up} {
+      padding-left: 0 !important;
+    }
+  }
+
+  .inline-list > li {
+    margin-left: 2rem;
+  }
 }
