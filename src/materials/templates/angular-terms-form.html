@@ -1,0 +1,10 @@
+<div class="form-item padding-bottom" ng-class="{error: inputInvalid('terms')}">
+  <div class="checkbox checkbox-inset margin-top--2x">
+    <input aria-describedby="terms_yes_error" id="terms_yes" name="terms" type="checkbox" ng-model="applicant.terms" ng-required="true" ng-class="{error: inputInvalid('terms')}">
+    <label for="terms_yes">I agree and understand that I cannot change anything after I submit.</label>
+  </div>
+
+  <small class="error" id="terms_error" ng-show="inputInvalid('terms')">
+    You must agree to the terms in order to continue.
+  </small>
+</div>
