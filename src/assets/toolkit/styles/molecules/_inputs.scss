@@ -114,12 +114,13 @@ input[type="radio"]:disabled + label::before {
 // Checkbox with multiline label and offset
 .checkbox-inset {
   input[type="checkbox"] + label {
-    color: $primary;
     padding-left: 2rem;
+    &::before {
+      margin-left: -1.8rem;
+    }
   }
-
-  input[type="checkbox"] + label::before {
-    margin-left: -1.8rem;
+  input[type="checkbox"]:not(.error) + label {
+    color: $primary;
   }
 }
 
