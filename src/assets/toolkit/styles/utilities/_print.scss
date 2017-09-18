@@ -107,6 +107,11 @@
   button.toggler {
     display: none;
   }
+
+  // fixes firefox/safari printing bug
+  .fixed-width.columns {
+    float: none;
+  }
 }
 
 @media screen {
