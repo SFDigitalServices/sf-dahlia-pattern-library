@@ -2,7 +2,14 @@
 // Navigation Menu
 // Desktop navigation based on foundation top bar
 
+.top-bar {
+  .name-logo {
+    display: flex;
+  }
+}
+
 .top-bar-section {
+
   ul.nav-menu {
     @media #{$small-only} {
       display: none;
@@ -24,7 +31,7 @@
       @media #{$large-up} {
         @include scut-padding(n 1.5rem nn 1.5rem);
         font-size: 0.8125rem;
-      }  
+      }
 
       &:hover {
         border-bottom-color: $primary;
