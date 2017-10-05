@@ -29,16 +29,27 @@ title: Create an Account
           <div class="form-group margin-bottom--2x">
             <h3 class="form-label caps">Application Options:</h3>
             <p class="form-note margin-bottom">Please select one</p>
-            
+
             <div class="form-item margin-bottom--2x">
               <div class="radio-block">
                 <input name="duplicate_draft" value="duplicate_draft_recent" id="duplicate_draft_recent" type="radio">
                 <label class="radio-block_label" for="duplicate_draft_recent">
                   <p class="form-label">Recent Application:</p>
-                  <p class="margin-bottom-none t-base">James Duvall<br>
-                  Date of Birth: 12/2/1980<br>
-                  Email: james.duvall@gmail.com</p>
+                  <p class="t-base t-normal">
+                    <span class="t-bold">James Duvall</span>
+                    <br>
+                    Date of Birth: <span class="t-bold">12/2/1980</span>
+                    <br>
+                    Email: <span class="t-bold">james.duvall@gmail.com</span>
+                  </p>
+                  <p class="margin-bottom--half t-base t-normal">
+                    <span class="t-bold">50%</span> complete
+                  </p>
+                  <div class="progress round">
+                    <span class="meter" style="width: 50%"></span>
+                  </div>
                   <p class="t-small t-normal">Edited: July 11th 2016</p>
+
                 </label>
               </div>
             </div>
@@ -48,10 +59,22 @@ title: Create an Account
                 <input name="duplicate_draft" value="duplicate_draft_original"  id="duplicate_draft_original" type="radio">
                 <label class="radio-block_label" for="duplicate_draft_original">
                   <p class="form-label">Original Application:</p>
-                  <p class="margin-bottom-none t-base">Jane Dunbar<br>
-                  Date of Birth: 11/12/1975<br>
-                  Email: james.duvall@gmail.com</p>
+                  <p class="t-base t-normal">
+                    <span class="t-bold">Jane Dunbar</span>
+                    <br>
+                    Date of Birth: <span class="t-bold">11/12/1975</span>
+                    <br>
+                    Email: <span class="t-bold">james.duvall@gmail.com</span>
+                  </p>
+
+                  <p class="margin-bottom--half t-base t-normal">
+                    <span class="t-bold">30%</span> complete
+                  </p>
+                  <div class="progress round">
+                    <span class="meter" style="width: 30%"></span>
+                  </div>
                   <p class="t-small t-normal">Edited: June 20th 2016</p>
+
                 </label>
               </div>
             </div>
@@ -63,7 +86,7 @@ title: Create an Account
         </div>
       </form>
     </div>
-  </section>    
+  </section>
 </div>
 
 {{> footer}}

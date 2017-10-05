@@ -1232,8 +1232,8 @@ $callout-panel-bg: scale-color($primary-color, $lightness: 94%) !default;
 // $include-html-media-classes: $include-html-classes;
 
 // We use this to set the progress bar height
-// $progress-bar-height: rem-calc(25);
-// $progress-bar-color: $vapor;
+$progress-bar-height: rem-calc(20);
+$progress-bar-color: scale-color($primary-color, $lightness: 90%);
 
 // We use these to control the border styles
 // $progress-bar-border-color: scale-color($white, $lightness: 20%);
