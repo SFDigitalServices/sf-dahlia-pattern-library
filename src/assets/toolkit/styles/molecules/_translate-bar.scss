@@ -6,10 +6,30 @@
     @media #{$xlarge-up} {
       padding-left: 0 !important;
     }
+    @media #{$small-only} {
+      line-height: 1.25;
+      .margin-bottom--half {
+        margin-bottom: 10px !important;
+      }
+    }
   }
 
-  .inline-list > li {
-    margin-left: 2rem;
+  &_message, &_learn {
+    @media #{$small-only} {
+      font-size: 0.75rem;
+    }
+  }
+
+  &_languages {
+    margin: 0;
+    > li {
+      margin-left: 2rem;
+    }
+    @media #{$small-only} {
+      > li {
+        font-size: 0.9rem;
+      }
+    }
   }
 
   a {
