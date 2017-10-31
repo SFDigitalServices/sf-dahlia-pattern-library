@@ -157,6 +157,7 @@ input[type="radio"]:disabled + label::before {
   }
 
   &_note-inner {
+    margin-top: 0.5rem;
     margin-left: 2.125rem;
   }
 }
