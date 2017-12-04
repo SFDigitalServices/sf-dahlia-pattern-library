@@ -40,6 +40,10 @@
 
   &.has-button {
     @media #{$medium} {
+      .button {
+        max-width: 40%;
+      }
+
       .status-header_content {
         @include grid-column(7);
       }

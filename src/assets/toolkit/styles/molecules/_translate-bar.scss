@@ -1,4 +1,25 @@
 .translate-bar {
-  @include scut-padding(.5rem n);
+  @include scut-padding(.75rem n);
   min-height: 2.1875rem;
+}
+
+.translate-bar_languages {
+  margin-bottom: .25rem;
+
+  @media #{$medium-up} {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.translate-bar_notice {
+  line-height: 1.35;
+  margin-bottom: .625rem;
+
+  @media #{$medium-up} {
+    margin-bottom: 0;
+  }
 }
