@@ -1,25 +1,41 @@
 .translate-bar {
-  @include scut-padding(.75rem n);
+  @include scut-padding(.625rem n);
   min-height: 2.1875rem;
-}
 
-.translate-bar_languages {
-  margin-bottom: .25rem;
+  .translate-bar_notice {
+    @media #{$xlarge-up} {
+      padding-left: 0 !important;
+    }
+    @media #{$small-only} {
+      line-height: 1.25;
+      .margin-bottom--half {
+        margin-bottom: 10px !important;
+      }
+    }
+  }
 
-  @media #{$medium-up} {
-    margin-bottom: 0;
+  &_message, &_learn {
+    @media #{$small-only} {
+      font-size: 0.75rem;
+    }
+  }
+
+  &_languages {
+    margin: 0;
+    > li {
+      margin-left: 2rem;
+    }
+    @media #{$small-only} {
+      > li {
+        font-size: 0.9rem;
+      }
+    }
   }
 
   a {
-    color: $white;
-  }
-}
-
-.translate-bar_notice {
-  line-height: 1.35;
-  margin-bottom: .625rem;
-
-  @media #{$medium-up} {
-    margin-bottom: 0;
+    color: $silver;
+    &.active, &:hover {
+      color: $white;
+    }
   }
 }

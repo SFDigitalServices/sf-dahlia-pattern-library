@@ -40,18 +40,36 @@
   }
 
   .welcome-links {
+    margin-left: 0;
+    margin-top: 0.875rem;
+    margin-bottom: 2.875rem;
     float: none;
-    display: inline-block;
-    margin: 0 auto 2rem;
 
+    > li {
+      float: none;
+      margin-left: 0;
+      padding-left: 2.875rem;
+      padding-right: 2.875rem;
+
+      &:last-child {
+        border: 0;
+      }
+    }
     a {
       color: $white;
+    }
+
+    @media #{$medium-up} {
+      > li {
+        display: inline-block;
+        border-right: 2px solid $white;
+      }
     }
   }
 
   @media print {
     @include responsive-text-size('micro');
-  } 
+  }
 }
 
 .footer-sock {
@@ -99,11 +117,11 @@
     img {
       margin-top: rem-calc(24);
       float: none;
-      
+
       @media #{$medium-up} {
         margin-top: 0;
         float: right;
-      }  
+      }
     }
   }
 }
