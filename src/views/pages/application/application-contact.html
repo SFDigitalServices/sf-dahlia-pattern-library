@@ -3,7 +3,7 @@ layout: center
 title: Application
 ---
 
-{{> headers.version-bar }}
+{{> headers.translate-bar }}
 {{> headers.version-bar }}
 {{> navigation.top-bar }}
 
@@ -11,14 +11,14 @@ title: Application
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
       {{> app-header }}
-      
+
       <form class="app-card form-card">
 
         <div class="app-inner leader border-bottom">
           <div class="form-back"><a href="#" class="lined">Back</a></div>
           <h2 class="app-card_question">Thanks, Lara. Now we need to know how to contact you about your application.</h2>
         </div>
-        
+
         {{> forms.alert-box text="Your email address is editable via your account settings" status="primary" classes="no-icon"}}
 
         <div class="app-inner inset border-bottom">
@@ -32,7 +32,7 @@ title: Application
         </div>
 
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group has-option">
             <label class="form-label caps">Your email address {{> icons.base icon="lock" fill="primary"}}</label>
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
@@ -46,12 +46,12 @@ title: Application
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group row has-option">
             <label class="form-label caps">Your address</label>
             <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
             {{> forms.input-address classes="expand" visibility="sr-only"}}
-            
+
             <div class="form-item padding-bottom">
               {{> forms.checkbox text="I don't have an address" }}
             </div>
@@ -68,14 +68,14 @@ title: Application
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group">
             <label class="form-label caps">What is your primary language?</label>
             {{> forms.select}}
           </div>
         </div>
 
-        <div class="app-inner inset">  
+        <div class="app-inner inset">
           <div class="form-group">
             <label class="form-label caps">Do you work in San Francisco?</label>
             <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>

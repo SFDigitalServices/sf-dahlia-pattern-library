@@ -3,7 +3,7 @@ layout: center
 title: Application
 ---
 
-{{> headers.version-bar }}
+{{> headers.translate-bar }}
 {{> headers.version-bar }}
 {{> navigation.top-bar }}
 
@@ -11,7 +11,7 @@ title: Application
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
       {{> app-header }}
-      
+
       <form class="app-card form-card">
 
         <div class="app-inner leader border-bottom">
@@ -20,9 +20,9 @@ title: Application
 
           <div class="form-group text-center">
             <p class="t-small c-steel">We'll need at least one way to contact you after the application deadline.</p>
-         </div> 
+         </div>
         </div>
-        
+
         {{> forms.alert-box classes="invert no-margin" icon="warning" text="You'll need to resolve any errors before moving on."}}
 
         <div class="alert-notice alert">
@@ -43,7 +43,7 @@ title: Application
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group has-option error">
             <label class="form-label caps">Your email address</label>
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
@@ -56,7 +56,7 @@ title: Application
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group row has-option error">
             <label class="form-label caps">Your address</label>
             <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
@@ -89,7 +89,7 @@ title: Application
                 <small class="error">Please enter a zip</small>
               </div>
             </div>
-            
+
             <div class="form-item padding-bottom">
               {{> forms.checkbox text="I don't have an address" checked=true }}
             </div>
@@ -100,14 +100,14 @@ title: Application
           </div>
         </div>
 
-        <div class="app-inner inset border-bottom">  
+        <div class="app-inner inset border-bottom">
           <div class="form-group">
             <label class="form-label caps">What is your primary language?</label>
             {{> forms.select}}
           </div>
         </div>
 
-        <div class="app-inner inset">  
+        <div class="app-inner inset">
           <div class="form-group">
             <label class="form-label caps">Do you work in San Francisco?</label>
             <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>

@@ -1,4 +1,41 @@
 .translate-bar {
-  @include scut-padding(.5rem n);
+  @include scut-padding(.625rem n);
   min-height: 2.1875rem;
+
+  .translate-bar_notice {
+    @media #{$xlarge-up} {
+      padding-left: 0 !important;
+    }
+    @media #{$small-only} {
+      line-height: 1.25;
+      .margin-bottom--half {
+        margin-bottom: 10px !important;
+      }
+    }
+  }
+
+  &_message, &_learn {
+    @media #{$small-only} {
+      font-size: 0.75rem;
+    }
+  }
+
+  &_languages {
+    margin: 0;
+    > li {
+      margin-left: 2rem;
+    }
+    @media #{$small-only} {
+      > li {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  a {
+    color: $silver;
+    &.active, &:hover {
+      color: $white;
+    }
+  }
 }
