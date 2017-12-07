@@ -5,16 +5,6 @@
 .top-bar {
   .name-logo {
     display: flex;
-
-    a {
-      @media #{$large-up} {
-        height: 115px;
-      }
-    }
-  }
-
-  .name {
-    height: auto;
   }
 }
 

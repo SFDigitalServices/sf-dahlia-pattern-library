@@ -39,6 +39,16 @@
     }
   }
 
+  .welcome-links {
+    float: none;
+    display: inline-block;
+    margin: 0 auto 2rem;
+
+    a {
+      color: $white;
+    }
+  }
+
   @media print {
     @include responsive-text-size('micro');
   } 
