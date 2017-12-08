@@ -53,14 +53,25 @@
 }
 
 .f-item-heading {
-	font-family: $font-family;
+	font-family: $serif-font-family;
 	margin-top: 0;
 	margin-bottom: 0;
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 1;
+	color: $dark;
+
+	&.lead {
+		font-family: $alt-font-family;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+	}
 }
 
+h2.f-item-heading {
+
+}
 
 .f-item-controls {
 	display: inline-block;
@@ -93,6 +104,25 @@
 .f-item-notes {
 	font-size: 0.95rem;
 	margin-bottom: 2rem;
+	max-width: 45rem;
+
+	&.max-width {
+		max-width: 45rem;
+	}
+}
+
+.f-item-leader {
+	font-family: $alt-font-family;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+
+.f-item-intro {
+	font-family: $serif-font-family;
+	font-size: 1.25rem;
+	line-height: 1.625;
+	max-width: 45rem;
 }
 
 .f-icon-block {
