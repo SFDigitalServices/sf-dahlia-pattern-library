@@ -3,7 +3,7 @@ layout: center
 title: Account Settings
 ---
 
-{{> headers.translate-bar}}
+{{> headers.translate-bar links="true"}}
 {{> headers.version-bar }}
 {{> navigation.top-bar--account }}
 
@@ -24,7 +24,7 @@ title: Account Settings
             <h1 class="dash-title no-margin">Account Settings</h1>
           </header>
 
-          <div class="dash-card-inner inset border-bottom">
+          <div class="dash-card-inner full bg-dust border-bottom">
             <div class="form-group">
               <h2 class="form-label caps">Email Address</h2>
               {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}

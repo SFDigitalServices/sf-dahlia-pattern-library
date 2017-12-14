@@ -9,14 +9,11 @@
 
 .progress-nav_item {
   @include responsive-text-size('quark');
-  @include scut-padding(0 1rem);
   position: relative;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
   max-width: 20%;
-  padding-left: 1rem;
-  padding-right: 1rem;
   display: table-cell;
   float: none;
 

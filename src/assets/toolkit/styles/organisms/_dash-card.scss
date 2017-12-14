@@ -21,6 +21,13 @@
     }  
   }
 
+  &.full {
+    @media #{$medium-up} {
+      @include scut-padding(n 5rem);
+      @include scut-margin(n 0);
+    }  
+  }
+
   p:last-of-type {
     margin-bottom: 0;
   }
