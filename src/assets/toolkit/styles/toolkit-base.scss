@@ -1,0 +1,43 @@
+//
+// Toolkit styles
+//
+
+@import "settings";
+@import "vendors/normalize";
+
+// selectively include components
+@import
+   "../../vendor/foundation/scss/foundation/components/accordion",
+   "../../vendor/foundation/scss/foundation/components/alert-boxes",
+   "../../vendor/foundation/scss/foundation/components/block-grid",
+   "../../vendor/foundation/scss/foundation/components/breadcrumbs",
+   "../../vendor/foundation/scss/foundation/components/button-groups",
+   "../../vendor/foundation/scss/foundation/components/buttons",
+   "../../vendor/foundation/scss/foundation/components/clearing",
+   "../../vendor/foundation/scss/foundation/components/dropdown",
+   "../../vendor/foundation/scss/foundation/components/dropdown-buttons",
+   "../../vendor/foundation/scss/foundation/components/forms",
+   "../../vendor/foundation/scss/foundation/components/grid",
+   "../../vendor/foundation/scss/foundation/components/icon-bar",
+   "../../vendor/foundation/scss/foundation/components/inline-lists",
+   "../../vendor/foundation/scss/foundation/components/labels",
+   "../../vendor/foundation/scss/foundation/components/pagination",
+   "../../vendor/foundation/scss/foundation/components/panels",
+   "../../vendor/foundation/scss/foundation/components/progress-bars",
+   "../../vendor/foundation/scss/foundation/components/reveal",
+   "../../vendor/foundation/scss/foundation/components/sub-nav",
+   "../../vendor/foundation/scss/foundation/components/side-nav",
+   "../../vendor/foundation/scss/foundation/components/tables",
+   "../../vendor/foundation/scss/foundation/components/tabs",
+   "../../vendor/foundation/scss/foundation/components/tooltips",
+   "../../vendor/foundation/scss/foundation/components/top-bar",
+   "../../vendor/foundation/scss/foundation/components/visibility";
+
+@import "../../vendor/Scut/dist/scut";
+@import "vendors/angular-carousel";
+
+@import "utilities/all";
+
+@import "vendors-extensions/all";
+
+@import "atoms/all";
