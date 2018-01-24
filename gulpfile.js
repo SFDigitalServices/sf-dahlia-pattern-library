@@ -29,7 +29,9 @@ var config = {
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
+			toolkit_base: 'src/assets/toolkit/styles/toolkit-base.scss',
+			toolkit_lap: 'src/assets/toolkit/styles/toolkit-lap.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
@@ -73,7 +75,31 @@ gulp.task('styles:toolkit', function () {
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('styles:toolkit_base', function () {
+	gulp.src(config.src.styles.toolkit_base)
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(prefix('IE 9', 'last 4 versions'))
+		.pipe(gulpif(!config.dev, csso()))
+		.pipe(rename('toolkit-base.css'))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
+		.pipe(gulpif(config.dev, reload({stream:true})));
+});
+
+gulp.task('styles:toolkit_lap', function () {
+	gulp.src(config.src.styles.toolkit_lap)
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(prefix('IE 9', 'last 4 versions'))
+		.pipe(gulpif(!config.dev, csso()))
+		.pipe(rename('toolkit-lap.css'))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
+		.pipe(gulpif(config.dev, reload({stream:true})));
+});
+
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:toolkit_base', 'styles:toolkit_lap']);
 
 
 // scripts
@@ -210,6 +236,12 @@ gulp.task('serve', function () {
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
+
+	gulp.task('styles:toolkit:watch', ['styles:toolkit_base']);
+	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit_base:watch']);
+
+	gulp.task('styles:toolkit:watch', ['styles:toolkit_lap']);
+	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit_lap:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
 	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
