@@ -41,3 +41,15 @@
 @import "vendors-extensions/all";
 
 @import "atoms/all";
+
+@import "molecules/alerts";
+@import "molecules/inputs";
+@import "molecules/loading";
+@import "molecules/message";
+@import "molecules/name-logo";
+@import "molecules/nav-mobile";
+@import "molecules/top-bar";
+
+@import "organisms/center-body";
+@import "organisms/header";
+@import "organisms/modal";
