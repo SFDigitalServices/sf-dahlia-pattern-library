@@ -29,7 +29,9 @@ var config = {
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
+			toolkit_base: 'src/assets/toolkit/styles/toolkit-base.scss',
+			toolkit_lap: 'src/assets/toolkit/styles/toolkit-lap.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
@@ -63,7 +65,7 @@ gulp.task('styles:fabricator', function () {
 });
 
 gulp.task('styles:toolkit', function () {
-	gulp.src(config.src.styles.toolkit)
+	gulp.src([config.src.styles.toolkit, config.src.styles.toolkit_base, config.src.styles.toolkit_lap])
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('IE 9', 'last 4 versions'))

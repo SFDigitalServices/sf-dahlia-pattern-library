@@ -43,10 +43,15 @@ body {
 		}
 	}
 
-	h1 {
+	.f-item-leader {
 		font-family: $alt-font-family;
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
+
+		&.t-preview {
+			text-transform: none;
+			font-weight: normal;
+		}
 	}
 }
