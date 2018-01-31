@@ -73,6 +73,11 @@
 	}
 
 	.f-menu_accordion {
+		&.top-level {
+			li a {
+				padding-left: 2rem;
+			}
+		}
 		li a {
 			padding-left: 2.7rem;
 			box-sizing: border-box
