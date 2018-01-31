@@ -24,7 +24,7 @@
     }
   }
 
-  &.inner {
+  &.inner--4x {
     @include scut-padding(n 1rem);
 
     @media #{$medium-up} {

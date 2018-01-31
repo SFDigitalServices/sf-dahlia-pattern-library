@@ -9,11 +9,6 @@
     max-width: none;
     width: auto;
   }
-
-  &.row-wide {
-    max-width: rem-calc(1180);
-    width: rem-calc(1180);
-  }
 }
 
 .fixed-width.columns {

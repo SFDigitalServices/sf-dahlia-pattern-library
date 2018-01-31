@@ -5,15 +5,8 @@
 .top-bar {
   // Allows for full width navigation
   &.full-width {
-    @include scut-padding(n 1rem);
-
     @media #{$medium-up} {
-      @include scut-padding(n 2rem);
       height: auto;
-    }
-
-    @media #{$large-up} {
-      @include scut-padding(n 4rem);
     }
 
     .row {
@@ -30,37 +23,26 @@
     }
 
     .name-logo {
-      // Removes offset applied by version bar. Resolve with utility for version bar offset
       a {
         background-position: center center;
-
-        @media #{$medium-up} {
-          background-position: center 3rem;
-        }
       }
     }
 
-    // Allows for responsive left/right aligned nav-items
     .top-bar-section {
       width: auto;
-      float: right;
+    }
+  }
 
-      @media #{$large-up} {
-        float: right;
-      }
+  // Applies responsive padding
+  &.inner--4x {
+    @include scut-padding(n 1rem);
 
-      @media screen and (min-width: 75rem) {
-        float: none;
-      }
+    @media #{$medium-up} {
+      @include scut-padding(n 2rem);
     }
 
-    // Removes flex rules on default nav. Resolve with utility for flex nav menu
-    ul.nav-menu {
-      li {
-        @media #{$large-up} {
-          max-width: none;
-        }
-      }
+    @media #{$large-up} {
+      @include scut-padding(n 4rem);
     }
   }
 
@@ -86,6 +68,15 @@
       display: none;
     }
 
+    // Removes flex rules on default nav. Resolve with utility for flex nav menu
+    &.no-max-width-items {
+      > li {
+        @media #{$large-up} {
+          max-width: none;
+        }
+      }
+    }
+
     > li {
       background: transparent;
       width: auto;
@@ -98,8 +89,8 @@
       }
     }
 
-    li > a,
-    li:not(.has-form) a:not(.button) {
+    > li > a,
+    > li:not(.has-form) a:not(.button) {
       @include scut-padding(2.5rem 1rem 1rem 1rem);
       background: transparent;
       font-size: 0.75rem;
@@ -129,10 +120,6 @@
       border-bottom-width: 0;
       padding-top: 1rem;
       text-transform: capitalize;
-
-      &:hover {
-
-      }
     }
   }
 
