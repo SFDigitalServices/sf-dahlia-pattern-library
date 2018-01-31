@@ -3,11 +3,73 @@
 // Desktop navigation based on foundation top bar
 
 .top-bar {
+  // Allows for full width navigation
+  &.full-width {
+    @include scut-padding(n 1rem);
+
+    @media #{$medium-up} {
+      @include scut-padding(n 2rem);
+      height: auto;
+    }
+
+    @media #{$large-up} {
+      @include scut-padding(n 4rem);
+    }
+
+    .row {
+      max-width: none;
+    }
+
+    .title-area {
+      max-width: rem-calc(235);
+      height: 4.6875rem;
+    }
+
+    .name {
+      height: auto;
+    }
+
+    .name-logo {
+      // Removes offset applied by version bar. Resolve with utility for version bar offset
+      a {
+        background-position: center center;
+
+        @media #{$medium-up} {
+          background-position: center 3rem;
+        }
+      }
+    }
+
+    // Allows for responsive left/right aligned nav-items
+    .top-bar-section {
+      width: auto;
+      float: right;
+
+      @media #{$large-up} {
+        float: right;
+      }
+
+      @media screen and (min-width: 75rem) {
+        float: none;
+      }
+    }
+
+    // Removes flex rules on default nav. Resolve with utility for flex nav menu
+    ul.nav-menu {
+      li {
+        @media #{$large-up} {
+          max-width: none;
+        }
+      }
+    }
+  }
+
   .name-logo {
     display: flex;
   }
 }
 
+// Possible utility for flex menu items would make nav menu more reusbale
 .top-bar-section {
   width: 70%;
   left: auto !important;
@@ -24,7 +86,7 @@
       display: none;
     }
 
-    li {
+    > li {
       background: transparent;
       width: auto;
       height: 4.6875rem;
@@ -52,7 +114,8 @@
         font-size: 0.8125rem;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         border-bottom-color: $primary;
       }
     }
