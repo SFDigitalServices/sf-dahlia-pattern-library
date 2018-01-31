@@ -27,6 +27,9 @@
     li {
       background: transparent;
       width: auto;
+    }
+
+    > li {
       height: 4.6875rem;
       display: flex;
 
@@ -48,7 +51,7 @@
       align-self: flex-end;
 
       @media #{$large-up} {
-        @include scut-padding(n 1.5rem nn 1.5rem);
+        @include scut-padding(n 1.5rem n 1.5rem);
         font-size: 0.8125rem;
       }
 
@@ -75,6 +78,7 @@
 
   .dropdown-item {
     border-bottom: 1px solid $smoke;
+    float: none;
 
     &:last-of-type {
       border-bottom-width: 0;
