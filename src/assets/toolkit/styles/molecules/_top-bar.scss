@@ -34,7 +34,7 @@
   }
 
   // Applies responsive padding
-  &.inner--4x {
+  &.inner--3x {
     @include scut-padding(n 1rem);
 
     @media #{$medium-up} {
@@ -42,7 +42,7 @@
     }
 
     @media #{$large-up} {
-      @include scut-padding(n 4rem);
+      @include scut-padding(n 3rem);
     }
   }
 
