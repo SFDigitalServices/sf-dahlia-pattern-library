@@ -1,0 +1,15 @@
+---
+fabricator: true
+---
+
+<h1 data-f-toggle="labels" class="f-item-leader">Application Form</h1>
+
+<ul>
+{{#each views.application-form.items}}
+
+  <li>
+    <a target="_blank" href="application-form/{{@key}}.html" class="f-item-heading">{{name}}</a>
+  </li>
+
+{{/each}}
+</ul>
