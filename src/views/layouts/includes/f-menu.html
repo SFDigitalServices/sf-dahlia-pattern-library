@@ -10,16 +10,10 @@
 		</li>
 
 		{{#each materials}}
-			{{#compare name '==' 'Organisms' }}
-					<li class="f-menu_accordion_group">
-						<div class="control"></div>
-						<a href="{{@key}}.html" class="f-menu__heading f-menu_accordion_toggle">{{name}}</a>
-						<ul class="f-menu_accordion top-level">
-			{{else }}
-					<li>
-						<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
-						<ul>
-			{{/compare}}
+				<li class="f-menu_accordion_group">
+					<div class="control"></div>
+					<a href="{{name}}.html" class="f-menu__heading f-menu_accordion_toggle">{{name}}</a>
+					<ul class="f-menu_accordion top-level">
 
 				{{#each items}}
 					{{#if this.[data]}}
