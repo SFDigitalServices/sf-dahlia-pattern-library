@@ -40,21 +40,42 @@
 		</li>
 		{{/each}}
 
-		{{#each views}}
-		<li>
-			<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
-			<ul>
-				{{#each items}}
-				<li>
-					<a target="_blank" href="{{@../key}}/{{@key}}.html">{{name}}</a>
-				</li>
-				{{/each}}
+		<li class="f-menu_accordion_group">
+			<div class="control"></div>
+			<a href="{{name}}.html" class="f-menu__heading f-menu_accordion_toggle">Pages</a>
+			<ul class="f-menu_accordion top-level">
+			{{#each views}}
+					<li class="f-menu_accordion_group">
+						<div class="control"></div>
+						<a href="{{name}}.html" class="f-menu__heading f-menu_accordion_toggle">{{name}}</a>
+						<ul class="f-menu_accordion top-level">
+
+					{{#each items}}
+						{{#if this.[data]}}
+							<li>
+							<a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+						{{else}}
+							<li class="f-menu_accordion_group">
+								<div class="control"></div>
+								<a class="f-menu_accordion_toggle" href="{{@../key}}.html#{{@key}}">{{name}}</a>
+						{{/if}}
+
+							{{#unless this.[data]}}
+								<ul class="f-menu_accordion">
+									{{#each this.[items]}}
+										<li>
+											<a href="{{@../../key}}.html#{{@key}}">{{name}}</a>
+										</li>
+									{{/each}}
+								</ul>
+							{{/unless}}
+						</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
 			</ul>
 		</li>
-		{{/each}}
-
 	</ul>
-
-
 </div>
 <!-- /fabricator menu -->
