@@ -2,27 +2,46 @@ $td-reserved-light: lighten($splash-tint, 10%);
 $td-reserved-lighter: lighten($splash-tint, 11%);
 $td-reserved-inset: inset 3px 0px 0px 0px rgba(255,102,39,1);
 
+.th {
+  font-weight: $table-value-weight;
+  letter-spacing: .1rem;
+  border-bottom: 1px solid $primary;
+  text-transform: uppercase;
+
+  @media #{$small-only} {
+    padding-left: $table-padding-small;
+    padding-right: $table-padding-small;
+  }
+
+  @media print {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.td {
+    font-weight: $table-value-weight;
+
+    @media #{$small-only} {
+      padding-left: $table-padding-small;
+      padding-right: $table-padding-small;
+    }
+
+    @media print {
+      font-size: 12px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
 table {
   width: 100%;
 
   thead {
     tr {
       th {
-        font-weight: $table-value-weight;
-        letter-spacing: .1rem;
-        border-bottom: 1px solid $primary;
-        text-transform: uppercase;
-
-        @media #{$small-only} {
-          padding-left: $table-padding-small;
-          padding-right: $table-padding-small;
-        }
-
-        @media print {
-          font-size: 12px;
-          padding-top: 5px;
-          padding-bottom: 5px;
-        }
+        @extend .th;
       }
     }
   }
@@ -30,18 +49,7 @@ table {
   tbody {
     tr {
       td {
-        font-weight: $table-value-weight;
-
-        @media #{$small-only} {
-          padding-left: $table-padding-small;
-          padding-right: $table-padding-small;
-        }
-
-        @media print {
-          font-size: 12px;
-          padding-top: 5px;
-          padding-bottom: 5px;
-        }
+        @extend .td;
       }
     }
   }
@@ -72,11 +80,6 @@ table {
 
   // Remove zebra coloring and adds border
   &.plain {
-    tr th {
-      background-color: $dust;
-      border-bottom: 0;
-    }
-
     tr td {
       background: transparent;
       border-bottom: 1px solid $smoke;

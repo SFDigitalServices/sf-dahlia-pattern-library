@@ -1,0 +1,71 @@
+// react-table overrides
+.ReactTable {
+  @extend table;
+  border: $table-border-size !important;
+
+  .rt-th,
+  .rt-td {
+    white-space: normal;
+  }
+
+  // table header
+  .rt-thead .rt-tr .rt-th {
+    @extend .th;
+    background: $table-head-bg;
+    font-size: $table-head-font-size;
+    padding: 1.5rem 1rem;
+    text-align: left;
+  }
+
+  // table cells
+  .rt-tbody .rt-tr .rt-td {
+    @extend .td;
+    border-right: 0;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 400;
+    padding: 1rem 1rem;
+  }
+
+  // table rows
+  .rt-table .rt-tbody .rt-tr-group {
+    border-bottom: 0;
+  }
+
+  .rt-tbody .rt-tr {
+    &:hover {
+      &, & + .subcomponent {
+        background-color: $primary-tint;
+      }
+    }
+  }
+
+  // zebra striping
+  .rt-tr {
+    &.-odd {
+      &, & + .subcomponent {
+        background: $table-even-row-bg;
+      }
+    }
+
+    &.-even {
+      &, & + .subcomponent {
+        background: $white;
+      }
+    }
+  }
+
+  // table filters
+  .rt-thead.-filters {
+    border-bottom: 0;
+
+    .rt-tr .rt-th {
+      border-bottom: 0;
+      padding: 5px;
+    }
+
+    input {
+      margin-bottom: 0;
+    }
+  }
+}
