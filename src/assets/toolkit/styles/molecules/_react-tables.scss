@@ -1,7 +1,362 @@
-// react-table overrides
+
+// Custom react table css
+.ReactTable {
+  position: relative;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+   
+  * {
+    box-sizing: border-box;
+  }
+
+  .rt-table {
+    -webkit-box-flex: 1;
+    -ms-flex: auto 1;
+    flex: auto 1;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: auto;
+  }
+
+  .rt-thead {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .rt-thead .rt-th, 
+  .rt-thead .rt-td {
+    position: relative;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    transition: box-shadow .3s cubic-bezier(.175, .885, .32, 1.275);
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+
+  .rt-thead .rt-th.-sort-asc, .ReactTable .rt-thead .rt-td.-sort-asc {
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.6);
+  }
+
+  .rt-thead .rt-th.-sort-desc, .ReactTable .rt-thead .rt-td.-sort-desc {
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.6);
+  }
+
+  .rt-thead .rt-th.-cursor-pointer, .ReactTable .rt-thead .rt-td.-cursor-pointer {
+    cursor: pointer;
+  }
+
+  .rt-thead .rt-th:last-child, .ReactTable .rt-thead .rt-td:last-child {
+    border-right: 0;
+  }
+  
+  .rt-thead .rt-resizable-header {
+    overflow: visible;
+  }
+  
+  .rt-thead .rt-resizable-header:last-child {
+    overflow: hidden;
+  }
+  
+  .rt-thead .rt-resizable-header-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .rt-thead .rt-header-pivot:after, .ReactTable .rt-thead .rt-header-pivot:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .rt-tbody {
+    -webkit-box-flex: 99999;
+    -ms-flex: 99999 1 auto;
+    flex: 99999 1 auto;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .rt-tbody .rt-expandable {
+    cursor: pointer;
+  }
+
+  .rt-tr-group {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .rt-tr {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: inline-flex;
+  }
+
+  .rt-th, .ReactTable .rt-td {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: .3s ease;
+    transition-property: width, min-width, padding, opacity;
+  }
+
+  .rt-th.-hidden, .ReactTable .rt-td.-hidden {
+    width: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    opacity: 0 !important;
+  }
+
+  .rt-expander {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    color: transparent;
+    margin: 0 10px;
+  }
+
+  .rt-expander:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    border-left: 5.04px solid transparent;
+    border-right: 5.04px solid transparent;
+    border-top: 7px solid rgba(0, 0, 0, 0.8);
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+    cursor: pointer;
+  }
+
+  .rt-expander.-open:after {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  .rt-resizer {
+    display: inline-block;
+    position: absolute;
+    width: 36px;
+    top: 0;
+    bottom: 0;
+    right: -18px;
+    cursor: col-resize;
+    z-index: 10;
+  }
+
+  .rt-tfoot {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .-pagination {
+    z-index: 1;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 3px;
+  }
+
+  .-pagination input, .ReactTable .-pagination select {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 5px 7px;
+    font-size: inherit;
+    border-radius: 3px;
+    font-weight: normal;
+    outline: none;
+  }
+
+  .-pagination .-btn {
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 3px;
+    padding: 6px;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.1);
+    transition: all .1s ease;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .-pagination .-btn[disabled] {
+    opacity: .5;
+    cursor: default;
+  }
+
+  .-pagination .-btn:not([disabled]):hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+
+  .-pagination .-previous, .ReactTable .-pagination .-next {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+  }
+
+  .-pagination .-center {
+    -webkit-box-flex: 1.5;
+    -ms-flex: 1.5;
+    flex: 1.5;
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .-pagination .-pageInfo {
+    display: inline-block;
+    margin: 3px 10px;
+    white-space: nowrap;
+  }
+
+  .-pagination .-pageJump {
+    display: inline-block;
+}
+
+  .-pagination .-pageJump input {
+    width: 70px;
+    text-align: center;
+  }
+
+  .-pagination .-pageSizeOptions {
+    margin: 3px 10px;
+  }
+
+  .rt-noData {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all .3s ease;
+    z-index: 1;
+    pointer-events: none;
+    padding: 20px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .-loading {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all .3s ease;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .-loading > div {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-52%);
+    transition: all .3s cubic-bezier(.25, .46, .45, .94);
+}
+
+  .-loading.-active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+  }
+
+  .-loading.-active > div {
+    transform: translateY(50%);
+  }
+
+  .rt-resizing .rt-th, 
+  .rt-resizing .rt-td {
+    transition: none !important;
+    cursor: col-resize;
+    user-select: none;
+  }
+}
+
+// react-table style overrides
 .ReactTable {
   @extend table;
-  border: $table-border-size !important;
+  border: $table-border-size;
 
   .rt-th,
   .rt-td {
@@ -14,14 +369,13 @@
     background: $table-head-bg;
     font-size: $table-head-font-size;
     padding: 1.5rem 1rem;
-    text-align: left;
   }
 
   // table cells
   .rt-tbody .rt-tr .rt-td {
     @extend .td;
     border-right: 0;
-    cursor: pointer;
+    cursor: pointer; // should be a sub class
     font-size: .875rem;
     font-weight: 400;
     padding: 1rem 1rem;
@@ -29,7 +383,7 @@
 
   // table rows
   .rt-table .rt-tbody .rt-tr-group {
-    border-bottom: 0;
+    // border-bottom: 0;
   }
 
   .rt-tbody .rt-tr {
