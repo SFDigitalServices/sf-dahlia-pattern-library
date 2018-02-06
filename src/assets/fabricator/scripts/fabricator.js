@@ -367,11 +367,11 @@ fabricator.setInitialMenuState = function () {
 
 };
 
-/** 
+/**
  * Open/Close menu accordions on click
  */
 fabricator.accordions = function() {
-	
+
 	for(var i = 0; i < fabricator.dom.menuAccordions.length; i++) {
 
 		fabricator.dom.menuAccordions[i].addEventListener('click', function (e) {
@@ -388,9 +388,6 @@ fabricator.accordions = function() {
 		if(classList.toString().indexOf('is-open') > 0) {
 			which.currentTarget.parentNode.classList.remove('is-open');
 		} else {
-			for(var a = 0; a < fabricator.dom.menuAccordions.length; a++) {
-				fabricator.dom.menuAccordions[a].parentNode.classList.remove('is-open');
-			}
 			which.currentTarget.parentNode.classList.add('is-open');
 		}
 	};

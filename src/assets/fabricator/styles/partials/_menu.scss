@@ -106,13 +106,13 @@
 			}
 		}
 		&.is-open {
-			.control {
+			>.control {
 				left: 12px;
 				&:after {
 					content: '-';
 				}
 			}
-			.f-menu_accordion {
+			>.f-menu_accordion {
 				max-height: 1200px;
 			}
 		}
