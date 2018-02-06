@@ -2,12 +2,7 @@
 // Custom react table css
 .ReactTable {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
    
   * {
@@ -15,18 +10,9 @@
   }
 
   .rt-table {
-    -webkit-box-flex: 1;
-    -ms-flex: auto 1;
     flex: auto 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     width: 100%;
     border-collapse: collapse;
@@ -34,19 +20,9 @@
   }
 
   .rt-thead {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
 
@@ -104,15 +80,8 @@
   }
 
   .rt-tbody {
-    -webkit-box-flex: 99999;
-    -ms-flex: 99999 1 auto;
     flex: 99999 1 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     overflow: auto;
   }
@@ -122,34 +91,19 @@
   }
 
   .rt-tr-group {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
   }
 
   .rt-tr {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
   }
 
   .rt-th, 
   .rt-td {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 0px;
     flex: 1 0 0;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -182,7 +136,6 @@
     height: 0;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
     transform: translate(-50%, -50%) rotate(-90deg);
     border-left: 5.04px solid transparent;
     border-right: 5.04px solid transparent;
@@ -192,7 +145,6 @@
   }
 
   .rt-expander.-open:after {
-    -webkit-transform: translate(-50%, -50%) rotate(0);
     transform: translate(-50%, -50%) rotate(0);
   }
 
@@ -208,30 +160,16 @@
   }
 
   .rt-tfoot {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .-pagination {
     z-index: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 3px;
   }
@@ -248,8 +186,6 @@
   }
 
   .-pagination .-btn {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     display: block;
     width: 100%;
@@ -277,31 +213,18 @@
 
   .-pagination .-previous,
   .-pagination .-next {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
     flex: 1;
     text-align: center;
   }
 
   .-pagination .-center {
-    -webkit-box-flex: 1.5;
-    -ms-flex: 1.5;
     flex: 1.5;
     text-align: center;
     margin-bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
@@ -329,7 +252,6 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.8);
     transition: all .3s ease;
@@ -362,7 +284,6 @@
     left: 0;
     font-size: 15px;
     color: rgba(0, 0, 0, 0.6);
-    -webkit-transform: translateY(-52%);
     transform: translateY(-52%);
     transition: all .3s cubic-bezier(.25, .46, .45, .94);
 }
@@ -374,7 +295,6 @@
   }
 
   .-loading.-active > div {
-    -webkit-transform: translateY(50%);
     transform: translateY(50%);
   }
 
@@ -382,9 +302,6 @@
   .rt-resizing .rt-td {
     transition: none !important;
     cursor: col-resize;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
 }
