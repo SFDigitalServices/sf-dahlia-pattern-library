@@ -317,7 +317,8 @@
   }
 
   // table header
-  .rt-thead .rt-tr .rt-th {
+  .rt-thead .rt-th, 
+  .rt-thead .rt-td {
     @extend .th;
     background: $table-head-bg;
     font-size: $table-head-font-size;
@@ -325,9 +326,8 @@
   }
 
   // table cells
-  .rt-tbody .rt-tr .rt-td {
+  .rt-tbody .rt-td {
     @extend .td;
-    border-right: 0;
     cursor: pointer;
     font-size: .875rem;
     font-weight: 400;
@@ -338,7 +338,7 @@
   .rt-tbody .rt-tr {
     &:hover {
       &, & + .subcomponent {
-        background-color: $primary-tint;
+        background-color: lighten($primary-tint, 2%);
       }
     }
   }

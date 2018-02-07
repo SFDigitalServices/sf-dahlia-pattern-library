@@ -164,6 +164,16 @@ table {
     }
   }
 
+  // align text in table cell right
+  &.td-col-right {
+    text-align: right;
+  }
+
+  // align text in table cell left
+  &.td-col-left {
+    text-align: left;
+  }
+
   // Smaller tables with dark headers and centered content
   &.table-results {
     tr th {
@@ -345,23 +355,3 @@ table {
     }
   }
 }
-
-// // Result set
-// // List psuedo table
-// .result-set {
-//   width: 100%;
-//   overflow: hidden;
-
-//   li {
-//     overflow: hidden;
-//     padding: .5rem;
-//     border-bottom: 1px solid $smoke;
-//     position: relative;
-//     width: 100%;
-
-//     .right {
-//       display: inline-block;
-//       width: 50%;
-//     }
-//   }
-// }
