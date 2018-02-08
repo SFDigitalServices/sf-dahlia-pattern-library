@@ -10,6 +10,20 @@
     z-index: 103;
   }
 
+  // When there is no version bar present
+  &.no-offset {
+    @media #{$medium-up} {
+      margin-top: 0 !important;
+    }
+
+    a {
+      @media #{$medium-up} {
+        padding-bottom: rem-calc(4) !important;
+        padding-top: rem-calc(4) !important;
+      }
+    }
+  }
+
   a {
     // @include scut-image-replace;
     @include image-replace("../images/logo-portal.png");

@@ -3,11 +3,55 @@
 // Desktop navigation based on foundation top bar
 
 .top-bar {
+  // Allows for full width navigation
+  &.full-width {
+    @media #{$medium-up} {
+      height: auto;
+    }
+
+    .row {
+      max-width: none;
+    }
+
+    .title-area {
+      max-width: rem-calc(235);
+      height: 4.6875rem;
+    }
+
+    .name {
+      height: auto;
+    }
+
+    .name-logo {
+      a {
+        background-position: center center;
+      }
+    }
+
+    .top-bar-section {
+      width: auto;
+    }
+  }
+
+  // Applies responsive padding
+  &.inner--3x {
+    @include scut-padding(n 1rem);
+
+    @media #{$medium-up} {
+      @include scut-padding(n 2rem);
+    }
+
+    @media #{$large-up} {
+      @include scut-padding(n 3rem);
+    }
+  }
+
   .name-logo {
     display: flex;
   }
 }
 
+// Possible utility for flex menu items would make nav menu more reusbale
 .top-bar-section {
   width: 70%;
   left: auto !important;
@@ -24,9 +68,21 @@
       display: none;
     }
 
-    li {
+    // Removes flex rules on default nav. Resolve with utility for flex nav menu
+    &.no-max-width-items {
+      > li {
+        @media #{$large-up} {
+          max-width: none;
+        }
+      }
+    }
+
+    > li {
       background: transparent;
       width: auto;
+    }
+
+    > li {
       height: 4.6875rem;
       display: flex;
 
@@ -36,8 +92,8 @@
       }
     }
 
-    li > a,
-    li:not(.has-form) a:not(.button) {
+    > li > a,
+    > li:not(.has-form) a:not(.button) {
       @include scut-padding(2.5rem 1rem 1rem 1rem);
       background: transparent;
       font-size: 0.75rem;
@@ -48,11 +104,12 @@
       align-self: flex-end;
 
       @media #{$large-up} {
-        @include scut-padding(n 1.5rem nn 1.5rem);
+        @include scut-padding(n 1.5rem n 1.5rem);
         font-size: 0.8125rem;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         border-bottom-color: $primary;
       }
     }
@@ -66,15 +123,12 @@
       border-bottom-width: 0;
       padding-top: 1rem;
       text-transform: capitalize;
-
-      &:hover {
-
-      }
     }
   }
 
   .dropdown-item {
     border-bottom: 1px solid $smoke;
+    float: none;
 
     &:last-of-type {
       border-bottom-width: 0;

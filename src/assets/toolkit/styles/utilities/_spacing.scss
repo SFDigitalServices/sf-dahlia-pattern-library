@@ -68,6 +68,36 @@ $units: (
         "left": true
       )
     ),
+    "three-times": (
+      "suffix": "--3x",
+      "media-query-max": $units__default-breakpoint, 
+      "unit--media-query-max": $default-unit, 
+      "media-query-min": $units__default-breakpoint,
+      "unit--media-query-min": $default-unit * 3,
+      "unit": $default-unit * 3,
+      "variations": (
+        "base": true,
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+      )
+    ),
+    "four-times": (
+      "suffix": "--4x",
+      "media-query-max": $units__default-breakpoint, 
+      "unit--media-query-max": $default-unit, 
+      "media-query-min": $units__default-breakpoint,
+      "unit--media-query-min": $default-unit * 4,
+      "unit": $default-unit * 4,
+      "variations": (
+        "base": true,
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+      )
+    ),
     "one-half-times": (
       "suffix": "--3halves",
       "media-query-max": $units__default-breakpoint, 
