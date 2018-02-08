@@ -10,24 +10,26 @@
 		</li>
 
 		{{#each materials}}
-		<li>
-			<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
-			<ul>
+				<li class="f-menu_accordion_group">
+					<div class="control"></div>
+					<a href="{{name}}.html" class="f-menu__heading f-menu_accordion_toggle">{{name}}</a>
+					<ul class="f-menu_accordion top-level">
+
 				{{#each items}}
 					{{#if this.[data]}}
 						<li>
-						<a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+							<a href="{{../name}}.html#{{@key}}">{{name}}</a>
 					{{else}}
 						<li class="f-menu_accordion_group">
 							<div class="control"></div>
-							<a class="f-menu_accordion_toggle" href="{{@../key}}.html#{{@key}}">{{name}}</a>
+							<a class="f-menu_accordion_toggle" href="{{../name}}.html#{{@key}}">{{name}}</a>
 					{{/if}}
 
 						{{#unless this.[data]}}
 							<ul class="f-menu_accordion">
 								{{#each this.[items]}}
 									<li>
-										<a href="{{@../../key}}.html#{{@key}}">{{name}}</a>
+										<a href="{{../../name}}.html#{{@key}}">{{name}}</a>
 									</li>
 								{{/each}}
 							</ul>
@@ -38,27 +40,32 @@
 		</li>
 		{{/each}}
 
-		{{#each views}}
-		<li>
-			<a href="{{@key}}.html" class="f-menu__heading">{{name}}</a>
-			<ul>
-				{{#each items}}
-				<li>
-					<a href="{{@../key}}/{{@key}}.html">{{name}}</a>
-				</li>
-				{{/each}}
-			</ul>
-		</li>
-		{{/each}}
+		<li class="f-menu_accordion_group">
+			<div class="control"></div>
+			<a class="f-menu__heading f-menu_accordion_toggle">Pages</a>
+			<ul class="f-menu_accordion top-level">
 
-		<li>
-			<a href="docs.html" class="f-menu__heading">Docs</a>
-			<ul>
-				{{#each docs}}
-				<li>
-					<a href="docs.html#{{@key}}">{{name}}</a>
-				</li>
-				{{/each}}
+			{{#each views}}
+					<li class="f-menu_accordion_group">
+						<div class="control"></div>
+						<a class="f-menu__heading f-menu_accordion_toggle">{{name}}</a>
+						<ul class="f-menu_accordion top-level">
+
+					{{#each items}}
+							<li>
+								<a target="_blank" href="{{@../key}}/{{@key}}.html">{{name}}</a>
+								<ul class="f-menu_accordion">
+									{{#each this.[items]}}
+										<li>
+											<a target="_blank" href="{{@../key}}/{{@key}}.html">{{name}} item</a>
+										</li>
+									{{/each}}
+								</ul>
+						</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
 			</ul>
 		</li>
 

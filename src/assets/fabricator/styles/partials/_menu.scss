@@ -73,6 +73,11 @@
 	}
 
 	.f-menu_accordion {
+		&.top-level {
+			li a {
+				padding-left: 2rem;
+			}
+		}
 		li a {
 			padding-left: 2.7rem;
 			box-sizing: border-box
@@ -101,13 +106,13 @@
 			}
 		}
 		&.is-open {
-			.control {
+			>.control {
 				left: 12px;
 				&:after {
 					content: '-';
 				}
 			}
-			.f-menu_accordion {
+			>.f-menu_accordion {
 				max-height: 1200px;
 			}
 		}
