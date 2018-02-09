@@ -1,0 +1,103 @@
+.table-pagination {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  background: $mist;
+  padding: 1rem;
+
+  input,
+  select {
+    @media #{$medium-up} {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.table-pagination button {
+  @extend .tertiary;
+  width: 100%;
+
+  @media #{$medium-up} {
+    margin-bottom: 0;
+  }
+}
+
+.table-pagination_action {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+
+  @media #{$medium-up} {
+    flex-basis: 8.5rem;
+  }
+}
+
+.table-pagination_center {
+  flex: 1.5;
+  text-align: center;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @media #{$medium-up} {
+    justify-content: flex-end;
+  }
+}
+
+.table-pagination_pageinfo {
+  display: inline-block;
+  white-space: nowrap;
+  align-self: center;
+
+  @media #{$medium-up} {
+    margin-right: 2rem;
+  }
+}
+
+.table-pagination_pagejump {
+  display: inline-block;
+  align-self: center;
+
+  input {
+    width: 5rem;
+  }
+}
+
+.table-pagination_pagesize {
+  @media #{$medium-up} {
+    margin-right: 2rem;
+  }
+}
+
+.ReactTable {
+  .-pagination {
+    @extend .table-pagination;
+  }
+
+  .-pagination .-previous,
+  .-pagination .-next {
+    @extend .table-pagination_action;
+  }
+
+  .-pagination .-center {
+    @extend .table-pagination_center;
+  }
+
+  .-pagination .-pageInfo {
+    @extend .table-pagination_pageinfo;
+  }
+
+  .-pagination .-pageJump {
+    @extend .table-pagination_pagejump;
+  }
+
+  .-pagination .-pageSizeOptions {
+    @extend .table-pagination_pagesize;
+  }
+}
