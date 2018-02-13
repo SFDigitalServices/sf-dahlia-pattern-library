@@ -120,6 +120,10 @@ button,
     @include custom-button-light($cb-light-color: $alert);
   }
 
+  &.alert-fill {
+    @include custom-button-dark($cb-dark-color: $alert);
+  }
+
   &.deep {
     @include custom-button-dark($cb-dark-color: $deep);
   }

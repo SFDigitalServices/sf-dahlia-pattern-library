@@ -4,6 +4,7 @@ modifiers:
   secondary:
   tertiary:
   alert:
+  alert-fill:
   tint:
   deep:
   ghost-white:
