@@ -176,16 +176,18 @@ children:
     attr: six
 
 pages:
-  - name: "5 items"
-    attr: one
-  - name: "10 items"
-    attr: two
-  - name: "15 items"
-    attr: three
-  - name: "20 items"
-    attr: four
-  - name: "50 items"
+  - name: "5 rows"
     attr: five
+  - name: "10 rows"
+    attr: ten
+  - name: "15 rows"
+    attr: fifteen
+  - name: "20 rows"
+    attr: twenty
+  - name: "50 rows"
+    attr: fifty
+  - name: "100 rows"
+    attr: hundred
 
 proof:
   - name: Letter from employer verifying employment in San Francisco with at least 75% of working hours in the City
