@@ -36,6 +36,7 @@
 }
 
 .table-pagination_center {
+  @include type-weight(semi);
   flex: 1.5;
   text-align: center;
   margin-bottom: 0;
@@ -44,34 +45,46 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  font-size: .875rem;
 
   @media #{$medium-up} {
     justify-content: flex-end;
   }
 }
 
-.table-pagination_pageinfo {
+.table-pagination_pageinfo,
+.table-pagination_pagesize {
   display: inline-block;
   white-space: nowrap;
   align-self: center;
 
   @media #{$medium-up} {
-    margin-right: 2rem;
+    margin-right: 1.5rem;
+  }
+}
+
+.table-pagination_pagejump,
+.table-pagination_pagerows {
+  display: inline-block;
+  align-self: center;
+
+  @media #{$medium-up} {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+}
+
+.table-pagination_pagerows {
+  select,
+  input {
+    width: 6.75rem;
   }
 }
 
 .table-pagination_pagejump {
-  display: inline-block;
-  align-self: center;
-
+  select,
   input {
-    width: 5rem;
-  }
-}
-
-.table-pagination_pagesize {
-  @media #{$medium-up} {
-    margin-right: 2rem;
+    // width: 5rem;
   }
 }
 
