@@ -1,3 +1,5 @@
+$table-pagination-breakpoint: em-calc(860);
+
 .table-pagination {
   z-index: 1;
   display: flex;
@@ -10,7 +12,7 @@
 
   input,
   select {
-    @media #{$medium-up} {
+    @media only screen and (min-width: $table-pagination-breakpoint) {
       margin-bottom: 0;
     }
   }
@@ -20,7 +22,7 @@
   @extend .tertiary;
   width: 100%;
 
-  @media #{$medium-up} {
+  @media only screen and (min-width: $table-pagination-breakpoint) {
     margin-bottom: 0;
   }
 }
@@ -30,8 +32,12 @@
   text-align: center;
   align-items: center;
 
-  @media #{$medium-up} {
+  @media only screen and (min-width: $table-pagination-breakpoint) {
     flex-basis: 8.5rem;
+  }
+
+  &:last-of-type button {
+    margin-bottom: 0;
   }
 }
 
@@ -47,7 +53,7 @@
   justify-content: space-between;
   font-size: .875rem;
 
-  @media #{$medium-up} {
+  @media only screen and (min-width: $table-pagination-breakpoint) {
     justify-content: flex-end;
   }
 }
@@ -58,7 +64,7 @@
   white-space: nowrap;
   align-self: center;
 
-  @media #{$medium-up} {
+  @media only screen and (min-width: $table-pagination-breakpoint) {
     margin-right: 1.5rem;
   }
 }
@@ -68,7 +74,7 @@
   display: inline-block;
   align-self: center;
 
-  @media #{$medium-up} {
+  @media only screen and (min-width: $table-pagination-breakpoint) {
     margin-left: .5rem;
     margin-right: .5rem;
   }
