@@ -333,6 +333,10 @@ hr {
   }
 }
 
+.t-leading-1 {
+  letter-spacing: $small-header-spacing;
+}
+
 // Fancy header styles
 @mixin h-caps($border-bottom: 0) {
   @include type-weight(bold);
