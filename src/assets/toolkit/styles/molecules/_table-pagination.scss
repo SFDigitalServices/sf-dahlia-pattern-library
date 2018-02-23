@@ -1,0 +1,121 @@
+$table-pagination-breakpoint: em-calc(860);
+
+.table-pagination {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  background: $mist;
+  padding: 1rem;
+
+  input,
+  select {
+    @media only screen and (min-width: $table-pagination-breakpoint) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.table-pagination button {
+  @extend .tertiary;
+  width: 100%;
+
+  @media only screen and (min-width: $table-pagination-breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+.table-pagination_action {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+
+  @media only screen and (min-width: $table-pagination-breakpoint) {
+    flex-basis: 8.5rem;
+  }
+
+  &:last-of-type button {
+    margin-bottom: 0;
+  }
+}
+
+.table-pagination_center {
+  @include type-weight(semi);
+  flex: 1.5;
+  text-align: center;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .875rem;
+
+  @media only screen and (min-width: $table-pagination-breakpoint) {
+    justify-content: flex-end;
+  }
+}
+
+.table-pagination_pageinfo,
+.table-pagination_pagesize {
+  display: inline-block;
+  white-space: nowrap;
+  align-self: center;
+
+  @media only screen and (min-width: $table-pagination-breakpoint) {
+    margin-right: 1.5rem;
+  }
+}
+
+.table-pagination_pagejump,
+.table-pagination_pagerows {
+  display: inline-block;
+  align-self: center;
+
+  @media only screen and (min-width: $table-pagination-breakpoint) {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+}
+
+.table-pagination_pagerows {
+  select,
+  input {
+    width: 6.75rem;
+  }
+}
+
+.table-pagination_pagejump {
+  input {
+    width: 5rem;
+  }
+}
+
+.ReactTable {
+  .-pagination {
+    @extend .table-pagination;
+  }
+
+  .-pagination .-previous,
+  .-pagination .-next {
+    @extend .table-pagination_action;
+  }
+
+  .-pagination .-center {
+    @extend .table-pagination_center;
+  }
+
+  .-pagination .-pageInfo {
+    @extend .table-pagination_pageinfo;
+  }
+
+  .-pagination .-pageJump {
+    @extend .table-pagination_pagejump;
+  }
+
+  .-pagination .-pageSizeOptions {
+    @extend .table-pagination_pagesize;
+  }
+}

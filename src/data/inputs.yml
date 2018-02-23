@@ -175,6 +175,34 @@ children:
   - name: "6"
     attr: six
 
+pages:
+  - name: "1"
+    attr: one
+  - name: "2"
+    attr: two
+  - name: "3"
+    attr: three
+  - name: "4"
+    attr: four
+  - name: "5"
+    attr: five
+  - name: "6"
+    attr: six
+
+rows:
+  - name: "5 rows"
+    attr: five
+  - name: "10 rows"
+    attr: ten
+  - name: "15 rows"
+    attr: fifteen
+  - name: "20 rows"
+    attr: twenty
+  - name: "50 rows"
+    attr: fifty
+  - name: "100 rows"
+    attr: hundred
+
 proof:
   - name: Letter from employer verifying employment in San Francisco with at least 75% of working hours in the City
     attr: one
