@@ -45,7 +45,7 @@ $button-radius: rem-calc(4);
     background-color: darken($cb-light-color, 10%);
   }
 
-  &.disabled {
+  &.disabled, &[disabled] {
     background-color: $white;
     border-color: $cb-light-color;
     color: $cb-light-color;
@@ -86,7 +86,7 @@ $button-radius: rem-calc(4);
     background-color: darken($cb-dark-color, 10%);
   }
 
-  &.disabled {
+  &.disabled, &[disabled] {
     background-color: $cb-dark-color;
     border-color: $cb-dark-color;
     color: $white;
