@@ -148,6 +148,23 @@ button,
     }
   }
 
+  &.text-only {
+    background: transparent;
+    border-width: 0;
+    color: $primary;
+    padding: 0;
+    margin-bottom: 0;
+
+    &:focus {
+      // outline: none;
+      color: $dark;
+
+      svg use {
+        fill: $dark;
+      }
+    }
+  }
+
   // Primary button with white background
   &.ghost-white {
     @extend .secondary;

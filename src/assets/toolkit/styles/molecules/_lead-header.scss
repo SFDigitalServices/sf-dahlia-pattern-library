@@ -40,6 +40,13 @@
       padding: 2rem 0 1rem;
     }
   }
+
+  &.has-breadcrumbs {
+    .breadcrumbs {
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .lead-header_title {
@@ -55,28 +62,30 @@
   @media #{$medium-up} {
     @include type-weight(black);
   }
-}
 
-.lead-header_title--small {
-  @extend .lead-header_title;
-  @include responsive-text-size('gamma');
-  margin-bottom: .5rem;
+  &.small {
+    @include responsive-text-size('gamma');
+    margin-bottom: .5rem;
+  }
 }
 
 .lead-header_subtitle {
-  
-}
-
-.lead-header_subtitle--caps {
-  @include responsive-text-size('small');
-  font-family: $alt-font-family;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  &.caps {
+    @include responsive-text-size('small');
+    font-family: $alt-font-family;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 }
 
 .lead-header_group {
   position: relative;
   z-index: 2;
+}
+
+.lead-header_secondary-action {
+  float: right;
+  text-align: right;
 }
 
 // Offset modifier for form cards

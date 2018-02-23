@@ -1,10 +1,14 @@
-<header class="lead-header bg-dust short {{default classes ''}}">
+<header class="lead-header bg-dust short has-breadcrumbs {{default classes ''}}">
   <div class="row">
     <div class="large-12 columns">
+      {{> navigation.breadcrumbs }}
       <hgroup class="lead-header_group">
-        <h1 class="lead-header_title--small c-{{default color 'oil'}}">{{default title 'Page Header'}}</h1>
-        <div class="medium-8 columns no-padding show-for-medium-up">
-          <p class="lead-header_subtitle--caps c-{{default color 'oil'}}">{{default description "Enter details about household size and income and we'll highlight properties you might be eligible for"}}</p>
+        <h1 class="lead-header_title small c-{{default color 'oil'}}">{{default title 'Page Header'}}</h1>
+        <div class="medium-8 columns no-padding">
+          <p class="lead-header_subtitle caps c-{{default color 'oil'}}">{{default description "21 Clarence Place, San Francisco CA"}}</p>
+        </div>
+        <div class="medium-4 columns">
+          <span class="lead-header_secondary-action">{{> buttons.link classes="text-only" }}</span>
         </div>
       </hgroup>
     </div>
