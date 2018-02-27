@@ -95,6 +95,11 @@
 .lead-header_secondary-action {
   float: right;
   text-align: right;
+
+  a {
+    @include type-weight(semi);
+    @include responsive-text-size('small');
+  }
 }
 
 // Offset modifier for form cards

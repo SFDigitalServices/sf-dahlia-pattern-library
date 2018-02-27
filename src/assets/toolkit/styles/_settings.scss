@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -590,7 +592,7 @@ $crumb-font-transform: normal;
 
 // We use these to control the slash between breadcrumbs
 // $crumb-slash-color: $base;
-$crumb-slash: "›";
+$crumb-slash: "\203A"; 
 
 // 05. Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
