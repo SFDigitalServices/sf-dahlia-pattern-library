@@ -291,47 +291,25 @@ button,
 
   // Icon button styles
   &.has-icon {
-    padding-left: 1rem;
-
-    .ui-icon {
-      margin-right: .625rem;
-    }
-  }
-
-  &.has-icon--right {
-    padding-right: 2.5rem;
+    padding-left: 3.5em;
+    padding-right: 2em;
 
     .ui-icon {
       @include scut-center-transform(y);
-      margin-right: 0;
-      right: 1rem;
+      left: 1.25em;
     }
   }
 
-  &.has-icon,
   &.has-icon--right {
-    svg use {
-      fill: $primary;
-    }
+    padding-right: 3.5em;
+    padding-left: 2em;
 
-    &.primary svg use {
-      fill: $white;
+    .ui-icon {
+      @include scut-center-transform(y);
+      right: 1.25em;
+      left: auto;
     }
-
-    &:hover {
-      svg use {
-        fill: $white;
-      }
-    }
-
-    &.disabled {
-      &:hover {
-        svg use {
-          fill: $primary;
-        }
-      }  
-    }
-  }  
+  }
 }
 
 // Adds radius to submits
