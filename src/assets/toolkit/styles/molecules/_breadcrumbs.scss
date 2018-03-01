@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+//
+// Breadcrumbs
+//
+
+.breadcrumbs {
+  letter-spacing: 1px;
+}
+
+.breadcrumbs > *:before {
+  font-size: 1.25rem;
+}
