@@ -288,28 +288,6 @@ button,
       }
     }
   }
-
-  // Icon button styles
-  &.has-icon {
-    padding-left: 3.5em;
-    padding-right: 2em;
-
-    .ui-icon {
-      @include scut-center-transform(y);
-      left: 1.25em;
-    }
-  }
-
-  &.has-icon--right {
-    padding-right: 3.5em;
-    padding-left: 2em;
-
-    .ui-icon {
-      @include scut-center-transform(y);
-      right: 1.25em;
-      left: auto;
-    }
-  }
 }
 
 // Adds radius to submits

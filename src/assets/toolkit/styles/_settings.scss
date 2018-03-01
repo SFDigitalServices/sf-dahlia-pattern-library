@@ -241,6 +241,16 @@ $btn-colors: (
   ebony: $ebony
 );
 
+$state-colors: (
+  approved: $primary,
+  processing: $aluminum,
+  withdrawn: $warn,
+  disqualified: $alert,
+  leased: $success,
+  appealed: $royal,
+  waitlisted: $attention
+);
+
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
@@ -700,7 +710,7 @@ $btn-primary-border:    darken($base-button-bg, 5%);
 // $f-dropdown-max-height: none;
 
 // Used for bottom position
-// $f-dropdown-margin-top: 2px;
+$f-dropdown-margin-top: 0;
 
 // Used for right position
 // $f-dropdown-margin-left: $f-dropdown-margin-top;
@@ -717,20 +727,20 @@ $btn-primary-border:    darken($base-button-bg, 5%);
 // We use this to set the border styles for dropdowns.
 // $f-dropdown-border-style: solid;
 // $f-dropdown-border-width: 1px;
-// $f-dropdown-border-color: scale-color($white, $lightness: -20%);
+$f-dropdown-border-color: $iron;
 
 // We use these to style the triangle pip.
-// $f-dropdown-triangle-size: 6px;
-// $f-dropdown-triangle-color: $white;
-// $f-dropdown-triangle-side-offset: 10px;
+$f-dropdown-triangle-size: 0;
+$f-dropdown-triangle-color: none;
+$f-dropdown-triangle-side-offset: 0;
 
 // We use these to control styles for the list elements.
 // $f-dropdown-list-style: none;
 // $f-dropdown-font-color: $charcoal;
-// $f-dropdown-font-size: rem-calc(14);
-// $f-dropdown-list-padding: rem-calc(5, 10);
-// $f-dropdown-line-height: rem-calc(18);
-// $f-dropdown-list-hover-bg: $smoke;
+$f-dropdown-font-size: rem-calc(14);
+$f-dropdown-list-padding: rem-calc(12);
+$f-dropdown-line-height: rem-calc(24);
+$f-dropdown-list-hover-bg: $snow;
 // $dropdown-mobile-default-float: 0;
 
 // We use this to control the styles for when the dropdown has custom content.
@@ -746,14 +756,14 @@ $btn-primary-border:    darken($base-button-bg, 5%);
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to set the color of the pip in dropdown buttons
-// $dropdown-button-pip-color: $white;
-// $dropdown-button-pip-color-alt: $oil;
+$dropdown-button-pip-color: transparent;
+$dropdown-button-pip-color-alt: transparent;
 
 // We use these to set the size of the pip in dropdown buttons
-// $button-pip-tny: rem-calc(6);
-// $button-pip-sml: rem-calc(7);
-// $button-pip-med: rem-calc(9);
-// $button-pip-lrg: rem-calc(11);
+$button-pip-tny: rem-calc(5);
+$button-pip-sml: rem-calc(6);
+$button-pip-med: rem-calc(8);
+$button-pip-lrg: rem-calc(10);
 
 // We use these to style tiny dropdown buttons
 // $dropdown-button-padding-tny: $button-pip-tny * 7;
