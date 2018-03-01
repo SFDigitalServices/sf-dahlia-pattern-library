@@ -1,27 +1,6 @@
-button,
-.button {
-  // Icon button styles
-  &.has-icon {
-    padding-left: 3.5em;
-    padding-right: 2em;
-
-    .ui-icon {
-      @include scut-center-transform(y);
-      left: 1.25em;
-    }
-  }
-
-  &.has-icon--right {
-    padding-right: 3.5em;
-    padding-left: 2em;
-
-    .ui-icon {
-      @include scut-center-transform(y);
-      right: 1.25em;
-      left: auto;
-    }
-  }
-}
+//
+// Dropdowns
+//
 
 .dropdown-menu {
   @include dropdown-container(list, bottom);
@@ -41,53 +20,6 @@ button,
     @include dropdown-container(list, top);
   }
 
-  .dropdown-menu_item { 
-    @include dropdown-style;
-
-    &.is {
-      @each $color-name, $color-value in $state-colors {
-        &-#{"" + $color-name} {
-          a {
-            box-shadow: inset 5px 0px 0px 0px $color-value !important;
-            padding-left: 1.125rem;
-          }
-        }
-      }
-
-      &-selected {
-        background-color: $dust;
-      }
-    }
-
-    // Link
-    a {
-      &:focus {
-        background-color: $f-dropdown-list-hover-bg;
-        text-decoration: none;
-      }
-    }
-
-    // Checkboxes
-    .checkbox {
-      padding: 0.75rem;
-    }
-
-    input[type="checkbox"] + label {
-      margin: 0;
-      font-size: 0.875rem;
-      line-height: 1.5rem;
-    }
-
-    input[type="checkbox"] {
-      margin-left: -.625rem;
-    }
-  }
-
-  .dropdown-menu_divider {
-    width: 100%;
-    border-top: 1px solid $f-dropdown-border-color;
-  }
-
   // You can also put custom content in these dropdowns
   &.content { 
     @include dropdown-container(content, $triangle:false); 
@@ -102,4 +34,51 @@ button,
       left:0!important;
     }
   }
+}
+
+.dropdown-menu_item { 
+  @include dropdown-style;
+
+  &.is {
+    @each $color-name, $color-value in $state-colors {
+      &-#{"" + $color-name} {
+        a {
+          box-shadow: inset 5px 0px 0px 0px $color-value !important;
+          padding-left: 1.125rem;
+        }
+      }
+    }
+
+    &-selected {
+      background-color: $dust;
+    }
+  }
+
+  // Link
+  a {
+    &:focus {
+      background-color: $f-dropdown-list-hover-bg;
+      text-decoration: none;
+    }
+  }
+
+  // Checkboxes
+  .checkbox {
+    padding: 0.75rem;
+  }
+
+  input[type="checkbox"] + label {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+
+  input[type="checkbox"] {
+    margin-left: -.625rem;
+  }
+}
+
+.dropdown-menu_divider {
+  width: 100%;
+  border-top: 1px solid $f-dropdown-border-color;
 }
