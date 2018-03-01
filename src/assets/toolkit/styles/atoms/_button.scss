@@ -10,6 +10,7 @@ $button-radius: rem-calc(4);
   font-family: $alt-font-family;
   letter-spacing: .2em;
   text-transform: uppercase;
+  white-space: normal;
 
   &:focus {
     text-decoration: none;

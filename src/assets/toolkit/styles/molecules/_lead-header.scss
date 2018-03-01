@@ -13,6 +13,7 @@
     text-align: left;
   }
 
+  // Applies background graident
   &.bg-gradient {
     @media #{$medium-up} {
 
@@ -23,6 +24,7 @@
     }
   }
 
+  // Applies background image
   &.bg-image {
     background-color: $dark;
 
@@ -32,7 +34,24 @@
       background-position: bottom left;
     }
   }
-}  
+
+  // Reduces vertical height of header
+  &.short {
+    padding: 2rem 0 1rem;
+
+    @media #{$medium-up} {
+      padding: 2rem 0 1rem;
+    }
+  }
+
+  // Applies offset to nested breadcrumb
+  &.has-breadcrumbs {
+    .breadcrumbs {
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
 
 .lead-header_title {
   @include type-weight(semi);
@@ -46,12 +65,41 @@
     
   @media #{$medium-up} {
     @include type-weight(black);
-  }  
+  }
+
+  // Smaller h1 styles
+  &.small {
+    @include responsive-text-size('gamma');
+    margin-bottom: .5rem;
+  }
 }
 
+.lead-header_subtitle {
+  
+  // Smaller all caps subtitle
+  &.caps {
+    @include responsive-text-size('small');
+    font-family: $alt-font-family;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+// Container for title and subtitle
 .lead-header_group {
   position: relative;
   z-index: 2;
+}
+
+// Small secondary header link
+.lead-header_secondary-action {
+  float: right;
+  text-align: right;
+
+  a {
+    @include type-weight(semi);
+    @include responsive-text-size('small');
+  }
 }
 
 // Offset modifier for form cards
@@ -67,7 +115,8 @@
   }
 }
 
-// Results values and actions modifier to lead header
+// Results values and actions modifier to lead header. 
+// Applies to nested container and not to parent lead header.
 .results-header {
 
 }
@@ -89,4 +138,3 @@
     @include responsive-text-size('delta');
   }
 }
-
