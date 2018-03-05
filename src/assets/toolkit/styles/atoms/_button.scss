@@ -253,18 +253,19 @@ button,
 
   // Icon button styles
   &.has-icon {
-    padding-left: 3.5em;
-    padding-right: 2em;
+    padding-left: 3.25em;
+    padding-right: 1.75em;
 
     .ui-icon {
       @include scut-center-transform(y);
       left: 1.25em;
+      margin-right: 0;
     }
   }
 
   &.has-icon--right {
-    padding-right: 3.5em;
-    padding-left: 2em;
+    padding-right: 3.25em;
+    padding-left: 1.75em;
 
     .ui-icon {
       @include scut-center-transform(y);
