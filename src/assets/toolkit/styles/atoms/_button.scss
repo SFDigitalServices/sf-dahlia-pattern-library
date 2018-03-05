@@ -154,6 +154,16 @@ button,
     @extend .secondary;
   }
 
+  &.no-border {
+    background-color: transparent;
+    border-color: transparent;
+    color: $primary;
+
+    &:hover {
+      color: $deep;
+    }
+  }
+
   // Larger button styles
   &.large {
     @media #{$medium-up} {
@@ -371,17 +381,5 @@ input[type="submit"] {
 
   svg use {
     fill: $primary;
-  }
-}
-
-// Buttons stacked rather than inline
-.button-stack {
-  margin-bottom: 1rem;
-
-  button,
-  .button {
-    margin: 0 auto .25rem;
-    display: block;
-    width: 100%;
   }
 }

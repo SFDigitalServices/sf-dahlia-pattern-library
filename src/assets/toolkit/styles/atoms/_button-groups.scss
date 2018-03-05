@@ -81,3 +81,15 @@
     background-color: $dust;
   }
 }
+
+// Buttons stacked rather than inline
+.button-stack {
+  margin-bottom: 1rem;
+
+  button,
+  .button {
+    margin: 0 auto .25rem;
+    display: block;
+    width: 100%;
+  }
+}

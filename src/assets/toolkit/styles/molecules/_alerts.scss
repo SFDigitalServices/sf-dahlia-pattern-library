@@ -68,11 +68,12 @@
     line-height: .9rem;
 
     &.text {
-      color: $primary;
+      color: inherit;
       font-size: rem-calc(12);
       opacity: 1;
       text-decoration: underline;
       text-transform: capitalize;
+      margin-top: -.5rem;
     }
   }
 }
@@ -84,7 +85,7 @@
 }
 
 .alert-body {
-  @include scut-padding(n n n 2rem);
+  @include scut-padding(n n n 1.325rem);
   margin-bottom: 0;
 }
 
@@ -96,7 +97,11 @@
   border: 2px solid $primary;
 
   &.alert {
-    border-color: $alert;
+    border-color: $alert-tint;
+
+    &.invert {
+      border-color: $alert;
+    }
   }
 
   p {
