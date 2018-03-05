@@ -49,6 +49,10 @@
 
 // Buttons stack with no column classes
 .modal-button-group {
+  &.row {
+    max-width: none;
+  }
+
   .modal-button_item {
     @media #{$medium-up} {
       float: right;
