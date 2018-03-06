@@ -64,13 +64,21 @@ lang:
   - name: English
     active: true
     url: application-expect.html
+    selected: true
+    index: 0
   - name: Español
     url: application-expect--es.html
+    selected: false
+    index: -1
   - name: '中文'
     chinese: true
     url: application-expect--zh.html
+    selected: false
+    index: -1
   - name: Filipino
     url: "#"
+    selected: false
+    index: -1
 
 lang-es:
   - name: English
