@@ -1,9 +1,9 @@
 <ul class="tabs" data-tab role="tablist">
   {{#each items}}
-  <li class="tab-title{{#if active}} active{{/if}}" role="presentation"><a href="#{{{name}}}" role="tab" tabindex="{{index}}" aria-selected="true" aria-controls="{{{name}}}">{{{name}}}</a></li>
+  <li class="tab-title{{#if active}} active{{/if}}" role="presentation"><a href="#{{{id}}}" role="tab" tabindex="{{index}}" aria-selected="{{selected}}" aria-controls="{{{id}}}">{{{name}}}</a></li>
     {{else}}
     {{#each menus.lang}}
-    <li class="tab-title{{#if active}} active{{/if}}" role="presentation"><a href="#{{{name}}}" role="tab" tabindex="{{index}}" aria-selected="true" aria-controls="{{{name}}}">{{{name}}}</a></li>
+    <li class="tab-title{{#if active}} active{{/if}}" role="presentation"><a href="#{{{id}}}" role="tab" tabindex="{{index}}" aria-selected="{{selected}}" aria-controls="{{{name}}}">{{{name}}}</a></li>
     {{/each}}
   {{/each}}
 </ul>

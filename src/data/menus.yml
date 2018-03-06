@@ -66,19 +66,23 @@ lang:
     url: application-expect.html
     selected: true
     index: 0
+    id: panel1
   - name: Español
     url: application-expect--es.html
     selected: false
     index: -1
+    id: panel2
   - name: '中文'
     chinese: true
     url: application-expect--zh.html
     selected: false
     index: -1
+    id: panel3
   - name: Filipino
     url: "#"
     selected: false
     index: -1
+    id: panel4
 
 lang-es:
   - name: English

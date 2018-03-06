@@ -1,0 +1,16 @@
+<section class="tabs-section">
+  {{> navigation.tabs }}
+  <div class="tabs-content">
+    {{#each items}}
+    <section role="tabpanel" aria-hidden="{{hidden}}" class="content{{#if active}} active{{/if}}" id="{{id}}">
+      {{{content}}}
+    </section>
+    {{else}}
+    {{#each content.tabs}}
+      <section role="tabpanel" aria-hidden="{{hidden}}" class="content{{#if active}} active{{/if}}" id="{{id}}">
+      {{{content}}}
+    </section>
+    {{/each}}
+  {{/each}}
+  </div>
+</section>
