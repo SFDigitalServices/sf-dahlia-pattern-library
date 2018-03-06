@@ -2,12 +2,12 @@
   {{> navigation.tabs }}
   <div class="tabs-content">
     {{#each items}}
-    <section role="tabpanel" aria-hidden="{{hidden}}" class="content{{#if active}} active{{/if}}" id="{{id}}">
+    <section role="tabpanel" aria-hidden="{{hidden}}" class="content{{#if active}} active{{/if}}" id="{{id}}" tabindex="0">
       {{{content}}}
     </section>
     {{else}}
     {{#each content.tabs}}
-      <section role="tabpanel" aria-hidden="{{hidden}}" class="content{{#if active}} active{{/if}}" id="{{id}}">
+      <section role="tabpanel" aria-hidden="{{hidden}}" class="content{{#if active}} active{{/if}}" id="{{id}}" tabindex="0">
       {{{content}}}
     </section>
     {{/each}}

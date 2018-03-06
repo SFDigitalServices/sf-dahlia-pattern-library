@@ -1,15 +1,15 @@
 tabs:
-  - content: '<p>Second panel content goes here...</p>'
+  - content: '<p>First panel content goes here...</p>'
     active: true
     hidden: false
     id: panel1
-  - content: Español
+  - content: '<p>Second panel content goes here...</p>'
     hidden: true
     id: panel2
-  - content: '中文'
+  - content: '<p>Third panel content goes here...</p>'
     chinese: true
     hidden: true
     id: panel3
-  - content: Filipino
+  - content: '<p>Fourth panel content goes here...</p>'
     hidden: true
     id: panel4
