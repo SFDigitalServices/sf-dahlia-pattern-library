@@ -274,6 +274,10 @@ button,
     }
   }
 
+  &.text-align-left {
+    text-align: left;
+  }
+
   // Remove button styles
   &.button-link {
     background: transparent;
