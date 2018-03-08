@@ -4,14 +4,14 @@
     {{#each items}}
       <div class="rt-tr-group">
         <div class="rt-tr rt-tr-status {{status_classes}}">
-          <div class="rt-td">{{preference}}</div>
-          <div class="rt-td"><a href="#" class="has-border">{{application}}</a></div>
+          <div class="rt-td auto-width"><span class="t-bold">{{preference}}</span></div>
+          <div class="rt-td auto-width"><a href="#" class="has-border">{{application}}</a></div>
           <div class="rt-td">{{first}}</div>
           <div class="rt-td">{{last}}</div>
           <div class="rt-td">{{phone}}</div>
           <div class="rt-td">{{address}}</div>
           <div class="rt-td">{{update}}</div>
-          <div class="rt-td">
+          <div class="rt-td auto-width">
             <button class="button has-icon--right tiny no-margin text-align-left {{default status_classes ''}}" href="javascript:void(0)">
               <span class="ui-icon ui-{{default scale 'small'}}">
                 <svg>
@@ -27,14 +27,14 @@
         {{#each tables.applicants}}
           <div class="rt-tr-group">
             <div class="rt-tr rt-tr-status {{status_classes}}">
-              <div class="rt-td">{{preference}}</div>
-              <div class="rt-td"><a href="#" class="has-border">{{application}}</a></div>
+              <div class="rt-td auto-width"><span class="t-semi">{{preference}}</span></div>
+              <div class="rt-td auto-width"><a href="#" class="has-border">{{application}}</a></div>
               <div class="rt-td">{{first}}</div>
               <div class="rt-td">{{last}}</div>
               <div class="rt-td">{{phone}}</div>
               <div class="rt-td">{{address}}</div>
               <div class="rt-td">{{update}}</div>
-              <div class="rt-td">
+              <div class="rt-td auto-width">
                 <button class="button has-icon--right tiny no-margin text-align-left {{default status_classes ''}}" href="javascript:void(0)">
                   <span class="ui-icon ui-{{default scale 'small'}}">
                     <svg>

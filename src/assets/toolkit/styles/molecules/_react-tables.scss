@@ -290,7 +290,7 @@
   // status rows
   .rt-tr-status {
     &:hover {
-      background-color: $dust;
+      background-color: $snow !important;
     }
 
     &.is {
@@ -306,13 +306,23 @@
 
       @each $color-name, $color-value in $state-colors {
         &-#{"" + $color-name} {
-          box-shadow: inset 5px 0 0 0 $color-value !important;
+          box-shadow: inset 3px 0 0 0 $color-value !important;
         }
       }
     }
 
     .rt-td {
       align-self: center;
+      flex: 1 1 auto;
+      padding: 10px 1rem;
+
+      &:first-of-type {
+        padding-left: 1.5rem;
+      }
+
+      &.auto-width {
+        flex: 0 0 auto; 
+      }
     }
 
     .button {
