@@ -244,6 +244,7 @@ applicants:
     address: 4106 Terrace St
     update: none
     status: Status
+    status_classes: tertiary
   - preference: COP 2
     application: APP-111-2223
     first: Beth
@@ -298,3 +299,12 @@ applicants:
     update: none
     status: Withdrawn
     status_classes: is-withdrawn
+  - preference: COP 8
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Lease Signed
+    status_classes: is-leased

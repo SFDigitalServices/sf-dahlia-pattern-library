@@ -289,6 +289,28 @@
 
   // status rows
   .rt-tr-status {
+    &:hover {
+      background-color: $dust;
+    }
+
+    &.is {
+      @each $color-name, $color-value in $state-wash-colors {
+        &-#{"" + $color-name} {
+          background-color: $color-value !important;
+
+          &:hover {
+            background-color: darken($color-value, 2%) !important;
+          }
+        }
+      }
+
+      @each $color-name, $color-value in $state-colors {
+        &-#{"" + $color-name} {
+          box-shadow: inset 5px 0 0 0 $color-value !important;
+        }
+      }
+    }
+
     .rt-td {
       align-self: center;
     }
@@ -299,7 +321,7 @@
   }
 
   // plain cell coloring
-  &.plain {
+  &.status-table {
     .rt-tr {
       background: transparent;
       border-bottom: 1px solid $smoke;

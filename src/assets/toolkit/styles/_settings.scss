@@ -153,6 +153,14 @@ $splash-tint:       lighten($splash, 30%);
 $royal-tint:        lighten($royal, 30%);
 $lush-tint:         lighten($lush, 50%);
 
+$primary-wash:      #F5F8F9;
+$aluminum-wash:     $snow;
+$warn-wash:         #FFFDF7;
+$alert-wash:        #FFFAF8;
+$success-wash:      #F7FCF6;
+$royal-wash:        #FEFCFE;
+$attention-wash:    #F9FEFF;
+
 $bright:            #008fff;
 $deep:              $secondary-color;
 $dark:              #205493;
@@ -251,6 +259,16 @@ $state-colors: (
   leased: $success,
   appealed: $royal,
   waitlisted: $attention
+);
+
+$state-wash-colors: (
+  approved: $primary-wash,
+  processing: $aluminum-wash,
+  withdrawn: $warn-wash,
+  disqualified: $alert-wash,
+  leased: $success-wash,
+  appealed: $royal-wash,
+  waitlisted: $attention-wash
 );
 
 // We use these to control various global styles
