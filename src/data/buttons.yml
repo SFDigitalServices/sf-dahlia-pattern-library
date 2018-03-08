@@ -7,6 +7,13 @@ modifiers:
   alert-fill:
   tint:
   deep:
+  tiny is-leased:
+  tiny is-waitlisted:
+  tiny is-processing:
+  tiny is-approved:
+  tiny is-withdrawn:
+  tiny is-disqualified:
+  tiny is-appealed:
   ghost-white:
   large:
   tall:

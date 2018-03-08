@@ -59,6 +59,47 @@ $button-radius: rem-calc(4);
   }
 }
 
+// Solid buttons dark text
+@mixin custom-button-medium($cb-medium-color: $primary) {
+  background-color: $cb-medium-color;
+  border-color: $cb-medium-color;
+  color: $jet;
+
+  svg use {
+    fill: $jet;
+  }
+
+  &:focus {
+    background-color: $cb-medium-color;
+    color: $jet;
+  }
+
+  &:hover {
+    background-color: darken($cb-medium-color, 5%);
+    color: $jet;
+
+    svg use {
+      fill: $jet;
+    }
+  }
+
+  &:active {
+    background-color: darken($cb-medium-color, 10%);
+  }
+
+  &.disabled, &[disabled] {
+    background-color: $cb-medium-color;
+    border-color: $cb-medium-color;
+    color: $jet;
+
+    &:hover, &:active, &:focus {
+      background-color: $cb-medium-color;
+      border-color: $cb-medium-color;
+      color: $jet;
+    }
+  }
+}
+
 // Solid buttons
 @mixin custom-button-dark($cb-dark-color: $primary) {
   background-color: $cb-dark-color;
@@ -100,12 +141,14 @@ $button-radius: rem-calc(4);
   }
 }
 
+
+
 button,
 .button {
   @include custom-button-styles();
   @include custom-button-light($cb-light-color: $primary);
 
-  &.primary {
+  &.primary{
     @include custom-button-dark($cb-dark-color: $primary);
   }
 
@@ -127,6 +170,35 @@ button,
 
   &.deep {
     @include custom-button-dark($cb-dark-color: $deep);
+  }
+
+  // Button lease up states
+  &.is-processing {
+    @include custom-button-dark($cb-dark-color: $aluminum);
+  }
+
+  &.is-approved {
+    @extend .primary;
+  }
+
+  &.is-disqualified {
+    @extend .alert-fill;
+  }
+
+  &.is-appealed {
+    @include custom-button-dark($cb-dark-color: $royal);
+  }
+
+  &.is-withdrawn {
+    @include custom-button-medium($cb-medium-color: $warn);
+  }
+
+  &.is-leased {
+    @include custom-button-dark($cb-dark-color: $success);
+  }
+
+  &.is-waitlisted {
+    @include custom-button-dark($cb-dark-color: $attention);
   }
 
   &.tint {
@@ -177,6 +249,33 @@ button,
 
   &.squared {
     border-radius: 0;
+  }
+
+  // Icon button styles
+  &.has-icon {
+    padding-left: 3.25em;
+    padding-right: 1.75em;
+
+    .ui-icon {
+      @include scut-center-transform(y);
+      left: 1.25em;
+      margin-right: 0;
+    }
+  }
+
+  &.has-icon--right {
+    padding-right: 3.25em;
+    padding-left: 1.75em;
+
+    .ui-icon {
+      @include scut-center-transform(y);
+      right: 1.25em;
+      left: auto;
+    }
+  }
+
+  &.text-align-left {
+    text-align: left;
   }
 
   // Remove button styles
@@ -289,48 +388,6 @@ button,
       }
     }
   }
-
-  // Icon button styles
-  &.has-icon {
-    padding-left: .925rem;
-
-    .ui-icon {
-      margin-right: .625rem;
-    }
-  }
-
-  &.has-icon--right {
-    padding-right: 2.5rem;
-
-    .ui-icon {
-      @include absolute(1.2em,1em,null,null);
-    }
-  }
-
-  &.has-icon,
-  &.has-icon--right {
-    svg use {
-      fill: $primary;
-    }
-
-    &.primary svg use {
-      fill: $white;
-    }
-
-    &:hover {
-      svg use {
-        fill: $white;
-      }
-    }
-
-    &.disabled {
-      &:hover {
-        svg use {
-          fill: $primary;
-        }
-      }  
-    }
-  }  
 }
 
 // Adds radius to submits
