@@ -1,9 +1,9 @@
-<div class="ReactTable status-table">
+<div class="ReactTable status-table" role="table">
   <div class="rt-table">
     <div class="rt-tbody">
     {{#each items}}
-      <div class="rt-tr-group">
-        <div class="rt-tr rt-tr-status {{status_classes}}">
+      <div class="rt-tr-group" role="rowgroup">
+        <div class="rt-tr rt-tr-status {{status_classes}}" tabindex="0" role="row">
           <div class="rt-td auto-width"><span class="t-bold">{{preference}}</span></div>
           <div class="rt-td auto-width"><a href="#" class="has-border">{{application}}</a></div>
           <div class="rt-td">{{first}}</div>
@@ -25,8 +25,8 @@
       </div>
       {{else}}
         {{#each tables.applicants}}
-          <div class="rt-tr-group">
-            <div class="rt-tr rt-tr-status {{status_classes}}">
+          <div class="rt-tr-group" role="rowgroup">
+            <div class="rt-tr rt-tr-status {{status_classes}}" tabindex="0" role="row">
               <div class="rt-td auto-width"><span class="t-semi">{{preference}}</span></div>
               <div class="rt-td auto-width"><a href="#" class="has-border">{{application}}</a></div>
               <div class="rt-td">{{first}}</div>
