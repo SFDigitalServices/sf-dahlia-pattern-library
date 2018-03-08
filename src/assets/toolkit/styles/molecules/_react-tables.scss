@@ -286,4 +286,23 @@
       margin-bottom: 0;
     }
   }
+
+  // status rows
+  .rt-tr-status {
+    .rt-td {
+      align-self: center;
+    }
+
+    .button {
+      min-width: 150px;
+    }
+  }
+
+  // plain cell coloring
+  &.plain {
+    .rt-tr {
+      background: transparent;
+      border-bottom: 1px solid $smoke;
+    }
+  }
 }
