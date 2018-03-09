@@ -73,6 +73,31 @@ label {
   .editable {
     margin-right: 3rem;
   }
+
+  .text-value {
+    @include scut-padding(0.625rem n);
+    margin: 0 0 1.25rem 0;
+
+    &.is-placeholder {
+      color: $steel;
+    }
+  }
+
+  .radio-group-inline {
+    @include scut-padding(7px n);
+    margin: 0 0 1.25rem 0;
+
+    .radio-inline {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-checkbox-item {
+    &.checkbox-group {
+      @include scut-padding(7px n 0);
+      margin: 0 0 1.25rem 0;
+    }
+  }
 }
 
 .form-item {

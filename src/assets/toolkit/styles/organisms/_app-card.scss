@@ -60,7 +60,7 @@
    }
   }
 
-  &.header {
+  &.header-wide {
     @include scut-padding(2rem 2rem 0);
 
     @media #{$medium-up} {
@@ -69,12 +69,12 @@
     }
 
     @media #{$large-up} {
-      @include scut-padding(3rem 3rem 1rem);
+      @include scut-padding(3rem 3rem 0);
       @include scut-margin(n 3rem);
     }
   }
 
-  &.subheader {
+  &.subheader-wide {
     @include scut-padding(2rem 2rem 0);
 
     @media #{$medium-up} {
@@ -85,6 +85,10 @@
     @media #{$large-up} {
       @include scut-padding(n 3rem 0);
       @include scut-margin(n 3rem);
+    }
+
+    > :last-child {
+      margin-bottom: 0;
     }
   }
 
