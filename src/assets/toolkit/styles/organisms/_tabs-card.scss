@@ -1,0 +1,26 @@
+//
+// Tab Card
+//
+
+.tabs-card {
+
+}
+
+.tabs-row {
+  @media #{$medium-up} {
+    margin-bottom: -1px;
+  }
+
+  .tabs {
+    @media #{$medium-up} {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.tabs-card-row {
+  @media #{$small-only} {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

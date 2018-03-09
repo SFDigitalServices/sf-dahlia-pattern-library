@@ -12,4 +12,14 @@
 .tabs dd.active > a, 
 .tabs .tab-title.active > a {
   box-shadow: inset 0 2px 0 0 $primary;
+
+  &:hover {
+    box-shadow: inset 0 2px 0 0 $primary;
+  }
+}
+
+.tabs dd > a:hover, 
+.tabs .tab-title > a:hover {
+  color: $jet;
+  box-shadow: inset 0 -2px 0 0 $primary;
 }
