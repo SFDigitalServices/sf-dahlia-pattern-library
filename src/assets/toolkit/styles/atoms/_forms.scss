@@ -121,6 +121,10 @@ label {
   &.micro {
     @include responsive-text-size('micro');
   }
+
+  &.max-width {
+    max-width: 640px;
+  }
 }
 
 // Application back button

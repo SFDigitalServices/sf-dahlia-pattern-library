@@ -1,0 +1,19 @@
+//
+// Form card
+
+.form-grid {
+  @media #{$medium-up} {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap
+  }
+}
+
+.form-grid_item {
+  white-space: nowrap;
+
+  .flex-item {
+    flex: 1 0 0;
+  }
+}
+
