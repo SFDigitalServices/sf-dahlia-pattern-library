@@ -1,5 +1,5 @@
-<header class="lead-header bg-dust short has-breadcrumbs {{default classes ''}}">
-  <div class="row">
+<header class="lead-header short has-breadcrumbs {{default classes 'bg-dust'}}">
+  <div class="row full-width inner--3x">
     <div class="large-12 columns">
       {{> navigation.breadcrumbs }}
       <hgroup class="lead-header_group">
@@ -7,9 +7,11 @@
         <div class="medium-8 columns no-padding">
           <p class="lead-header_subtitle caps c-{{default color 'oil'}}">{{default description "21 Clarence Place, San Francisco CA"}}</p>
         </div>
+        {{#if action}}
         <div class="medium-4 columns no-padding">
-          <span class="lead-header_secondary-action"><a href="#" class="alt-caps">Export</a></span>
+          <span class="lead-header_secondary-action"><a href="#" class="alt-caps">{{default action 'Export'}}</a></span>
         </div>
+        {{/if}}
       </hgroup>
     </div>
   </div>

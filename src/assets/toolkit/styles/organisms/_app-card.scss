@@ -64,6 +64,11 @@
     @include scut-padding(2rem 2rem 0);
 
     @media #{$medium-up} {
+      @include scut-padding(3rem 2rem 0);
+      @include scut-margin(n 2rem);
+    }
+
+    @media #{$large-up} {
       @include scut-padding(3rem 3rem 1rem);
       @include scut-margin(n 3rem);
     }
@@ -73,6 +78,11 @@
     @include scut-padding(2rem 2rem 0);
 
     @media #{$medium-up} {
+      @include scut-padding(n 2rem 0);
+      @include scut-margin(n 2rem);
+    }
+
+    @media #{$large-up} {
       @include scut-padding(n 3rem 0);
       @include scut-margin(n 3rem);
     }
@@ -87,6 +97,11 @@
 
   &.inset-wide {
     @media #{$medium-up} {
+      @include scut-padding(n 2rem);
+      @include scut-margin(n 2rem);
+    }
+
+    @media #{$large-up} {
       @include scut-padding(n 3rem);
       @include scut-margin(n 3rem);
     }
