@@ -3,14 +3,8 @@
     <h2 class="app-card_h2">Current Contact Information</h2>
   </div>
 
-  <div class="app-inner inset-wide padding-bottom border-bottom">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
-      <div class="form-grid_item small-12 medium-6 large-3 column">
-        <div class="form-group">
-          {{> forms.text-input }}
-          <span class="form-note shift-up">Some</span>
-        </div>
-      </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
           {{> forms.text-input }}
@@ -30,11 +24,11 @@
   </div>
 
   <div class="app-inner subheader-wide">
-    <h3 class="app-card_h3">Current Mailing Address</h3>
+    <h3 class="app-card_h3 t-sans">Current Mailing Address</h3>
     <p class="form-note max-width">If the applicant reports a different address than at time of application, please pay extra attention to their original proof of address.</p>
   </div>
 
-  <div class="app-inner inset-wide padding-bottom border-bottom">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
@@ -57,7 +51,8 @@
         <div class="row">
           <div class="small-6 column">
             <div class="form-group">
-              {{> forms.text-input }}
+              <label for="" class="">{{default label "Text label"}}</label>
+              {{> forms.select }}
             </div>
           </div>
           <div class="small-6 column">
@@ -74,7 +69,7 @@
     <h2 class="app-card_h2">Confirmed Preferences</h2>
   </div>
 
-  <div class="app-inner inset-wide padding-bottom border-bottom">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="small-12 column">
         {{> tables.table--percent classes="td-plain th-plain"}}
@@ -90,7 +85,7 @@
     <h3 class="app-card_h3">Confirmed Household Members</h3>
   </div>
 
-  <div class="app-inner inset-wide padding-bottom border-bottom">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="small-12 column">
         {{> tables.table--percent classes="td-plain th-plain"}}
@@ -102,7 +97,7 @@
     <h3 class="app-card_h3">Confirmed Reserved and Priority Units</h3>
   </div>
 
-   <div class="app-inner inset-wide padding-bottom border-bottom">
+   <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
@@ -135,7 +130,7 @@
     <h3 class="app-card_h3">Confirmed Household Income</h3>
   </div>
 
-  <div class="app-inner inset-wide padding-bottom border-bottom">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
@@ -146,17 +141,16 @@
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
           {{> forms.text-input label="Some really long text copy that wraps" }}
-          <span class="form-note shift-up">Some</span>
         </div>
       </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
-          {{> forms.text-input }}
+          {{> forms.text-input note="Same"}}
         </div>
       </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
-          {{> forms.text-input }}
+          {{> forms.text-input note="Same"}}
         </div>
       </div>
     </div>
@@ -164,18 +158,17 @@
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
-          {{> forms.text-value }}
-          <span class="form-note shift-up">Some</span>
+          {{> forms.text-value note="Same"}}
         </div>
       </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
-          {{> forms.text-value }}
+          {{> forms.text-value note="Same"}}
         </div>
       </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
-          {{> forms.text-value value="Some really long text copy that wraps" value-classes="is-placeholder" }}
+          {{> forms.text-value value="Some really long text copy that wraps" value-classes="is-placeholder" note="Same"}}
         </div>
       </div>
     </div>
@@ -186,7 +179,7 @@
     <p class="form-note max-width">Applicants must qualify under the rules of the building in the following order:</p>
   </div>
 
-  <div class="app-inner inset-wide padding-bottom border-bottom">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-8 column">
         {{> components.content-card--ordered }}
@@ -202,7 +195,7 @@
     <h2 class="app-card_h2">Lease Information</h2>
   </div>
 
-  <div class="app-inner inset-wide padding-bottom border-bottom">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
@@ -220,8 +213,7 @@
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
-          {{> forms.text-input }}
-          <span class="form-note shift-up">Some</span>
+          {{> forms.text-input note="Same"}}
         </div>
       </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
@@ -231,8 +223,7 @@
       </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
-          {{> forms.text-value value-classes="is-placeholder" }}
-          <span class="form-note shift-up">Some</span>
+          {{> forms.text-value value-classes="is-placeholder" note="Same"}}
         </div>
       </div>
       <div class="form-grid_item small-12 medium-6 large-3 column">
@@ -265,7 +256,7 @@
   </div>
 
   <div class="padding-bottom--2x margin-bottom--2x"></div>
-  
+
   <div class="button-pager">
     <div class="button-pager_row primary">
       <button class="button {{default l-classes 'primary'}}">{{default left 'Save'}}</button>

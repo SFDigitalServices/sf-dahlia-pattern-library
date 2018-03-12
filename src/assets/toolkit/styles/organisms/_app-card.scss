@@ -101,18 +101,27 @@
 
   &.inset-wide {
     @media #{$medium-up} {
-      @include scut-padding(n 2rem);
+      @include scut-padding(n 2rem 1rem);
       @include scut-margin(n 2rem);
     }
 
     @media #{$large-up} {
-      @include scut-padding(n 3rem);
+      @include scut-padding(n 3rem 1rem);
       @include scut-margin(n 3rem);
     }
   }
 
   &.short {
     @include scut-padding(0 n);
+  }
+
+  &.has-border {
+    border-bottom: 1px solid $smoke;
+
+    @media #{$medium-up} {
+      border: 1px solid $smoke;
+      border-radius: 4px;
+    }
   }
 }
 
@@ -152,7 +161,10 @@
 
 .app-card_h3 {
   @include responsive-text-size('delta');
-  font-family: $alt-font-family;
+
+  .t-sans {
+    font-family: $alt-font-family;
+  }
 }
 
 .app-card_nav {

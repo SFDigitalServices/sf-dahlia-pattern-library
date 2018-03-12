@@ -28,6 +28,10 @@
   }
 }
 
+.large-12.columns.max-width {
+  max-width: rem-calc(1180);
+}
+
 .fixed-width.columns {
   &.medium-6 {
     @media #{$medium-up} {

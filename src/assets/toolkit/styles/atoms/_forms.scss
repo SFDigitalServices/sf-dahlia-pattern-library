@@ -75,8 +75,9 @@ label {
   }
 
   .text-value {
-    @include scut-padding(0.625rem n);
+    @include scut-padding(0.425rem n 0.625rem n);
     margin: 0 0 1.25rem 0;
+    color: $charcoal;
 
     &.is-placeholder {
       color: $steel;
