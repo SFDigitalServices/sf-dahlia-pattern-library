@@ -235,3 +235,26 @@ fees:
       note: for each replacement
     - type: Utilities
       note: The building pays water, sewer and trash only. Tenants are responsible for all other utilities
+preferences:
+  leaseup:
+    - icon: check
+      name: "Displaced Tenant Housing Preference"
+      person: Jason Holmes
+      rank: 12
+      proof: ""
+      status: Confirmed
+      action: ""
+    - icon: close
+      name: "Neighborhood Resident Housing Preference"
+      person: Jason Holmes
+      rank: 25
+      proof: "<a href='#'>Cable Bill</a>"
+      status: Invalid
+      action: "<a href='#'>Edit</a>"
+    - icon: check
+      name: "Live or Work Housing Preference"
+      person: Jason Holmes
+      rank: 112
+      proof: "<a href='#'>Cable Bill</a>"
+      status: Unconfirmed
+      action: "<a href='#'>Edit</a>"
