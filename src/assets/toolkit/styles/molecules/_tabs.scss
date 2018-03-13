@@ -1,0 +1,15 @@
+//
+// Tabs
+//
+
+.tabs dd > a, 
+.tabs .tab-title > a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: $t-semi;
+}
+
+.tabs dd.active > a, 
+.tabs .tab-title.active > a {
+  box-shadow: inset 0 2px 0 0 $primary;
+}
