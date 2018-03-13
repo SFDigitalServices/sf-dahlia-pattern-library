@@ -123,3 +123,8 @@ listing:
   - name: Listing
   - name: Applications
     active: true
+
+listing-view:
+  - name: Listing
+    active: true
+  - name: Applications
