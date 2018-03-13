@@ -2,6 +2,8 @@
   <header class="modal-inner">
     <h1 class="modal-title t-gamma no-margin">Header</h1>
   </header>
+  {{> forms.alert-box status="alert invert" text="Email sent. Please check you inbox" classes="no-margin  padding-left--3halves" icon="warning" close-style="text" close-text="Close"}}
+  {{> forms.alert-notice status="alert invert"}}
 
   <section class="modal-inner">
     <p class="c-steel">Loreum ipsum</p>
@@ -15,7 +17,7 @@
   <footer class="modal-footer bg-dust">
     <div class="modal-button-group row">
       <div class="modal-button_item">
-        <button class="button {{default l-classes 'primary'}}">{{default left 'Submit'}}</button>
+        <button class="button {{default l-classes 'alert-fill'}}">{{default left 'Remove'}}</button>
       </div>
       <div class="modal-button_item">
         <button class="button {{default r-classes 'no-border'}}">{{default right 'Cancel'}}</button>
@@ -23,6 +25,7 @@
     </div>
   </footer>
 
+  <!-- <a class="close-reveal-modal" aria-label="Close"> -->
   <a class="close-reveal-modal" aria-label="Close">
     {{> icons.base icon="close" size="medium" fill="primary"}}
   </a>

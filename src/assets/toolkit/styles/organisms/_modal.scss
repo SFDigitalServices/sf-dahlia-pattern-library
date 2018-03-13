@@ -36,6 +36,36 @@
     border-bottom-right-radius: $global-radius;
     border-bottom-left-radius: $global-radius;
   }
+
+  textarea {
+    height: 6.25rem;
+  }
+}
+
+.modal-footer {
+  border-bottom-right-radius: $global-radius;
+  border-bottom-left-radius: $global-radius;
+}
+
+// Buttons stack with no column classes
+.modal-button-group {
+  &.row {
+    max-width: none;
+  }
+
+  .modal-button_item {
+    @media #{$medium-up} {
+      float: right;
+      margin-left: 1rem;
+    }
+  }
+
+  button,
+  .button {
+    margin: 0 auto .25rem;
+    display: block;
+    width: 100%;
+  }
 }
 
 
