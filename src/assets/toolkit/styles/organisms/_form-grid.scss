@@ -7,6 +7,14 @@
     display: flex;
     flex-wrap: wrap
   }
+
+  &.row {
+    &.padding-bottom {
+      @media #{$small-only} {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
 }
 
 .form-grid_item {

@@ -238,6 +238,7 @@ fees:
 preferences:
   leaseup:
     - icon: check
+      icon-fill: success
       name: "Displaced Tenant Housing Preference"
       person: Jason Holmes
       rank: 12
@@ -245,16 +246,17 @@ preferences:
       status: Confirmed
       action: ""
     - icon: close
+      icon-fill: alert
       name: "Neighborhood Resident Housing Preference"
       person: Jason Holmes
       rank: 25
       proof: "<a href='#'>Cable Bill</a>"
       status: Invalid
-      action: "<a href='#'>Edit</a>"
-    - icon: check
+      action: "<a href='#' class='action-link'>Edit</a>"
+    - icon: 
       name: "Live or Work Housing Preference"
       person: Jason Holmes
       rank: 112
       proof: "<a href='#'>Cable Bill</a>"
       status: Unconfirmed
-      action: "<a href='#'>Edit</a>"
+      action: "<a href='#' class='action-link'>Edit</a>"
