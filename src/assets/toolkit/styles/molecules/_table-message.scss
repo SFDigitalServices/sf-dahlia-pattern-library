@@ -1,0 +1,21 @@
+//
+// Table Message
+
+.table-message {
+  background-color: $dust;
+  width: 100%;
+  min-height: 18.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @media #{$medium-up} {
+    min-height: 31.25rem;
+  }
+}
+
+.table-message_title {
+  @include responsive-text-size('delta');
+  font-family: $alt-font-family;
+}
