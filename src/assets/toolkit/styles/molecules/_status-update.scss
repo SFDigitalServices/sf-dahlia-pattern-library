@@ -1,0 +1,9 @@
+.status-update {
+  background-color: $snow;
+  padding: 1rem 0;
+
+  &.expand-wide {
+    @include scut-padding(2rem 6rem);
+    @include scut-margin(n -6rem);
+  }
+}
