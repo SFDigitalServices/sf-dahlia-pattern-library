@@ -7,3 +7,38 @@
     @include scut-margin(n -6rem);
   }
 }
+
+.status-update_action {
+  float: left;
+  margin-right: 1rem;
+
+  .button {
+    width: 150px;
+  }
+}
+
+.status-update_message {
+  overflow: hidden;
+  line-height: 1.75rem;
+  width: calc(100% - 170px);
+}
+
+.status-update_comment {
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  background-color: $white;
+  border: 1px solid $smoke;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.status-update_note {
+  float: left;
+  margin: 0;
+}
+
+.status-update_date {
+  margin: 0;
+}
