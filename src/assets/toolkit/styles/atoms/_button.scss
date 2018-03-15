@@ -173,6 +173,10 @@ button,
   }
 
   // Button lease up states
+  &.is-default {
+    @extend .tertiary;
+  }
+
   &.is-processing {
     @include custom-button-dark($cb-dark-color: $aluminum);
   }

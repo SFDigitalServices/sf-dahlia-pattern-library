@@ -1,0 +1,63 @@
+.status-list {
+
+}
+
+.status-list_item {
+  
+}
+
+.status-list_tag {
+  @include responsive-text-size('micro');
+  @include scut-padding(.5rem .75rem);
+  border-top-left-radius: $button-radius;
+  border-top-right-radius: $button-radius;
+  font-family: $alt-font-family;
+  float: left;
+  letter-spacing: .2em;
+  margin-right: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+
+  @media #{$medium-up} {
+    border-bottom-left-radius: $button-radius;
+    border-bottom-right-radius: $button-radius;
+    width: 150px;
+  }
+
+  &.is {
+    @each $color-name, $color-value in $state-colors {
+      &-#{"" + $color-name} {
+        background-color: lighten($color-value, 20%) !important;
+      }
+    }
+  }
+}
+
+.status-list_comment {
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  background-color: $white;
+  border: 1px solid $smoke;
+  border-bottom-left-radius: $button-radius;
+  border-bottom-right-radius: $button-radius;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+
+  @media #{$medium-up} {
+    border-top-left-radius: $button-radius;
+    border-top-right-radius: $button-radius;
+    width: calc(100% - 170px);
+  }
+}
+
+.status-list_note {
+  float: left;
+  margin: 0;
+}
+
+.status-list_date {
+  float: right;
+  font-weight: $t-semi;
+  margin: 0;
+}

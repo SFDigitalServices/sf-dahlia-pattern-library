@@ -13,3 +13,17 @@ tabs:
   - content: '<p>Fourth panel content goes here...</p>'
     hidden: true
     id: panel4
+history:
+  - status: Approved
+    comment: The last time I met this person
+    date: 01/02/18
+    status-class: approved
+  - status: Processing
+    comment: The first time I met this person
+    date: 01/02/18
+    status-class: processing
+  - status: No Status
+    comment: The first time I met this person
+    date: 01/02/18
+    status-class: default
+

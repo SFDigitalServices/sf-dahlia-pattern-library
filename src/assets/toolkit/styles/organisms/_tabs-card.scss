@@ -3,7 +3,12 @@
 //
 
 .tabs-card {
-
+  &.expand-on-small {
+    @media #{$small-only} {
+      margin-left: -1rem !important;
+      margin-right: -1rem !important;
+    }
+  }
 }
 
 .tabs-row {

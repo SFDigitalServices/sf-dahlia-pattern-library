@@ -1,4 +1,4 @@
-<div class="app-card form-card tabs-card max-width">
+<div class="app-card form-card tabs-card max-width expand-on-small">
   <h2 class="sr-only">Status Update</h2>
   <div class="app-inner inset-wide padding-bottom-none">
     {{> components.status-update }}
@@ -87,7 +87,7 @@
   </div>
 
   <div class="app-inner subheader-wide">
-    <h3 class="app-card_h3">Confirmed Household Members</h3>
+    <h3 class="app-card_h3 t-sans">Confirmed Household Members</h3>
   </div>
 
   <div class="app-inner inset-wide border-bottom">
@@ -99,7 +99,7 @@
   </div>
 
   <div class="app-inner subheader-wide">
-    <h3 class="app-card_h3">Confirmed Reserved and Priority Units</h3>
+    <h3 class="app-card_h3 t-sans">Confirmed Reserved and Priority Units</h3>
   </div>
 
    <div class="app-inner inset-wide border-bottom">
@@ -132,7 +132,7 @@
   </div>
 
   <div class="app-inner subheader-wide">
-    <h3 class="app-card_h3">Confirmed Household Income</h3>
+    <h3 class="app-card_h3 t-sans">Confirmed Household Income</h3>
   </div>
 
   <div class="app-inner inset-wide border-bottom">
@@ -240,10 +240,10 @@
   </div>
 
   <div class="app-inner subheader-wide">
-    <h3 class="app-card_h3">Demographics</h3>
+    <h3 class="app-card_h3 t-sans">Demographics</h3>
   </div>
 
-  <div class="app-inner inset-wide">
+  <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-6 large-3 column">
         <div class="form-group">
@@ -256,6 +256,18 @@
           <label for="" class="">{{default label "Text label"}}</label>
           {{> forms.select }}
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner subheader-wide">
+    <h3 class="app-card_h3 t-sans">Status History</h3>
+  </div>
+
+  <div class="app-inner inset-wide">
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 column">
+        {{> components.status-list }}
       </div>
     </div>
   </div>

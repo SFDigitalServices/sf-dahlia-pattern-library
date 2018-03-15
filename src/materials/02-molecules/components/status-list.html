@@ -1,0 +1,23 @@
+<div class="status-list">
+  <ul>
+    {{#each items}}
+    <li class="status-list_item">
+      <div class="status-list_tag is-{{status-class}}">{{status}}</div>
+      <div class="status-list_comment">
+        <p class="status-list_note">{{comment}}</p>
+        <span class="status-list_date">{{date}}</span>
+      </div>
+    </li>
+    {{else}}
+      {{#each content.history}}
+        <li class="status-list_item">
+          <div class="status-list_tag is-{{status-class}}">{{status}}</div>
+          <div class="status-list_comment">
+            <p class="status-list_note">{{comment}}</p>
+            <span class="status-list_date">{{date}}</span>
+          </div>
+        </li>
+      {{/each}}
+    {{/each}}
+  </ul>
+</div>

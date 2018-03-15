@@ -3,24 +3,64 @@
   padding: 1rem 0;
 
   &.expand-wide {
-    @include scut-padding(2rem 6rem);
-    @include scut-margin(n -6rem);
+    @include scut-margin(n -2rem);
+    @include scut-padding(n 2rem);
+
+    @media #{$medium-up} {
+      @include scut-padding(n 4rem);
+      @include scut-margin(n -4rem);
+    }
+
+    @media #{$large-up} {
+      @include scut-padding(n 6rem);
+      @include scut-margin(n -6rem);
+    }
+  }
+
+  &.is {
+    @each $color-name, $color-value in $state-wash-colors {
+      &-#{"" + $color-name} {
+        background-color: $color-value !important;
+      }
+    }
+
+    @each $color-name, $color-value in $state-colors {
+      &-#{"" + $color-name} {
+        box-shadow: inset 3px 0 0 0 $color-value !important;
+      }
+    }
   }
 }
 
+.status-update_title {
+  @include responsive-text-size('small');
+  font-family: $alt-font-family;
+  font-weight: $t-semi;
+  margin-bottom: .5rem;
+}
+
 .status-update_action {
-  float: left;
-  margin-right: 1rem;
+  @media #{$medium-up} {
+    float: left;
+    margin-right: 1rem;
+  }
 
   .button {
-    width: 150px;
+    width: 100%;
+
+    @media #{$medium-up} {
+      width: 150px;
+    }
   }
 }
 
 .status-update_message {
   overflow: hidden;
   line-height: 1.75rem;
-  width: calc(100% - 170px);
+
+  @media #{$medium-up} {
+    width: calc(100% - 170px);
+  }
 }
 
 .status-update_comment {
@@ -40,5 +80,18 @@
 }
 
 .status-update_date {
+  float: right;
+  font-weight: $t-semi;
   margin: 0;
+}
+
+.status-update_footer {
+  .button {
+    width: 100%;
+
+    @media #{$medium-up} {
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
 }
