@@ -27,7 +27,7 @@
   &.is {
     @each $color-name, $color-value in $state-colors {
       &-#{"" + $color-name} {
-        background-color: lighten($color-value, 20%) !important;
+        background-color: lighten($color-value, 30%) !important;
       }
     }
   }
