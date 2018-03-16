@@ -68,6 +68,16 @@
   }
 }
 
+// Loading container for modal
+.modal-loading {
+  width: 100%;
+  min-height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 
 // Close button
 .close-reveal-modal {
