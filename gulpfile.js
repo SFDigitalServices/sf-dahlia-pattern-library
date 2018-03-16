@@ -162,6 +162,12 @@ gulp.task('assemble', function (done) {
 			},
 			attr: function(value) {
 				return _.kebabCase(value);
+			},
+			lowercase: function(str) {
+				if(str && typeof str === "string") {
+					return str.toLowerCase();
+				}
+				return '';
 			}
 		}
 	});
