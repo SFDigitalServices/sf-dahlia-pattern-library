@@ -47,3 +47,9 @@
 .no-border {
   border: none !important;
 }
+
+.no-border-on-small {
+  @media #{$small-only} {
+    border: none !important;
+  }
+}
