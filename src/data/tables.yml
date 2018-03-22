@@ -260,3 +260,76 @@ preferences:
       proof: "<a href='#'>Cable Bill</a>"
       status: Unconfirmed
       action: "<a href='#' class='action-link'>Edit</a>"
+applicants:
+  - preference: COP 1
+    application: APP-111-2223
+    first: Anne
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Status
+    status_classes: tertiary
+  - preference: COP 2
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Processing
+    status_classes: is-processing
+  - preference: COP 3
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Disqualified
+    status_classes: is-disqualified
+  - preference: COP 4
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Approved
+    status_classes: is-approved
+  - preference: COP 5
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Waitlisted
+    status_classes: is-waitlisted
+  - preference: COP 6
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Appealed
+    status_classes: is-appealed
+  - preference: COP 7
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Withdrawn
+    status_classes: is-withdrawn
+  - preference: COP 8
+    application: APP-111-2223
+    first: Beth
+    last: Bowler
+    phone: 646-248-1112
+    address: 4106 Terrace St
+    update: none
+    status: Lease Signed
+    status_classes: is-leased
