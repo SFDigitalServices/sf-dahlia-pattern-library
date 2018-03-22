@@ -79,6 +79,7 @@ table {
   }
 
   // Remove zebra coloring and adds border
+  &.td-plain, 
   &.plain {
     tr td {
       background: transparent;
@@ -87,6 +88,17 @@ table {
 
     tr {
       background: transparent
+    }
+  }
+
+  &.th-plain {
+    thead {
+      background: transparent
+    }
+
+    thead tr th {
+      @include scut-padding(0 n .5rem);
+      border-bottom: none;
     }
   }
 

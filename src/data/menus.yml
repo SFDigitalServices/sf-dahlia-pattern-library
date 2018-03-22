@@ -108,3 +108,23 @@ lang-zh:
   - name: Filipino
     url: "#"
     disabled: true
+
+leaseup-shortform:
+  - name: Short Form Application
+    active: true
+  - name: Supplemental Information
+
+leaseup:
+  - name: Short Form Application
+  - name: Supplemental Information
+    active: true
+
+listing:
+  - name: Listing
+  - name: Applications
+    active: true
+
+listing-view:
+  - name: Listing
+    active: true
+  - name: Applications

@@ -1,0 +1,24 @@
+//
+// Form card
+
+.form-grid {
+  @media #{$medium-up} {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.row {
+    &.padding-bottom {
+      @media #{$small-only} {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+.form-grid_item {
+  .flex-item {
+    flex: 1 0 0;
+  }
+}

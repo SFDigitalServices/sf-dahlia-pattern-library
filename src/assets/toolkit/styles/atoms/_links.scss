@@ -38,6 +38,13 @@ a, .btn-link {
   }
 }
 
+.action-link {
+  @include responsive-text-size('small');
+  font-family: $alt-font-family;
+  font-weight: $t-bold;
+  text-transform: uppercase;
+}
+
 .back-link {
   @include responsive-text-size('small');
   display: inline-block;

@@ -12,4 +12,43 @@
 .tabs dd.active > a, 
 .tabs .tab-title.active > a {
   box-shadow: inset 0 2px 0 0 $primary;
+
+  &:hover {
+    box-shadow: inset 0 2px 0 0 $primary;
+  }
+}
+
+.tabs dd > a:hover, 
+.tabs .tab-title > a:hover {
+  color: $jet;
+  box-shadow: inset 0 -2px 0 0 $primary;
+}
+
+// Small full width
+.full-width-small-only {
+  @media #{$small-only} {
+    &.tabs dd, 
+    &.tabs .tab-title {
+      width: 100%;
+    }
+
+    &.tabs dd > a, 
+    &.tabs .tab-title > a {
+      text-align: center;
+    }
+
+    &.tabs dd > a:hover, 
+    &.tabs .tab-title > a:hover {
+      box-shadow: none;
+    }
+
+    &.tabs dd.active > a, 
+    &.tabs .tab-title.active > a {
+      box-shadow: none;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
 }

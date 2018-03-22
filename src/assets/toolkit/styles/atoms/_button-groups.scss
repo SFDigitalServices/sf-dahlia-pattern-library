@@ -80,6 +80,20 @@
     padding: 2rem;
     background-color: $dust;
   }
+
+  &.has-button-margins {
+    @media #{$small-only} {
+      padding-bottom: 1rem;
+    }
+
+    .button {
+      @include scut-margin(0 .5rem);
+
+      @media #{$small-only} {
+        margin-bottom: 1rem;
+      }
+    }
+  }
 }
 
 // Buttons stacked rather than inline

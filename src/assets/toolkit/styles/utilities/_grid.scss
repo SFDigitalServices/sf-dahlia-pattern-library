@@ -9,6 +9,27 @@
     max-width: none;
     width: auto;
   }
+
+  &.full-width {
+    max-width: none;
+  }
+
+  // Applies responsive padding
+  &.inner--3x {
+    @include scut-padding(n 1rem);
+
+    @media #{$medium-up} {
+      @include scut-padding(n 2rem);
+    }
+
+    @media #{$large-up} {
+      @include scut-padding(n 3rem);
+    }
+  }
+}
+
+.large-12.columns.max-width {
+  max-width: rem-calc(1180);
 }
 
 .fixed-width.columns {
