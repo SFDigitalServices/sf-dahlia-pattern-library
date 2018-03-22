@@ -149,7 +149,7 @@ label {
   }
 
   &.max-width {
-    max-width: 640px;
+    max-width: rem-calc(640);
   }
 }
 
