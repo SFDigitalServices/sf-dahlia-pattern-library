@@ -78,6 +78,7 @@ label {
     @include scut-padding(0.425rem n 0.625rem n);
     margin: 0 0 1.25rem 0;
     color: $charcoal;
+    overflow: hidden;
 
     &.is-placeholder {
       color: $steel;
