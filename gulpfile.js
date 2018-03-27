@@ -164,10 +164,11 @@ gulp.task('assemble', function (done) {
 				return _.kebabCase(value);
 			},
 			lowercase: function(str) {
-				if(str && typeof str === "string") {
+				if (str && typeof str === 'string') {
 					return str.toLowerCase();
-				}
-				return '';
+				} else {
+					return '';
+        }
 			}
 		}
 	});
