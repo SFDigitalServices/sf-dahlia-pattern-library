@@ -1,0 +1,69 @@
+---
+layout: center
+title: Application
+---
+
+{{> headers.translate-bar }}
+{{> headers.version-bar }}
+{{> navigation.top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <div class="form-back"><a href="#" class="lined margin-right">Back</a></div>
+          <h2 class="app-card_question">Your household may qualify for the following lottery preference.</h2>
+          <div class="form-group">
+            <p class="form-note margin-bottom">Just upload valid proof and get a higher ranking in the lottery.</p>
+          </div>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            <div class="checkbox-group">
+              <div class="">
+                <div class="checkbox-block margin-bottom--2x">
+                  <input aria-decribedby="description-nhrp" type="checkbox" name="preferences-nhrp" value="preferences-nhrp" id="preferences-nhrp">
+                  <label class="checkbox-block_label" for="preferences-displaced">
+                    <strong class="form-label caps">Some Custom Preference</strong>
+                  </label>
+                  <div class="checkbox-block_note-inner">
+                    {{> text.more classes="open-bottom margin-top-none" icon="arrow-down" size="tiny" fill="primary"}}
+                    <p class="checkbox-block_more toggled" id="description-nhrp" style="display:none;">
+                      At least one household member must currently work in San Francisco at least 75% of their working hours.
+                    </p>
+                  </div>
+
+                  <div class="form-group input-inset padding-bottom-none">
+                    <label class="form-label caps">Whose name is on the document you're uploading?</label>
+                    {{> forms.select}}
+                  </div>
+
+                  <div class="form-group input-inset">
+                    <div class="form-group margin-bottom-none">
+                      <label class="form-label caps">Upload one of the following documents in order to prove eligibility:</label>
+                      <p class="form-note margin-bottom">Letter from employer verifying employment in San Francisco with at least 75% of working hours in the City, or Paystub (showing employer address in San Francisco)</p>
+                    </div>
+
+                    <div class="form-group text-center">
+                      {{> buttons.button text="Upload Proof of Preference"}}
+                      <p class="form-note micro input-inset margin-bottom">Please make sure the image is clear and you can read the address.</p>
+                      <p class="form-note micro input-inset">Max file size is 2MB. Supported file types: pdf, jpg, png</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{> forms.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> footer}}
