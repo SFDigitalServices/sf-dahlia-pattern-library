@@ -81,6 +81,20 @@
     background-color: $dust;
   }
 
+  &.align-left {
+    text-align: left;
+  }
+
+  &.inset-wide {
+    @media #{$medium-up} {
+      @include scut-padding(n 5rem);
+    }
+
+    @media #{$large-up} {
+      @include scut-padding(n 6rem);
+    }
+  }
+
   &.has-button-margins {
     @media #{$small-only} {
       padding-bottom: 1rem;

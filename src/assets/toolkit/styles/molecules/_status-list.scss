@@ -1,4 +1,4 @@
-$status-offset: 150px;
+$status-offset: rem-calc(150px);
 
 .status-list {
 
@@ -11,8 +11,6 @@ $status-offset: 150px;
 .status-list_tag {
   @include responsive-text-size('micro');
   @include scut-padding(.5rem .75rem);
-  // border-top-left-radius: $button-radius;
-  // border-top-right-radius: $button-radius;
   font-family: $alt-font-family;
   float: left;
   letter-spacing: .2em;
@@ -21,8 +19,6 @@ $status-offset: 150px;
   width: 100%;
 
   @media #{$medium-up} {
-    // border-bottom-left-radius: $button-radius;
-    // border-bottom-right-radius: $button-radius;
     width: $status-offset;
   }
 
