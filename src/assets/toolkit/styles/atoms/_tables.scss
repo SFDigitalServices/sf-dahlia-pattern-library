@@ -256,6 +256,22 @@ table {
 .scrollable-table-container {
   overflow-x: auto;
 }
+
+.scrollable-table-container-under-xlarge {
+  overflow-x: auto;
+
+  .scrollable-table-nested.expand-wide {
+    @media only screen and (max-width: $large-breakpoint) {
+      @include scut-margin(n 0);
+      @include scut-padding(n 1rem);
+    }
+  }
+
+  @media #{$xlarge-up} {
+    overflow-x: visible;
+  }
+}
+
 // More practical CSS...
 // using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
 

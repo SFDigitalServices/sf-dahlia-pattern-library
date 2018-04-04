@@ -253,6 +253,7 @@ preferences:
       proof: "<a href='#'>Cable Bill</a>"
       status: Invalid
       action: "<a href='#' class='action-link'>Edit</a>"
+      editable: "editable"
     - icon: 
       name: "Live or Work Housing Preference"
       person: Jason Holmes

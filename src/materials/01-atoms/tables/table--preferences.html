@@ -43,7 +43,7 @@
     </tr>
       {{else}}
       {{#each tables.preferences.leaseup}}
-      <tr>
+      <tr class="{{#if editable}}tr-expand is-expanded{{/if}}">
       <td scope="row">
         {{#if icon}}
           <span class="ui-icon ui-medium i-{{default icon-fill ''}}">
@@ -52,10 +52,10 @@
             </svg>
           </span>
         {{/if}}
-      </td>  
-      <td >
+      </td>
+      <td>
         {{name}}
-      </td>  
+      </td>
       <td>
         {{person}}
       </td>
@@ -72,6 +72,48 @@
         {{{action}}}
       </td>
     </tr>
+    {{#if editable}}
+      <tr class="tr-expand-content is-expanded">
+        <td colspan="7" class="tr-expand-nested no-padding">
+          <div class="app-{{default editable ''}} expand-wide scrollable-table-nested">
+            <div class="form-grid row">
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> forms.text-value }}
+                </div>
+              </div>
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> forms.text-input }}
+                </div>
+              </div>
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> forms.text-input }}
+                </div>
+              </div>
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> forms.text-input }}
+                </div>
+              </div>
+            </div>
+            <div class="form-grid row">
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> forms.text-input }}
+                </div>
+              </div>
+            </div>
+            <div class="form-grid row">
+              <div class="form-grid_item column">
+              {{> buttons.button text="Save" classes="primary tiny margin-right margin-bottom-none"}} {{> buttons.button text="Cancel" classes="secondary tiny margin-bottom-none"}}
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    {{/if}}
       {{/each}}
     {{/each}}
   </tbody>
