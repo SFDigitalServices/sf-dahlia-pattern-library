@@ -81,10 +81,6 @@
     background-color: $dust;
   }
 
-  &.align-left {
-    text-align: left;
-  }
-
   &.inset-wide {
     @media #{$medium-up} {
       @include scut-padding(n 5rem);
@@ -95,7 +91,23 @@
     }
   }
 
-  &.has-button-margins {
+  &.align-buttons-left {
+    text-align: left;
+
+    @media #{$small-only} {
+      padding-bottom: 1rem;
+    }
+
+    .button {
+      @include scut-margin(0 1rem 0 0);
+
+      @media #{$small-only} {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &.align-buttons-center {
     @media #{$small-only} {
       padding-bottom: 1rem;
     }
