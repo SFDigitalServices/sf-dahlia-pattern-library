@@ -12,9 +12,7 @@ $table-pagination-breakpoint: em-calc(860);
 
   input,
   select {
-    @media only screen and (min-width: $table-pagination-breakpoint) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 }
 
@@ -45,7 +43,6 @@ $table-pagination-breakpoint: em-calc(860);
   @include type-weight(semi);
   flex: 1.5;
   text-align: center;
-  margin-bottom: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -60,12 +57,15 @@ $table-pagination-breakpoint: em-calc(860);
 
 .table-pagination_pageinfo,
 .table-pagination_pagesize {
-  display: inline-block;
+  display: flex;
   white-space: nowrap;
   align-self: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
 
   @media only screen and (min-width: $table-pagination-breakpoint) {
     margin-right: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -84,10 +84,18 @@ $table-pagination-breakpoint: em-calc(860);
   select,
   input {
     width: 6.75rem;
+    margin-left: .5rem;
+
+    @media only screen and (min-width: $table-pagination-breakpoint) {
+      margin-left: 0;
+    }
   }
 }
 
 .table-pagination_pagejump {
+  margin-left: .5rem;
+  margin-right: .5rem;
+
   input {
     width: 5rem;
   }
@@ -109,6 +117,10 @@ $table-pagination-breakpoint: em-calc(860);
 
   .-pagination .-pageInfo {
     @extend .table-pagination_pageinfo;
+  }
+
+  .-pagination .-totalPages {
+    margin-left: .25rem;
   }
 
   .-pagination .-pageJump {
