@@ -261,6 +261,20 @@ table {
   overflow-x: auto;
 
   .scrollable-table-nested.expand-wide {
+    width: calc(100vw - 4rem);
+
+    @media #{$medium-up} {
+      width: calc(100vw - 12rem);
+    }
+
+    @media #{$large-up} {
+      width: calc(100vw - 18rem);
+    }
+
+    @media #{$xlarge-up} {
+      width: auto;
+    }
+
     @media only screen and (max-width: $large-breakpoint) {
       @include scut-margin(n 0);
       @include scut-padding(n 1rem);

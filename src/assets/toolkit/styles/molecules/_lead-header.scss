@@ -72,6 +72,14 @@
     @include responsive-text-size('gamma');
     margin-bottom: .5rem;
   }
+
+  &.small-serif {
+    @include responsive-text-size('beta');
+    @include type-weight(regular);
+    font-family: $serif-font-family;
+    text-transform: none;
+    letter-spacing: normal;
+  }
 }
 
 .lead-header_subtitle {
