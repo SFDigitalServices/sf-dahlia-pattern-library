@@ -81,7 +81,33 @@
     background-color: $dust;
   }
 
-  &.has-button-margins {
+  &.inset-wide {
+    @media #{$medium-up} {
+      @include scut-padding(n 5rem);
+    }
+
+    @media #{$large-up} {
+      @include scut-padding(n 6rem);
+    }
+  }
+
+  &.align-buttons-left {
+    text-align: left;
+
+    @media #{$small-only} {
+      padding-bottom: 1rem;
+    }
+
+    .button {
+      @include scut-margin(0 1rem 0 0);
+
+      @media #{$small-only} {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &.align-buttons-center {
     @media #{$small-only} {
       padding-bottom: 1rem;
     }

@@ -14,16 +14,15 @@ tabs:
     hidden: true
     id: panel4
 history:
-  - status: Approved
-    comment: The last time I met this person
-    date: 01/02/18
-    status-class: approved
-  - status: Processing
-    comment: The first time I met this person
-    date: 01/02/18
-    status-class: processing
   - status: No Status
     comment: The first time I met this person
-    date: 01/02/18
+    date: 01/01/18
     status-class: default
-
+  - status: Processing
+    comment: The next time I met this person
+    date: 02/02/18
+    status-class: processing
+  - status: Approved
+    comment: The last time I met this person
+    date: 03/03/18
+    status-class: approved

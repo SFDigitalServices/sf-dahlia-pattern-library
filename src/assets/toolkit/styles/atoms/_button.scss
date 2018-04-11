@@ -182,7 +182,7 @@ button,
   }
 
   &.is-approved {
-    @extend .primary;
+    @include custom-button-dark($cb-dark-color: $deep);
   }
 
   &.is-disqualified {
@@ -203,6 +203,10 @@ button,
 
   &.is-waitlisted {
     @include custom-button-dark($cb-dark-color: $attention);
+  }
+
+  &.has-status-width {
+    width: rem-calc(150px);
   }
 
   &.tint {

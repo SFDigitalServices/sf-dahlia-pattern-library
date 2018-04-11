@@ -1,3 +1,5 @@
+$status-offset: rem-calc(150px);
+
 .status-list {
 
 }
@@ -9,8 +11,6 @@
 .status-list_tag {
   @include responsive-text-size('micro');
   @include scut-padding(.5rem .75rem);
-  border-top-left-radius: $button-radius;
-  border-top-right-radius: $button-radius;
   font-family: $alt-font-family;
   float: left;
   letter-spacing: .2em;
@@ -19,15 +19,14 @@
   width: 100%;
 
   @media #{$medium-up} {
-    border-bottom-left-radius: $button-radius;
-    border-bottom-right-radius: $button-radius;
-    width: 150px;
+    width: $status-offset;
   }
 
   &.is {
     @each $color-name, $color-value in $state-colors {
       &-#{"" + $color-name} {
-        background-color: lighten($color-value, 30%) !important;
+        color: lighten($color-value, 5%) !important;
+        border-left: 3px solid lighten($color-value, 5%) !important;
       }
     }
   }
@@ -41,8 +40,8 @@
   border: 1px solid $smoke;
   border-bottom-left-radius: $button-radius;
   border-bottom-right-radius: $button-radius;
-  padding: .5rem 1rem;
-  margin-bottom: 1rem;
+  padding: .625rem 1rem;
+  margin-bottom: .5rem;
 
   @media #{$medium-up} {
     border-top-left-radius: $button-radius;
@@ -60,4 +59,11 @@
   float: right;
   font-weight: $t-semi;
   margin: 0;
+}
+
+.status-list_footer {
+  @media #{$medium-up} {
+    padding-left: $status-offset;
+    margin-left: 1rem;
+  }
 }

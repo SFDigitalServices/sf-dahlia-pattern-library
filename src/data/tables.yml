@@ -252,14 +252,15 @@ preferences:
       rank: 25
       proof: "<a href='#'>Cable Bill</a>"
       status: Invalid
-      action: "<a href='#' class='action-link'>Edit</a>"
+      action: "<a href='#' class='action-link' style='display: none'>Edit</a>"
+      editable: "editable"
     - icon: 
       name: "Live or Work Housing Preference"
       person: Jason Holmes
       rank: 112
       proof: "<a href='#'>Cable Bill</a>"
       status: Unconfirmed
-      action: "<a href='#' class='action-link'>Edit</a>"
+      action: "<a href='#' class='action-link margin-bottom--half'>Confirm</a><br> <a href='#' class='action-link c-alert'>Remove</a>"
 applicants:
   - preference: COP 1
     application: APP-111-2223

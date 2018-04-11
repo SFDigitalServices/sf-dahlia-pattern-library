@@ -77,7 +77,7 @@
   <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="small-12 column">
-        <div class="scrollable-table-container">
+        <div class="scrollable-table-container-under-xlarge">
           {{> tables.table--preferences classes="td-plain th-plain"}}
         </div>
       </div>
@@ -279,9 +279,9 @@
   <div class="padding-bottom--2x margin-bottom--2x"></div>
 
   <div class="button-pager">
-    <div class="button-pager_row primary">
-      <button class="button {{default l-classes 'primary'}}">{{default left 'Save'}}</button>
+    <div class="button-pager_row align-buttons-left primary inset-wide">
+      {{> buttons.button-dropdown text="Approved" classes="is-approved small has-status-width"}}
+      {{> buttons.button text="Save" classes="primary small"}}
     </div>
   </div>
-
 </div>

@@ -123,7 +123,29 @@
       border-radius: 4px;
     }
   }
+}
 
+.app-editable {
+  @include scut-padding(2rem n);
+  background: $dust;
+  z-index: 10;
+  position: relative;
+  overflow: auto;
+
+  &.expand-wide {
+    @include scut-margin(n -2rem);
+    @include scut-padding(n 3rem);
+
+    @media #{$medium-up} {
+      @include scut-padding(n 5rem);
+      @include scut-margin(n -4rem);
+    }
+
+    @media #{$large-up} {
+      @include scut-padding(n 7rem);
+      @include scut-margin(n -6rem);
+    }
+  }
 }
 
 .leader-header {

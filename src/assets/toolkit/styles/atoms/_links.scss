@@ -51,6 +51,8 @@ a, .btn-link {
   font-family: $alt-font-family;
   font-weight: $t-bold;
   text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .back-link {

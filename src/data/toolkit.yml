@@ -9,6 +9,8 @@ colors:
 
 bgcolors:
   contrast:
+    - name: dust
+      hex: "#f5f8f9"
     - name: snow
       hex: "#f9f9f9"
     - name: mist
@@ -17,22 +19,14 @@ bgcolors:
       hex: "#f6f6f6"
     - name: wash
       hex: "#efefef"
-    - name: ghost
-      hex: "#efefef"
     - name: smoke
       hex: "#dedee0"
-    - name: gainsboro
-      hex: "#ddd"
     - name: iron
       hex: "#ccc"
-    - name: silver
-      hex: "#b3b3b3"
     - name: base
       hex: "#aaa"
     - name: aluminum
       hex: "#999"
-    - name: jumbo
-      hex: "#888"
     - name: steel
       hex: "#767676"
     - name: charcoal
@@ -47,44 +41,38 @@ bgcolors:
       hex: "#222"
   specturm:  
     - name: primary
-      hex: "#0077da"
-    - name: secondary
-      hex: "#f90"
-    - name: attention
-      hex: "#00bed5"
-    - name: primary-tint
-      hex: "#daeeff"
-    - name: secondary-tint
-      hex: "#ffebcc"
-    - name: attention-tint
-      hex: "#c8f1ff"
-    - name: royal
-      hex: "#b85ed5"
-    - name: splash
-      hex: "#ff6627"
-    - name: lush
-      hex: "#99cd00"
-    - name: royal-tint
-      hex: "#eed7f5"
-    - name: splash-tint
-      hex: "#ffd2c0"
-    - name: lush-tint
-      hex: "#f2ffcd"
-    - name: alert
-      hex: "#e31c3d"
-    - name: success
-      hex: "#2e8540"
-    - name: warn
-      hex: "#fdb81e"
-    - name: alert-tint
-      hex: "#f9d2d8"
-    - name: success-tint
-      hex: "#b4e5be"
-    - name: warn-tint
-      hex: "#fee8b6"
-    - name: bright
-      hex: "#008fff"
+      hex: "#0177DA"
     - name: deep
       hex: "#0067be"
     - name: dark
       hex: "#205493"
+    - name: primary-tint
+      hex: "#daeeff"
+    - name: attention
+      hex: "#00bed5"
+    - name: attention-tint
+      hex: "#c8f1ff"
+    - name: royal
+      hex: "#b85ed5"
+    - name: royal-tint
+      hex: "#eed7f5"
+    - name: splash
+      hex: "#ff6627"
+    - name: splash-tint
+      hex: "#ffd2c0"
+    - name: lush
+      hex: "#99cd00"
+    - name: lush-tint
+      hex: "#f2ffcd"
+    - name: alert
+      hex: "#e31c3d"
+    - name: alert-tint
+      hex: "#f9d2d8"
+    - name: success
+      hex: "#2e8540"
+    - name: success-tint
+      hex: "#b4e5be"
+    - name: warn
+      hex: "#fdb81e"
+    - name: warn-tint
+      hex: "#fee8b6"
