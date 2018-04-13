@@ -328,6 +328,18 @@
       }
     }
 
+    &.is-invalid {
+      opacity: 0.5;
+
+      .rt-td-label-invalid {
+        display: block;
+      }
+
+      .rt-td-label-rank {
+        display: none;
+      }
+    }
+
     .rt-td {
       align-self: center;
       flex: 1 1 auto;
@@ -340,6 +352,10 @@
       &.auto-width {
         flex: 0 0 auto; 
       }
+    }
+
+    .rt-td-label-invalid {
+      display: none;
     }
 
     .button {
