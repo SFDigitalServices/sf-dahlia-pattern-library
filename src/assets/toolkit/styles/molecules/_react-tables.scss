@@ -365,9 +365,12 @@
 
   // plain cell coloring
   &.status-table {
+    .rt-tr-group {
+      border-bottom: 1px solid $smoke;
+    }
+    
     .rt-tr {
       background: transparent;
-      border-bottom: 1px solid $smoke;
     }
   }
 }

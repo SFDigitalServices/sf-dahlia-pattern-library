@@ -340,6 +340,7 @@ applicants:
     address: 4106 Terrace St
     update: none
     status: Lease Signed
+    invalid_status: is-invalid
     row_status: is-leased
     button_status: is-leased
   - preference: COP 9
