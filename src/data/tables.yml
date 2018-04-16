@@ -271,7 +271,7 @@ applicants:
     update: none
     status: Status
     row_status: 
-    button_status: tertiatu
+    button_status: tertiary
   - preference: COP 2
     application: APP-111-2223
     first: Beth
