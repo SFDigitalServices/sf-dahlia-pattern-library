@@ -38,6 +38,7 @@
 
 .dropdown-menu_item { 
   @include dropdown-style;
+  list-style: none;
 
   &.is {
     @each $color-name, $color-value in $state-colors {
