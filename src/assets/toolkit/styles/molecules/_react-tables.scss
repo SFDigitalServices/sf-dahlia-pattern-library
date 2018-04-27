@@ -331,6 +331,16 @@
     &.is-invalid {
       opacity: 0.5;
 
+      &:hover {
+        .rt-td-label-invalid {
+          display: none;
+        }
+
+        .rt-td-label-rank {
+          display: block;
+        }
+      }
+
       .rt-td-label-invalid {
         display: block;
       }
