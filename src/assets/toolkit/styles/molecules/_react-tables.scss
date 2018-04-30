@@ -328,6 +328,28 @@
       }
     }
 
+    &.is-invalid {
+      opacity: 0.5;
+
+      &:hover {
+        .rt-td-label-invalid {
+          display: none;
+        }
+
+        .rt-td-label-rank {
+          display: block;
+        }
+      }
+
+      .rt-td-label-invalid {
+        display: block;
+      }
+
+      .rt-td-label-rank {
+        display: none;
+      }
+    }
+
     .rt-td {
       align-self: center;
       flex: 1 1 auto;
@@ -342,6 +364,10 @@
       }
     }
 
+    .rt-td-label-invalid {
+      display: none;
+    }
+
     .button {
       min-width: 150px;
     }
@@ -349,9 +375,12 @@
 
   // plain cell coloring
   &.status-table {
+    .rt-tr-group {
+      border-bottom: 1px solid $smoke;
+    }
+    
     .rt-tr {
       background: transparent;
-      border-bottom: 1px solid $smoke;
     }
   }
 }
