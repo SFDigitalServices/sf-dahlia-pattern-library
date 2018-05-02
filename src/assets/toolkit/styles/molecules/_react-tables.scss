@@ -83,7 +83,8 @@
     flex: 99999 1 auto;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: visible;
+    min-width: 100% !important;
   }
 
   .rt-tbody .rt-expandable {
@@ -99,7 +100,7 @@
 
   .rt-tr {
     flex: 1 0 auto;
-    display: inline-flex;
+    display: flex;
   }
 
   .rt-th, 
@@ -115,6 +116,14 @@
     &.rt-expandable {
       min-width: auto;
     }
+
+    &.td-min-wide {
+      min-width: rem-calc(180);
+    }
+  }
+
+  .rt-td {
+    
   }
 
   .rt-th {
@@ -125,7 +134,11 @@
     line-height: 1.625;
 
     &:first-of-type {
-      min-width: auto;
+      // min-width: auto;
+    }
+
+    &:last-of-type {
+      min-width: rem-calc(180);
     }
   }
 
@@ -281,13 +294,17 @@
   // zebra striping
   .rt-tr {
     &.-odd {
-      &, & + .subcomponent {
+      &, 
+      & + .subcomponent,
+      .rt-td {
         background: $table-even-row-bg;
       }
     }
 
     &.-even {
-      &, & + .subcomponent {
+      &, 
+      & + .subcomponent,
+      .rt-td {
         background: $white;
       }
     }
@@ -306,6 +323,8 @@
 
   // status rows
   .rt-tr-status {
+    align-items: stretch;
+
     &:hover {
       background-color: $snow !important;
     }
@@ -329,9 +348,15 @@
     }
 
     .rt-td {
-      align-self: center;
-      flex: 1 1 auto;
       padding: 10px 1rem;
+      display: flex;
+      align-items: center;
+
+      span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
 
       &:first-of-type {
         padding-left: 1.5rem;
@@ -344,6 +369,7 @@
 
     .button {
       min-width: 150px;
+      margin-bottom: 0;
     }
   }
 
