@@ -134,11 +134,11 @@
     line-height: 1.625;
 
     &:first-of-type {
-      min-width: rem-calc(120);
-    }
+      min-width: auto;
 
-    &:last-of-type {
-      min-width: rem-calc(180);
+      &.td-min-narrow {
+        min-width: rem-calc(120);
+      }
     }
   }
 
