@@ -5,7 +5,9 @@
       <hgroup class="lead-header_group">
         <h1 class="lead-header_title small c-{{default color 'oil'}}">{{default title 'Page Header'}}</h1>
         <div class="medium-8 columns no-padding">
+          {{#if description}}
           <p class="lead-header_subtitle caps c-{{default color 'oil'}}">{{default description "21 Clarence Place, San Francisco CA"}}</p>
+          {{/if}}
         </div>
         {{#if action}}
         <div class="medium-4 columns no-padding">
