@@ -83,7 +83,8 @@
     flex: 99999 1 auto;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: visible;
+    min-width: 100% !important;
   }
 
   .rt-tbody .rt-expandable {
@@ -99,7 +100,7 @@
 
   .rt-tr {
     flex: 1 0 auto;
-    display: inline-flex;
+    display: flex;
   }
 
   .rt-th, 
@@ -115,6 +116,14 @@
     &.rt-expandable {
       min-width: auto;
     }
+
+    &.td-min-narrow {
+      min-width: rem-calc(120);
+    }
+
+    &.td-min-wide {
+      min-width: rem-calc(180);
+    }
   }
 
   .rt-th {
@@ -126,6 +135,10 @@
 
     &:first-of-type {
       min-width: auto;
+
+      &.td-min-narrow {
+        min-width: rem-calc(120);
+      }
     }
   }
 
@@ -272,7 +285,9 @@
   // table rows
   .rt-tbody .rt-tr {
     &:hover {
-      &, & + .subcomponent {
+      &
+      & + .subcomponent,
+      .rt-td {
         background-color: lighten($primary-tint, 2%);
       }
     }
@@ -281,13 +296,17 @@
   // zebra striping
   .rt-tr {
     &.-odd {
-      &, & + .subcomponent {
+      &, 
+      & + .subcomponent,
+      .rt-td {
         background: $table-even-row-bg;
       }
     }
 
     &.-even {
-      &, & + .subcomponent {
+      &, 
+      & + .subcomponent,
+      .rt-td {
         background: $white;
       }
     }
@@ -306,24 +325,34 @@
 
   // status rows
   .rt-tr-status {
+    align-items: stretch;
+
     &:hover {
-      background-color: $snow !important;
+      .rt-td {
+        background-color: $snow !important;
+      }
     }
 
     &.is {
       @each $color-name, $color-value in $state-wash-colors {
-        &-#{"" + $color-name} {
+        &-#{"" + $color-name} .rt-td {
           background-color: $color-value !important;
+        }
 
+        &-#{"" + $color-name} {
           &:hover {
-            background-color: darken($color-value, 2%) !important;
+            .rt-td {
+              background-color: darken($color-value, 2%) !important;
+            }
           }
         }
       }
 
       @each $color-name, $color-value in $state-colors {
         &-#{"" + $color-name} {
-          box-shadow: inset 3px 0 0 0 $color-value !important;
+          .rt-td:first-of-type {
+            box-shadow: inset 3px 0 0 0 $color-value !important;
+          }
         }
       }
     }
@@ -351,9 +380,15 @@
     }
 
     .rt-td {
-      align-self: center;
-      flex: 1 1 auto;
       padding: 10px 1rem;
+      display: flex;
+      align-items: center;
+
+      .rt-resizable-td-content {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
 
       &:first-of-type {
         padding-left: 1.5rem;
@@ -370,6 +405,7 @@
 
     .button {
       min-width: 150px;
+      margin-bottom: 0;
     }
   }
 
