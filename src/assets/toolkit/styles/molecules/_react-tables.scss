@@ -16,8 +16,7 @@
     align-items: stretch;
     width: 100%;
     border-collapse: collapse;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: auto;
   }
 
   .rt-thead {
@@ -319,7 +318,8 @@
       padding: 5px;
     }
 
-    input {
+    input, 
+    select {
       margin-bottom: 0;
     }
   }
@@ -363,6 +363,7 @@
       }
     }
 
+    // invalid row state
     &.is-invalid {
       opacity: 0.5;
 
@@ -385,6 +386,10 @@
       }
     }
 
+    .rt-td-label-invalid {
+      display: none;
+    }
+
     .rt-td {
       padding: 10px 1rem;
       display: flex;
@@ -405,16 +410,12 @@
       }
     }
 
-    .rt-td-label-invalid {
-      display: none;
-    }
-
+    // status cell with dropdown
     .td-status {
       overflow: visible;
-      // position: relative;
 
       .dropdown {
-        position: absolute !important; // Change to inline style
+        position: absolute !important; // Change to an inline style
         right: rem-calc(16);
       }
 
@@ -425,11 +426,7 @@
     }
   }
 
-  .td-offset-right {
-    min-width: 300px;
-    padding-right: 180px !important;
-  }
-
+  // right fixed column
   .tr-fixed-right,
   .td-fixed-right {
     position: absolute !important;
@@ -439,11 +436,24 @@
 
   .td-fixed-right {
     min-height: rem-calc(66);
+
+    .rt-resizer {
+      display: none;
+    }
   }
 
   .tr-fixed-right {
     min-height: rem-calc(87);
     border-left: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .td-offset-right {
+    min-width: rem-calc(300);
+    padding-right: 180px !important;
+
+    .rt-resizer {
+      display: none;
+    }
   }
 
   // plain cell coloring
