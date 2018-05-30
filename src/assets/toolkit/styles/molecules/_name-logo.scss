@@ -9,10 +9,20 @@
     z-index: 103;
   }
 
-  // When there is version bar present
-  &.offset-up {
+  // Offset when there's version bar present
+  &.is-offset-up {
     @media #{$medium-up} {
       margin-top: -(rem-calc(36)) !important;
+    }
+  }
+
+  // Logo height modifier
+  &.is-tall {
+    a {
+      @media #{$medium-up} {
+        padding-bottom: rem-calc(20) !important;
+        padding-top: rem-calc(20) !important;
+      }
     }
   }
 
@@ -24,11 +34,11 @@
     padding-top: rem-calc(0) !important;
     width: 100% !important;
 
-    @media #{$medium-up} {
+     @media #{$medium-up} {
       background-position: center center;
       background-size: 100% auto;
-      padding-bottom: rem-calc(20) !important;
-      padding-top: rem-calc(20) !important;
+      padding-bottom: rem-calc(4) !important;
+      padding-top: rem-calc(4) !important;
     }
   }
 }

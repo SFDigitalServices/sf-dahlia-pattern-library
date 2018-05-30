@@ -7,7 +7,7 @@
   // Allows for full width navigation
   &.full-width {
     overflow: visible;
-    
+
     @media #{$medium-up} {
       height: auto;
     }
@@ -64,7 +64,7 @@
   height: 4.6875rem;
   float: right;
 
-  &.flex-items {
+  &.has-flex-items {
     ul.nav-menu {
       @media #{$medium-up} {
         display: flex;
