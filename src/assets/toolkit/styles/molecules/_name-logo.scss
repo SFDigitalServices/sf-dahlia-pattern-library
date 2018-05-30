@@ -5,27 +5,18 @@
   width: 100%;
   
   @media #{$medium-up} {
-    margin-top: -(rem-calc(36)) !important;
     position: relative;
     z-index: 103;
   }
 
-  // When there is no version bar present
-  &.no-offset {
+  // When there is version bar present
+  &.offset-up {
     @media #{$medium-up} {
-      margin-top: 0 !important;
-    }
-
-    a {
-      @media #{$medium-up} {
-        padding-bottom: rem-calc(4) !important;
-        padding-top: rem-calc(4) !important;
-      }
+      margin-top: -(rem-calc(36)) !important;
     }
   }
 
   a {
-    // @include scut-image-replace;
     @include image-replace("../images/logo-portal.png");
     background-position: center left;
     background-size: auto 100%;

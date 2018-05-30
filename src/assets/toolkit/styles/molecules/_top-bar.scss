@@ -3,8 +3,11 @@
 // Desktop navigation based on foundation top bar
 
 .top-bar {
+
   // Allows for full width navigation
   &.full-width {
+    overflow: visible;
+    
     @media #{$medium-up} {
       height: auto;
     }
@@ -30,6 +33,10 @@
 
     .top-bar-section {
       width: auto;
+
+      @media screen and (min-width: 75rem) {
+        float: none;
+      }
     }
   }
 
@@ -51,45 +58,48 @@
   }
 }
 
-// Possible utility for flex menu items would make nav menu more reusbale
 .top-bar-section {
   width: 70%;
   left: auto !important;
   height: 4.6875rem;
   float: right;
 
-  ul.nav-menu {
-    @media #{$medium-up} {
-      width: auto;
-      display: flex;
-    }
+  &.flex-items {
+    ul.nav-menu {
+      @media #{$medium-up} {
+        display: flex;
+      }
 
+      > li {
+        display: flex;
+
+        @media #{$large-up} {
+          max-width: 180px;
+          width: auto;
+        }
+      }
+
+      > li > a,
+      > li:not(.has-form) a:not(.button) {
+        display: flex;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  ul.nav-menu {
     @media #{$small-only} {
       display: none;
     }
 
-    // Removes flex rules on default nav. Resolve with utility for flex nav menu
-    &.no-max-width-items {
-      > li {
-        @media #{$large-up} {
-          max-width: none;
-        }
-      }
+    @media #{$medium-up} {
+      width: auto;
     }
 
     > li {
       background: transparent;
       width: auto;
-    }
-
-    > li {
       height: 4.6875rem;
-      display: flex;
-
-      @media #{$large-up} {
-        max-width: 180px;
-        width: auto;
-      }
     }
 
     > li > a,
@@ -100,8 +110,6 @@
       line-height: 1rem;
       text-transform: uppercase;
       border-bottom: 3px solid transparent;
-      display: flex;
-      align-self: flex-end;
 
       @media #{$large-up} {
         @include scut-padding(n 1.5rem n 1.5rem);
