@@ -8,13 +8,22 @@
     z-index: 102;
   }
   
+  // used for full page overlay and fixed positioning
   &-overlay {
-    min-height: 350px;
+    min-height: rem-calc(350);
+
+    .spinner {
+      position: fixed;
+    }
+  }
+
+  // used for smaller components
+  &-panel {
+    min-height: rem-calc(40);
   }
 
   .spinner {
     @include scut-center-transform;
-    position: fixed;
     z-index: 103;
   }
 
