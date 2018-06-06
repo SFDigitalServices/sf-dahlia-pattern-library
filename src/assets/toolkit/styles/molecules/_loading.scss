@@ -10,7 +10,8 @@
   
   // used for full page overlay and fixed positioning
   &-overlay {
-    min-height: rem-calc(350);
+    @include absolute(0,0,0,0);
+    min-height: rem-calc(40);
 
     .spinner {
       position: fixed;
