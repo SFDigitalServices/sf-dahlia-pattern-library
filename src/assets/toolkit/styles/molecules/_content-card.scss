@@ -18,6 +18,12 @@
       margin-bottom: 0;
     }
   }
+
+  a {
+    .ui-icon {
+      padding-left: rem-calc(4px);
+    }
+  }
 }
 
 .content-card_title {
@@ -76,15 +82,17 @@
 .content-grid {
   @media #{$medium-up} {
     @include clearfix;
+    display: flex;
+    flex-wrap: wrap;
 
     .content-item {
-      float: left;
+      display: flex;
       width: 50%;
       padding-right: 1rem;
 
-      &:nth-child(2n+1) {
-        clear: left;
-      }  
+      .content-card {
+        width: 100%
+      }
     }
   }
 
@@ -93,10 +101,6 @@
       .content-item {
         padding-right: 2rem;
         margin-bottom: 1rem;
-
-        &:nth-child(2n+1) {
-          clear: left;
-        }
       } 
     }
   }
