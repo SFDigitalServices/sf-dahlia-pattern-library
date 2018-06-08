@@ -6,7 +6,7 @@
 
   // Allows for full width navigation
   &.full-width {
-    overflow: visible;
+    // overflow: visible;
 
     @media #{$medium-up} {
       height: auto;
