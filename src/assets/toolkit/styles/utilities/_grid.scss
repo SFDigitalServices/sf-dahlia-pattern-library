@@ -26,6 +26,18 @@
       @include scut-padding(n 3rem);
     }
   }
+
+  &.offset-up--4x {
+    @media #{$large-up} {
+      @include scut-margin(-4rem n n);
+      z-index: 10;
+      position: relative;
+    }
+  }
+}
+
+.large-11.columns.max-width {
+  max-width: rem-calc(940);
 }
 
 .large-12.columns.max-width {

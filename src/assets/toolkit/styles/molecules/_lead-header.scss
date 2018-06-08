@@ -44,6 +44,15 @@
     }
   }
 
+  // Adds spacing to top of header
+  &.padding-top--8x {
+    padding: 2rem 0 1rem;
+
+    @media #{$medium-up} {
+      padding: 8rem 0 1rem;
+    }
+  }
+
   // Applies offset to nested breadcrumb
   &.has-breadcrumbs {
     .breadcrumbs {
