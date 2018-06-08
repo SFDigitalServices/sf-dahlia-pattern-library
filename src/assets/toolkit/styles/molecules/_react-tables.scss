@@ -135,10 +135,10 @@
 
     &:first-of-type {
       min-width: auto;
+    }
 
-      &.td-min-narrow {
-        min-width: rem-calc(120);
-      }
+    &.td-min-narrow {
+      min-width: rem-calc(120);
     }
   }
 
@@ -457,13 +457,19 @@
   }
 
   // plain cell coloring
-  &.status-table {
+  &.rt-table-status {
     .rt-tr-group {
       border-bottom: 1px solid $smoke;
     }
     
     .rt-tr {
       background: transparent;
+
+      &, 
+      & + .subcomponent,
+      .rt-td {
+        background: white;
+      }
     }
   }
 }
