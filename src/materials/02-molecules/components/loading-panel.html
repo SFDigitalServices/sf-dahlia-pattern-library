@@ -1,3 +1,13 @@
-<div class="loading loading-panel">
+---
+notes: |
+  Use `loading-panel` in conjunction with `loading` as state classes applied directly to the component to indicate that component is loading.
+---
+
+<div class="content-card loading loading-panel">
+  <h4 class="content-card_title{{#if subtitle}} no-margin{{/if}}">{{default name 'Certificate of Preference'}}</h4>
+  {{#if has-subtitle}}<p class="c-steel">{{default subtitle ' 11 units'}}</p>{{/if}}
+  <p class="c-steel">{{default description 'Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960s and 1970s, but may also include other persons displaced by Agency action.'}}
+  {{#if more}}<br><a href="#">Read More</a>{{/if}}
+  </p>
   {{> icons.spinner }}
 </div>
