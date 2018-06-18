@@ -2,30 +2,33 @@
   @include scut-padding(.625rem n);
   min-height: 2.1875rem;
 
-  .translate-bar_notice {
+  .translate-bar_notice-column {
     @media #{$xlarge-up} {
       padding-left: 0 !important;
     }
-    
+  }
+
+  .translate-bar_notice {
     @media #{$small-only} {
       line-height: 1.25;
-      .margin-bottom--half {
-        margin-bottom: 10px !important;
-      }
+      margin-bottom: 10px !important;
     }
   }
 
-  &_message, &_learn {
+  .translate-bar_message,
+  .translate-bar_learn {
     @media #{$small-only} {
       font-size: 0.75rem;
     }
   }
 
-  &_languages {
-    margin: 0;
+  .translate-bar_languages {
+    margin: 0 !important;
+
     > li {
       margin-left: 2rem;
     }
+
     @media #{$small-only} {
       > li {
         font-size: 0.9rem;
