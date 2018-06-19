@@ -83,8 +83,7 @@
     flex: 99999 1 auto;
     display: flex;
     flex-direction: column;
-    overflow: visible;
-    min-width: 100% !important;
+    overflow: auto;
   }
 
   .rt-tbody .rt-expandable {
@@ -100,7 +99,7 @@
 
   .rt-tr {
     flex: 1 0 auto;
-    display: flex;
+    display: inline-flex;
   }
 
   .rt-th, 
@@ -115,14 +114,6 @@
 
     &.rt-expandable {
       min-width: auto;
-    }
-
-    &.td-min-narrow {
-      min-width: rem-calc(120);
-    }
-
-    &.td-min-wide {
-      min-width: rem-calc(180);
     }
   }
 
@@ -285,9 +276,7 @@
   // table rows
   .rt-tbody .rt-tr {
     &:hover {
-      &
-      & + .subcomponent,
-      .rt-td {
+      &, & + .subcomponent {
         background-color: lighten($primary-tint, 2%);
       }
     }
@@ -296,17 +285,13 @@
   // zebra striping
   .rt-tr {
     &.-odd {
-      &, 
-      & + .subcomponent,
-      .rt-td {
+      &, & + .subcomponent {
         background: $table-even-row-bg;
       }
     }
 
     &.-even {
-      &, 
-      & + .subcomponent,
-      .rt-td {
+      &, & + .subcomponent {
         background: $white;
       }
     }
@@ -334,31 +319,23 @@
     min-height: rem-calc(66);
 
     &:hover {
-      .rt-td {
-        background-color: $snow !important;
-      }
+      background-color: $snow !important;
     }
 
     &.is {
       @each $color-name, $color-value in $state-wash-colors {
-        &-#{"" + $color-name} .rt-td {
-          background-color: $color-value !important;
-        }
-
         &-#{"" + $color-name} {
+          background-color: $color-value !important;
+
           &:hover {
-            .rt-td {
-              background-color: darken($color-value, 2%) !important;
-            }
+            background-color: darken($color-value, 2%) !important;
           }
         }
       }
 
       @each $color-name, $color-value in $state-colors {
         &-#{"" + $color-name} {
-          .rt-td:first-of-type {
-            box-shadow: inset 3px 0 0 0 $color-value !important;
-          }
+          box-shadow: inset 3px 0 0 0 $color-value !important;
         }
       }
     }
@@ -391,15 +368,9 @@
     }
 
     .rt-td {
+      align-self: center;
+      flex: 1 1 auto;
       padding: 10px 1rem;
-      display: flex;
-      align-items: center;
-
-      .rt-resizable-td-content {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
 
       &:first-of-type {
         padding-left: 1.5rem;
