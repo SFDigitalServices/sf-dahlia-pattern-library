@@ -346,6 +346,10 @@ button,
     &.caps {
       text-transform: uppercase;
     }
+
+    &.t-semi {
+      font-weight: $t-semi !important;
+    }
   }
 
   &.skip-link {
