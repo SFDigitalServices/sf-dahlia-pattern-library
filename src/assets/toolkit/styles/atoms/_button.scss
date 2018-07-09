@@ -350,6 +350,11 @@ button,
     &.t-semi {
       font-weight: $t-semi !important;
     }
+
+    &.action-link {
+      text-transform: uppercase;
+      font-weight: $t-semi !important;
+    }
   }
 
   &.skip-link {

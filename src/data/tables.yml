@@ -260,7 +260,7 @@ preferences:
       rank: 112
       proof: "<a href='#'>Cable Bill</a>"
       status: Unconfirmed
-      action: "<button class='button button-link t-semi caps margin-bottom--half'>Confirm</button><br> <button class='button button-link caps t-semi c-alert'>Remove</button>"
+      action: "<button class='button button-link action-link margin-bottom--half'>Confirm</button><br> <button class='button button-link action-link c-alert'>Remove</button>"
 applicants:
   - preference: COP 1
     application: APP-111-2223
