@@ -342,7 +342,14 @@
 
     // invalid row state
     &.is-invalid {
-      opacity: 0.5;
+
+      &.is {
+        @each $color-name, $color-value in $state-colors {
+          &-#{"" + $color-name} {
+            box-shadow: inset 3px 0 0 0 transparentize($color-value, .5) !important;
+          }
+        }
+      }
 
       &:hover {
         .rt-td-label-invalid {
@@ -351,6 +358,18 @@
 
         .rt-td-label-rank {
           display: block;
+        }
+      }
+
+      .rt-td {
+        opacity: 0.5;
+
+        &.td-status {
+          opacity: 1;
+
+          .dropdown-button {
+            opacity: 0.5;
+          }
         }
       }
 
@@ -370,7 +389,6 @@
     .rt-td {
       align-self: center;
       flex: 1 1 auto;
-      padding: 10px 1rem;
 
       &:first-of-type {
         padding-left: 1.5rem;
@@ -439,7 +457,7 @@
       &, 
       & + .subcomponent,
       .rt-td {
-        background: white;
+        background: transparent;
       }
     }
   }
