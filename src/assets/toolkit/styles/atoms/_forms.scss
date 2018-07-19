@@ -289,3 +289,13 @@ label,
     }
   }
 }
+
+.checkbox {
+  &.base {
+    label {
+      font-size: 1rem;
+      color: $steel;
+      font-weight: normal !important;
+    }
+  }
+}
