@@ -83,7 +83,6 @@
     flex: 99999 1 auto;
     display: flex;
     flex-direction: column;
-    overflow: auto;
   }
 
   .rt-tbody .rt-expandable {
@@ -114,6 +113,10 @@
 
     &.rt-expandable {
       min-width: auto;
+    }
+
+    &.td-min-narrow {
+      min-width: rem-calc(120);
     }
   }
 
@@ -319,23 +322,41 @@
     min-height: rem-calc(66);
 
     &:hover {
-      background-color: $snow !important;
+      background-color: transparent !important;
+
+      .rt-td {
+        background-color: $snow !important;
+      }
+    }
+
+    .rt-td {
+      display: flex;
+      min-height: rem-calc(66);
+      align-items: center;
     }
 
     &.is {
       @each $color-name, $color-value in $state-wash-colors {
         &-#{"" + $color-name} {
-          background-color: $color-value !important;
+          .rt-td {
+            background-color: $color-value !important;
+          }
+        }
 
+        &-#{"" + $color-name} {
           &:hover {
-            background-color: darken($color-value, 2%) !important;
+            .rt-td {
+              background-color: darken($color-value, 2%) !important;
+            }
           }
         }
       }
 
       @each $color-name, $color-value in $state-colors {
         &-#{"" + $color-name} {
-          box-shadow: inset 3px 0 0 0 $color-value !important;
+          .rt-td:first-of-type {
+            box-shadow: inset 3px 0 0 0 $color-value !important;
+          }
         }
       }
     }
@@ -346,7 +367,9 @@
       &.is {
         @each $color-name, $color-value in $state-colors {
           &-#{"" + $color-name} {
-            box-shadow: inset 3px 0 0 0 transparentize($color-value, .5) !important;
+            .rt-td:first-of-type {
+              box-shadow: inset 3px 0 0 0 transparentize($color-value, .5) !important;
+            }
           }
         }
       }
@@ -438,7 +461,7 @@
 
   .td-offset-right {
     min-width: rem-calc(300);
-    padding-right: 180px !important;
+    padding-right: rem-calc(196) !important;
 
     .rt-resizer {
       display: none;
@@ -447,8 +470,14 @@
 
   // plain cell coloring
   &.rt-table-status {
-    .rt-tr-group {
+    .rt-td {
       border-bottom: 1px solid $smoke;
+
+      &.text-right {
+        * {
+          margin-left: auto;
+        }
+      }
     }
     
     .rt-tr {
@@ -457,7 +486,7 @@
       &, 
       & + .subcomponent,
       .rt-td {
-        background: transparent;
+        background: $white;
       }
     }
   }
