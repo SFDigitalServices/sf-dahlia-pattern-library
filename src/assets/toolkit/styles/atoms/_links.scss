@@ -77,3 +77,11 @@ a, .btn-link {
     transform: translateY(-50%);
   }
 }
+
+.block-list-link {
+  display: block;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: normal;
+  padding-bottom: .5rem;
+}
