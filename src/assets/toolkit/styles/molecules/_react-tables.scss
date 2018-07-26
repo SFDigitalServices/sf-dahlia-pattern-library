@@ -363,7 +363,6 @@
 
     // invalid row state
     &.is-invalid {
-
       &.is {
         @each $color-name, $color-value in $state-colors {
           &-#{"" + $color-name} {
@@ -385,14 +384,8 @@
       }
 
       .rt-td {
-        opacity: 0.5;
-
-        &.td-status {
-          opacity: 1;
-
-          .dropdown-button {
-            opacity: 0.5;
-          }
+        > * {
+          opacity: 0.5;
         }
       }
 
