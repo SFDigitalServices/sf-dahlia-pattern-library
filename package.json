@@ -29,17 +29,17 @@
     "url": "https://github.com/fbrctr/fabricator.git"
   },
   "engines": {
-    "node": ">=6.11.1",
-    "npm": ">=3.0.0"
+    "node": "^10.0.0",
+    "npm": "^6.0.0"
   },
   "devDependencies": {
     "angular": "1.5.11",
-    "angular-aria": "1.5.11",
     "angular-animate": "1.5.8",
+    "angular-aria": "1.5.11",
     "angular-ui-validate": "1.2.2",
     "babel-core": "^5.2.17",
     "babel-loader": "5.0.0",
-    "bower": "^1.7.2",
+    "bower": "1.8.4",
     "browser-sync": "^2.7.1",
     "del": "^1.1.1",
     "fabricator-assemble": "^1.1.7",
@@ -56,10 +56,11 @@
     "imports-loader": "^0.6.3",
     "jquery": "^2.1.4",
     "lodash": "^4.1.0",
-    "moment": "2.12.0",
+    "moment": "^2.22.2",
     "ng-currency": "0.10.1",
     "run-sequence": "^1.0.2",
     "script-loader": "^0.6.1",
     "webpack": "^1.8.11"
-  }
+  },
+  "dependencies": {}
 }
