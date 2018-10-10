@@ -12,18 +12,9 @@ Includes:
 ## Getting Started
 
 1. Install Node
-1. Install gulp-sass
-
-```
-npm install gulp-sass
-```
-
 1. Clone this repo
-1. Start your server
-
-```
-$ npm start
-```
+1. Run `npm start`, which will run an npm install and bower install and start the server
+1. Go to http://localhost:3010 to view the pattern library
 
 ## Deploying to Heroku
 
