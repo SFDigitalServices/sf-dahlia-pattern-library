@@ -6,10 +6,15 @@
 .tabs .tab-title {
   > a,
   > button {
+    display: block;
+    font-size: $tabs-navigation-font-size;
+    background-color: $tabs-navigation-bg-color;
+    padding: $tabs-navigation-padding $tabs-navigation-padding * 2;
+    color: $tabs-navigation-font-color;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: $t-semi;
-
+    line-height: $base-line-height;
     &:hover {
       color: $jet;
       box-shadow: inset 0 -2px 0 0 $primary;
@@ -19,7 +24,7 @@
   &.active > a,
   &.active > button {
     box-shadow: inset 0 2px 0 0 $primary;
-
+    color: $tabs-navigation-active-font-color;
     &:hover {
       box-shadow: inset 0 2px 0 0 $primary;
     }
