@@ -13,7 +13,7 @@
     color: $tabs-navigation-font-color;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: $t-semi;
+    @include type-weight(semi);
     line-height: $base-line-height;
     &:hover {
       color: $jet;
@@ -25,6 +25,7 @@
   &.active > button {
     box-shadow: inset 0 2px 0 0 $primary;
     color: $tabs-navigation-active-font-color;
+    @include type-weight(semi);
     &:hover {
       box-shadow: inset 0 2px 0 0 $primary;
     }
