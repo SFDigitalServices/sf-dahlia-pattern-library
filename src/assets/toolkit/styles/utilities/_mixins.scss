@@ -126,14 +126,17 @@
 @mixin bg-image($position: center) {
   background: $dark url('../images/bg@400.jpg') $position;
   background-size: cover;
+  @media screen and (min-resolution: 144dpi) {
+    background-image: url('../images/bg@800.jpg');
+  }
   @media screen and (min-width: em-calc(600)) {
     background-image: url('../images/bg@600.jpg');
   }
-  @media screen and (min-width: em-calc(600)) and (min-resolution: 2),
+  @media screen and (min-width: em-calc(600)) and (min-resolution: 144dpi),
          screen and (min-width: em-calc(1000)) {
     background-image: url('../images/bg@1200.jpg');
   }
-  @media screen and (min-width: em-calc(1000)) and (min-resolution: 2) {
+  @media screen and (min-width: em-calc(1000)) and (min-resolution: 144dpi) {
     background-image: url('../images/bg@2400.jpg');
   }
 }
