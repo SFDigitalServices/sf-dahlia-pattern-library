@@ -2,8 +2,12 @@
 // Splash header
 // Styles for top homepage element
 
-.hero {
+.splash-header {
+  position: relative;
 
+  &.bg-image {
+    @include bg-image;
+  }
 }
 
 .hero-header {
@@ -12,31 +16,18 @@
   z-index: 2;
 
   @media #{$medium-up} {
-    padding: 8rem 1rem 2rem 1rem;
+    padding: 4rem 1rem;
+  }
+
+  @media #{$xlarge-up} {
+    padding: 6rem 1rem;
   }
 }
 
 .hero-title {
-  @media #{$small-only} {
-    font-size: $h1-font-size;
-  }  
-}
-
-.splash-header {
-  position: relative;
-
-  &.bg-image {
-    background-image: url('../images/sf-homes-wide.jpg');
-    background-size: cover;
-    background-position: bottom left;
-  }
-
-  &:before {
-    content: "";
-    display: block;
-    @include absolute(0,0,0,0);
-    background-color: rgba(0,0,0,.6);
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 10%, rgba(0,0,0,.8) 100%);
-    background: -ms-linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,1) 100%);
+  letter-spacing: -0.04em;
+  @include responsive-text-size(mega);
+  @media #{$large-up} {
+    @include responsive-text-size(giga);
   }
 }
