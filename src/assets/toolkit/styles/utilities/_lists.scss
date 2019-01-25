@@ -26,16 +26,17 @@
   }
 }
 
-
 .numbered-list {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
+
   li {
     position: relative;
     display: block;
     counter-increment: list;
     margin: 0 0 0.5rem 2rem;
+
     &:before {
       display: inline-block;
       position: absolute;
@@ -71,4 +72,5 @@
       }
     }
   }
+
 }
