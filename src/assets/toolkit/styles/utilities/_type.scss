@@ -343,7 +343,7 @@ hr {
   border-bottom: $border-bottom solid $primary;
   display: inline-block;
   font-family: $alt-font-family;
-  letter-spacing: $small-header-spacing;
+  letter-spacing: 0.12rem;
   text-transform: uppercase;
 }
 
@@ -352,7 +352,9 @@ hr {
   @include responsive-text-size('small');
   margin-top: -.25rem;
   vertical-align: top;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  color: $tuatara;
 }
 
 .h-caps {
