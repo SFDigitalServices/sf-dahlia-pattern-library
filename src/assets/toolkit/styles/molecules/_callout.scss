@@ -1,0 +1,30 @@
+.callout {
+  background: $dark;
+  color: $white;
+  padding: 2rem 0;
+  text-align: center;
+
+  h2 {
+    letter-spacing: -0.04rem;
+  }
+
+  .button {
+    margin: 0;
+  }
+
+  @media #{$large-up} {
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+}
