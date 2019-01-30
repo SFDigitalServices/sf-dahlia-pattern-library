@@ -13,26 +13,10 @@
     text-align: left;
   }
 
-  // Applies background graident
-  &.bg-gradient {
-    @media #{$medium-up} {
-
-      &:before {
-        @include overlay-image;
-        @include custom-linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .8));  
-      }
-    }
-  }
-
   // Applies background image
   &.bg-image {
     background-color: $dark;
-
-    @media #{$medium-up} {
-      background-image: url('../images/sf-homes-wide.jpg');
-      background-size: cover;
-      background-position: bottom left;
-    }
+    @include bg-image;
   }
 
   // Reduces vertical height of header
@@ -79,6 +63,14 @@
     font-family: $serif-font-family;
     text-transform: none;
     letter-spacing: normal;
+  }
+  &.serif {
+    @include responsive-text-size('mega');
+    font-family: $serif-font-family;
+    @include type-weight(regular);
+    text-transform: none;
+    letter-spacing: -0.04em;
+    text-rendering: optimizeLegibility;
   }
 }
 

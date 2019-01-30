@@ -1,0 +1,33 @@
+//
+// Splash header
+// Styles for top homepage element
+
+.splash-header {
+  position: relative;
+
+  &.bg-image {
+    @include bg-image;
+  }
+}
+
+.hero-header {
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+
+  @media #{$medium-up} {
+    padding: 4rem 1rem;
+  }
+
+  @media #{$xlarge-up} {
+    padding: 6rem 1rem;
+  }
+}
+
+.hero-title {
+  letter-spacing: -0.04em;
+  @include responsive-text-size(mega);
+  @media #{$large-up} {
+    @include responsive-text-size(giga);
+  }
+}

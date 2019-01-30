@@ -15,7 +15,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color: $snow;
-  background-image: none, url('../images/arrow-down.svg'), url('../images/arrow-down.png');
+  background-image: none, url("../images/arrow-down.svg"), url("../images/arrow-down.png");
   background-position: right .75rem center;
   background-repeat: no-repeat;
   background-size: .75rem;
@@ -90,8 +90,8 @@ input[type="radio"]:focus + label::before {
 }
 
 input[type="checkbox"]:checked + label::before {
-  background-image: url('../images/check.png');
-  background-image: url('../images/check.svg');
+  background-image: url("../images/check.png");
+  background-image: url("../images/check.svg");
   background-position: 50%;
   background-repeat: no-repeat;
 }
