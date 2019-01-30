@@ -123,6 +123,11 @@
   text-indent: -9999px;
 }
 
+// Responsive background image 
+// Source: https://unsplash.com/photos/IkpC4BZILCo
+// Uses the Unsplash license, which is comparable to public domain:
+// https://medium.com/unsplash/the-unsplash-license-f6fb7de5c95a 
+
 @mixin bg-image($position: center) {
   background: $dark url("../images/bg@400.jpg") $position;
   background-size: cover;
