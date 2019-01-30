@@ -128,7 +128,7 @@ $text-sizing: (
       line-height: 1.25
     ),
     medium: (
-      font-size: 1.625rem, // 28px
+      font-size: 1.625rem, // 26px
       line-height: 1.25
     )
   ),
@@ -138,7 +138,7 @@ $text-sizing: (
       line-height: 1.25
     ),
     medium: (
-      font-size: 2rem, // 28px
+      font-size: 2rem, // 32px
       line-height: 1.25
     )
   ),
@@ -151,7 +151,27 @@ $text-sizing: (
       font-size: 2.5rem, // 40px
       line-height: 1.25
     )
-  )
+  ),
+  mega: (
+    small: (
+      font-size: 2rem, // 32px
+      line-height: 1.25
+    ),
+    medium: (
+      font-size: 3rem, // 48px
+      line-height: 1.5
+    )
+  ),
+  giga: (
+    small: (
+      font-size: 2rem, // 32px
+      line-height: 1.25
+    ),
+    medium: (
+      font-size: 4.5rem, // 72px
+      line-height: 1.5
+    )
+  ),
 );
 
 // lib/functions/_responsive.scss
