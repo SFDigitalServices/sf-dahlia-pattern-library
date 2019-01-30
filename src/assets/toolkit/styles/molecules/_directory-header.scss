@@ -25,6 +25,8 @@
 
 .directory-header_primary,
 .directory-header_sidebar {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   @include text-size(small);
   line-height: $base-line-height;
 
