@@ -3,6 +3,8 @@
   color: $white;
   padding: 2rem 0;
   text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   h2 {
     letter-spacing: -0.04rem;
