@@ -25,10 +25,12 @@
 
 .directory-header_primary,
 .directory-header_sidebar {
-  @include responsive-text-size(small);
+  @include text-size(small);
+  line-height: $base-line-height;
 
   @media #{$large-up} {
-    @include responsive-text-size(base);
+    @include text-size(base);
+    line-height: $base-line-height;
   }
 
 }
@@ -38,7 +40,6 @@
     background-color: #fff;
     border: 2px solid $white-smoke;
     padding: 1rem;
-    line-height: $base-line-height;
   }
 
   p:last-of-type {
