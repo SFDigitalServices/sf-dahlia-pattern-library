@@ -117,20 +117,17 @@
 
 // Results values and actions modifier to lead header. 
 // Applies to nested container and not to parent lead header.
-.results-header {
-
-}
 
 .results-header_values {
   @include responsive-text-size('gamma');
   color: $steel;
-  font-family: $alt-font-family;
-  letter-spacing: $large-header-spacing;
-  text-transform: uppercase;
+  font-family: $serif-font-family;
+  letter-spacing: -0.04em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   strong {
     color: $oil;
-    font-family: $serif-font-family;
     letter-spacing: normal;
   }
 
