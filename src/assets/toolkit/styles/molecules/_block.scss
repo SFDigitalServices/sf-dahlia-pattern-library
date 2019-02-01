@@ -66,8 +66,10 @@
 // Message with action
 
 .welcome-block {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   @media #{$medium-up} {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }  
 }
