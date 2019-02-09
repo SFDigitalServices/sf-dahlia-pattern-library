@@ -64,55 +64,12 @@
 // Home Page
 
 // Message with action
-.splash-message {
-  @media #{$medium-up} {
-    padding-top: 2rem;
-  }
-
-  &_panel {
-    background-color: $dust;
-    padding: 2rem;
-  }
-
-  p {
-    line-height: 1.5em;
-    margin-bottom: 1rem;
-
-    @media #{$medium-up} {
-      margin-bottom: 0;
-    }  
-  }
-}
 
 .welcome-block {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   @media #{$medium-up} {
-    padding-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }  
-}
-
-// Home page block icon calls to action
-.splash-wells {
-  .columns {
-    .block--tall,
-    .tall-block {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-      
-      @media #{$medium-up} {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      }
-    }
-
-    &:nth-child(1) {
-      .welcome-block {
-        border-bottom: 2px solid $dust;
-
-        @media #{$medium-up} {
-          border-bottom: 0;
-          border-right: 2px solid $dust;
-        }
-      }
-    }  
-  }
 }
