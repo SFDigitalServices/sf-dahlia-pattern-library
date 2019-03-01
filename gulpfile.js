@@ -23,15 +23,14 @@ var config = {
 	dev: gutil.env.dev,
 	src: {
 		scripts: {
-			toolkit: './src/assets/toolkit/scripts/toolkit.js'
+			toolkit: './public/toolkit/scripts/toolkit.js'
 		},
 		styles: {
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
-			toolkit_base: 'src/assets/toolkit/styles/toolkit-base.scss',
-			toolkit_lap: 'src/assets/toolkit/styles/toolkit-lap.scss'
+			toolkit: 'public/toolkit/styles/toolkit.scss',
+			toolkit_base: 'public/toolkit/styles/toolkit-base.scss',
+			toolkit_lap: 'public/toolkit/styles/toolkit-lap.scss'
 		},
-		images: 'src/assets/toolkit/images/**/*',
-		views: 'src/toolkit/views/*.html'
+		images: 'public/toolkit/images/**/*'
 	},
 	dest: 'dist'
 };
@@ -57,7 +56,7 @@ gulp.task('styles:toolkit', function () {
 		.pipe(prefix('IE 9', 'last 4 versions'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
+		.pipe(gulp.dest(config.dest + '/toolkit/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
@@ -82,15 +81,10 @@ gulp.task('scripts', function (done) {
 
 
 // images
-gulp.task('images', ['favicon'], function () {
+gulp.task('images', function () {
 	return gulp.src(config.src.images)
 		.pipe(imagemin())
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
-});
-
-gulp.task('favicon', function () {
-	return gulp.src('./src/favicon.ico')
-		.pipe(gulp.dest(config.dest));
+		.pipe(gulp.dest(config.dest + '/toolkit/images'));
 });
 
 
@@ -128,10 +122,10 @@ gulp.task('serve', function () {
 	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
-	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
+	gulp.watch('public/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('src/assets/{toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	gulp.watch('public/{toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
