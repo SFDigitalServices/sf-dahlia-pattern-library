@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="color-chips row">
+    {{#each colors }}
+    <div class="medium-4 columns">
+      <div class="color-chip bg-{{this.name}}">
+        <div class="color-chip__name">{{this.name}}</div>
+        <div class="color-chip__hex">{{this.hex}}</div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

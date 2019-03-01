@@ -12,6 +12,27 @@
             margin: 0.5rem;
             min-width: calc(320px + 1rem);
         }
+
+        .color-chip {
+            border: 2px solid #ddd;
+            padding-top: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .color-chip__name,
+        .color-chip__hex {
+            content: attr(data-color);
+            background-color: #fff;
+            padding: .5rem;
+        }
+
+        .color-chip__name {
+            padding-bottom: 0;
+        }
+
+        .color-chip__hex {
+            padding-top: 0;
+        }   
     </style>
 
     <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
