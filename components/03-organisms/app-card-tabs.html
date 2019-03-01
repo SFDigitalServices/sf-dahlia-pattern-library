@@ -1,7 +1,7 @@
 <div class="app-card form-card tabs-card max-width expand-on-small">
   <div class="app-inner inset-wide padding-bottom-none margin-top">
     <h2 class="sr-only">Status Update</h2>
-    {{> components.status-update classes="expand-wide is-processing"}}
+    {{> @status-update classes="expand-wide is-processing"}}
   </div>
 
   <div class="app-inner header-wide">
@@ -191,9 +191,9 @@
   <div class="app-inner inset-wide border-bottom">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 medium-8 column">
-        {{> components.content-card--ordered }}
-        {{> components.content-card--ordered }}
-        {{> components.content-card--ordered }}
+        {{> @content-card--ordered }}
+        {{> @content-card--ordered }}
+        {{> @content-card--ordered }}
 
         <div class="padding-top margin-bottom"><a class="lined" href="#">See listing</a></div>
       </div>
@@ -271,7 +271,7 @@
   <div class="app-inner inset-wide">
     <div class="form-grid row expand">
       <div class="form-grid_item small-12 column">
-        {{> components.status-list }}
+        {{> @status-list }}
       </div>
     </div>
   </div>
