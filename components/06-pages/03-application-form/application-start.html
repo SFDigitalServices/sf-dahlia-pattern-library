@@ -1,0 +1,50 @@
+---
+layout: center
+title: Application
+---
+
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-8 medium-centered columns fixed-width">
+
+      <h2 class="t-gamma text-center margin-top padding-left--2x padding-right--2x">Let’s get started on your application for</h2>
+
+      <form class="app-card form-card">
+        <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
+          <a href="#">Trinity Place Apartments</a>
+        </h1>
+
+        <figure class="property-card_figure radius">
+          <div class="property-card_overlay">
+            <img class="property-card_thumb" src="/assets/toolkit/images/property5.jpg">
+
+            <span class="application-label label label--flag primary">Application Deadline: Nov 21, 2015 at 5PM</span>
+          </div>
+
+          <figcaption class="property-card_info">
+            <h1 class="property-card_title show-for-medium-up">
+              Trinity Place Apartments
+            </h1>
+            <p class="property-card_address">1188 Mission St, <br class="show-for-small-only"> San Francisco CA, 94134</p>
+          </figcaption>
+        </figure>
+        </div>
+      </form>
+
+      <div class="text-center padding margin-top--2x">
+        <h3 class="h-caps t-base d-block">Choose your language</h3>
+        {{> @link text="Begin" url="application-expect.html" classes="secondary expand-small primary"}}
+        {{> @link text="Empezar" url="application-expect--es.html"classes="secondary expand-small primary"}}
+        {{> @link text="開始" url="application-expect--zh.html" classes="t-ch t-ch-button secondary expand-small primary"}}
+        {{> @link text="Magsimula" url="" classes="secondary expand-small primary"}}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

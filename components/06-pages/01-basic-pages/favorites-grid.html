@@ -1,0 +1,28 @@
+{{> @version-bar }}
+{{> @top-bar }}
+
+{{> @lead-header title="My Favorites" background="dark" color="white" classes="bg-gradient"}}
+
+<section class="row">
+  <div class="large-12 columns">
+    <div class="block bg-mist margin-top--2x medium-text-center">
+      <figure class="block-icon">
+        <img src="/assets/toolkit/images/icon-heart.png">
+      </figure>
+
+      <p class="t-delta t-serif c-oil">It looks like you haven’t favorited any listings yet.</p>
+
+      <button class="button">Browse Properties</button>
+    </div>
+  </div>
+</section>
+
+<div class="results-section">
+  <div class="small-12 columns">
+    {{> @property-card state="fave"}}
+    {{> @property-card state="fave"}}
+    {{> @property-card state="fave"}}
+  </div>
+</div>
+
+{{> @footer}}

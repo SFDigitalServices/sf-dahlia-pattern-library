@@ -1,0 +1,40 @@
+---
+layout: center
+title: Application
+---
+
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+
+      {{> @app-header items=menus.shortform-es}}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Esto es lo que debe esperar para esta aplicación.</h2>
+        </div>
+
+        <div class="app-inner inset">
+          <div class="form-group">
+            <p class="form-note margin-bottom">Primero, le preguntaremos sobre usted y la gente con la que va a vivir. A continuación, veremos si califica para las preferencias de lotería de viviendas asequibles y, de ser así, le pedimos que cargue la prueba de esas preferencias. Finalmente, le preguntaremos acerca de sus ingresos.</p>
+
+            <p class="form-note margin-bottom">Tendrá la oportunidad de revisar su solicitud antes de enviarla.</p>
+
+            <p class="form-note margin-bottom">Tenga en cuenta que cada miembro del hogar sólo puede aparecer en una aplicación para cada anuncio. Si su solicitud contiene miembros del hogar que están en otras aplicaciones para este listado, todos ellos serán descalificados.</p>
+
+            <p class="form-note margin-bottom">Cualquier declaración fraudulenta hará que su solicitud sea retirada de la lotería.</p>
+          </div>
+        </div>
+
+        {{> @link-pager left="Siguiente" l-classes="primary" right="Guardar y terminar más tarde" r-classes="button-link button-lined small-text-center expand-small" l-url="application-name--es.html"}}
+
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

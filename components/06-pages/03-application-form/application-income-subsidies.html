@@ -1,0 +1,37 @@
+---
+layout: center
+title: Application
+---
+
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> @app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <div class="form-back"><a href="#" class="lined">Back</a></div>
+          <h2 class="app-card_question">Does anyone in your household receive any housing vouchers or rental subsidies?</h2>
+
+          <div class="form-group">
+            <p class="form-note margin-bottom">For example: Section 8, VASH, HSA, HOPWA, Catholic Charities, AIDS Foundation, etc.</p>
+          </div>
+        </div>
+
+        <div class="app-inner inset">
+          <div class="form-group">
+            {{> @radio-group name="income" items=inputs.yesno}}
+          </div>
+        </div>
+
+        {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

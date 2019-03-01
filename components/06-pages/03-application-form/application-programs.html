@@ -1,0 +1,32 @@
+---
+layout: center
+title: Application
+---
+
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> @app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <div class="form-back"><a href="#" class="lined">Back</a></div>
+          <h2 class="app-card_question">There are some special programs we’d like to ask you about. Do you have any of the following?</h2>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            {{> @checkbox-group--block name="preferences" items=inputs.preferences}}
+          </div>
+        </div>
+
+        {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

@@ -1,0 +1,76 @@
+---
+layout: center
+title: Eligibility Settings
+---
+
+{{> @translate-bar}}
+{{> @version-bar }}
+{{> @top-bar--account }}
+
+<nav class="local-nav-container border-bottom">
+  <div class="row">
+  {{> @local-nav}}
+  </div>
+</nav>
+
+<div class="dash-container">
+  <section class="row collapse">
+    <div class="medium-10 medium-centered columns">
+      <form class="dash-card margin-bottom">
+        <header class="dash-header text-center margin-bottom">
+          <span class="header-badge">
+            {{> @icons-base icon="eligibility" }}
+          </span>
+          <h1 class="dash-title no-margin">My Eligibility</h1>
+        </header>
+
+        <div class="row">
+          <div class="medium-6 columns padding-left--2x padding-top padding-bottom">
+            <header class="margin-bottom">
+              <h3 class="t-serif gamma">Household Size</h3>
+              <p class="c-steel">Household is defined as anyone living with you in the residence, including spouse, roommates, parents and children.</p>
+            </header>
+
+            <div class="form-group">
+              <label class="form-label sr-only">Household Size</label>
+
+              {{> @select name="people" placeholder="Enter number of people" options=inputs.people }}
+            </div>
+
+            <div class="form-group padding-bottom--half">
+              {{> @checkbox text="Yes, this includes children under 6"}}
+            </div>
+
+            <div class="form-group">
+              {{> @select name="children" placeholder="How many children?" options=inputs.children }}
+            </div>
+
+          </div>
+      
+          <div class="medium-6 columns padding-right--2x padding-top padding-bottom">
+            
+            <header class="margin-bottom">
+              <h3 class="t-serif gamma">Household Pre-Tax Income</h3>
+              <p class="c-steel">Next add up your gross (pre-tax) household income from wages, benefits and other sources from household members.</p>
+            </header>
+
+            <div class="form-group">
+              <label class="form-label sr-only">Household Income</label>
+              {{> @input-income }}
+            </div>
+            
+            {{> @radio-group--inline }}
+          </div>
+        </div>
+      </form>
+
+      {{> @button-stack--paginate left="Reset Filters" l-classes="button-link button-lined small-text-center expand-small" right="View Matching Properties" r-classes="right primary expand-small"}}
+
+      <div class="note text-center bg-white padding">
+        <p class="t-tiny no-margin">If you need help calculating your total, please use this tool:
+        <button class="button-link t-tiny">Household Income Calculator</button></p>
+      </div>
+    </div>    
+  </section>
+</div>
+{{> @footer}}

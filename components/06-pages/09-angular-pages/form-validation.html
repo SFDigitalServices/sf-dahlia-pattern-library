@@ -1,0 +1,72 @@
+---
+layout: angular
+title: Form Validation
+---
+
+<div class="app-container" ng-controller="FormValidationController">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      <form novalidate="" name="form.applicationForm" ng-submit="submitForm()">
+        <div class="app-card form-card">
+
+          <!-- Form error alert -->
+          <div ng-show="showAlert">
+            {{> @alert-box icon="warning" classes="invert"}}
+          </div>
+
+          <!-- 1. Single Input with inline error -->
+          <div class="app-inner inset border-bottom">
+            {{> @angular-name-form}}
+          </div>
+
+          <!-- 2. Multiple Inputs with inline error per field (address) -->
+          <div class="app-inner inset border-bottom">
+            {{> @angular-address-form}}
+          </div>
+
+          <!-- 3. Multiple inputs with single error for all inputs (date) -->
+          <div class="app-inner inset border-bottom">
+            {{> @angular-dob-form}}
+          </div>
+
+          <!-- 4. Radio blocks -->
+          <div class="app-inner inset border-bottom">
+            {{> @angular-radio-form}}
+          </div>
+
+          <!-- 5. Checkboxes -->
+          <div class="app-inner inset border-bottom">
+            {{> @angular-checkbox-form }}
+          </div>
+
+          <!-- 5a. Terms checkbox -->
+          <div class="app-inner inset border-bottom">
+            {{> @angular-terms-form }}
+          </div>
+
+          <!-- 6. Checkbox group (preferences) -->
+          <div class="app-inner border-bottom">
+            {{> @angular-checkbox-group-form }}
+          </div>
+
+          <!-- 7. Input with radio buttons (income) -->
+          <div class="app-inner inset">
+            {{> @angular-income-form }}
+          </div>
+
+
+          <div class="button-pager">
+            <div class="button-pager_row primary">
+              <input aria-invalid="false" class="button primary radius" id="submit" ng-disabled="isLoading()" type="submit" value="Submit">
+            </div>
+            <div class="button-pager_row">
+              <button ng-click="resetForm($event)" class="button button-link button-lined small-text-center expand-small">Reset form</a>
+              <button ng-click="fillForm($event)" class="button button-link button-lined small-text-center expand-small">Fill out form</a>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

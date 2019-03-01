@@ -1,0 +1,29 @@
+---
+layout: angular
+---
+
+{{> @translate-bar}}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<header class="lead-header bg-dust" id="main-content">
+  <div class="row">
+    <div class="medium-12 columns">
+
+      <div class="lead-header_group">
+        <h1 class="lead-header_title c-steel">Page Updating</h1>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<section class="results-section border-top border-bottom">
+  <article class="row">
+    <div class="large-12 columns">
+      {{> @status-header classes="has-button" status="closed" icon="clock" title="Check back soon" button="Back to  Homepage" text="We are in the process of updating this page right now."}}
+    </div>
+  </article>
+</section>
+
+{{> @footer}}

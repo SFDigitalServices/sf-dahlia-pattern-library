@@ -1,0 +1,37 @@
+---
+layout: center
+title: Application
+---
+
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> @app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Lottery Preferences move you up in line and give you a higher ranking in the lottery.</h2>
+        </div>
+
+        <div class="app-inner inset">
+          <h3 class="t-sans t-small t-caps t-bold margin-bottom--2x">Just 3 simple steps</h3>
+
+          <ol class="custom-counter t-small">
+            <li class="custom-counter_item small">See if you qualify for each lottery preference.</li>
+            <li class="custom-counter_item small">Check each box to claim your lottery preference.</li>
+            <li class="custom-counter_item small">Upload the required documents from your computer or phone.</li>
+          </ol>
+        </div>
+
+        {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

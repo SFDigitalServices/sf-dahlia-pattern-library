@@ -1,0 +1,68 @@
+---
+layout: center
+title: Application
+---
+
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{> @app-header }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">There are two lottery preferences for people who already have special certificates.</h2>
+
+          <p class="form-note margin-bottom">If you have not heard of these two lottery preferences, you most likely do not have one.</p>
+
+          <p class="form-note margin-bottom">Optional</p>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            <div class="checkbox-group">
+              <div class="">
+                <div class="checkbox-block margin-bottom">
+                  <input type="checkbox" name="preferences" value="preferences-displaced" id="preferences-displaced">
+                  <label class="checkbox-block_label" for="preferences-displaced">
+                    <strong class="form-label caps">Displaced Tenants Preference</strong>
+                  </label>
+
+                  <div class="checkbox-block_note-inner">
+                    {{> @more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+
+                    <p class="checkbox-block_more toggled" style="display:none;">Primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action.</p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="">
+                <div class="checkbox-block margin-bottom">
+                  <input type="checkbox" name="preferences" value="preferences-cop" id="preferences-cop">
+                  <label class="checkbox-block_label" for="preferences-cop">
+                    <strong class="form-label caps">Certificate of Preference</strong>
+                  </label>
+
+                  <div class="checkbox-block_note-inner">
+                  {{> @more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+
+                  <p class="checkbox-block_more toggled" style="display:none;">Primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action.</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> @footer}}
