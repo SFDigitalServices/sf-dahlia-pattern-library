@@ -1,0 +1,2 @@
+notes: |
+  Hides text and replace with background image. View source to see that there is text in the `<a>` tag which is getting hidden. `.name-logo` class uses `image-replace` mixin.
