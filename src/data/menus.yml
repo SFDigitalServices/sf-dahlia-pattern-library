@@ -1,29 +1,3 @@
-account:
-  - name: My Dashboard
-    icon: profile
-  - name: My Applications
-    icon: application
-  - name: My Favorites
-    icon: favorite
-  - name: Eligibility Settings
-    icon: eligibility
-  - name: Account Settings
-    icon: settings
-  - name: Sign Out
-
-mobile:
-  - name: Browse Properties
-    icon: browse
-  - name: Get Assistance
-    icon: assistance
-  - name: My Favorites
-    icon: favorite
-  - name: Eligibility Settings
-    icon: eligibility
-  - name: Account Settings
-    icon: settings
-  - name: Sign Out
-
 shortform:
   - name: You
     active: true
@@ -60,29 +34,6 @@ shortform-zh:
   - name: "评论"
     disabled: true
 
-lang:
-  - name: English
-    active: true
-    url: application-expect.html
-    selected: true
-    index: 0
-    id: panel1
-  - name: Español
-    url: application-expect--es.html
-    selected: false
-    index: -1
-    id: panel2
-  - name: '中文'
-    chinese: true
-    url: application-expect--zh.html
-    selected: false
-    index: -1
-    id: panel3
-  - name: Filipino
-    url: "#"
-    selected: false
-    index: -1
-    id: panel4
 
 lang-es:
   - name: English
@@ -108,23 +59,3 @@ lang-zh:
   - name: Filipino
     url: "#"
     disabled: true
-
-leaseup-shortform:
-  - name: Short Form Application
-    active: true
-  - name: Supplemental Information
-
-leaseup:
-  - name: Short Form Application
-  - name: Supplemental Information
-    active: true
-
-listing:
-  - name: Listing
-  - name: Applications
-    active: true
-
-listing-view:
-  - name: Listing
-    active: true
-  - name: Applications
