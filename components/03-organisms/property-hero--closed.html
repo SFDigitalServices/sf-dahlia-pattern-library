@@ -9,12 +9,12 @@
         </slidecontainer>
         <div class="carousel-arrow carousel-arrow-left">
           <button title="previous" ng-click="Carousel.get('example-carousel1').previous()">
-            {{> icons.base icon="left" fill="white" size="large"}}
+            {{> @icons-base icon="left" fill="white" size="large"}}
           </button>
         </div>
         <div class="carousel-arrow carousel-arrow-right">
           <button title="next" ng-click="Carousel.get('example-carousel1').next()">
-            {{> icons.base icon="right" fill="white" size="large"}}
+            {{> @icons-base icon="right" fill="white" size="large"}}
           </button>
         </div>
       </ng-carousel>
@@ -47,7 +47,7 @@
 
   <div class="property-hero_stats">
     <span class="label flag-label alert-tint hide-for-medium-up">
-        {{> icons.base icon="clock" scale="medium"}}
+        {{> @icons-base icon="clock" scale="medium"}}
         Applications Closed</span>
     {{> @table-flex }}
   </div>

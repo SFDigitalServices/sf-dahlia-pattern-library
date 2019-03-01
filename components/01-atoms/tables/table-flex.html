@@ -11,7 +11,7 @@
 
     {{#each items}}
     <tr {{#if reserved}}class="tr-reserved"{{/if}}>
-      <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">{{{type}}}{{#if icon}}{{> icons.base scale="tiny" icon="star" fill="splash" classes="message-icon"}}{{/if}}</span></td>
+      <td class="tr" scope="row" data-th="Unit Type"><span class="h-small">{{{type}}}{{#if icon}}{{> @icons-base scale="tiny" icon="star" fill="splash" classes="message-icon"}}{{/if}}</span></td>
       <td data-th="Min. Income">{{{income}}}</td>
       <td data-th="Rent">{{{rent}}}</td>
       <td data-th="Availabililty">{{{availability}}}</td>

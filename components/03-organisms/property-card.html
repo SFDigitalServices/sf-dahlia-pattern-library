@@ -14,15 +14,15 @@
       <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
     {{else compare state '==' 'matched' }}
       <span class="status-label label label--flag success">
-      {{> icons.base icon="check" fill="white"}}
+      {{> @icons-base icon="check" fill="white"}}
       Matched</span>
       <span class="application-label label label--flag primary">
-      {{> icons.base icon="clock" fill="white"}}
+      {{> @icons-base icon="clock" fill="white"}}
       Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
     {{else compare state '==' 'not-matched' }}
       <span class="status-label label label--flag">Not a Match</span>
       <span class="application-label label label--flag primary">
-      {{> icons.base icon="clock" fill="white"}}
+      {{> @icons-base icon="clock" fill="white"}}
       Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
     {{else compare state '==' 'fave' }}
       <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>

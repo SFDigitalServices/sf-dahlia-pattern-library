@@ -12,7 +12,7 @@
   {{/if}}
 
   <div class="a-icon-left d-block">
-    {{> icons.base icon="map"}}
+    {{> @icons-base icon="map"}}
 
     <p class="offset-icon margin-bottom--half">
       {{default address '111 Address St.'}}, <br>
@@ -22,12 +22,12 @@
 
   <p>
     <a class="button-on-small" href="tel:+1{{default phone '###-###-###'}}">
-      {{> icons.base icon="phone"}}
+      {{> @icons-base icon="phone"}}
 
       Call {{default phone '###-###-###'}}
     </a>
     <a class="button-on-small" href="http://{{default website 'www.com'}}" target="_blank">
-      {{> icons.base icon="link"}}
+      {{> @icons-base icon="link"}}
 
       Visit {{default name 'Agency'}}
     </a>

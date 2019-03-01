@@ -11,12 +11,12 @@ title: Create an Account
   <section class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
       <div class="back-link-container small-only-text-center">
-        <a href="#" class="back-link">{{> icons.base icon="left" size="small" fill="primary"}} Continue with Application</a>
+        <a href="#" class="back-link">{{> @icons-base icon="left" size="small" fill="primary"}} Continue with Application</a>
       </div>
       <form class="dash-card">
         <header class="dash-header">
           <span class="header-badge">
-            {{> icons.base icon="profile" }}
+            {{> @icons-base icon="profile" }}
           </span>
           <h1 class="dash-title"">Create an Account</h1>
           <p class="dash-summary">You'll use this information to log in to your account, so make sure you can remember it.</p>
@@ -26,21 +26,21 @@ title: Create an Account
 
         <div class="dash-card-inner inset border-bottom">
           <div class="form-group padding-bottom--2x">
-            <h2 class="form-label caps">Your Name {{> icons.base icon="lock" fill="primary"}}</h2>
+            <h2 class="form-label caps">Your Name {{> @icons-base icon="lock" fill="primary"}}</h2>
             {{> forms.text-input--base placeholder="First Name" label="Email address" type="text" readonly="readonly"}}
             {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text" readonly="readonly"}}
             {{> forms.text-input--base placeholder="Last Name" label="Last Name" type="text" readonly="readonly"}}
           </div>
 
           <div class="form-group">
-            <h2 class="form-label caps">Your Date of Birth {{> icons.base icon="lock" fill="primary"}}</h2>
+            <h2 class="form-label caps">Your Date of Birth {{> @icons-base icon="lock" fill="primary"}}</h2>
             {{> forms.input-dob readonly="readonly"}}
           </div>
         </div>
 
         <div class="dash-card-inner inset border-bottom">
           <div class="form-group">
-            <h3 class="form-label caps">Email Address {{> icons.base icon="lock" fill="primary"}}</h3>
+            <h3 class="form-label caps">Email Address {{> @icons-base icon="lock" fill="primary"}}</h3>
             <p class="form-note margin-bottom">We'll send you an email to verify this address is correct.</p>
             {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email" readonly="readonly"}}
             {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
