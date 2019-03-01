@@ -1,8 +1,8 @@
-{{#each buttons.modifiers}}
-<h2 class="gamma t-sans">.{{@key}}</h2>
+{{#each modifiers}}
+<h2 class="gamma t-sans">.{{this}}</h2>
 
-  <button class="{{@key}}" type="button">button.{{@key}}</button>
-  <a class="button {{@key}}" href="javascript:void(0)" role="button">a.{{@key}}</a>
+  <button class="{{ this }}" type="button">button.{{ this }}</button>
+  <a class="button {{ this }}" href="javascript:void(0)" role="button">a.{{ this }}</a>
 <br>
 
   {{#each this}}
