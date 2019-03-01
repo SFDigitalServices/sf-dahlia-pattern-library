@@ -7,11 +7,10 @@ module.exports = function(fabricatorConfig) {
 
   var config = {
     entry: {
-      'fabricator/scripts/f': fabricatorConfig.src.scripts.fabricator,
       'toolkit/scripts/toolkit': fabricatorConfig.src.scripts.toolkit
     },
     output: {
-      path: path.resolve(__dirname, fabricatorConfig.dest, 'assets'),
+      path: path.resolve(__dirname, fabricatorConfig.dest, 'public'),
       filename: '[name].js'
     },
     module: {
@@ -29,12 +28,6 @@ module.exports = function(fabricatorConfig) {
     },
     cache: {}
   };
-
-  if (!fabricatorConfig.dev) {
-    config.plugins.push(
-      new webpack.optimize.UglifyJsPlugin()
-    );
-  }
 
   return config;
 
