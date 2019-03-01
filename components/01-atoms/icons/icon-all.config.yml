@@ -1,0 +1,2 @@
+notes: |
+  Uses SVGs symbols which are stored in `layouts/includes`. Has variables for icon, fill color and size.

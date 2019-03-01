@@ -1,0 +1,2 @@
+notes: |
+  When using a `a` element, always add `role="button"` for accessibility.
