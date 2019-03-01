@@ -2,7 +2,6 @@
 
 // modules
 var _ = require('lodash');
-var assemble = require('fabricator-assemble');
 var browserSync = require('browser-sync').create();
 var csso = require('gulp-csso');
 var del = require('del');
@@ -24,12 +23,12 @@ var config = {
 	dev: gutil.env.dev,
 	src: {
 		scripts: {
-			fabricator: './src/assets/fabricator/scripts/fabricator.js',
 			toolkit: './src/assets/toolkit/scripts/toolkit.js'
 		},
 		styles: {
-			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
+			toolkit_base: 'src/assets/toolkit/styles/toolkit-base.scss',
+			toolkit_lap: 'src/assets/toolkit/styles/toolkit-lap.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
@@ -50,20 +49,9 @@ gulp.task('clean', function (cb) {
 
 
 // styles
-gulp.task('styles:fabricator', function () {
-	gulp.src(config.src.styles.fabricator)
-		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('IE 9', 'last 4 versions'))
-		.pipe(gulpif(!config.dev, csso()))
-		.pipe(rename('f.css'))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
-		.pipe(gulpif(config.dev, reload({stream:true})));
-});
 
 gulp.task('styles:toolkit', function () {
-	gulp.src(config.src.styles.toolkit)
+	gulp.src([config.src.styles.toolkit, config.src.styles.toolkit_base, config.src.styles.toolkit_lap])
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('IE 9', 'last 4 versions'))
@@ -73,7 +61,7 @@ gulp.task('styles:toolkit', function () {
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('styles', ['styles:toolkit']);
 
 
 // scripts
@@ -103,75 +91,6 @@ gulp.task('images', ['favicon'], function () {
 gulp.task('favicon', function () {
 	return gulp.src('./src/favicon.ico')
 		.pipe(gulp.dest(config.dest));
-});
-
-// copy index.php
-gulp.task('copy-index-php', function() {
-    gulp.src('./index.php')
-    // Perform minification tasks, etc here
-    .pipe(gulp.dest('./dist'));
-});
-
-// assemble
-gulp.task('assemble', function (done) {
-	assemble({
-		logErrors: config.dev,
-		helpers: {
-			default: function (value, defaultValue) {
-				return value ? value : defaultValue;
-			},
-			compare: function (lvalue, operator, rvalue, options) {
-				var operators, result;
-
-				if (arguments.length < 3) {
-					throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
-				}
-
-				if (options === undefined) {
-					options = rvalue;
-					rvalue = operator;
-					operator = "===";
-				}
-
-				operators = {
-					'==': function (l, r) { return l == r; },
-					'===': function (l, r) { return l === r; },
-					'!=': function (l, r) { return l != r; },
-					'!==': function (l, r) { return l !== r; },
-					'<': function (l, r) { return l < r; },
-					'>': function (l, r) { return l > r; },
-					'<=': function (l, r) { return l <= r; },
-					'>=': function (l, r) { return l >= r; },
-					'typeof': function (l, r) { return typeof l == r; }
-				};
-
-				if (!operators[operator]) {
-					throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
-				}
-
-				result = operators[operator](lvalue, rvalue);
-
-				if (result) {
-					return options.fn(this);
-				} else {
-					return options.inverse(this);
-				}
-
-			},
-			attr: function(value) {
-				return _.kebabCase(value);
-			},
-			lowercase: function(str) {
-				if (str && typeof str === 'string') {
-					return str.toLowerCase();
-				} else {
-					return '';
-        }
-			}
-		}
-	});
-	// reload();
-	done();
 });
 
 
@@ -206,20 +125,13 @@ gulp.task('serve', function () {
 		}
 	}
 
-	gulp.task('assemble:watch', ['assemble'], function(done){
-		reload();
-		done();
-	});
 	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
-
-	gulp.task('styles:fabricator:watch', ['styles:fabricator']);
-	gulp.watch('src/assets/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	gulp.watch('src/assets/{toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
@@ -235,8 +147,6 @@ gulp.task('default', ['clean'], function () {
 		'styles',
 		'scripts',
 		'images',
-		'assemble',
-		'copy-index-php'
 	];
 
 	// run build
