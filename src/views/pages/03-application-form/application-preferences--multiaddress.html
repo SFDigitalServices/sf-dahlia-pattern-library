@@ -27,7 +27,7 @@ title: Application
               <div class="">
                 {{> @checkbox-block title="Rent Burden Preference" name="preference" value="rent-burdened" note="Households who are currently spending more than 50% of your income on rent."}}
                 <!-- <div class="checkbox-block_note-inner">
-                  {{> text.more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+                  {{> @more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
 
                   <p class="checkbox-block_more toggled" style="display:none;">Households who are currently spending more than 50% of your income on rent.</p>
                 </div>
@@ -35,9 +35,9 @@ title: Application
                 <div class="form-group input-inset">
                   <p class="form-label caps">Upload Documents for Each Address</p>
 
-                  {{> text.address-item doc="true"}}
-                  {{> text.address-item link="Start Upload"}}
-                  {{> text.address-item error="true"}}
+                  {{> @address-item doc="true"}}
+                  {{> @address-item link="Start Upload"}}
+                  {{> @address-item error="true"}}
 
                 </div>
               </div>
