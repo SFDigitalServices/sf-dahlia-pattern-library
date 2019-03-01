@@ -2,8 +2,8 @@
 layout: angular
 ---
 
-{{> headers.translate-bar}}
-{{> headers.version-bar }}
+{{> @translate-bar}}
+{{> @version-bar }}
 {{> navigation.top-bar }}
 
 <header class="lead-header bg-dust" id="main-content">
@@ -35,7 +35,7 @@ layout: angular
 <section class="results-section border-top border-bottom">
   <article class="row">
     <div class="large-12 columns">
-      {{> headers.status-header classes="has-button" status="closed" icon="clock" title="Upcoming Lotteries" button="Show Upcoming Lotteries (6)" text="The application deadline has passed on the following listings, and you can still get information on the lottery date and time."}}
+      {{> @status-header classes="has-button" status="closed" icon="clock" title="Upcoming Lotteries" button="Show Upcoming Lotteries (6)" text="The application deadline has passed on the following listings, and you can still get information on the lottery date and time."}}
     </div>
   </article>
 
@@ -53,7 +53,7 @@ layout: angular
 <section class="results-section border-top border-bottom">
   <article class="row">
     <div class="large-12 columns">
-      {{> headers.status-header classes="has-button" status="closed" icon="result" title="Lottery Results" button="Show Lottery Results (6)" text="You can now check lottery results on the remaining listings."}}
+      {{> @status-header classes="has-button" status="closed" icon="result" title="Lottery Results" button="Show Lottery Results (6)" text="You can now check lottery results on the remaining listings."}}
     </div>
   </article>
 

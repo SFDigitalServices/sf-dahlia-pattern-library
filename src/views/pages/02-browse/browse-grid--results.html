@@ -1,6 +1,6 @@
-{{> headers.version-bar }}
+{{> @version-bar }}
 {{> navigation.top-bar }}
-{{> headers.results-header }}
+{{> @results-header }}
 
 <section class="results-section bg-dust">
   <div class="row">
@@ -47,7 +47,7 @@
 <section class="results-section border-top">
   <div class="row">
     <div class="large-12 columns">
-      {{> headers.status-header classes="has-button" status="other" icon="building" title="Additional Listings" text="We know you may have options about how many people will live with you. Here are listings for other houseshold sizes and income levels." button="Show Additional Listing (3)"}}
+      {{> @status-header classes="has-button" status="other" icon="building" title="Additional Listings" text="We know you may have options about how many people will live with you. Here are listings for other houseshold sizes and income levels." button="Show Additional Listing (3)"}}
     </div>
   </div>
 
@@ -64,7 +64,7 @@
 <section class="results-section border-top border-bottom">
   <div class="row">
     <div class="large-12 columns">
-      {{> headers.status-header classes="has-button" status="closed" icon="result" title="Lottery Results" text="The remaining properties are no longer taking applications but can be used to check lottery results."}}
+      {{> @status-header classes="has-button" status="closed" icon="result" title="Lottery Results" text="The remaining properties are no longer taking applications but can be used to check lottery results."}}
     </div>
   </div>
 

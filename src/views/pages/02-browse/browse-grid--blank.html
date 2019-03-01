@@ -2,8 +2,8 @@
 layout: angular
 ---
 
-{{> headers.translate-bar}}
-{{> headers.version-bar }}
+{{> @translate-bar}}
+{{> @version-bar }}
 {{> navigation.top-bar }}
 
 <header class="lead-header bg-dust" id="main-content">
@@ -35,7 +35,7 @@ layout: angular
 <section class="results-section border-top border-bottom">
   <article class="row">
     <div class="large-12 columns">
-      {{> headers.status-header status="closed" icon="clock" title="Upcoming Lotteries" text="There are no closed listings with upcoming lotteries at this time."}}
+      {{> @status-header status="closed" icon="clock" title="Upcoming Lotteries" text="There are no closed listings with upcoming lotteries at this time."}}
     </div>
   </article>
 
@@ -53,7 +53,7 @@ layout: angular
 <section class="results-section border-top border-bottom">
   <article class="row">
     <div class="large-12 columns">
-      {{> headers.status-header status="closed" icon="result" title="Lottery Results" text="There are no listings with lottery results at this time."}}
+      {{> @status-header status="closed" icon="result" title="Lottery Results" text="There are no listings with lottery results at this time."}}
     </div>
   </article>
 
