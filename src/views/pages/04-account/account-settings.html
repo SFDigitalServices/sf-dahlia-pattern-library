@@ -29,7 +29,7 @@ title: Account Settings
               <h2 class="form-label caps">Email Address</h2>
               {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
               <p class="text-center padding-top">
-                {{> buttons.button classes="small no-margin" text="Update"}}
+                {{> @button classes="small no-margin" text="Update"}}
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@ title: Account Settings
               {{> forms.text-input--base placeholder="New Password" label="New Password" type="password"}}
               {{> forms.text-input--base placeholder="Confirm New Password" label="Confirm New Password" type="password"}}
               <p class="text-center padding-top">
-                {{> buttons.button classes="small secondary no-margin" text="Update"}}
+                {{> @button classes="small secondary no-margin" text="Update"}}
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ title: Account Settings
 
             <div class="form-group">
               <p class="text-center padding-top">
-                {{> buttons.button classes="small secondary no-margin" text="Update"}}
+                {{> @button classes="small secondary no-margin" text="Update"}}
               </p>
             </div>
           </div>
@@ -72,7 +72,7 @@ title: Account Settings
               <h2 class="form-label caps">Deactivate Account</h2>
               <p class="t-small c-steel">Deactivating your account will mean losing all previously saved favorites and settings.</p>
               <p class="text-center padding-top">
-                {{> buttons.button classes="small alert no-margin" text="Deactivate"}}
+                {{> @button classes="small alert no-margin" text="Deactivate"}}
               </p>
           </div>
         </div>

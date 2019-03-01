@@ -32,7 +32,7 @@ title: Application
 
                   <p class="form-note margin-bottom">Please upload the first page, or whichever page shows the rent amount.</p>
                   <div class="form-group text-center">
-                    {{> buttons.button text="Upload Copy of Lease"}}
+                    {{> @button text="Upload Copy of Lease"}}
                     <p class="form-note micro input-inset margin-bottom">If you’re on a smartphone, you can take a picture.</p>
                     <p class="form-note micro input-inset">Max file size is 2MB.<br>Supported file types: pdf, jpg, png</p>
                   </div>
@@ -51,7 +51,7 @@ title: Application
                   {{> forms.select name="proof" options=inputs.rent }}
 
                   <div class="form-group text-center">
-                    {{> buttons.button text="Upload Proof of Rent Payment"}}
+                    {{> @button text="Upload Proof of Rent Payment"}}
                     <p class="form-note micro input-inset margin-bottom">If you’re on a smartphone, you can take a picture.</p>
                     <p class="form-note micro input-inset">Max file size is 2MB.<br>Supported file types: pdf, jpg, png</p>
 
@@ -63,7 +63,7 @@ title: Application
           </div>
         </div>
 
-        {{> buttons.button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+        {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
       </form>
     </div>
   </div>

@@ -51,31 +51,31 @@
       <p class="property-card_subheader">Includes Priority Units for People with Visual and Hearing Impairments</p>
 
       {{#compare state '==' 'community' }}
-        {{> tables.table--percent items=tables.minimum-range.units classes="table-reserved" reserved-caption="Reserved for Seniors 55+"}}
+        {{> @table--percent items=tables.minimum-range.units classes="table-reserved" reserved-caption="Reserved for Seniors 55+"}}
       {{else compare state '==' 'sro' }}
-        {{> tables.table items=tables.minimum-sro.units }}
+        {{> @table items=tables.minimum-sro.units }}
       {{else }}
-        {{> tables.table--range items=tables.minimum-range.units }}
+        {{> @table--range items=tables.minimum-range.units }}
       {{/compare}}
 
       {{#if reserved-table}}
-        {{> tables.table--percent items=tables.percentage.units classes="no-thead margin-top table-reserved"}}
+        {{> @table--percent items=tables.percentage.units classes="no-thead margin-top table-reserved"}}
       {{/if}}
     </div>
 
     <div class="property-card_action small-only-text-center">
     {{#compare state '==' 'fave' }}
       <div class="show-for-medium-up left">
-        {{> buttons.button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
-        {{> buttons.button-round icon="forward" fill="primary" label="inline" text="Like" classes="has-label"}}
+        {{> @button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
+        {{> @button-round icon="forward" fill="primary" label="inline" text="Like" classes="has-label"}}
       </div>
       <ul class="button-group button-group--favorite row collapse hide-for-medium-up">
-        <li class="small-6 columns">{{> buttons.button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary small"}}</li>
-        <li class="small-6 columns">{{> buttons.button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary small"}}</li>
+        <li class="small-6 columns">{{> @button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary small"}}</li>
+        <li class="small-6 columns">{{> @button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary small"}}</li>
       </ul>
       <a class="button ghost-white expand-small right no-margin" href="/pages/property-grid.html">See Details</a>
     {{else }}
-      {{> buttons.button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
+      {{> @button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
       <a class="button ghost-white right no-margin" href="/pages/property-grid.html">See Details</a>
     {{/compare}}
     </div>

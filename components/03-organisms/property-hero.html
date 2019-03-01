@@ -35,18 +35,18 @@
     </hgroup>
 
     <div class="property-hero_favorite show-for-medium-up">
-      {{> buttons.button-round fill="primary"}}
-      {{> buttons.button-round fill="primary" icon="forward"}}
+      {{> @button-round fill="primary"}}
+      {{> @button-round fill="primary" icon="forward"}}
     </div>
 
     <ul class="property-hero_favorite button-group button-group--favorite row collapse hide-for-medium-up">
-      <li class="small-6 columns">{{> buttons.button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary small no-margin"}}</li>
-      <li class="small-6 columns">{{> buttons.button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary small no-margin"}}</li>
+      <li class="small-6 columns">{{> @button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary small no-margin"}}</li>
+      <li class="small-6 columns">{{> @button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary small no-margin"}}</li>
     </ul>
   </header>
 
   <div class="property-hero_stats">
-    {{> tables.table-flex }}
+    {{> @table-flex }}
     
     <div class="hide-for-medium-up">
       {{> components.flag-label }}

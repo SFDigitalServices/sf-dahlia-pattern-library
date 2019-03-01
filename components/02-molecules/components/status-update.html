@@ -1,7 +1,7 @@
 <div class="status-update {{default classes ''}}">
   <h3 class="status-update_title">Update Status</h3>
   <div class="status-update_action">
-    {{> buttons.button-dropdown classes="is-processing" text="Processing"}}
+    {{> @button-dropdown classes="is-processing" text="Processing"}}
   </div>
   <div class="status-update_message">
     <div class="status-update_comment">
@@ -9,7 +9,7 @@
       <span class="status-update_date">{{default date '03/12/18'}} </span>
     </div>
     <div class="status-update_footer">
-      {{> buttons.button classes="tiny tertiary" text="Add a comment" }}
+      {{> @button classes="tiny tertiary" text="Add a comment" }}
       <a href="#" class="t-small right">See Status History</a>
     </div>
   </div>
