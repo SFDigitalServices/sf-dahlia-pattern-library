@@ -19,31 +19,31 @@
   {{/compare}}
 
   {{#compare state '==' 'pre-results' }}
-    {{> content-section--pre-results}}
+    {{> @content-section--pre-results}}
   {{else compare state '==' 'pre-lottery' }}
-    {{> content-section--pre-lottery}}
+    {{> @content-section--pre-lottery}}
   {{else compare state '==' 'post-results' }}
-    {{> content-section--lottery}}
+    {{> @content-section--lottery}}
   {{else compare state '==' 'post-results-modal' }}
-    {{> content-section--lottery-modal}}
+    {{> @content-section--lottery-modal}}
   {{else compare state '==' 'open-nopickup' }}
-    {{> content-section--process-nopickup}}
+    {{> @content-section--process-nopickup}}
   {{else }}
-    {{> content-section--process}}
+    {{> @content-section--lottery }}
   {{/compare}}
 
   </accordion-group>
 
   {{#compare multifamily '==' true }}
-    {{> includes.eligibility--multifamily}}
+    {{> @eligibility--multifamily}}
   {{else }}
-    {{> includes.eligibility}}
+    {{> @eligibility}}
   {{/compare}}
 
-  {{> includes.features}}
+  {{> @features}}
 
-  {{> includes.neighborhood}}
+  {{> @neighborhood}}
 
-  {{> includes.additional-information}}
+  {{> @additional-information}}
 
 </accordion>
