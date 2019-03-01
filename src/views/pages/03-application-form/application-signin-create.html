@@ -18,19 +18,19 @@ title: Application
           <p class="form-note margin-bottom">Simply add a password to create an account. We'll save your information, and allow you to check the status of this application at any time. You can also <a href="#">continue without an account</a>.</p>
         </div>
 
-        {{> forms.alert-box text="Just confirm your email address and create a password." status="primary" classes="no-icon"}}
+        {{> @alert-box text="Just confirm your email address and create a password." status="primary" classes="no-icon"}}
 
         <!-- <div class="app-inner inset border-bottom">
           <div class="form-group padding-bottom--2x">
             <h2 class="form-label caps">Your Name {{> @icons-base icon="lock" fill="primary"}}</h2>
-            {{> forms.text-input--base placeholder="First Name" label="Email address" type="text" readonly="readonly"}}
-            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text" readonly="readonly"}}
-            {{> forms.text-input--base placeholder="Last Name" label="Last Name" type="text" readonly="readonly"}}
+            {{> @text-input--base placeholder="First Name" label="Email address" type="text" readonly="readonly"}}
+            {{> @text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text" readonly="readonly"}}
+            {{> @text-input--base placeholder="Last Name" label="Last Name" type="text" readonly="readonly"}}
           </div>
 
           <div class="form-group">
             <h2 class="form-label caps">Your Date of Birth {{> @icons-base icon="lock" fill="primary"}}</h2>
-            {{> forms.input-dob readonly="readonly"}}
+            {{> @input-dob readonly="readonly"}}
           </div>
         </div>
  -->
@@ -38,8 +38,8 @@ title: Application
           <div class="form-group">
             <h3 class="form-label caps">Email Address {{> @icons-base icon="lock" fill="primary"}}</h3>
             <p class="form-note margin-bottom">We'll send you an email to verify this address is correct.</p>
-            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email" readonly="readonly"}}
-            {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
+            {{> @text-input--base placeholder="example@web.com" label="Email address" type="email" readonly="readonly"}}
+            {{> @text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
           </div>
         </div>
 
@@ -48,8 +48,8 @@ title: Application
             <h3 class="form-label caps">Password</h3>
             <p class="form-note margin-bottom">Must be at least 8 characters and include 1 numeric character.</p>
 
-            {{> forms.text-input--base placeholder="Must be 8 characters" label="password"}}
-            {{> forms.text-input placeholder="Must be 8 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
+            {{> @text-input--base placeholder="Must be 8 characters" label="password"}}
+            {{> @text-input placeholder="Must be 8 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
           </div>
 
           <div class="form-group">

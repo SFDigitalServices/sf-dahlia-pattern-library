@@ -25,7 +25,7 @@ title: Application
           <div class="form-group">
             <div class="checkbox-group">
               <div class="">
-                {{> forms.checkbox-block title="Rent Burden Preference" name="preference" value="rent-burdened" note="Households who are currently spending more than 50% of your income on rent."}}
+                {{> @checkbox-block title="Rent Burden Preference" name="preference" value="rent-burdened" note="Households who are currently spending more than 50% of your income on rent."}}
 
                 <div class="form-group input-inset">
                   <p class="form-label caps">1. Upload Copy of Lease</p>
@@ -45,10 +45,10 @@ title: Application
 
                   <p class="form-note margin-bottom--2x">You can upload multiple documents, if your household pays with multiple checks, money orders etc.</p>
 
-                  {{> forms.attachment classes="no-margin" name="Money Order"}}
+                  {{> @attachment classes="no-margin" name="Money Order"}}
 
                   <label class="form-label caps margin-top--2x">Which one of the following documents would you like to upload in order to prove eligibility?</label>
-                  {{> forms.select name="proof" options=inputs.rent }}
+                  {{> @select name="proof" options=inputs.rent }}
 
                   <div class="form-group text-center">
                     {{> @button text="Upload Proof of Rent Payment"}}

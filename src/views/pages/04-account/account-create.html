@@ -22,27 +22,27 @@ title: Create an Account
           <p class="dash-summary">You'll use this information to log in to your account, so make sure you can remember it.</p>
         </header>
 
-        {{> forms.alert-box status="success" classes="invert no-margin" text="Changes will be reflected in any applications in progress." icon="check"}}
+        {{> @alert-box status="success" classes="invert no-margin" text="Changes will be reflected in any applications in progress." icon="check"}}
 
         <div class="dash-card-inner inset border-bottom">
           <div class="form-group padding-bottom--2x">
             <h2 class="form-label caps">Your Name</h2>
-            {{> forms.text-input--base placeholder="First Name" label="Email address" type="text"}}
-            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text"}}
-            {{> forms.text-input--base placeholder="Last Name" label="Last Name" type="text"}}
+            {{> @text-input--base placeholder="First Name" label="Email address" type="text"}}
+            {{> @text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" type="text"}}
+            {{> @text-input--base placeholder="Last Name" label="Last Name" type="text"}}
           </div>
 
           <div class="form-group">
             <h2 class="form-label caps">Your Date of Birth</h2>
-            {{> forms.input-dob}}
+            {{> @input-dob}}
           </div>
         </div>
 
         <div class="dash-card-inner inset border-bottom">
           <div class="form-group">
             <h3 class="form-label caps">Email Address</h3>
-            {{> forms.text-input--base placeholder="example@web.com" label="Email address" type="email"}}
-            {{> forms.text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
+            {{> @text-input--base placeholder="example@web.com" label="Email address" type="email"}}
+            {{> @text-input placeholder="example@web.com" label="Re-enter email address" type="email" classes="label-secondary"}}
           </div>
         </div>
         <div class="dash-card-inner inset border-bottom">
@@ -50,8 +50,8 @@ title: Create an Account
             <h3 class="form-label caps">Password</h3>
             <p class="form-note margin-bottom">Must be at least 8 characters and include 1 numeric character.</p>
 
-            {{> forms.text-input--base placeholder="Must be 8 characters" label="password"}}
-            {{> forms.text-input placeholder="Must be 8 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
+            {{> @text-input--base placeholder="Must be 8 characters" label="password"}}
+            {{> @text-input placeholder="Must be 8 characters" label="Re-enter your password to confirm" classes="label-secondary"}}
           </div>
 
           <div class="form-group">

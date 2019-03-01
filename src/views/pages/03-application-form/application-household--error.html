@@ -17,9 +17,9 @@ title: Application
           <h2 class="app-card_question">Tell us about your household.</h2>
         </div>
 
-        {{> forms.alert-box classes="invert no-margin" icon="warning" text="Unfortunately it appears you did not qualify for this listing."}}
+        {{> @alert-box classes="invert no-margin" icon="warning" text="Unfortunately it appears you did not qualify for this listing."}}
 
-        {{> forms.alert-notice alert-text="Your household size is too small." alert-text-alt="Everyone in your household must be a Senior 55+." text="Please make changes if you believe you might have made a mistake. Be aware that if you falsify any information on your application you will be disqualified." text-alt="If the information you entered is accurate, we encourage you to check back in the future of as more properties become available." link-text="Get Assistance"}}
+        {{> @alert-notice alert-text="Your household size is too small." alert-text-alt="Everyone in your household must be a Senior 55+." text="Please make changes if you believe you might have made a mistake. Be aware that if you falsify any information on your application you will be disqualified." text-alt="If the information you entered is accurate, we encourage you to check back in the future of as more properties become available." link-text="Get Assistance"}}
 
         <div class="app-inner short">
           <div class="form-group">

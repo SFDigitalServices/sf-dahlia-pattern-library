@@ -17,15 +17,15 @@ title: Application
           <h2 class="app-card_question">Here’s the income you’ve added so far for yourself.</h2>
         </div>
         <div class="form-group no-margin border-bottom">
-          {{> forms.income-source-item}}
+          {{> @income-source-item}}
         </div>
 
         <div class="form-group no-margin border-bottom">
-          {{> forms.income-source-item}}
+          {{> @income-source-item}}
         </div>
 
         <div class="form-group">
-          {{> forms.income-source-item--add link="Cancel"}}
+          {{> @income-source-item--add link="Cancel"}}
         </div>
 
         {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}

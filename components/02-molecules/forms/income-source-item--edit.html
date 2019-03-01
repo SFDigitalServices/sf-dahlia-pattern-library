@@ -9,13 +9,13 @@
       
       <div class="form-group padding-top--2x border-top">
         <label for="options" class="form-label margin-bottom--half">Where does this income come from?</label>
-        {{> forms.select}}
+        {{> @select}}
       </div>
 
       <div class="form-group">
         <label for="options" class="form-label margin-bottom--half">How much is the income?</label>
-        {{> forms.input-income}}
-        {{> forms.radio-group--inline name="income" items=inputs.income}}
+        {{> @input-income}}
+        {{> @radio-group--inline name="income" items=inputs.income}}
       </div>
 
       <div class="form-group">

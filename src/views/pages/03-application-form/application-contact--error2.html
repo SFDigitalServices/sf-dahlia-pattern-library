@@ -25,10 +25,10 @@ title: Application
 
         <div class="app-inner inset border-bottom">
           <div class="form-group has-option">
-            {{> forms.input-tel classes="caps"}}
+            {{> @input-tel classes="caps"}}
 
             <div class="form-item padding-bottom">
-              {{> forms.checkbox text="I don't have a telephone number"}}
+              {{> @checkbox text="I don't have a telephone number"}}
             </div>
           </div>
         </div>
@@ -37,10 +37,10 @@ title: Application
           <div class="form-group has-option is-locked">
             <label class="form-label caps">Your email address {{> @icons-base icon="lock" fill="primary"}}</label>
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
-            {{> forms.input-email visibility="sr-only" readonly="readonly"}}
+            {{> @input-email visibility="sr-only" readonly="readonly"}}
             <small class="lock-note">Your email is editable via your <a class="lined" href="#">account settings</a></small>
             <div class="form-item">
-              {{> forms.checkbox text="I don't have an email address"}}
+              {{> @checkbox text="I don't have an email address"}}
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ title: Application
           <div class="form-group row has-option">
             <label class="form-label caps">Your address</label>
             <p class="form-note margin-bottom">Ideally this is an address where we can send updates about your application.</p>
-            {{> forms.input-address classes="expand" visibility="sr-only"}}
+            {{> @input-address classes="expand" visibility="sr-only"}}
 
             <div class="form-item padding-bottom">
               <div class="radio">
@@ -69,14 +69,14 @@ title: Application
           <div class="form-group row expand">
             <label class="form-label caps">Mailing address</label>
             <p class="form-note margin-bottom">Provide an address where you can receive updates and materials about your application.</p>
-            {{> forms.input-address classes="expand" visibility="sr-only"}}
+            {{> @input-address classes="expand" visibility="sr-only"}}
           </div>
         </div>
 
         <div class="app-inner inset border-bottom">
           <div class="form-group">
             <label class="form-label caps">What is your primary language?</label>
-            {{> forms.select}}
+            {{> @select}}
           </div>
         </div>
 
@@ -84,7 +84,7 @@ title: Application
           <div class="form-group">
             <label class="form-label caps">Do you work in San Francisco?</label>
             <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>
-            {{> forms.radio-group--inline items=inputs.yesno classes="double"}}
+            {{> @radio-group--inline items=inputs.yesno classes="double"}}
 
             <small class="highlight">In order to claim this as a lottery preference, you'll need to upload supporting documentation as instructed on a later screen.</small>
           </div>

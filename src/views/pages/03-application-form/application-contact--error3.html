@@ -23,7 +23,7 @@ title: Application
          </div>
         </div>
 
-        {{> forms.alert-box classes="invert no-margin" icon="warning" text="You'll need to resolve any errors before moving on."}}
+        {{> @alert-box classes="invert no-margin" icon="warning" text="You'll need to resolve any errors before moving on."}}
 
         <div class="alert-notice alert">
           <p class="alert-notice_title">Please provide one of the following ways to contact you:</p>
@@ -34,11 +34,11 @@ title: Application
 
         <div class="app-inner inset border-bottom">
           <div class="form-group has-option error">
-            {{> forms.input-tel label="caps" classes="error"}}
+            {{> @input-tel label="caps" classes="error"}}
             <small class="error">Please enter phone number</small>
 
             <div class="form-item padding-bottom">
-              {{> forms.checkbox text="I don't have a telephone number" checked=true}}
+              {{> @checkbox text="I don't have a telephone number" checked=true}}
             </div>
           </div>
         </div>
@@ -47,11 +47,11 @@ title: Application
           <div class="form-group has-option error">
             <label class="form-label caps">Your email address</label>
             <p class="form-note margin-bottom">We will only use your email address to contact you about your application.</p>
-            {{> forms.input-email visibility="sr-only" classes="error"}}
+            {{> @input-email visibility="sr-only" classes="error"}}
             <small class="error">Please enter email address</small>
 
             <div class="form-item">
-              {{> forms.checkbox text="I don't have an email address" checked=true }}
+              {{> @checkbox text="I don't have an email address" checked=true }}
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ title: Application
 
               <div class="form-group-state form-item small-5 columns error">
                 <label for="state" class="sr-only">State</label>
-                {{> forms.select name="state" classes="error" placeholder="Select" options=inputs.states}}
+                {{> @select name="state" classes="error" placeholder="Select" options=inputs.states}}
               </div>
 
               <div class="form-group-zip form-item small-12 columns error">
@@ -91,11 +91,11 @@ title: Application
             </div>
 
             <div class="form-item padding-bottom">
-              {{> forms.checkbox text="I don't have an address" checked=true }}
+              {{> @checkbox text="I don't have an address" checked=true }}
             </div>
 
             <div class="form-item">
-              {{> forms.checkbox text="I have a seperate mailing address" }}
+              {{> @checkbox text="I have a seperate mailing address" }}
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@ title: Application
         <div class="app-inner inset border-bottom">
           <div class="form-group">
             <label class="form-label caps">What is your primary language?</label>
-            {{> forms.select}}
+            {{> @select}}
           </div>
         </div>
 
@@ -111,7 +111,7 @@ title: Application
           <div class="form-group">
             <label class="form-label caps">Do you work in San Francisco?</label>
             <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>
-            {{> forms.radio-group--inline items=inputs.yesno classes="double"}}
+            {{> @radio-group--inline items=inputs.yesno classes="double"}}
           </div>
         </div>
 

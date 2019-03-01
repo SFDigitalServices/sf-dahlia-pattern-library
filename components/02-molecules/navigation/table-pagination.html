@@ -6,13 +6,13 @@
     <span class="table-pagination_pagesize">
       Show
       <span class="table-pagination_pagerows">
-      {{> forms.select name="rows" placeholder="20 rows" options=inputs.rows}}
+      {{> @select name="rows" placeholder="20 rows" options=inputs.rows}}
       </span>
     </span>
     <span class="table-pagination_pageinfo">
       Jump to page
       <span class="table-pagination_pagejump">
-        {{> forms.select name="page" placeholder="1" options=inputs.pages}}
+        {{> @select name="page" placeholder="1" options=inputs.pages}}
       </span>
       of 6
     </span>

@@ -25,30 +25,30 @@ title: Application
         <div class="app-inner inset">
           <div class="form-group">
             <h3 class="form-label caps">Your Name</h3>
-            {{> forms.text-input--base placeholder="First Name" label="First Name"}}
-            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)"}}
-            {{> forms.text-input--base placeholder="Last Name" label="Last Name"}}
+            {{> @text-input--base placeholder="First Name" label="First Name"}}
+            {{> @text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)"}}
+            {{> @text-input--base placeholder="Last Name" label="Last Name"}}
           </div>
 
           <div class="form-group">
             <h3 class="form-label caps">Your Date of Birth</h3>
-            {{> forms.input-dob}}
+            {{> @input-dob}}
           </div>
         </div>
 
-<!--         {{> forms.alert-box text="These fields are editable via your account settings" status="primary" classes="no-icon"}} -->
+<!--         {{> @alert-box text="These fields are editable via your account settings" status="primary" classes="no-icon"}} -->
 
 <!--         <div class="app-inner inset">
           <div class="form-group">
             <h3 class="form-label caps">Your Name {{> @icons-base icon="lock" fill="primary"}}</h3>
-            {{> forms.text-input--base placeholder="First Name" label="First Name" readonly="readonly"}}
-            {{> forms.text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" readonly="readonly"}}
-            {{> forms.text-input--base placeholder="Last Name" label="Last Name" readonly="readonly"}}
+            {{> @text-input--base placeholder="First Name" label="First Name" readonly="readonly"}}
+            {{> @text-input--base placeholder="Middle Name (optional)" label="Middle Name (optional)" readonly="readonly"}}
+            {{> @text-input--base placeholder="Last Name" label="Last Name" readonly="readonly"}}
           </div>
 
           <div class="form-group">
             <h3 class="form-label caps">Your Date of Birth {{> @icons-base icon="lock" fill="primary"}}</h3>
-            {{> forms.input-dob readonly="readonly"}}
+            {{> @input-dob readonly="readonly"}}
           </div>
         </div> -->
 
