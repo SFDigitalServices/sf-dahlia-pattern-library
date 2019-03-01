@@ -21,10 +21,10 @@
 
     {{#compare state '==' 'results' }}
       <div class="modal-buckets-container">
-        {{> results-buckets }}
+        {{> @results-buckets }}
       </div>
     {{else }}
-      {{> results-buckets--search }}
+      {{> @results-buckets--search }}
       <div class="t-small padding--3halves">
         <div class="toggled">
           <a href="#" class="a-dark toggler toggle-more t-small">What happens next? {{> @icons-base icon="arrow-down" size="tiny" fill="dark"}}
