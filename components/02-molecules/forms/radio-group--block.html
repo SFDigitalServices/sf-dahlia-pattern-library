@@ -1,15 +1,4 @@
 <div class="radio-group" role="radiogroup" aria-label="label">
-  {{#each items}}
-  <div class="radio-block margin-bottom">
-    <input type="radio" name="{{../name}}" value="{{../name}}-{{value}}" id="{{../name}}-{{value}}">
-    <label class="radio-block_label" for="{{../name}}-{{value}}">
-      <strong>{{name}}</strong>
-      {{#if note}}
-      <span class="radio-block_note">{{note}}</span>
-      {{/if}}
-    </label>
-  </div>
-  {{else}}
     {{#each inputs.homeless}}
       <p class="radio-block margin-bottom">
         <input type="radio" name="homeless" value="homeless-{{value}}" id="homeless-{{value}}" aria-describedby="ariaDescribedby">
@@ -21,5 +10,4 @@
         </label>
       </p>
     {{/each}}
-  {{/each}}
 </div>
