@@ -189,9 +189,9 @@ angular.module('dahlia',
   })
   .controller('CarouselSampleController', ['$scope', 'Carousel', function($scope, Carousel) {
     $scope.images = [
-      '/dist/toolkit/images/property4-16x9.jpg',
-      '/dist/toolkit/images/property4-16x9.jpg',
-      '/dist/toolkit/images/property4-16x9.jpg',
+      '/images/property4-16x9.jpg',
+      '/images/property4-16x9.jpg',
+      '/images/property4-16x9.jpg',
     ]
 
     $scope.Carousel = Carousel;
