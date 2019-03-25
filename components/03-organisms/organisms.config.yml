@@ -1,0 +1,10 @@
+context:
+  tables: '@table.tables'
+  inputs:
+    yesno: '@radio-group.inputs.yesno'
+    preferences: '@checkbox-group.inputs.preferences'
+  menus:
+    lang: '@tabs.menus.lang'
+    mobile: '@nav-mobile.menus.mobile'
+    shortform: '@progress-nav.menus.shortform'
+  buckets: '@buckets.buckets-stats'

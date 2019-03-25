@@ -1,5 +1,5 @@
 <section class="buckets">
-  {{#each items}}
+  {{#each items default='buckets'}}
   <div class="bucket{{#if has-stat}} has-stat{{/if}}">
     {{#if has-stat}}
     <div class="bucket-stat">
@@ -12,7 +12,7 @@
     <p class="t-tiny c-steel no-margin">{{this.applicants}}</p>
   </div>
   {{else}}
-    {{#each lotteries.buckets}}
+    {{#each buckets}}
     <div class="bucket{{#if has-stat}} has-stat{{/if}}">
       {{#if has-stat}}
       <div class="bucket-stat">

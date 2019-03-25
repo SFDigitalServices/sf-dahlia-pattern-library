@@ -102,16 +102,6 @@ states:
   - name: Wyoming
     attr: WY
 
-contacts:
-  - name: Family member
-    value: family
-  - name: Friend
-    value: friend
-  - name: Social worker or housing counselor
-    value: social
-  - name: I don’t have an alternate contact
-    value: not
-
 contacts-alt:
   - name: Family member
     value: family
@@ -119,33 +109,6 @@ contacts-alt:
     value: friend
   - name: Social worker or housing counselor
     value: social
-
-homeless:
-  - name: "I’m renting a room, apartment, or house."
-    note: "This includes living in a supportive housing unit or SRO that you pay for."
-    value: rent
-  - name: "I live in an apartment or house that I own or a member of my household owns."
-    value: own
-  - name: "I have somewhere to stay but it isn’t permanent."
-    note: "This includes couchsurfing, or living in a motel/hotel that you pay for. It also includes people who have recieved an eviction notice, are living in a medical facility, a substance use treatment facility, or a jail."
-    value: temporary
-  - name: "I’m homeless."
-    note: "This includes living outside, living in your car, staying in a shelter or motel/hotel that is paid for by an emergency voucher."
-    value: homeless
-
-preferences:
-  - name: "Displaced Tenants Preference"
-    note: "Primarily households displaced by Ellis Act evictions as defined by The Ellis Act Displacement Emergency Assistance Ordinance passed into law on December 18, 2013. (Formerly Ellis Act Preference)"
-    value: displaced
-  - name: "Certificate of Preference"
-    note: "Primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action."
-    value: cop
-
-income: 
-  - name: per month
-    value: month
-  - name: per year
-    value: year
 
 people:
   - name: "1"
@@ -222,12 +185,7 @@ rent:
     attr: three
   - name: Screenshot of Online Payment
     attr: three
-    
-yesno:
-  - name: "Yes"
-    value: "yes"
-  - name: "No"
-    value: "no"
+
 
 address:
   - name: "4106 TERRACE ST <br> OAKLAND, CA 94611-5162"

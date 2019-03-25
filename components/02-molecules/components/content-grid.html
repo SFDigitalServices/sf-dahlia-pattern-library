@@ -1,25 +1,13 @@
 <ul class="content-grid margin-bottom--2x">
-  {{#each items}}
-  <li class="content-item">
-    <div class="content-card bg-dust">
-      <h4 class="t-sans t-base t-bold margin-bottom--half">
-        <a href="#">{{name}}</a>
-      </h4>
-      <p>{{#if description}}{{description}} <br>
-      {{/if}}{{location}}</p>
-    </div>
-  </li>
-  {{else}}
-    {{#each resources.rentals }}
-      <li class="content-item">
-        <div class="content-card bg-dust">
-          <h4 class="t-sans t-base t-bold margin-bottom--half">
-            <a href="#">{{name}}</a>
-          </h4>
-          <p>{{#if description}}{{description}} <br>
-          {{/if}}{{location}}</p>
-        </div>
-      </li>
-    {{/each}}
+  {{#each rentals }}
+    <li class="content-item">
+      <div class="content-card bg-dust">
+        <h4 class="t-sans t-base t-bold margin-bottom--half">
+          <a href="#">{{name}}</a>
+        </h4>
+        <p>{{#if description}}{{description}} <br>
+        {{/if}}{{location}}</p>
+      </div>
+    </li>
   {{/each}}
 </ul>

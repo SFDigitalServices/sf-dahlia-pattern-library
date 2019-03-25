@@ -1,0 +1,7 @@
+variants:
+  - name: 'default'
+    context:
+      buckets: '@buckets.buckets'
+  - name: 'search'
+    context:
+      buckets: '@buckets.buckets-stats'

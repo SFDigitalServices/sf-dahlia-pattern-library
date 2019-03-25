@@ -1,0 +1,399 @@
+context:
+  tables:
+    minimum:
+      units:
+        - type: Studio
+          income: 2,347
+          rent: 939
+        - type: 1 Bedroom
+          income: 2,685
+          rent: 1,074
+        - type: 2 Bedroom
+          income: 2,998
+          rent: 1,199
+    minimum-range:
+      units:
+        - type: Studio
+          income-low: 1,347
+          income-high: 1,678
+          rent-low: 639
+          rent-high: 839
+        - type: 1 Bedroom
+          income-low: 1,518
+          income-high: 1,958
+          rent-low: 759
+          rent-high: 979
+        - type: 2 Bedroom
+          income-low: 2,185
+          income-high: 2,685
+          rent-low: 939
+          rent-high: 1,250
+    minimum-sro:
+      units:
+        - type: SRO
+          income: 1,347
+          rent: 639
+    percent:
+      units:
+        - type: Studio
+          income: <em>none</em>
+          rent: 30% income
+        - type: 1 Bedroom
+          income: <em>none</em>
+          rent: 30% income
+    maximum:
+      households:
+        - size: 1
+          month: 3,245
+          year: 38,950
+        - size: 2
+          month: 3,708
+          year: 44,500
+        - size: 3
+          month: 4,204
+          year: 50,450
+        - size: 4
+          month: 4,670
+          year: 56,050
+        - size: 5
+          month: 5,045
+          year: 60,550
+        - size: 6
+          month: 5,416
+          year: 65,000
+    maximum-ami:
+      households:
+        - size: 1
+          month: 30,245
+          year: 38,950
+        - size: 2
+          month: 30,708
+          year: 44,500
+        - size: 3
+          month: 40,204
+          year: 50,450
+        - size: 4
+          month: 40,670
+          year: 56,050
+        - size: 5
+          month: 50,045
+          year: 60,550
+        - size: 6
+          month: 50,416
+          year: 65,000
+    minimum-flex:
+      - type: Studio
+        income: $2,347<small>/month</small>
+        rent: $939<small>/month</small>
+        availability: 1 <small>unit</small>
+      - type: 1 Bedroom
+        income: $2,685<small>/month</small>
+        rent: $1,074<small>/month</small>
+        availability: 2 <small>units</small>
+      - type: 2 Bedroom
+        income: $2,998<small>/month</small>
+        rent: $1,199<small>/month</small>
+        availability: 9 <small>units</small>
+    minimum-flex-sro:
+      - type: SRO
+        income: $1,356<small>/month</small>
+        rent: $678<small>/month</small>
+        availability: 12 <small>units</small>
+    minimum-flex-reserved:
+      - type: Studio
+        income: <em>none</em>
+        rent: 30%<small> income</small>
+        availability: 1 <small>unit</small>
+        reserved: true
+        icon: star
+      - type: Studio
+        income: <em>none</em>
+        rent: 30%<small> income</small>
+        availability: <em>waitlist</em>
+        reserved: true
+        icon: star
+      - type: Studio
+        income: <em>none</em>
+        rent: 30%<small> income</small>
+        availability: 1 <small>unit</small>
+        reserved: true
+      - type: Studio
+        income: $1,957<small>/month</small>
+        rent: 30%<small> income</small>
+        availability: 1 <small>unit</small>
+        reserved: true
+      - type: Studio
+        income: $2,347<small>/month</small>
+        rent: $939<small>/month</small>
+        availability: 1 <small>unit</small>
+      - type: Studio
+        income: $2,347<small>/month</small>
+        rent: $939<small>/month</small>
+        availability: <em>waitlist</em>
+      - type: 1 Bedroom
+        income: $2,685<small>/month</small>
+        rent: 30%<small> income</small>
+        availability: 2 <small>units</small>
+        reserved: true
+    occupancy:
+      units:
+        - type: Studio
+          occupancy: 1-2
+        - type: 1 Bedroom
+          occupancy: 1-3
+        - type: 2 Bedroom
+          occupancy: 2-4
+        - type: 3 Bedroom
+          occupancy: 3-6
+    priority:
+      units:
+        - type: Served in US Military
+          occupancy: 2
+        - type: Person with Mobility Impairment
+          occupancy: 3
+        - type: Person with Developmental Disability
+          occupancy: 4
+    features:
+      studio:
+        units:
+          - unit: "#127"
+            area: 469
+            baths: 1
+            floor: 1st
+            acccessibilty: Wheelchair access
+      1br:
+        units:
+          - unit: "#127"
+            area: 469
+            baths: 1
+            floor: 1st
+            acccessibilty: Wheelchair access
+          - unit: "#127"
+            area: 469
+            baths: 1
+            floor: 1st
+            acccessibilty: Wheelchair access
+          - unit: "#127"
+            area: 469
+            baths: 1
+            floor: 1st
+            acccessibilty: Wheelchair access
+          - unit: "#127"
+            area: 469
+            baths: 1
+            floor: 1st
+            acccessibilty: Wheelchair access
+          - unit: "#127"
+            area: 469
+            baths: 1
+            floor: 1st
+            acccessibilty: Wheelchair access
+          - unit: "#127"
+            area: 469
+            baths: 1
+            floor: 1st
+            acccessibilty: Wheelchair access
+    feature-summary:
+      types:
+        - type: Studio
+          units: 1 Unit
+          area: 639&ndash;900
+          acccessibilty: Accessible units
+        - type: 1 Bedroom
+          units: 6 Units
+          area: 639&ndash;900
+          acccessibilty: Accessible units
+    fees:
+      types:
+        - type: Application Fee
+          amount: $40
+          note: per applicant age 18 and over, due post lottery
+        - type: Deposit
+          amount: $500 - 941
+          note: or one month's rent, may be higher for lower credit scores
+        - type: Rental Late Fee
+          amount: $50
+          note: after the 6th business day, rent due first of the month
+        - type: Returned Check Fee
+          amount: $35
+          note: due in event of insufficient funds
+        - type: Pet Rent
+          amount: $65
+          note: monthly per pet
+        - type: Pet Deposit
+          amount: $500
+          note: per pet, refundable
+        - type: Storage Unit Fee
+          amount: $75
+          note: per month, optional
+        - type: Bike Room Fee
+          amount: $15
+          note: per month, optional
+        - type: Replacement Fobs
+          amount: $50
+          note: for each replacement
+        - type: Replacement Remotes
+          amount: $50
+          note: for each replacement
+        - type: Utilities
+          note: The building pays water, sewer and trash only. Tenants are responsible for all other utilities
+    preferences:
+      leaseup:
+        - icon: check
+          icon-fill: success
+          name: "Displaced Tenant Housing Preference"
+          person: Jason Holmes
+          rank: 12
+          proof: ""
+          status: Confirmed
+          action: ""
+        - icon: close
+          icon-fill: alert
+          name: "Neighborhood Resident Housing Preference"
+          person: Jason Holmes
+          rank: 25
+          proof: "<a href='#'>Cable Bill</a>"
+          status: Invalid
+          action: "<a href='#' class='action-link' style='display: none'>Edit</a>"
+          editable: "editable"
+        - icon: 
+          name: "Live or Work Housing Preference"
+          person: Jason Holmes
+          rank: 112
+          proof: "<a href='#'>Cable Bill</a>"
+          status: Unconfirmed
+          action: "<a href='#' class='action-link margin-bottom--half'>Confirm</a><br> <a href='#' class='action-link c-alert'>Remove</a>"
+    applicants:
+      - preference: COP 1
+        application: APP-111-2223
+        first: Anne
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Status
+        row_status: 
+        button_status: tertiary
+      - preference: COP 2
+        application: APP-111-2223
+        first: Beth
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Processing
+        row_status: is-processing
+        button_status: is-processing
+      - preference: COP 3
+        application: APP-111-2223
+        first: Beth
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Disqualified
+        row_status: is-disqualified
+        button_status: is-disqualified
+      - preference: COP 4
+        application: APP-111-2223
+        first: Beth
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Approved
+        row_status: is-approved
+        button_status: is-approved
+      - preference: COP 5
+        application: APP-111-2223
+        first: Beth
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Waitlisted
+        row_status: is-waitlisted
+        button_status: is-waitlisted
+      - preference: COP 6
+        application: APP-111-2223
+        first: Beth
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Appealed
+        row_status: is-appealed
+        button_status: is-appealed
+      - preference: COP 7
+        application: APP-111-2223
+        first: Beth
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Withdrawn
+        row_status: is-withdrawn
+        button_status: is-withdrawn
+      - preference: COP 8
+        application: APP-111-2223
+        first: Beth
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Lease Signed
+        invalid_status: is-invalid
+        row_status: is-leased
+        button_status: is-leased
+      - preference: COP 9
+        application: APP-111-2223
+        first: Anne
+        last: Bowler
+        phone: 646-248-1112
+        address: 4106 Terrace St
+        update: none
+        status: Processing
+        invalid_status: is-invalid
+        row_status: is-processing
+        button_status: is-processing
+  results:
+    - rank: "1"
+      ticket: "671086"
+    - rank: "2"
+      ticket: "671030"
+    - rank: "3"
+      ticket: "671027"
+    - rank: "4"
+      ticket: "671037"
+    - rank: "5"
+      ticket: "671023"
+    - rank: "6"
+      ticket: "671057"
+    - rank: "7"
+      ticket: "671100"
+    - rank: "8"
+      ticket: "671036"
+    - rank: "9"
+      ticket: "671071"
+    - rank: "10"
+      ticket: "671059"
+    - rank: "11"
+      ticket: "671050"
+    - rank: "12"
+      ticket: "671039"
+    - rank: "13"
+      ticket: "671066"
+    - rank: "14"
+      ticket: "671045"
+    - rank: "15"
+      ticket: "671103"
+    - rank: "16"
+      ticket: "671031"
+    - rank: "17"
+      ticket: "671097"
+    - rank: "18"
+      ticket: "671060"
+    - rank: "19"
+      ticket: "671072"
+    - rank: "20"
+      ticket: "671065"

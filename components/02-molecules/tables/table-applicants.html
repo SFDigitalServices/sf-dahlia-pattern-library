@@ -1,30 +1,7 @@
 <div class="ReactTable status-table" role="table">
   <div class="rt-table">
     <div class="rt-tbody">
-    {{#each items}}
-      <div class="rt-tr-group" role="rowgroup">
-        <div class="rt-tr rt-tr-status {{row_status}} {{invalid_status}}" tabindex="0" role="row">
-          <div class="rt-td auto-width"><span class="rt-td-label-rank t-semi">{{preference}}</span>{{#if invalid_status}}<span class="rt-td-label-invalid t-semi">Invalid</span>{{/if}}</div>
-          <div class="rt-td auto-width"><a href="#" class="has-border">{{application}}</a></div>
-          <div class="rt-td">{{first}}</div>
-          <div class="rt-td">{{last}}</div>
-          <div class="rt-td">{{phone}}</div>
-          <div class="rt-td">{{address}}</div>
-          <div class="rt-td">{{update}}</div>
-          <div class="rt-td auto-width">
-            <button class="button has-icon--right tiny no-margin text-align-left {{default button_status ''}}" href="javascript:void(0)">
-              <span class="ui-icon ui-{{default scale 'small'}}">
-                <svg>
-                  <use xlink:href="#i-{{default icon 'arrow-down'}}"></use>
-                </svg>
-              </span>
-              {{default status 'Status'}}
-            </button>
-          </div>
-        </div>
-      </div>
-      {{else}}
-        {{#each tables.applicants}}
+        {{#each applicants}}
           <div class="rt-tr-group" role="rowgroup">
             <div class="rt-tr rt-tr-status {{row_status}} {{invalid_status}}" tabindex="0" role="row">
               <div class="rt-td auto-width"><span class="rt-td-label-rank t-semi">{{preference}}</span>{{#if invalid_status}}<span class="rt-td-label-invalid t-semi">Invalid</span>{{/if}}</div>
@@ -47,7 +24,6 @@
             </div>
           </div>
         {{/each}}
-      {{/each}}
     </div>
   </div>
 </div>
