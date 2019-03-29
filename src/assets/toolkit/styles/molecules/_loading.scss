@@ -9,22 +9,14 @@
   }
   
   // used for full page overlay and fixed positioning
-  &-overlay {
-    @include absolute(0,0,0,0);
-    min-height: rem-calc(40);
-
-    .spinner {
-      position: fixed;
-    }
-  }
-
-  // used for smaller components
+  &-overlay,
   &-panel {
-    min-height: rem-calc(40);
+    min-height: 200px;
   }
 
   .spinner {
     @include scut-center-transform;
+    position: fixed;
     z-index: 103;
   }
 
