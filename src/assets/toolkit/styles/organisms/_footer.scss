@@ -127,27 +127,31 @@
 }
 
 
-// Sticky footer
+// Sticky footer for web app only
 
-html, body {
+html[ng-app="dahlia"] {
   height: 100%;
-}
 
-body {
-  display: table;
-  width: 100%;
-}
+  body {
+    height: 100%;
+  }
 
-body.body-block {
-  display: block;
-}
+  body {
+    display: table;
+    width: 100%;
+  }
 
-.site-container {
-  display: table-row;
-  height: 100%;
-}
+  body.body-block {
+    display: block;
+  }
 
-.footer-section {
-  display: table-row;
-  height: 1px;
+  .site-container {
+    display: table-row;
+    height: 100%;
+  }
+
+  .footer-section {
+    display: table-row;
+    height: 1px;
+  }
 }

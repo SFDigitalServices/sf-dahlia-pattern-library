@@ -83,7 +83,6 @@
     flex: 99999 1 auto;
     display: flex;
     flex-direction: column;
-    overflow: auto;
   }
 
   .rt-tbody .rt-expandable {
@@ -115,6 +114,10 @@
     &.rt-expandable {
       min-width: auto;
     }
+
+    &.td-min-narrow {
+      min-width: rem-calc(120);
+    }
   }
 
   .rt-th {
@@ -126,6 +129,10 @@
 
     &:first-of-type {
       min-width: auto;
+    }
+
+    &.td-min-narrow {
+      min-width: rem-calc(120);
     }
   }
 
@@ -299,37 +306,72 @@
       padding: 5px;
     }
 
-    input {
+    input, 
+    select {
       margin-bottom: 0;
     }
   }
 
+  &.rt-table-status {
+    position: relative;
+  }
+
   // status rows
   .rt-tr-status {
+    align-items: stretch;
+    min-height: rem-calc(66);
+
     &:hover {
-      background-color: $snow !important;
+      background-color: transparent !important;
+
+      .rt-td {
+        background-color: $snow !important;
+      }
+    }
+
+    .rt-td {
+      display: flex;
+      min-height: rem-calc(66);
+      align-items: center;
     }
 
     &.is {
       @each $color-name, $color-value in $state-wash-colors {
         &-#{"" + $color-name} {
-          background-color: $color-value !important;
+          .rt-td {
+            background-color: $color-value !important;
+          }
+        }
 
+        &-#{"" + $color-name} {
           &:hover {
-            background-color: darken($color-value, 2%) !important;
+            .rt-td {
+              background-color: darken($color-value, 2%) !important;
+            }
           }
         }
       }
 
       @each $color-name, $color-value in $state-colors {
         &-#{"" + $color-name} {
-          box-shadow: inset 3px 0 0 0 $color-value !important;
+          .rt-td:first-of-type {
+            box-shadow: inset 3px 0 0 0 $color-value !important;
+          }
         }
       }
     }
 
+    // invalid row state
     &.is-invalid {
-      opacity: 0.5;
+      &.is {
+        @each $color-name, $color-value in $state-colors {
+          &-#{"" + $color-name} {
+            .rt-td:first-of-type {
+              box-shadow: inset 3px 0 0 0 transparentize($color-value, .5) !important;
+            }
+          }
+        }
+      }
 
       &:hover {
         .rt-td-label-invalid {
@@ -338,6 +380,12 @@
 
         .rt-td-label-rank {
           display: block;
+        }
+      }
+
+      .rt-td {
+        > * {
+          opacity: 0.5;
         }
       }
 
@@ -350,10 +398,13 @@
       }
     }
 
+    .rt-td-label-invalid {
+      display: none;
+    }
+
     .rt-td {
       align-self: center;
       flex: 1 1 auto;
-      padding: 10px 1rem;
 
       &:first-of-type {
         padding-left: 1.5rem;
@@ -364,23 +415,73 @@
       }
     }
 
-    .rt-td-label-invalid {
+    // status cell with dropdown
+    .td-status {
+      overflow: visible;
+
+      .dropdown {
+        position: absolute !important; // Change to an inline style
+        right: rem-calc(16);
+        opacity: 1;
+      }
+
+      .button {
+        min-width: rem-calc(150);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // right fixed column
+  .tr-fixed-right,
+  .td-fixed-right {
+    position: absolute !important;
+    width: rem-calc(180) !important;
+    right: 0;
+  }
+
+  .td-fixed-right {
+    min-height: rem-calc(66);
+
+    .rt-resizer {
       display: none;
     }
+  }
 
-    .button {
-      min-width: 150px;
+  .tr-fixed-right {
+    min-height: rem-calc(87);
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .td-offset-right {
+    min-width: rem-calc(300);
+    padding-right: rem-calc(196) !important;
+
+    .rt-resizer {
+      display: none;
     }
   }
 
   // plain cell coloring
-  &.status-table {
-    .rt-tr-group {
+  &.rt-table-status {
+    .rt-td {
       border-bottom: 1px solid $smoke;
+
+      &.text-right {
+        * {
+          margin-left: auto;
+        }
+      }
     }
     
     .rt-tr {
       background: transparent;
+
+      &, 
+      & + .subcomponent,
+      .rt-td {
+        background: $white;
+      }
     }
   }
 }

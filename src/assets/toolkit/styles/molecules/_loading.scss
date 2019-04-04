@@ -7,18 +7,26 @@
     content: '';
     z-index: 102;
   }
-  
-  &-overlay {
-    min-height: 200px;
-  }
+}
+
+.loading-overlay {
+  min-height: 200px;
 
   .spinner {
-    @include scut-center-transform;
     position: fixed;
-    z-index: 103;
   }
+}
 
-  .footer-section & .spinner {
+.loading-panel {
+  min-height: rem-calc(40);
+}
+
+
+.spinner {
+  @include scut-center-transform;
+  z-index: 103;
+
+  .footer-section .loading & {
     display: none;
   }
 }

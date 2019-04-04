@@ -18,6 +18,18 @@ $button-radius: rem-calc(4);
   }
 }
 
+@mixin button-unstyled($color: $primary, $padding: 0) {
+  background: transparent;
+  border-width: 0;
+  color: $color;
+  display: inline;
+  letter-spacing: normal;
+  padding: $padding;
+  margin-bottom: 0;
+  text-transform: none;
+  border-radius: 0;
+}
+
 // Inverted buttons
 @mixin custom-button-light($cb-light-color: $primary) {
   background-color: $white;
@@ -297,17 +309,15 @@ button,
   }
 
   // Remove button styles
+
+  &.button-unstyled {
+    @include button-unstyled;
+  }
+
   &.button-link {
-    background: transparent;
-    border-width: 0;
-    color: $primary;
-    display: inline;
+    @include button-unstyled;
     font-family: $font-family;
     font-weight: $t-regular !important;
-    letter-spacing: normal;
-    padding: 0;
-    margin-bottom: 0;
-    text-transform: none;
     text-align: left;
 
     svg use {
@@ -345,6 +355,15 @@ button,
 
     &.caps {
       text-transform: uppercase;
+    }
+
+    &.t-semi {
+      font-weight: $t-semi !important;
+    }
+
+    &.action-link {
+      text-transform: uppercase;
+      font-weight: $t-semi !important;
     }
   }
 

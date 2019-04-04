@@ -35,6 +35,7 @@ a, .btn-link {
     border-radius: 4px;
     font-weight: $t-semi;
     background-color: $white;
+    line-height: rem-calc(23);
   }
 }
 
@@ -75,4 +76,12 @@ a, .btn-link {
     @include absolute(50%,1rem,null,null);
     transform: translateY(-50%);
   }
+}
+
+.block-link {
+  display: block;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: normal;
+  padding-bottom: .5rem;
 }

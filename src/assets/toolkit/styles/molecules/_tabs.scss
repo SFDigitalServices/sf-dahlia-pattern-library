@@ -2,26 +2,34 @@
 // Tabs
 //
 
-.tabs dd > a, 
-.tabs .tab-title > a {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: $t-semi;
-}
-
-.tabs dd.active > a, 
-.tabs .tab-title.active > a {
-  box-shadow: inset 0 2px 0 0 $primary;
-
-  &:hover {
-    box-shadow: inset 0 2px 0 0 $primary;
+.tabs dd, 
+.tabs .tab-title {
+  > a,
+  > button {
+    display: block;
+    font-size: $tabs-navigation-font-size;
+    background-color: $tabs-navigation-bg-color;
+    padding: $tabs-navigation-padding $tabs-navigation-padding * 2;
+    color: $tabs-navigation-font-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include type-weight(semi);
+    line-height: $base-line-height;
+    &:hover {
+      color: $jet;
+      box-shadow: inset 0 -2px 0 0 $primary;
+    }
   }
-}
 
-.tabs dd > a:hover, 
-.tabs .tab-title > a:hover {
-  color: $jet;
-  box-shadow: inset 0 -2px 0 0 $primary;
+  &.active > a,
+  &.active > button {
+    box-shadow: inset 0 2px 0 0 $primary;
+    color: $tabs-navigation-active-font-color;
+    @include type-weight(semi);
+    &:hover {
+      box-shadow: inset 0 2px 0 0 $primary;
+    }
+  }
 }
 
 // Small full width
@@ -30,24 +38,23 @@
     &.tabs dd, 
     &.tabs .tab-title {
       width: 100%;
-    }
 
-    &.tabs dd > a, 
-    &.tabs .tab-title > a {
-      text-align: center;
-    }
+      > a,
+      > button {
+        text-align: center;
 
-    &.tabs dd > a:hover, 
-    &.tabs .tab-title > a:hover {
-      box-shadow: none;
-    }
+        &:hover {
+          box-shadow: none;
+        }
+      }
 
-    &.tabs dd.active > a, 
-    &.tabs .tab-title.active > a {
-      box-shadow: none;
-
-      &:hover {
+      &.active > a,
+      &.active > button {
         box-shadow: none;
+
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
   }
