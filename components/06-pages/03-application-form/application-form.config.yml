@@ -1,4 +1,4 @@
 context:
-  ng-app: true
+  preview: "@angular"
   page-class: center-body
   label: My Application

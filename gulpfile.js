@@ -50,6 +50,7 @@ fractal.set('project.title', 'DAHLIA Pattern Library');
 fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.docs.set('path', path.join(__dirname, 'docs'));
 fractal.web.set('static.path', path.join(__dirname, config.dest));
+fractal.components.set('default.preview', '@preview');
 const logger = fractal.cli.console;
 const hbs = require('@frctl/handlebars')({
     helpers: {
