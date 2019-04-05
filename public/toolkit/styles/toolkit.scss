@@ -7,32 +7,32 @@
 
 // selectively include components
 @import
-   "src/assets/vendor/foundation/scss/foundation/components/accordion",
-   "src/assets/vendor/foundation/scss/foundation/components/alert-boxes",
-   "src/assets/vendor/foundation/scss/foundation/components/block-grid",
-   "src/assets/vendor/foundation/scss/foundation/components/breadcrumbs",
-   "src/assets/vendor/foundation/scss/foundation/components/button-groups",
-   "src/assets/vendor/foundation/scss/foundation/components/buttons",
-   "src/assets/vendor/foundation/scss/foundation/components/clearing",
-   "src/assets/vendor/foundation/scss/foundation/components/dropdown",
-   "src/assets/vendor/foundation/scss/foundation/components/forms",
-   "src/assets/vendor/foundation/scss/foundation/components/grid",
-   "src/assets/vendor/foundation/scss/foundation/components/icon-bar",
-   "src/assets/vendor/foundation/scss/foundation/components/inline-lists",
-   "src/assets/vendor/foundation/scss/foundation/components/labels",
-   "src/assets/vendor/foundation/scss/foundation/components/pagination",
-   "src/assets/vendor/foundation/scss/foundation/components/panels",
-   "src/assets/vendor/foundation/scss/foundation/components/progress-bars",
-   "src/assets/vendor/foundation/scss/foundation/components/reveal",
-   "src/assets/vendor/foundation/scss/foundation/components/sub-nav",
-   "src/assets/vendor/foundation/scss/foundation/components/side-nav",
-   "src/assets/vendor/foundation/scss/foundation/components/tables",
-   "src/assets/vendor/foundation/scss/foundation/components/tabs",
-   "src/assets/vendor/foundation/scss/foundation/components/tooltips",
-   "src/assets/vendor/foundation/scss/foundation/components/top-bar",
-   "src/assets/vendor/foundation/scss/foundation/components/visibility";
+   "../../vendor/foundation/scss/foundation/components/accordion",
+   "../../vendor/foundation/scss/foundation/components/alert-boxes",
+   "../../vendor/foundation/scss/foundation/components/block-grid",
+   "../../vendor/foundation/scss/foundation/components/breadcrumbs",
+   "../../vendor/foundation/scss/foundation/components/button-groups",
+   "../../vendor/foundation/scss/foundation/components/buttons",
+   "../../vendor/foundation/scss/foundation/components/clearing",
+   "../../vendor/foundation/scss/foundation/components/dropdown",
+   "../../vendor/foundation/scss/foundation/components/forms",
+   "../../vendor/foundation/scss/foundation/components/grid",
+   "../../vendor/foundation/scss/foundation/components/icon-bar",
+   "../../vendor/foundation/scss/foundation/components/inline-lists",
+   "../../vendor/foundation/scss/foundation/components/labels",
+   "../../vendor/foundation/scss/foundation/components/pagination",
+   "../../vendor/foundation/scss/foundation/components/panels",
+   "../../vendor/foundation/scss/foundation/components/progress-bars",
+   "../../vendor/foundation/scss/foundation/components/reveal",
+   "../../vendor/foundation/scss/foundation/components/sub-nav",
+   "../../vendor/foundation/scss/foundation/components/side-nav",
+   "../../vendor/foundation/scss/foundation/components/tables",
+   "../../vendor/foundation/scss/foundation/components/tabs",
+   "../../vendor/foundation/scss/foundation/components/tooltips",
+   "../../vendor/foundation/scss/foundation/components/top-bar",
+   "../../vendor/foundation/scss/foundation/components/visibility";
 
-@import "src/assets/vendor/Scut/dist/scut";
+@import "../../vendor/Scut/dist/scut";
 @import "vendors/angular-carousel";
 
 @import "utilities/all";
