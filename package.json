@@ -1,6 +1,15 @@
 {
   "name": "dahlia-pattern-library",
   "version": "0.1.0",
+  "scripts": {
+    "gulp": "gulp",
+    "bower": "bower",
+    "prestart": "npm install",
+    "build": "npm install && gulp",
+    "start": "gulp --dev",
+    "postinstall": "bower install",
+    "test": "npm run build"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@frctl/fractal": "^1.1.7",

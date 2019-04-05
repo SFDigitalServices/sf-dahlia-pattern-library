@@ -45,6 +45,85 @@ gulp.task('clean', function (cb) {
 });
 
 
+// config fractal
+
+const path = require('path');
+const fractal = module.exports = require('@frctl/fractal').create();
+
+fractal.set('project.title', 'DAHLIA Pattern Library');
+fractal.components.set('path', path.join(__dirname, 'components'));
+fractal.docs.set('path', path.join(__dirname, 'docs'));
+fractal.web.set('static.path', path.join(__dirname, config.dest + '/toolkit'));
+const logger = fractal.cli.console;
+const hbs = require('@frctl/handlebars')({
+    helpers: {
+		default: function (value, defaultValue) {
+			return value ? value : defaultValue;
+		},
+		compare: function (lvalue, operator, rvalue, options) {
+			var operators, result;
+
+			if (arguments.length < 3) {
+				throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
+			}
+
+			if (options === undefined) {
+				options = rvalue;
+				rvalue = operator;
+				operator = "===";
+			}
+
+			operators = {
+				'==': function (l, r) { return l == r; },
+				'===': function (l, r) { return l === r; },
+				'!=': function (l, r) { return l != r; },
+				'!==': function (l, r) { return l !== r; },
+				'<': function (l, r) { return l < r; },
+				'>': function (l, r) { return l > r; },
+				'<=': function (l, r) { return l <= r; },
+				'>=': function (l, r) { return l >= r; },
+				'typeof': function (l, r) { return typeof l == r; }
+			};
+
+			if (!operators[operator]) {
+				throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
+			}
+
+			result = operators[operator](lvalue, rvalue);
+
+			if (result) {
+				return options.fn(this);
+			} else {
+				return options.inverse(this);
+			}
+
+		},
+		attr: function(value) {
+			return _.kebabCase(value);
+		},
+		lowercase: function(str) {
+			if (str && typeof str === 'string') {
+				return str.toLowerCase();
+			} else {
+				return '';
+    		}
+		}
+	}
+});
+fractal.components.engine(hbs);
+fractal.components.set('ext', '.html');
+
+gulp.task('fractal:start', function(){
+    const server = fractal.web.server({
+        sync: true
+    });
+    server.on('error', err => logger.error(err.message));
+    return server.start().then(() => {
+        logger.success(`Fractal server is now running at ${server.url}`);
+    });
+});
+
+
 // styles
 
 gulp.task('styles:toolkit', function () {
@@ -89,15 +168,6 @@ gulp.task('images', function () {
 // server
 gulp.task('serve', function () {
 
-	browserSync.init({
-		server: {
-			baseDir: config.dest
-		},
-		port: 3010,
-		notify: false,
-		logPrefix: 'FABRICATOR'
-	});
-
 	/**
 	 * Because webpackCompiler.watch() isn't being used
 	 * manually remove the changed file path from the cache
@@ -117,8 +187,6 @@ gulp.task('serve', function () {
 		}
 	}
 
-	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
-
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
 	gulp.watch('public/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
@@ -128,6 +196,7 @@ gulp.task('serve', function () {
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
 
+	runSequence('fractal:start');
 });
 
 
