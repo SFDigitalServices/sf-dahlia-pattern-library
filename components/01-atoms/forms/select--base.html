@@ -1,0 +1,14 @@
+<label for="{{default name 'options'}}" class="sr-only">{{default label "Label"}}</label>
+<select name="{{default name 'options'}}" id="{{default name 'options'}}" class="{{default classes ''}}" data-width="{{default width 'auto'}}">
+  <option value="">{{default placeholder 'Select one'}}</option>
+  {{#each options}}
+    <option value="{{attr name}}">{{name}}</option>
+  {{else}}
+    <option value="1">Option 1</option>
+	<option value="2">Option 2</option>
+	<option value="3">Option 3</option>
+	<option value="4">Option 4</option>
+	<option value="5">Option 5</option>
+	<option value="6">Option 6</option>
+  {{/each}}
+</select>

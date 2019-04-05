@@ -12,21 +12,21 @@
 // Because Bower does not force a module structure, you have use a more specific path.
 
 // we're now requiring it from the vendor directory
-var $ = require('../../vendor/jquery/dist/jquery.min.js');
+var $ = require('src/assets/vendor/jquery/dist/jquery.min.js');
 window.jQuery = $;
 
 // Loading modernizr via a custom node build that is dropped into the local toolkit/script directory.
 var Modernizr = require('./modernizr.js');
 
 // Loading foundation from bower in order to support modernizr module
-var foundation = require('../../vendor/foundation/js/foundation/foundation.js');
-var foundationAccordion = require('../../vendor/foundation/js/foundation/foundation.accordion.js');
-var foundationReveal = require('../../vendor/foundation/js/foundation/foundation.reveal.js');
-var foundationAbide = require('../../vendor/foundation/js/foundation/foundation.abide.js');
-var foundationTooltip = require('../../vendor/foundation/js/foundation/foundation.tooltip.js');
-var foundationEqualizer = require('../../vendor/foundation/js/foundation/foundation.equalizer.js');
-var foundationTopbar = require('../../vendor/foundation/js/foundation/foundation.topbar.js');
-var Dropdown = require('../../vendor/foundation/js/foundation/foundation.dropdown.js');
+var foundation = require('src/assets/vendor/foundation/js/foundation/foundation.js');
+var foundationAccordion = require('src/assets/vendor/foundation/js/foundation/foundation.accordion.js');
+var foundationReveal = require('src/assets/vendor/foundation/js/foundation/foundation.reveal.js');
+var foundationAbide = require('src/assets/vendor/foundation/js/foundation/foundation.abide.js');
+var foundationTooltip = require('src/assets/vendor/foundation/js/foundation/foundation.tooltip.js');
+var foundationEqualizer = require('src/assets/vendor/foundation/js/foundation/foundation.equalizer.js');
+var foundationTopbar = require('src/assets/vendor/foundation/js/foundation/foundation.topbar.js');
+var Dropdown = require('src/assets/vendor/foundation/js/foundation/foundation.dropdown.js');
 
 
 //require('smoothstate/jquery.smoothState.min.js');
@@ -98,9 +98,9 @@ require('angular-animate/angular-animate.js');
 require('lodash/lodash.js');
 
 // Angular Foundation Directives (Loaded from bower)
-require('../../vendor/angular-foundation/mm-foundation-tpls.min.js');
-require('../../vendor/hammerjs/hammer.min.js'); // for touch interaction w/ angular-carousel
-require('../../vendor/lifely-angular-carousel/angular-carousel.js');
+require('src/assets/vendor/angular-foundation/mm-foundation-tpls.min.js');
+require('src/assets/vendor/hammerjs/hammer.min.js'); // for touch interaction w/ angular-carousel
+require('src/assets/vendor/lifely-angular-carousel/angular-carousel.js');
 //require('angular-pageslide-directive');
 
 angular.module('dahlia',

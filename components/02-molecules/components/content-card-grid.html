@@ -3,7 +3,7 @@
     <li class="content-item">
       <div class="content-card bg-dust">
         <h4 class="t-sans t-base t-bold margin-bottom--half">
-          <a href="#">{{name}}</a>
+          <a href="#">{{name}} {{#if icon}}{{> @icons-base icon="arrow-right" fill="primary" size="small" }}{{/if}}</a>
         </h4>
         <p>{{#if description}}{{description}} <br>
         {{/if}}{{location}}</p>

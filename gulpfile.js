@@ -26,9 +26,7 @@ var config = {
 			toolkit: './public/toolkit/scripts/toolkit.js'
 		},
 		styles: {
-			toolkit: 'public/toolkit/styles/toolkit.scss',
-			toolkit_base: 'public/toolkit/styles/toolkit-base.scss',
-			toolkit_lap: 'public/toolkit/styles/toolkit-lap.scss'
+			toolkit: 'public/toolkit/styles/toolkit.scss'
 		},
 		images: 'public/toolkit/images/**/*'
 	},
@@ -50,7 +48,7 @@ gulp.task('clean', function (cb) {
 // styles
 
 gulp.task('styles:toolkit', function () {
-	gulp.src([config.src.styles.toolkit, config.src.styles.toolkit_base, config.src.styles.toolkit_lap])
+	gulp.src(config.src.styles.toolkit)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('IE 9', 'last 4 versions'))

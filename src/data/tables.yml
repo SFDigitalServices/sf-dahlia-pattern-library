@@ -260,4 +260,4 @@ preferences:
       rank: 112
       proof: "<a href='#'>Cable Bill</a>"
       status: Unconfirmed
-      action: "<a href='#' class='action-link margin-bottom--half'>Confirm</a><br> <a href='#' class='action-link c-alert'>Remove</a>"
+      action: "<button class='button button-link action-link margin-bottom--half'>Confirm</button><br> <button class='button button-link action-link c-alert'>Remove</button>"
