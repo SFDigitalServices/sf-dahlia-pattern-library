@@ -1,0 +1,4 @@
+context:
+  ng-app: true
+  page-class: center-body
+  label: My Application
