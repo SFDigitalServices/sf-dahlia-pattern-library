@@ -22,13 +22,9 @@ var webpack = require('webpack');
 var config = {
 	dev: gutil.env.dev,
 	src: {
-		scripts: {
-			toolkit: './public/toolkit/scripts/toolkit.js'
-		},
-		styles: {
-			toolkit: 'public/toolkit/styles/toolkit.scss'
-		},
-		images: 'public/toolkit/images/**/*'
+		scripts: './public/toolkit/scripts/toolkit.js',
+		styles: './public/toolkit/styles/toolkit.scss',
+		images: './public/toolkit/images/**/*'
 	},
 	dest: 'dist'
 };
@@ -41,7 +37,7 @@ var webpackCompiler = webpack(webpackConfig);
 
 // clean
 gulp.task('clean', function (cb) {
-	del([config.dest], cb);
+	del([config.dest + '/toolkit'], cb);
 });
 
 
@@ -53,7 +49,7 @@ const fractal = module.exports = require('@frctl/fractal').create();
 fractal.set('project.title', 'DAHLIA Pattern Library');
 fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.docs.set('path', path.join(__dirname, 'docs'));
-fractal.web.set('static.path', path.join(__dirname, config.dest + '/toolkit'));
+fractal.web.set('static.path', path.join(__dirname, config.dest));
 const logger = fractal.cli.console;
 const hbs = require('@frctl/handlebars')({
     helpers: {
@@ -127,7 +123,7 @@ gulp.task('fractal:start', function(){
 // styles
 
 gulp.task('styles:toolkit', function () {
-	gulp.src(config.src.styles.toolkit)
+	gulp.src(config.src.styles)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('IE 9', 'last 4 versions'))
@@ -154,14 +150,23 @@ gulp.task('scripts', function (done) {
 		}
 		done();
 	});
+	gulp.src(config.src.scripts)
+		.pipe(gulp.dest(config.dest + '/toolkit/scripts'))
+		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
 
 // images
-gulp.task('images', function () {
+gulp.task('images', ['favicon'], function () {
 	return gulp.src(config.src.images)
 		.pipe(imagemin())
 		.pipe(gulp.dest(config.dest + '/toolkit/images'));
+});
+
+
+gulp.task('favicon', function () {
+	return gulp.src('./public/favicon.ico')
+		.pipe(gulp.dest(config.dest));
 });
 
 
@@ -188,15 +193,13 @@ gulp.task('serve', function () {
 	}
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
-	gulp.watch('public/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
+	gulp.watch('./public/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('public/{toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	gulp.watch('./public/toolkit/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
-
-	runSequence('fractal:start');
 });
 
 
@@ -214,6 +217,7 @@ gulp.task('default', ['clean'], function () {
 	runSequence(tasks, function () {
 		if (config.dev) {
 			gulp.start('serve');
+			runSequence('fractal:start');
 		}
 	});
 
