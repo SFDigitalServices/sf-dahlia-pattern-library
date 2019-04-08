@@ -15,7 +15,7 @@
       <div class="form-group">
         <label for="options" class="form-label margin-bottom--half">How much is the income?</label>
         {{> @input-income}}
-        {{> @radio-group--inline name="income" items=inputs.income}}
+        {{render '@radio-group--inline' name="income" items=inputs.income}}
       </div>
 
       <div class="form-group text-center border-top padding-top"> 

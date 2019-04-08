@@ -38,19 +38,19 @@
 }
 
 .demo-border_box {
-  background-color: #ccc;
+  background-color: #f5f8f9;
   margin-bottom: 1rem;
 }
 
 .demo-border_box-dark {
-  background-color: #555;
+  background-color: #205493;
   color: white;
 }
 
 .demo-positioning_container {
   width: 100%;
   height: 75px;
-  background-color: #aaa;
+  background-color: #f5f8f9;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   text-align: center;
@@ -59,7 +59,24 @@
   }
 }
 
+.demo-padding_container,
+.demo-margin_container {
+  background: #0177DA;
+  border: 1px solid #0177DA;
+  margin-bottom: 1rem;
+  /*color: #fff;*/
+}
+
+.demo-padding_box,
+.demo-margin_box {
+  background: #f5f8f9;
+}
+
+
 .demo-positioning_box {
-  background-color: #f7f7f7;
+  background-color: #205493;
+  color: #fff;
+
+.demo-positioning_box {
   width: 33%;
 }

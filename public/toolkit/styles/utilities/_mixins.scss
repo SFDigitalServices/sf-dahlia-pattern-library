@@ -116,6 +116,14 @@
   border-top-width: 0;
 }
 
+.dahlia-pl-triangle {
+  @include triangle;
+}
+
+.dahlia-pl-triangle-large {
+  @include triangle(1em 0.75em);
+}
+
 // Hides text and replaces with background image
 @mixin image-replace($imageURL) {
   background: url($imageURL) no-repeat;
