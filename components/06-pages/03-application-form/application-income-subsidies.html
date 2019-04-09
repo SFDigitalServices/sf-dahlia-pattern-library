@@ -5,7 +5,7 @@
 <section class="app-container">
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
-      {{> @app-header }}
+      {{ render '@app-header' }}
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
@@ -19,7 +19,7 @@
 
         <div class="app-inner inset">
           <div class="form-group">
-            {{> @radio-group name="income" items=inputs.yesno}}
+            {{ render '@radio-group' name="income" }}
           </div>
         </div>
 

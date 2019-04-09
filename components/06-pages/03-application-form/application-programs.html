@@ -4,7 +4,7 @@
 <section class="app-container">
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
-      {{> @app-header }}
+      {{ render '@app-header' }}
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
@@ -14,7 +14,7 @@
 
         <div class="app-inner">
           <div class="form-group">
-            {{> @checkbox-group--block name="preferences" items=inputs.preferences}}
+            {{render '@checkbox-group--block' name="preferences" items=inputs.preferences}}
           </div>
         </div>
 

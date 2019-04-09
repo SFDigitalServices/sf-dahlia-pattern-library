@@ -5,7 +5,7 @@
 <section class="app-container">
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
-      {{> @app-header }}
+      {{ render '@app-header' }}
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
@@ -13,7 +13,7 @@
           <p class="form-note">We'll simply pre-fill your application with the following details, and you can  make updates as you go.</p>
         </div>
 
-        {{#each application.sections-preview}}
+        {{#each sections-preview}}
         <header class="app-sub-header border-top">
           <h3 class="app-sub-header_title">{{header}}</h3>
         </header>

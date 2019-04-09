@@ -5,14 +5,14 @@
 <section class="app-container">
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
-      {{> @app-header }}
+      {{ render '@app-header' }}
 
       <form class="app-card form-card">
         <div class="app-inner leader border-bottom">
           <h2 class="app-card_question">Take a moment to review your information before submitting your application.</h2>
         </div>
 
-        {{#each application.sections-general}}
+        {{#each sections-general}}
         <header class="app-sub-header border-top">
           <h3 class="app-sub-header_title">{{header}}</h3>
           <a class="info-item_link edit-link hide-for-print" href="#">Edit</a>

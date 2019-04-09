@@ -5,7 +5,7 @@
 <section class="app-container">
   <div class="row collapse">
     <div class="medium-6 medium-centered columns fixed-width">
-      {{> @app-header }}
+      {{ render '@app-header' }}
 
       <form class="app-card form-card">
 
@@ -79,7 +79,7 @@
           <div class="form-group">
             <label class="form-label caps">Do you work in San Francisco?</label>
             <p class="form-note margin-bottom">This means you work in San Francisco at least 75% of your working hours.</p>
-            {{> @radio-group--inline items=inputs.yesno classes="double"}}
+            {{ render '@radio-group--inline' items=inputs.yesno classes="double"}}
 
             <small class="highlight">In order to claim this as a lottery preference, you'll need to upload supporting documentation as instructed on a later screen.</small>
           </div>
