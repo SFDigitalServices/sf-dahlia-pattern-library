@@ -1,0 +1,120 @@
+<table class="td-light td-plain th-plain" role="grid">
+  <thead>
+    <tr>
+      <th scope="col"><span class="sr-only">Status Mark</span></th>
+      <th scope="col">Preference Name</th>
+      <th scope="col">Person who Claimed</th>
+      <th scope="col" class="text-right">Preference Rank</th>
+      <th scope="col">Type of Proof</th>
+      <th scope="col">Status</th>
+      <th scope="col" class="text-right">Actions</th>
+    </tr>
+  </thead>
+  <tbody>  
+    {{#each items}}
+    <tr>
+      <td scope="row">
+        {{#if icon}}
+          <span class="ui-icon ui-medium i-{{default icon-fill ''}}">
+            <svg>
+              <use xlink:href="#i-{{default icon 'info'}}"></use>
+            </svg>
+          </span>
+        {{/if}}
+      </td>
+      <td >
+        {{name}}
+      </td>
+      <td>
+        {{person}}
+      </td>
+      <td class="text-right">
+        {{rank}}
+      </td>
+      <td>
+        {{{proof}}}
+      </td>
+      <td>
+        {{status}}
+      </td>
+      <td>
+        {{{action}}}
+      </td>
+    </tr>
+      {{else}}
+      {{#each tables.preferences.leaseup}}
+      <tr class="{{#if editable}}tr-expand is-expanded{{/if}}" aria-expanded="true">
+        <td scope="row">
+          {{#if icon}}
+            <span class="ui-icon ui-medium i-{{default icon-fill ''}}">
+              <svg>
+                <use xlink:href="#i-{{default icon 'info'}}"></use>
+              </svg>
+            </span>
+          {{/if}}
+        </td>
+        <td>
+          {{name}}
+        </td>
+        <td>
+          {{person}}
+        </td>
+        <td class="text-right">
+          {{rank}}
+        </td>
+        <td>
+          {{{proof}}}
+        </td>
+        <td>
+          {{status}}
+        </td>
+        <td class="text-right">
+          {{{action}}}
+        </td>
+      </tr>
+    {{#if editable}}
+      <tr class="tr-expand-content is-expanded" aria-hidden="false">
+        <td colspan="7" class="td-expand-nested no-padding">
+          <div class="app-{{default editable ''}} expand-wide scrollable-table-nested">
+            <div class="form-grid row">
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> @text-value }}
+                </div>
+              </div>
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> @text-input }}
+                </div>
+              </div>
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> @text-input }}
+                </div>
+              </div>
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> @text-input }}
+                </div>
+              </div>
+            </div>
+            <div class="form-grid row">
+              <div class="form-grid_item small-12 medium-6 large-3 column">
+                <div class="form-group">
+                  {{> @text-input }}
+                </div>
+              </div>
+            </div>
+            <div class="form-grid row">
+              <div class="form-grid_item column">
+              {{> @button text="Save" classes="primary tiny margin-right margin-bottom-none"}} {{> @button text="Cancel" classes="secondary tiny margin-bottom-none"}}
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    {{/if}}
+      {{/each}}
+    {{/each}}
+  </tbody>
+</table>

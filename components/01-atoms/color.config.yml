@@ -1,0 +1,74 @@
+notes: |
+  This palette is designed to support a range of distinct visual styles that continue to feel connected. The intent of the palette is to convey a warm and open spirit, with bright saturated tints of blue and red, grounded in sophisticated deeper shades of cool blues and grays.
+
+  These brand colors are used globally across all parts of the site for things like links, buttons and background colors.
+
+  You can find all the color styles in `_variables.scss`
+context:
+  colors:
+    - name: dust
+      hex: "#f5f8f9"
+    - name: snow
+      hex: "#f9f9f9"
+    - name: mist
+      hex: "#f7f7f7"
+    - name: vapor
+      hex: "#f6f6f6"
+    - name: wash
+      hex: "#efefef"
+    - name: smoke
+      hex: "#dedee0"
+    - name: iron
+      hex: "#ccc"
+    - name: base
+      hex: "#aaa"
+    - name: aluminum
+      hex: "#999"
+    - name: steel
+      hex: "#767676"
+    - name: charcoal
+      hex: "#555"
+    - name: tuatara
+      hex: "#30383a"
+    - name: oil
+      hex: "#333"
+    - name: ebony
+      hex: "#242c2e"
+    - name: jet
+      hex: "#222"
+    - name: primary
+      hex: "#0177DA"
+    - name: deep
+      hex: "#0067be"
+    - name: dark
+      hex: "#205493"
+    - name: primary-tint
+      hex: "#daeeff"
+    - name: attention
+      hex: "#00bed5"
+    - name: attention-tint
+      hex: "#c8f1ff"
+    - name: royal
+      hex: "#b85ed5"
+    - name: royal-tint
+      hex: "#eed7f5"
+    - name: splash
+      hex: "#ff6627"
+    - name: splash-tint
+      hex: "#ffd2c0"
+    - name: lush
+      hex: "#99cd00"
+    - name: lush-tint
+      hex: "#f2ffcd"
+    - name: alert
+      hex: "#e31c3d"
+    - name: alert-tint
+      hex: "#f9d2d8"
+    - name: success
+      hex: "#2e8540"
+    - name: success-tint
+      hex: "#b4e5be"
+    - name: warn
+      hex: "#fdb81e"
+    - name: warn-tint
+      hex: "#fee8b6"

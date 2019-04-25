@@ -1,0 +1,2 @@
+notes: |
+    Use `loading-panel` in conjunction with `loading` as state classes applied directly to the component to indicate that component is loading.

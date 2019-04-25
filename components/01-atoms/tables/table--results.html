@@ -1,0 +1,17 @@
+<table role="grid" class="table-small table-results">
+  <thead>
+    <tr>
+      <th scope="col">Rank</th>
+      <th scope="col">Ticket</th>
+    </tr>  
+  </thead>
+
+  <tbody>
+    {{#each results }}
+    <tr>
+      <td scope="row">{{this.rank}}</td>
+      <td>{{this.ticket}}</td>
+    </tr>
+    {{/each }}
+  </tbody>
+</table>

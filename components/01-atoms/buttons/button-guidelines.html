@@ -1,0 +1,15 @@
+{{#each modifiers}}
+<h2 class="gamma t-sans">.{{this}}</h2>
+
+  <button class="{{ this }}" type="button">button.{{ this }}</button>
+  <a class="button {{ this }}" href="javascript:void(0)" role="button">a.{{ this }}</a>
+<br>
+
+  {{#each this}}
+  <h4 class="delta t-sans">.{{@../key}}.{{this}}</h4>
+
+      <button class="{{@../key}} {{this}} type="button"">button.{{@../key}}.{{this}}</button>
+      <a class="button {{@../key}} {{this}}" href="javascript:void(0)" role="button">a.{{@../key}}.{{this}}</a>
+    <br>
+  {{/each}}
+{{/each}}

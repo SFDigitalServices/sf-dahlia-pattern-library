@@ -1,0 +1,2 @@
+notes: |
+  When labels and inputs are separated, make sure the two are connected so screen readers will know (and to keep the labels clickable!).

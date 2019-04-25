@@ -1,0 +1,21 @@
+{{> @version-bar }}
+{{> @top-bar }}
+
+<div class="p-relative">
+  <section class="section-hero">
+    <div class="accordion-offset accordion-offset--hero">
+      {{> @property-hero--closed}}
+    </div>
+  </section>
+
+      {{> @property-accordion applications_closed=true state="pre-lottery"}}
+      {{> @content-panel-program }}
+
+  <section class="bg-dust">
+    <div class="accordion-offset">
+      {{> @block-icon size="tall" icon="icon-mail.png" description="Get emailed whenever a new listing is posted." action="Sign Up Today"}}
+    </div>
+  </section>
+</div>
+
+{{> @footer}}

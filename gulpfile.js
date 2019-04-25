@@ -2,7 +2,6 @@
 
 // modules
 var _ = require('lodash');
-var assemble = require('fabricator-assemble');
 var browserSync = require('browser-sync').create();
 var csso = require('gulp-csso');
 var del = require('del');
@@ -23,16 +22,9 @@ var webpack = require('webpack');
 var config = {
 	dev: gutil.env.dev,
 	src: {
-		scripts: {
-			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js'
-		},
-		styles: {
-			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
-		},
-		images: 'src/assets/toolkit/images/**/*',
-		views: 'src/toolkit/views/*.html'
+		scripts: './public/toolkit/scripts/toolkit.js',
+		styles: './public/toolkit/styles/toolkit.scss',
+		images: './public/toolkit/images/**/*'
 	},
 	dest: 'dist'
 };
@@ -45,35 +37,104 @@ var webpackCompiler = webpack(webpackConfig);
 
 // clean
 gulp.task('clean', function (cb) {
-	del([config.dest], cb);
+	del([config.dest + '/toolkit'], cb);
+});
+
+
+// config fractal
+
+const path = require('path');
+const fractal = module.exports = require('@frctl/fractal').create();
+
+fractal.set('project.title', 'DAHLIA Pattern Library');
+fractal.components.set('path', path.join(__dirname, 'components'));
+fractal.docs.set('path', path.join(__dirname, 'docs'));
+fractal.web.set('static.path', path.join(__dirname, config.dest));
+fractal.components.set('default.preview', '@preview');
+const logger = fractal.cli.console;
+const hbs = require('@frctl/handlebars')({
+    helpers: {
+		default: function (value, defaultValue) {
+			return value ? value : defaultValue;
+		},
+		compare: function (lvalue, operator, rvalue, options) {
+			var operators, result;
+
+			if (arguments.length < 3) {
+				throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
+			}
+
+			if (options === undefined) {
+				options = rvalue;
+				rvalue = operator;
+				operator = "===";
+			}
+
+			operators = {
+				'==': function (l, r) { return l == r; },
+				'===': function (l, r) { return l === r; },
+				'!=': function (l, r) { return l != r; },
+				'!==': function (l, r) { return l !== r; },
+				'<': function (l, r) { return l < r; },
+				'>': function (l, r) { return l > r; },
+				'<=': function (l, r) { return l <= r; },
+				'>=': function (l, r) { return l >= r; },
+				'typeof': function (l, r) { return typeof l == r; }
+			};
+
+			if (!operators[operator]) {
+				throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
+			}
+
+			result = operators[operator](lvalue, rvalue);
+
+			if (result) {
+				return options.fn(this);
+			} else {
+				return options.inverse(this);
+			}
+
+		},
+		attr: function(value) {
+			return _.kebabCase(value);
+		},
+		lowercase: function(str) {
+			if (str && typeof str === 'string') {
+				return str.toLowerCase();
+			} else {
+				return '';
+    		}
+		}
+	}
+});
+fractal.components.engine(hbs);
+fractal.components.set('ext', '.html');
+
+gulp.task('fractal:start', function(){
+    const server = fractal.web.server({
+        sync: true
+    });
+    server.on('error', err => logger.error(err.message));
+    return server.start().then(() => {
+        logger.success(`Fractal server is now running at ${server.url}`);
+    });
 });
 
 
 // styles
-gulp.task('styles:fabricator', function () {
-	gulp.src(config.src.styles.fabricator)
-		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('IE 9', 'last 4 versions'))
-		.pipe(gulpif(!config.dev, csso()))
-		.pipe(rename('f.css'))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
-		.pipe(gulpif(config.dev, reload({stream:true})));
-});
 
 gulp.task('styles:toolkit', function () {
-	gulp.src(config.src.styles.toolkit)
+	gulp.src(config.src.styles)
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('IE 9', 'last 4 versions'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
+		.pipe(gulp.dest(config.dest + '/toolkit/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('styles', ['styles:toolkit']);
 
 
 // scripts
@@ -90,6 +151,9 @@ gulp.task('scripts', function (done) {
 		}
 		done();
 	});
+	gulp.src(config.src.scripts)
+		.pipe(gulp.dest(config.dest + '/toolkit/scripts'))
+		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
 
@@ -97,95 +161,18 @@ gulp.task('scripts', function (done) {
 gulp.task('images', ['favicon'], function () {
 	return gulp.src(config.src.images)
 		.pipe(imagemin())
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
+		.pipe(gulp.dest(config.dest + '/toolkit/images'));
 });
+
 
 gulp.task('favicon', function () {
-	return gulp.src('./src/favicon.ico')
+	return gulp.src('./public/favicon.ico')
 		.pipe(gulp.dest(config.dest));
-});
-
-// copy index.php
-gulp.task('copy-index-php', function() {
-    gulp.src('./index.php')
-    // Perform minification tasks, etc here
-    .pipe(gulp.dest('./dist'));
-});
-
-// assemble
-gulp.task('assemble', function (done) {
-	assemble({
-		logErrors: config.dev,
-		helpers: {
-			default: function (value, defaultValue) {
-				return value ? value : defaultValue;
-			},
-			compare: function (lvalue, operator, rvalue, options) {
-				var operators, result;
-
-				if (arguments.length < 3) {
-					throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
-				}
-
-				if (options === undefined) {
-					options = rvalue;
-					rvalue = operator;
-					operator = "===";
-				}
-
-				operators = {
-					'==': function (l, r) { return l == r; },
-					'===': function (l, r) { return l === r; },
-					'!=': function (l, r) { return l != r; },
-					'!==': function (l, r) { return l !== r; },
-					'<': function (l, r) { return l < r; },
-					'>': function (l, r) { return l > r; },
-					'<=': function (l, r) { return l <= r; },
-					'>=': function (l, r) { return l >= r; },
-					'typeof': function (l, r) { return typeof l == r; }
-				};
-
-				if (!operators[operator]) {
-					throw new Error("Handlerbars Helper 'compare' doesn't know the operator " + operator);
-				}
-
-				result = operators[operator](lvalue, rvalue);
-
-				if (result) {
-					return options.fn(this);
-				} else {
-					return options.inverse(this);
-				}
-
-			},
-			attr: function(value) {
-				return _.kebabCase(value);
-			},
-			lowercase: function(str) {
-				if (str && typeof str === 'string') {
-					return str.toLowerCase();
-				} else {
-					return '';
-        }
-			}
-		}
-	});
-	// reload();
-	done();
 });
 
 
 // server
 gulp.task('serve', function () {
-
-	browserSync.init({
-		server: {
-			baseDir: config.dest
-		},
-		port: 3010,
-		notify: false,
-		logPrefix: 'FABRICATOR'
-	});
 
 	/**
 	 * Because webpackCompiler.watch() isn't being used
@@ -206,24 +193,14 @@ gulp.task('serve', function () {
 		}
 	}
 
-	gulp.task('assemble:watch', ['assemble'], function(done){
-		reload();
-		done();
-	});
-	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
-
-	gulp.task('styles:fabricator:watch', ['styles:fabricator']);
-	gulp.watch('src/assets/fabricator/styles/**/*.scss', ['styles:fabricator:watch']);
-
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
-	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
+	gulp.watch('./public/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	gulp.watch('./public/toolkit/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
-
 });
 
 
@@ -235,14 +212,13 @@ gulp.task('default', ['clean'], function () {
 		'styles',
 		'scripts',
 		'images',
-		'assemble',
-		'copy-index-php'
 	];
 
 	// run build
 	runSequence(tasks, function () {
 		if (config.dev) {
 			gulp.start('serve');
+			runSequence('fractal:start');
 		}
 	});
 

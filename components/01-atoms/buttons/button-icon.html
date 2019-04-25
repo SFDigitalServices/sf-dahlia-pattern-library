@@ -1,0 +1,10 @@
+{{#each icons}}
+<button class="button has-icon--right tiny {{default classes ''}}" href="javascript:void(0)">
+  <span class="ui-icon ui-{{default scale 'small'}}">
+    <svg>
+      <use xlink:href="#i-{{this}}"></use>
+    </svg>
+  </span>
+  {{default text 'Button'}}
+</button>
+{{/each}}

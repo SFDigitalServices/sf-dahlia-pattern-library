@@ -1,0 +1,2 @@
+notes: |
+  The `.bg-image` class uses the `overlay-image` mixin which adds a full image background to an element. This header also utilizes the `custom-linear-gradient` to add a linear-gradient on top of the image.

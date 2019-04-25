@@ -1,0 +1,14 @@
+<div class="info-item {{#if error}}error{{/if}} border-bottom tall">
+  <p class="info-item_name">{{default name '4106 Terrace St'}}</p>
+  <p class="info-item_value">{{default value 'Laura Smith (You)'}}</p>
+  {{#if doc}}
+  <p class="info-item_doc">{{> @icons-base icon='check' size='tiny' }} Copy or Lease</p>
+  <p class="info-item_doc">{{> @icons-base icon='check' size='tiny' }}  Proof of Rent Payment</p>
+  {{/if}}
+  {{#if error}}
+  <p class="info-item_doc error">{{> @icons-base icon='close' size='tiny' }} Copy or Lease</p>
+  <p class="info-item_doc error">{{> @icons-base icon='close' size='tiny' }}  Proof of Rent Payment</p>
+  <small class="error margin-bottom-none margin-top--half">Please complete uploading the documents above.</small>
+  {{/if}}
+  <a class="edit-link info-item_link" href="#">{{default link 'Edit'}}</a>
+</div>

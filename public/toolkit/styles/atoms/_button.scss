@@ -1,0 +1,469 @@
+//
+// Foundation button variables
+// .button
+$button-radius: rem-calc(4);
+
+@mixin custom-button-styles() {
+  @include type-weight(bold);
+  @include scut-padding(n 1.5rem);
+  border-radius: $button-radius;
+  font-family: $alt-font-family;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  white-space: normal;
+
+  &:focus {
+    text-decoration: none;
+    outline-offset: -2px;
+  }
+}
+
+@mixin button-unstyled($color: $primary, $padding: 0) {
+  background: transparent;
+  border-width: 0;
+  color: $color;
+  display: inline;
+  letter-spacing: normal;
+  padding: $padding;
+  margin-bottom: 0;
+  text-transform: none;
+  border-radius: 0;
+}
+
+// Inverted buttons
+@mixin custom-button-light($cb-light-color: $primary) {
+  background-color: $white;
+  border-color: $cb-light-color;
+  color: $cb-light-color;
+
+  svg use {
+    fill: $cb-light-color;
+  }
+
+  &:focus {
+    background-color: $white;
+    color: $cb-light-color;
+  }
+
+  &:hover {
+    background-color: $cb-light-color;
+    color: $white;
+
+    svg use {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    background-color: darken($cb-light-color, 10%);
+  }
+
+  &.disabled, &[disabled] {
+    background-color: $white;
+    border-color: $cb-light-color;
+    color: $cb-light-color;
+
+    &:hover, &:active, &:focus {
+      background-color: $white;
+      border-color: $cb-light-color;
+      color: $cb-light-color;
+    }
+  }
+}
+
+// Solid buttons dark text
+@mixin custom-button-medium($cb-medium-color: $primary) {
+  background-color: $cb-medium-color;
+  border-color: $cb-medium-color;
+  color: $jet;
+
+  svg use {
+    fill: $jet;
+  }
+
+  &:focus {
+    background-color: $cb-medium-color;
+    color: $jet;
+  }
+
+  &:hover {
+    background-color: darken($cb-medium-color, 5%);
+    color: $jet;
+
+    svg use {
+      fill: $jet;
+    }
+  }
+
+  &:active {
+    background-color: darken($cb-medium-color, 10%);
+  }
+
+  &.disabled, &[disabled] {
+    background-color: $cb-medium-color;
+    border-color: $cb-medium-color;
+    color: $jet;
+
+    &:hover, &:active, &:focus {
+      background-color: $cb-medium-color;
+      border-color: $cb-medium-color;
+      color: $jet;
+    }
+  }
+}
+
+// Solid buttons
+@mixin custom-button-dark($cb-dark-color: $primary) {
+  background-color: $cb-dark-color;
+  border-color: $cb-dark-color;
+  color: $white;
+
+  svg use {
+    fill: $white;
+  }
+
+  &:focus {
+    background-color: $cb-dark-color;
+    color: $white;
+  }
+
+  &:hover {
+    background-color: darken($cb-dark-color, 5%);
+    color: $white;
+
+    svg use {
+      fill: $white;
+    }
+  }
+
+  &:active {
+    background-color: darken($cb-dark-color, 10%);
+  }
+
+  &.disabled, &[disabled] {
+    background-color: $cb-dark-color;
+    border-color: $cb-dark-color;
+    color: $white;
+
+    &:hover, &:active, &:focus {
+      background-color: $cb-dark-color;
+      border-color: $cb-dark-color;
+      color: $white;
+    }
+  }
+}
+
+
+
+button,
+.button {
+  @include custom-button-styles();
+  @include custom-button-light($cb-light-color: $primary);
+
+  &.primary{
+    @include custom-button-dark($cb-dark-color: $primary);
+  }
+
+  &.secondary {
+    @include custom-button-light($cb-light-color: $primary);
+  }
+
+  &.tertiary {
+    @include custom-button-light($cb-light-color: $steel);
+  }
+
+  &.alert, &.error {
+    @include custom-button-light($cb-light-color: $alert);
+  }
+
+  &.alert-fill {
+    @include custom-button-dark($cb-dark-color: $alert);
+  }
+
+  &.deep {
+    @include custom-button-dark($cb-dark-color: $deep);
+  }
+
+  // Button lease up states
+  &.is-default {
+    @extend .tertiary;
+  }
+
+  &.is-processing {
+    @include custom-button-dark($cb-dark-color: $aluminum);
+  }
+
+  &.is-approved {
+    @include custom-button-dark($cb-dark-color: $deep);
+  }
+
+  &.is-disqualified {
+    @extend .alert-fill;
+  }
+
+  &.is-appealed {
+    @include custom-button-dark($cb-dark-color: $royal);
+  }
+
+  &.is-withdrawn {
+    @include custom-button-medium($cb-medium-color: $warn);
+  }
+
+  &.is-leased {
+    @include custom-button-dark($cb-dark-color: $success);
+  }
+
+  &.is-waitlisted {
+    @include custom-button-dark($cb-dark-color: $attention);
+  }
+
+  &.has-status-width {
+    width: rem-calc(150px);
+  }
+
+  &.tint {
+    background-color: $tint;
+    color: $deep;
+
+    &:hover {
+      background-color: $deep;
+      color: $white;
+    }
+  }
+
+  &.blank {
+    background-color: $white;
+    color: $primary;
+
+    &:hover {
+      background-color: darken($primary, 5%);
+      color: $white;
+    }
+  }
+
+  // Primary button with white background
+  &.ghost-white {
+    @extend .secondary;
+  }
+
+  &.no-border {
+    background-color: transparent;
+    border-color: transparent;
+    color: $primary;
+
+    &:hover {
+      color: $deep;
+    }
+  }
+
+  // Larger button styles
+  &.large {
+    @media #{$medium-up} {
+      line-height: 1;
+      padding: 1.625rem 2.25rem 1.625rem 2.25rem;
+    }
+  }
+
+  // Full width buttons
+  &.expand {
+    &.small {
+      font-size: $button-font-sml;
+    }
+  }
+
+  // Add padding top and bottom
+  &.tall {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &.squared {
+    border-radius: 0;
+  }
+
+  // Icon button styles
+  &.has-icon {
+    padding-left: 3.25em;
+    padding-right: 1.75em;
+
+    .ui-icon {
+      @include scut-center-transform(y);
+      left: 1.25em;
+      margin-right: 0;
+    }
+  }
+
+  &.has-icon--right {
+    padding-right: 3.25em;
+    padding-left: 1.75em;
+
+    .ui-icon {
+      @include scut-center-transform(y);
+      right: 1.25em;
+      left: auto;
+    }
+  }
+
+  &.text-align-left {
+    text-align: left;
+  }
+
+  // Remove button styles
+
+  &.button-unstyled {
+    @include button-unstyled;
+  }
+
+  &.button-link {
+    @include button-unstyled;
+    font-family: $font-family;
+    font-weight: $t-regular !important;
+    text-align: left;
+
+    svg use {
+      fill: $primary;
+    }
+
+    &:focus {
+      // outline: none;
+      color: $dark;
+
+      svg use {
+        fill: $dark;
+      }
+    }
+
+    &.disabled:hover,
+    &.disabled:focus,
+    &[disabled]:hover,
+    &[disabled]:focus {
+      background-color: transparent !important;
+    }
+
+    // Button link with underline
+    &.button-lined {
+      @include scut-padding(n 1rem);
+      color: $primary;
+      font-weight: $t-regular !important;
+      text-decoration: underline;
+      line-height: 3rem;
+
+      &:focus {
+        color: $dark;
+      }
+    }
+
+    &.caps {
+      text-transform: uppercase;
+    }
+
+    &.t-semi {
+      font-weight: $t-semi !important;
+    }
+
+    &.action-link {
+      text-transform: uppercase;
+      font-weight: $t-semi !important;
+    }
+  }
+
+  &.skip-link {
+    &:focus {
+      @include absolute(0,null,null,0);
+      padding: .5rem;
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  // Round icon button
+  &.round-icon {
+    border-radius: 50%;
+    padding: .6rem;
+
+    svg {
+      margin-top: 0;
+    }
+
+    svg use {
+      fill: $primary
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px #fff, 0 0 3px 3px $attention-tint;
+      color: $primary;
+      background: $white;
+      outline: none;
+
+      svg use {
+        fill: $primary;
+      }
+    }
+
+    &:hover {
+      color: $dark;
+      background: $deep;
+      border-color: $dark;
+
+      svg use {
+        fill: $white;
+      }
+    }
+
+    // Expose label, hidden by default
+    &.has-label {
+      margin-right: rem-calc(65);
+
+      .inline {
+        transform: translateY(-50%);
+        position: absolute;
+        left: 3rem;
+        top: 50%;
+        color: $charcoal;
+        letter-spacing: normal;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+// Adds radius to submits
+input[type="submit"] {
+  border-radius: $button-radius;
+}
+
+// Full width buttons on small screens
+.expand-small {
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+// Link converts to button style on small screens
+.button-on-small {
+  display: block;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+  @media #{$small-only} {
+    @include button;
+    @include custom-button-styles();
+    @include custom-button-light($cb-light-color: $primary);
+    display: block;
+
+    &:hover,
+    &:focus {
+      svg use {
+        fill: #fff;
+      }
+    }
+  }
+
+  .ui-icon {
+    margin-right: .5rem;
+  }
+
+  svg use {
+    fill: $primary;
+  }
+}

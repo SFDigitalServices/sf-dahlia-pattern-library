@@ -1,0 +1,61 @@
+context:
+  utilities:
+    padding:
+      - padding--half
+      - padding-top--half
+      - padding-right--half
+      - padding-bottom--half
+      - padding-left--half
+      - padding
+      - padding-top
+      - padding-right
+      - padding-bottom
+      - padding-left
+      - padding--3halves
+      - padding-top--3halves
+      - padding-right--3halves
+      - padding-bottom--3halves
+      - padding-left--3halves
+      - padding--2x
+      - padding-top--2x
+      - padding-right--2x
+      - padding-bottom--2x
+      - padding-left--2x
+    margin:
+      - margin--half
+      - margin-top--half
+      - margin-right--half
+      - margin-bottom--half
+      - margin-left--half
+      - margin-top
+      - margin-right
+      - margin-bottom
+      - margin-left
+      - margin--3halves
+      - margin-top--3halves
+      - margin-right--3halves
+      - margin-bottom--3halves
+      - margin-left--3halves
+      - margin--2x
+      - margin-top--2x
+      - margin-right--2x
+      - margin-bottom--2x
+      - margin-left--2x
+    border-radius:
+      - radius
+      - radius-bottom
+    border:
+      - border-bottom
+      - border-top
+      - border-left
+      - border-right
+      - border-bottom--primary
+      - border-top--primary
+      - border-left--primary
+      - border-right--primary
+      - no-border
+    abs-position:
+      - a-top-right
+      - a-top-left
+      - a-bottom-right
+      - a-center

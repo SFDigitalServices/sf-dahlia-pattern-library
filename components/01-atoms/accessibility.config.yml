@@ -1,0 +1,64 @@
+title: Accessibility
+notes: |
+  These options offer color palette combinations that fall within the range of Section 508 compliant foreground/background color contrast ratios.
+
+  WCAG (Web Content Accessibility Guidelines) ensure that content is accessible by everyone, regardless of disability or user device. To meet these standards, text and interactive elements should have a color contrast ratio of at least 4.5:1. This ensures that viewers who cannot see the full color spectrum are able to read the text.
+
+context:
+  color-schemes:
+    - text-name: steel
+      text-hex: "#767676"
+      bg-name: white
+      bg-hex: "#fff"
+    - text-name: charcoal
+      text-hex: "#555"
+      bg-name: dust
+      bg-hex: "#f5f8f9"
+    - text-name: deep
+      text-hex: "#0067be"
+      bg-name: dust
+      bg-hex: "#f5f8f9"
+    - text-name: base
+      text-hex: "#aaa"
+      bg-name: oil
+      bg-hex: "#333"
+    - text-name: white
+      text-hex: "#fff"
+      bg-name: steel
+      bg-hex: "#767676"
+    - text-name: dust
+      text-hex: "#f5f8f9"
+      bg-name: dark
+      bg-hex: "#205493"
+    - text-name: dust
+      text-hex: "#f5f8f9"
+      bg-name: deep
+      bg-hex: "#0067be"
+    - text-name: white
+      text-hex: "#fff"
+      bg-name: primary
+      bg-hex: "#0077da"
+    - text-name: white
+      text-hex: "#fff"
+      bg-name: alert
+      bg-hex: "#e31c3d"
+    - text-name: white
+      text-hex: "#fff"
+      bg-name: success
+      bg-hex: "#2e8540"
+    - text-name: jet
+      text-hex: "#222"
+      bg-name: warn
+      bg-hex: "#fdb81e"
+    - text-name: jet
+      text-hex: "#222"
+      bg-name: alert-tint
+      bg-hex: "#f9d2d8"
+    - text-name: jet
+      text-hex: "#222"
+      bg-name: success-tint
+      bg-hex: "#b4e5be"
+    - text-name: jet
+      text-hex: "#222"
+      bg-name: warn-tint
+      bg-hex: "#fee8b6"

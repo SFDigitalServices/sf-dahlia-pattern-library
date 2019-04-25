@@ -1,0 +1,16 @@
+context:
+  tabs:
+    - content: '<p>First panel content goes here...</p>'
+      active: true
+      hidden: false
+      id: panel1
+    - content: '<p>Second panel content goes here...</p>'
+      hidden: true
+      id: panel2
+    - content: '<p>Third panel content goes here...</p>'
+      chinese: true
+      hidden: true
+      id: panel3
+    - content: '<p>Fourth panel content goes here...</p>'
+      hidden: true
+      id: panel4

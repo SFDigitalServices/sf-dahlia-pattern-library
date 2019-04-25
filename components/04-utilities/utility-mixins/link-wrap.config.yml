@@ -1,0 +1,2 @@
+notes: |
+  `.link-wrap` allows a link to wrap instead of sticking outside of its container. Note this behavior is added globally to all `<a>` tags in `_links.scss`, and so would only need to be added to other pieces of text e.g. with long URLs.

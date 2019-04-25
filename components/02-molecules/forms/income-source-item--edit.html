@@ -1,0 +1,26 @@
+<div class="income-source">
+  <div class="income-source_item">
+      <span class="income-source_name">Social Security 
+        <span class="income-source_value">$200/month</span>
+      </span>
+    <a class="income-source_link toggler">{{default link 'Edit'}}</a>
+
+    <div class="income-source_nested margin-top padding-bottom bg-mist toggled clearfix">
+      
+      <div class="form-group padding-top--2x border-top">
+        <label for="options" class="form-label margin-bottom--half">Where does this income come from?</label>
+        {{> @select}}
+      </div>
+
+      <div class="form-group">
+        <label for="options" class="form-label margin-bottom--half">How much is the income?</label>
+        {{> @input-income}}
+        {{render '@radio-group--inline' name="income" items=inputs.income}}
+      </div>
+
+      <div class="form-group">
+        {{> @button-stack--paginate l-classes="button-link button-lined small-text-center expand-small" r-classes="ghost-white right expand-small no-margin" left="Delete" right="Save"}}
+      </div>
+    </div>
+  </div>
+</div>

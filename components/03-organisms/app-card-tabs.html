@@ -1,0 +1,287 @@
+<div class="app-card form-card tabs-card max-width expand-on-small">
+  <div class="app-inner inset-wide padding-bottom-none margin-top">
+    <h2 class="sr-only">Status Update</h2>
+    {{> @status-update classes="expand-wide is-processing"}}
+  </div>
+
+  <div class="app-inner header-wide">
+    <h2 class="app-card_h2">Current Contact Information</h2>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner subheader-wide">
+    <h3 class="app-card_h3 t-sans">Current Mailing Address</h3>
+    <p class="form-note max-width">If the applicant reports a different address than at time of application, please pay extra attention to their original proof of address.</p>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+    </div>
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="row">
+          <div class="small-6 column">
+            <div class="form-group">
+              <label for="" class="">{{default label "Text label"}}</label>
+              {{> @select }}
+            </div>
+          </div>
+          <div class="small-6 column">
+            <div class="form-group">
+              {{> @text-input }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner header-wide">
+    <h2 class="app-card_h2">Confirmed Preferences</h2>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand">
+      <div class="small-12 column">
+        <div class="scrollable-table-container-under-xlarge">
+          {{> @table--preferences classes="td-plain th-plain"}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner header-wide">
+    <h2 class="app-card_h2">Confirmed Household</h2>
+  </div>
+
+  <div class="app-inner subheader-wide">
+    <h3 class="app-card_h3 t-sans">Confirmed Household Members</h3>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand">
+      <div class="small-12 column">
+        <div class="scrollable-table-container">
+          {{> @table--percent classes="td-plain th-plain"}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner subheader-wide">
+    <h3 class="app-card_h3 t-sans">Confirmed Reserved and Priority Units</h3>
+  </div>
+
+   <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @radio-group--inline items=inputs.yesno }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @radio-group--inline items=inputs.yesno }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @radio-group--inline items=inputs.yesno }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @checkbox-group classes="form-checkbox-item"}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner subheader-wide">
+    <h3 class="app-card_h3 t-sans">Confirmed Household Income</h3>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand padding-bottom">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @radio-group--inline items=inputs.yesno }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input label="Some really long text copy that wraps" }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input note="Same"}}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input note="Same"}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-value note="Same"}}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-value note="Same"}}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-value value="Some really long text copy that wraps" value-classes="is-placeholder" note="Same"}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner header-wide">
+    <h2 class="app-card_h2">Eligibility Rules Checklist</h2>
+    <p class="form-note max-width">Applicants must qualify under the rules of the building in the following order:</p>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-8 column">
+        {{> @content-card--ordered }}
+        {{> @content-card--ordered }}
+        {{> @content-card--ordered }}
+
+        <div class="padding-top margin-bottom"><a class="lined" href="#">See listing</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner header-wide">
+    <h2 class="app-card_h2">Lease Information</h2>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand padding-bottom">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @select }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input note="Same"}}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-value value-classes="is-placeholder" note="Same"}}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          {{> @text-input }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner subheader-wide">
+    <h3 class="app-card_h3 t-sans">Demographics</h3>
+  </div>
+
+  <div class="app-inner inset-wide border-bottom">
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @select }}
+        </div>
+      </div>
+      <div class="form-grid_item small-12 medium-6 large-3 column">
+        <div class="form-group">
+          <label for="" class="">{{default label "Text label"}}</label>
+          {{> @select }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-inner subheader-wide">
+    <h3 class="app-card_h3 t-sans">Status History</h3>
+  </div>
+
+  <div class="app-inner inset-wide">
+    <div class="form-grid row expand">
+      <div class="form-grid_item small-12 column">
+        {{render '@status-list'}}
+      </div>
+    </div>
+  </div>
+
+  <div class="padding-bottom--2x margin-bottom--2x"></div>
+
+  <div class="button-pager">
+    <div class="button-pager_row align-buttons-left primary inset-wide">
+      {{> @button-dropdown text="Approved" classes="is-approved small has-status-width"}}
+      {{> @button text="Save" classes="primary small"}}
+    </div>
+  </div>
+</div>

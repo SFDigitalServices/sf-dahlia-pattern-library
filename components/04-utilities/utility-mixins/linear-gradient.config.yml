@@ -1,0 +1,2 @@
+notes: |
+  Can use the `custom-linear-gradient` mixin to achieve a linear gradient, e.g. `.lead-header.bg-gradient` below implements `custom-linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .8));`

@@ -1,0 +1,18 @@
+context:
+  type:
+    header:
+      size:
+        - alpha
+        - beta
+        - gamma
+        - delta
+        - epsilon
+        - base
+    paragraph:
+      size:
+        - gamma
+        - delta
+        - epsilon
+        - base
+        - small
+        - tiny

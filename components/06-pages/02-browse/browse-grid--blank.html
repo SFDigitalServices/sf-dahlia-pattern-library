@@ -1,0 +1,75 @@
+{{> @translate-bar}}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<header class="lead-header bg-dust" id="main-content">
+  <div class="row">
+    <div class="medium-12 columns">
+
+      <div class="results-header">
+        <h1 class="results-header_values">Tell us your household size and income and we'll highlight listings that might be a fit.</h1>
+
+        <div class="results-header_actions">
+          <a href="/#estimate-your-eligibility" class="button ghost-white large">Estimate Your Eligibility</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<section class="results-section">
+  <div class="row">
+    <div class="large-12 columns">
+
+      {{> @property-card available="Available Units" reserved-table="yes" reserved-caption="Reserved for Seniors 55+"}}
+      {{> @property-card available="Open Waitlist" state="community" community-building="yes" has-caption="yes" caption="Reserved for Seniors 55+" reserved-table="yes" reserved-caption="Reserved for Seniors 55+ with Developmental Disabilities" }}
+    </div>
+  </div>
+</section>
+
+<section class="results-section border-top border-bottom">
+  <article class="row">
+    <div class="large-12 columns">
+      {{> @status-header status="closed" icon="clock" title="Upcoming Lotteries" text="There are no closed listings with upcoming lotteries at this time."}}
+    </div>
+  </article>
+
+  <section class="toggled margin-top--2x" style="display: none">
+
+    <article class="row">
+      <div class="large-12 columns">
+        {{> @property-card state="closed" available="Open Waitlist"}}
+      </div>
+    </article>
+   
+  </section>
+</section>
+
+<section class="results-section border-top border-bottom">
+  <article class="row">
+    <div class="large-12 columns">
+      {{> @status-header status="closed" icon="result" title="Lottery Results" text="There are no listings with lottery results at this time."}}
+    </div>
+  </article>
+
+  <section class="toggled margin-top--2x" style="display: none">
+
+    <article class="row">
+      <div class="large-12 columns">
+        {{> @property-card state="results" available="Open Waitlist"}}
+      </div>
+    </article>
+   
+  </section>
+</section>
+
+<section class="margin-top--2x margin-bottom--2x">
+  <div class="row">
+    <div class="large-12 columns bg-dust">
+      {{> @block-icon size="short" icon="icon-mail.png" description="Get emailed whenever a new listing is posted." action="Sign Up Today"}}
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

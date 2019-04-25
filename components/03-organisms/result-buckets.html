@@ -1,0 +1,19 @@
+<div class="modal-buckets">
+  <header class="modal-inner">
+    <h2 class="h-caps-lined">Housing Preferences</h2>
+    <p class="t-small c-steel no-margin">Ranking in these lists is considered in the order shown here.</p>
+  </header>
+
+  {{render '@buckets' items=buckets.buckets }}
+
+  <div class="modal-inner bg-dust">
+    <div class="buckets-divider"></div>
+  </div>
+  <section class="buckets">
+    <div class="bucket">
+      <h3 class="bucket-title">General Pool</h3>
+      <p class="bucket-subtitle">any remaining units</p>
+      <p class="t-tiny c-steel no-margin">200 applicants are in this list</p>
+    </div>
+  </section>
+</div>

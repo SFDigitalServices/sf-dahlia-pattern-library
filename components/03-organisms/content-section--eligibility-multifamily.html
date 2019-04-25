@@ -1,0 +1,103 @@
+<div class="content-section">
+  <ol class="custom-counter">
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Senior Community Building</h4>
+        </header>
+
+        {{> @content-card name="Senior" subtitle="All Units" description="This is a Senior community building. Residents who apply must be 62yrs or older to qualify." more="true" has-subtitle="true"}}
+      </div>
+    </li>
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Household Maximum Income</h4>
+          <p class="custom-counter_text">For income calculations, household size includes everyone (all ages) living in the unit.</p>
+        </header>
+        <div class="stats-card">
+          {{> @table--max-ami}}
+        </div>
+      </div>
+    </li>
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Occupancy</h4>
+          <p class="custom-counter_text">Occupancy for this building differs from household size and does not include children under 6.</p>
+        </header>
+        
+        {{> @table--occupancy}}
+      </div>
+    </li>
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Lottery Preferences</h4>
+          <p class="custom-counter_text">Anyone may enter the housing lottery for this listing. If your household has one of the following preferences, you will be considered in the order shown here. Each preference holder will be reviewed in lottery rank order.</p>
+        </header>
+
+        {{> @content-card--ordered number="1 <sup>st</sup>" name="Certificate of Preference" subtitle="Up to 11 units available" description="Certificate of Preference holders are primarily households displaced by Agency action in Redevelopment Project Areas during the 1960s and 1970s, but may also include other persons displaced by Agency action." more="true"}}
+
+        {{> @content-card--ordered number="2 <sup>nd</sup>" name="Displaced Tenant Housing Preference (DTHP)" subtitle="Up to 2 units available" description="Households in which one member holds a Displaced Tenant Housing Preference Certificate. DTHP Certificate holders are people who have been evicted through either an Ellis Act Eviction or an Owner Move-In Eviction in 2010 or later. Once all units reserved for this preference are filled, remaining DTHP holders will receive Live/Work preference, regardless of their current living or working location." more="true"}}
+
+        {{> @content-card--ordered number="3 <sup>rd</sup>" name="Neighborhood Resident Housing Preference (NRHP)" subtitle="Up to 4 units available" description="Households that submit acceptable documentation that at least one member lives either within supervisorial district 10 or within a half-mile of the project." more="true"}}
+
+        {{> @content-card--ordered number="4 <sup>th</sup>" name="Live/Work Preference" units="All remaining subtitle" description="Households that submit acceptable documentation that at least one member lives or works in San Francisco. In order to claim Work Preference, you or a household member must currently work in San Francisco at least 75% of your working hours."}}
+
+        <p class="custom-counter_text">After all preference holders have been considered, any remaining units will be available to qualified applicants who do not live or work in San Francisco.</p>
+      </div>
+    </li>
+
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Reserved Units</h4>
+          <p class="custom-counter_text">In order to qualify for these units one of the following must apply to you or someone in your household:</p>
+        </header>
+
+        {{> @content-card name="Veterans" subtitle="1 unit" description="Duis posuere nisi at urna semper, nec congue lacus mattis. Ut posuere blandit dui, id mollis neque hendrerit ut. Aenean ut ex quis dolor vehicula facilisis in sit amet libero. " has-subtitle="true"}}
+
+      </div>
+    </li>
+
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Priority Units</h4>
+          <p class="custom-counter_text">This building has units set aside if any of the following apply to you or someone in your household:</p>
+        </header>
+
+        {{> @content-card name="People with Mobility Impairments" subtitle="15 units" description="Nam efficitur nisi sit amet vehicula sollicitudin. Duis finibus enim enim, in aliquam purus egestas eget. Integer pulvinar tellus non leo pretium faucibus. Aenean tempus risus eu libero dignissim." has-subtitle="true"}}
+      </div>
+    </li>
+
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Rental Assistance</h4>
+          <p class="custom-counter_text">Section 8 housing vouchers and other valid rental assistance programs can be used for this property. In the case of a valid rental subsidy, the required minimum income will be based on the portion of the rent that the tenant pays after use of the subsidy.</p>
+        </header>
+      </div>
+    </li>
+
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Additional Eligibility Rules</h4>
+          <p class="custom-counter_text">Applicants must also qualify under the rules of the building.</p>
+        </header>
+
+        <div class="content-card">
+          <h4 class="content-card_title">Credit Rating</h4>
+          <p class="c-steel">Credit reports will be run to consider in the overall creditworthiness of the application post-lottery. A satisfactory credit history reflects proper, timely payments on all outstanding obligations. An unsatisfactory credit history is one that reflects past or current bad debts, late payments or unpaid bills, liens, or bankruptcies over 3 years will not be taken into account. Unsatisfactory credit history can disqualify an applicant from consideration.</p>
+        </div>
+
+        <div class="content-card">
+          <h4 class="content-card_title">Criminal History</h4>
+          <p class="c-steel">No felonies within the past 7 years. Qualified applicants with criminal history will be considered for housing in compliance with Article 49 of the San Francisco Police Code, “The Fair Chance Ordinance.”</p>
+        </div>
+      </div>
+    </li>
+  </ol>  
+</div>

@@ -2,10 +2,9 @@
 
 https://sf-dahlia-pattern-library.herokuapp.com/
 
-
 Includes:
 
-* Fabricator
+* Fractal
 * Gulp
 * Foundation
 
@@ -14,11 +13,11 @@ Includes:
 1. Install Node
 1. Clone this repo
 1. Run `npm start`, which will run an npm install and bower install and start the server
-1. Go to http://localhost:3010 to view the pattern library
+1. Go to http://localhost:3000 to view the pattern library
 
 ## Deploying to Heroku
 
-The Heroku application is served out of the `dist` directory which is the static HTML output of the pattern library. This directory is ignored from git and recreated every time you run `npm start`.
+The Heroku application is served out of the `dist` directory which is the static HTML output of the pattern library. The bulk of the pattern library is in `/dist/toolkit/`, which is ignored from git and recreated every time you run `npm start`.
 
 To deploy the application (run this from the project directory):
 
@@ -50,13 +49,12 @@ If you are building a page to test content rules or component variations within 
 
 ## Source:
 
-### /materials
-Atomic design front-end partials.
+### /components
+Atomic design front-end partials live within directories.
 
-### /views
-Page level layout templates.
+Preview layouts are in the root `/components/` directory, prefixed with an underscore (e.g. `_preview.html`).
 
-### /assets/toolkit/styles
+### /public/toolkit/styles
 Follows the [Atomic Design](http://atomicdesign.bradfrost.com/table-of-contents/) methodology to organizing files.
 
 ### ../atoms

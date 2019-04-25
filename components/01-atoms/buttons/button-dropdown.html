@@ -1,0 +1,13 @@
+<button class="button dropdown-button has-icon--right text-align-left small {{default classes ''}}" href="#" aria-expanded="false">
+  <span class="ui-icon ui-{{default scale 'small'}}" aria-hidden="true">
+    <svg>
+      <use xlink:href="#i-{{default icon 'arrow-down'}}"></use>
+    </svg>
+  </span>
+  {{default text 'Button'}}
+</button>
+<ul class="dropdown-menu" role="listbox" aria-hidden="true" aria-activedescendant tabindex="-1" style="display: none;">
+  <li class="dropdown-menu_item" role="option" aria-selected="false"><a href="#">This is a link</a></li>
+  <li class="dropdown-menu_item" role="option" aria-selected="false"><a href="#">This is another</a></li>
+  <li class="dropdown-menu_item is-selected" role="option" aria-selected="true"><a href="#">Yet another</a></li>
+</ul>

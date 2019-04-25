@@ -1,0 +1,33 @@
+context:
+  inputs:
+    homeless:
+      - name: "I’m renting a room, apartment, or house."
+        note: "This includes living in a supportive housing unit or SRO that you pay for."
+        value: rent
+      - name: "I live in an apartment or house that I own or a member of my household owns."
+        value: own
+      - name: "I have somewhere to stay but it isn’t permanent."
+        note: "This includes couchsurfing, or living in a motel/hotel that you pay for. It also includes people who have recieved an eviction notice, are living in a medical facility, a substance use treatment facility, or a jail."
+        value: temporary
+      - name: "I’m homeless."
+        note: "This includes living outside, living in your car, staying in a shelter or motel/hotel that is paid for by an emergency voucher."
+        value: homeless
+    contacts:
+      - name: Family member
+        value: family
+      - name: Friend
+        value: friend
+      - name: Social worker or housing counselor
+        value: social
+      - name: I don’t have an alternate contact
+        value: not
+    income: 
+      - name: per month
+        value: month
+      - name: per year
+        value: year
+    yesno:
+      - name: "Yes"
+        value: "yes"
+      - name: "No"
+        value: "no"

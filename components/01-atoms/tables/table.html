@@ -1,0 +1,18 @@
+<table class="td-small th-small td-nowrap th-nowrap td-light td-bw {{default classes ''}}" role="grid">
+	<thead>
+		<tr>
+			<th scope="col">Type</th>
+      <th scope="col">Minimum Income</th>
+      <th scope="col">Rent</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each tables.minimum-sro.units}}
+		<tr>
+			<td scope="row">{{this.type}}</td>
+			<td>${{this.income}}<small>/month</small></td>
+			<td>${{this.rent}}<small>/month</small></td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

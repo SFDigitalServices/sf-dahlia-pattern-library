@@ -1,0 +1,18 @@
+<accordion-group> 
+  <accordion-heading>
+    <img class="accordion-icon" src="/toolkit/images/listing-eligibility.svg" alt="eligibility-notebook">
+    <h3 class="accordion-name">Eligibility</h3>
+    <span class="accordion-subheader">Income, occupancy, preferences and rental assistance</span>
+    {{> @icons-base icon="arrow-down" size="small" position="control"}}
+  </accordion-heading>
+  
+  <header class="listing-header show-for-medium-up">
+    <img class="listing-header_icon" src="/toolkit/images/listing-eligibility.svg" alt="eligibility-notebook">
+    <hgroup class="listing-header_group">
+      <h3 class="listing-header_name">Eligibility</h3>
+      <span class="listing-header_subheader">Income, occupancy, preferences, rental assistance and additional building rules</span>
+    </hgroup>
+  </header>
+
+    {{> @content-section--eligibility-ordered}}
+</accordion-group>

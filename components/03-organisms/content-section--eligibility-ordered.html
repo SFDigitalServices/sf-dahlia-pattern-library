@@ -1,0 +1,99 @@
+<div class="content-section">
+  <ol class="custom-counter">
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Household Maximum Income</h4>
+          <p class="custom-counter_text">For income calculations, household size includes everyone (all ages) living in the unit.</p>
+        </header>
+        <div class="stats-card bg-tint">
+          {{> @stats-list}}
+        </div>
+      </div>
+    </li>
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Occupancy</h4>
+          <p class="custom-counter_text">Occupancy for this building differs from household size and does not include children under 6.</p>
+        </header>
+        
+        {{> @table--occupancy}}
+      </div>
+    </li>
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Lottery Preferences</h4>
+          <p class="custom-counter_text">Anyone may enter the housing lottery for this listing. If your household has one of the following preferences, you will be considered in the order shown here. Each preference holder will be reviewed in lottery rank order.</p>
+        </header>
+
+        <div class="content-card">
+          <header class="content-card_ordered">
+            <span class="content-card_number">1 <sup>st</sup></span>
+            <h4 class="content-card_title no-margin">Certificate of Preference (COP)</h4>
+            <p class="c-steel">Up to 11 units available</p>
+          </header>
+          <p class="c-steel">Households in which one member holds a Certificate of Preference from the former San Francisco Redevelopment Agency. COP holders were displaced by Agency action generally during the 1960s and 1970s.<br><a href="#">Read More</a></p>
+        </div>
+
+        <div class="content-card">
+          <header class="content-card_ordered">
+            <span class="content-card_number">2 <sup>nd</sup></span>
+            <h4 class="content-card_title no-margin">Displaced Tenant Housing Preference (DTHP)</h4>
+            <p class="c-steel">Up to 2 units available</p>
+          </header>  
+          <p class="c-steel">Households in which one member holds a Displaced Tenant Housing Preference Certificate. DTHP Certificate holders are people who have been evicted through either an Ellis Act Eviction or an Owner Move-In Eviction in 2010 or later. Once all units reserved for this preference are filled, remaining DTHP holders will receive Live/Work preference, regardless of their current living or working location.<br><a href="#">Read More</a></p>
+        </div>
+
+        <div class="content-card">
+          <header class="content-card_ordered">
+            <span class="content-card_number">3 <sup>rd</sup></span>
+            <h4 class="content-card_title no-margin">Neighborhood Resident Housing Preference (NRHP)</h4>
+            <p class="c-steel">Up to 4 units available</p>
+          </header>  
+          <p class="c-steel">Households that submit acceptable documentation that at least one member lives either within supervisorial district 10 or within a half-mile of the project.<br><a href="#">Read More</a></p>
+        </div>
+
+        <div class="content-card">
+          <header class="content-card_ordered">
+            <span class="content-card_number">4 <sup>th</sup></span>
+            <h4 class="content-card_title no-margin">Live/Work Preference</h4>
+            <p class="c-steel">All remaining units</p>
+          </header>  
+          <p class="c-steel">Households that submit acceptable documentation that at least one member lives or works in San Francisco. In order to claim Work Preference, you or a household member must currently work in San Francisco at least 75% of your working hours.
+        </div>
+
+        <p class="custom-counter_text">After all preference holders have been considered, any remaining units will be available to qualified applicants who do not live or work in San Francisco.</p>
+      </div>
+    </li>
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Rental Assistance</h4>
+          <p class="custom-counter_text">Section 8 housing vouchers and other valid rental assistance programs can be used for this property. In the case of a valid rental subsidy, the required minimum income will be based on the portion of the rent that the tenant pays after use of the subsidy.</p>
+        </header>
+      </div>
+    </li>
+    <li class="custom-counter_item">
+      <div class="content-tile">
+        <header class="custom-counter_header">
+          <h4 class="custom-counter_title">Additional Eligibility Rules</h4>
+          <p class="custom-counter_text">Applicants must also qualify under the rules of the building.</p>
+        </header>
+
+        <div class="content-card">
+          <h4 class="content-card_title">Credit Rating</h4>
+          <p class="c-steel">Credit reports will be run to consider in the overall creditworthiness of the application post-lottery. A satisfactory credit history reflects proper, timely payments on all outstanding obligations. An unsatisfactory credit history is one that reflects past or current bad debts, late payments or unpaid bills, liens, or bankruptcies over 3 years will not be taken into account. Unsatisfactory credit history can disqualify an applicant from consideration.</p>
+        </div>
+
+        <div class="content-card">
+          <h4 class="content-card_title">Criminal History</h4>
+          <p class="c-steel">No felonies within the past 7 years. Qualified applicants with criminal history will be considered for housing in compliance with Article 49 of the San Francisco Police Code, “The Fair Chance Ordinance.”</p>
+        </div>
+
+        <p class="t-small padding-top"><a href="#" class="has-line">Find out more about Building Selection Criteria</a></p>
+      </div>
+    </li>
+  </ol>  
+</div>

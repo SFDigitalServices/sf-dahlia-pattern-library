@@ -1,0 +1,9 @@
+context:
+  inputs:
+    preferences:
+      - name: "Displaced Tenants Preference"
+        note: "Primarily households displaced by Ellis Act evictions as defined by The Ellis Act Displacement Emergency Assistance Ordinance passed into law on December 18, 2013. (Formerly Ellis Act Preference)"
+        value: displaced
+      - name: "Certificate of Preference"
+        note: "Primarily households displaced by Agency action in Redevelopment Project Areas during the 1960’s and 1970's, but may also include other persons displaced by Agency action."
+        value: cop

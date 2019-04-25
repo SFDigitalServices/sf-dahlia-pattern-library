@@ -1,0 +1,53 @@
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{ render '@app-header' }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">Save time by using the details from your last application.</h2>
+          <p class="form-note">We'll simply pre-fill your application with the following details, and you can  make updates as you go.</p>
+        </div>
+
+        {{#each sections-preview}}
+        <header class="app-sub-header border-top">
+          <h3 class="app-sub-header_title">{{header}}</h3>
+        </header>
+
+        <div class="app-inner">
+          {{#each info-items}}
+          <div class="info-item margin-bottom">
+            <h4 class="info-item_value margin-bottom">{{name}}</h4>
+            <p class="info-item_name">{{{value}}}</p>
+            {{#if note }}
+            <span class="info-item_note">{{note}}</span>
+            {{/if }}
+            {{#if secondary }}
+            <span class="info-item_note t-bold">{{secondary}}</span>
+            {{/if }}
+            {{#if note-2 }}
+            <span class="info-item_note">{{note-2}}</span>
+            {{/if }}
+            {{#if secondary-2 }}
+            <span class="info-item_note t-bold">{{secondary-2}}</span>
+            {{/if }}
+          </div>
+          {{#if divider }}
+            <div class="border-top info-item_divider"></div>
+          {{/if }}
+          {{/each}}
+        </div>
+        {{/each}}
+
+        {{> @button-pager left="Start with these details" l-classes="primary" right="Reset and start from scratch" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

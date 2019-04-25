@@ -1,0 +1,14 @@
+<div class="form-date-of-birth row collapse">
+  <div class="form-group-month large-2 columns">
+    <label for="date_of_birth_1">{{default month-label 'Month'}}</label>
+    <input type="number" name="date_of_birth_1" min="1" max="12" placeholder="{{default month 'MM'}}" {{default readonly ''}} />
+  </div>
+  <div class="form-group-day large-2 columns">
+    <label for="date_of_birth_2">{{default day-label 'Day'}}</label>
+    <input type="number" name="date_of_birth_2" min="1" max="31" placeholder="{{default day 'DD'}}" {{default readonly ''}} />
+  </div>
+  <div class="form-group-year large-2 columns end">
+    <label for="date_of_birth_3">{{default year-label 'Year'}}</label>
+    <input type="number" name="date_of_birth_3" min="1900" max="2016" placeholder="{{default year 'YYYY'}}" {{default readonly ''}} />
+  </div>
+</div>

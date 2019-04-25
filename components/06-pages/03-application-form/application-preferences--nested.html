@@ -1,0 +1,93 @@
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{ render '@app-header' }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <div class="form-back"><a href="#" class="lined margin-right">Back</a></div>
+          <h2 class="app-card_question">Please check all lottery preferences that apply to you.</h2>
+          <div class="form-group">
+            <p class="form-note margin-bottom">Optional</p>
+            <p class="form-note margin-bottom">To receive the lottery preference you indicate, you must upload valid documentation showing the correct name, a date within 45 days of your application, and the address where you either live or work in San Francisco.<br><br>
+            If eligibility cannot be verified, your household will not receive the preference (you will not be otherwise penalized).</p>
+          </div>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            <div class="checkbox-group">
+              <div class="">
+                <div class="checkbox-block margin-bottom--2x">
+                  <input aria-decribedby="description-nhrp" type="checkbox" name="preferences-nhrp" value="preferences-nhrp" id="preferences-nhrp">
+                  <label class="checkbox-block_label" for="preferences-displaced">
+                    <strong class="form-label caps">Neighborhood Residents Housing Preference</strong>
+                    <p class="checkbox-block_note">
+                      You said someone in your household lives in the same neighborhood as this listing.
+                    </p>
+                  </label>
+                  <div class="checkbox-block_note-inner">
+                    {{> @more classes="open-bottom margin-top-none" icon="arrow-down" size="tiny" fill="primary"}}
+                    <p class="checkbox-block_more toggled" id="description-nhrp" style="display:none;">
+                      <strong>Neighborhood Resident Housing Preference</strong>
+                      means at least one household member lives within the same Supervisorial District or within a 1/2 mile buffer of the project.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <div class="checkbox-block" labelledby="special_programs_label">
+                  <input aria-decribedby="description-livework" type="checkbox" name="preferences-livework" value="preferences-livework" id="preferences-livework">
+                  <label class="checkbox-block_label" for="preferences-live">
+                    <strong class="form-label caps">Live or Work in San Francisco Preference</strong>
+                  </label>
+
+                  <div class="checkbox-block_note-inner">
+                    {{> @more classes="open-bottom" icon="arrow-down" size="tiny" fill="primary"}}
+
+                    <p class="checkbox-block_more toggled" id="description-livework" style="display:none;">
+                      At least one household member must live in San Francisco <strong class="d-inline">or</strong> work in San Francisco at least 75% of their working hours.
+                    </p>
+                  </div>
+
+                  <div class="form-group input-inset padding-bottom-none">
+                    <label class="form-label caps">Which preference option would you like to claim?</label>
+                    {{> @select name="live-work" options=inputs.live-work}}
+                  </div>
+
+                  <div class="form-group input-inset padding-bottom-none">
+                    <label class="form-label caps">Whose name is on the document you're uploading?</label>
+                    {{> @select}}
+                  </div>
+
+                  <div class="form-group input-inset">
+                    <div class="form-group margin-bottom-none">
+                      <label class="form-label caps">Which one of the following documents would you like to upload in order to prove eligibility?</label>
+                      {{> @select name="proof" options=inputs.proof }}
+                      <p class="form-note margin-bottom">Letter must verify employment in San Francisco with at least 75% of working hours in the City.</p>
+                    </div>
+
+                    <div class="form-group text-center">
+                      {{> @button text="Upload Proof of Preference"}}
+                      <p class="form-note micro input-inset margin-bottom">Please make sure the image is clear and you can read the address.</p>
+                      <p class="form-note micro input-inset">Max file size is 2MB. Supported file types: pdf, jpg, png</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+    </div>
+  </div>
+</section>
+
+{{> @footer}}

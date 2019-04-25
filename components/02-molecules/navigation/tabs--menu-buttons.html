@@ -1,0 +1,9 @@
+<ul class="tabs full-width-small-only" role="menubar">
+  {{#each items}}
+  <li class="tab-title{{#if active}} active{{/if}}" role="none"><button class="button-unstyled" role="menuitem" tabindex="{{index}}" aria-selected="{{selected}}">{{{name}}}</button></li>
+    {{else}}
+    {{#each menus.lang}}
+    <li class="tab-title{{#if active}} active{{/if}}" role="none"><button class="button-unstyled" role="menuitem" tabindex="{{index}}" aria-selected="{{selected}}">{{{name}}}</button></li>
+    {{/each}}
+  {{/each}}
+</ul>

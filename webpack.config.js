@@ -1,17 +1,16 @@
 var path = require('path');
 var webpack = require('webpack');
 
-module.exports = function(fabricatorConfig) {
+module.exports = function(fractalConfig) {
 
   "use strict";
 
   var config = {
     entry: {
-      'fabricator/scripts/f': fabricatorConfig.src.scripts.fabricator,
-      'toolkit/scripts/toolkit': fabricatorConfig.src.scripts.toolkit
+      'toolkit/scripts/toolkit': fractalConfig.src.scripts
     },
     output: {
-      path: path.resolve(__dirname, fabricatorConfig.dest, 'assets'),
+      path: path.resolve(__dirname, fractalConfig.dest),
       filename: '[name].js'
     },
     module: {
@@ -30,11 +29,11 @@ module.exports = function(fabricatorConfig) {
     cache: {}
   };
 
-  if (!fabricatorConfig.dev) {
-    config.plugins.push(
-      new webpack.optimize.UglifyJsPlugin()
-    );
-  }
+if (!fractalConfig.dev) {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin()
+  );
+}
 
   return config;
 

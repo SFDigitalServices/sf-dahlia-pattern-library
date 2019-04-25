@@ -1,0 +1,11 @@
+<ul class="nav-mobile">
+  {{#each menus.mobile}}
+  <li class="{{#if icon}}has-icon{{/if}}">
+    <a href="#">
+    {{#if icon}}
+      {{> @icons-base }}
+    {{/if}}
+    {{this.name}}</a>
+  </li>
+  {{/each}}
+</ul>

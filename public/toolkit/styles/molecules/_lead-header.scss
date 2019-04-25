@@ -1,0 +1,146 @@
+//
+// Headers
+//
+
+// Larger page headers for top of page
+.lead-header {
+  padding: 2rem 0 1rem;
+  text-align: center;
+  position: relative;
+
+  @media #{$medium-up} {
+    padding: 3rem 0 2rem;
+    text-align: left;
+  }
+
+  // Applies background image
+  &.bg-image {
+    background-color: $dark;
+    @include bg-image;
+  }
+
+  // Reduces vertical height of header
+  &.short {
+    padding: 2rem 0 1rem;
+
+    @media #{$medium-up} {
+      padding: 2rem 0 1rem;
+    }
+  }
+
+  // Adds spacing to top of header
+  &.padding-top--8x {
+    padding: 2rem 0 1rem;
+
+    @media #{$medium-up} {
+      padding: 8rem 0 1rem;
+    }
+  }
+
+  // Applies offset to nested breadcrumb
+  &.has-breadcrumbs {
+    .breadcrumbs {
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.lead-header_title {
+  @include type-weight(semi);
+  font-family: $alt-font-family;
+  letter-spacing: $large-header-spacing;
+  text-transform: uppercase;
+
+  @media #{$small-only} {
+    @include responsive-text-size('beta');
+  }
+    
+  @media #{$medium-up} {
+    @include type-weight(black);
+  }
+
+  // Smaller h1 styles
+  &.small {
+    @include responsive-text-size('gamma');
+    margin-bottom: .5rem;
+  }
+
+  &.small-serif {
+    @include responsive-text-size('beta');
+    @include type-weight(regular);
+    font-family: $serif-font-family;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  &.serif {
+    @include responsive-text-size('mega');
+    font-family: $serif-font-family;
+    @include type-weight(regular);
+    text-transform: none;
+    letter-spacing: -0.04em;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.lead-header_subtitle {
+  
+  // Smaller all caps subtitle
+  &.caps {
+    @include responsive-text-size('small');
+    font-family: $alt-font-family;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+// Container for title and subtitle
+.lead-header_group {
+  position: relative;
+  z-index: 2;
+}
+
+// Small secondary header link
+.lead-header_secondary-action {
+  float: right;
+  text-align: right;
+
+  a {
+    @include type-weight(semi);
+    @include responsive-text-size('small');
+  }
+}
+
+// Offset modifier for form cards
+.shift {
+  @media #{$medium-up} {
+    &-offset--bottom {
+      padding-bottom: 4rem;
+    }
+
+    &--top {
+      margin-top: -4rem;
+    }
+  }
+}
+
+// Results values and actions modifier to lead header. 
+// Applies to nested container and not to parent lead header.
+
+.results-header_values {
+  @include responsive-text-size('gamma');
+  color: $steel;
+  font-family: $serif-font-family;
+  letter-spacing: -0.04em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  strong {
+    color: $oil;
+    letter-spacing: normal;
+  }
+
+  @media #{$small-only} {
+    @include responsive-text-size('delta');
+  }
+}

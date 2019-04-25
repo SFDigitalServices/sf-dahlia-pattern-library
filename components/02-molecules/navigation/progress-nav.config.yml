@@ -1,0 +1,13 @@
+context:
+  menus:
+    shortform:
+    - name: You
+      active: true
+    - name: Household
+      disabled: true
+    - name: Preferences
+      disabled: true
+    - name: Income
+      disabled: true
+    - name: Review
+      disabled: true

@@ -1,0 +1,29 @@
+{{> @translate-bar }}
+{{> @version-bar }}
+{{> @top-bar }}
+
+<section class="app-container">
+  <div class="row collapse">
+    <div class="medium-6 medium-centered columns fixed-width">
+      {{ render '@app-header' }}
+
+      <form class="app-card form-card">
+        <div class="app-inner leader border-bottom">
+          <h2 class="app-card_question">We’d like to ask about your current housing situation.</h2>
+          <p class="t-small c-steel">Thinking about the past 30 days, what best describes your living situation?</p>
+        </div>
+
+        <div class="app-inner">
+          <div class="form-group">
+            {{ render '@radio-group--block' name="homeless" items=inputs.homeless}}
+          </div>
+        </div>
+
+        {{> @button-pager left="Next" l-classes="primary" right="Save and finish later" r-classes="button-link button-lined small-text-center expand-small"}}
+      </form>
+
+    </div>
+  </div>
+</section>
+
+{{> @footer}}
