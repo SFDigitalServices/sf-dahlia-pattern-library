@@ -397,3 +397,140 @@ table {
     }
   }
 }
+
+// Pricing table
+
+.table-pricing-ami {
+  @include responsive-text-size('gamma');
+  position: relative;
+
+  .table-pricing-wrapper + & {
+    margin-top: 2rem;
+  }
+
+  @media #{$medium-up} {
+    @include scut-padding(0 n 0 n);
+    background-color: transparent;
+    border-bottom: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.table-pricing-wrapper {
+  position: relative;
+}
+
+.table-pricing-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: $alt-font-family;
+  @include responsive-text-size('base');
+  font-weight: $t-semi;
+}
+
+.table-pricing {
+  margin: 0 0 0.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  td,
+  th {
+    background: $white;
+  }
+
+  th, td::before {
+    color: $steel;
+    @include responsive-text-size('small');
+    font-family: $alt-font-family;
+  }
+
+  th {
+    padding: 0 0 0.75rem;
+    border: 0;
+  }
+
+  tr {
+    border-bottom: 1px solid $base;
+  }
+
+  th:last-child,
+  td[data-th="Rent"] {
+    text-align: right;
+  }
+
+  td {
+    padding: 0.75rem 0;
+    @include responsive-text-size('base');
+    font-feature-settings: "tnum";
+    &[data-th="Availability"] {
+      width: 10rem;
+    }
+  }
+
+  // Availability number
+  i {
+    @include responsive-text-size('delta');
+    color: $jet;
+    font-style: normal;
+    font-weight: $t-regular;
+    line-height: 1;
+  }
+
+  small {
+    display: block;
+    @include responsive-text-size('tiny');
+    color: $steel;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    font-weight: $t-regular;
+  }
+}
+
+@media #{$small-only} {
+  .table-pricing-header {
+    position: static;
+    margin-bottom: 0.5rem;
+  }
+
+  .table-pricing {
+    display: block;
+    width: 100%;
+
+    th {
+      @include element-invisible;
+    }
+
+    thead,
+    tr,
+    td,
+    tbody {
+      display: block;
+    }
+
+    td {
+      text-align: right;
+      position: relative;
+    }
+
+    td[data-th="Availability"] {
+      width: 100%;
+    }
+
+    i {
+      @include responsive-text-size('base');
+      font-weight: $t-semi;
+    }
+
+    td::before {
+      content: attr(data-th);
+      position: absolute;
+      top: 50%;
+      line-height: 1;
+      margin-top: -7px;
+      left: 0;
+      font-weight: $table-value-weight;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+    }
+  }
+}

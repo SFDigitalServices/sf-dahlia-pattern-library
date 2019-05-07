@@ -1,0 +1,34 @@
+{{#each tables.pricing}}
+  <h2 class="table-pricing-ami">{{{ami}}} AMI</h2>
+  {{#each list}}
+  <div class="table-pricing-wrapper">
+    <h5 class="table-pricing-header">{{{type}}} Units</h5>
+    <table class="table-pricing {{default classes ''}}" role="grid">
+        <thead>
+          <tr>
+            <th scope="col"><span class="show-for-sr">Availability</span></th>
+            <th scope="col">
+              {{#unless @first }}&nbsp;<span class="show-for-sr">{{/unless}}
+                Minimum Income
+              {{#unless @first }}</span>{{/unless}}
+            </th>
+            <th scope="col">
+              {{#unless @first }}&nbsp;<span class="show-for-sr">{{/unless}}
+                Rent
+              {{#unless @first }}</span>{{/unless}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each units}}
+        <tr {{#if reserved}}class="tr-reserved"{{/if}}>
+          <td data-th="Availability"><i>{{{availability}}}</i> <small>available</small></td>
+          <td data-th="Min. Income">{{{income}}} <small>per month</small></td>
+          <td data-th="Rent">{{{rent}}} <small>per month</small></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{/each}}
+{{/each}}

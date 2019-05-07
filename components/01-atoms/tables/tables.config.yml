@@ -145,6 +145,36 @@ context:
           occupancy: 2-4
         - type: 3 Bedroom
           occupancy: 3-6
+    pricing:
+      - ami: 40%
+        list:
+        - type: Studio
+          units:
+            - income: $2,112
+              rent: $1,056
+              availability: 1
+        - type: 1 BR
+          units:        
+            - income: $2,514
+              rent: $1,257
+              availability: 1
+      - ami: 50%
+        list:
+        - type: Studio
+          units:
+            - income: $2,000
+              rent: $1,000
+              availability: 28
+        - type: 1 BR
+          units:        
+            - income: $2,280
+              rent: $1,140
+              availability: 26
+        - type: 2 BR
+          units:
+            - income: $2,540
+              rent: $1,270
+              availability: 1
     priority:
       units:
         - type: Served in US Military
