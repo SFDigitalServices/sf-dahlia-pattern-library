@@ -451,6 +451,19 @@ table {
 
   tr {
     border-bottom: 1px solid $base;
+    &.is-reserved {
+      position: relative;
+      &::after {
+        content: "";
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: $splash;
+        position: absolute;
+        top: 1.25rem;
+        left: -1.5rem;
+      }
+    }
   }
 
   th:last-child,
@@ -467,7 +480,7 @@ table {
     }
   }
 
-  // Availability number
+  // Number of availably units
   i {
     @include responsive-text-size('delta');
     color: $jet;
@@ -480,7 +493,7 @@ table {
     display: block;
     @include responsive-text-size('tiny');
     color: $steel;
-    text-transform: lowercase;
+    text-transform: none;
     letter-spacing: 0;
     font-weight: $t-regular;
   }
@@ -531,6 +544,10 @@ table {
       font-weight: $table-value-weight;
       letter-spacing: .1rem;
       text-transform: uppercase;
+    }
+
+    tr.is-reserved::after {
+      top: 1.5rem;
     }
   }
 }

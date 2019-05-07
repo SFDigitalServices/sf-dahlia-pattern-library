@@ -153,11 +153,12 @@ context:
             - income: $2,112
               rent: $1,056
               availability: 1
+              reserved: true
         - type: 1 BR
           units:        
             - income: $2,514
               rent: $1,257
-              availability: 1
+              waitlist: true
       - ami: 50%
         list:
         - type: Studio
