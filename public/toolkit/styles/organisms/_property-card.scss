@@ -21,16 +21,16 @@
     margin-bottom: 2.5rem;
 
     .property-card_figure {
-      @include grid-column(7);
-      width: 55%;
+      @include grid-column(6);
+      width: 50%;
       padding: 0;
     }
 
     .property-card_content {
-      @include grid-column(5);
-      width: 45%;
+      @include grid-column(6);
+      width: 50%;
       padding: 0;
-      padding-left: 1rem;
+      padding-left: 2rem;
     }
   }
 
@@ -117,7 +117,15 @@
 }
 
 .property-card_stats {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+
+  .table-pricing-wrapper {
+    margin-top: 1rem;
+  }
+
+  @media #{$large-up} {
+    margin-top: 0;
+  }
 }
 
 .property-card_thumb {

@@ -1,24 +1,37 @@
+{{#*inline "tableRow" }}
+  <tr {{#if reserved}}class="is-reserved"{{/if}}>
+    <td data-th="Unit Type" class="is-subtitled">
+      {{{type}}}
+    </td>
+    <td data-th="Minimum Income" class="is-subtitled">{{{income-low}}} to {{{income-high}}} <small>per month</small></td>
+    <td data-th="Rent" class="is-subtitled">{{{rent-low}}} to {{{rent-high}}} <small>per month</small></td>
+  </tr>
+{{/inline}}
+
 <h5 class="t-base t-alt-sans t-semi margin-bottom--half">Available units and open waitlist</h5>
-<p class="c-charcoal t-small margin-bottom--2x">Includes priority units for vision and / or hearing impairments, mobility impairments</p>
-  <div class="table-pricing-wrapper">
-    <table class="table-pricing table-pricing-hero {{default classes ''}}" role="grid">
-        <thead>
-          <tr>
-            <th scope="col">Unit Type</th>
-            <th scope="col">Minimum Income</th>
-            <th scope="col">Rent</th>
-          </tr>
-        </thead>
-        <tbody>
-        {{#each tables.minimum-range.units }}
-        <tr {{#if reserved}}class="is-reserved"{{/if}}>
-          <td data-th="Unit Type" class="is-subtitled">
-            {{{type}}} Units
-          </td>
-          <td data-th="Min. Income" class="is-subtitled">{{{income-low}}} to {{{income-high}}} <small>per month</small></td>
-          <td data-th="Rent" class="is-subtitled">{{{rent-low}}} to {{{rent-high}}} <small>per month</small></td>
+{{# if reserved}}
+<p class="c-charcoal t-small margin-bottom--half">Includes priority units for vision and / or hearing impairments, mobility impairments</p>
+{{/if}}
+
+<div class="table-pricing-wrapper">
+  <table class="table-pricing table-pricing-hero {{default classes ''}}" role="grid">
+      <thead>
+        <tr>
+          <th scope="col">Unit Type</th>
+          <th scope="col">Minimum Income</th>
+          <th scope="col">Rent</th>
         </tr>
+      </thead>
+      <tbody>
+      {{#if items}}
+        {{#each items}}
+          {{> tableRow}}
         {{/each}}
-      </tbody>
-    </table>
+      {{else}}
+        {{#each tables.minimum-range.units }}
+          {{> tableRow}}
+        {{/each}}
+      {{/if}}
+    </tbody>
+  </table>
   </div>
