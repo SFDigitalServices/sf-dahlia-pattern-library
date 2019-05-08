@@ -1,0 +1,71 @@
+<div class="property-card {{ default classes ''}}">
+  <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
+    <a href="#/listings/trinity-place-apts">{{default property-name 'Sale Listing'}}</a>
+  </h1>
+
+  <figure class="property-card_figure">
+    <a class="property-card_overlay" href="/listings/id" tabindex="-1">
+      <img class="property-card_thumb" src="/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
+        Address:formattedAddress" role="link" >
+
+    {{#compare state '==' 'closed' }}
+      <span class="application-label label label--flag alert">Applications Closed: Mar 12th</span>
+    {{else compare state '==' 'results' }}
+      <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
+    {{else compare state '==' 'matched' }}
+      <span class="status-label label label--flag success">
+      {{> @icons-base icon="check" fill="white"}}
+      Matched</span>
+      <span class="application-label label label--flag primary">
+      {{> @icons-base icon="clock" fill="white"}}
+      Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
+    {{else compare state '==' 'not-matched' }}
+      <span class="status-label label label--flag">Not a Match</span>
+      <span class="application-label label label--flag primary">
+      {{> @icons-base icon="clock" fill="white"}}
+      Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
+    {{else compare state '==' 'fave' }}
+      <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
+    {{else }}
+      <span class="application-label label label--flag primary">Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
+    {{/compare}}
+
+    </a>
+
+    <figcaption class="property-card_info">
+      <h1 class="property-card_title show-for-medium-up">
+        <a href="#">{{default property-name 'Sale Listing'}}</a>
+      </h1>
+      <p class="property-card_address">{{default property-address '1188 Mission St'}}, <br class="show-for-small-only"> San Francisco CA, 94134</p>
+      {{#if community-building}}
+      <span class="label radius medium bg-splash">Senior Community Building</span>
+      {{/if}}
+    </figcaption>
+  </figure>
+
+  <div class="print-only">Application Deadline: Nov 21, 2017 at 5PM</div>
+
+  <div class="property-card_content">
+    <div class="property-card_stats">
+      {{> @pricing-table-hero--sale }}
+    </div>
+
+    <div class="property-card_action small-only-text-center">
+    {{#compare state '==' 'fave' }}
+      <div class="show-for-medium-up left">
+        {{> @button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
+        {{> @button-round icon="forward" fill="primary" label="inline" text="Like" classes="has-label"}}
+      </div>
+      <ul class="button-group button-group--favorite row collapse hide-for-medium-up">
+        <li class="small-6 columns">{{> @button-icon text="favorite" fill="primary" icon="like" scale="medium" classes="tertiary small"}}</li>
+        <li class="small-6 columns">{{> @button-icon text="share" fill="primary" icon="forward" scale="medium" classes="tertiary small"}}</li>
+      </ul>
+      <a class="button ghost-white expand-small right no-margin" href="/pages/property-grid.html">See Details</a>
+    {{else }}
+      {{> @button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}
+      <a class="button ghost-white right no-margin" href="/pages/property-grid.html">See Details</a>
+    {{/compare}}
+    </div>
+
+  </div>
+</div>
