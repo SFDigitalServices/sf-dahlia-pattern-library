@@ -145,7 +145,7 @@ context:
           occupancy: 2-4
         - type: 3 Bedroom
           occupancy: 3-6
-    pricing:
+    pricing-rent:
       - ami: 40%
         list:
         - type: Studio
@@ -176,6 +176,35 @@ context:
             - income: $2,540
               rent: $1,270
               availability: 1
+    pricing-sale:
+      - ami: 40%
+        list:
+        - type: 1 BR
+          units:
+            - price-no-parking: $183,142
+              hoa-no-parking: $637
+              availability: 2
+              lease: $637
+            - price-no-parking: $185,309
+              hoa-no-parking: $625
+              availability: 12
+              lease: $637
+        - type: 2 BR
+          units:
+            - price-no-parking: $254,562
+              hoa-no-parking: $723
+              availability: 2
+              lease: $637
+            - price-no-parking: $259,625
+              hoa-no-parking: $695
+              availability: 5
+              lease: $637
+        - type: 3 BR
+          units:
+            - price-no-parking: $287,637
+              hoa-no-parking: $782
+              availability: 5
+              lease: $637
     priority:
       units:
         - type: Served in US Military

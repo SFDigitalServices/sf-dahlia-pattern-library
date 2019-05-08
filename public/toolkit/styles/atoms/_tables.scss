@@ -398,7 +398,7 @@ table {
   }
 }
 
-// Pricing table
+// Pricing tables
 
 .table-pricing-ami {
   @include responsive-text-size('gamma');
@@ -438,6 +438,29 @@ table {
     background: $white;
   }
 
+  dl {
+    font-weight: $t-regular;
+    @include responsive-text-size('base');
+    margin: 0;
+  }
+
+  dt, dd {
+    float: left;
+    margin-bottom: 0.25rem;
+    @include responsive-text-size('small');
+
+    strong {
+      font-weight: $t-semi;
+    }
+  }
+
+  dt {
+    clear: left;
+    margin-right: 0.5rem;
+    min-width: 5rem;
+    text-align: left;
+  }
+
   th, td::before {
     color: $steel;
     @include responsive-text-size('small');
@@ -466,15 +489,11 @@ table {
     }
   }
 
-  th:last-child,
-  td[data-th="Rent"] {
-    text-align: right;
-  }
-
   td {
     padding: 0.75rem 0;
     @include responsive-text-size('base');
     font-feature-settings: "tnum";
+
     &[data-th="Availability"] {
       width: 10rem;
     }
@@ -496,6 +515,24 @@ table {
     text-transform: none;
     letter-spacing: 0;
     font-weight: $t-regular;
+  }
+}
+
+.table-pricing-waitlist {
+  padding: 1rem 0;
+}
+
+.table-pricing-rent {
+  th:last-child,
+  td[data-th="Rent"], {
+    text-align: right;
+  }
+}
+
+.table-pricing-sale-lease {
+  th:last-child,
+  td[data-th="Optional parking lease"], {
+    text-align: right;
   }
 }
 
@@ -521,12 +558,21 @@ table {
     }
 
     td {
-      text-align: right;
       position: relative;
-    }
 
-    td[data-th="Availability"] {
-      width: 100%;
+      &.is-subtitled {
+        text-align: right;
+      }
+
+      &::before {
+        content: attr(data-th);
+        position: absolute;
+        line-height: 1;
+        left: 0;
+        font-weight: $table-value-weight;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+      }
     }
 
     i {
@@ -534,20 +580,49 @@ table {
       font-weight: $t-semi;
     }
 
-    td::before {
-      content: attr(data-th);
-      position: absolute;
-      top: 50%;
-      line-height: 1;
-      margin-top: -7px;
-      left: 0;
-      font-weight: $table-value-weight;
-      letter-spacing: .1rem;
-      text-transform: uppercase;
-    }
-
     tr.is-reserved::after {
       top: 1.5rem;
     }
+  }
+
+  .table-pricing-sale {
+    td {
+      padding: 1.5rem 0;
+
+      &::before {
+        top: 0;
+      }
+
+      &.is-subtitled {
+        width: 100%;
+        text-align: left;
+      }
+
+      &[data-th="Availability"]::before {
+        content: "";
+      }
+    }
+  }
+
+  .table-pricing-rent {
+    td.is-subtitled::before {
+      top: 50%;
+      margin-top: -0.5rem;
+    }
+
+    td[data-th="Availability"] {
+      text-align: right;
+      width: 100%;
+
+      &::before {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  .pricing-table-waitlist {
+    padding: 0.5rem 0;
   }
 }
