@@ -106,29 +106,6 @@
   }
 }
 
-.property-hero_stat-header {
-  @include responsive-text-size('gamma');
-  @include scut-padding(1rem n 1rem 1rem);
-  background-color: $mist;
-  border-bottom: 1px solid $primary;
-  margin-bottom: 0;
-  position: relative;
-
-  @media #{$medium-up} {
-    @include scut-padding(0 n 0 n);
-    background-color: transparent;
-    border-bottom: 0;
-    margin-bottom: 1rem;
-  }
-}
-
-.property-hero_stat-info {
-  @include responsive-text-size('tiny');
-  @include scut-center-transform(y);
-  @include scut-margin(n n n 2rem);
-  font-family: $sans-font-family;
-}
-
 .property-hero_stat-note {
   @include scut-padding(.5rem n n 1rem);
   margin-bottom: 1.5rem;
