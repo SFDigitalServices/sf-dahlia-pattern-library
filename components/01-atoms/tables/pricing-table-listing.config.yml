@@ -6,3 +6,5 @@ variants:
       label: Rental Reserved Units
       context:
         reserved: true
+    - name: sro
+      label: SRO
