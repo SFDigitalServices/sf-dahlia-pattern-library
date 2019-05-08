@@ -422,10 +422,14 @@ table {
 
 .table-pricing-header {
   position: absolute;
-  top: 0;
+  .table-pricing-wrapper:first-of-type & {
+    top: 0;
+  }
+  top: 0.25rem;
   left: 0;
   font-family: $alt-font-family;
   @include responsive-text-size('base');
+  line-height: 1;
   font-weight: $t-semi;
 }
 
@@ -538,9 +542,13 @@ table {
 }
 
 @media #{$small-only} {
+  .table-pricing-wrapper {
+    margin-top: 0;
+  }
+
   .table-pricing-header {
     position: static;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
   }
 
   .table-pricing {
