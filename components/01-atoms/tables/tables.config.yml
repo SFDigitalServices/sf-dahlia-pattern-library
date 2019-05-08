@@ -14,20 +14,30 @@ context:
     minimum-range:
       units:
         - type: Studio
-          income-low: 1,347
-          income-high: 1,678
-          rent-low: 639
-          rent-high: 839
-        - type: 1 Bedroom
-          income-low: 1,518
-          income-high: 1,958
-          rent-low: 759
-          rent-high: 979
-        - type: 2 Bedroom
-          income-low: 2,185
-          income-high: 2,685
-          rent-low: 939
-          rent-high: 1,250
+          income-low: $1,347
+          income-high: $1,678
+          rent-low: $639
+          rent-high: $839
+        - type: 1 BR
+          income-low: $1,518
+          income-high: $1,958
+          rent-low: $759
+          rent-high: $979
+        - type: 2 BR
+          income-low: $2,185
+          income-high: $2,685
+          rent-low: $939
+          rent-high: $1,250
+    minimum-sale:
+      units:
+        - type: Studio
+          parking: no parking
+          price: $223,548
+          hoa: $637.15
+        - type: 1 BR
+          parking: with parking
+          price: $256,721
+          hoa: $625.46
     minimum-sro:
       units:
         - type: SRO
@@ -94,11 +104,6 @@ context:
         income: $2,998<small>/month</small>
         rent: $1,199<small>/month</small>
         availability: 9 <small>units</small>
-    minimum-flex-sro:
-      - type: SRO
-        income: $1,356<small>/month</small>
-        rent: $678<small>/month</small>
-        availability: 12 <small>units</small>
     minimum-flex-reserved:
       - type: Studio
         income: <em>none</em>
@@ -205,6 +210,11 @@ context:
               hoa-no-parking: $782
               availability: 5
               lease: $637
+    pricing-sro:
+      - type: SRO
+        income: $1,356
+        rent: $678
+        availability: 12
     priority:
       units:
         - type: Served in US Military
