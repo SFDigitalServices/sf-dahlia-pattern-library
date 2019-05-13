@@ -11,10 +11,10 @@
         <tbody>
         {{#each tables.minimum-sale.units }}
         <tr {{#if reserved}}class="is-reserved"{{/if}}>
-          <td data-th="Unit Type" class="is-subtitled">
+          <td data-th="Unit type" class="is-subtitled">
             {{{type}}}<span class="show-for-sr">:</span> <small>{{{ parking }}}</small>
           </td>
-          <td data-th="Min. Income" class="is-subtitled">{{{price}}} <small>or more</small></td>
+          <td data-th="Sales price" class="is-subtitled">{{{price}}} <small>or more</small></td>
           <td data-th="Rent" class="is-subtitled">{{{hoa}}} <small>or more</small></td>
         </tr>
         {{/each}}
