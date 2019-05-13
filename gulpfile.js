@@ -50,6 +50,7 @@ fractal.set('project.title', 'DAHLIA Pattern Library');
 fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.docs.set('path', path.join(__dirname, 'docs'));
 fractal.web.set('static.path', path.join(__dirname, config.dest));
+fractal.web.set('builder.dest', 'build');
 fractal.components.set('default.preview', '@preview');
 const logger = fractal.cli.console;
 const hbs = require('@frctl/handlebars')({
@@ -119,6 +120,17 @@ gulp.task('fractal:start', function(){
         logger.success(`Fractal server is now running at ${server.url}`);
     });
 });
+
+
+gulp.task('fractal:build', function(){
+    const builder = fractal.web.builder();
+    builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+    builder.on('error', err => logger.error(err.message));
+    return builder.build().then(() => {
+        logger.success('Fractal build completed!');
+    });
+});
+
 
 
 // styles
@@ -219,6 +231,9 @@ gulp.task('default', ['clean'], function () {
 		if (config.dev) {
 			gulp.start('serve');
 			runSequence('fractal:start');
+		}
+		else {
+			runSequence('fractal:build');
 		}
 	});
 

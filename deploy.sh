@@ -1,8 +1,8 @@
 #!/bin/bash
-DIST=dist
+DIST=build
 if [ ! -d "$DIST" ]; then
 	echo "** Uh oh! **"
-	echo "Directory '$DIST' does not exist -- you need to run 'npm start' before deploying."
+	echo "Directory '$DIST' does not exist -- you need to run 'npm build' before deploying."
 	exit
 fi
 cd $DIST
@@ -34,7 +34,7 @@ echo '{
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^5.6.0"
+        "php": "^7.3.4"
     },
     "platform-dev": []
 }' > composer.lock
