@@ -47,20 +47,23 @@
 
   <div class="property-card_content">
     <div class="property-card_stats">
+      <h2 class="property-card_label">{{default available 'Open Waitlist'}}</h2>
+      <p class="property-card_subheader">Includes Priority Units for People with Visual and Hearing Impairments</p>
+
       {{#compare state '==' 'community' }}
-        {{#if reserved-table}}
-          {{> @pricing-table-hero reserved=true }}
-        {{else}}
-          {{> @pricing-table-hero }}
-        {{/if}}
+        {{> @table--percent items=tables.minimum-range.units classes="table-reserved" reserved-caption="Reserved for Seniors 55+"}}
       {{else compare state '==' 'sro' }}
-         {{> @pricing-table-hero items=tables.pricing-hero-sro }}
+        {{> @table items=tables.minimum-sro.units }}
       {{else }}
-        {{> @pricing-table-hero }}
+        {{> @table--range items=tables.minimum-range.units }}
       {{/compare}}
+
+      {{#if reserved-table}}
+        {{> @table--percent items=tables.percentage.units classes="no-thead margin-top table-reserved"}}
+      {{/if}}
     </div>
 
-    <div class="property-card_action">
+    <div class="property-card_action small-only-text-center">
     {{#compare state '==' 'fave' }}
       <div class="show-for-medium-up left">
         {{> @button-round fill="primary" label="inline" text="Favorite" classes="has-label"}}

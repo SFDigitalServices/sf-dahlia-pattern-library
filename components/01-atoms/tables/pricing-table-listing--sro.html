@@ -1,0 +1,44 @@
+{{#*inline "tableRow" }}
+<td data-th="Availability" class="is-subtitled">
+  {{#if waitlist}}
+    <small class="pricing-table-waitlist">Waitlist</small>
+  {{else}}
+    <i>{{{availability}}}</i> <small>available</small>
+  {{/if}}
+</td>
+<td data-th="Min. Income" class="is-subtitled">{{{income}}} <small>per month</small></td>
+<td data-th="Rent" class="is-subtitled">{{{rent}}} <small>per month</small></td>
+{{/inline}}
+
+{{#if reserved}}
+<div class="message-group">
+  <div class="message is-reserved">
+    <span class="message-text">Reserved units for People with Developental Disabilities</span>  
+  </div>
+</div>
+{{/if}}
+{{#each tables.pricing-sro}}
+  <div class="table-pricing-wrapper">
+    <h5 class="table-pricing-header">{{{type}}} Units</h5>
+    <table class="table-pricing table-pricing-rent {{default classes ''}}" role="grid">
+      <thead>
+        <tr>
+          <th scope="col"><span class="show-for-sr">Availability</span></th>
+          <th scope="col">
+            {{#unless @first }}&nbsp;<span class="show-for-sr">{{/unless}}
+              Minimum Income
+            {{#unless @first }}</span>{{/unless}}
+          </th>
+          <th scope="col">
+            {{#unless @first }}&nbsp;<span class="show-for-sr">{{/unless}}
+              Rent
+            {{#unless @first }}</span>{{/unless}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>{{> tableRow }}</tr>
+      </tbody>
+    </table>
+  </div>
+  {{/each}}

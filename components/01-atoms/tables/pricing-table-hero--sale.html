@@ -1,0 +1,23 @@
+<h5 class="t-base t-alt-sans t-semi margin-bottom--half">Available units</h5>
+  <div class="table-pricing-wrapper">
+    <table class="table-pricing table-pricing-hero {{default classes ''}}" role="grid">
+        <thead>
+          <tr>
+            <th scope="col">Unit type</th>
+            <th scope="col">Sales price</th>
+            <th scope="col">HOA dues</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each tables.minimum-sale.units }}
+        <tr {{#if reserved}}class="is-reserved"{{/if}}>
+          <td data-th="Unit type" class="is-subtitled">
+            {{{type}}}<span class="show-for-sr">:</span> <small>{{{ parking }}}</small>
+          </td>
+          <td data-th="Sales price" class="is-subtitled">{{{price}}} <small>or more</small></td>
+          <td data-th="Rent" class="is-subtitled">{{{hoa}}} <small>or more</small></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>

@@ -1,6 +1,6 @@
 <div class="property-card {{ default classes ''}}">
   <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
-    <a href="#/listings/trinity-place-apts">{{default property-name 'Trinity Place Apartments'}}</a>
+    <a href="#/listings/trinity-place-apts">{{default property-name 'Sale Listing'}}</a>
   </h1>
 
   <figure class="property-card_figure">
@@ -34,7 +34,7 @@
 
     <figcaption class="property-card_info">
       <h1 class="property-card_title show-for-medium-up">
-        <a href="#">{{default property-name 'Trinity Place Apartments'}}</a>
+        <a href="#">{{default property-name 'Sale Listing'}}</a>
       </h1>
       <p class="property-card_address">{{default property-address '1188 Mission St'}}, <br class="show-for-small-only"> San Francisco CA, 94134</p>
       {{#if community-building}}
@@ -47,17 +47,7 @@
 
   <div class="property-card_content">
     <div class="property-card_stats">
-      {{#compare state '==' 'community' }}
-        {{#if reserved-table}}
-          {{> @pricing-table-hero reserved=true }}
-        {{else}}
-          {{> @pricing-table-hero }}
-        {{/if}}
-      {{else compare state '==' 'sro' }}
-         {{> @pricing-table-hero items=tables.pricing-hero-sro }}
-      {{else }}
-        {{> @pricing-table-hero }}
-      {{/compare}}
+      {{> @pricing-table-hero--sale }}
     </div>
 
     <div class="property-card_action">

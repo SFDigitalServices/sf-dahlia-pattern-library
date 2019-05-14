@@ -1,0 +1,10 @@
+title: "Pricing Table - Listing Page"
+variants:
+    - name: default
+      label: Rental
+    - name: reserved
+      label: Rental Reserved Units
+      context:
+        reserved: true
+    - name: sro
+      label: SRO

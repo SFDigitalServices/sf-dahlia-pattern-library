@@ -1,0 +1,49 @@
+{{#each tables.pricing-sale}}
+  <h2 class="table-pricing-ami">{{{ami}}} AMI</h2>
+  {{#each list}}
+  <div class="table-pricing-wrapper">
+    <h5 class="table-pricing-header">{{{type}}} Units</h5>
+    <table class="table-pricing table-pricing-sale table-pricing-sale-lease {{default classes ''}}" role="grid">
+        <thead>
+          <tr>
+            <th scope="col"><span class="show-for-sr">Availability</span></th>
+            <th scope="col">
+              {{#unless @first }}&nbsp;<span class="show-for-sr">{{/unless}}
+                Prices without parking
+              {{#unless @first }}</span>{{/unless}}
+            </th>
+            <th scope="col">
+              {{#unless @first }}&nbsp;<span class="show-for-sr">{{/unless}}
+                Optional parking lease
+              {{#unless @first }}</span>{{/unless}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each units}}
+        <tr>
+          <td data-th="Availability" class="is-subtitled">
+            {{#if waitlist}}
+              <small class="pricing-table-waitlist">Waitlist</small>
+            {{else}}
+              <i>{{{availability}}}</i> <small>available</small>
+            {{/if}}
+          </td>
+          <td data-th="Prices without parking">
+            <dl class="clearfix">
+              <dt>Sales price:</dt>
+              <dd><strong>{{{price-no-parking}}}</strong></dd>
+              <dt>HOA dues:</dt>
+              <dd><strong>{{{hoa-no-parking}}}</strong> per month</dd>
+            </dl>
+          </td>
+          <td data-th="Optional parking lease" class="is-subtitled">
+            {{{ lease }}} <small>per month</small>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{/each}}
+{{/each}}

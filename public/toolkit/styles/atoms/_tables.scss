@@ -397,3 +397,248 @@ table {
     }
   }
 }
+
+// Pricing tables
+
+.table-pricing-ami {
+  @include responsive-text-size('gamma');
+  position: relative;
+
+  .table-pricing-wrapper + & {
+    margin-top: 2rem;
+  }
+
+  @media #{$medium-up} {
+    @include scut-padding(0 n 0 n);
+    background-color: transparent;
+    border-bottom: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.table-pricing-wrapper {
+  position: relative;
+}
+
+.table-pricing-header {
+  position: absolute;
+  .table-pricing-wrapper:first-of-type & {
+    top: 0;
+  }
+  top: 0.25rem;
+  left: 0;
+  font-family: $alt-font-family;
+  @include responsive-text-size('base');
+  line-height: 1;
+  font-weight: $t-semi;
+}
+
+.table-pricing {
+  margin: 0 0 0.5rem;
+  // Show reserved pricing table rows with
+  // z-index: -1
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  td,
+  th {
+    background: $white;
+  }
+
+  dl {
+    font-weight: $t-regular;
+    @include responsive-text-size('base');
+    margin: 0;
+  }
+
+  dt, dd {
+    float: left;
+    margin-bottom: 0.25rem;
+    @include responsive-text-size('small');
+
+    strong {
+      font-weight: $t-semi;
+    }
+  }
+
+  dt {
+    clear: left;
+    margin-right: 0.5rem;
+    min-width: 5rem;
+    text-align: left;
+  }
+
+  th, td::before {
+    color: $steel;
+    @include responsive-text-size('small');
+    font-family: $alt-font-family;
+  }
+
+  th {
+    padding: 0 0 0.75rem;
+    border: 0;
+  }
+
+  tr {
+    border-bottom: 1px solid $base;
+    &:nth-of-type(2n) {
+      background: transparent;
+    }
+    &.is-reserved td:first-child {
+      position: relative;
+      z-index: -1;
+      &::after {
+        content: "";
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: $splash;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.375rem;
+        left: -1.5rem;
+      }
+    }
+  }
+
+  td {
+    padding: 0.75rem 0;
+    @include responsive-text-size('base');
+    font-feature-settings: "tnum";
+
+    &[data-th="Availability"] {
+      width: 10rem;
+    }
+  }
+
+  // Number of availably units
+  i {
+    @include responsive-text-size('delta');
+    color: $jet;
+    font-style: normal;
+    font-weight: $t-regular;
+    line-height: 1;
+  }
+
+  small {
+    display: block;
+    @include responsive-text-size('tiny');
+    color: $steel;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: $t-regular;
+  }
+}
+
+.table-pricing-waitlist {
+  padding: 1rem 0;
+}
+
+.table-pricing-rent {
+  th:last-child,
+  td[data-th="Rent"], {
+    text-align: right;
+  }
+}
+
+.table-pricing-sale-lease {
+  th:last-child,
+  td[data-th="Optional parking lease"], {
+    text-align: right;
+  }
+}
+
+@media #{$small-only} {
+  .table-pricing-wrapper {
+    margin-top: 0;
+  }
+
+  .table-pricing-header {
+    position: static;
+    margin: 0.5rem 0;
+  }
+
+  .table-pricing {
+    display: block;
+    width: 100%;
+
+    th {
+      @include element-invisible;
+    }
+
+    thead,
+    tr,
+    td,
+    tbody {
+      display: block;
+    }
+
+    td {
+      position: relative;
+
+      &.is-subtitled {
+        text-align: right;
+      }
+
+      &::before {
+        content: attr(data-th);
+        position: absolute;
+        line-height: 1;
+        left: 0;
+        font-weight: $table-value-weight;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+      }
+    }
+
+    i {
+      @include responsive-text-size('base');
+      font-weight: $t-semi;
+    }
+
+    tr.is-reserved::after {
+      top: 1.5rem;
+    }
+  }
+
+  .table-pricing-sale {
+    td {
+      padding: 1.5rem 0;
+
+      &::before {
+        top: 0;
+      }
+
+      &.is-subtitled {
+        width: 100%;
+        text-align: left;
+      }
+
+      &[data-th="Availability"]::before {
+        content: "";
+      }
+    }
+  }
+
+  .table-pricing-rent {
+    td.is-subtitled::before {
+      top: 50%;
+      margin-top: -0.5rem;
+    }
+
+    td[data-th="Availability"] {
+      text-align: right;
+      width: 100%;
+
+      &::before {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  .pricing-table-waitlist {
+    padding: 0.5rem 0;
+  }
+}

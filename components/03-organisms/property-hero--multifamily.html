@@ -47,20 +47,7 @@
   </header>
 
   <section class="property-hero_stats margin-bottom--2x">
-    <div class="message-group">
-      {{> @message text="ALL UNITS RESERVED FOR SENIORS 55+" }}
-      {{> @message text="Reserved units for People with Developental Disabilities" icon="star"}}
-    </div>
-
-    <div class="property-hero_stat">
-      <h2 class="property-hero_stat-header">30% AMI <a href="#" class="property-hero_stat-info">{{> @icons-base scale="tiny" icon="info" fill="primary"}} More Info</a></h2>
-      {{> @table-flex classes="no-margin" items=tables.minimum-flex-reserved}}
-    </div>
-
-    <div class="property-hero_stat margin-top--2x">
-      <h2 class="property-hero_stat-header">50% AMI <a href="#" class="property-hero_stat-info">{{> @icons-base scale="tiny" icon="info" fill="primary"}} More Info</a></h2>
-      {{> @table-flex classes="no-margin" items=tables.minimum-flex-reserved}}
-    </div>
+    {{> @pricing-table-listing reserved=true }}
   <section>
 
   <div class="property-hero_apply">
