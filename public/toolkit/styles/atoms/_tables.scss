@@ -435,6 +435,9 @@ table {
 
 .table-pricing {
   margin: 0 0 0.5rem;
+  // Show reserved pricing table rows with
+  // z-index: -1
+  background: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   td,
@@ -478,8 +481,12 @@ table {
 
   tr {
     border-bottom: 1px solid $base;
-    &.is-reserved {
+    &:nth-of-type(2n) {
+      background: transparent;
+    }
+    &.is-reserved td:first-child {
       position: relative;
+      z-index: -1;
       &::after {
         content: "";
         width: 0.75rem;
