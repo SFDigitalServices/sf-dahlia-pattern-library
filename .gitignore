@@ -5,3 +5,4 @@ npm-debug.log
 dist/toolkit
 vendor
 build/
+.DS_Store

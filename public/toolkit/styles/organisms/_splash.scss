@@ -22,12 +22,32 @@
   @media #{$xlarge-up} {
     padding: 6rem 1rem;
   }
+
+  &.narrow {
+    @media #{$medium-up} {
+      padding: 4rem 8rem;
+    }
+
+    @media #{$xlarge-up} {
+      padding: 6rem 11rem;
+    }
+  }
 }
 
 .hero-title {
   letter-spacing: -0.04em;
   @include responsive-text-size(mega);
+
   @media #{$large-up} {
     @include responsive-text-size(giga);
   }
+
+  &.small {
+    @include responsive-text-size(mega);
+  }
+}
+
+.hero-title_highlight {
+  text-decoration: underline;
+  text-decoration-color: $warn;
 }
