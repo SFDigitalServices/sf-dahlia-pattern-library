@@ -10,8 +10,9 @@ Includes:
 
 ## Getting Started
 
-1. Install Node
 1. Clone this repo
+1. Install Node version 10.11.0 (we recommend using [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) to manage node versions)
+1. Make sure that you have python 2 installed (either under python2 or python)
 1. Run `npm start`, which will run an npm install and bower install and start the server
 1. Go to http://localhost:3000 to view the pattern library
 
@@ -22,9 +23,10 @@ The Heroku application is served out of the `dist` directory which is the static
 To deploy the application (run this from the project directory):
 
 * `./deploy.sh [appname]`
-* `appname` is an optional argument, which will create and deploy to a new heroku app:
-  * `sf-dahlia-pl-[appname]` (if it doesn't already exist).
-  * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pl-testing.herokuapp.com`
+  * If `appname` is not specified, the application will be deployed to `https://sf-dahlia-pattern-library.herokuapp.com/`
+  * If `appname` is specifed, the script create and deploy to a new heroku app with the naming convention`sf-dahlia-pl-[appname]` (if it doesn't already exist).
+    * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pl-testing.herokuapp.com`
+
 * This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pl-new-menu.herokuapp.com`
 
 ## Branches
