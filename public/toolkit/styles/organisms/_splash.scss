@@ -38,12 +38,12 @@
   letter-spacing: -0.04em;
   @include responsive-text-size(mega);
 
-  @media #{$large-up} {
-    @include responsive-text-size(giga);
-  }
-
   &.small {
     @include responsive-text-size(mega);
+  }
+
+  @media #{$large-up} {
+    @include responsive-text-size(giga);
   }
 }
 
