@@ -79,7 +79,7 @@ table {
   }
 
   // Remove zebra coloring and adds border
-  &.td-plain, 
+  &.td-plain,
   &.plain {
     tr td {
       background: transparent;
@@ -507,7 +507,7 @@ table {
     font-feature-settings: "tnum";
 
     &[data-th="Availability"] {
-      width: 10rem;
+      width: 7rem;
     }
   }
 
