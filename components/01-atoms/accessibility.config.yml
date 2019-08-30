@@ -29,7 +29,7 @@ context:
     - text-name: dust
       text-hex: "#f5f8f9"
       bg-name: dark
-      bg-hex: "#205493"
+      bg-hex: "#0d4b80"
     - text-name: dust
       text-hex: "#f5f8f9"
       bg-name: deep

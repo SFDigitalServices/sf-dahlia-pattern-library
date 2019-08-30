@@ -41,7 +41,7 @@ context:
     - name: deep
       hex: "#0067be"
     - name: dark
-      hex: "#205493"
+      hex: "#0d4b80"
     - name: primary-tint
       hex: "#daeeff"
     - name: attention
