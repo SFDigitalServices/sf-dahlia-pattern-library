@@ -363,6 +363,11 @@
 
     // invalid row state
     &.is-invalid {
+
+      .rt-td {
+        background-color: $alert-tint !important;
+      }
+
       &.is {
         @each $color-name, $color-value in $state-colors {
           &-#{"" + $color-name} {
@@ -380,6 +385,10 @@
 
         .rt-td-label-rank {
           display: block;
+        }
+
+        .rt-td {
+          background-color: $alert-tint !important;
         }
       }
 
