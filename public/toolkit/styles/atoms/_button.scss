@@ -14,7 +14,8 @@ $button-radius: rem-calc(4);
 
   &:focus {
     text-decoration: none;
-    outline-offset: -2px;
+    outline: none;
+    box-shadow: 0 0 0 7px $attention;
   }
 }
 
