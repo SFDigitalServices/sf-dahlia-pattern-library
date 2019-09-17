@@ -12,6 +12,7 @@ $button-radius: rem-calc(4);
   text-transform: uppercase;
   white-space: normal;
 
+  // Add custom focus for buttons to avoid double outline, allow for rounding
   &:focus {
     text-decoration: none;
     outline: none;

@@ -26,7 +26,7 @@ a, .btn-link {
 
   &:focus {
     text-decoration: underline;
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 7px solid $attention;
   }
 
   &.has-border {
@@ -63,7 +63,7 @@ a, .btn-link {
 
   @media #{$small-only} {
     padding-top: 1rem;
-  }  
+  }
 }
 
 .edit-link {
