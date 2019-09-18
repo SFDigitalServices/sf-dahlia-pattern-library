@@ -60,7 +60,7 @@ input[type="checkbox"] + label::before,
 input[type="radio"] + label::before {
   background: white;
   border-radius: $border-radius;
-  box-shadow: 0 0 0 1px $input-border-color;
+  box-shadow: 0 0 0 1px $color-white, 0 0 0 2px $input-border-color;
   content: '\a0';
   display: inline-block;
   height: 1.25rem;
@@ -72,12 +72,8 @@ input[type="radio"] + label::before {
 }
 
 input[type="radio"] + label::before {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px $input-border-color;
   height:1.2rem;
   width: 1.2rem;
-}
-
-input[type="radio"] + label::before {
   border-radius: 100%;
 }
 
@@ -88,7 +84,7 @@ input[type="radio"]:checked + label::before {
 }
 
 input[type="radio"]:checked + label::before {
-  box-shadow: 0 0 0 2px $color-white, 0 0 0 3px $input-border-color;
+  box-shadow: 0 0 0 1px $color-white, 0 0 0 2px $input-border-color;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -101,7 +97,7 @@ input[type="checkbox"]:checked + label::before {
 
 input[type="radio"]:focus + label::before,
 input[type="checkbox"]:focus + label::before {
-  box-shadow: 0 0 0 2px $color-white, 0 0 0 7px $attention;
+    box-shadow: 0 0 0 1px $color-white, 0 0 0 2px $input-border-color, 0 0 0 7px $attention;
 }
 
 input[type="checkbox"]:disabled + label {
