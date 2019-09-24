@@ -34,8 +34,9 @@ input[type="radio"] {
 
   &:focus {
     text-decoration: none;
+    // Appears to be for the case of no label
     outline: none;
-    box-shadow: 0 0 0 7px $attention;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 4px $attention;
   }
 }
 
@@ -97,7 +98,7 @@ input[type="checkbox"]:checked + label::before {
 
 input[type="radio"]:focus + label::before,
 input[type="checkbox"]:focus + label::before {
-    box-shadow: 0 0 0 1px $color-white, 0 0 0 2px $input-border-color, 0 0 0 7px $attention;
+  box-shadow: 0 0 0 1px $color-white, 0 0 0 2px $input-border-color, 0 0 3px 4px $attention;
 }
 
 input[type="checkbox"]:disabled + label {
@@ -332,7 +333,7 @@ input[type="radio"]:disabled + label::before {
       background-color: $primary;
       color: #fff;
       outline: none;
-      box-shadow: 0 0 0 7px $attention;
+      box-shadow: 0 0 0 2px #ffffff, 0 0 3px 4px $attention;
     }
   }
 

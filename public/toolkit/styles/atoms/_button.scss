@@ -12,11 +12,11 @@ $button-radius: rem-calc(4);
   text-transform: uppercase;
   white-space: normal;
 
-  // Add custom focus for buttons to avoid double outline, allow for rounding
+  // Add custom focus for buttons to make keyboard focus clearer
   &:focus {
     text-decoration: none;
     outline: none;
-    box-shadow: 0 0 0 7px $attention;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 4px $attention;
   }
 }
 

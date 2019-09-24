@@ -26,7 +26,8 @@ a, .btn-link {
 
   &:focus {
     text-decoration: underline;
-    outline: 7px solid $attention;
+    outline: none;
+    box-shadow: 0 0 2px 3px $attention;
   }
 
   &.has-border {

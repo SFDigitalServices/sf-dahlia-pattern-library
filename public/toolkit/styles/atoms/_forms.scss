@@ -8,8 +8,7 @@ select {
   border-radius: $input-border-radius;
 
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 7px $attention;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 4px $attention;
   }
 
   &.squared {
