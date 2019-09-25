@@ -44,13 +44,6 @@
   .has-toggle {
     padding-right: 2rem;
   }
-
-  // Add custom focus for buttons to make keyboard focus clearer
-  &:focus {
-    text-decoration: none;
-    outline: none;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 4px $attention;
-  }
 }
 
 //

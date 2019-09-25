@@ -3,6 +3,14 @@
 // .button
 $button-radius: rem-calc(4);
 
+@mixin button-focus-highlight() {
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 4px $attention;
+  }
+}
+
 @mixin custom-button-styles() {
   @include type-weight(bold);
   @include scut-padding(n 1.5rem);
@@ -13,11 +21,7 @@ $button-radius: rem-calc(4);
   white-space: normal;
 
   // Add custom focus for buttons to make keyboard focus clearer
-  &:focus {
-    text-decoration: none;
-    outline: none;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 4px $attention;
-  }
+  @include button-focus-highlight();
 }
 
 @mixin button-unstyled($color: $primary, $padding: 0) {
@@ -425,6 +429,10 @@ button,
       }
     }
   }
+}
+
+[role="button"] {
+  @include button-focus-highlight();
 }
 
 // Adds radius to submits
