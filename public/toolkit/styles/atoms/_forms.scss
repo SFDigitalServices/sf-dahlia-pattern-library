@@ -34,7 +34,7 @@ form {
 
 label {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 // Input and label wrapper
@@ -62,7 +62,12 @@ label {
     position: relative;
   }
 
-  #{h1, h2, h3, h4, h5, h6} {
+  #{h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6} {
     font-family: $sans-font-family;
   }
 
@@ -112,7 +117,7 @@ label {
 .form-label {
   @include responsive-text-size('small');
   @include type-weight(semi);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   text-transform: none;
 
   &.label-secondary {
@@ -122,7 +127,7 @@ label {
 
   &.caps {
     text-transform: uppercase;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -135,7 +140,7 @@ label {
 
   &.shift-up {
     display: block;
-    margin-top: -.75rem;
+    margin-top: -0.75rem;
     margin-bottom: 1.5rem;
   }
 
@@ -168,7 +173,7 @@ label {
     position: relative;
 
     .ui-icon {
-      @include absolute(.75rem,.75rem,null,null);
+      @include absolute(0.75rem, 0.75rem, null, null);
     }
   }
 }
@@ -196,15 +201,16 @@ label,
       border: 2px solid $alert;
     }
 
-    input[type="checkbox"].error + label::before {
+    input[type='checkbox'].error + label::before {
       box-shadow: 0 0 0 2px $alert;
     }
 
-    input[type="radio"].error + label::before {
+    input[type='radio'].error + label::before {
       box-shadow: 0 0 0 2px #fff, 0 0 0 4px $alert;
     }
 
-    .form-label {
+    .form-label,
+    .form-label.error {
       color: $alert;
     }
   }
@@ -215,13 +221,14 @@ label,
       color: $primary;
     }
 
-    input[type="checkbox"] + label, input[type="radio"] + label {
+    input[type='checkbox'] + label,
+    input[type='radio'] + label {
       margin-left: 0;
     }
 
     &.error {
       small.error {
-        margin-bottom: .25rem;
+        margin-bottom: 0.25rem;
       }
 
       .checkbox label,
@@ -242,7 +249,7 @@ label,
       color: $success;
       display: block;
       font-size: 0.75rem;
-      margin-bottom: .25rem;
+      margin-bottom: 0.25rem;
       padding: 0.375rem 0 0.375rem;
       a {
         color: $success;
