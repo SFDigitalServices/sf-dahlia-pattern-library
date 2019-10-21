@@ -89,3 +89,11 @@
   width: 100%;
   border-top: 1px solid $f-dropdown-border-color;
 }
+
+.dropdown-menu-wrapper {
+  position: relative;
+
+  .dropdown-menu {
+    max-width: 100%;
+  }
+}
