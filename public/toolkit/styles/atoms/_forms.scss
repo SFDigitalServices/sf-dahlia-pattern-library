@@ -209,10 +209,13 @@ label,
       box-shadow: 0 0 0 2px #fff, 0 0 0 4px $alert;
     }
 
-    .form-label,
-    .form-label.error {
+    .form-label {
       color: $alert;
     }
+  }
+
+  .form-label.error {
+    color: $alert;
   }
 
   &.has-option {
