@@ -19,13 +19,13 @@
 
   &.is {
     @each $color-name, $color-value in $state-wash-colors {
-      &-#{"" + $color-name} {
+      &-#{'' + $color-name} {
         background-color: $color-value !important;
       }
     }
 
     @each $color-name, $color-value in $state-colors {
-      &-#{"" + $color-name} {
+      &-#{'' + $color-name} {
         box-shadow: inset 3px 0 0 0 $color-value !important;
       }
     }
@@ -36,7 +36,7 @@
   @include responsive-text-size('small');
   font-family: $alt-font-family;
   font-weight: $t-semi;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .status-update_action {
@@ -70,12 +70,21 @@
   background-color: $white;
   border: 1px solid $smoke;
   border-radius: 4px;
-  padding: .5rem 1rem;
-  margin-bottom: .75rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .status-update_note {
   float: left;
+  margin: 0;
+}
+
+.status-update_substatus_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-update_substatus {
   margin: 0;
 }
 
