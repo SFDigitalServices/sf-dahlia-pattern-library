@@ -3,8 +3,8 @@
     <a href="#/listings/trinity-place-apts">{{default property-name 'Trinity Place Apartments'}}</a>
   </h1>
 
-  <div class="property-card_figure">
-    <figure>
+  <div class="property-card_figure-wrapper">
+    <figure class="property-card_figure">
       <a class="property-card_overlay" href="/listings/id" tabindex="-1">
         <img class="property-card_thumb" src="/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
           Address:formattedAddress" role="link" >
@@ -19,7 +19,9 @@
         <span class="label radius medium bg-splash">Senior Community Building</span>
         {{/if}}
       </figcaption>
+
     </figure>
+
     {{#compare state '==' 'closed' }}
       <div class="application-label label label--flag alert">Applications Closed: Mar 12th</div>
     {{else compare state '==' 'results' }}
@@ -41,6 +43,7 @@
     {{else }}
       <div class="application-label label label--flag primary">Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</div>
     {{/compare}}
+
   </div>
 
   <div class="print-only">Application Deadline: Nov 21, 2017 at 5PM</div>

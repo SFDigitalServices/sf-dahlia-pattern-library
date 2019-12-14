@@ -20,7 +20,7 @@
     @include grid-row();
     margin-bottom: 2.5rem;
 
-    .property-card_figure {
+    .property-card_figure-wrapper {
       @include grid-column(6);
       width: 50%;
       padding: 0;
@@ -47,7 +47,7 @@
     }
 
     @media #{$medium-up} {
-      .property-card_figure {
+      .property-card_figure-wrapper {
         @include grid-column(6);
         padding: 0;
       }
@@ -74,44 +74,43 @@
   }
 }
 
-.property-card_figure {
-  text-align: center;
-  position: relative;
-  line-height: .8;
+.property-card_figure-wrapper {
 
-  // Image with rounded corners
-  &.radius {
-    @media #{$medium-up} {
-      border-radius: $form-card-radius;
-    }
+  .property-card_figure {
+    text-align: center;
+    position: relative;
+    line-height: .8;
 
-    img,
-    .property-card_overlay:before {
+    // Image with rounded corners
+    &.radius {
       @media #{$medium-up} {
         border-radius: $form-card-radius;
       }
+
+      img,
+      .property-card_overlay:before {
+        @media #{$medium-up} {
+          border-radius: $form-card-radius;
+        }
+      }
+    }
+
+    @media #{$medium-up} {
+      background-color: $charcoal;
     }
   }
 
-  @media #{$medium-up} {
-    background-color: $charcoal;
-  }
 
-  // Labels overlaying images
   .status-label {
-    @include absolute(.5rem,null,null,0);
+    
 
     @media #{$medium-up} {
-      @include absolute(.5rem,0,null,auto);
     }
   }
 
   .application-label {
-    @include absolute(null,1rem,0,1rem);
-    z-index: 2;
 
     @media #{$medium-up} {
-      @include absolute(.5rem,auto,auto,0);
     }
   }
 }
