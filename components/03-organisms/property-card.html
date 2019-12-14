@@ -1,7 +1,8 @@
 <div class="property-card {{ default classes ''}}">
-  <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
+  <h1 class="property-card_title text-center hide-for-medium-up">
     <a href="#/listings/trinity-place-apts">{{default property-name 'Trinity Place Apartments'}}</a>
   </h1>
+  <p class="property-card_address hide-for-medium-up text-center">{{default property-address '1188 Mission St'}}, <br class="show-for-small-only"> San Francisco CA, 94134</p>
 
   <div class="property-card_figure-wrapper">
     <figure class="property-card_figure">
@@ -14,7 +15,7 @@
         <h1 class="property-card_title show-for-medium-up">
           <a href="#">{{default property-name 'Trinity Place Apartments'}}</a>
         </h1>
-        <p class="property-card_address">{{default property-address '1188 Mission St'}}, <br class="show-for-small-only"> San Francisco CA, 94134</p>
+        <p class="property-card_address show-for-medium-up">{{default property-address '1188 Mission St'}}, San Francisco CA, 94134</p>
         {{#if community-building}}
         <span class="label radius medium bg-splash">Senior Community Building</span>
         {{/if}}
