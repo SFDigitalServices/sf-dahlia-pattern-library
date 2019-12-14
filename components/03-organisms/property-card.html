@@ -8,29 +8,6 @@
       <a class="property-card_overlay" href="/listings/id" tabindex="-1">
         <img class="property-card_thumb" src="/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
           Address:formattedAddress" role="link" >
-
-      {{#compare state '==' 'closed' }}
-        <span class="application-label label label--flag alert">Applications Closed: Mar 12th</span>
-      {{else compare state '==' 'results' }}
-        <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
-      {{else compare state '==' 'matched' }}
-        <span class="status-label label label--flag success">
-        {{> @icons-base icon="check" fill="white"}}
-        Matched</span>
-        <span class="application-label label label--flag primary">
-        {{> @icons-base icon="clock" fill="white"}}
-        Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
-      {{else compare state '==' 'not-matched' }}
-        <span class="status-label label label--flag">Not a Match</span>
-        <span class="application-label label label--flag primary">
-        {{> @icons-base icon="clock" fill="white"}}
-        Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
-      {{else compare state '==' 'fave' }}
-        <span class="application-label label label--flag">Lottery Results Posted: Feb 16th</span>
-      {{else }}
-        <span class="application-label label label--flag primary">Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
-      {{/compare}}
-
       </a>
 
       <figcaption class="property-card_info">
@@ -43,6 +20,27 @@
         {{/if}}
       </figcaption>
     </figure>
+    {{#compare state '==' 'closed' }}
+      <div class="application-label label label--flag alert">Applications Closed: Mar 12th</div>
+    {{else compare state '==' 'results' }}
+      <div class="application-label label label--flag">Lottery Results Posted: Feb 16th</div>
+    {{else compare state '==' 'matched' }}
+      <div class="status-label label label--flag success">
+      {{> @icons-base icon="check" fill="white"}}
+      Matched</div>
+      <div class="application-label label label--flag primary">
+      {{> @icons-base icon="clock" fill="white"}}
+      Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</div>
+    {{else compare state '==' 'not-matched' }}
+      <div class="status-label label label--flag">Not a Match</div>
+      <div class="application-label label label--flag primary">
+      {{> @icons-base icon="clock" fill="white"}}
+      Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</div>
+    {{else compare state '==' 'fave' }}
+      <div class="application-label label label--flag">Lottery Results Posted: Feb 16th</div>
+    {{else }}
+      <div class="application-label label label--flag primary">Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</div>
+    {{/compare}}
   </div>
 
   <div class="print-only">Application Deadline: Nov 21, 2017 at 5PM</div>
