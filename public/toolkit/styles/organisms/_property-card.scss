@@ -97,6 +97,7 @@
 
     @media #{$medium-up} {
       background-color: $charcoal;
+      text-align: left;
     }
   }
 
@@ -105,12 +106,14 @@
     
 
     @media #{$medium-up} {
+      text-align: left;
     }
   }
 
   .application-label {
 
     @media #{$medium-up} {
+      text-align: left;
     }
   }
 }
@@ -150,7 +153,7 @@
 
 .property-card_info {
   @media #{$medium-up} {
-    @include absolute(null,.5rem,1rem,.5rem);
+    @include absolute(null,1rem,.0,1rem);
     display: inline-block;
     color: #fff;
     z-index: 2;
