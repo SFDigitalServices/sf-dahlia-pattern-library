@@ -2,11 +2,25 @@
   <h1 class="property-card_title text-center margin-bottom hide-for-medium-up">
     <a href="#/listings/trinity-place-apts">{{default property-name 'Trinity Place Apartments'}}</a>
   </h1>
+  <p class="property-card_address hide-for-medium-up text-center">{{default property-address '1188 Mission St'}}, <br class="show-for-small-only"> San Francisco CA, 94134</p>
 
-  <figure class="property-card_figure">
-    <a class="property-card_overlay" href="/listings/id" tabindex="-1">
-      <img class="property-card_thumb" src="/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
-        Address:formattedAddress" role="link" >
+  <div class="property-card_figure-wrapper">
+    <figure class="property-card_figure">
+      <a class="property-card_overlay" href="/listings/id" tabindex="-1">
+        <img class="property-card_thumb" src="/toolkit/images/property5.jpg" alt="Listing Name:listing.Building_Name,
+          Address:formattedAddress" role="link" >
+        {{#if community-building}}
+        <span class="label radius medium bg-splash">Senior Community Building</span>
+        {{/if}}
+      </a>
+
+      <figcaption class="property-card_info">
+        <h1 class="property-card_title show-for-medium-up">
+          <a href="#">{{default property-name 'Trinity Place Apartments'}}</a>
+        </h1>
+        <p class="property-card_address show-for-medium-up">{{default property-address '1188 Mission St'}}, San Francisco CA, 94134</p>
+      </figcaption>
+    </figure>
 
     {{#compare state '==' 'closed' }}
       <span class="application-label label label--flag alert">Applications Closed: Mar 12th</span>
@@ -30,18 +44,7 @@
       <span class="application-label label label--flag primary">Application Deadline: {{default deadline 'Nov 21, 2017 at 5PM'}}</span>
     {{/compare}}
 
-    </a>
-
-    <figcaption class="property-card_info">
-      <h1 class="property-card_title show-for-medium-up">
-        <a href="#">{{default property-name 'Trinity Place Apartments'}}</a>
-      </h1>
-      <p class="property-card_address">{{default property-address '1188 Mission St'}}, <br class="show-for-small-only"> San Francisco CA, 94134</p>
-      {{#if community-building}}
-      <span class="label radius medium bg-splash">Senior Community Building</span>
-      {{/if}}
-    </figcaption>
-  </figure>
+  </div>
 
   <div class="print-only">Application Deadline: Nov 21, 2017 at 5PM</div>
 
