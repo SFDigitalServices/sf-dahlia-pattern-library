@@ -1,3 +1,13 @@
 .banner-bar {
   @include scut-padding(.625rem n n n );
+
+  @media #{$xlarge-up} {
+    .columns {
+      padding-left: 0 !important;
+    }
+  }
+
+  .offset-icon {
+    margin-bottom: .75rem;
+  }
 }
