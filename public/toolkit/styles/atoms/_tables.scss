@@ -506,7 +506,7 @@ table {
     @include responsive-text-size('base');
     font-feature-settings: "tnum";
 
-    &[data-th="Availability"] {
+    &.availability {
       width: 7rem;
     }
   }
@@ -614,7 +614,7 @@ table {
         text-align: left;
       }
 
-      &[data-th="Availability"]::before {
+      &.availability::before {
         content: "";
       }
     }
@@ -626,7 +626,7 @@ table {
       margin-top: -0.5rem;
     }
 
-    td[data-th="Availability"] {
+    td.availability {
       text-align: right;
       width: 100%;
 
