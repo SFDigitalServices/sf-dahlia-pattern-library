@@ -453,6 +453,10 @@ $units: (
   overflow: hidden;
 }
 
+.overflow-wrap-break-word {
+  overflow-wrap: break-word;
+}
+
 .clear {
   &::after { 
    content: "";
