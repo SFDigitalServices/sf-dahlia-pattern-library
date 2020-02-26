@@ -2,6 +2,112 @@
   "title": "New AMI",
   "label": "New AMI",
   "context": {
-    "type": "Studio"
+    "units": [
+      {
+        "type": "Studio",
+        "incomeLevels": [
+          {
+            "incomeLevel": "Low Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "Studio",
+                "BMR_Rent_Monthly": 1700,
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 3400,
+                "Max_AMI_for_Qualifying_Unit": 65,
+                "Planning_AMI_Tier": "Low Income",
+                "Min_Occupancy": 1,
+                "Max_Occupancy": 2,
+                "Status": "Available",
+                "total": 1,
+                "incomeLimits": [
+                  {
+                    "occupancy": 1,
+                    "minIncome": 3400,
+                    "maxIncome": "4671"
+                  },
+                  {
+                    "occupancy": 2,
+                    "minIncome": 3400,
+                    "maxIncome": "5338"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "1 BR",
+        "incomeLevels": [
+          {
+            "incomeLevel": "Low Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "1 BR",
+                "BMR_Rent_Monthly": 2000,
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 4000,
+                "Max_AMI_for_Qualifying_Unit": 65,
+                "Planning_AMI_Tier": "Low Income",
+                "Min_Occupancy": 1,
+                "Max_Occupancy": 3,
+                "Status": "Available",
+                "total": 2,
+                "incomeLimits": [
+                  {
+                    "occupancy": 1,
+                    "minIncome": 4000,
+                    "maxIncome": "4671"
+                  },
+                  {
+                    "occupancy": 2,
+                    "minIncome": 4000,
+                    "maxIncome": "5338"
+                  },
+                  {
+                    "occupancy": 3,
+                    "minIncome": 4000,
+                    "maxIncome": "6004"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "incomeLevel": "Moderate Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "1 BR",
+                "BMR_Rent_Monthly": 2600,
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 0,
+                "Min_AMI_for_Qualifying_Unit": 65,
+                "Max_AMI_for_Qualifying_Unit": 90,
+                "Planning_AMI_Tier": "Moderate Income",
+                "Min_Occupancy": 1,
+                "Max_Occupancy": 3,
+                "Status": "Available",
+                "total": 2,
+                "incomeLimits": [
+                  {
+                    "occupancy": 1,
+                    "minIncome": "4671",
+                    "maxIncome": "6467"
+                  },
+                  {
+                    "occupancy": 2,
+                    "minIncome": "5338",
+                    "maxIncome": "7388"
+                  },
+                  {
+                    "occupancy": 3,
+                    "minIncome": "6004",
+                    "maxIncome": "8313"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

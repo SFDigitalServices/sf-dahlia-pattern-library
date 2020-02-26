@@ -1,48 +1,34 @@
-<h2 class="table-pricing-ami">{{type}}</h2>
-<div class="table-pricing-wrapper">
-  <table class="table-pricing table-pricing-rent" role="grid">
-    <thead>
-      <tr>
-        <th scope="col">Units</th>
-        <th scope="col">Income Range</th>
-        <th scope="col">Rent</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          1 <small>available</small>
-        </td>
-        <td>
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Household</th>
-                <th scope="col">Minimum</th>
-                <th scope="col">Maximum</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>$2,000 <small>per month</small></td>
-                <td>$4,671 <small>per month</small></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>$2,000 <small>per month</small></td>
-                <td>$5,338 <small>per month</small></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-        <td>$1,700 <small>per month</small></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+{{#*inline "incomeRow"}}
+<td data-th="Household Size" class="is-subtitled">{{this.occupancy}}</td>
+<td data-th="Minimum" class="is-subtitled">${{this.minIncome}} <small>per month</small></td>
+<td data-th="Maximum" class="is-subtitled">${{this.maxIncome}} <small>per month</small></td>
+{{/inline}}
 
-<h2 class="table-pricing-ami">1BR</h2>
+{{#*inline "tableRow"}}
+<td data-th="Units" class="is-subtitled has-nested-sibling">
+  {{this.total}} <small>available</small>
+</td>
+<td data-th="Income Range" class="is-supertitled">
+  <table class="table-nested-income">
+    <thead>
+      <tr>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Household Size</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Minimum</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each this.incomeLimits}}
+        <tr>{{> incomeRow }}</tr>
+      {{/each}}
+    </tbody>
+  </table>
+</td>
+<td data-th="Rent" class="is-subtitled has-nested-sibling">${{this.BMR_Rent_Monthly}} <small>per month</small></td>
+{{/inline}}
+
+{{#each units}}
+<h2 class="table-pricing-ami">{{this.type}}</h2>
 <div class="table-pricing-wrapper">
   <table class="table-pricing table-pricing-rent" role="grid">
     <thead>
@@ -53,35 +39,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          1 <small>available</small>
-        </td>
-        <td>
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Household</th>
-                <th scope="col">Minimum</th>
-                <th scope="col">Maximum</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>$2,000 <small>per month</small></td>
-                <td>$4,671 <small>per month</small></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>$2,000 <small>per month</small></td>
-                <td>$5,338 <small>per month</small></td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-        <td>$1,700 <small>per month</small></td>
-      </tr>
+      {{#each this.incomeLevels}}
+        <tr class="income-level"><td class="income-level-label">{{this.incomeLevel}}</td></tr>
+        {{#each this.priceGroups}}
+          <tr>{{> tableRow whiteout=@../index}}</tr>
+        {{/each}}
+      {{/each}}
     </tbody>
   </table>
 </div>
+{{/each}}

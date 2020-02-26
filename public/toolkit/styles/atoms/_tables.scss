@@ -499,15 +499,29 @@ table {
         left: -1.5rem;
       }
     }
+    &.income-level {
+      border-bottom: none;
+    }
   }
 
   td {
     padding: 0.75rem 0;
     @include responsive-text-size('base');
     font-feature-settings: "tnum";
+    vertical-align: top;
 
     &.availability {
       width: 7rem;
+    }
+
+    &.income-level-label {
+      position: absolute;
+      font-family: $alt-font-family;
+      @include responsive-text-size('small');
+    }
+
+    &.has-nested-sibling {
+        padding-top: 3.4rem;
     }
   }
 
@@ -548,6 +562,25 @@ table {
   }
 }
 
+.table-nested-income {
+
+  margin-bottom: 0;
+
+  th {
+    text-transform: none;
+    letter-spacing: 0;
+    &.whiteout {
+      color: $white;
+    }
+  }
+  th:last-child {
+    text-align: left;
+  }
+  tr {
+    border-bottom: none;
+  }
+}
+
 @media #{$small-only} {
   .table-pricing-wrapper {
     margin-top: 0;
@@ -580,7 +613,7 @@ table {
         text-align: right;
       }
 
-      &::before {
+      &.is-subtitled::before {
         content: attr(data-th);
         position: absolute;
         line-height: 1;
@@ -589,6 +622,14 @@ table {
         letter-spacing: .1rem;
         text-transform: uppercase;
       }
+
+      &.is-supertitled::before {
+        content: attr(data-th);
+        font-weight: $table-value-weight;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+      }
+
     }
 
     i {
