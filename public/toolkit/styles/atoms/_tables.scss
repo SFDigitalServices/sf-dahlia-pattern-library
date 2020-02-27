@@ -595,6 +595,10 @@ table {
     display: block;
     width: 100%;
 
+    small {
+      display: inline;
+    }
+
     th {
       @include element-invisible;
     }
@@ -609,11 +613,11 @@ table {
     td {
       position: relative;
 
-      &.is-subtitled {
+      &.is-subtitled, &.is-subtitled-nested {
         text-align: right;
       }
 
-      &.is-subtitled::before {
+      &.is-subtitled::before, &.is-subtitled-nested::before {
         content: attr(data-th);
         position: absolute;
         line-height: 1;
@@ -623,11 +627,24 @@ table {
         text-transform: uppercase;
       }
 
+      &.is-subtitled-nested::before {
+        text-transform: none;
+      }
+
       &.is-supertitled::before {
         content: attr(data-th);
         font-weight: $table-value-weight;
         letter-spacing: .1rem;
         text-transform: uppercase;
+        margin-left: -1rem;
+      }
+
+      &.has-nested-sibling {
+        padding-top: 0.75rem;
+      }
+
+      &[data-th="Income Range"] {
+        padding-left: 1rem;
       }
 
     }
