@@ -563,7 +563,6 @@ table {
 }
 
 .table-nested-income {
-
   margin-bottom: 0;
 
   th {
@@ -610,11 +609,25 @@ table {
       display: block;
     }
 
+    tr {
+      border-bottom: none;
+    }
+
+    tr.income-level {
+      height: 2.75rem;
+      border-bottom: 1px solid #aaaaaa;
+    }
+
     td {
       position: relative;
 
       &.is-subtitled, &.is-subtitled-nested {
         text-align: right;
+      }
+
+      &.is-subtitled-nested {
+        font-size: 0.875rem;
+        padding-bottom: 0;
       }
 
       &.is-subtitled::before, &.is-subtitled-nested::before {
@@ -656,6 +669,12 @@ table {
 
     tr.is-reserved::after {
       top: 1.5rem;
+    }
+  }
+
+  .table-nested-income {
+    td:last-of-type {
+      margin-bottom: 1rem;
     }
   }
 
