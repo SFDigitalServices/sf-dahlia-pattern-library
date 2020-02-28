@@ -27,14 +27,6 @@
 <td data-th="Rent" class="is-subtitled has-nested-sibling">${{this.BMR_Rent_Monthly}} <small>per month</small></td>
 {{/inline}}
 
-{{#if reserved}}
-<div class="message-group">
-  <div class="message is-reserved">
-    <span class="message-text">Reserved units for People with Developental Disabilities</span>  
-  </div>
-</div>
-{{/if}}
-
 {{#each rentalUnits}}
 <h2 class="table-pricing-ami">{{this.type}}</h2>
 <div class="table-pricing-wrapper">

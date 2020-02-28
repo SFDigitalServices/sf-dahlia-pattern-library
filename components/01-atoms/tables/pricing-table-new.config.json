@@ -1,8 +1,24 @@
 {
-  "title": "New AMI",
-  "label": "New AMI",
+  "title": "Pricing Table",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Rental"
+    },
+    {
+      "name": "ownership",
+      "label": "Ownership"
+    },
+    {
+      "name": "reserved",
+      "label": "Rental with Reserved Units",
+      "context": {
+        "reserved": true
+      }
+    }
+  ],
   "context": {
-    "units": [
+    "rentalUnits": [
       {
         "type": "Studio",
         "incomeLevels": [
