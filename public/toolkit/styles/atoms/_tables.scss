@@ -641,6 +641,9 @@ table {
       }
 
       &.is-subtitled-nested::before {
+        letter-spacing: 0;
+        font-weight: 400;
+        line-height: 1.3125;
         text-transform: none;
       }
 
