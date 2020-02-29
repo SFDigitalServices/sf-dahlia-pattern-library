@@ -1,6 +1,6 @@
 {{#*inline "incomeRow"}}
 <td data-th="Household Size" class="is-subtitled-nested">{{this.occupancy}}</td>
-<td data-th="Minimum" class="is-subtitled-nested">${{this.minIncome}} <small>per month</small></td>
+<td data-th="Minimum" class="is-subtitled-nested">{{#if noMin}}{{this.minIncome}}{{else}}${{this.minIncome}}  <small>per month</small>{{/if}}</td>
 <td data-th="Maximum" class="is-subtitled-nested">${{this.maxIncome}} <small>per month</small></td>
 {{/inline}}
 
@@ -27,7 +27,7 @@
 <td data-th="Rent" class="is-subtitled has-nested-sibling">${{this.BMR_Rent_Monthly}} <small>per month</small></td>
 {{/inline}}
 
-{{#each rentalUnits}}
+{{#each ownershipUnits}}
 <h2 class="table-pricing-ami">{{this.type}}</h2>
 <div class="table-pricing-wrapper">
   <table class="table-pricing table-pricing-rent" role="grid">
