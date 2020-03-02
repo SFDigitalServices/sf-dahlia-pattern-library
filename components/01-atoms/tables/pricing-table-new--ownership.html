@@ -24,7 +24,8 @@
     </tbody>
   </table>
 </td>
-<td data-th="Rent" class="is-subtitled has-nested-sibling">${{this.BMR_Rent_Monthly}} <small>per month</small></td>
+<td data-th="HOA Dues" class="is-subtitled has-nested-sibling">{{this.HOA_dues}} <small>per month</small></td>
+<td data-th="Sales Price" class="is-subtitled has-nested-sibling">${{this.BMR_Rent_Monthly}}</td>
 {{/inline}}
 
 {{#each ownershipUnits}}
@@ -35,7 +36,8 @@
       <tr>
         <th scope="col">Units</th>
         <th scope="col">Income Range</th>
-        <th scope="col">Rent</th>
+        <th scope="col">HOA Dues</th>
+        <th scope="col">Sales Price</th>
       </tr>
     </thead>
     <tbody>
