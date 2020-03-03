@@ -6,14 +6,21 @@
       "label": "Rental"
     },
     {
-      "name": "ownership",
-      "label": "Ownership"
-    },
-    {
       "name": "reserved",
       "label": "Rental with Reserved Units",
       "context": {
         "reserved": true
+      }
+    },
+    {
+      "name": "ownership",
+      "label": "Ownership"
+    },
+    {
+      "name": "ownership_dual_parking",
+      "label": "Ownership with and without Parking",
+      "context": {
+        "multipleParking": true
       }
     }
   ],
@@ -130,7 +137,7 @@
         "type": "1 BR",
         "incomeLevels": [
           {
-            "incomeLevel": "100% AMI",
+            "incomeLevel": "Low Income",
             "priceGroups": [
               {
                 "Unit_Type": "1 BR",
@@ -147,17 +154,20 @@
                   {
                     "occupancy": 1,
                     "maxIncome": "7183",
-                    "minIncome": "0"
+                    "minIncome": "None",
+                    "noMin": true
                   },
                   {
                     "occupancy": 2,
                     "maxIncome": "8208",
-                    "minIncome": "0"
+                    "minIncome": "None",
+                    "noMin": true
                   },
                   {
                     "occupancy": 3,
                     "maxIncome": "9238",
-                    "minIncome": "0"
+                    "minIncome": "None",
+                    "noMin": true
                   }
                 ]
               }
@@ -169,7 +179,7 @@
         "type": "2 BR",
         "incomeLevels": [
           {
-            "incomeLevel": "100% AMI",
+            "incomeLevel": "Low Income",
             "priceGroups": [
               {
                 "Unit_Type": "2 BR",
@@ -186,17 +196,17 @@
                   {
                     "occupancy": 2,
                     "maxIncome": "8208",
-                    "minIncome": "0"
+                    "minIncome": "None"
                   },
                   {
                     "occupancy": 3,
                     "maxIncome": "9238",
-                    "minIncome": "0"
+                    "minIncome": "None"
                   },
                   {
                     "occupancy": 4,
                     "maxIncome": "10263",
-                    "minIncome": "0"
+                    "minIncome": "None"
                   }
                 ]
               }
