@@ -196,17 +196,20 @@
                   {
                     "occupancy": 2,
                     "maxIncome": "8208",
-                    "minIncome": "None"
+                    "minIncome": "None",
+                    "noMin": true
                   },
                   {
                     "occupancy": 3,
                     "maxIncome": "9238",
-                    "minIncome": "None"
+                    "minIncome": "None",
+                    "noMin": true
                   },
                   {
                     "occupancy": 4,
                     "maxIncome": "10263",
-                    "minIncome": "None"
+                    "minIncome": "None",
+                    "noMin": true
                   }
                 ]
               }
