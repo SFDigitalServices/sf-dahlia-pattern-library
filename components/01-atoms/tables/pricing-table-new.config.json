@@ -14,14 +14,15 @@
     },
     {
       "name": "ownership",
-      "label": "Ownership"
+      "label": "Ownership, No Parking"
+    },
+    {
+      "name": "ownership_with_parking",
+      "label": "Ownership with Parking"
     },
     {
       "name": "ownership_dual_parking",
-      "label": "Ownership with and without Parking",
-      "context": {
-        "multipleParking": true
-      }
+      "label": "Ownership with and without Parking"
     }
   ],
   "context": {

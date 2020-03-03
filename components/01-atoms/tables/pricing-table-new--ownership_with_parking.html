@@ -34,32 +34,11 @@
       </tr>
     </thead>
     <tbody>
-      {{#if parking}}
-        {{#if multipleParking}}
-          <tr>
-            <td data-th="Sales Price" class="is-subtitled-nested">${{Price_Without_Parking}}</td>
-            <td data-th="HOA Dues" class="is-subtitled-nested">${{HOA_Dues_Without_Parking}} <small>per month</small></td>
-            <td data-th="Includes Parking" class="is-subtitled-nested">No</td>
-          </tr>
-          <tr>
-            <td data-th="Sales Price" class="is-subtitled-nested">${{Price_With_Parking}}</td>
-            <td data-th="HOA Dues" class="is-subtitled-nested">${{HOA_Dues_With_Parking}} <small>per month</small></td>
-            <td data-th="Includes Parking" class="is-subtitled-nested">Yes</td>
-          </tr>
-        {{else}}
-          <tr>
-            <td data-th="Sales Price" class="is-subtitled-nested">${{Price_With_Parking}}</td>
-            <td data-th="HOA Dues" class="is-subtitled-nested">${{HOA_Dues_With_Parking}} <small>per month</small></td>
-            <td data-th="Includes Parking" class="is-subtitled-nested">Yes</td>
-          </tr>
-        {{/if}}
-      {{else}}
-        <tr>
-          <td data-th="Sales Price" class="is-subtitled-nested">${{Price_Without_Parking}}</td>
-          <td data-th="HOA Dues" class="is-subtitled-nested">${{HOA_Dues_Without_Parking}} <small>per month</small></td>
-          <td data-th="Includes Parking" class="is-subtitled-nested">No</td>
-        </tr>
-      {{/if}}
+      <tr>
+        <td data-th="Sales Price" class="is-subtitled-nested">${{Price_With_Parking}}</td>
+        <td data-th="HOA Dues" class="is-subtitled-nested">${{HOA_Dues_With_Parking}} <small>per month</small></td>
+        <td data-th="Includes Parking" class="is-subtitled-nested">Yes</td>
+      </tr>
     </tbody>
   </table>
 </td>
