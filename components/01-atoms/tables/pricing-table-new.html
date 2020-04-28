@@ -48,7 +48,9 @@
     </thead>
     <tbody>
       {{#each this.incomeLevels}}
-        <tr class="income-level"><td class="income-level-label">{{this.incomeLevel}}</td></tr>
+        <tr class="income-level">
+          <td class="income-level-label">{{this.incomeLevel}}</td>
+        </tr>
         {{#each this.priceGroups}}
           <tr>{{> tableRow whiteout=@../index}}</tr>
         {{/each}}
