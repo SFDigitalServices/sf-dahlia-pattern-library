@@ -1,0 +1,61 @@
+{{#*inline "incomeRow"}}
+<td data-th="Household Size" class="is-subtitled-nested">{{this.occupancy}}</td>
+<td data-th="Minimum" class="is-subtitled-nested">${{this.minIncome}} <small>per month</small></td>
+<td data-th="Maximum" class="is-subtitled-nested">${{this.maxIncome}} <small>per month</small></td>
+{{/inline}}
+
+{{#*inline "tableRow"}}
+<td data-th="Units" class="is-subtitled has-nested-sibling">
+  {{this.total}} <small>available</small>
+</td>
+<td data-th="Income Range" class="is-supertitled">
+  <table class="table-nested-income">
+    <thead>
+      <tr>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Household Size</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Minimum</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each this.incomeLimits}}
+        <tr>{{> incomeRow }}</tr>
+      {{/each}}
+    </tbody>
+  </table>
+</td>
+<td data-th="Rent" class="is-subtitled has-nested-sibling">${{this.BMR_Rent_Monthly}} <small>per month</small></td>
+{{/inline}}
+
+{{#if reserved}}
+<div class="message-group">
+  <div class="message is-reserved">
+    <span class="message-text">Reserved units for People with Developental Disabilities</span>  
+  </div>
+</div>
+{{/if}}
+
+{{#each rentalUnits}}
+<h2 class="table-pricing-ami">{{this.type}}</h2>
+<div class="table-pricing-wrapper">
+  <table class="table-pricing table-pricing-rent" role="grid">
+    <thead>
+      <tr>
+        <th scope="col">Units</th>
+        <th scope="col">Income Range</th>
+        <th scope="col">Rent</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each this.incomeLevels}}
+        <tr class="income-level">
+          <td class="income-level-label">{{this.incomeLevel}}</td>
+        </tr>
+        {{#each this.priceGroups}}
+          <tr>{{> tableRow whiteout=@../index}}</tr>
+        {{/each}}
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+{{/each}}

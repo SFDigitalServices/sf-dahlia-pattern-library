@@ -499,15 +499,29 @@ table {
         left: -1.5rem;
       }
     }
+    &.income-level {
+      border-bottom: none;
+    }
   }
 
   td {
     padding: 0.75rem 0;
     @include responsive-text-size('base');
     font-feature-settings: "tnum";
+    vertical-align: top;
 
     &.availability {
       width: 7rem;
+    }
+
+    &.income-level-label {
+      position: absolute;
+      font-family: $alt-font-family;
+      @include responsive-text-size('small');
+    }
+
+    &.has-nested-sibling {
+        padding-top: 3.4rem;
     }
   }
 
@@ -548,6 +562,24 @@ table {
   }
 }
 
+.table-nested-income {
+  margin-bottom: 0;
+
+  th {
+    text-transform: none;
+    letter-spacing: 0;
+    &.whiteout {
+      color: $white;
+    }
+  }
+  th:last-child {
+    text-align: left;
+  }
+  tr {
+    border-bottom: none;
+  }
+}
+
 @media #{$small-only} {
   .table-pricing-wrapper {
     margin-top: 0;
@@ -562,6 +594,11 @@ table {
     display: block;
     width: 100%;
 
+    small {
+      display: inline;
+      margin-left: 0.125rem;
+    }
+
     th {
       @include element-invisible;
     }
@@ -573,14 +610,28 @@ table {
       display: block;
     }
 
+    tr {
+      border-bottom: none;
+    }
+
+    tr.income-level {
+      height: 2.75rem;
+      border-bottom: 1px solid #aaaaaa;
+    }
+
     td {
       position: relative;
 
-      &.is-subtitled {
+      &.is-subtitled, &.is-subtitled-nested {
         text-align: right;
       }
 
-      &::before {
+      &.is-subtitled-nested {
+        font-size: 0.875rem;
+        padding-bottom: 0;
+      }
+
+      &.is-subtitled::before, &.is-subtitled-nested::before {
         content: attr(data-th);
         position: absolute;
         line-height: 1;
@@ -589,6 +640,30 @@ table {
         letter-spacing: .1rem;
         text-transform: uppercase;
       }
+
+      &.is-subtitled-nested::before {
+        letter-spacing: 0;
+        font-weight: 400;
+        line-height: 1.3125;
+        text-transform: none;
+      }
+
+      &.is-supertitled::before {
+        content: attr(data-th);
+        font-weight: $table-value-weight;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        margin-left: -1rem;
+      }
+
+      &.has-nested-sibling {
+        padding-top: 0.75rem;
+      }
+
+      &[data-th="Income Range"], &[data-th="Pricing"] {
+        padding-left: 1rem;
+      }
+
     }
 
     i {
@@ -598,6 +673,12 @@ table {
 
     tr.is-reserved::after {
       top: 1.5rem;
+    }
+  }
+
+  .table-nested-income {
+    td:last-of-type {
+      margin-bottom: 1rem;
     }
   }
 

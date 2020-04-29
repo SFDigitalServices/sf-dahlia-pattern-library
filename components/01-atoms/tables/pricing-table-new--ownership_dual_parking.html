@@ -1,0 +1,73 @@
+{{#*inline "incomeRow"}}
+<td data-th="Household Size" class="is-subtitled-nested">{{occupancy}}</td>
+<td data-th="Minimum" class="is-subtitled-nested">{{#if noMin}}{{minIncome}}{{else}}${{minIncome}}  <small>per month</small>{{/if}}</td>
+<td data-th="Maximum" class="is-subtitled-nested">${{maxIncome}} <small>per month</small></td>
+{{/inline}}
+
+{{#*inline "tableRow"}}
+<td data-th="Units" class="is-subtitled has-nested-sibling">
+  {{total}} <small>available</small>
+</td>
+<td data-th="Income Range" class="is-supertitled">
+  <table class="table-nested-income">
+    <thead>
+      <tr>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Household Size</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Minimum</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each incomeLimits}}
+        <tr>{{> incomeRow }}</tr>
+      {{/each}}
+    </tbody>
+  </table>
+</td>
+<td data-th="Pricing" class="is-supertitled">
+  <table class="table-nested-income">
+    <thead>
+      <tr>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Sales Price</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>HOA Dues</th>
+        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Parking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-th="Sales Price" class="is-subtitled-nested">${{Price_Without_Parking}}</td>
+        <td data-th="HOA Dues" class="is-subtitled-nested">${{HOA_Dues_Without_Parking}} <small>per month</small></td>
+        <td data-th="Includes Parking" class="is-subtitled-nested">No</td>
+      </tr>
+      <tr>
+        <td data-th="Sales Price" class="is-subtitled-nested">${{Price_With_Parking}}</td>
+        <td data-th="HOA Dues" class="is-subtitled-nested">${{HOA_Dues_With_Parking}} <small>per month</small></td>
+        <td data-th="Includes Parking" class="is-subtitled-nested">Yes</td>
+      </tr>
+    </tbody>
+  </table>
+</td>
+{{/inline}}
+
+{{#each ownershipUnits}}
+<h2 class="table-pricing-ami">{{this.type}}</h2>
+<div class="table-pricing-wrapper">
+  <table class="table-pricing" role="grid">
+    <thead>
+      <tr>
+        <th scope="col">Units</th>
+        <th scope="col">Income Range</th>
+        <th scope="col">Pricing</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each this.incomeLevels}}
+        <tr class="income-level"><td class="income-level-label">{{this.incomeLevel}}</td></tr>
+        {{#each this.priceGroups}}
+          <tr>{{> tableRow whiteout=@../index}}</tr>
+        {{/each}}
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+{{/each}}

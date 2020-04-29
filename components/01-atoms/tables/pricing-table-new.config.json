@@ -1,0 +1,223 @@
+{
+  "title": "Pricing Table",
+  "variants": [
+    {
+      "name": "default",
+      "label": "Rental"
+    },
+    {
+      "name": "reserved",
+      "label": "Rental with Reserved Units",
+      "context": {
+        "reserved": true
+      }
+    },
+    {
+      "name": "ownership",
+      "label": "Ownership, No Parking"
+    },
+    {
+      "name": "ownership_with_parking",
+      "label": "Ownership with Parking"
+    },
+    {
+      "name": "ownership_dual_parking",
+      "label": "Ownership with and without Parking"
+    }
+  ],
+  "context": {
+    "rentalUnits": [
+      {
+        "type": "Studio",
+        "incomeLevels": [
+          {
+            "incomeLevel": "Low Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "Studio",
+                "BMR_Rent_Monthly": 1700,
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 3400,
+                "Max_AMI_for_Qualifying_Unit": 65,
+                "Planning_AMI_Tier": "Low Income",
+                "Min_Occupancy": 1,
+                "Max_Occupancy": 2,
+                "Status": "Available",
+                "total": 1,
+                "incomeLimits": [
+                  {
+                    "occupancy": 1,
+                    "minIncome": 3400,
+                    "maxIncome": "4671"
+                  },
+                  {
+                    "occupancy": 2,
+                    "minIncome": 3400,
+                    "maxIncome": "5338"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "1 BR",
+        "incomeLevels": [
+          {
+            "incomeLevel": "Low Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "1 BR",
+                "BMR_Rent_Monthly": 2000,
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 4000,
+                "Max_AMI_for_Qualifying_Unit": 65,
+                "Planning_AMI_Tier": "Low Income",
+                "Min_Occupancy": 1,
+                "Max_Occupancy": 3,
+                "Status": "Available",
+                "total": 2,
+                "incomeLimits": [
+                  {
+                    "occupancy": 1,
+                    "minIncome": 4000,
+                    "maxIncome": "4671"
+                  },
+                  {
+                    "occupancy": 2,
+                    "minIncome": 4000,
+                    "maxIncome": "5338"
+                  },
+                  {
+                    "occupancy": 3,
+                    "minIncome": 4000,
+                    "maxIncome": "6004"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "incomeLevel": "Moderate Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "1 BR",
+                "BMR_Rent_Monthly": 2600,
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 0,
+                "Min_AMI_for_Qualifying_Unit": 65,
+                "Max_AMI_for_Qualifying_Unit": 90,
+                "Planning_AMI_Tier": "Moderate Income",
+                "Min_Occupancy": 1,
+                "Max_Occupancy": 3,
+                "Status": "Available",
+                "total": 2,
+                "incomeLimits": [
+                  {
+                    "occupancy": 1,
+                    "minIncome": "4671",
+                    "maxIncome": "6467"
+                  },
+                  {
+                    "occupancy": 2,
+                    "minIncome": "5338",
+                    "maxIncome": "7388"
+                  },
+                  {
+                    "occupancy": 3,
+                    "minIncome": "6004",
+                    "maxIncome": "8313"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "ownershipUnits": [
+      {
+        "type": "1 BR",
+        "incomeLevels": [
+          {
+            "incomeLevel": "Low Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "1 BR",
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 0,
+                "Price_Without_Parking": 346547,
+                "Price_With_Parking": 387959,
+                "HOA_Dues_Without_Parking": 425,
+                "HOA_Dues_With_Parking": 475,
+                "Max_AMI_for_Qualifying_Unit": 100,
+                "Min_Occupancy": 1,
+                "Status": "Available",
+                "total": 2,
+                "incomeLimits": [
+                  {
+                    "occupancy": 1,
+                    "maxIncome": "7183",
+                    "minIncome": "None",
+                    "noMin": true
+                  },
+                  {
+                    "occupancy": 2,
+                    "maxIncome": "8208",
+                    "minIncome": "None",
+                    "noMin": true
+                  },
+                  {
+                    "occupancy": 3,
+                    "maxIncome": "9238",
+                    "minIncome": "None",
+                    "noMin": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "2 BR",
+        "incomeLevels": [
+          {
+            "incomeLevel": "Low Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "2 BR",
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 0,
+                "Price_Without_Parking": 399091,
+                "Price_With_Parking": 446948,
+                "HOA_Dues_Without_Parking": 450,
+                "HOA_Dues_With_Parking": 500,
+                "Max_AMI_for_Qualifying_Unit": 100,
+                "Min_Occupancy": 2,
+                "Status": "Available",
+                "total": 5,
+                "incomeLimits": [
+                  {
+                    "occupancy": 2,
+                    "maxIncome": "8208",
+                    "minIncome": "None",
+                    "noMin": true
+                  },
+                  {
+                    "occupancy": 3,
+                    "maxIncome": "9238",
+                    "minIncome": "None",
+                    "noMin": true
+                  },
+                  {
+                    "occupancy": 4,
+                    "maxIncome": "10263",
+                    "minIncome": "None",
+                    "noMin": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
