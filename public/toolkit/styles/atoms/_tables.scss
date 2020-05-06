@@ -661,6 +661,10 @@ table {
       }
 
       &[data-th="Income Range"], &[data-th="Pricing"] {
+        /*padding-left: 1rem;*/
+      }
+
+      &.is-nested {
         padding-left: 1rem;
       }
 
