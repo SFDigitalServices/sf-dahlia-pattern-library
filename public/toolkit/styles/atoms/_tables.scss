@@ -251,6 +251,13 @@ table {
       box-shadow: $td-reserved-inset;
     }
   }
+
+  &.top-align {
+    td, th {
+      vertical-align: top;
+    }
+  }
+
 }
 
 .scrollable-table-container {
