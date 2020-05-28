@@ -603,7 +603,9 @@ table {
 
     small {
       display: inline;
-      margin-left: 0.125rem;
+      &::before {
+        content: "\00a0";
+      }
     }
 
     th {
