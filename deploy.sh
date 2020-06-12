@@ -43,4 +43,4 @@ echo 'vendor' > .gitignore
 git remote add $app https://git.heroku.com/$app.git
 git add .
 git commit -am 'Deploying latest pattern library to heroku'
-git push --force $app master
+git push --force $app main
