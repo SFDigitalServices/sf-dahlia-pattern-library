@@ -33,7 +33,7 @@ To deploy the application (run this from the project directory):
 
 Branches can be used for one-off small feature updates, as well as epic feature branches that contain all of the updates for a particular epic feature. These branches generally correspond to features in the [DAHLIA web app](https://github.com/Exygy/sf-dahlia-web).
 
-* `master` corresponds to `sf-dahlia-web:master`, in that they both represent the current state of all accepted features in QA.
+* `main` corresponds to `sf-dahlia-web:main`, in that they both represent the current state of all accepted features in QA.
 * an example epic feature branch might be `multifamily-shortform` which has all the updates for an entire epic feature (Multifamily Shortform Application)
 * an example small feature branch might be `features/utilities-documentation-#143062915` which includes a set of changes specific to one user story (with the pivotal tracker ID found at the end of the branch e.g. `#143062915`)
 
