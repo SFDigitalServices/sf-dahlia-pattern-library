@@ -569,8 +569,16 @@ table {
   }
 }
 
-.table-nested-income {
+@mixin table-nested {
   margin-bottom: 0;
+
+  tr {
+    border-bottom: none;
+  }
+}
+
+.table-nested-income {
+  @include table-nested;
 
   th {
     text-transform: none;
@@ -582,8 +590,19 @@ table {
   th:last-child {
     text-align: left;
   }
-  tr {
-    border-bottom: none;
+}
+
+.table-nested-rent {
+  @include table-nested;
+
+  th {
+    color: $white;
+  }
+}
+
+@media #{$medium-up} {
+  td.cell-show-small-only {
+    display: none !important;
   }
 }
 
@@ -617,6 +636,10 @@ table {
     td,
     tbody {
       display: block;
+    }
+
+    td.cell-hide-small-only {
+      display: none !important;
     }
 
     tr {
