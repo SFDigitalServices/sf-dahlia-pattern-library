@@ -5,8 +5,18 @@
 {{/inline}}
 
 {{#*inline "tableRow"}}
-<td data-th="Units" class="is-subtitled has-nested-sibling">
+<td data-th="Units" class="is-subtitled has-nested-sibling cell-show-small-only">
   {{total}} <small>available</small>
+</td>
+<td data-th="Units" class="is-nested table-cell-units cell-hide-small-only">
+  <table class="table-nested-units">
+    <thead>
+      <tr><th>{{this.Planning_AMI_Tier}}</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>{{total}} <small>available</small></td></tr>
+    </tbody>
+  </table>
 </td>
 <td data-th="Income Range" class="is-supertitled is-nested">
   <table class="table-nested-income">
@@ -78,7 +88,9 @@
     </thead>
     <tbody>
       {{#each this.incomeLevels}}
-        <tr class="income-level"><td class="income-level-label">{{this.incomeLevel}}</td></tr>
+        <tr class="income-level row-show-small-only">
+          <td class="income-level-label">{{this.incomeLevel}}</td>
+        </tr>
         {{#each this.priceGroups}}
           <tr>{{> tableRow whiteout=@../index}}</tr>
         {{/each}}
