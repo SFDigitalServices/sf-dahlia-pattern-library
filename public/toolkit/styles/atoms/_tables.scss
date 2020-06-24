@@ -513,6 +513,7 @@ table {
       }
     }
     &.income-level {
+      box-sizing: content-box;
       border-bottom: none;
     }
   }
@@ -528,7 +529,6 @@ table {
     }
 
     &.income-level-label {
-      position: absolute;
       @include income-label-style;
     }
 
