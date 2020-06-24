@@ -2,6 +2,12 @@ $td-reserved-light: lighten($splash-tint, 10%);
 $td-reserved-lighter: lighten($splash-tint, 11%);
 $td-reserved-inset: inset 3px 0px 0px 0px rgba(255,102,39,1);
 
+@mixin income-label-style {
+  color: $charcoal;
+  font-family: $alt-font-family;
+  @include responsive-text-size('small');
+}
+
 .th {
   font-weight: $table-value-weight;
   letter-spacing: .1rem;
@@ -507,6 +513,7 @@ table {
       }
     }
     &.income-level {
+      box-sizing: content-box;
       border-bottom: none;
     }
   }
@@ -522,9 +529,7 @@ table {
     }
 
     &.income-level-label {
-      position: absolute;
-      font-family: $alt-font-family;
-      @include responsive-text-size('small');
+      @include income-label-style;
     }
 
     &.has-nested-sibling {
@@ -569,11 +574,29 @@ table {
   }
 }
 
+.table-cell-units {
+  width: 100px;
+}
+
 @mixin table-nested {
   margin-bottom: 0;
 
   tr {
     border-bottom: none;
+  }
+}
+
+.table-nested-units {
+  @include table-nested;
+
+  th {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  th:last-child {
+    text-align: left;
+    @include income-label-style;
   }
 }
 
@@ -602,6 +625,10 @@ table {
 
 @media #{$medium-up} {
   td.cell-show-small-only {
+    display: none !important;
+  }
+
+  tr.row-show-small-only {
     display: none !important;
   }
 }

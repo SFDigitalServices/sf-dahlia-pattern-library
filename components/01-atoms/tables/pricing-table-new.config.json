@@ -149,6 +149,7 @@
                 "HOA_Dues_With_Parking": 475,
                 "Max_AMI_for_Qualifying_Unit": 100,
                 "Min_Occupancy": 1,
+                "Planning_AMI_Tier": "Low Income",
                 "Status": "Available",
                 "total": 2,
                 "incomeLimits": [
@@ -191,6 +192,7 @@
                 "HOA_Dues_With_Parking": 500,
                 "Max_AMI_for_Qualifying_Unit": 100,
                 "Min_Occupancy": 2,
+                "Planning_AMI_Tier": "Low Income",
                 "Status": "Available",
                 "total": 5,
                 "incomeLimits": [
@@ -209,6 +211,44 @@
                   {
                     "occupancy": 4,
                     "maxIncome": "10263",
+                    "minIncome": "None",
+                    "noMin": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "incomeLevel": "Moderate Income",
+            "priceGroups": [
+              {
+                "Unit_Type": "2 BR",
+                "BMR_Rental_Minimum_Monthly_Income_Needed": 0,
+                "Price_Without_Parking": 500050,
+                "Price_With_Parking": 446948,
+                "HOA_Dues_Without_Parking": 450,
+                "HOA_Dues_With_Parking": 500,
+                "Max_AMI_for_Qualifying_Unit": 100,
+                "Min_Occupancy": 2,
+                "Planning_AMI_Tier": "Moderate Income",
+                "Status": "Available",
+                "total": 2,
+                "incomeLimits": [
+                  {
+                    "occupancy": 2,
+                    "maxIncome": "10208",
+                    "minIncome": "None",
+                    "noMin": true
+                  },
+                  {
+                    "occupancy": 3,
+                    "maxIncome": "11238",
+                    "minIncome": "None",
+                    "noMin": true
+                  },
+                  {
+                    "occupancy": 4,
+                    "maxIncome": "12263",
                     "minIncome": "None",
                     "noMin": true
                   }
