@@ -1825,6 +1825,39 @@
       "setIdx": 0,
       "setId": 2,
       "iconIdx": 44
+    },
+    {
+      "icon": {
+        "paths": [
+          "M376 232H8c-4.42 0-8 3.58-8 8v32c0 4.42 3.58 8 8 8h368c4.42 0 8-3.58 8-8v-32c0-4.42-3.58-8-8-8z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "minus"
+        ],
+        "colorPermutations": {
+          "13415120311762112401191601331199203199120620117412159074122110529123123623712361862212372352181778182185961281": [
+            {}
+          ]
+        }
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 146,
+        "id": 0,
+        "name": "minus",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 44
     }
   ],
   "height": 1024,
