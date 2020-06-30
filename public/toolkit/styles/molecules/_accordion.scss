@@ -65,19 +65,20 @@
 .accordion-plus-minus {
   @include responsive-text-size('small');
 
-  .accordion-header {
-    background-color: $smoke;
-    &.active {
-      background-color: $smoke;
-    }
-  }
-
   .ui-minus {
     display: none;
   }
 
   .ui-plus {
     display: block;
+  }
+
+  .content {
+    border: 1px solid $smoke;
+  }
+
+  .accordion-navigation {
+    margin-bottom: 16px !important;
   }
 
   .accordion-navigation a, .accordion-navigation.active a {
@@ -96,6 +97,15 @@
       width: 1.5rem;
       height: 1.5rem;
     }
+
+    &.accordion-header {
+      background-color: $smoke;
+      margin-bottom: 0;
+      &.active {
+        background-color: $smoke;
+        margin-bottom: 0;
+      }
+    }
   }
 
   .accordion-navigation.active a {
@@ -105,5 +115,9 @@
     .ui-plus {
       display: none;
     }
+  }
+
+  .checkbox-block {
+    margin-bottom: 16px;
   }
 }
