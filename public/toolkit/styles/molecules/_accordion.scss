@@ -66,15 +66,18 @@
   @include responsive-text-size('small');
 
   .ui-minus {
+    fill: #4D4D4D;
     display: none;
   }
 
   .ui-plus {
+    fill: #4D4D4D;
     display: block;
   }
 
   .content {
-    border: 1px solid $smoke;
+    border: 2px solid $ghost;
+    padding: 1rem 2rem 2rem !important;
   }
 
   .accordion-navigation {
@@ -85,12 +88,12 @@
     @include type-weight(bold);
     @include responsive-text-size('small');
     text-decoration: none;
-    color: $oil;
-    background-color: $smoke;
+    color: #4D4D4D;
+    background-color: $ghost;
     position: relative;
     margin-bottom: 16px;
     &:hover, &:focus {
-      background-color: $smoke;
+      background-color: $ghost;
       text-decoration: none;
     }
     .ui-medium svg {
@@ -99,12 +102,8 @@
     }
 
     &.accordion-header {
-      background-color: $smoke;
+      background-color: $ghost;
       margin-bottom: 0;
-      &.active {
-        background-color: $smoke;
-        margin-bottom: 0;
-      }
     }
   }
 
@@ -112,12 +111,20 @@
     .ui-minus {
       display: block;
     }
+
     .ui-plus {
       display: none;
     }
   }
 
-  .checkbox-block {
-    margin-bottom: 16px;
+  .checkbox-block-accordion {
+    font-family: $font-family;
+
+    input[type="checkbox"] + label {
+      margin: 0px;
+      display: flex;
+      align-items: center;
+      height: 44px;
+    }
   }
 }
