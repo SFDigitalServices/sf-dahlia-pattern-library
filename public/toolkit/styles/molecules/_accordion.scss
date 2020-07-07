@@ -72,14 +72,14 @@ $accordion-text-color: #4D4D4D;
 .accordion-plus-minus {
   @include responsive-text-size('base');
 
-  $icon-show: (
-    fill: $accordion-text-color,
-    display: block
-  );
+  @mixin icon-show {
+    fill: $accordion-text-color;
+    display: block;
+  }
 
-  $icon-hide: (
-    display: none
-  );
+  @mixin icon-hide {
+    display: none;
+  }
 
   .ui-minus {
     @include icon-hide();
