@@ -75,11 +75,12 @@ $accordion-text-color: #4D4D4D;
   @mixin icon-show {
     fill: $accordion-text-color;
     display: block;
-  }
+  };
 
   @mixin icon-hide {
+    fill: $accordion-text-color;
     display: none;
-  }
+  };
 
   .ui-minus {
     @include icon-hide();
@@ -137,13 +138,34 @@ $accordion-text-color: #4D4D4D;
   }
 
   .checkbox-block-accordion {
-    font-family: $font-family;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
 
     input[type="checkbox"] + label {
-      margin: 0px;
+      margin: 0;
       display: flex;
+      // issue with this, padding is no longer right -____-
       align-items: center;
-      height: rem-calc(44);
+      min-height: rem-calc(44);
+    }
+
+    input[type="checkbox"] + label::before {
+      flex-shrink: 0;
+
+      // unfortunately we need this for the checkbox to look centered when text wraps to multiple lines.
+      //margin-top: 2px;
+    }
+
+    .checkbox-and-label {
+      padding-right: rem-calc(16);
+    }
+
+    .other-specify-text {
+      width: auto;
+      margin-bottom: 0;
+      flex-grow: 2;
     }
   }
 }
