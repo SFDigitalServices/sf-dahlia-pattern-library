@@ -1,6 +1,6 @@
 <dl class="accordion-plus-minus accordion trigger-right" data-accordion>
   <dd class="accordion-navigation">
-    <a href="#panel-1-a" class="accordion-header">
+    <a href="#panel-1-a" class="accordion-header" draggable="false">
       Accordion Selection 1
       {{> @icon-plus-minus active="false" position="control"}}
     </a>
@@ -28,7 +28,7 @@
     </div>
   </dd>
   <dd class="accordion-navigation">
-    <a href="#panel-1-b" class="accordion-header">
+    <a href="#panel-1-b" class="accordion-header" draggable="false">
       Accordion Selection 2
       {{> @icon-plus-minus active="false" position="control"}}
     </a>
@@ -74,8 +74,8 @@
     </div>
   </dd>
   <dd class="accordion-navigation">
-    <a href="#panel-1-c" class="accordion-header">
-      Accordion Selection 2
+    <a href="#panel-1-c" class="accordion-header" draggable="false">
+      Accordion Selection 3
       {{> @icon-plus-minus active="false" position="control"}}
     </a>
     <div id="panel-1-c" class="content">
@@ -83,6 +83,27 @@
         <div class="checkbox-block-accordion">
             <input type="checkbox" name="preferences" value="panel-1-c-opt-1" id="panel-1-c-opt-1">
             <label for="panel-1-c-opt-1">
+              Option 1
+            </label>
+        </div>
+      </div>
+    </div>
+  </dd>
+  <dd class="accordion-navigation">
+    <a href="#panel-1-d" class="accordion-header" draggable="false">
+      Accordion Selection 4
+      <span class="ui-icon ui-{{default position 'static'}} ui-{{ default size 'medium'}} i-{{default fill 'color'}} {{default classes ''}}">
+        <svg class="ui-check">
+          <use xlink:href="#i-check"></use>
+        </svg>
+      </span>
+      {{> @icon-plus-minus active="false" position="control"}}
+    </a>
+    <div id="panel-1-d" class="content">
+      <div class="checkbox-group" role="group">
+        <div class="checkbox-block-accordion">
+            <input type="checkbox" name="preferences" value="panel-1-d-opt-1" id="panel-1-d-opt-1">
+            <label for="panel-1-d-opt-1">
               Option 1
             </label>
         </div>

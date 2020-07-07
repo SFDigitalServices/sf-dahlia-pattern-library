@@ -75,6 +75,14 @@
     display: block;
   }
 
+  .ui-check {
+    fill: #2E8540;
+    float: right;
+    margin-right: 2rem;
+    width: 24px;
+    height: 16px;
+  }
+
   .content {
     border: 2px solid $ghost;
     padding: 1rem 2rem 2rem !important;
