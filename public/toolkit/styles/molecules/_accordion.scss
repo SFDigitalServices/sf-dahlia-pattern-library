@@ -98,7 +98,7 @@ $accordion-text-color: #4D4D4D;
 
   .content {
     border: 2px solid $accordion-background;
-    padding: 1rem 2rem 2rem !important;
+    padding: 1rem 2rem 1rem !important;
   }
 
   .accordion-navigation {
@@ -146,26 +146,24 @@ $accordion-text-color: #4D4D4D;
     input[type="checkbox"] + label {
       margin: 0;
       display: flex;
-      // issue with this, padding is no longer right -____-
       align-items: center;
       min-height: rem-calc(44);
     }
 
     input[type="checkbox"] + label::before {
       flex-shrink: 0;
-
-      // unfortunately we need this for the checkbox to look centered when text wraps to multiple lines.
-      //margin-top: 2px;
     }
 
     .checkbox-and-label {
       padding-right: rem-calc(16);
     }
 
-    .other-specify-text {
+    .checkbox-text-input {
       width: auto;
       margin-bottom: 0;
       flex-grow: 2;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
     }
   }
 }
