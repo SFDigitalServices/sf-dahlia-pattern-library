@@ -98,7 +98,7 @@ $accordion-text-color: #4D4D4D;
 
   .content {
     border: 2px solid $accordion-background;
-    padding: 1rem 2rem 1rem !important;
+    padding: 1rem 2rem 2rem !important;
   }
 
   .accordion-navigation {
@@ -162,8 +162,6 @@ $accordion-text-color: #4D4D4D;
       width: auto;
       margin-bottom: 0;
       flex-grow: 2;
-      margin-top: 0.25rem;
-      margin-bottom: 1rem;
     }
   }
 }
