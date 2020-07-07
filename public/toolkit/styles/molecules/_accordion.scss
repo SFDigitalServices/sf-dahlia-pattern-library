@@ -62,66 +62,77 @@
   }
 }
 
+//
+// Accordion specific to demographics
+//
+
+$accordion-background: $ghost;
+$accordion-text-color: #4D4D4D;
+
 .accordion-plus-minus {
-  @include responsive-text-size('small');
+  @include responsive-text-size('base');
+
+  $icon-show: (
+    fill: $accordion-text-color,
+    display: block
+  );
+
+  $icon-hide: (
+    display: none
+  );
 
   .ui-minus {
-    fill: #4D4D4D;
-    display: none;
+    @include icon-hide();
   }
 
   .ui-plus {
-    fill: #4D4D4D;
-    display: block;
+    @include icon-show();
   }
 
   .ui-check {
     fill: #2E8540;
     float: right;
     margin-right: 2rem;
-    width: 24px;
-    height: 16px;
   }
 
   .content {
-    border: 2px solid $ghost;
+    border: 2px solid $accordion-background;
     padding: 1rem 2rem 2rem !important;
   }
 
   .accordion-navigation {
-    margin-bottom: 16px !important;
+    margin-bottom: 1rem !important;
   }
 
   .accordion-navigation a, .accordion-navigation.active a {
-    @include type-weight(bold);
-    @include responsive-text-size('small');
+    @include type-weight(semi);
     text-decoration: none;
-    color: #4D4D4D;
-    background-color: $ghost;
+    color: $accordion-text-color;
+    background-color: $accordion-background;
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
+
     &:hover, &:focus {
-      background-color: $ghost;
-      text-decoration: none;
+      background-color: $accordion-background;
     }
+
     .ui-medium svg {
       width: 1.5rem;
       height: 1.5rem;
     }
 
     &.accordion-header {
-      background-color: $ghost;
       margin-bottom: 0;
     }
   }
 
   .accordion-navigation.active a {
     .ui-minus {
-      display: block;
+      @include icon-show();
     }
 
     .ui-plus {
-      display: none;
+      @include icon-hide();
     }
   }
 
@@ -132,7 +143,7 @@
       margin: 0px;
       display: flex;
       align-items: center;
-      height: 44px;
+      height: rem-calc(44);
     }
   }
 }
