@@ -2,7 +2,7 @@
 DIST=build
 if [ ! -d "$DIST" ]; then
 	echo "** Uh oh! **"
-	echo "Directory '$DIST' does not exist -- you need to run 'npm build' before deploying."
+	echo "Directory '$DIST' does not exist -- you need to run 'npm run-script build' before deploying."
 	exit
 fi
 cd $DIST
@@ -43,4 +43,6 @@ echo 'vendor' > .gitignore
 git remote add $app https://git.heroku.com/$app.git
 git add .
 git commit -am 'Deploying latest pattern library to heroku'
-git push --force $app main
+
+# Note that this is "master", not "main", because heroku always defaults to a master branch
+git push --force $app master

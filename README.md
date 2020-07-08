@@ -18,16 +18,16 @@ Includes:
 
 ## Deploying to Heroku
 
-The Heroku application is served out of the `dist` directory which is the static HTML output of the pattern library. The bulk of the pattern library is in `/dist/toolkit/`, which is ignored from git and recreated every time you run `npm start`.
+The Heroku application is served out of the `dist` directory which is the static HTML output of the pattern library. The bulk of the pattern library is in `/dist/toolkit/`, which is ignored from git and recreated every time you run `npm run-script build`.
 
-To deploy the application (run this from the project directory):
-
-* `./deploy.sh [appname]`
+To deploy the application:
+1. cd into the project root directory
+1. run `npm run-script build` if you haven't yet ran it yet on the current code.
+1. run `./deploy.sh [appname]`
   * If `appname` is not specified, the application will be deployed to `https://sf-dahlia-pattern-library.herokuapp.com/`
-  * If `appname` is specifed, the script create and deploy to a new heroku app with the naming convention`sf-dahlia-pl-[appname]` (if it doesn't already exist).
+  * If `appname` is specified, the script create and deploy to a new heroku app with the naming convention`sf-dahlia-pl-[appname]` (if it doesn't already exist).
     * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pl-testing.herokuapp.com`
-
-* This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pl-new-menu.herokuapp.com`
+  * This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pl-new-menu.herokuapp.com`
 
 ## Branches
 
