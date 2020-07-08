@@ -642,16 +642,22 @@ table {
 }
 
 @media #{$large-up} {
-  td.cell-show-small-only {
+  td.cell-hide-large-up {
     display: none !important;
   }
 
-  tr.row-show-small-only {
+  tr.row-hide-large-up {
     display: none !important;
   }
 }
 
 @media #{$small-only}, #{$medium-only} {
+  td.cell-show-large-up {
+    display: none !important;
+  }
+}
+
+@mixin mobile-table-styling {
   .table-pricing-wrapper {
     margin-top: 0;
   }
@@ -681,10 +687,6 @@ table {
     td,
     tbody {
       display: block;
-    }
-
-    td.cell-hide-small-only {
-      display: none !important;
     }
 
     tr {
@@ -740,7 +742,6 @@ table {
       &.is-nested {
         padding-left: 1rem;
       }
-
     }
 
     i {
@@ -798,5 +799,15 @@ table {
 
   .pricing-table-waitlist {
     padding: 0.5rem 0;
+  }
+}
+
+@media #{$small-only} {
+  @include mobile-table-styling()
+}
+
+@media #{$medium-only} {
+  .with-mobile-pricing-on-tablet {
+    @include mobile-table-styling()
   }
 }
