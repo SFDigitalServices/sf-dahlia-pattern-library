@@ -2,10 +2,21 @@ $td-reserved-light: lighten($splash-tint, 10%);
 $td-reserved-lighter: lighten($splash-tint, 11%);
 $td-reserved-inset: inset 3px 0px 0px 0px rgba(255,102,39,1);
 
+// AMI table treats medium widths as small, need to use custom responsive text function.
+@mixin responsive-ami-text-size($text-size) {
+  @include text-size($text-size, 'small');
+
+  @if map-has-key(text-breakpoints-for($text-size), 'medium') {
+    @include respond-above('large') {
+      @include text-size($text-size, 'medium');
+    }
+  }
+}
+
 @mixin income-label-style {
   color: $charcoal;
   font-family: $alt-font-family;
-  @include responsive-text-size('small');
+  @include responsive-ami-text-size('small');
 }
 
 .th {
@@ -148,7 +159,7 @@ table {
 
   &.td-nowrap {
     tbody tr td {
-      @media #{$medium-up} {
+      @media #{$large-up} {
         white-space: nowrap;
       }
     }
@@ -156,7 +167,7 @@ table {
 
   &.th-nowrap {
     thead tr th {
-      @media #{$medium-up} {
+      @media #{$large-up} {
         white-space: nowrap;
       }
     }
@@ -276,7 +287,7 @@ table {
   .scrollable-table-nested.expand-wide {
     width: calc(100vw - 4rem);
 
-    @media #{$medium-up} {
+    @media #{$large-up} {
       width: calc(100vw - 12rem);
     }
 
@@ -310,7 +321,7 @@ table {
       }
     }
 
-    // support resverved unit tinting within flexible table
+    // support reserved unit tinting within flexible table
     &.tr-reserved {
       @media #{$small-only} {
         td {
@@ -414,14 +425,21 @@ table {
 // Pricing tables
 
 .table-pricing-ami {
-  @include responsive-text-size('gamma');
+  @include responsive-ami-text-size('gamma');
   position: relative;
 
   .table-pricing-wrapper + & {
     margin-top: 2rem;
   }
 
-  @media #{$medium-up} {
+  .td, th {
+    @media #{$small-only}, #{$medium-only} {
+      padding-left: $table-padding-small;
+      padding-right: $table-padding-small;
+    }
+  }
+
+  @media #{$large-up} {
     @include scut-padding(0 n 0 n);
     background-color: transparent;
     border-bottom: 0;
@@ -441,7 +459,7 @@ table {
   top: 0.25rem;
   left: 0;
   font-family: $alt-font-family;
-  @include responsive-text-size('base');
+  @include responsive-ami-text-size('base');
   line-height: 1;
   font-weight: $t-semi;
 }
@@ -460,14 +478,14 @@ table {
 
   dl {
     font-weight: $t-regular;
-    @include responsive-text-size('base');
+    @include responsive-ami-text-size('base');
     margin: 0;
   }
 
   dt, dd {
     float: left;
     margin-bottom: 0.25rem;
-    @include responsive-text-size('small');
+    @include responsive-ami-text-size('small');
 
     strong {
       font-weight: $t-semi;
@@ -483,7 +501,7 @@ table {
 
   th, td::before {
     color: $steel;
-    @include responsive-text-size('small');
+    @include responsive-ami-text-size('small');
     font-family: $alt-font-family;
   }
 
@@ -520,7 +538,7 @@ table {
 
   td {
     padding: 0.75rem 0;
-    @include responsive-text-size('base');
+    @include responsive-ami-text-size('base');
     font-feature-settings: "tnum";
     vertical-align: top;
 
@@ -537,9 +555,9 @@ table {
     }
   }
 
-  // Number of availably units
+  // Number of available units
   i {
-    @include responsive-text-size('delta');
+    @include responsive-ami-text-size('delta');
     color: $jet;
     font-style: normal;
     font-weight: $t-regular;
@@ -548,7 +566,7 @@ table {
 
   small {
     display: block;
-    @include responsive-text-size('tiny');
+    @include responsive-ami-text-size('tiny');
     color: $steel;
     text-transform: none;
     letter-spacing: 0;
@@ -562,14 +580,14 @@ table {
 
 .table-pricing-rent {
   th:last-child,
-  td[data-th="Rent"], {
+  td[data-th="Rent"] {
     text-align: right;
   }
 }
 
 .table-pricing-sale-lease {
   th:last-child,
-  td[data-th="Optional parking lease"], {
+  td[data-th="Optional parking lease"] {
     text-align: right;
   }
 }
@@ -623,7 +641,7 @@ table {
   }
 }
 
-@media #{$medium-up} {
+@media #{$large-up} {
   td.cell-show-small-only {
     display: none !important;
   }
@@ -633,7 +651,7 @@ table {
   }
 }
 
-@media #{$small-only} {
+@media #{$small-only}, #{$medium-only} {
   .table-pricing-wrapper {
     margin-top: 0;
   }
@@ -726,7 +744,7 @@ table {
     }
 
     i {
-      @include responsive-text-size('base');
+      @include responsive-ami-text-size('base');
       font-weight: $t-semi;
     }
 
