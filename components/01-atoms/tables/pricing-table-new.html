@@ -5,10 +5,10 @@
 {{/inline}}
 
 {{#*inline "tableRow"}}
-<td data-th="Units" class="is-subtitled has-nested-sibling cell-hide-large-up">
+<td data-th="Units" class="is-subtitled has-nested-sibling cell-hide-xlarge-up">
   {{this.total}} <small>available</small>
 </td>
-<td data-th="Units" class="is-nested table-cell-units cell-show-large-up">
+<td data-th="Units" class="is-nested table-cell-units cell-show-xlarge-up">
   <table class="table-nested-units">
     <thead>
       <tr><th>{{this.Planning_AMI_Tier}}</th></tr>
@@ -34,10 +34,10 @@
     </tbody>
   </table>
 </td>
-<td data-th="Rent" class="is-subtitled has-nested-sibling cell-hide-large-up">
+<td data-th="Rent" class="is-subtitled has-nested-sibling cell-hide-xlarge-up">
   ${{this.BMR_Rent_Monthly}} <small>per month</small>
 </td>
-<td data-th="Rent" class="is-nested cell-show-large-up">
+<td data-th="Rent" class="is-nested cell-show-xlarge-up">
   <table class="table-nested-rent">
     <thead>
       <tr><th>Rent</th></tr>
@@ -74,7 +74,7 @@
     </thead>
     <tbody>
       {{#each this.incomeLevels}}
-        <tr class="income-level row-hide-large-up">
+        <tr class="income-level row-hide-xlarge-up">
           <td class="income-level-label">{{this.incomeLevel}}</td>
         </tr>
         {{#each this.priceGroups}}

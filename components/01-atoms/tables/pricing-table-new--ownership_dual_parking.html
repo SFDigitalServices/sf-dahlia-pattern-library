@@ -5,10 +5,10 @@
 {{/inline}}
 
 {{#*inline "tableRow"}}
-<td data-th="Units" class="is-subtitled has-nested-sibling cell-hide-large-up">
+<td data-th="Units" class="is-subtitled has-nested-sibling cell-hide-xlarge-up">
   {{total}} <small>available</small>
 </td>
-<td data-th="Units" class="is-nested table-cell-units cell-show-large-up">
+<td data-th="Units" class="is-nested table-cell-units cell-show-xlarge-up">
   <table class="table-nested-units">
     <thead>
       <tr><th>{{this.Planning_AMI_Tier}}</th></tr>
@@ -72,7 +72,7 @@
     </thead>
     <tbody>
       {{#each this.incomeLevels}}
-        <tr class="income-level row-hide-large-up">
+        <tr class="income-level row-hide-xlarge-up">
           <td class="income-level-label">{{this.incomeLevel}}</td>
         </tr>
         {{#each this.priceGroups}}

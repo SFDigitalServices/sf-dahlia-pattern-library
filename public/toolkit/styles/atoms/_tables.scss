@@ -7,7 +7,7 @@ $td-reserved-inset: inset 3px 0px 0px 0px rgba(255,102,39,1);
   @include text-size($text-size, 'small');
 
   @if map-has-key(text-breakpoints-for($text-size), 'medium') {
-    @include respond-above('large') {
+    @include respond-above('x-large') {
       @include text-size($text-size, 'medium');
     }
   }
@@ -159,7 +159,7 @@ table {
 
   &.td-nowrap {
     tbody tr td {
-      @media #{$large-up} {
+      @media #{$xlarge-up} {
         white-space: nowrap;
       }
     }
@@ -167,7 +167,7 @@ table {
 
   &.th-nowrap {
     thead tr th {
-      @media #{$large-up} {
+      @media #{$xlarge-up} {
         white-space: nowrap;
       }
     }
@@ -286,14 +286,6 @@ table {
 
   .scrollable-table-nested.expand-wide {
     width: calc(100vw - 4rem);
-
-    @media #{$large-up} {
-      width: calc(100vw - 12rem);
-    }
-
-    @media #{$large-up} {
-      width: calc(100vw - 18rem);
-    }
 
     @media #{$xlarge-up} {
       width: auto;
@@ -433,7 +425,7 @@ table {
   }
 
   .td, th {
-    @media #{$small-only}, #{$medium-only} {
+    @media (max-width: $large-breakpoint) {
       padding-left: $table-padding-small;
       padding-right: $table-padding-small;
     }
@@ -641,18 +633,18 @@ table {
   }
 }
 
-@media #{$large-up} {
-  td.cell-hide-large-up {
+@media #{$xlarge-up} {
+  td.cell-hide-xlarge-up {
     display: none !important;
   }
 
-  tr.row-hide-large-up {
+  tr.row-hide-xlarge-up {
     display: none !important;
   }
 }
 
-@media #{$small-only}, #{$medium-only} {
-  td.cell-show-large-up {
+@media (max-width: $large-breakpoint) {
+  td.cell-show-xlarge-up {
     display: none !important;
   }
 }
@@ -806,7 +798,7 @@ table {
   @include mobile-table-styling()
 }
 
-@media #{$medium-only} {
+@media (max-width: $large-breakpoint) {
   .with-mobile-pricing-on-tablet {
     @include mobile-table-styling()
   }
