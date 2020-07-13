@@ -799,7 +799,7 @@ table {
 }
 
 @media (max-width: $large-breakpoint) {
-  .with-mobile-pricing-on-tablet {
+  .with-mobile-styling-at-large-breakpoint {
     @include mobile-table-styling()
   }
 }
