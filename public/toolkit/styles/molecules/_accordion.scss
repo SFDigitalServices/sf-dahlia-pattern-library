@@ -71,6 +71,7 @@ $accordion-text-color: #4D4D4D;
 
 .accordion-plus-minus {
   @include responsive-text-size('base');
+  line-height: 1.5;
 
   @mixin icon-show {
     fill: $accordion-text-color;
@@ -143,6 +144,10 @@ $accordion-text-color: #4D4D4D;
     justify-content: start;
     align-items: stretch;
 
+    :last-child {
+      flex-grow: 1;
+    }
+
     input[type="checkbox"] + label {
       margin: 0;
       display: flex;
@@ -161,7 +166,6 @@ $accordion-text-color: #4D4D4D;
     .checkbox-text-input {
       width: auto;
       margin-bottom: 0;
-      flex-grow: 2;
     }
   }
 }
