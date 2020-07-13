@@ -4,7 +4,7 @@
 
 // prototyping classes
 .accordion {
-  
+
   &.has-trigger {
     .ui-control {
       @include absolute(1rem,1rem,null,null);
@@ -33,7 +33,7 @@
     .accordion {
       margin-top: 0;
     }
-  }  
+  }
 }
 
 // accordion nested inside a parent accordion
@@ -58,6 +58,120 @@
       &.active {
         border-bottom-width: 0;
       }
+    }
+  }
+}
+
+//
+// Accordion specific to demographics
+//
+
+$accordion-background: $ghost;
+$accordion-text-color: #4D4D4D;
+
+.accordion-plus-minus {
+  @include responsive-text-size('base');
+  line-height: 1.5;
+
+  @mixin icon-show {
+    fill: $accordion-text-color;
+    display: block;
+  };
+
+  @mixin icon-hide {
+    fill: $accordion-text-color;
+    display: none;
+  };
+
+  .ui-minus {
+    @include icon-hide();
+  }
+
+  .ui-plus {
+    @include icon-show();
+  }
+
+  .ui-check {
+    fill: #2E8540;
+    float: right;
+    margin-right: 2rem;
+  }
+
+  .content {
+    border: 2px solid $accordion-background;
+    padding: 1rem 2rem 2rem !important;
+    @include rounded-bottom-border();
+  }
+
+  .accordion-navigation {
+    margin-bottom: 1rem !important;
+  }
+
+  .accordion-navigation a, .accordion-navigation.active a {
+    @include type-weight(semi);
+    text-decoration: none;
+    color: $accordion-text-color;
+    background-color: $accordion-background;
+    position: relative;
+    margin-bottom: 1rem;
+
+    &:hover, &:focus {
+      background-color: $accordion-background;
+    }
+
+    .ui-medium svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &.accordion-header {
+      margin-bottom: 0;
+      @include rounded-border();
+    }
+  }
+
+  .accordion-navigation.active a {
+    .ui-minus {
+      @include icon-show();
+    }
+
+    .ui-plus {
+      @include icon-hide();
+    }
+
+    &.accordion-header {
+      @include rounded-bottom-border(0);
+    }
+  }
+
+  .checkbox-block-accordion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
+
+    :last-child {
+      flex-grow: 1;
+    }
+
+    input[type="checkbox"] + label {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      min-height: rem-calc(44);
+    }
+
+    input[type="checkbox"] + label::before {
+      flex-shrink: 0;
+    }
+
+    .checkbox-and-label {
+      padding-right: rem-calc(16);
+    }
+
+    .checkbox-text-input {
+      width: auto;
+      margin-bottom: 0;
     }
   }
 }

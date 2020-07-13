@@ -1,0 +1,59 @@
+$accordion-text-color: #4D4D4D;
+$border-width-px: 2px;
+
+.accumulator {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    @include rounded-border();
+
+    color: $accordion-text-color;
+    border: $border-width-px solid $wash-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 1rem - rem-calc($border-width-px);
+    padding-bottom: 1rem - rem-calc($border-width-px);
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    &.accumulator-empty-label {
+      color: $steel;
+      border: none;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    .ui-control {
+      top: 0;
+      left: 0;
+      position: relative;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.accumulator-label {
+  color: $accordion-text-color;
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  .accumulator-title {
+    @include type-weight(semi);
+  }
+
+  .accumulator-action {
+    color: #0077DA;
+    cursor: pointer;
+  }
+}

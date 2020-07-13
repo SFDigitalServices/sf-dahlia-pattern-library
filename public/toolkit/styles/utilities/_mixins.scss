@@ -6,7 +6,7 @@
   ::-webkit-input-placeholder {@content}
   :-moz-placeholder           {@content}
   ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
+  :-ms-input-placeholder      {@content}
 }
 
 // Hides text from display but is still accessible to screen readers.
@@ -17,10 +17,10 @@
 
 // Prevents long links and urls from wrapping
 @mixin link-wrap {
-  white-space: pre-wrap; /* css-3 */    
+  white-space: pre-wrap; /* css-3 */
   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */    
-  white-space: -o-pre-wrap; /* Opera 7 */    
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
@@ -100,7 +100,7 @@
   left: 0;
   right: 0;
   z-index: 2;
-}    
+}
 
 // Adds css only triangle element
 @mixin triangle($border-width: 0.5em 0.375em) {
@@ -131,10 +131,24 @@
   text-indent: -9999px;
 }
 
-// Responsive background image 
+@mixin rounded-bottom-border($size-px: 4) {
+  border-bottom-left-radius: rem-calc($size-px);
+  border-bottom-right-radius: rem-calc($size-px);
+}
+
+@mixin rounded-top-border($size-px: 4) {
+  border-top-left-radius: rem-calc($size-px);
+  border-top-right-radius: rem-calc($size-px);
+}
+
+@mixin rounded-border($size-px: 4) {
+  border-radius: rem-calc($size-px);
+}
+
+// Responsive background image
 // Source: https://unsplash.com/photos/IkpC4BZILCo
 // Uses the Unsplash license, which is comparable to public domain:
-// https://medium.com/unsplash/the-unsplash-license-f6fb7de5c95a 
+// https://medium.com/unsplash/the-unsplash-license-f6fb7de5c95a
 
 @mixin bg-image($position: center) {
   background: $dark url("../images/bg@400.jpg") $position;
