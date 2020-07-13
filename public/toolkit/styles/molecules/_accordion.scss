@@ -100,6 +100,7 @@ $accordion-text-color: #4D4D4D;
   .content {
     border: 2px solid $accordion-background;
     padding: 1rem 2rem 2rem !important;
+    @include rounded-bottom-border();
   }
 
   .accordion-navigation {
@@ -125,6 +126,7 @@ $accordion-text-color: #4D4D4D;
 
     &.accordion-header {
       margin-bottom: 0;
+      @include rounded-border();
     }
   }
 
@@ -135,6 +137,10 @@ $accordion-text-color: #4D4D4D;
 
     .ui-plus {
       @include icon-hide();
+    }
+
+    &.accordion-header {
+      @include rounded-bottom-border(0);
     }
   }
 
