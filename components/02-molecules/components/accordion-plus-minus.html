@@ -1,7 +1,9 @@
 <dl class="accordion-plus-minus accordion trigger-right" data-accordion>
   <dd class="accordion-navigation">
     <a href="#panel-1-a" class="accordion-header" draggable="false">
-      Accordion Selection 1
+      <div class="accordion-header-title">
+        Accordion Selection 1
+      </div>
       {{> @icon-plus-minus active="false" position="control"}}
     </a>
     <div id="panel-1-a" class="content">
@@ -36,7 +38,9 @@
   </dd>
   <dd class="accordion-navigation">
     <a href="#panel-1-b" class="accordion-header" draggable="false">
-      Accordion Selection 2
+      <div class="accordion-header-title">
+        Accordion Selection 2
+      </div>
       {{> @icon-plus-minus active="false" position="control"}}
     </a>
     <div id="panel-1-b" class="content">
@@ -83,7 +87,9 @@
   </dd>
   <dd class="accordion-navigation">
     <a href="#panel-1-c" class="accordion-header" draggable="false">
-      Accordion Selection 3
+      <div class="accordion-header-title">
+        Accordion Selection 3 With very long name that should wrap
+      </div>
       {{> @icon-plus-minus active="false" position="control"}}
     </a>
     <div id="panel-1-c" class="content">
@@ -99,8 +105,10 @@
   </dd>
   <dd class="accordion-navigation">
     <a href="#panel-1-d" class="accordion-header" draggable="false">
-      Accordion Selection 4
-      <span class="ui-icon ui-{{default position 'static'}} ui-{{ default size 'medium'}} i-{{default fill 'color'}} {{default classes ''}}">
+      <div class="accordion-header-title">
+        Accordion Selection 4 With very long name that should wrap
+      </div>
+      <span class="ui-icon ui-control ui-{{ default size 'medium'}} i-{{default fill 'color'}} {{default classes ''}}">
         <svg class="ui-check">
           <use xlink:href="#i-check"></use>
         </svg>

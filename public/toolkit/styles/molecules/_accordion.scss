@@ -125,6 +125,11 @@ $accordion-text-color: #4D4D4D;
     }
 
     &.accordion-header {
+      .accordion-header-title {
+        // Add padding to the title so it doesn't overlap the control icons
+        padding-right: 4rem;
+      }
+
       margin-bottom: 0;
       @include rounded-border();
     }
