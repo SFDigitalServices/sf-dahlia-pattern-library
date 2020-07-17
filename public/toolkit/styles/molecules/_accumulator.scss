@@ -19,6 +19,10 @@ $border-width-px: 2px;
     padding-left: 1rem;
     padding-right: 1rem;
 
+    .accumulator-item-text {
+      padding-right: 1rem;
+    }
+
     &:not(:first-child) {
       margin-top: 1rem;
     }
