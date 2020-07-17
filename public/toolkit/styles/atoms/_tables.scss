@@ -616,9 +616,6 @@ table {
   th {
     text-transform: none;
     letter-spacing: 0;
-    &.whiteout {
-      color: $white;
-    }
   }
   th:last-child {
     text-align: left;

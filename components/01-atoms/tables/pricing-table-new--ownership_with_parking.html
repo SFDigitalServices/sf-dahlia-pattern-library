@@ -22,9 +22,9 @@
   <table class="table-nested-income">
     <thead>
       <tr>
-        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Household Size</th>
-        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Minimum</th>
-        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Maximum</th>
+        <th scope="col">Household Size</th>
+        <th scope="col">Minimum</th>
+        <th scope="col">Maximum</th>
       </tr>
     </thead>
     <tbody>
@@ -38,9 +38,9 @@
   <table class="table-nested-income">
     <thead>
       <tr>
-        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Sales Price</th>
-        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>HOA Dues</th>
-        <th scope="col"{{#if whiteout}} class="whiteout"{{/if}}>Parking</th>
+        <th scope="col">Sales Price</th>
+        <th scope="col">HOA Dues</th>
+        <th scope="col">Parking</th>
       </tr>
     </thead>
     <tbody>
@@ -71,7 +71,7 @@
           <td class="income-level-label">{{this.incomeLevel}}</td>
         </tr>
         {{#each this.priceGroups}}
-          <tr>{{> tableRow whiteout=@../index}}</tr>
+          <tr>{{> tableRow }}</tr>
         {{/each}}
       {{/each}}
     </tbody>
