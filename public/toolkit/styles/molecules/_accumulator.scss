@@ -27,6 +27,13 @@ $border-width-px: 2px;
 
     .accumulator-item-text {
       padding-right: 1rem;
+
+      // need all of these options to properly break words in all browsers
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-all;
+      word-break: break-word;
+      hyphens: auto;
     }
 
     &:not(:first-child) {

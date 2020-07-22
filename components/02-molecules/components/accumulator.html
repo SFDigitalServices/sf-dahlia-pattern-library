@@ -1,6 +1,6 @@
 <div class="accumulator-label">
   <p class="accumulator-title">You selected...</p>
-  <div class="accumulator-action">Clear All</p>
+  <span class="accumulator-action">Clear all</span>
 </div>
 <ul class="accumulator">
   <li>
@@ -30,6 +30,14 @@
   <li>
     <div class="accumulator-item-text">
       Accumulator key with long text: Even more long text (and free text too)
+    </div>
+    <span class="accumulator-x-icon">
+      {{> @icons-base icon="close" position="control"}}
+    </span>
+  </li>
+  <li>
+    <div class="accumulator-item-text">
+      Accumulator key with long text: (andaverylongfreetextstringtoseeifitbreaksthewordontomultiplelines)
     </div>
     <span class="accumulator-x-icon">
       {{> @icons-base icon="close" position="control"}}
