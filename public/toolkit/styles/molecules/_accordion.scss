@@ -93,8 +93,7 @@ $accordion-text-color: #4D4D4D;
 
   .ui-check {
     fill: #2E8540;
-    float: right;
-    margin-right: 2rem;
+    margin-right: 0.5rem;
   }
 
   .content {
@@ -107,13 +106,15 @@ $accordion-text-color: #4D4D4D;
     margin-bottom: 1rem !important;
   }
 
-  .accordion-navigation a, .accordion-navigation.active a {
+  .accordion-navigation div.accordion-header {
     @include type-weight(semi);
     text-decoration: none;
     color: $accordion-text-color;
     background-color: $accordion-background;
     position: relative;
     margin-bottom: 1rem;
+    padding: 1rem;
+    cursor: pointer;
 
     &:hover, &:focus {
       background-color: $accordion-background;
@@ -125,22 +126,38 @@ $accordion-text-color: #4D4D4D;
     }
 
     &.accordion-header {
+      display: flex;
+      align-items: center;
+      .accordion-header-title {
+        // Add padding to the title so it doesn't overlap the control icons
+        padding-right: 1rem;
+        flex-grow: 1;
+      }
+
+      :not(.accordion-header-title) {
+        flex-grow: 0;
+      }
+
       margin-bottom: 0;
       @include rounded-border();
     }
   }
 
-  .accordion-navigation.active a {
-    .ui-minus {
-      @include icon-show();
+  .accordion-navigation.active {
+    .content {
+      display: block;
     }
 
-    .ui-plus {
-      @include icon-hide();
-    }
-
-    &.accordion-header {
+    div.accordion-header {
       @include rounded-bottom-border(0);
+
+      .ui-minus {
+        @include icon-show();
+      }
+
+      .ui-plus {
+        @include icon-hide();
+      }
     }
   }
 

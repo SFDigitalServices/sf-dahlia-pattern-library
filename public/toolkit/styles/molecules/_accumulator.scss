@@ -19,6 +19,23 @@ $border-width-px: 2px;
     padding-left: 1rem;
     padding-right: 1rem;
 
+    .accumulator-x-icon {
+      // Add padding and equal negative margin to increase click area.
+      padding: 0.5rem;
+      margin: -0.5rem;
+    }
+
+    .accumulator-item-text {
+      padding-right: 1rem;
+
+      // need all of these options to properly break words in all browsers
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-all;
+      word-break: break-word;
+      hyphens: auto;
+    }
+
     &:not(:first-child) {
       margin-top: 1rem;
     }

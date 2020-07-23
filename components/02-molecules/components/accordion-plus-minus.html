@@ -1,9 +1,11 @@
 <dl class="accordion-plus-minus accordion trigger-right" data-accordion>
   <dd class="accordion-navigation">
-    <a href="#panel-1-a" class="accordion-header" draggable="false">
-      Accordion Selection 1
-      {{> @icon-plus-minus active="false" position="control"}}
-    </a>
+    <div class="accordion-header" draggable="false">
+      <div class="accordion-header-title">
+        Accordion Selection 1
+      </div>
+      {{> @icon-plus-minus active="false" }}
+    </div>
     <div id="panel-1-a" class="content">
       <div class="checkbox-group" role="group">
         <div class="checkbox-block-accordion">
@@ -34,11 +36,13 @@
       </div>
     </div>
   </dd>
-  <dd class="accordion-navigation">
-    <a href="#panel-1-b" class="accordion-header" draggable="false">
-      Accordion Selection 2
-      {{> @icon-plus-minus active="false" position="control"}}
-    </a>
+  <dd class="accordion-navigation active">
+    <div class="accordion-header" draggable="false">
+      <div class="accordion-header-title">
+        Accordion Selection 2
+      </div>
+      {{> @icon-plus-minus active="false" }}
+    </div>
     <div id="panel-1-b" class="content">
       <div class="checkbox-group" role="group">
         <div class="checkbox-block-accordion">
@@ -82,10 +86,12 @@
     </div>
   </dd>
   <dd class="accordion-navigation">
-    <a href="#panel-1-c" class="accordion-header" draggable="false">
-      Accordion Selection 3
-      {{> @icon-plus-minus active="false" position="control"}}
-    </a>
+    <div href="#panel-1-c" class="accordion-header" draggable="false">
+      <div class="accordion-header-title">
+        Accordion Selection 3 With very long name that should wrap
+      </div>
+      {{> @icon-plus-minus active="false" }}
+    </div>
     <div id="panel-1-c" class="content">
       <div class="checkbox-group" role="group">
         <div class="checkbox-block-accordion">
@@ -98,15 +104,17 @@
     </div>
   </dd>
   <dd class="accordion-navigation">
-    <a href="#panel-1-d" class="accordion-header" draggable="false">
-      Accordion Selection 4
-      <span class="ui-icon ui-{{default position 'static'}} ui-{{ default size 'medium'}} i-{{default fill 'color'}} {{default classes ''}}">
+    <div href="#panel-1-d" class="accordion-header" draggable="false">
+      <div class="accordion-header-title">
+        Accordion Selection 4 With very long name that should wrap
+      </div>
+      <span class="ui-icon ui-medium i-color">
         <svg class="ui-check">
           <use xlink:href="#i-check"></use>
         </svg>
       </span>
-      {{> @icon-plus-minus active="false" position="control"}}
-    </a>
+      {{> @icon-plus-minus active="false" }}
+    </div>
     <div id="panel-1-d" class="content">
       <div class="checkbox-group" role="group">
         <div class="checkbox-block-accordion">
