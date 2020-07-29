@@ -53,13 +53,16 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   .callout-buttons {
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    .button {
+      margin: 0 0.5rem;
+    }
   }
 }
