@@ -646,6 +646,16 @@ table {
   }
 }
 
+@mixin mobile-header-base {
+  content: attr(data-th);
+  padding-right: 0.5rem;
+  max-width: 50%;
+  text-align: left;
+  font-weight: $table-value-weight;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+
 @mixin mobile-table-styling {
   .table-pricing-wrapper {
     margin-top: 0;
@@ -690,8 +700,13 @@ table {
     td {
       position: relative;
 
+      small {
+        display: inline-block;
+      }
+
       &.is-subtitled, &.is-subtitled-nested {
         text-align: right;
+        padding-left: calc(50% + 0.5rem);
       }
 
       &.is-subtitled-nested {
@@ -700,13 +715,10 @@ table {
       }
 
       &.is-subtitled::before, &.is-subtitled-nested::before {
-        content: attr(data-th);
+        @include mobile-header-base();
         position: absolute;
         line-height: 1;
         left: 0;
-        font-weight: $table-value-weight;
-        letter-spacing: .1rem;
-        text-transform: uppercase;
       }
 
       &.is-subtitled-nested::before {
@@ -717,10 +729,7 @@ table {
       }
 
       &.is-supertitled::before {
-        content: attr(data-th);
-        font-weight: $table-value-weight;
-        letter-spacing: .1rem;
-        text-transform: uppercase;
+        @include mobile-header-base();
         margin-left: -1rem;
       }
 
