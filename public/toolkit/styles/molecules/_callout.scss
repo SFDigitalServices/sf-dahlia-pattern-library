@@ -1,18 +1,22 @@
-.callout {
+@mixin callout() {
   background: $dark;
   color: $white;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  h2 {
+  h2, h3 {
     letter-spacing: -0.04rem;
   }
 
   .button {
     margin: 0;
   }
+}
+
+.callout-rental {
+  @include callout();
 
   @media #{$large-up} {
     .row {
@@ -20,13 +24,49 @@
       align-items: center;
     }
 
-    h2 {
+    h2, h3 {
       margin-bottom: 0;
       text-align: left;
     }
 
     .button {
       width: 100%;
+    }
+  }
+}
+
+.callout-ownership {
+  @include callout();
+
+  .callout-text {
+    flex-grow: 1;
+    margin-bottom: 0;
+
+    h3 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .callout-buttons {
+    // Negative margin as a hacky fix to offset extra padding on wrapped items
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .button {
+      margin: 0.5rem;
     }
   }
 }
