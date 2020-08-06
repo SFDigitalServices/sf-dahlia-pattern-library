@@ -171,30 +171,26 @@ $accordion-text-color: #4D4D4D;
       flex-grow: 1;
     }
 
-    input[type="checkbox"] + label {
-      margin-top: 0;
-      margin-bottom: 0;
-      display: flex;
-      align-items: center;
-      min-height: rem-calc(44);
-    }
-
     input[type="checkbox"] + label::before {
       flex-shrink: 0;
     }
 
     .checkbox-and-label {
+      display: flex;
+      align-items: center;
+      min-height: rem-calc(44);
       padding-right: rem-calc(16);
-      margin-right: rem-calc(-30);
+
+      margin: 0;
     }
 
     .checkbox-text-input {
       width: auto;
       max-width: 100%;
-      margin: 0;
+
+      // Add small vertical margin so multiple text inputs won't touch.
       margin-top: rem-calc(4);
       margin-bottom: rem-calc(4);
-      margin-left: rem-calc(30);
     }
   }
 }
