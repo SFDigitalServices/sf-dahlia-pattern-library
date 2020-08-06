@@ -172,7 +172,8 @@ $accordion-text-color: #4D4D4D;
     }
 
     input[type="checkbox"] + label {
-      margin: 0;
+      margin-top: 0;
+      margin-bottom: 0;
       display: flex;
       align-items: center;
       min-height: rem-calc(44);
@@ -184,13 +185,16 @@ $accordion-text-color: #4D4D4D;
 
     .checkbox-and-label {
       padding-right: rem-calc(16);
+      margin-right: rem-calc(-30);
     }
 
     .checkbox-text-input {
       width: auto;
+      max-width: 100%;
       margin: 0;
       margin-top: rem-calc(4);
       margin-bottom: rem-calc(4);
+      margin-left: rem-calc(30);
     }
   }
 }
