@@ -3,7 +3,7 @@
 // Desktop navigation based on foundation top bar
 
 $navbutton-padding-large: 1.5rem;
-$navbutton-padding-small: 0.5rem;
+$navbutton-padding-small: 1.5rem;
 $navbutton-max-width: rem-calc(120px);
 $navbutton-and-accordion-max-width: $navbutton-max-width + rem-calc(30px);
 
@@ -105,8 +105,7 @@ $navbutton-and-accordion-max-width: $navbutton-max-width + rem-calc(30px);
 
     @media #{$medium-up} {
       display: flex;
-      justify-content: space-between;
-      padding-left: 2rem;
+      justify-content: end;
     }
 
     > li {
