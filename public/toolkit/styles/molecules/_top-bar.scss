@@ -2,6 +2,16 @@
 // Navigation Menu
 // Desktop navigation based on foundation top bar
 
+$navbutton-padding-large: 1.5rem;
+$navbutton-padding-small: 1.5rem;
+$navbutton-max-width: rem-calc(120px);
+$navbutton-and-accordion-max-width: $navbutton-max-width + rem-calc(30px);
+
+@mixin navbutton-spacing($padding-size: $navbutton-padding-small, $text-max-width: $navbutton-max-width) {
+  @include scut-padding(0 $padding-size 1rem $padding-size);
+  max-width: $text-max-width + 2 * $padding-size;
+}
+
 .top-bar {
 
   // Allows for full width navigation
@@ -88,32 +98,51 @@
   }
 
   ul.nav-menu {
+    width: 100%;
     @media #{$small-only} {
       display: none;
     }
 
     @media #{$medium-up} {
-      width: auto;
+      display: flex;
+      justify-content: flex-end;
     }
 
     > li {
       background: transparent;
       width: auto;
       height: 4.6875rem;
+
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
     }
 
     > li > a,
     > li:not(.has-form) a:not(.button) {
-      @include scut-padding(2.5rem 1rem 1rem 1rem);
+      @include navbutton-spacing($navbutton-padding-small, $navbutton-max-width);
       background: transparent;
       font-size: 0.75rem;
       line-height: 1rem;
       text-transform: uppercase;
       border-bottom: 3px solid transparent;
+      vertical-align: bottom;
+
+      // Override default button behavior to break words
+      word-wrap: normal;
+      word-break: normal;
+
+      &.has-accordion {
+        @include navbutton-spacing($navbutton-padding-small, $navbutton-and-accordion-max-width);
+      }
 
       @media #{$large-up} {
-        @include scut-padding(n 1.5rem n 1.5rem);
+        @include navbutton-spacing($navbutton-padding-large, $navbutton-max-width);
         font-size: 0.8125rem;
+
+        &.has-accordion {
+          @include navbutton-spacing($navbutton-padding-large, $navbutton-and-accordion-max-width);
+        }
       }
 
       &:hover,
