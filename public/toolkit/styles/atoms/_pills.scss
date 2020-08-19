@@ -1,0 +1,58 @@
+.pill-text {
+  @include responsive-text-size('tiny');
+  font-family: $alt-font-family;
+  font-weight: $t-semi;
+  line-height: calc(1.5rem - 4px);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin pill($bg-color: $aluminum, $border-color: $bg-color, $text-color: $white) {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  min-width: rem-calc(106px);
+
+  // Required to fix width to content
+  display: table;
+
+  background-color: $bg-color;
+  border: 2px solid $border-color;
+  border-radius: 0.5rem;
+
+  .pill-text {
+    color: $text-color;
+  }
+}
+
+.status-pill-no-status {
+  @include pill($bg-color: $white, $border-color: $steel, $text-color: $steel);
+}
+
+.status-pill-processing {
+  @include pill($bg-color: $aluminum, $text-color: $white);
+}
+
+.status-pill-approved {
+  @include pill($bg-color: $deep, $text-color: $white);
+}
+
+.status-pill-disqualified {
+  @include pill($bg-color: $alert, $text-color: $white);
+}
+
+.status-pill-appealed {
+  @include pill($bg-color: $royal, $text-color: $white);
+}
+
+.status-pill-withdrawn {
+  @include pill($bg-color: $warn, $text-color: $black);
+}
+
+.status-pill-leased {
+  @include pill($bg-color: $success, $text-color: $white);
+}
+
+.status-pill-waitlisted {
+  @include pill($bg-color: $attention, $text-color: $white);
+}
