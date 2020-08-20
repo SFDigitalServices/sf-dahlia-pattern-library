@@ -1,5 +1,6 @@
 .page-wrapper {
   height: 2000px;
+  max-width: 74rem;
 }
 
 .fakeheader {
@@ -28,35 +29,67 @@
     padding-left: 0;
   }
 
-
   @media #{$medium-up} {
     height: 100%;
   }
-}
 
-.sticky-sidebar-large-up {
-  @media #{$medium-up} {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 2rem;
-    box-sizing: border-box;
+  .sticky-sidebar-large-up {
+    @media #{$medium-up} {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 2rem;
+      box-sizing: border-box;
+    }
+
+    .sidebar-content {
+      display: flex;
+      flex-direction: column;
+      @media #{$medium-up} {
+        overflow: hidden;
+        height: calc(100vh - 2rem);
+      }
+    }
   }
 }
 
-.sidebar-content {
-  display: flex;
-  flex-direction: column;
+h3.status-history-label {
+  margin-top: 3rem;
   @media #{$medium-up} {
-    overflow: hidden;
-    height: calc(100vh - 2rem);
+    @include text-size('delta', 'medium');
   }
 }
 
 .status-items {
   overflow-y: auto;
 
-  .status-item-container:last-child {
-    padding-bottom: 0;
+  .status-item {
+    padding-bottom: 1rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .status-item-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      .status-item-date {
+        @include responsive-text-size('small');
+        color: $steel;
+      }
+    }
+
+    .status-item-text {
+      @include responsive-text-size('small');
+      color: $jet;
+      width: 100%
+    }
   }
 }
 
@@ -73,6 +106,7 @@
   button, .button {
     width: calc(50% - 0.5rem);
     margin-bottom: 0;
+    word-wrap: break-word;
   }
 
   button.save-button {
@@ -81,38 +115,7 @@
   }
 }
 
-h3.status-history-label {
-  margin-top: 3rem;
-  @media #{$medium-up} {
-    @include text-size('delta', 'medium');
-  }
-}
 
-.status-item-container {
-  padding-bottom: 1rem;
-
-  .status-item-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0.5rem;
-
-    &:last-child {
-      text-align: right;
-    }
-
-    .status-item-date {
-      @include responsive-text-size('small');
-      color: $steel;
-    }
-  }
-
-  .status-item-text {
-    @include responsive-text-size('small');
-    color: $jet;
-    width: 100%
-  }
-}
 
 
 

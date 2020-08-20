@@ -247,6 +247,19 @@ button,
     }
   }
 
+  &.tight-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &.has-icon {
+      padding-left: 3.25em;
+    }
+
+    &.has-icon--right {
+      padding-right: 3.25em;
+    }
+  }
+
   // Primary button with white background
   &.ghost-white {
     @extend .secondary;
