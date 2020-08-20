@@ -18,7 +18,7 @@
 
   background-color: $bg-color;
   border: 2px solid $border-color;
-  border-radius: 0.5rem;
+  border-radius: rem-calc(4px);
 
   .pill-text {
     color: $text-color;
