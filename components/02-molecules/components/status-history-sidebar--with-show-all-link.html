@@ -14,7 +14,7 @@
   <div class="small-12 large-4 columns sidebar-column collapse">
     <div class="sticky-sidebar-large-up">
       <div class="sidebar-content">
-        <div>
+        <div class="show-for-large-up">
           <button class="primary save-button">Save</button>
           <div class="status-history-buttons">
             <button class="has-icon--right text-align-left is-processing tight-padding">
@@ -87,9 +87,26 @@
             </div>
           </div>
         </div>
-        <button class="show-for-medium-up button-link t-tiny padding-top">
+        <button class="show-for-large-up button-link t-tiny show-all-updates-toggle">
           Show all status updates
         </button>
+        <div class="hide-for-large-up">
+          <div class="status-history-buttons">
+            <button class="has-icon--right text-align-left is-processing tight-padding">
+              <span class="ui-icon ui-small">
+                <svg class="icon i-arrow-down">
+                  <use xlink:href="#i-arrow-down"></use>
+                </svg>
+              </span>
+              Processing
+            </button>
+            <button class="tertiary tight-padding">
+              Add a comment
+            </button>
+          </div>
+
+          <button class="primary save-button">Save</button>
+        </div>
       </div>
     </div>
   </div>

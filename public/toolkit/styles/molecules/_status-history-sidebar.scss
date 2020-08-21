@@ -8,6 +8,29 @@
   .sidebar-content {
     display: flex;
     flex-direction: column;
+
+    // Don't let any children shrink, because status-items will collapse
+    // itself using overflow-y: auto.
+    > {
+      flex-shrink: 0
+    }
+
+    .status-items {
+      // This makes sure the status items are scrollable within the
+      // fixed-height parent.
+      overflow-y: auto;
+    }
+
+    .show-all-updates-toggle {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    .hide-for-large-up, .show-for-large-up {
+      // override hide-for-large-up's behavior of setting display to
+      // "inherit"
+      display: initial !important;
+    }
   }
 }
 
@@ -15,39 +38,33 @@ h3.status-history-label {
   margin-top: 3rem;
 }
 
-.status-items {
-  // This makes sure the status items are scrollable within the
-  // fixed-height parent.
-  overflow-y: auto;
+.status-item {
+  padding-bottom: 1rem;
 
-  .status-item {
-    padding-bottom: 1rem;
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  .status-item-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
 
     &:last-child {
-      padding-bottom: 0;
+      text-align: right;
     }
 
-    .status-item-header {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 0.5rem;
-
-      &:last-child {
-        text-align: right;
-      }
-
-      .status-item-date {
-        @include responsive-text-size('small');
-        color: $steel;
-      }
-    }
-
-    .status-item-text {
+    .status-item-date {
       @include responsive-text-size('small');
-      color: $jet;
-      width: 100%
+      color: $steel;
     }
+  }
+
+  .status-item-text {
+    @include responsive-text-size('small');
+    color: $jet;
+    width: 100%
   }
 }
 
@@ -60,6 +77,7 @@ button.save-button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
 
   button, .button {
     width: calc(50% - 0.5rem);
@@ -79,11 +97,6 @@ button.save-button {
 
   button.save-button {
     margin-top: 4rem;
-  }
-
-  .status-history-buttons {
-    // at small size we want buttons below status history.
-    order: 1;
   }
 }
 

@@ -1,0 +1,51 @@
+// The foundation show-for/hide-for classes are useful but have
+// many bugs in the version we are running. This replacement avoids those bugs.
+// This file should be deleted when we upgrade to Foundation 6.
+
+$min_screen_size: #{lower_bound($small_range)};
+$max_screen_size: #{upper_bound($xxlarge-range)};
+
+$size-ranges: (
+  small: $small-range,
+  medium: $medium-range,
+  large: $large-range,
+  xlarge: $xlarge-range,
+  xxlarge: $xxlarge-range,
+);
+
+@mixin show-or-hide($show: true) {
+  @each $name, $range in $size-ranges {
+    $min: lower-bound($range);
+    $max: upper-bound($range);
+
+    $invert: if($show, 'not', '') screen;
+
+    &-#{$name}-only {
+      @media #{$invert} and (min-width: $min) and (max-width: $max) {
+        display: none !important;
+      }
+    }
+
+    &-#{$name}-up {
+      @media #{$invert} and (min-width: $min) {
+        display: none !important;
+      }
+    }
+
+    &-#{$name}-down {
+      @media #{$invert} and (max-width: $max) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// will expand to .show-small-up/.show-medium-only, etc
+.show {
+  @include show-or-hide($show: true);
+}
+
+// will expand to .hide-small-up/.hide-medium-only, etc
+.hide {
+  @include show-or-hide($show: false);
+}
