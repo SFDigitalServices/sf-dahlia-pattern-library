@@ -1,3 +1,6 @@
+$sidebar-button-margin: 1rem;
+$sticky-top-margin: 2rem;
+
 .page-content-column {
   padding-left: 0;
 }
@@ -70,7 +73,7 @@ h3.status-history-label {
 
 button.save-button {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: $sidebar-button-margin;
 }
 
 .status-history-buttons {
@@ -80,7 +83,7 @@ button.save-button {
   width: 100%;
 
   button, .button {
-    width: calc(50% - 0.5rem);
+    width: calc(50% - $sidebar-button-margin / 2);
     margin-bottom: 0;
     word-wrap: break-word;
   }
@@ -113,14 +116,14 @@ button.save-button {
     .sticky-sidebar-large-up {
       position: -webkit-sticky;
       position: sticky;
-      top: 2rem;
+      top: $sticky-top-margin;
 
       .sidebar-content {
         // When sidebar is sticky, it should never be larger than viewport height,
         // since you can't scroll it. Overflow: hidden allows us to make the status
         // history list child element scrollable.
         overflow: hidden;
-        height: calc(100vh - 2rem);
+        height: calc(100vh - $sticky-top-margin);
       }
     }
   }
