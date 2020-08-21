@@ -83,7 +83,7 @@ button.save-button {
   width: 100%;
 
   button, .button {
-    width: calc(50% - $sidebar-button-margin / 2);
+    width: calc(50% - #{$sidebar-button-margin / 2});
     margin-bottom: 0;
     word-wrap: break-word;
   }
@@ -123,7 +123,7 @@ button.save-button {
         // since you can't scroll it. Overflow: hidden allows us to make the status
         // history list child element scrollable.
         overflow: hidden;
-        height: calc(100vh - $sticky-top-margin);
+        height: calc(100vh - #{$sticky-top-margin});
       }
     }
   }
