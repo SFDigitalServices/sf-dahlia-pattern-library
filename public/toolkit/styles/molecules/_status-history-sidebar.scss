@@ -13,7 +13,6 @@ $sticky-top-margin: 2rem;
     flex-direction: column;
 
     .show-all-updates-toggle {
-      padding-top: 1rem;
       padding-bottom: 2rem;
     }
   }
@@ -23,33 +22,37 @@ h3.status-history-label {
   margin-top: 3rem;
 }
 
-.status-item {
-  padding-bottom: 1rem;
+.status-items {
+  margin-bottom: 1rem;
 
-  &:last-child {
-    padding-bottom: 0;
-  }
-
-  .status-item-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0.5rem;
+  .status-item {
+    padding-bottom: 1rem;
 
     &:last-child {
-      text-align: right;
+      padding-bottom: 0;
     }
 
-    .status-item-date {
+    .status-item-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      .status-item-date {
+        @include responsive-text-size('small');
+        color: $steel;
+      }
+    }
+
+    .status-item-text {
       @include responsive-text-size('small');
-      color: $steel;
+      color: $jet;
+      width: 100%
     }
-  }
-
-  .status-item-text {
-    @include responsive-text-size('small');
-    color: $jet;
-    width: 100%
   }
 }
 
