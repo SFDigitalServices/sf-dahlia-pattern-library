@@ -12,27 +12,9 @@ $sticky-top-margin: 2rem;
     display: flex;
     flex-direction: column;
 
-    // Don't let any children shrink, because status-items will collapse
-    // itself using overflow-y: auto.
-    > {
-      flex-shrink: 0
-    }
-
-    .status-items {
-      // This makes sure the status items are scrollable within the
-      // fixed-height parent.
-      overflow-y: auto;
-    }
-
     .show-all-updates-toggle {
       padding-top: 1rem;
       padding-bottom: 2rem;
-    }
-
-    .hide-for-large-up, .show-for-large-up {
-      // override hide-for-large-up's behavior of setting display to
-      // "inherit"
-      display: initial !important;
     }
   }
 }
@@ -124,6 +106,18 @@ button.save-button {
         // history list child element scrollable.
         overflow: hidden;
         height: calc(100vh - #{$sticky-top-margin});
+
+        // Don't let any children shrink, because status-items will collapse
+        // itself using overflow-y: auto.
+        > {
+          flex-shrink: 0
+        }
+
+        .status-items {
+          // This makes sure the status items are scrollable within the
+          // fixed-height parent.
+          overflow-y: auto;
+        }
       }
     }
   }
