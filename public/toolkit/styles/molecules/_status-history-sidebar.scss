@@ -1,22 +1,22 @@
 .page-content-column {
   padding-left: 0;
-  @media #{$small-only} {
+  @media (max-width: $medium-breakpoint) {
     padding-right: 0;
   }
 }
 
 .sidebar-column {
   padding-right: 0;
-  @media #{$small-only} {
+  @media (max-width: $medium-breakpoint) {
     padding-left: 0;
   }
 
-  @media #{$medium-up} {
+  @media #{$large-up} {
     height: 100%;
   }
 
   .sticky-sidebar-large-up {
-    @media #{$medium-up} {
+    @media #{$large-up} {
       position: -webkit-sticky;
       position: sticky;
       top: 2rem;
@@ -26,7 +26,7 @@
     .sidebar-content {
       display: flex;
       flex-direction: column;
-      @media #{$medium-up} {
+      @media #{$large-up} {
         overflow: hidden;
         height: calc(100vh - 2rem);
       }
@@ -36,7 +36,7 @@
 
 h3.status-history-label {
   margin-top: 3rem;
-  @media #{$medium-up} {
+  @media #{$large-up} {
     @include text-size('delta', 'medium');
   }
 }
@@ -80,7 +80,7 @@ h3.status-history-label {
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media #{$small-only} {
+  @media (max-width: $medium-breakpoint) {
     // at small size we want buttons below status history.
     order: 1;
   }
