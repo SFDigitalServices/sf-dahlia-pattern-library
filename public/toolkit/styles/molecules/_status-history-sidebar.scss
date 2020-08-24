@@ -1,0 +1,135 @@
+$sidebar-button-margin: 1rem;
+$sticky-top-margin: 2rem;
+
+.page-content-column {
+  padding-left: 0;
+}
+
+.sidebar-column {
+  padding-right: 0;
+
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+
+    .show-all-updates-toggle {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+h3.status-history-label {
+  margin-top: 3rem;
+}
+
+.status-items {
+  margin-bottom: 1rem;
+
+  .status-item {
+    padding-bottom: 1rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .status-item-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      .status-item-date {
+        @include responsive-text-size('small');
+        color: $steel;
+      }
+    }
+
+    .status-item-text {
+      @include responsive-text-size('small');
+      color: $jet;
+      width: 100%
+    }
+  }
+}
+
+button.save-button {
+  width: 100%;
+  margin-bottom: $sidebar-button-margin;
+}
+
+.status-history-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  button, .button {
+    width: calc(50% - #{$sidebar-button-margin / 2});
+    margin-bottom: 0;
+    word-wrap: break-word;
+  }
+}
+
+// At small and medium sizes, we want the sidebar docked below page
+// content, and with status + save buttons below the status history
+@media (max-width: $medium-breakpoint) {
+  // at small size, remove foundation column gutters
+  .page-content-column, .sidebar-column {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  button.save-button {
+    margin-top: 4rem;
+  }
+}
+
+// At large-and-up sizes, we want the sidebar to be sticky in a 1/3
+// column on the right side of the screen. We want the status history
+// to be scrollable so it fits on the screen.
+@media #{$large-up} {
+  .sidebar-column {
+    // for large screens, we need column containing fixed sidebar to be
+    // the same height as column it's next to, so sticky sidebar can scroll
+    // down the whole screen.
+    height: 100%;
+
+    .sticky-sidebar-large-up {
+      position: -webkit-sticky;
+      position: sticky;
+      top: $sticky-top-margin;
+
+      .sidebar-content {
+        // When sidebar is sticky, it should never be larger than viewport height,
+        // since you can't scroll it. Overflow: hidden allows us to make the status
+        // history list child element scrollable.
+        overflow: hidden;
+        height: calc(100vh - #{$sticky-top-margin});
+
+        // Don't let any children shrink, because status-items will collapse
+        // itself using overflow-y: auto.
+        > {
+          flex-shrink: 0
+        }
+
+        .status-items {
+          // This makes sure the status items are scrollable within the
+          // fixed-height parent.
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+
+  h3.status-history-label {
+    @include text-size('delta', 'medium');
+  }
+}
+
+
+
+
