@@ -4,12 +4,67 @@
 
 $navbutton-padding-large: 1.5rem;
 $navbutton-padding-small: 1.5rem;
-$navbutton-max-width: rem-calc(120px);
-$navbutton-and-accordion-max-width: $navbutton-max-width + rem-calc(30px);
+$navbutton-max-width-webapp: rem-calc(120px);
+$navbutton-max-width-partners: rem-calc(200px);
 
 @mixin navbutton-spacing($padding-size: $navbutton-padding-small, $text-max-width: $navbutton-max-width) {
   @include scut-padding(0 $padding-size 1rem $padding-size);
   max-width: $text-max-width + 2 * $padding-size;
+}
+
+@mixin navbar($flex-justify-navbuttons: flex-end, $navbutton-max-width: $navbutton-max-width-webapp) {
+  $navbutton-and-accordion-max-width: $navbutton-max-width + rem-calc(30px);
+  @media #{$small-only} {
+    display: none;
+  }
+
+  @media #{$medium-up} {
+    display: flex;
+    justify-content: $flex-justify-navbuttons;
+  }
+
+  > li {
+    background: transparent;
+    width: auto;
+    height: 4.6875rem;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  > li > a,
+  > li:not(.has-form) a:not(.button) {
+    @include navbutton-spacing($navbutton-padding-small, $navbutton-max-width);
+    background: transparent;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    vertical-align: bottom;
+
+    // Override default button behavior to break words
+    word-wrap: normal;
+    word-break: normal;
+
+    &.has-accordion {
+      @include navbutton-spacing($navbutton-padding-small, $navbutton-and-accordion-max-width);
+    }
+
+    @media #{$large-up} {
+      @include navbutton-spacing($navbutton-padding-large, $navbutton-max-width);
+      font-size: 0.8125rem;
+
+      &.has-accordion {
+        @include navbutton-spacing($navbutton-padding-large, $navbutton-and-accordion-max-width);
+      }
+    }
+
+    &:hover,
+    &.active {
+      border-bottom-color: $primary;
+    }
+  }
 }
 
 .top-bar {
@@ -98,58 +153,16 @@ $navbutton-and-accordion-max-width: $navbutton-max-width + rem-calc(30px);
   }
 
   ul.nav-menu {
+    @include navbar();
     width: 100%;
-    @media #{$small-only} {
-      display: none;
-    }
+  }
 
-    @media #{$medium-up} {
-      display: flex;
-      justify-content: flex-end;
-    }
+  ul.nav-menu-partners {
+    @include navbar($navbutton-max-width: $navbutton-max-width-partners);
+  }
 
-    > li {
-      background: transparent;
-      width: auto;
-      height: 4.6875rem;
-
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-    }
-
-    > li > a,
-    > li:not(.has-form) a:not(.button) {
-      @include navbutton-spacing($navbutton-padding-small, $navbutton-max-width);
-      background: transparent;
-      font-size: 0.75rem;
-      line-height: 1rem;
-      text-transform: uppercase;
-      border-bottom: 3px solid transparent;
-      vertical-align: bottom;
-
-      // Override default button behavior to break words
-      word-wrap: normal;
-      word-break: normal;
-
-      &.has-accordion {
-        @include navbutton-spacing($navbutton-padding-small, $navbutton-and-accordion-max-width);
-      }
-
-      @media #{$large-up} {
-        @include navbutton-spacing($navbutton-padding-large, $navbutton-max-width);
-        font-size: 0.8125rem;
-
-        &.has-accordion {
-          @include navbutton-spacing($navbutton-padding-large, $navbutton-and-accordion-max-width);
-        }
-      }
-
-      &:hover,
-      &.active {
-        border-bottom-color: $primary;
-      }
-    }
+  ul.nav-menu-partners-left {
+    @include navbar($flex-justify-navbuttons: flex-start, $navbutton-max-width: $navbutton-max-width-partners);
   }
 
   ul.dropdown {
