@@ -90,10 +90,19 @@
   border-top: 1px solid $f-dropdown-border-color;
 }
 
-.dropdown-menu-wrapper {
+.dropdown {
   position: relative;
 
+  .dropdown-menu-wrapper {
+    position: absolute;
+    width: 100%;
+  }
+
+  .dropdown-button {
+    margin-bottom: 0;
+  }
   .dropdown-menu {
     max-width: 100%;
+    position: relative;
   }
 }
