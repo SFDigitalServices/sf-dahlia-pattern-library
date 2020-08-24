@@ -51,13 +51,13 @@ h3.status-history-label {
     .item-substatus-text {
       @include responsive-text-size('small');
       color: $steel;
-      width: 100%
+      width: 100%;
     }
 
     .status-item-text {
       @include responsive-text-size('small');
       color: $jet;
-      width: 100%
+      width: 100%;
     }
   }
 }
