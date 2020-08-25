@@ -15,24 +15,11 @@
   @media #{$medium-up} {
     margin-bottom: -1px;
   }
-
-  .tabs {
-    @media #{$medium-up} {
-      margin-left: 2rem;
-    }
-  }
 }
 
 .tabs-card-row {
   @media #{$small-only} {
     padding-left: 0 !important;
     padding-right: 0 !important;
-  }
-
-  &.full-width {
-    @media #{$small-only} {
-      padding-left: 1rem !important;
-      padding-right: 1rem !important;
-    }
   }
 }
