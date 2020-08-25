@@ -1,6 +1,8 @@
 $sidebar-button-margin: 1rem;
 $sticky-top-margin: 2rem;
 
+$width-button-half-column: calc(50% - #{$sidebar-button-margin / 2});
+
 .page-content-column {
   padding-left: 0;
 }
@@ -67,8 +69,18 @@ button.save-button {
   flex-wrap: wrap;
   width: 100%;
 
+  .dropdown {
+    // Have to set button width on the dropdown wrapper instead of the
+    // button itself.
+    width: $width-button-half-column;
+
+    .dropdown-button {
+      width: 100%;
+    }
+  }
+
   button, .button {
-    width: calc(50% - #{$sidebar-button-margin / 2});
+    width: $width-button-half-column;
     margin-bottom: 0;
     word-wrap: break-word;
   }
