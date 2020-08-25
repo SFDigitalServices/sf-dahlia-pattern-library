@@ -6,7 +6,6 @@
 .tabs .tab-title {
   > a,
   > button {
-    display: block;
     font-size: $tabs-navigation-font-size;
     background-color: $tabs-navigation-bg-color;
     padding: $tabs-navigation-padding $tabs-navigation-padding * 2;
@@ -19,6 +18,9 @@
       color: $jet;
       box-shadow: inset 0 -2px 0 0 $primary;
     }
+    @include a-center;
+    text-align: center;
+    width: 100%;
   }
 
   &.active > a,
@@ -33,53 +35,15 @@
   }
 }
 
-// Small full width
-.full-width-small-only {
-  @media #{$small-only} {
-    &.tabs dd,
-    &.tabs .tab-title {
-      width: 100%;
-
-      > a,
-      > button {
-        text-align: center;
-
-        &:hover {
-          box-shadow: none;
-        }
-      }
-
-      &.active > a,
-      &.active > button {
-        box-shadow: none;
-
-        &:hover {
-          box-shadow: none;
-        }
-      }
-    }
-  }
-}
-
 // Switch tabs to full width buttons for medium and small screens
 .stretch-to-fill-medium-down {
   @media #{$medium-only}, #{$small-only} {
-    button, a {
-      @include a-center;
-      text-align: center;
-      width: 100%;
-    }
     .tab-title {
       width: 50%;
     }
   }
 
   @media #{$large-up} {
-    button, a {
-      @include a-center;
-      text-align: center;
-      width: 100%;
-    }
     .tab-title {
       width: 23rem;
     }
