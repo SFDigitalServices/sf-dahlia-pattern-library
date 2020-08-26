@@ -43,7 +43,7 @@
   }
 
   &.is-withdrawn {
-    @include pill-color($bg-color: $warn);
+    @include pill-color($bg-color: $warn, $text-color: $black);
   }
 
   &.is-leased {
