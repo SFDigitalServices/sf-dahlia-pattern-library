@@ -20,6 +20,8 @@
   display: table;
   border-radius: rem-calc(4px);
 
+  @include pill-color();
+
   &.is-no-status {
     @include pill-color($bg-color: $white, $border-color: $steel, $text-color: $steel);
   }
