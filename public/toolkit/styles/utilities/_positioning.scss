@@ -102,9 +102,10 @@ $position-default: null !default;
   display: inline-block !important;
 }
 
-.a-center {
+@mixin a-center {
   display: block;
   margin: 0 auto;
+  text-align: center;
 }
 
 .small-display-none {
@@ -131,7 +132,7 @@ $position-default: null !default;
 .right-on-medium {
   @media #{$medium-up} {
     float: right;
-  }  
+  }
 }
 
 .left-on-medium {
