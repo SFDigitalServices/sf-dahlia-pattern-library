@@ -2,8 +2,14 @@
 // Tabs
 //
 
-.tabs dd,
 .tabs .tab-title {
+  width: 23rem;
+
+  // Switch tabs to full width buttons for medium and small screens
+  @media #{$medium-only}, #{$small-only} {
+    width: 50%;
+  }
+
   > a,
   > button {
     font-size: $tabs-navigation-font-size;
@@ -31,16 +37,5 @@
     &:hover {
       box-shadow: inset 0 2px 0 0 $primary;
     }
-  }
-}
-
-.tabs .tab-title {
-  width: 23rem;
-}
-
-// Switch tabs to full width buttons for medium and small screens
-@media #{$medium-only}, #{$small-only} {
-  .tabs .tab-title {
-    width: 50%;
   }
 }
