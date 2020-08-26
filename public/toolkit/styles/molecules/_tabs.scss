@@ -19,7 +19,6 @@
       box-shadow: inset 0 -2px 0 0 $primary;
     }
     @include a-center;
-    text-align: center;
     width: 100%;
   }
 
@@ -35,17 +34,13 @@
   }
 }
 
-// Switch tabs to full width buttons for medium and small screens
-.stretch-to-fill-medium-down {
-  @media #{$medium-only}, #{$small-only} {
-    .tab-title {
-      width: 50%;
-    }
-  }
+.tabs .tab-title {
+  width: 23rem;
+}
 
-  @media #{$large-up} {
-    .tab-title {
-      width: 23rem;
-    }
+// Switch tabs to full width buttons for medium and small screens
+@media #{$medium-only}, #{$small-only} {
+  .tabs .tab-title {
+    width: 50%;
   }
 }
