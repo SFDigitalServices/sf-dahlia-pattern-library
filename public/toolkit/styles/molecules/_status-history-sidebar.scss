@@ -9,14 +9,15 @@ $width-button-half-column: calc(50% - #{$sidebar-button-margin / 2});
 
 .sidebar-column {
   padding-right: 0;
+}
 
-  .sidebar-content {
-    display: flex;
-    flex-direction: column;
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
 
-    .show-all-updates-toggle {
-      padding-bottom: 2rem;
-    }
+  .show-all-updates-toggle {
+    padding-bottom: 2rem;
+    width: 100%;
   }
 }
 
