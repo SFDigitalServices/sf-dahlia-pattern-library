@@ -133,8 +133,8 @@ label {
 
 // Additional input helper text
 .form-note {
-  @include responsive-text-size('small');
-  @include type-weight(semi);
+  @include responsive-text-size('tiny');
+  @include type-weight(normal);
   color: $steel;
   margin-bottom: 0;
 
