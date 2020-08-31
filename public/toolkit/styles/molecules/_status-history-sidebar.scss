@@ -96,6 +96,20 @@ button.save-button {
 // At small and medium sizes, we want the sidebar docked below page
 // content, and with status + save buttons below the status history
 @media (max-width: $medium-breakpoint) {
+  .sidebar-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .show-all-updates-toggle {
+      padding-bottom: 1rem;
+    }
+  }
+
+  h3.status-history-label {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
   // at small size, remove foundation column gutters
   .page-content-column, .sidebar-column {
     padding-left: 0;
@@ -112,11 +126,6 @@ button.save-button {
 // to be scrollable so it fits on the screen.
 @media #{$large-up} {
   .sidebar-column {
-    // for large screens, we need column containing fixed sidebar to be
-    // the same height as column it's next to, so sticky sidebar can scroll
-    // down the whole screen.
-    height: 100%;
-
     .sticky-sidebar-large-up {
       position: -webkit-sticky;
       position: sticky;
