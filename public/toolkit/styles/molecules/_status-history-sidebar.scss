@@ -22,7 +22,7 @@ $width-button-half-column: calc(50% - #{$sidebar-button-margin / 2});
 }
 
 h3.status-history-label {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .status-items {
@@ -106,6 +106,7 @@ button.save-button {
   }
 
   h3.status-history-label {
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 
