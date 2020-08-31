@@ -184,6 +184,7 @@
 
 .app-card_h3 {
   @include responsive-text-size('delta');
+  @include type-weight('semi');
 
   .t-sans {
     font-family: $alt-font-family;
