@@ -23,6 +23,8 @@ $width-button-half-column: calc(50% - #{$sidebar-button-margin / 2});
 
 h3.status-history-label {
   margin-top: 3rem;
+  font-family: $alt-font-family;
+  font-weight: $t-semi;
 }
 
 .status-items {
