@@ -125,13 +125,16 @@
   }
 }
 
-.app-editable {
+.inline-modal {
   @include scut-padding(2rem n);
   background: $dust;
   z-index: 10;
   position: relative;
   overflow: auto;
 
+  .inline-modal {
+    background: $white
+  }
   &.expand-wide {
     @include scut-margin(n -2rem);
     @include scut-padding(n 3rem);
