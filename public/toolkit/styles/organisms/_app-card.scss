@@ -132,7 +132,7 @@
   position: relative;
   overflow: auto;
 
-  .inline-modal {
+  &.white-background {
     background: $white
   }
   &.expand-wide {
