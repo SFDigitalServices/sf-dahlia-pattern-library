@@ -131,6 +131,7 @@
   z-index: 10;
   position: relative;
   overflow: auto;
+  width: 100%;
 
   &.white-background {
     background: $white
