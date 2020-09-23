@@ -61,13 +61,10 @@
     }
   }
 
-  // Link
-  a {
-    &:focus {
-      background-color: $f-dropdown-list-hover-bg;
-      text-decoration: none;
-    }
+  &:hover, &:focus {
+    background-color: $vapor;
   }
+
 
   // Checkboxes
   .checkbox {
