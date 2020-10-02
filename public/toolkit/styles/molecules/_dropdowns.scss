@@ -103,3 +103,32 @@
     position: relative;
   }
 }
+
+.dropdown-select {
+  background-color: $vapor;
+  border: 1px solid $iron;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: $alt-font-family;
+  font-size: 1rem;
+  font-weight: $font-weight-normal !important;
+  letter-spacing: normal;
+  padding: 0.625rem;
+  padding-left: 0.625rem !important;
+  text-transform: none;
+
+  .ui-icon {
+    svg use {
+      fill: rgba(0, 0, 0, 0.75);
+    }
+    &:hover, &:focus {
+      svg use {
+        fill: rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+
+  &:hover, &:focus {
+    background-color: $vapor;
+    color: rgba(0, 0, 0, 0.75);
+  }
+}
