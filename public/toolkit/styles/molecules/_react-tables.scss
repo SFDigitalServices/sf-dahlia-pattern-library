@@ -426,8 +426,6 @@ $status-column-width: 216;
       overflow: visible;
 
       .dropdown {
-        position: absolute !important; // Change to an inline style
-        right: rem-calc(16);
         opacity: 1;
       }
 
