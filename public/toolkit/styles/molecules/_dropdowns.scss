@@ -86,12 +86,11 @@
   padding: 0.75rem;
   color: $steel;
 
-  div {
+  a, div {
     padding: 0;
   }
   strong {
     color: $oil;
-    padding-right: 1rem;
   }
 }
 
@@ -122,11 +121,10 @@
   border: 1px solid $iron;
   color: rgba(0, 0, 0, 0.75);
   font-family: $alt-font-family;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: $font-weight-normal !important;
   letter-spacing: normal;
-  padding: 0.625rem;
-  padding-left: 0.625rem !important;
+  padding: 0.625rem !important;
   text-transform: none;
 
   .ui-icon {
@@ -140,8 +138,18 @@
     }
   }
 
+  &.disabled, &[disabled] {
+    border-color: $base !important;
+    color: $black !important;
+    background-color: $wash-color;
+  }
+
   &:hover, &:focus {
     background-color: $vapor;
     color: rgba(0, 0, 0, 0.75);
   }
+}
+
+.unit-dropdown__control {
+  border: none !important;
 }
