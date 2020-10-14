@@ -195,6 +195,14 @@ button,
     @extend .tertiary;
   }
 
+  &.icon {
+    @include button-unstyled;
+    padding: .5rem;
+    svg use {
+      fill: $steel;
+    }
+  }
+
   &.is-processing {
     @include custom-button-dark($cb-dark-color: $aluminum);
   }
@@ -300,7 +308,7 @@ button,
     border-radius: 0;
   }
 
-  // Icon button styles
+  // Button with icon styles
   &.has-icon {
     padding-left: 3.25em;
     padding-right: 1.75em;
