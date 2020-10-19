@@ -195,28 +195,16 @@ button,
     @extend .tertiary;
   }
 
+  // Used for icon-buttons
   &.icon {
     @include custom-button-light($cb-light-color: $steel);
-    // width: 2rem;
-    // height: 2rem;
     padding: $button-tny;
     border-radius: 4px;
-    // padding: 0px;
     margin: 0px;
 
     svg use {
       fill: $steel;
     }
-    .ui-icon {
-      @include scut-center-transform(y);
-    }
-
-    // &:focus {
-    //   background-color: $cb-medium-color;
-    //   svg use {
-    //     fill: $white;
-    //   }
-    // }
   }
 
   &.is-processing {
