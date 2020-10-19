@@ -29,6 +29,19 @@ To deploy the application:
     * For example: `./deploy.sh testing` will deploy to `sf-dahlia-pl-testing.herokuapp.com`
   * This works from any branch, for example if you have checked out the `dev` branch and you `./deploy.sh new-menu` then the dev branch will be deployed to `sf-dahlia-pl-new-menu.herokuapp.com`
 
+## Adding New Icons
+
+We use icons from icomoon.io. To add new icons:
+1. Go to https://icomoon.io/app/
+1. Click "import icons" and upload the current [selections.json](https://github.com/SFDigitalServices/sf-dahlia-pattern-library/blob/main/public/toolkit/icons/icomoon/selection.json)
+1. Select any new icons you want to add
+1. Click "Generate SVG and more" on the bottom bar, then click download using the default settings
+1. Replace the current [icomoon folder](https://github.com/SFDigitalServices/sf-dahlia-pattern-library/tree/main/public/toolkit/icons/icomoon) with the unzipped folder you just downloaded
+1. Copy and paste the new symbols from [demo.html](https://github.com/SFDigitalServices/sf-dahlia-pattern-library/blob/main/public/toolkit/icons/icomoon/demo.html) into [_icons.html](https://github.com/SFDigitalServices/sf-dahlia-pattern-library/blob/main/components/_icons.html)
+
+To use the new icons in Partners, replace the [layouts/_icons.html](https://github.com/SFDigitalServices/sf-dahlia-lap/blob/main/app/views/layouts/_icons.html) file with the content of [_icons.html](https://github.com/SFDigitalServices/sf-dahlia-pattern-library/blob/main/components/_icons.html)
+
+
 ## Branches
 
 Branches can be used for one-off small feature updates, as well as epic feature branches that contain all of the updates for a particular epic feature. These branches generally correspond to features in the [DAHLIA web app](https://github.com/Exygy/sf-dahlia-web).
