@@ -1907,7 +1907,7 @@
       "attrs": [],
       "properties": {
         "ligatures": "list2, todo2",
-        "name": "list2",
+        "name": "list-unordered",
         "order": 2,
         "id": 188,
         "prevSize": 32

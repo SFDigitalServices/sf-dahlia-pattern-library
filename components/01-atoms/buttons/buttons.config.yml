@@ -29,5 +29,5 @@ context:
     - forward
     - info
     - like
-    - list2
+    - list-unordered
     - equalizer
