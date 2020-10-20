@@ -6,3 +6,6 @@ dist/toolkit
 vendor
 build/
 .DS_Store
+# Icomoon files
+public/toolkit/icons/icomoon/demo.html
+public/toolkit/icons/icomoon/demo-files

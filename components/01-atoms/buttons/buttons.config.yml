@@ -29,3 +29,5 @@ context:
     - forward
     - info
     - like
+    - list-unordered
+    - equalizer

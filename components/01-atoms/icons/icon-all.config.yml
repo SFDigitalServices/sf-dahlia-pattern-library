@@ -3,6 +3,7 @@ notes: |
 context:
   icon:
     - arrow-down
+    - arrow-right
     - download
     - forward
     - info
@@ -26,7 +27,9 @@ context:
     - lock
     - ticket
     - list
-    - light bulb
+    - list-unordered
+    - equalizer
+    - light-bulb
     - clock
     - eye
     - file
