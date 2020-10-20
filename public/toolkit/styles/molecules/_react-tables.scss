@@ -1,10 +1,14 @@
 
 // Custom react table css
+
+$status-column-width: 216;
+$default-column-width: 150;
+$narrow-column-width: 120;
 .ReactTable {
   position: relative;
   display: flex;
   flex-direction: column;
-   
+
   * {
     box-sizing: border-box;
   }
@@ -26,7 +30,7 @@
     user-select: none;
   }
 
-  .rt-thead .rt-th, 
+  .rt-thead .rt-th,
   .rt-thead .rt-td {
     position: relative;
     border-right: 1px solid rgba(0, 0, 0, 0.05);
@@ -34,12 +38,12 @@
     box-shadow: inset 0 0 0 0 transparent;
   }
 
-  .rt-thead .rt-th.-sort-asc, 
+  .rt-thead .rt-th.-sort-asc,
   .rt-thead .rt-td.-sort-asc {
     box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.6);
   }
 
-  .rt-thead .rt-th.-sort-desc, 
+  .rt-thead .rt-th.-sort-desc,
   .rt-thead .rt-td.-sort-desc {
     box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.6);
   }
@@ -53,15 +57,15 @@
   .rt-thead .rt-td:last-child {
     border-right: 0;
   }
-  
+
   .rt-thead .rt-resizable-header {
     overflow: visible;
   }
-  
+
   .rt-thead .rt-resizable-header:last-child {
     overflow: hidden;
   }
-  
+
   .rt-thead .rt-resizable-header-content {
     // overflow: hidden;
     // text-overflow: ellipsis;
@@ -101,7 +105,7 @@
     display: inline-flex;
   }
 
-  .rt-th, 
+  .rt-th,
   .rt-td {
     flex: 1 0 0;
     white-space: nowrap;
@@ -109,14 +113,14 @@
     overflow: hidden;
     transition: .3s ease;
     transition-property: width, min-width, padding, opacity;
-    min-width: rem-calc(150);
+    min-width: rem-calc($default-column-width);
 
     &.rt-expandable {
       min-width: auto;
     }
 
     &.td-min-narrow {
-      min-width: rem-calc(120);
+      min-width: rem-calc($narrow-column-width);
     }
   }
 
@@ -202,7 +206,7 @@
     padding: 20px;
     color: rgba(0, 0, 0, 0.5);
   }
-  
+
   .-loading {
     display: block;
     position: absolute;
@@ -240,7 +244,7 @@
     transform: translateY(50%);
   }
 
-  .rt-resizing .rt-th, 
+  .rt-resizing .rt-th,
   .rt-resizing .rt-td {
     transition: none !important;
     cursor: col-resize;
@@ -259,7 +263,7 @@
   }
 
   // table header
-  .rt-thead .rt-th, 
+  .rt-thead .rt-th,
   .rt-thead .rt-td {
     @extend .th;
     background: $table-head-bg;
@@ -306,7 +310,7 @@
       padding: 5px;
     }
 
-    input, 
+    input,
     select {
       margin-bottom: 0;
     }
@@ -414,7 +418,7 @@
       }
 
       &.auto-width {
-        flex: 0 0 auto; 
+        flex: 0 0 auto;
       }
     }
 
@@ -423,13 +427,11 @@
       overflow: visible;
 
       .dropdown {
-        position: absolute !important; // Change to an inline style
-        right: rem-calc(16);
         opacity: 1;
       }
 
       .button {
-        min-width: rem-calc(150);
+        min-width: rem-calc($default-column-width);
         margin-bottom: 0;
       }
     }
@@ -439,7 +441,7 @@
   .tr-fixed-right,
   .td-fixed-right {
     position: absolute !important;
-    width: rem-calc(180) !important;
+    width: rem-calc($status-column-width) !important;
     right: 0;
   }
 
@@ -457,8 +459,8 @@
   }
 
   .td-offset-right {
-    min-width: rem-calc(300);
-    padding-right: rem-calc(196) !important;
+    min-width: rem-calc($status-column-width + $default-column-width);
+    padding-right: rem-calc($status-column-width + 16) !important;
 
     .rt-resizer {
       display: none;
@@ -476,11 +478,11 @@
         }
       }
     }
-    
+
     .rt-tr {
       background: transparent;
 
-      &, 
+      &,
       & + .subcomponent,
       .rt-td {
         background: $white;
