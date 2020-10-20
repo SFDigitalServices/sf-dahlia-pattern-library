@@ -113,7 +113,7 @@ $narrow-column-width: 120;
     overflow: hidden;
     transition: .3s ease;
     transition-property: width, min-width, padding, opacity;
-    min-width: rem-calc(140);
+    min-width: rem-calc($default-column-width);
 
     &.rt-expandable {
       min-width: auto;
