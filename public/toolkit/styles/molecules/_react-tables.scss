@@ -2,7 +2,8 @@
 // Custom react table css
 
 $status-column-width: 216;
-
+$default-column-width: 150;
+$narrow-column-width: 120;
 .ReactTable {
   position: relative;
   display: flex;
@@ -112,14 +113,14 @@ $status-column-width: 216;
     overflow: hidden;
     transition: .3s ease;
     transition-property: width, min-width, padding, opacity;
-    min-width: rem-calc(150);
+    min-width: rem-calc(140);
 
     &.rt-expandable {
       min-width: auto;
     }
 
     &.td-min-narrow {
-      min-width: rem-calc(120);
+      min-width: rem-calc($narrow-column-width);
     }
   }
 
@@ -430,7 +431,7 @@ $status-column-width: 216;
       }
 
       .button {
-        min-width: rem-calc(150);
+        min-width: rem-calc($default-column-width);
         margin-bottom: 0;
       }
     }
@@ -458,7 +459,7 @@ $status-column-width: 216;
   }
 
   .td-offset-right {
-    min-width: rem-calc(300);
+    min-width: rem-calc($status-column-width + $default-column-width);
     padding-right: rem-calc($status-column-width + 16) !important;
 
     .rt-resizer {
