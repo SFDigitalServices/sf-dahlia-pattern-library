@@ -45,6 +45,7 @@
 .dropdown-menu_item {
   @include dropdown-style;
   list-style: none;
+  margin: 0 !important;
 
   &.is {
     @each $color-name, $color-value in $state-colors {
@@ -152,8 +153,4 @@ button.dropdown-select {
 
 .unit-dropdown__control {
   border: none !important;
-}
-
-.unit-dropdown__menu-list {
-  overflow-x: hidden !important;
 }
