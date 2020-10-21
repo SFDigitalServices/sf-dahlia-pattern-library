@@ -15,10 +15,6 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-.i-star {
-  width: 0.875em;
-}
-
 .i-application {
   width: 0.75em;
 }
@@ -57,4 +53,8 @@ Single-colored icons can be modified like so:
 
 .i-trash {
   width: 0.7998046875em;
+}
+
+.i-star {
+  width: 0.875em;
 }
