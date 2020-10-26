@@ -154,6 +154,10 @@ label {
     @include responsive-text-size('micro');
   }
 
+  &.small {
+    @include responsive-text-size('small');
+  }
+
   &.max-width {
     max-width: rem-calc(640);
   }
