@@ -38,6 +38,17 @@ context:
     - building
     - result
     - minus
+    - input-clear
+    - filter-qty--0
+    - filter-qty--1
+    - filter-qty--2
+    - filter-qty--3
+    - filter-qty--4
+    - filter-qty--5
+    - filter-qty--6
+    - filter-qty--7
+    - filter-qty--8
+    - filter-qty--9
   fill:
     -  primary
     -  success
