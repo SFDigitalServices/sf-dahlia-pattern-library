@@ -49,6 +49,9 @@ context:
     - filter-qty--7
     - filter-qty--8
     - filter-qty--9
+    - oval
+    - cross
+    - polygon
   fill:
     -  primary
     -  success
