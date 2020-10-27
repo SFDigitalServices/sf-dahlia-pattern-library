@@ -2,43 +2,28 @@ notes: |
   Uses SVGs symbols which are stored in `layouts/includes`. Has variables for icon, fill color and size.
 context:
   icon:
+    - application
     - arrow-down
     - arrow-right
-    - download
-    - forward
-    - info
-    - like
-    - mail
-    - map
-    - menu
-    - plus
-    - search
-    - warning
-    - check
-    - close
-    - globe
-    - question
-    - link
-    - phone
-    - right
-    - left
+    - assistance
     - asterisk
-    - edit
-    - lock
-    - ticket
-    - list
-    - list-unordered
-    - equalizer
-    - light-bulb
-    - clock
-    - eye
-    - file
     - bed
-    - calendar
+    - browse
     - building
-    - result
-    - minus
-    - input-clear
+    - calendar
+    - check
+    - clock
+    - close
+    - close-round
+    - cross
+    - down
+    - download
+    - edit
+    - eligibility
+    - equalizer
+    - eye
+    - favorite
+    - file
     - filter-qty--0
     - filter-qty--1
     - filter-qty--2
@@ -49,9 +34,36 @@ context:
     - filter-qty--7
     - filter-qty--8
     - filter-qty--9
+    - forward
+    - globe
+    - info
+    - left
+    - light-bulb
+    - like
+    - like-fill
+    - link
+    - list
+    - list-unordered
+    - lock
     - oval
-    - cross
+    - mail
+    - map
+    - map-thin
+    - menu
+    - minus
+    - phone
+    - plus
     - polygon
+    - profile
+    - question
+    - result
+    - right
+    - search
+    - settings
+    - star
+    - ticket
+    - trash
+    - warning
   fill:
     -  primary
     -  success
