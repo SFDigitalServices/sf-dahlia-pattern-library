@@ -272,6 +272,11 @@ button,
     }
   }
 
+  &.tight-padding-vertical {
+    padding-top: rem-calc(12px);
+    padding-bottom: rem-calc(12px);
+  }
+
   // Primary button with white background
   &.ghost-white {
     @extend .secondary;
