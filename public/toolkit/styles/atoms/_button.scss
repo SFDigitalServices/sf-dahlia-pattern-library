@@ -276,6 +276,11 @@ button,
     }
   }
 
+  &.extra-padding {
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
+  }
+
   // Primary button with white background
   &.ghost-white {
     @extend .secondary;
