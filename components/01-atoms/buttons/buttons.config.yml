@@ -4,6 +4,7 @@ context:
     - primary
     - secondary
     - tertiary
+    - tertiary-inverse
     - alert
     - alert-fill
     - tint

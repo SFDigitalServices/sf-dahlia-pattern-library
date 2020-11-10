@@ -178,6 +178,10 @@ button,
     @include custom-button-light($cb-light-color: $steel);
   }
 
+  &.tertiary-inverse {
+    @include custom-button-dark($cb-dark-color: $steel);
+  }
+
   &.alert, &.error {
     @include custom-button-light($cb-light-color: $alert);
   }
