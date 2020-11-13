@@ -19,6 +19,7 @@
 }
 
 .filter-group_item,
+.filter-group_item__large,
 .filter-group_action {
   @media #{$medium-up} {
     margin-right: 1.5rem;
@@ -37,7 +38,8 @@
   }
 }
 
-.filter-group_item {
+.filter-group_item,
+.filter-group_item__large {
   @media #{$medium-up} {
     flex-basis: calc(50% - .75rem);
   }
@@ -45,5 +47,12 @@
   @media #{$large-up} {
     flex-basis: rem-calc(240);
     max-width: rem-calc(240);
+  }
+}
+
+.filter-group_item__large {
+  @media #{$large-up} {
+    flex-basis: rem-calc(300);
+    max-width: rem-calc(300);
   }
 }
