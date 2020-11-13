@@ -384,10 +384,13 @@ input.icon-input-field {
   height: $icon-input-height;
 }
 
+
+$clear-icon-size: 16px;
+
 // Search text field with x icon to clear
 // Javascript must be added to
-$clear-icon-margin: 13.5px;
-$clear-icon-size: 16px;
+$clear-icon-margin: (52px - $clear-icon-size) / 2;
+
 .search {
   display: inline-block;
   position: relative;
@@ -396,6 +399,7 @@ $clear-icon-size: 16px;
   input {
     width: 100%;
   }
+
   input.has-value {
     // Center the icon within the padding. Subtract 1px to account for the border.
     padding-right: rem-calc(($clear-icon-margin - 1) * 2 + $clear-icon-size);
