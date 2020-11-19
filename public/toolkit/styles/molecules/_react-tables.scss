@@ -1,7 +1,7 @@
 
 // Custom react table css
 
-$status-column-width: 216;
+$status-column-width: 230;
 $default-column-width: 150;
 $narrow-column-width: 120;
 .ReactTable {
@@ -469,6 +469,15 @@ $narrow-column-width: 120;
 
   // plain cell coloring
   &.rt-table-status {
+      // right fixed column
+      .tr-fixed-right,
+      .td-fixed-right {
+        position: absolute !important;
+        width: rem-calc($status-column-width) !important;
+        right: 0;
+      }
+
+
     .rt-td {
       border-bottom: 1px solid $smoke;
 

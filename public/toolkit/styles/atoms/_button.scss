@@ -276,6 +276,11 @@ button,
     }
   }
 
+  &.tight-padding-vertical {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   &.extra-padding {
     padding-left: 3.25rem;
     padding-right: 3.25rem;

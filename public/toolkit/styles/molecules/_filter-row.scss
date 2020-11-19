@@ -1,4 +1,7 @@
 .filter-row {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
   @media #{$large-up} {
     display: flex;
     justify-content: flex-end;
