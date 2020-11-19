@@ -232,7 +232,7 @@ $narrow-column-width: 120;
     color: rgba(0, 0, 0, 0.6);
     transform: translateY(-52%);
     transition: all .3s cubic-bezier(.25, .46, .45, .94);
-}
+  }
 
   .-loading.-active {
     opacity: 1;
@@ -486,6 +486,15 @@ $narrow-column-width: 120;
       & + .subcomponent,
       .rt-td {
         background: $white;
+      }
+    }
+
+    .-pagination {
+      background: $white;
+      .-next {
+        .-btn {
+          @include custom-button-light($cb-light-color: $primary);
+        }
       }
     }
   }
