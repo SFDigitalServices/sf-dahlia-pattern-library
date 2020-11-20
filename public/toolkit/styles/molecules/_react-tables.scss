@@ -527,6 +527,9 @@ $narrow-column-width: 120;
       }
     }
 
+    .border-left {
+      border-left: 1px solid $smoke;
+    }
 
     .rt-td {
       &.text-right {
