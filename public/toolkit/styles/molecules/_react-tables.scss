@@ -482,7 +482,14 @@ $narrow-column-width: 120;
     }
 
     .rt-th {
-      border-bottom: 1 solid $smoke
+      border-bottom: 1px solid $smoke;
+      background: $snow;
+
+      font-family: $base-font-family;
+      font-size: 14px;
+      font-weight: $t-semi;
+      text-transform: initial;
+      letter-spacing: initial;
     }
 
     .rt-th,
