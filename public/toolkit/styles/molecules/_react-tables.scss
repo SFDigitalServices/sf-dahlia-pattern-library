@@ -548,7 +548,7 @@ $narrow-column-width: 120;
 
     .-pagination {
       background: $white;
-      .-next {
+      .-next, .-previous {
         .-btn {
           @include custom-button-light($cb-light-color: $primary);
         }
