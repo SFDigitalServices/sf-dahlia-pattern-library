@@ -1,7 +1,7 @@
 
 // Custom react table css
 
-$status-column-width: 230;
+$status-column-width: 218;
 $default-column-width: 150;
 $narrow-column-width: 120;
 .ReactTable {
@@ -441,7 +441,6 @@ $narrow-column-width: 120;
   .tr-fixed-right,
   .td-fixed-right {
     position: absolute !important;
-    width: rem-calc($status-column-width) !important;
     right: 0;
   }
 
@@ -469,18 +468,60 @@ $narrow-column-width: 120;
 
   // plain cell coloring
   &.rt-table-status {
-      // right fixed column
-      .tr-fixed-right,
-      .td-fixed-right {
-        position: absolute !important;
-        width: rem-calc($status-column-width) !important;
-        right: 0;
+    // right fixed column
+    .tr-fixed-right,
+    .td-fixed-right {
+      position: absolute !important;
+      right: 0;
+    }
+
+    .non-resizable {
+      .rt-resizer {
+        display: none;
       }
+    }
+
+    .rt-th {
+      border-bottom: 1 solid $smoke
+    }
+
+    .rt-th,
+    .rt-resizable-header,
+    .rt-tr-status,
+    .rt-td,
+    .td-fixed-right,
+    .tr-fixed-right,
+    .rt-resizer {
+      // need to reset min-width, otherwise it will override to default min width.
+      min-width: initial;
+
+      // need to also set min-height to clear out old values
+      min-height: rem-calc(56);
+      height: rem-calc(56);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border: none;
+
+      &.rt-td, &.rt-th {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        &:first-child {
+          padding-left: 1rem;
+        }
+
+        &:last-child {
+          padding-right: 1rem;
+        }
+      }
+
+      &.rt-th {
+        border-bottom: 1px solid $iron
+      }
+    }
 
 
     .rt-td {
-      border-bottom: 1px solid $smoke;
-
       &.text-right {
         * {
           margin-left: auto;
