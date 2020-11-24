@@ -20,6 +20,9 @@
     justify-content: flex-end;
   }
 }
+.filter-group.filter-group--left {
+  justify-content: flex-start;
+}
 
 .filter-group_item,
 .filter-group_item__large,
