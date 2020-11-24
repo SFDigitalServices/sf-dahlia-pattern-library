@@ -276,6 +276,11 @@ button,
     }
   }
 
+  &.tight-padding-vertical {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   &.extra-padding {
     padding-left: 3.25rem;
     padding-right: 3.25rem;
@@ -352,6 +357,27 @@ button,
 
   &.button-unstyled {
     @include button-unstyled;
+  }
+
+  &.button-icon-only {
+    @include button-unstyled;
+
+    // Default line height will increase height of icon so we need to override it.
+    line-height: 0;
+
+    &:hover,
+    &:focus {
+      background-color: initial;
+      color: initial;
+
+      text-decoration: none;
+      outline: none;
+      box-shadow: none;
+
+      svg use {
+        fill: initial;
+      }
+    }
   }
 
   &.button-link {

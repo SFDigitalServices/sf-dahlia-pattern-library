@@ -232,7 +232,7 @@ $narrow-column-width: 120;
     color: rgba(0, 0, 0, 0.6);
     transform: translateY(-52%);
     transition: all .3s cubic-bezier(.25, .46, .45, .94);
-}
+  }
 
   .-loading.-active {
     opacity: 1;
@@ -437,27 +437,6 @@ $narrow-column-width: 120;
     }
   }
 
-  // right fixed column
-  .tr-fixed-right,
-  .td-fixed-right {
-    position: absolute !important;
-    width: rem-calc($status-column-width) !important;
-    right: 0;
-  }
-
-  .td-fixed-right {
-    min-height: rem-calc(66);
-
-    .rt-resizer {
-      display: none;
-    }
-  }
-
-  .tr-fixed-right {
-    min-height: rem-calc(87);
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
   .td-offset-right {
     min-width: rem-calc($status-column-width + $default-column-width);
     padding-right: rem-calc($status-column-width + 16) !important;
@@ -469,9 +448,73 @@ $narrow-column-width: 120;
 
   // plain cell coloring
   &.rt-table-status {
-    .rt-td {
-      border-bottom: 1px solid $smoke;
+    .non-resizable {
+      .rt-resizer {
+        display: none;
+      }
+    }
 
+    .rt-th {
+      border-bottom: 1px solid $smoke;
+      background: $snow;
+
+      font-family: $base-font-family;
+      font-size: 14px;
+      font-weight: $t-semi;
+      text-transform: initial;
+      letter-spacing: initial;
+    }
+
+    .rt-th,
+    .rt-resizable-header,
+    .rt-tr-status,
+    .rt-td,
+    .td-fixed-right,
+    .tr-fixed-right,
+    .rt-resizer {
+      // need to reset min-width, otherwise it will override to default min width.
+      min-width: initial;
+
+      // need to also set min-height to clear out old values
+      min-height: rem-calc(56);
+      height: rem-calc(56);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border: none;
+
+      &.rt-td, &.rt-th {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        &:first-child {
+          padding-left: 1rem;
+        }
+
+        &:last-child {
+          padding-right: 1rem;
+        }
+      }
+
+      &.rt-th {
+        border-bottom: 1px solid $iron
+      }
+
+      // right fixed column
+      &.tr-fixed-right,
+      &.td-fixed-right {
+        position: absolute !important;
+        right: 0;
+
+        border-left: 1px solid $smoke;
+        padding-left: 1rem;
+
+        .rt-resizer {
+          display: none;
+        }
+      }
+    }
+
+    .rt-td {
       &.text-right {
         * {
           margin-left: auto;
@@ -486,6 +529,15 @@ $narrow-column-width: 120;
       & + .subcomponent,
       .rt-td {
         background: $white;
+      }
+    }
+
+    .-pagination {
+      background: $white;
+      .-next, .-previous {
+        .-btn {
+          @include custom-button-light($cb-light-color: $primary);
+        }
       }
     }
   }
