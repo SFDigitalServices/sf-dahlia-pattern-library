@@ -95,9 +95,6 @@ input[type="checkbox"]:checked + label::before {
   background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:indeterminate + label::before,
-// .indeterminate class is just for pattern library usage. Instead you
-// should use indeterminate HTML attr set via javascript.
 input[type="checkbox"]:checked.indeterminate + label::before {
   background-image: url("../images/indeterminate.svg");
   background-position: 50%;
