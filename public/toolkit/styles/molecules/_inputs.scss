@@ -95,6 +95,11 @@ input[type="checkbox"]:checked + label::before {
   background-repeat: no-repeat;
 }
 
+input[type="checkbox"]:checked.indeterminate + label::before {
+  background-image: url("../images/indeterminate.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
 
 input[type="radio"]:focus + label::before,
 input[type="checkbox"]:focus + label::before {
