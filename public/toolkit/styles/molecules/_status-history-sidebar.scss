@@ -69,6 +69,7 @@ button.save-button {
 .status-history-buttons {
   display: flex;
   justify-content: space-between;
+  align-content: stretch;
   flex-wrap: wrap;
   width: 100%;
 
@@ -76,6 +77,15 @@ button.save-button {
     // Have to set button width on the dropdown wrapper instead of the
     // button itself.
     width: $width-button-half-column;
+
+    // Have to set height on toggle hierarchy to make sure align-content: stretch actually stretches the dropdown button.
+    .status-dropdown__control {
+      height: 100%;
+
+      .button, button {
+        height: 100%;
+      }
+    }
 
     .dropdown-button {
       width: 100%;
