@@ -40,11 +40,6 @@ $width-button-half-column: calc(50% - #{$sidebar-button-margin / 2});
       &:last-child {
         text-align: right;
       }
-
-      .status-item-date {
-        @include responsive-text-size('small');
-        color: $steel;
-      }
     }
 
     .item-substatus-text {
@@ -56,7 +51,24 @@ $width-button-half-column: calc(50% - #{$sidebar-button-margin / 2});
     .status-item-text {
       @include responsive-text-size('small');
       color: $jet;
+      padding-bottom: .5rem;
       width: 100%;
+    }
+    .status-item-footer {
+      display: flex;
+
+      .status-item-created-by {
+        @include responsive-text-size('small');
+        color: $steel;
+        width: 50%;
+      }
+  
+      .status-item-date {
+        @include responsive-text-size('small');
+        color: $steel;
+        text-align: right;
+        width: 50%;
+      }
     }
   }
 }
