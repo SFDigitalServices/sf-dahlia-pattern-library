@@ -1,0 +1,60 @@
+.tablesubheader {
+
+}
+
+.accordion-header-pricing {
+  @include accordion-plus-minus-header();
+  padding-left: 0.75rem
+}
+
+.accordion-pricing-table {
+  margin-bottom: 0;
+
+  // Clear ReactTable default table style overrides
+  thead {
+    background: inherit;
+
+    th {
+      border-bottom: inherit;
+    }
+  }
+
+  // Clear ReactTable default table style overrides
+  tbody tr {
+    background: inherit;
+  }
+
+  .pricing-table-cell {
+    color: $black;
+    @include type-weight(regular);
+    @include text-size(base);
+    line-height: rem-calc(18);
+
+    .cell-subtitle {
+      color: $steel;
+      @include text-size(small);
+    }
+  }
+
+  .column-header {
+    color: $steel;
+    @include responsive-ami-text-size('small');
+    font-family: $alt-font-family;
+    padding-top: 0.75rem;
+    padding-bottom: 0;
+  }
+
+  .ami-subheader {
+    @include income-label-style();
+    @include type-weight(bold);
+    color: $black;
+  }
+
+  .pricing-table-cell:last-child, .column-header:last-child {
+    text-align: right;
+  }
+
+  .pricing-table-cell, .ami-subheader, .column-header {
+    padding: 0.75rem;
+  }
+}

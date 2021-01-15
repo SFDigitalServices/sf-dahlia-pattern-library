@@ -2,6 +2,39 @@
 // Accordion
 //
 
+@mixin accordion-plus-minus-header() {
+  @include type-weight(semi);
+  text-decoration: none;
+  color: $accordion-text-color;
+  background-color: $accordion-background;
+  position: relative;
+  margin-bottom: 0;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  @include rounded-border();
+
+  &:hover, &:focus {
+    background-color: $accordion-background;
+  }
+
+  .ui-medium svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .accordion-header-title {
+    // Add padding to the title so it doesn't overlap the control icons
+    padding-right: 1rem;
+    flex-grow: 1;
+  }
+
+  :not(.accordion-header-title) {
+    flex-grow: 0;
+  }
+}
+
 // prototyping classes
 .accordion {
 
@@ -96,9 +129,9 @@ $accordion-text-color: #4D4D4D;
     margin-right: 0.5rem;
   }
 
-  .content {
+  .accordion-navigation .content {
     border: 2px solid $accordion-background;
-    padding: 1rem 2rem 2rem !important;
+    padding: 1rem 2rem 2rem;
     @include rounded-bottom-border();
   }
 
@@ -106,41 +139,8 @@ $accordion-text-color: #4D4D4D;
     margin-bottom: 1rem !important;
   }
 
-  .accordion-navigation div.accordion-header {
-    @include type-weight(semi);
-    text-decoration: none;
-    color: $accordion-text-color;
-    background-color: $accordion-background;
-    position: relative;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    cursor: pointer;
-
-    &:hover, &:focus {
-      background-color: $accordion-background;
-    }
-
-    .ui-medium svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-
-    &.accordion-header {
-      display: flex;
-      align-items: center;
-      .accordion-header-title {
-        // Add padding to the title so it doesn't overlap the control icons
-        padding-right: 1rem;
-        flex-grow: 1;
-      }
-
-      :not(.accordion-header-title) {
-        flex-grow: 0;
-      }
-
-      margin-bottom: 0;
-      @include rounded-border();
-    }
+  .accordion-header {
+    @include accordion-plus-minus-header();
   }
 
   .accordion-navigation.active {
@@ -194,3 +194,37 @@ $accordion-text-color: #4D4D4D;
     }
   }
 }
+
+@mixin regular-accordion-text() {
+  @include responsive-ami-text-size('base');
+  @include type-weight(regular);
+}
+
+.pricing-accordion-header {
+  display: flex;
+  align-items: center;
+  @include regular-accordion-text();
+  width: 100%;
+}
+
+.pricing-header-spacer {
+  flex-grow: 1 !important;
+}
+
+.pricing-accordion-header-number {
+  @include text-size('gamma', 'medium');
+  @include type-weight(regular);
+  font-family: $serif-font-family;
+  padding-right: 0.5rem;
+}
+
+.pricing-accordion-header-light-text {
+  color: $steel;
+}
+
+.pricing-accordion-units-income-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
