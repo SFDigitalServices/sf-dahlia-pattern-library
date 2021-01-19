@@ -2,21 +2,17 @@
 <div class="accordion-header-pricing" draggable="false">
   <div class="accordion-header-title">
     <div class="pricing-accordion-header">
-      <div class="pricing-accordion-header-number">
-        {{num}}
-      </div>
-      <div class="pricing-accordion-header-regular-text">
+      <div role="text">
+        <span class="pricing-accordion-header-number">
+          {{num}}
+        </span>
         {{householdtext}}
       </div>
       <div class="pricing-header-spacer">
 
       </div>
       <div class="pricing-accordion-units-income-container">
-        <div class="pricing-accordion-units">
-          {{availableunits}}
-          <span class="pricing-accordion-header-light-text">units available</span>
-        </div>
-        <div class="pricing-accordion-income">
+        <div class="pricing-accordion-income" role="text">
           <span class="pricing-accordion-header-light-text">Income</span>
           {{incomerange}}
           <span class="pricing-accordion-header-light-text">per month</span>
@@ -45,7 +41,7 @@
 
 {{#*inline "tablesubheader"}}
 <tr>
-  <th id="{{id}}" class="span ami-subheader" colspan="3" scope="colgroup">
+  <th id="{{id}}" class="span ami-subheader" colspan="3" scope="col">
     {{amiName}}
   </th>
 </tr>
@@ -54,17 +50,21 @@
 
 {{#*inline "tablerow"}}
 <tr>
-  <th class="pricing-table-cell" headers="units {{subheaderid}}" id="{{rowid}}">
-    {{apttype}}
-    <div class="cell-subtitle">{{numavailable}} Available</div>
-  </th>
-  <td class="pricing-table-cell" headers="income-range {{subheaderid}} {{rowid}}">
-    {{incomerange}}
-    <div class="cell-subtitle">per month</div>
+  <td class="pricing-table-cell" headers="{{subheaderid}} units" id="{{rowid}}">
+      {{apttype}}
+      <div class="cell-subtitle">{{numavailable}} Available</div>
   </td>
-  <td class="pricing-table-cell" headers="rent {{subheaderid}} {{rowid}}">
-    {{rent}}
-    <div class="cell-subtitle">per month</div>
+  <td class="pricing-table-cell" headers="{{subheaderid}} income-range">
+    <div role="text">
+      {{incomerange}}
+      <div class="cell-subtitle">per month</div>
+    </div>
+  </td>
+  <td class="pricing-table-cell" headers="{{subheaderid}} rent">
+    <div role="text">
+      {{rent}}
+      <div class="cell-subtitle">per month</div>
+    </div>
   </td>
 </tr>
 {{/inline}}
@@ -73,7 +73,6 @@
   {{> closedaccordionnav
     num="1"
     householdtext="person in household"
-    availableunits=5
     incomerange="$X,XXX - $X,XXX"
     active="false"
   }}
@@ -81,12 +80,11 @@
     {{> accordionheader
       num="2"
       householdtext="people in household"
-      availableunits=3
       incomerange="$X,XXX - $X,XXX"
       active="true"
     }}
     <div id="panel-1-b" class="content no-padding">
-      <table class="accordion-pricing-table">
+      <table class="accordion-pricing-table" aria-label="Pricing table for 2 people in household">
         <thead>
           <tr>
             <th id="units" scope="col" class="column-header">
@@ -128,7 +126,7 @@
             rent = "$1,800"
           }}
           {{> tablerow
-            subheaderid="lowIncome"
+            subheaderid="moderateIncome"
             rowid="moderateIncome1BR"
             apttype="1BR"
             numavailable=5
@@ -142,7 +140,6 @@
   {{> closedaccordionnav
     num="3"
     householdtext="people in household"
-    availableunits=5
     incomerange="$X,XXX - $X,XXX"
     active="false"
   }}
@@ -150,14 +147,12 @@
   {{> closedaccordionnav
     num="4"
     householdtext="people in household"
-    availableunits=5
     incomerange="$X,XXX - $X,XXX"
     active="false"
   }}
   {{> closedaccordionnav
     num="5+"
     householdtext="people in household"
-    availableunits=5
     incomerange="$X,XXX - $X,XXX"
     active="false"
   }}
