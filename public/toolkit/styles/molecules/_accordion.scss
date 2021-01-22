@@ -200,11 +200,20 @@ $accordion-text-color: #4D4D4D;
   @include type-weight(regular);
 }
 
+@mixin mobile-accordion-text() {
+  @include text-size('base', 'small');
+  @include type-weight(regular);
+}
+
 .pricing-accordion-header {
   display: flex;
   align-items: center;
   @include regular-accordion-text();
   width: 100%;
+
+  &--mobile {
+    @include mobile-accordion-text();
+  }
 }
 
 .pricing-header-spacer {
@@ -212,10 +221,16 @@ $accordion-text-color: #4D4D4D;
 }
 
 .pricing-accordion-header-number {
-  @include text-size('gamma', 'medium');
-  @include type-weight(regular);
-  font-family: $serif-font-family;
-  padding-right: 0.5rem;
+  &:not(--mobile) {
+    @include text-size('gamma', 'medium');
+    @include type-weight(regular);
+    font-family: $serif-font-family;
+    padding-right: 0.5rem;
+  }
+
+  &--mobile {
+    @include type-weight(semi);
+  }
 }
 
 .pricing-accordion-header-light-text {

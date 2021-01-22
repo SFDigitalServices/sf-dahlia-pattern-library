@@ -2,9 +2,16 @@
 
 }
 
+$vertical-padding-desktop: 0.75rem;
+$vertical-padding-mobile: 0.25rem;
+$horizontal-padding-desktop: 0.75rem;
+$horizontal-padding-mobile: 0.75rem;
+
 .accordion-header-pricing {
   @include accordion-plus-minus-header();
-  padding-left: 0.75rem
+  padding-left: rem-calc(12px);
+  padding-top: rem-calc(14px);
+  padding-bottom: rem-calc(14px);
 }
 
 .vertically-centered-text {
@@ -12,8 +19,23 @@
   align-items: center;
 }
 
-.accordion-pricing-table {
+@mixin pricing-text($size: base, $color: $black, $weight: regular) {
+  color: $color;
+  @include type-weight($weight);
+  @include text-size($size);
+  line-height: rem-calc(20);
+}
+
+@mixin small-pricing-text($color: $black, $weight: regular) {
+  @include pricing-text($size: small, $color: $color, $weight: $weight);
+}
+
+.accordion-pricing-table, .accordion-pricing-table--mobile {
   margin-bottom: 0;
+
+  &--mobile {
+    margin-bottom: 1rem;
+  }
 
   // Clear ReactTable default table style overrides
   thead {
@@ -29,23 +51,27 @@
     background: inherit;
   }
 
-  .pricing-table-cell {
-    color: $black;
-    @include type-weight(regular);
-    @include text-size(base);
-    line-height: rem-calc(18);
+  .pricing-table-cell, .pricing-table-cell--mobile {
+    @include pricing-text();
 
-    .cell-subtitle {
-      color: $steel;
-      @include text-size(small);
+    &--mobile {
+      @include small-pricing-text();
     }
   }
 
-  .column-header {
-    color: $steel;
-    @include responsive-ami-text-size('small');
+  .mobile-table-row {
+    @include small-pricing-text();
+  }
+
+  .cell-subtitle {
+    @include small-pricing-text($color: $steel);
+  }
+
+  .column-header  {
+    @include small-pricing-text($color: $steel, $weight: bold);
     font-family: $alt-font-family;
-    padding-top: 0.75rem;
+
+    padding-top: $vertical-padding-desktop;
     padding-bottom: 0;
   }
 
@@ -55,11 +81,53 @@
     color: $black;
   }
 
-  .pricing-table-cell:last-child, .column-header:last-child {
+  .ami-subheader--mobile {
+    @include small-pricing-text($color: $steel, $weight: semi);
+
+    .ami-border {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $iron;
+    }
+  }
+
+  .pricing-table-cell:last-child,
+  .column-header--mobile:last-child {
     text-align: right;
   }
 
-  .pricing-table-cell, .ami-subheader, .column-header {
-    padding: 0.75rem;
+  .pricing-table-cell,
+  .ami-subheader,
+  .column-header {
+    padding-left: $horizontal-padding-desktop;
+    padding-right: $horizontal-padding-desktop;
+    padding-top: $vertical-padding-desktop;
+    padding-bottom: $vertical-padding-desktop;
+  }
+
+  .mobile-table-row {
+    th, td {
+      padding-left: $horizontal-padding-mobile;
+      padding-right: $horizontal-padding-mobile;
+      padding-top: $vertical-padding-mobile;
+      padding-bottom: $vertical-padding-mobile;
+    }
+
+    .ami-subheader--mobile {
+      padding-top: 1rem;
+      padding-bottom: calc(2 * #{$vertical-padding-mobile});
+    }
+
+    &.indented-row th {
+      padding-left: calc(14px + #{$horizontal-padding-mobile});
+      @include small-pricing-text();
+    }
+
+    &.unit-row th {
+      @include small-pricing-text($weight: semi);
+    }
+
+    :not(:first-child) {
+      text-align: right;
+    }
   }
 }
