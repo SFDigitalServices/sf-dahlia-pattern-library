@@ -148,7 +148,7 @@ $accordion-text-color: #4D4D4D;
       display: block;
     }
 
-    div.accordion-header {
+    .accordion-header {
       @include rounded-bottom-border(0);
 
       .ui-minus {
@@ -195,51 +195,4 @@ $accordion-text-color: #4D4D4D;
   }
 }
 
-@mixin regular-accordion-text() {
-  @include responsive-ami-text-size('base');
-  @include type-weight(regular);
-}
-
-@mixin mobile-accordion-text() {
-  @include text-size('base', 'small');
-  @include type-weight(regular);
-}
-
-.pricing-accordion-header {
-  display: flex;
-  align-items: center;
-  @include regular-accordion-text();
-  width: 100%;
-
-  &--mobile {
-    @include mobile-accordion-text();
-  }
-}
-
-.pricing-header-spacer {
-  flex-grow: 1 !important;
-}
-
-.pricing-accordion-header-number {
-  &:not(--mobile) {
-    @include text-size('gamma', 'medium');
-    @include type-weight(regular);
-    font-family: $serif-font-family;
-    padding-right: 0.5rem;
-  }
-
-  &--mobile {
-    @include type-weight(semi);
-  }
-}
-
-.pricing-accordion-header-light-text {
-  color: $steel;
-}
-
-.pricing-accordion-units-income-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
 

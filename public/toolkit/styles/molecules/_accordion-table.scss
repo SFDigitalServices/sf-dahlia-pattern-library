@@ -1,23 +1,7 @@
-.tablesubheader {
-
-}
-
 $vertical-padding-desktop: 0.75rem;
-$vertical-padding-mobile: 0.25rem;
-$horizontal-padding-desktop: 0.75rem;
-$horizontal-padding-mobile: 0.75rem;
-
-.accordion-header-pricing {
-  @include accordion-plus-minus-header();
-  padding-left: rem-calc(12px);
-  padding-top: rem-calc(14px);
-  padding-bottom: rem-calc(14px);
-}
-
-.vertically-centered-text {
-  display: flex;
-  align-items: center;
-}
+$vertical-padding-mobile-small: 0.25rem;
+$vertical-padding-mobile: 0.5rem;
+$horizontal-padding: 0.75rem;
 
 @mixin pricing-text($size: base, $color: $black, $weight: regular) {
   color: $color;
@@ -30,12 +14,66 @@ $horizontal-padding-mobile: 0.75rem;
   @include pricing-text($size: small, $color: $color, $weight: $weight);
 }
 
-.accordion-pricing-table, .accordion-pricing-table--mobile {
-  margin-bottom: 0;
+@mixin pricing-header-text-container() {
+  display: flex;
+  align-items: center;
+  @include pricing-text();
+  width: 100%;
 
-  &--mobile {
-    margin-bottom: 1rem;
+  .pricing-header-spacer {
+    flex-grow: 1 !important;
   }
+}
+
+.pricing-accordion {
+  .accordion-header {
+    @include accordion-plus-minus-header();
+    @include padding($left: $horizontal-padding, $vertical: 14px);
+
+    .pricing-header-text-container {
+      @include pricing-header-text-container();
+
+      .pricing-accordion-income-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .header-number {
+        @include text-size('gamma', 'medium');
+        @include type-weight(regular);
+        font-family: $serif-font-family;
+        padding-right: 0.5rem;
+      }
+
+      .header-light-text {
+        color: $steel;
+      }
+    }
+
+    .pricing-header-text-container--mobile {
+      @include pricing-header-text-container();
+      @include small-pricing-text();
+
+      .header-number {
+        @include type-weight(semi);
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  .mobile-table-padding {
+    // need to have !important here to override _accordion default panel styles
+    @include padding(
+      $top: 0 !important,
+      $bottom: $vertical-padding-mobile !important,
+      $horizontal: $horizontal-padding !important
+    );
+  }
+}
+
+@mixin table-without-default-styling() {
+  margin-bottom: 0;
 
   // Clear ReactTable default table style overrides
   thead {
@@ -51,20 +89,16 @@ $horizontal-padding-mobile: 0.75rem;
     background: inherit;
   }
 
-  .pricing-table-cell, .pricing-table-cell--mobile {
-    @include pricing-text();
-
-    &--mobile {
-      @include small-pricing-text();
-    }
-  }
-
-  .mobile-table-row {
-    @include small-pricing-text();
-  }
-
   .cell-subtitle {
     @include small-pricing-text($color: $steel);
+  }
+}
+
+.accordion-pricing-table {
+  @include table-without-default-styling();
+
+  .pricing-table-cell {
+    @include pricing-text();
   }
 
   .column-header  {
@@ -81,53 +115,68 @@ $horizontal-padding-mobile: 0.75rem;
     color: $black;
   }
 
-  .ami-subheader--mobile {
-    @include small-pricing-text($color: $steel, $weight: semi);
-
-    .ami-border {
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid $iron;
-    }
-  }
-
   .pricing-table-cell:last-child,
-  .column-header--mobile:last-child {
+  .column-header:last-child {
     text-align: right;
   }
 
   .pricing-table-cell,
   .ami-subheader,
   .column-header {
-    padding-left: $horizontal-padding-desktop;
-    padding-right: $horizontal-padding-desktop;
-    padding-top: $vertical-padding-desktop;
-    padding-bottom: $vertical-padding-desktop;
+    @include padding(
+      $horizontal: $horizontal-padding,
+      $vertical: $vertical-padding-desktop
+    );
+  }
+}
+
+.mobile-ami-header {
+  @include small-pricing-text($color: $steel, $weight: semi);
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: $vertical-padding-mobile;
+  border-bottom: 1px solid $iron;
+  margin-bottom: $vertical-padding-mobile;
+}
+
+.mobile-units-table {
+  @include table-without-default-styling();
+
+  .mobile-table-row {
+    @include small-pricing-text();
   }
 
   .mobile-table-row {
     th, td {
-      padding-left: $horizontal-padding-mobile;
-      padding-right: $horizontal-padding-mobile;
-      padding-top: $vertical-padding-mobile;
-      padding-bottom: $vertical-padding-mobile;
+      @include padding($vertical: $vertical-padding-mobile-small, $horizontal: 0);
     }
 
-    .ami-subheader--mobile {
-      padding-top: 1rem;
-      padding-bottom: calc(2 * #{$vertical-padding-mobile});
+    td {
+      text-align: right;
+    }
+
+    &:last-child {
+      th, td {
+        padding-bottom: $vertical-padding-mobile;
+      }
     }
 
     &.indented-row th {
-      padding-left: calc(14px + #{$horizontal-padding-mobile});
+      padding-left: 14px;
       @include small-pricing-text();
     }
 
-    &.unit-row th {
-      @include small-pricing-text($weight: semi);
-    }
+    &.unit-row {
+      // Add extra padding between unit sections
+      &:not(:first-child) {
+        th, td {
+          padding-top: calc(1rem - #{$vertical-padding-mobile-small});
+        }
+      }
 
-    :not(:first-child) {
-      text-align: right;
+      th {
+        @include small-pricing-text($weight: semi);
+      }
     }
   }
 }

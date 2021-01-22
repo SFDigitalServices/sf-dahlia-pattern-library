@@ -167,3 +167,10 @@
     background-image: url("../images/bg@2400.jpg");
   }
 }
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null, $vertical: null, $horizontal: null) {
+  padding-top: $top or $vertical;
+  padding-right: $right or $horizontal;
+  padding-bottom: $bottom or $vertical;
+  padding-left: $left or $horizontal;
+}

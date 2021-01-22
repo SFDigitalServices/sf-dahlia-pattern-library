@@ -1,22 +1,18 @@
 {{#*inline "accordionheader"}}
-<div class="accordion-header-pricing" draggable="false">
-  <div class="accordion-header-title">
-    <div class="pricing-accordion-header">
-      <div class="vertically-centered-text" role="text">
-        <span class="pricing-accordion-header-number">
-          {{num}}
-        </span>
-        {{householdtext}}
-      </div>
-      <div class="pricing-header-spacer">
+<div class="accordion-header" draggable="false">
+  <div class="accordion-header-title pricing-header-text-container">
+    <div class="vertically-centered-text" role="text">
+      <span class="header-number">{{num}}</span>
+      {{householdtext}}
+    </div>
+    <div class="pricing-header-spacer">
 
-      </div>
-      <div class="pricing-accordion-units-income-container">
-        <div class="pricing-accordion-income" role="text">
-          <span class="pricing-accordion-header-light-text">Income</span>
-          {{incomerange}}
-          <span class="pricing-accordion-header-light-text">per month</span>
-        </div>
+    </div>
+    <div class="pricing-accordion-income-container">
+      <div class="pricing-accordion-income" role="text">
+        <span class="header-light-text">Income</span>
+        {{incomerange}}
+        <span class="header-light-text">per month</span>
       </div>
     </div>
   </div>
