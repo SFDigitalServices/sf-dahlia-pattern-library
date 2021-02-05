@@ -120,6 +120,16 @@ $horizontal-padding: 0.75rem;
     text-align: right;
   }
 
+  tr:first-child {
+    .ami-subheader {
+      @include padding(
+        $horizontal: $horizontal-padding,
+        $top: 0.5rem,
+        $bottom: $vertical-padding-desktop
+      );
+    }
+  }
+
   .pricing-table-cell,
   .ami-subheader,
   .column-header {
@@ -127,6 +137,11 @@ $horizontal-padding: 0.75rem;
       $horizontal: $horizontal-padding,
       $vertical: $vertical-padding-desktop
     );
+
+    // extra padding to top of ami-subheader
+    &.ami-subheader {
+      @include padding($top: calc(#{$horizontal-padding} + 0.5rem));
+    }
   }
 }
 
