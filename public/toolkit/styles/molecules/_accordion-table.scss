@@ -3,6 +3,12 @@ $vertical-padding-mobile-small: 0.25rem;
 $vertical-padding-mobile: 0.5rem;
 $horizontal-padding: 0.75rem;
 
+.margin-left-large-down {
+  @media screen and (max-width: upper_bound($large-range)) {
+    margin-left: 1rem;
+  }
+}
+
 @mixin pricing-text($size: base, $color: $black, $weight: regular) {
   color: $color;
   @include type-weight($weight);
