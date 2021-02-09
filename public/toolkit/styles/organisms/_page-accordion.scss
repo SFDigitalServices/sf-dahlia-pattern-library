@@ -10,13 +10,13 @@ $siderail-padding-full: 2rem;
   }
 
   // overwrites to button styling for accordion
-  .accordion .accordion-navigation.active > button, 
+  .accordion .accordion-navigation.active > button,
   .accordion dd.active > button {
     background: #f7f7f7;
-    color: #222; 
+    color: #222;
 
   }
-  .accordion .accordion-navigation > button, 
+  .accordion .accordion-navigation > button,
   .accordion dd > button {
     font-weight: normal !important;
     letter-spacing: normal;
@@ -36,13 +36,13 @@ $siderail-padding-full: 2rem;
     }
   }
 
-  .accordion .accordion-navigation > button:hover, 
+  .accordion .accordion-navigation > button:hover,
   .accordion dd > button:hover {
-    background: #f2f2f2; 
+    background: #f2f2f2;
   }
 
   .accordion dd > button,
-  .accordion dd > .content {
+  .accordion .content {
     @include grid-row();
 
     @media #{$medium-up} {

@@ -1,0 +1,153 @@
+{{#*inline "accordionheader"}}
+<div class="accordion-header" draggable="false">
+  <div class="accordion-header-title pricing-header-text-container">
+    <div class="vertically-centered-text" role="text">
+      <span class="header-number">{{num}}</span>
+      {{householdtext}}
+    </div>
+    <div class="pricing-header-spacer">
+
+    </div>
+    <div class="pricing-accordion-income-container" role="text">
+      <span class="header-light-text">Income</span>
+      {{incomerange}}
+      <span class="header-light-text">per month</span>
+    </div>
+  </div>
+  {{> @icon-plus-minus active="{{active}}" }}
+</div>
+{{/inline}}
+
+{{#*inline "closedaccordionnav"}}
+  <dd class="accordion-navigation">
+    {{> accordionheader
+      num=num
+      householdtext=householdtext
+      availableunits=availableunits
+      incomerange=incomerange
+      active=active
+    }}
+    <div class="content">
+      <div role="group"></div>
+    </div>
+  </dd>
+{{/inline}}
+
+{{#*inline "tablesubheader"}}
+<tr>
+  <th id="{{id}}" class="span ami-subheader" colspan="3" scope="col">
+    {{amiName}}
+  </th>
+</tr>
+
+{{/inline}}
+
+{{#*inline "tablerow"}}
+<tr>
+  <td class="pricing-table-cell" headers="{{subheaderid}} units" id="{{rowid}}">
+      {{apttype}}
+      <div class="cell-subtitle">{{numavailable}} Available</div>
+  </td>
+  <td class="pricing-table-cell" headers="{{subheaderid}} income-range">
+    <div role="text">
+      {{incomerange}}
+      <div class="cell-subtitle">per month</div>
+    </div>
+  </td>
+  <td class="pricing-table-cell" headers="{{subheaderid}} rent">
+    <div role="text">
+      {{rent}}
+      <div class="cell-subtitle">per month</div>
+    </div>
+  </td>
+</tr>
+{{/inline}}
+
+<dl class="accordion-plus-minus pricing-accordion accordion trigger-right" data-accordion>
+  {{> closedaccordionnav
+    num="1"
+    householdtext="person in household"
+    incomerange="$X,XXX - $X,XXX"
+    active="false"
+  }}
+  <dd class="accordion-navigation active">
+    {{> accordionheader
+      num="2"
+      householdtext="people in household"
+      incomerange="$X,XXX - $X,XXX"
+      active="true"
+    }}
+    <div id="panel-1-b" class="content no-padding">
+      <table class="accordion-pricing-table" aria-label="Pricing table for 2 people in household">
+        <thead>
+          <tr>
+            <th id="units" scope="col" class="column-header">
+                Units
+            </th>
+            <th id="income-range" scope="col" class="column-header">
+                Income Range
+            </th>
+            <th id="rent" scope="col" class="column-header">
+                Rent
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{> tablesubheader id="lowIncome" amiName="30% AMI" }}
+          {{> tablerow
+            subheaderid="lowIncome"
+            rowid="lowIncomeStudio"
+            apttype="Studio"
+            numavailable=1
+            incomerange="$3,400 - $5,338"
+            rent = "$1,700"
+          }}
+          {{> tablerow
+            subheaderid="lowIncome"
+            rowid="lowIncome1BR"
+            apttype="1BR"
+            numavailable=2
+            incomerange="$4,000 - $5,338"
+            rent = "$2,000"
+          }}
+          {{> tablesubheader id="moderateIncome" amiName="50% AMI" }}
+          {{> tablerow
+            subheaderid="moderateIncome"
+            rowid="moderateIncomeStudio"
+            apttype="Studio"
+            numavailable=1
+            incomerange="$4,400 - $6,338"
+            rent = "$1,800"
+          }}
+          {{> tablerow
+            subheaderid="moderateIncome"
+            rowid="moderateIncome1BR"
+            apttype="1BR"
+            numavailable=5
+            incomerange="$5,000 - $6,338"
+            rent = "$2,100"
+          }}
+        </tbody>
+      </table>
+    </div>
+  </dd>
+  {{> closedaccordionnav
+    num="3"
+    householdtext="people in household"
+    incomerange="$X,XXX - $X,XXX"
+    active="false"
+  }}
+
+  {{> closedaccordionnav
+    num="4"
+    householdtext="people in household"
+    incomerange="$X,XXX - $X,XXX"
+    active="false"
+  }}
+  {{> closedaccordionnav
+    num="5+"
+    householdtext="people in household"
+    incomerange="$X,XXX - $X,XXX"
+    active="false"
+  }}
+</dl>

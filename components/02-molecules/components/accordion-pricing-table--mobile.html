@@ -1,0 +1,109 @@
+{{#*inline "accordionheader"}}
+  <div class="accordion-header" draggable="false">
+    <div role="text" class="accordion-header-title pricing-header-text-container--mobile">
+      <span class="header-number">{{num}}</span>
+      " "{{householdtext}}
+      <div class="pricing-header-spacer"></div>
+    </div>
+    {{> @icon-plus-minus }}
+  </div>
+{{/inline}}
+
+{{#*inline "closedaccordionnav"}}
+  <dd class="accordion-navigation">
+    {{> accordionheader
+      num=num
+      householdtext=householdtext
+      income=income
+    }}
+  </dd>
+{{/inline}}
+
+{{#*inline "tablerow"}}
+  <tr class="mobile-table-row {{class}}">
+    <th scope="row">{{header}}</th>
+    <td>
+      {{value}}
+      <span class="cell-subtitle">{{subtitle}}</span>
+    </td>
+  </tr>
+{{/inline}}
+
+{{#*inline "unitsection"}}
+  {{> tablerow class="unit-row" header=type value=num subtitle="available"}}
+  {{> tablerow class="indented-row" header="Income" value=income subtitle="per month"}}
+  {{> tablerow class="indented-row" header="Rent" value=rent subtitle="per month"}}
+{{/inline}}
+
+<dl class="accordion-plus-minus pricing-accordion accordion trigger-right" data-accordion>
+  {{> closedaccordionnav
+    num=1
+    householdtext="in household"
+    income="$X,XXX to $X,XXX"
+  }}
+  <dd class="accordion-navigation active">
+    {{> accordionheader
+      num=2
+      householdtext="in household"
+      income="$X,XXX to $X,XXX"
+    }}
+    <div id="panel-1-b" class="content mobile-table-padding">
+      <div class="mobile-ami-header">Up to 30% AMI</div>
+      <table class="mobile-units-table" aria-label="30% AMI pricing table for 2 in household">
+        {{> unitsection
+          type="Studio"
+          num=1
+          income="$3,400 to $5,338"
+          rent="$1,700"
+        }}
+
+        {{> unitsection
+          type="1BR"
+          num=2
+          income="$4,000 to $5,338"
+          rent="$2,000"
+        }}
+      </table>
+      <div class="mobile-ami-header">30% to 50% AMI</div>
+      <table class="mobile-units-table" aria-label="50% AMI pricing table for 2 in household">
+        {{> unitsection
+          type="Studio"
+          num=1
+          income="$4,400 to $6,338"
+          rent="$1,800"
+        }}
+
+        {{> unitsection
+          type="1BR"
+          num=5
+          income="$5,000 to $6,338"
+          rent="$2,100"
+        }}
+
+        {{> unitsection
+          type="2BR"
+          num=3
+          income="$6,000 to $7,338"
+          rent="$2,100"
+        }}
+      </table>
+    </div>
+  </dd>
+  {{> closedaccordionnav
+    num="3"
+    householdtext="in household"
+    income="$X,XXX - $X,XXX"
+  }}
+
+  {{> closedaccordionnav
+    num="4"
+    householdtext="in household"
+    income="$X,XXX - $X,XXX"
+  }}
+
+  {{> closedaccordionnav
+    num="5+"
+    householdtext="in household"
+    income="$X,XXX - $X,XXX"
+  }}
+</dl>

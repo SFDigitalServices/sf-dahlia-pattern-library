@@ -25,8 +25,8 @@ $units__include-box-sizing: true;
 $units: (
   "padding": ( // optional key, used to out padding units
     "default": ( // "`default` is required" under "padding" key
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit,
       "unit": $default-unit,
@@ -38,10 +38,10 @@ $units: (
         "left": true
       )
     ),
-    "custom-name-demo": ( 
+    "custom-name-demo": (
       "selector-name": "spacing",
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit + $default-unit,
       "unit": $default-unit + $default-unit,
@@ -55,8 +55,8 @@ $units: (
     ),
     "two-times": (
       "suffix": "--2x",
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit * 2,
       "unit": $default-unit * 2,
@@ -70,8 +70,8 @@ $units: (
     ),
     "three-times": (
       "suffix": "--3x",
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit * 3,
       "unit": $default-unit * 3,
@@ -85,8 +85,8 @@ $units: (
     ),
     "four-times": (
       "suffix": "--4x",
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit * 4,
       "unit": $default-unit * 4,
@@ -100,8 +100,8 @@ $units: (
     ),
     "one-half-times": (
       "suffix": "--3halves",
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit * 1.5,
       "unit": $default-unit * 2,
@@ -127,8 +127,8 @@ $units: (
   ),
   "margin": ( // optional key, used to out padding units
     "default": ( // "`default` is required" under "padding" key
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit,
       "unit": $default-unit,
@@ -142,8 +142,8 @@ $units: (
     ),
     "two-times": (
       "suffix": "--2x",
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit * 2,
       "unit": $default-unit * 2,
@@ -157,8 +157,8 @@ $units: (
     ),
     "one-half-times": (
       "suffix": "--3halves",
-      "media-query-max": $units__default-breakpoint, 
-      "unit--media-query-max": $default-unit, 
+      "media-query-max": $units__default-breakpoint,
+      "unit--media-query-max": $default-unit,
       "media-query-min": $units__default-breakpoint,
       "unit--media-query-min": $default-unit * 1.5,
       "unit": $default-unit * 1.5,
@@ -458,9 +458,14 @@ $units: (
 }
 
 .clear {
-  &::after { 
+  &::after {
    content: "";
-   display: block; 
+   display: block;
    clear: both;
   }
+}
+
+.vertically-centered-text {
+  display: flex;
+  align-items: center;
 }
