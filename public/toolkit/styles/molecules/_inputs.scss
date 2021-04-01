@@ -164,6 +164,10 @@ input[type="radio"]:disabled + label::before {
     display: inline-block;
     margin-top: .25rem;
     margin-bottom: .5rem;
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
   }
 
   &_note-inner {
