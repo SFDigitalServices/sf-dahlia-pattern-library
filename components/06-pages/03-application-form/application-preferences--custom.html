@@ -21,14 +21,18 @@
             <div class="checkbox-group">
               <div class="">
                 <div class="checkbox-block margin-bottom--2x">
-                  <input aria-decribedby="description-nhrp" type="checkbox" name="preferences-nhrp" value="preferences-nhrp" id="preferences-nhrp">
+                  <input aria-decribedby="description-custom" type="checkbox" name="preferences-custom" value="preferences-custom" id="preferences-custom">
                   <label class="checkbox-block_label" for="preferences-displaced">
                     <strong class="form-label caps">Some Custom Preference</strong>
                   </label>
                   <div class="checkbox-block_note-inner">
-                    {{> @more classes="open-bottom margin-top-none" icon="arrow-down" size="tiny" fill="primary"}}
-                    <p class="checkbox-block_more toggled" id="description-nhrp" style="display:none;">
-                      At least one household member must currently work in San Francisco at least 75% of their working hours.
+                    <p class="checkbox-block_more" id="description-custom">
+                      You can get this preference if one adult in the household:
+                      <ul>
+                        <li>Works at a public higher education institution located in San Francisco</li>
+                        <li>Works at a public healthcare institution located in San Francisco</li>
+                        <li>Is unable to work because of a disability</li>
+                      </ul>
                     </p>
                   </div>
 
