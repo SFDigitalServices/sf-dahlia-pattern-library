@@ -40,7 +40,7 @@
     "imports-loader": "^0.6.3",
     "jquery": "^2.1.4",
     "lodash": "^4.1.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "ng-currency": "0.10.1",
     "run-sequence": "^1.0.2",
     "script-loader": "^0.6.1",
