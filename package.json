@@ -44,6 +44,6 @@
     "ng-currency": "0.10.1",
     "run-sequence": "^1.0.2",
     "script-loader": "^0.6.1",
-    "webpack": "^1.8.11"
+    "webpack": "^5.75.0"
   }
 }
