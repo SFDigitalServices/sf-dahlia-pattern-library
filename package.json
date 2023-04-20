@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@frctl/fractal": "^1.1.7",
+    "@frctl/fractal": "^1.5.15",
     "@frctl/handlebars": "^1.1.5"
   },
   "devDependencies": {
